@@ -5,7 +5,7 @@
  * If no active widgets in sidebar, let's hide it completely.
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 ?>

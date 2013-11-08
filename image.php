@@ -5,7 +5,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 
@@ -22,18 +22,18 @@ get_header(); ?>
 				<header class="entry-header">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 
-					
+
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
 
 					<div class="entry-attachment">
-					  
+
 					  <!-- <nav id="image-navigation" class="navigation" role="navigation"> -->
-            	<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'amplify' ) ); ?></span>
-            	<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', 'amplify' ) ); ?></span>
+            	<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'uplifted' ) ); ?></span>
+            	<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', 'uplifted' ) ); ?></span>
            <!-- </nav> #image-navigation -->
-        
+
 						<div class="attachment">
 <?php         /**
               * Grab the IDs of all the image attachments in a gallery so we can get the URL of the next adjacent image in a gallery,
@@ -60,7 +60,7 @@ get_header(); ?>
                 $next_attachment_url = wp_get_attachment_url();
               endif; ?>
 							<a href="<?php echo esc_url( $next_attachment_url ); ?>" title="<?php the_title_attribute(); ?>" rel="attachment"><?php
-							$attachment_size = apply_filters( 'amplify_attachment_size', array( 960, 960 ) );
+							$attachment_size = apply_filters( 'uplifted_attachment_size', array( 960, 960 ) );
 							echo wp_get_attachment_image( $post->ID, $attachment_size );
 							?></a>
 
@@ -72,11 +72,11 @@ get_header(); ?>
 						</div><!-- .attachment -->
 
 					</div><!-- .entry-attachment -->
-					
+
 					<footer class="entry-meta">
 						<?php
 							$metadata = wp_get_attachment_metadata();
-							printf( __( '<span class="meta-prep meta-prep-entry-date">Published </span> <span class="entry-date"><time class="entry-date" datetime="%1$s" pubdate>%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>.', 'amplify' ),
+							printf( __( '<span class="meta-prep meta-prep-entry-date">Published </span> <span class="entry-date"><time class="entry-date" datetime="%1$s" pubdate>%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>.', 'uplifted' ),
 								esc_attr( get_the_date( 'c' ) ),
 								esc_html( get_the_date() ),
 								esc_url( wp_get_attachment_url() ),
@@ -87,12 +87,12 @@ get_header(); ?>
 								get_the_title( $post->post_parent )
 							);
 						?>
-						<?php edit_post_link( __( 'Edit', 'amplify' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( __( 'Edit', 'uplifted' ), '<span class="edit-link">', '</span>' ); ?>
 					</footer><!-- .entry-meta -->
 
 					<div class="entry-description">
 						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'amplify' ), 'after' => '</div>' ) ); ?>
+						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'uplifted' ), 'after' => '</div>' ) ); ?>
 					</div><!-- .entry-description -->
 
 				</div><!-- .entry-content -->
@@ -104,7 +104,7 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
     </div><!-- /#content -->
-    
+
     <?php get_sidebar() ?>
 
   </div><!-- /#main -->

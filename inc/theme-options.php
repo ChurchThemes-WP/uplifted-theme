@@ -54,7 +54,7 @@
       'tab' => 'general',
       "name" => "favicon",
       "title" => "Favicon",
-      'description' => __( 'Select a 16x16 favicon for your site.', 'amplify' ),
+      'description' => __( 'Select a 16x16 favicon for your site.', 'uplifted' ),
       'section' => 'appearance',
       'since' => '1.0',
       "id" => "appearance",
@@ -64,7 +64,7 @@
       'tab' => 'general',
       "name" => "jukebox",
       "title" => "Jukebox Tracks",
-      'description' => __( 'Select tracks for your jukebox player.', 'amplify' ),
+      'description' => __( 'Select tracks for your jukebox player.', 'uplifted' ),
       'section' => 'audiotheme',
       'since' => '1.0',
       "id" => "audiotheme",
@@ -80,18 +80,18 @@ $general = array(
 	'sections' => array(
     'appearance' => array(
     	'name' => 'appearance',
-    	'title' => __( 'Appearance', 'amplify' ),
-    	'description' => __( 'Modify the visual appearance of the theme.','amplify' )
+    	'title' => __( 'Appearance', 'uplifted' ),
+    	'description' => __( 'Modify the visual appearance of the theme.','uplifted' )
     ),
     'text' => array(
       'name' => 'text',
-      'title' => __( 'Text', 'amplify' ),
-      'description' => __( 'Modify text parts displayed within the theme.','amplify' )
+      'title' => __( 'Text', 'uplifted' ),
+      'description' => __( 'Modify text parts displayed within the theme.','uplifted' )
     ),
     'audiotheme' => array(
       'name' => 'audiotheme',
-      'title' => __( 'AudioTheme Settings', 'amplify' ),
-      'description' => __( 'Customized options for your AudioTheme player.','amplify' )
+      'title' => __( 'AudioTheme Settings', 'uplifted' ),
+      'description' => __( 'Customized options for your AudioTheme player.','uplifted' )
     )
 	)
 );

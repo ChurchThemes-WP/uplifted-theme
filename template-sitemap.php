@@ -3,7 +3,7 @@
 Template Name: Sitemap Page
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 ?>
@@ -13,25 +13,25 @@ Template Name: Sitemap Page
 	<div id="main">
 
 		<div id="content">
-		
+
   		<div class="panel">
-  
+
   			<div <?php post_class("inner"); ?>>
-  
-          <h1><?php _e('Sitemap','amplify'); ?></h1>
-          
-      		<h4><?php _e('Blog / News Monthly Archives','amplify'); ?></h4>
+
+          <h1><?php _e('Sitemap','uplifted'); ?></h1>
+
+      		<h4><?php _e('Blog / News Monthly Archives','uplifted'); ?></h4>
       		<ul><?php wp_get_archives('type=monthly&limit=12'); ?> </ul>
-        
-      		<h4><?php _e('Pages','amplify'); ?></h4>
+
+      		<h4><?php _e('Pages','uplifted'); ?></h4>
       		<ul><?php wp_list_pages('sort_column=menu_order&depth=0&title_li='); ?></ul>
-        
-        
-        	<h4><?php _e('Blog / News Categories','amplify'); ?></h4>
+
+
+        	<h4><?php _e('Blog / News Categories','uplifted'); ?></h4>
         	<ul><?php wp_list_categories('depth=0&title_li=&show_count=1'); ?></ul>
-  
+
   			</div><!-- /.inner -->
-  			
+
   		</div><!-- /.panel -->
 
 		</div><!-- /#content -->

@@ -10,7 +10,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 
@@ -30,7 +30,7 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-    <?php amplify_pagination(); ?>
+    <?php uplifted_pagination(); ?>
 
     </div><!-- /#content -->
 

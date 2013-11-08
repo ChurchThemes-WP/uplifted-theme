@@ -7,7 +7,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 

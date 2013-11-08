@@ -6,7 +6,7 @@
  * #container and #wrapper div elements.
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 ?>
@@ -30,8 +30,6 @@
   </div><!-- /#footer-->
 
 </div><!-- /#wrapper -->
-
-<?php get_template_part( 'audiotheme/parts/jukebox' ); ?>
 
 <?php wp_footer() ?>
 

@@ -7,7 +7,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 
@@ -20,7 +20,7 @@ get_header(); ?>
     <?php if (have_posts()) : ?>
 
 		<header class="archive-header">
-			<h1 class="archive-title"><?php printf( __( 'Tag Archives: %s', 'amplify' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?></h1>
+			<h1 class="archive-title"><?php printf( __( 'Tag Archives: %s', 'uplifted' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?></h1>
 
 		<?php if ( tag_description() ) : // Show an optional tag description ?>
 			<div class="archive-meta"><?php echo tag_description(); ?></div>
@@ -39,7 +39,7 @@ get_header(); ?>
 
     <?php endif; ?>
 
-    <?php amplify_pagination(); ?>
+    <?php uplifted_pagination(); ?>
 
     </div><!-- /#content -->
 

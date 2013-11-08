@@ -5,7 +5,7 @@
  * Used to display a search form for most situations.
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 ?>

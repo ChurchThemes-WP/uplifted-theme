@@ -3,7 +3,7 @@
  * The default template for displaying content. Used for both single and index/archive/search.
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 ?>
@@ -16,7 +16,7 @@
   <div class="panel">
     <?php if( !is_single() ): ?>
     <h1 class="entry-title">
-      <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __('Permanent Link to %s','amplify'), get_the_title() ) ); ?>"><?php the_title(); ?></a>
+      <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __('Permanent Link to %s','uplifted'), get_the_title() ) ); ?>"><?php the_title(); ?></a>
     </h1>
     <?php else: ?>
     <h2 class="entry-title">
@@ -25,9 +25,9 @@
     <?php endif; ?>
     <?php the_content(); ?>
   </div>
-  
+
   <div class="meta">
-    <?php amplify_meta(); ?>
+    <?php uplifted_meta(); ?>
   </div>
 
 </article><!-- /.hentry -->

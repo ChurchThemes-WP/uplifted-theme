@@ -1,15 +1,15 @@
 <?php
 
 // Define variables for our theme updates
-define('UPTHEMES_ITEM_NAME', 'Amplify Theme');
+define('UPTHEMES_ITEM_NAME', 'Uplifted Theme');
 define('UPTHEMES_STORE_URL', 'http://upthemes.com');
 
 // Grab some necessary PHP includes
 include_once('options/options.php');							// UpThemes Framework
 include_once('inc/theme-options.php');							// Load theme options specific to this theme
 include_once('inc/custom-header.php');							// Custom header setup
-include_once('inc/audiotheme-shim.php');						// AudioTheme support
-include_once('inc/audiotheme-player.php');						// AudioTheme support
+//include_once('inc/audiotheme-shim.php');						// AudioTheme support
+//include_once('inc/audiotheme-player.php');						// AudioTheme support
 include_once('inc/foundation-navbar.php');						// Foundation navbar
 include_once('inc/responsive-slider/responsive-slider.php');				// Responsive slider
 include_once('inc/presstrends.php');               					// PressTrends
@@ -20,6 +20,36 @@ if ( !class_exists( 'UpThemes_Theme_Updater' ) ) {
 	include( 'inc/UpThemes_Theme_Updater.php' );
 }
 
+function uplifted_add_ctc_support() {
+
+    /**
+     * Plugin Support
+     *
+     * Tell plugin theme supports it. This leaves all features disabled so they can
+     * be enabled explicitly below. When support not added, all features are revealed
+     * so user can access content (in case switched to an unsupported theme).
+     *
+     * This also removes the plugin's "not using compatible theme" message.
+     */
+
+    add_theme_support( 'church-theme-content' );
+
+    /**
+     * Plugin Features
+     *
+     * When array of arguments not given, plugin defaults are used (enabling all taxonomies
+     * and fields for feature). It is recommended to explicitly specify taxonomies and
+     * fields used by theme so plugin updates don't reveal unsupported features.
+     */
+    add_theme_support( 'ctc-sermons' );
+    add_theme_support( 'ctc-events' );
+    add_theme_support( 'ctc-people' );
+    add_theme_support( 'ctc-locations' );
+
+}
+
+add_action( 'after_setup_theme', 'uplifted_add_ctc_support' );
+
 /**
  * Set up our theme
  *
@@ -28,21 +58,21 @@ if ( !class_exists( 'UpThemes_Theme_Updater' ) ) {
  * backgrounds and header styles.
  *
  */
-function amplify_theme_setup() {
+function uplifted_theme_setup() {
 
   if ( ! isset( $content_width ) ) $content_width = 560;
 
   add_theme_support( 'nav-menus' );
 
-	load_theme_textdomain( 'amplify', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'uplifted', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to <head>.
 	add_theme_support( 'automatic-feed-links' );
 
 	// This theme uses wp_nav_menu() in one location.
   if( function_exists('register_nav_menu') )
-  	register_nav_menu( 'main_menu', __( 'Main Menu','amplify' ) );
-    register_nav_menu( 'secondary_menu', __( 'Secondary Menu','amplify' ) );
+  	register_nav_menu( 'main_menu', __( 'Main Menu','uplifted' ) );
+    register_nav_menu( 'secondary_menu', __( 'Secondary Menu','uplifted' ) );
 
 	// Add support for a variety of post formats
 	add_theme_support( 'post-formats', array( 'video', 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
@@ -59,9 +89,9 @@ function amplify_theme_setup() {
 
 }
 
-add_action( 'after_setup_theme', 'amplify_theme_setup' );
+add_action( 'after_setup_theme', 'uplifted_theme_setup' );
 
-function amplify_theme_update_check(){
+function uplifted_theme_update_check(){
 	$upthemes_license = trim( get_option( 'upthemes_sl_license_key' ) );
 
 	$edd_updater = new UpThemes_Theme_Updater( array(
@@ -73,7 +103,7 @@ function amplify_theme_update_check(){
 		)
 	);
 }
-add_action('admin_init','amplify_theme_update_check',1);
+add_action('admin_init','uplifted_theme_update_check',1);
 
 /**
  * Creates a nicely formatted and more specific title element text
@@ -84,7 +114,7 @@ add_action('admin_init','amplify_theme_update_check',1);
  * @param string $sep Optional separator.
  * @return string Filtered title.
  */
-function amplify_wp_title( $title, $sep ) {
+function uplifted_wp_title( $title, $sep ) {
 	global $paged, $page;
 
 	if ( is_feed() )
@@ -100,55 +130,55 @@ function amplify_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'amplify' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'uplifted' ), max( $paged, $page ) );
 
 	return $title;
 }
-add_filter( 'wp_title', 'amplify_wp_title', 10, 2 );
+add_filter( 'wp_title', 'uplifted_wp_title', 10, 2 );
 
 /**
  * Google Fonts Implementation
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 
 /**
  * Register Google Fonts
  */
-function amplify_register_fonts() {
+function uplifted_register_fonts() {
   $protocol = is_ssl() ? 'https' : 'http';
   wp_register_style( 'default-font', "$protocol://fonts.googleapis.com/css?family=Open+Sans:300,500,700" );
 }
-add_action( 'init', 'amplify_register_fonts' );
+add_action( 'init', 'uplifted_register_fonts' );
 
 /**
  * Enqueue Google Fonts on Front End
  */
-function amplify_fonts() {
+function uplifted_fonts() {
   wp_enqueue_style( 'default-font' );
 }
-add_action( 'wp_enqueue_scripts', 'amplify_fonts' );
+add_action( 'wp_enqueue_scripts', 'uplifted_fonts' );
 
 /**
  * Enqueue Google Fonts on Custom Header Page
  */
-function amplify_admin_fonts( $hook_suffix ) {
+function uplifted_admin_fonts( $hook_suffix ) {
   if ( 'appearance_page_custom-header' != $hook_suffix )
     return;
 
   wp_enqueue_style( 'default-font' );
 }
-add_action( 'admin_enqueue_scripts', 'amplify_admin_fonts' );
+add_action( 'admin_enqueue_scripts', 'uplifted_admin_fonts' );
 
 /**
  * Set up our theme widgets
  *
  */
-function amplify_widgets_init(){
+function uplifted_widgets_init(){
   register_sidebar( array(
-  		'name'          => __('Sidebar','amplify'),
+  		'name'          => __('Sidebar','uplifted'),
   		'id'            => 'sidebar',
   		'before_widget' => '<div id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</div>',
@@ -156,7 +186,7 @@ function amplify_widgets_init(){
   		'after_title'   => '</h4>' ));
 
   register_sidebar( array(
-  		'name'          => __('Footer First Column','amplify'),
+  		'name'          => __('Footer First Column','uplifted'),
   		'id'            => 'footer-1',
   		'before_widget' => '<div id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</div>',
@@ -164,7 +194,7 @@ function amplify_widgets_init(){
   		'after_title'   => '</h4>' ));
 
   register_sidebar( array(
-  		'name'          => __('Footer Second Column','amplify'),
+  		'name'          => __('Footer Second Column','uplifted'),
   		'id'            => 'footer-2',
   		'before_widget' => '<div id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</div>',
@@ -172,7 +202,7 @@ function amplify_widgets_init(){
   		'after_title'   => '</h4>' ));
 
   register_sidebar( array(
-  		'name'          => __('Footer Third Column','amplify'),
+  		'name'          => __('Footer Third Column','uplifted'),
   		'id'            => 'footer-3',
   		'before_widget' => '<div id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</div>',
@@ -180,7 +210,7 @@ function amplify_widgets_init(){
   		'after_title'   => '</h4>' ));
 }
 
-add_action('widgets_init','amplify_widgets_init');
+add_action('widgets_init','uplifted_widgets_init');
 
 /**
  * Sets the post excerpt length to 40 words.
@@ -188,29 +218,29 @@ add_action('widgets_init','amplify_widgets_init');
  * To override this length in a child theme, remove the filter and add your own
  * function tied to the excerpt_length filter hook.
  */
-function amplify_excerpt_length( $length ) {
+function uplifted_excerpt_length( $length ) {
 	return 40;
 }
-add_filter( 'excerpt_length', 'amplify_excerpt_length' );
+add_filter( 'excerpt_length', 'uplifted_excerpt_length' );
 
 /**
  * Returns a "Continue Reading" link for excerpts
  */
-function amplify_continue_reading_link() {
-	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'amplify' ) . '</a>';
+function uplifted_continue_reading_link() {
+	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'uplifted' ) . '</a>';
 }
-add_filter( 'the_content_more_link', 'amplify_continue_reading_link' );
+add_filter( 'the_content_more_link', 'uplifted_continue_reading_link' );
 
 /**
- * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and amplify_continue_reading_link().
+ * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and uplifted_continue_reading_link().
  *
  * To override this in a child theme, remove the filter and add your own
  * function tied to the excerpt_more filter hook.
  */
-function amplify_auto_excerpt_more( $more ) {
-	return ' &hellip;' . amplify_continue_reading_link();
+function uplifted_auto_excerpt_more( $more ) {
+	return ' &hellip;' . uplifted_continue_reading_link();
 }
-add_filter( 'excerpt_more', 'amplify_auto_excerpt_more' );
+add_filter( 'excerpt_more', 'uplifted_auto_excerpt_more' );
 
 /**
  * Adds a pretty "Continue Reading" link to custom post excerpts.
@@ -218,24 +248,24 @@ add_filter( 'excerpt_more', 'amplify_auto_excerpt_more' );
  * To override this link in a child theme, remove the filter and add your own
  * function tied to the get_the_excerpt filter hook.
  */
-function amplify_custom_excerpt_more( $output ) {
+function uplifted_custom_excerpt_more( $output ) {
 	if ( has_excerpt() && ! is_attachment() ) {
-		$output .= amplify_continue_reading_link();
+		$output .= uplifted_continue_reading_link();
 	}
 	return $output;
 }
-add_filter( 'get_the_excerpt', 'amplify_custom_excerpt_more' );
+add_filter( 'get_the_excerpt', 'uplifted_custom_excerpt_more' );
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
-function amplify_page_menu_args( $args ) {
+function uplifted_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'amplify_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'uplifted_page_menu_args' );
 
-function amplify_enqueue_scripts(){
+function uplifted_enqueue_scripts(){
 
   wp_enqueue_script( 'plugins', get_template_directory_uri() . '/scripts/plugins.js', array('jquery') );
   wp_enqueue_script( 'init', get_template_directory_uri() . '/scripts/init.js', array('plugins'), false, true );
@@ -246,13 +276,13 @@ function amplify_enqueue_scripts(){
 
 }
 
-add_action('wp_enqueue_scripts','amplify_enqueue_scripts');
+add_action('wp_enqueue_scripts','uplifted_enqueue_scripts');
 
 /**
  * Adds a theme layout based on selected admin option
  *
  */
-function amplify_set_layout($body_class){
+function uplifted_set_layout($body_class){
 
   $up_options = upfw_get_options();
 
@@ -266,13 +296,13 @@ function amplify_set_layout($body_class){
 
 }
 
-add_filter('body_class','amplify_set_layout');
+add_filter('body_class','uplifted_set_layout');
 
 /**
  * Outputs theme footer option text.
  *
  */
-function amplify_theme_footer() {
+function uplifted_theme_footer() {
 
   $up_options = upfw_get_options();
 
@@ -288,7 +318,7 @@ function amplify_theme_footer() {
  * @uses paginate_links()
  *
  */
-function amplify_pagination( $type = 'plain', $endsize = 1, $midsize = 1 ) {
+function uplifted_pagination( $type = 'plain', $endsize = 1, $midsize = 1 ) {
 
   echo '  <div class="paging">'."\n";
 
@@ -310,8 +340,8 @@ function amplify_pagination( $type = 'plain', $endsize = 1, $midsize = 1 ) {
         'end_size' => $endsize,
         'mid_size' => $midsize,
         'type' => $type,
-        'prev_text' => __('&larr; Previous','amplify'),
-        'next_text' => __('Next &rarr;','amplify')
+        'prev_text' => __('&larr; Previous','uplifted'),
+        'next_text' => __('Next &rarr;','uplifted')
     );
 
     if( $wp_rewrite->using_permalinks() )
@@ -329,7 +359,7 @@ function amplify_pagination( $type = 'plain', $endsize = 1, $midsize = 1 ) {
  * Prints the custom CSS from the theme options panel
  *
  */
-function amplify_meta(){
+function uplifted_meta(){
 
 ?>
     <div class="meta-group left">
@@ -355,24 +385,24 @@ function amplify_meta(){
 
 }
 
-if ( ! function_exists( 'amplify_comment' ) ) :
+if ( ! function_exists( 'uplifted_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
  * To override this walker in a child theme without modifying the comments template
- * simply create your own amplify_comment(), and that function will be used instead.
+ * simply create your own uplifted_comment(), and that function will be used instead.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
  */
-function amplify_comment( $comment, $args, $depth ) {
+function uplifted_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'amplify' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'amplify' ), '<span class="edit-link">', '</span>' ); ?></p>
+		<p><?php _e( 'Pingback:', 'uplifted' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'uplifted' ), '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 			break;
 		default :
@@ -389,11 +419,11 @@ function amplify_comment( $comment, $args, $depth ) {
 						echo '<div class="avatar-wrap">' . get_avatar( $comment, $avatar_size ) . '</div>';
 					?>
 
-					<?php edit_comment_link( __( 'Edit', 'amplify' ), '<span style="clear:both;display:block;"></span><div class="edit-link">', '</div>' ); ?>
+					<?php edit_comment_link( __( 'Edit', 'uplifted' ), '<span style="clear:both;display:block;"></span><div class="edit-link">', '</div>' ); ?>
 				</div><!-- .comment-author .vcard -->
 
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'amplify' ); ?></em>
+					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'uplifted' ); ?></em>
 					<br />
 				<?php endif; ?>
 
@@ -403,7 +433,7 @@ function amplify_comment( $comment, $args, $depth ) {
         <div class="author-name">
         <?php
         /* translators: 1: comment author, 2: date and time */
-        printf( __( '%1$s <span class="says">says:</span>', 'amplify' ),
+        printf( __( '%1$s <span class="says">says:</span>', 'uplifted' ),
           sprintf( '<span class="fn">%s</span>', get_comment_author_link() ));
 
         ?>
@@ -412,18 +442,18 @@ function amplify_comment( $comment, $args, $depth ) {
 
         comment_text();
 
-        printf( __( '%1$s', 'amplify' ),
+        printf( __( '%1$s', 'uplifted' ),
           sprintf( '<a class="comment-date" href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
             esc_url( get_comment_link( $comment->comment_ID ) ),
             get_comment_time( 'c' ),
             /* translators: 1: date, 2: time */
-            sprintf( __( '%1$s at %2$s', 'amplify' ), get_comment_date(), get_comment_time() )
+            sprintf( __( '%1$s at %2$s', 'uplifted' ), get_comment_date(), get_comment_time() )
           ));
 
         ?>
 
         <div class="reply">
-          <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( '<span>&#171;</span> Reply', 'amplify' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+          <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( '<span>&#171;</span> Reply', 'uplifted' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
         </div><!-- .reply -->
       </div>
 		</article><!-- #comment-## -->
@@ -432,9 +462,9 @@ function amplify_comment( $comment, $args, $depth ) {
 			break;
 	endswitch;
 }
-endif; // ends check for amplify_comment()
+endif; // ends check for uplifted_comment()
 
-function amplify_responsive_slider(){
+function uplifted_responsive_slider(){
   if( is_home() ){
     echo '<div id="homepage-slider">';
     echo '<div class="inner">';
@@ -444,7 +474,7 @@ function amplify_responsive_slider(){
   }
 }
 
-add_action('after_header','amplify_responsive_slider');
+add_action('after_header','uplifted_responsive_slider');
 
 add_filter( 'template_include', 'var_template_include', 1000 );
 function var_template_include( $t ){
@@ -477,10 +507,10 @@ function get_current_template( $echo = false ) {
 remove_shortcode('gallery', 'gallery_shortcode');
 
 //activate custom function
-add_shortcode('gallery', 'amplify_gallery_shortcode');
+add_shortcode('gallery', 'uplifted_gallery_shortcode');
 
 //custom gallery function
-function amplify_gallery_shortcode($attr) {
+function uplifted_gallery_shortcode($attr) {
 	$post = get_post();
 
 	static $instance = 0;
@@ -595,7 +625,7 @@ function amplify_gallery_shortcode($attr) {
 	return $output;
 }
 
-function amplify_set_rtl($classes){
+function uplifted_set_rtl($classes){
 	$options = upfw_get_options();
 
 	if( $options->is_rtl == 'yes' )
@@ -604,4 +634,4 @@ function amplify_set_rtl($classes){
 	return $classes;
 }
 
-add_filter('body_class','amplify_set_rtl');
+add_filter('body_class','uplifted_set_rtl');

@@ -3,7 +3,7 @@
  * The template for displaying posts in the Link post format
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 ?>
@@ -12,6 +12,6 @@
 		<?php the_content(); ?>
 	</div>
 	<div class="meta">
-		<!-- <a href="<?php the_permalink(); ?>">#</a> | --><?php amplify_meta(); ?>
+		<!-- <a href="<?php the_permalink(); ?>">#</a> | --><?php uplifted_meta(); ?>
 	</div>
 </article><!-- /.hentry -->

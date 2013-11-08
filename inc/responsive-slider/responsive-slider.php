@@ -106,7 +106,7 @@ function responsive_slider_activation() {
  * @since 0.1
  */
 function responsive_slider_uninstall() {
-	delete_option( 'amplify_responsive_slider_options' );
+	delete_option( 'uplifted_responsive_slider_options' );
 }
 
 /**
@@ -185,7 +185,7 @@ function responsive_slider_enqueue_scripts() {
 	wp_enqueue_script( 'responsive-slider_flex-slider', RESPONSIVE_SLIDER_URI . 'responsive-slider.js', array( 'jquery' ), 0.1, true );
 
 	/* Get slider settings. */
-	$options = get_option( 'amplify_responsive_slider_options' );
+	$options = get_option( 'uplifted_responsive_slider_options' );
 
 	/* Prepare variables for JavaScript. */
 	wp_localize_script( 'responsive-slider_flex-slider', 'slider', array(
@@ -378,7 +378,7 @@ function responsive_slider_settings_page() { ?>
 		<h2><?php _e( 'Responsive Slider Settings', 'responsive-slider' ); ?></h2>
 
 		<form method="post" action="options.php">
-			<?php settings_fields( 'amplify_responsive_slider_options' ); ?>
+			<?php settings_fields( 'uplifted_responsive_slider_options' ); ?>
 			<?php do_settings_sections( 'responsive-slider-settings' ); ?>
 			<br /><p><input type="submit" name="Submit" value="<?php _e( 'Update Settings', 'responsive-slider' ); ?>" class="button-primary" /></p>
 			<br /><p class="description"><?php _e( 'Note: Whenever you change the Width and Height settings, it is a good idea to re-upload the Featured Images of your Slides. This would get them cropped to the new size.', 'responsive-slider' ); ?></p>
@@ -396,16 +396,16 @@ function responsive_slider_settings_page() { ?>
 function responsive_slider_settings_init() {
 
 	/* Register the slider settings. */
-	register_setting( 'amplify_responsive_slider_options', 'amplify_responsive_slider_options', 'responsive_slider_validate_options' );
+	register_setting( 'uplifted_responsive_slider_options', 'uplifted_responsive_slider_options', 'responsive_slider_validate_options' );
 
 	/* Add settings section. */
-	add_settings_section( 'amplify_responsive_slider_options_main', __( ' ', 'responsive-slider' ), 'responsive_slider_section_text', 'responsive-slider-settings' );
+	add_settings_section( 'uplifted_responsive_slider_options_main', __( ' ', 'responsive-slider' ), 'responsive_slider_section_text', 'responsive-slider-settings' );
 
 	/* Add settings fields. */
-	add_settings_field( 'slide_effect', __( 'Transition Effect:', 'responsive-slider' ), 'slide_effect', 'responsive-slider-settings', 'amplify_responsive_slider_options_main' );
-	add_settings_field( 'slide_delay', __( 'Delay:', 'responsive-slider' ), 'slide_delay', 'responsive-slider-settings', 'amplify_responsive_slider_options_main' );
-	add_settings_field( 'slide_duration', __( 'Animation Duration:', 'responsive-slider' ), 'slide_duration', 'responsive-slider-settings', 'amplify_responsive_slider_options_main' );
-	add_settings_field( 'slide_start', __( 'Start Automatically:', 'responsive-slider' ), 'slide_start', 'responsive-slider-settings', 'amplify_responsive_slider_options_main' );
+	add_settings_field( 'slide_effect', __( 'Transition Effect:', 'responsive-slider' ), 'slide_effect', 'responsive-slider-settings', 'uplifted_responsive_slider_options_main' );
+	add_settings_field( 'slide_delay', __( 'Delay:', 'responsive-slider' ), 'slide_delay', 'responsive-slider-settings', 'uplifted_responsive_slider_options_main' );
+	add_settings_field( 'slide_duration', __( 'Animation Duration:', 'responsive-slider' ), 'slide_duration', 'responsive-slider-settings', 'uplifted_responsive_slider_options_main' );
+	add_settings_field( 'slide_start', __( 'Start Automatically:', 'responsive-slider' ), 'slide_start', 'responsive-slider-settings', 'uplifted_responsive_slider_options_main' );
 }
 
 /* Output the section header text. */
@@ -416,11 +416,11 @@ function responsive_slider_section_text() {
 function slide_effect() {
 
 	/* Get the option value from the database. */
-	$options = get_option( 'amplify_responsive_slider_options' );
+	$options = get_option( 'uplifted_responsive_slider_options' );
 	$slide_effect = $options['slide_effect'];
 
 	/* Echo the field. */
-	echo "<select id='slide_effect' name='amplify_responsive_slider_options[slide_effect]'>";
+	echo "<select id='slide_effect' name='uplifted_responsive_slider_options[slide_effect]'>";
 	echo '<option value="fade" ' . selected( $slide_effect, 'fade', false ) . ' >' . __( 'fade', 'responsive-slider' ) . '</option>';
 	echo '<option value="slide" ' . selected( $slide_effect, 'slide', false ) . ' >' . __( 'slide', 'responsive-slider' ) . '</option>';
 	echo '</select>';
@@ -429,33 +429,33 @@ function slide_effect() {
 function slide_delay() {
 
 	/* Get the option value from the database. */
-	$options = get_option( 'amplify_responsive_slider_options' );
+	$options = get_option( 'uplifted_responsive_slider_options' );
 	$slide_delay = $options['slide_delay'];
 
 	/* Echo the field. */ ?>
-	<input type="text" id="slide_delay" name="amplify_responsive_slider_options[slide_delay]" value="<?php echo $slide_delay; ?>" /> <span class="description"><?php _e( 'milliseconds', 'responsive-slider' ); ?></span>
+	<input type="text" id="slide_delay" name="uplifted_responsive_slider_options[slide_delay]" value="<?php echo $slide_delay; ?>" /> <span class="description"><?php _e( 'milliseconds', 'responsive-slider' ); ?></span>
 
 <?php }
 
 function slide_duration() {
 
 	/* Get the option value from the database. */
-	$options = get_option( 'amplify_responsive_slider_options' );
+	$options = get_option( 'uplifted_responsive_slider_options' );
 	$slide_duration = $options['slide_duration'];
 
 	/* Echo the field. */ ?>
-	<input type="text" id="slide_duration" name="amplify_responsive_slider_options[slide_duration]" value="<?php echo $slide_duration; ?>" /> <span class="description"><?php _e( 'milliseconds', 'responsive-slider' ); ?></span>
+	<input type="text" id="slide_duration" name="uplifted_responsive_slider_options[slide_duration]" value="<?php echo $slide_duration; ?>" /> <span class="description"><?php _e( 'milliseconds', 'responsive-slider' ); ?></span>
 
 <?php }
 
 function slide_start() {
 
 	/* Get the option value from the database. */
-	$options = get_option( 'amplify_responsive_slider_options' );
+	$options = get_option( 'uplifted_responsive_slider_options' );
 	$slide_start = $options['slide_start'];
 
 	/* Echo the field. */
-	echo "<input type='checkbox' id='slide_start' name='amplify_responsive_slider_options[slide_start]' value='1' " . checked( $slide_start, 1, false ) . " />";
+	echo "<input type='checkbox' id='slide_start' name='uplifted_responsive_slider_options[slide_start]' value='1' " . checked( $slide_start, 1, false ) . " />";
 }
 
 /**
@@ -465,7 +465,7 @@ function slide_start() {
  */
 function responsive_slider_validate_options( $input ) {
 
-	$options = get_option( 'amplify_responsive_slider_options' );
+	$options = get_option( 'uplifted_responsive_slider_options' );
 
 	$options['slide_width'] = wp_filter_nohtml_kses( intval( $input['slide_width'] ) );
 	$options['slide_height'] = wp_filter_nohtml_kses( intval( $input['slide_height'] ) );
@@ -485,7 +485,7 @@ function responsive_slider_validate_options( $input ) {
 function responsive_slider_default_settings() {
 
 	/* Retrieve exisitng options, if any. */
-	$ex_options = get_option( 'amplify_responsive_slider_options' );
+	$ex_options = get_option( 'uplifted_responsive_slider_options' );
 
 	/* Check if options are set. Add default values if not. */
 	if ( !is_array( $ex_options ) || $ex_options['slide_duration'] == '' ) {
@@ -498,7 +498,7 @@ function responsive_slider_default_settings() {
 		);
 
 		/* Set the default options. */
-		update_option( 'amplify_responsive_slider_options', $default_options );
+		update_option( 'uplifted_responsive_slider_options', $default_options );
 	}
 }
 

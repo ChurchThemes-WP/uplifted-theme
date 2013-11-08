@@ -42,26 +42,26 @@ function upthemes_sl_license_page() {
         <tbody>
           <tr valign="top">
             <th scope="row" valign="top">
-              <?php _e('License Key','amplify'); ?>
+              <?php _e('License Key','uplifted'); ?>
             </th>
             <td>
               <input id="upthemes_sl_license_key" name="upthemes_sl_license_key" type="text" class="regular-text" value="<?php esc_attr_e( $license ); ?>" />
-              <label class="description" for="upthemes_sl_license_key"><?php _e('Enter your license key','amplify'); ?></label>
+              <label class="description" for="upthemes_sl_license_key"><?php _e('Enter your license key','uplifted'); ?></label>
             </td>
           </tr>
           <?php if( $license != '' ) { ?>
             <tr valign="top">
               <th scope="row" valign="top">
-                <?php _e('Activate License','amplify'); ?>
+                <?php _e('Activate License','uplifted'); ?>
               </th>
               <td>
                 <?php if( $status == 'valid' ) { ?>
-                  <span style="color:green;"><?php _e('active','amplify'); ?></span>
+                  <span style="color:green;"><?php _e('active','uplifted'); ?></span>
                   <?php wp_nonce_field( 'upthemes_sl_nonce', 'upthemes_sl_nonce' ); ?>
-                  <input type="submit" class="button-secondary" name="upthemes_sl_license_deactivate" value="<?php _e('Deactivate License','amplify'); ?>"/>
+                  <input type="submit" class="button-secondary" name="upthemes_sl_license_deactivate" value="<?php _e('Deactivate License','uplifted'); ?>"/>
                 <?php } else {
                   wp_nonce_field( 'upthemes_sl_nonce', 'upthemes_sl_nonce' ); ?>
-                  <input type="submit" class="button-secondary" name="upthemes_sl_license_activate" value="<?php _e('Activate License','amplify'); ?>"/>
+                  <input type="submit" class="button-secondary" name="upthemes_sl_license_activate" value="<?php _e('Activate License','uplifted'); ?>"/>
                 <?php } ?>
               </td>
             </tr>

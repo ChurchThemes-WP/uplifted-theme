@@ -13,7 +13,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 
@@ -29,13 +29,13 @@ get_header(); ?>
 
       <h1 class="archive-title"><?php
       	if ( is_day() ) :
-      		printf( __( 'Daily Archives: %s', 'amplify' ), '<span>' . get_the_date() . '</span>' );
+      		printf( __( 'Daily Archives: %s', 'uplifted' ), '<span>' . get_the_date() . '</span>' );
       	elseif ( is_month() ) :
-      		printf( __( 'Monthly Archives: %s', 'amplify' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'amplify' ) ) . '</span>' );
+      		printf( __( 'Monthly Archives: %s', 'uplifted' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'uplifted' ) ) . '</span>' );
       	elseif ( is_year() ) :
-      		printf( __( 'Yearly Archives: %s', 'amplify' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'amplify' ) ) . '</span>' );
+      		printf( __( 'Yearly Archives: %s', 'uplifted' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'uplifted' ) ) . '</span>' );
       	else :
-      		_e( 'Archives', 'amplify' );
+      		_e( 'Archives', 'uplifted' );
       	endif;
       ?></h1>
 
@@ -51,7 +51,7 @@ get_header(); ?>
 
       <?php endif; ?>
 
-      <?php amplify_pagination(); ?>
+      <?php uplifted_pagination(); ?>
 
       </div><!-- /.inner -->
 

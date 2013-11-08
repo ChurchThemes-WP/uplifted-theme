@@ -24,29 +24,29 @@
  * Use feature detection of wp_get_theme() which was introduced
  * in WordPress 3.4.
  *
- * @uses amplify_header_style()
- * @uses amplify_admin_header_style()
- * @uses amplify_admin_header_image()
+ * @uses uplifted_header_style()
+ * @uses uplifted_admin_header_style()
+ * @uses uplifted_admin_header_image()
  *
  * @package amplify
  */
-function amplify_custom_header_setup() {
+function uplifted_custom_header_setup() {
 	$args = array(
 		'default-image'          => '',
 		'default-text-color'     => 'FFF',
 		'width'                  => 385,
 		'height'                 => 102,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'amplify_header_style',
-		'admin-head-callback'    => 'amplify_admin_header_style',
-		'admin-preview-callback' => 'amplify_admin_header_image',
+		'wp-head-callback'       => 'uplifted_header_style',
+		'admin-head-callback'    => 'uplifted_admin_header_style',
+		'admin-preview-callback' => 'uplifted_admin_header_image',
 	);
 
-	$args = apply_filters( 'amplify_custom_header_args', $args );
+	$args = apply_filters( 'uplifted_custom_header_args', $args );
 
 	add_theme_support( 'custom-header', $args );
 }
-add_action( 'after_setup_theme', 'amplify_custom_header_setup' );
+add_action( 'after_setup_theme', 'uplifted_custom_header_setup' );
 
 /**
  * Shiv for get_custom_header().
@@ -73,15 +73,15 @@ if ( ! function_exists( 'get_custom_header' ) ) {
 	}
 }
 
-if ( ! function_exists( 'amplify_header_style' ) ) :
+if ( ! function_exists( 'uplifted_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see amplify_custom_header_setup().
+ * @see uplifted_custom_header_setup().
  *
  * @since _s 1.0
  */
-function amplify_header_style() {
+function uplifted_header_style() {
 
 	// If no custom options for text are set, let's bail
 	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
@@ -112,17 +112,17 @@ function amplify_header_style() {
 	</style>
 	<?php
 }
-endif; // amplify_header_style
+endif; // uplifted_header_style
 
-if ( ! function_exists( 'amplify_admin_header_style' ) ) :
+if ( ! function_exists( 'uplifted_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see amplify_custom_header_setup().
+ * @see uplifted_custom_header_setup().
  *
  * @since _s 1.0
  */
-function amplify_admin_header_style() {
+function uplifted_admin_header_style() {
 ?>
 	<style type="text/css">
 	.appearance_page_custom-header #headimg {
@@ -142,16 +142,16 @@ function amplify_admin_header_style() {
 	</style>
 <?php
 }
-endif; // amplify_admin_header_style
+endif; // uplifted_admin_header_style
 
-if ( ! function_exists( 'amplify_admin_header_image' ) ) :
+if ( ! function_exists( 'uplifted_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see amplify_custom_header_setup().
+ * @see uplifted_custom_header_setup().
  *
  */
-function amplify_admin_header_image() { ?>
+function uplifted_admin_header_image() { ?>
 	<div id="headimg">
 		<?php
 		if ( 'blank' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) || '' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) )
@@ -167,4 +167,4 @@ function amplify_admin_header_image() { ?>
 		<?php endif; ?>
 	</div>
 <?php }
-endif; // amplify_admin_header_image
+endif; // uplifted_admin_header_image

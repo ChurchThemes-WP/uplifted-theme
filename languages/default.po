@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Amplify WordPress Theme\n"
+"Project-Id-Version: Uplifted WordPress Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-23 14:09-0600\n"
 "PO-Revision-Date: 2013-10-23 14:13-0600\n"

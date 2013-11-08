@@ -3,7 +3,7 @@
 Template Name: Full Width Page
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 ?>

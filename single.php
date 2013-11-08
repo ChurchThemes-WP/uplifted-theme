@@ -3,7 +3,7 @@
  * The Template for displaying all single posts.
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 

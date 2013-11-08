@@ -7,7 +7,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Amplify
+ * @subpackage Uplifted
  * @since 1.0.0
  */
 
@@ -19,7 +19,7 @@ get_header(); ?>
 
 			<?php if (have_posts()) : ?>
 
-      <h1><?php echo sprintf( __('Search Results for %s','amplify'), "<em id=\"search-terms\">'" . esc_html(get_query_var('s')) . "'" ); ?> </em></h1>
+      <h1><?php echo sprintf( __('Search Results for %s','uplifted'), "<em id=\"search-terms\">'" . esc_html(get_query_var('s')) . "'" ); ?> </em></h1>
 
       <?php while (have_posts()) : the_post(); ?>
 
@@ -33,7 +33,7 @@ get_header(); ?>
 
       <?php endif; ?>
 
-      <?php amplify_pagination(); ?>
+      <?php uplifted_pagination(); ?>
 
     </div><!-- /#content -->
 
