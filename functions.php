@@ -11,8 +11,9 @@ include_once('inc/custom-header.php');							// Custom header setup
 include_once('inc/audiotheme-shim.php');						// AudioTheme support
 include_once('inc/audiotheme-player.php');						// AudioTheme support
 include_once('inc/foundation-navbar.php');						// Foundation navbar
-include_once('inc/responsive-slider/responsive-slider.php');	// Responsive slider
-include_once('inc/presstrends.php');               				// PressTrends
+include_once('inc/responsive-slider/responsive-slider.php');				// Responsive slider
+include_once('inc/presstrends.php');               					// PressTrends
+include_once('inc/church-framework/framework.php');					// Church Framework
 
 if ( !class_exists( 'UpThemes_Theme_Updater' ) ) {
 	// Load our custom theme updater
