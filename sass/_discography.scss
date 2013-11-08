@@ -1,0 +1,237 @@
+/* Discography */
+
+
+//
+// Album Archive Page
+//
+
+.post-type-archive-audiotheme_record {
+  #content {
+    @include grid-column(12);
+  }
+}
+
+.album-grid {
+  margin: $panel-margin-bottom 0;
+  @include clearfix;
+}
+
+.album {
+  margin-bottom: $panel-margin-bottom;
+
+  a {
+    display: block;
+
+    &:hover {
+      img {opacity: .7;}
+      h1 {color: $primary-color;}
+    }
+
+    img {
+      border: 10px solid #FFFFFF;
+      width: 100%;
+      margin-bottom: .5em;
+    }
+
+    h1 {
+      font-size: 2em;
+      font-weight: $alt-header-font-weight;
+    }
+  }
+
+  // two column grid
+	@media screen and (min-width: $small-screen / 1.5 ) and (max-width: $medium-screen) {
+	  width: 50%;
+	  float: left;
+	  padding: 0 .5em;
+
+	  &:nth-child(odd) {
+  	  clear: both;
+  	  padding-left: 0;
+	  }
+	  &:nth-child(even) {
+  	  padding-right: 0;
+	  }
+	}
+
+	// three column grid
+	@media screen and (min-width: $medium-screen) {
+	  width: 33%;
+	  float: left;
+	  padding: 0 .5em;
+
+	  &.item-3np1 {
+  	  clear: both;
+  	  padding-left: 0;
+	  }
+	  &:nth-child(3n) {
+  	  padding-right: 0;
+	  }
+	}
+}
+
+//
+// Single Album Page
+//
+
+.primary-area,
+.secondary-area {
+	@include grid-column(12);
+}
+
+.primary-area {
+
+	.entry-header {
+		display: none; // hide on mobile
+
+		background-color: #fff;
+		padding: $panel-padding;
+		border-bottom: 1px solid $body-bg;
+
+		// kill margin on h1
+		.entry-title {margin: 0;}
+
+		.subtitle {
+			font-size: 1em;
+			font-weight: normal;
+
+			a {
+				color: $body-font-color;
+
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+
+	.tracklist {
+		margin: 0;
+		list-style: none;
+		counter-reset: track-list; // must user reset for the track numbering
+
+		li.track {
+			background-color: #fff;
+			border-bottom: 1px solid $body-bg;
+			padding: .8em 1.5em .8em 5em;
+			position: relative;
+			@include transition(all .2s linear);
+			a {color: $body-font-color;}
+
+			&:hover {
+				background-color: $primary-color;
+
+				a {
+					color: #fff;
+				}
+			}
+		}
+		// creates track numbering element
+		li:before {
+			content: counter(track-list, decimal);
+			counter-increment: track-list;
+			background-color: $primary-color;
+			padding: .8em;
+			margin: -.8em 0;
+			width: 50px;
+			text-align: center;
+			color: #fff;
+			position: absolute;
+			left: 0;
+		}
+
+		.track-meta {
+			float: right;
+		}
+	}
+
+	.entry-content {
+		background-color: #fff;
+		padding: $panel-padding;
+		margin-bottom: $panel-margin-bottom;
+	}
+}
+
+.secondary-area {
+
+	.record-artwork a {
+		border: 10px solid #fff;
+		display: block;
+
+		img {
+  		width: 100%;
+		}
+	}
+
+	// container of record-details & meta-links
+	.record-info {
+		background-color: #fff;
+		padding: $panel-padding;
+		margin-bottom: $panel-margin-bottom;
+	}
+
+	// info about record - artist, release date, genre
+	.record-details {
+		margin: 0;
+
+		dt, dd {margin-bottom: 0;} // zero out so text breaks to next line naturally
+
+		dt {
+			float: left;
+			margin-right: .5em;
+		}
+	}
+
+	// purchase links for album
+	.meta-links {
+		margin-top: 1.5em;
+
+		h2 {
+			font-size: 1em;
+			color: $primary-color;
+		}
+
+		ul {
+			margin: 0;
+			list-style: none;
+		}
+
+		// external link buttons
+		a {
+			@include button($padding:$button-med, $bg:$secondary-color, $radius:true, $full-width:true, $disabled:false, $is-input:false, $is-prefix:false);
+			text-transform: uppercase;
+			letter-spacing: $base-letter-spacing;
+
+			&:hover {
+				background-color: $primary-color;
+			}
+		}
+	}
+
+}
+
+@media screen and (min-width: $small-screen) {
+
+	.primary-area {
+		float: left;
+		@include grid-column(8);
+
+		// reinstate the header in primary content
+		.entry-header {
+			display: block;
+
+			h1 {color: $primary-color;}
+		}
+	}
+
+	.secondary-area {
+		float: right;
+		@include grid-column(4);
+
+		// hide heading, show up in primary content
+		.entry-header {
+			display: none;
+		}
+	}
+
+}

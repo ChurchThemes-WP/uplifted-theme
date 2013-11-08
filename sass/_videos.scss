@@ -1,0 +1,126 @@
+/* Videos */
+
+
+//
+// Video Archive page
+//
+
+.post-type-archive-audiotheme_video {
+  
+  // override content width to be 100%
+  #content {
+    width: 100%;
+  }
+  
+  // hide the sidebar, may change method later if we can fix the template usage
+  #secondary {
+    display: none;
+  }
+  
+  .audiotheme-grid {
+    margin: 0;
+    
+    .audiotheme_video {
+      margin-bottom: 1em;
+    	
+    	// two column grid
+    	@media screen and (min-width: $small-screen / 1.5 ) and (max-width: $medium-screen) {
+    	  width: 50%;
+    	  float: left;
+    	  padding: 0 .5em;
+    	  
+    	  &:nth-child(odd) {
+      	  clear: both;
+      	  padding-left: 0;
+    	  }
+    	  &:nth-child(even) {
+      	  padding-right: 0;
+    	  }
+    	}
+    	
+    	// three column grid
+    	@media screen and (min-width: $medium-screen) {
+    	  width: 33%;
+    	  float: left;
+    	  padding: 0 .5em;
+    	  
+    	  &.item-3np1 {
+      	  clear: both;
+      	  padding-left: 0;
+    	  }
+    	  &:nth-child(3n) {
+      	  padding-right: 0;
+    	  }
+    	}
+    	
+    	img {
+      	width: 100%;
+    	}
+    	
+    	// video title
+    	.audiotheme-video-title {
+    	  font-size: 1em;
+    	  font-weight: bold;
+      	background-color: $panel-bg;
+      	margin: 0;
+      	padding: ($panel-padding - 6px);
+        border-bottom: 4px solid $tertiary-color;
+    	}
+    }
+  }
+}
+
+//
+// Single Video page
+//
+.audiotheme-embed {
+	margin-bottom: $panel-margin-bottom;
+}
+
+.audiotheme-video-header {
+	
+	h1 {
+		margin-top: 0;
+		margin-bottom: $panel-padding;
+	}
+}
+
+.audiotheme-term-list {
+	margin: 0 (-$panel-padding);
+	border-top: 1px solid $body-bg;
+	border-bottom: 1px solid $body-bg;
+	
+	.audiotheme-term-list-label {
+		background-color: $primary-color;
+		display: inline-block;
+		padding: 1.5em;
+		margin-right: .7em;
+		font-size: emCalc(12px);
+		font-weight: bold;
+		color: #fff;
+	}
+	
+	.audiotheme-term-list-items {
+		counter-reset: bullet-points;
+		font-size: emCalc(13px);
+		
+		// add bullet points
+		a:after {
+			content: counter(bullet-points, disc);
+			counter-increment: bullet-points;
+			vertical-align: middle;
+			display: inline-block;
+			color: lighten($body-font-color, 60%);
+			margin: -.1em .4em 0 .5em;
+			
+		}
+	}
+}
+
+.audiotheme_video .panel {
+  padding-bottom: 0;
+}
+
+.audiotheme-content p {
+  margin: $panel-padding 0;
+}

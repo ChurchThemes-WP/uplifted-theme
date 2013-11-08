@@ -1,0 +1,194 @@
+/* Gigs */
+
+.gig-list-header {
+	padding: $panel-padding;
+	background-color: #fff;
+	border-bottom: 1px solid $body-bg;
+	
+	h1 {
+		margin: 0;
+	}
+}
+
+.gig-list {
+	margin-bottom: $panel-margin-bottom;
+}
+
+.gig-summary {
+	margin: 0;
+	background: #fff url(img/icon-arrow-gray.png) no-repeat 96% center;
+	background-size: 16px 33px;
+	overflow: hidden;
+	@include transition(all .2s linear);
+	
+	&:hover {
+		background: $primary-color url(img/icon-arrow-white.png) no-repeat 98% center;
+		background-size: 16px 33px;
+		color: #fff;
+		.gig-date,
+		.gig-title,
+		.gig-venue {color: #fff;}
+		.gig-meta {border-color: darken($primary-color, 15%);}
+	}
+	
+	.gig-date {
+		float: left;
+		background-color: $primary-color;
+		margin: 0;
+		width: 25%;
+		min-width: 70px;
+		height: 75px;
+		font-size: 1.3em;
+		text-align: center;
+		border-bottom: 3px solid darken($primary-color, 15%);
+		color: #fff;
+		line-height: 4.1;
+	}
+	
+	.gig-meta {
+		width: 75%;
+		height: 75px;
+		float: left;
+		margin: 0;
+		padding: 1.1em 1.7em 1em 6%;
+		border-bottom: 3px solid $tertiary-color;
+	}
+	
+	.gig-title {
+		font-size: emCalc(20px);
+		font-weight: normal;
+		color: $body-font-color;
+		margin: 0;
+		
+		// hide the country and previouse comma, if any
+		.country-name,
+		.sep-country-name {display: none;}
+	}
+	
+	.gig-venue {
+		font-size: emCalc(12px);
+		font-weight: bold;
+		color: lighten($topbar-link-color, 50%);
+		margin: 0;
+	}
+}
+
+@media screen and (min-width: $small-screen) {
+	
+	.gig-summary {
+		
+		.gig-date {
+			width: 20%;
+			height: 90px;
+		}
+		
+		.gig-meta {
+			width: 80%;
+			height: 90px;
+		}
+	}
+	
+}
+
+//
+// Single Gig Page
+//
+
+.single-audiotheme_gig {
+  
+  // need to remove margin of last paragraph so we 
+  // do not have double margin
+  .hentry p:last-child {
+    margin: 0;
+  }
+  
+  // for the Date and Location we are using the same styles as the Gig
+  // List page but changing a few small things
+  .gig-summary {
+    margin: (-$panel-padding) (-$panel-padding) 1em;
+    background-image: none;
+    background-color: $primary-color;
+    
+    .gig-date,
+    .gig-meta {
+      border: none;
+      
+      @media screen and (min-width: $small-screen) {
+        height: 87px;
+      }
+    }
+    
+    .gig-title,
+    .gig-venue {
+      color: #fff;
+    }
+  }
+}
+
+.gig-note {
+  margin-bottom: 1em;
+}
+
+// Gig Details include Time, Tickets
+.gig-details {
+  margin: 0 0 1em 0;
+  font-weight: bold;
+  color: lighten($topbar-link-color, 50%);
+  
+  li {
+    display: inline;
+  }
+}
+
+// Gig Location includes Google Map view and Street Address
+.gig-location {
+	margin: 0 (-$panel-padding) 1.25em;
+	position: relative;
+	
+	// this is the Google map insert
+	> a {
+		display: block;
+		width: 100%;
+		min-height: 180px;
+		//background-size: 100% auto; // need this to scale image
+		background-position: center center;
+	}
+	
+	.gig-venue-address {
+		
+		.venue-name,
+		.venue-address {
+			background-color: $primary-color;
+			color: #fff;
+			padding: .5em;
+			display: inline-block;
+			font-weight: bold;
+			@include transition;
+		}
+		
+		a .venue-name:hover { background-color: $anchor-font-color-hover; }
+		
+		.venue-address {
+			background-color: $secondary-color;
+			font-weight: normal;
+		}
+	}
+}
+
+@media screen and (min-width: $small-screen) {
+	
+	.gig-location {
+		
+		.gig-venue-address {
+			position: absolute;
+			bottom: 1em;
+			max-width: 50%;
+			
+			.url,
+			.venue-address {
+				display: inline-block;
+			}
+		}
+	}
+	
+}

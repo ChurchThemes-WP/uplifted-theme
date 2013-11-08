@@ -1,0 +1,102 @@
+/* Post */
+  
+.panel{
+  position: relative;
+  background-color: $panel-bg;
+  padding: $panel-padding;
+  border-bottom: 4px solid $tertiary-color;
+}
+
+.entry-title,
+.panel h1 {
+  font-weight: 100;
+  line-height: 1.1;
+  font-size: $h1-font-size;
+}
+
+.featured-image {
+  max-width:100%;
+
+  img {
+    border: none;
+    padding: 0;
+    margin: 0;
+    float: none;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+// meta info for each post type
+.meta {
+  padding: 0;
+  list-style: none;
+  position: relative;
+  color: lighten($secondary-color, 50%);
+  font-size: .8em;
+  overflow: hidden;
+  padding: ($panel-margin-bottom / 2.5) 0 $panel-margin-bottom;
+  
+  .meta-group {
+    width: 50%;
+    line-height: 1.4;
+    
+    &.right {
+      text-align: right;
+    }
+    
+    .date,
+    .post-author {
+      display: inline-block;
+    }
+  }
+
+  a {
+    color: lighten($secondary-color, 50%);
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  
+  .genericon {
+    font-size: 14px;
+  }
+}
+
+
+// author description widget
+.author-info {
+  margin: $panel-margin-bottom 0;
+  
+  .author-avatar {
+    float: left;
+    margin: 0 1em 1em 0;
+    overflow: hidden;
+    @include border-radius($global-rounded);
+  }
+  
+  .author-description h2 {
+    font-size: 1.5em;
+  }
+}
+
+//
+// Link Post Type
+//
+
+.format-link {
+  
+  .meta {
+    
+    > a {
+      margin-right: .5em;
+    }
+    
+    .date {
+      display: inline-block;
+      margin-left: .5em;
+    }
+  }
+}

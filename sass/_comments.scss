@@ -1,0 +1,336 @@
+/* Comments */
+
+//
+// Comment Thread
+//
+.comments-title {
+  font-size: emCalc(16px);
+  font-weight: bold;
+  color: $body-font-color;
+  text-transform: uppercase;
+  margin-bottom: ($panel-margin-bottom / 2);
+}
+
+.logged-in-as,
+.form-allowed-tags,
+.comment-notes {
+  padding: 6px 0;
+  font-size: emCalc(11px);
+}
+
+.form-allowed-tags,
+.logged-in-as {
+  font-weight: bold;
+  margin-bottom: 1em;
+  padding: 1em;
+  background-color: rgba(#736054,.1);
+  @include border-radius($global-radius);
+}
+
+#comments,
+.commentlist,
+#respond {
+  margin-bottom: $panel-margin-bottom;
+}
+
+textarea {
+  resize: vertical;
+  width: 100% !important;
+  min-height: 150px;
+}
+
+.commentlist {
+  margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  clear: both;
+
+  #respond {
+    margin-left: 0;
+    padding: 20px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+
+    textarea {
+      width: 100%;
+    }
+  }
+
+  li {
+    list-style: none;
+    clear: both;
+    padding: $panel-padding;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: $panel-bg;
+    border-bottom: 4px solid $tertiary-color;
+  }
+}
+
+//
+// user avatar block
+//
+.comment-meta {
+  float: left;
+  width: 20%;
+  
+  @media screen and (min-width: ($small-screen / 2) ) {
+    width: 12%;
+	}
+}
+
+// override base vcard styles just for comment area
+.comment-author.vcard {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.comment-author .avatar-wrap {
+  @include border-radius($global-rounded);
+}
+
+// user img
+.comment-author img {
+  width: 100%;
+  height: auto;
+  display: block;
+  @include border-radius($global-rounded);
+}
+
+// edit button - users can edit their comments
+.comment-edit-link {
+  font-size: emCalc(12px);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: $base-letter-spacing;
+  color: #fff;
+  margin-top: 10px;
+  padding: .3em;
+  display: block;
+  background-color: $primary-color;
+  @include border-radius($global-radius);
+  
+  &:hover {
+	  background-color: $anchor-font-color-hover;
+	  color: #fff;
+  }
+}
+
+//
+// comment section
+//
+.comment-content {
+  float: right;
+  width: 75%;
+  
+  @media screen and (min-width: ($small-screen / 2) ) {
+    width: 85%;
+	}
+  
+  p {
+	  font-size: .9em;
+	  margin-bottom: .5em;
+  }
+  
+}
+
+.author-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+
+  .fn {
+	  color: $primary-color;
+	  text-transform: capitalize;
+  }
+  
+  .says {
+    display: none;
+  }
+}
+
+.comment {
+  overflow:hidden;
+}
+
+// post date
+.comment-date {
+  font-size: emCalc(12px);
+  font-weight: bold;
+  color: lighten($body-font-color, 50%);
+  
+  &:hover {
+	  color: $primary-color;
+  }
+}
+
+// reply to a user
+.reply {
+  font-size: emCalc(12px);
+  position: absolute;
+  top: $panel-padding;
+  right: $panel-padding;
+
+  a {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.commentlist {
+  
+  // overwrite blockquote negative margin so display correctly in comment thread
+  blockquote {
+    margin: 0;
+  }
+  
+  //
+  // Reply Thread
+  //
+  
+  //outer most child container, modify margin for full width appearance
+  .children {
+    margin: $panel-margin-bottom (-$panel-padding) 0 0;
+    padding: 0;
+    background-color: $blockquote-bg-color;
+    
+    li {
+      margin: 0;
+      background: transparent;
+      border-bottom: 4px solid $panel-bg;
+      
+      .children {
+        background-color: $tertiary-color;
+        
+        li {
+          border-color: $blockquote-bg-color;
+          
+          .children {
+            background-color: $blockquote-bg-color;
+            
+            li {
+              border-color: $tertiary-color;
+              
+              .children {
+                background-color: $tertiary-color;
+                
+                li {
+                  border-color: $blockquote-bg-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .even {
+      //background-color: darken($blockquote-bg-color, 5%);
+    }
+
+    .comment-author {
+      position: relative;
+      left: auto;
+      width: auto;
+      margin: 0;
+      padding: 0;
+      padding-bottom: 10px;
+      top: auto;
+      background: none;
+    }
+  }
+}
+
+#commentform {
+
+  input[type="text"],
+  textarea {
+    display: block;
+    width: auto;
+    padding: 10px;
+    font-size: 14px;
+    color: $body-font-color;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+
+}
+
+
+//
+// Leave A Reply
+//
+#respond {
+
+  .comment-form-author,
+  .comment-form-email {
+    float: left;
+    width: 48%;
+    margin-bottom: 0; // we need to zero out bottom margin because 
+    				  // these two sections are floated and we don't 
+    				  // want the margins adding on to each other
+  }
+
+  .comment-form-author {
+    margin-right: 4%;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  label {
+    font-family:$body-font-family;
+    color: lighten($body-font-color, 30%);
+    text-transform: uppercase;
+  }
+
+  #reply-title {
+    text-transform: uppercase;
+    font-size: emCalc(16px);
+    font-weight: bold;
+    letter-spacing: $base-letter-spacing;
+    margin-top: $panel-margin-bottom;
+    
+    small {
+      float: right;
+      
+      a {
+        background-color: $primary-color;
+        color: #fff;
+        padding: $button-sml;
+        letter-spacing: $base-letter-spacing;
+        @include border-radius();
+        
+        &:hover {
+          background-color: $anchor-font-color-hover;
+        }
+      }
+    }
+  }
+
+  .form-submit {
+  	@include clearfix();
+	// submit button
+	input#submit {
+		font-size: .7em;
+		font-weight: bold;
+		color: #fff;
+		background-color: $primary-color;
+		padding: 1em;
+		text-transform: uppercase;
+		border: 0;
+		border-radius: 0;
+		letter-spacing: $base-letter-spacing;
+		float: right;
+		@include box-shadow(-5px 5px rgba(#736054,.1));
+		
+  		&:hover {
+  			background-color: $anchor-font-color-hover;
+  		}
+    }
+  }
+}

@@ -1,0 +1,65 @@
+/* Layout */
+
+//
+// Target Content Layout for Mobile Devices
+//
+
+#main {
+  @include grid-row();
+  margin-top: 2em; // need to bump away from fixed header
+}
+
+// this is the Main Content section
+#content {
+  @include grid-column(12);
+}
+
+// this is the Sidebar section
+#secondary {
+  @include grid-column(12);
+}
+
+//
+// Target Content Layout for above Mobile
+//
+@media screen and (min-width: $small-screen) {
+	
+	// this is the Main Content section
+	#content {
+		@include grid-column(8);
+	}
+	
+	// this is the Sidebar section
+	#secondary {
+		@include grid-column(4,true,false);
+	}
+	
+	// if the layout is reversed
+	.layout_reversed {
+	
+		#content {
+			@include grid-column(8,true,false);
+			float: right; // should be able to added via above include, but not sure how
+			              // so could be changed later
+		}
+		
+		#secondary {
+			@include grid-column(4);
+		}
+	}
+}
+
+
+// full-width template
+.layout_single_column,
+.page-template-template-full-width-php {
+
+  #content {
+    @include grid-column(12);
+  }
+  
+  #secondary {
+    display: none;
+  }
+
+}

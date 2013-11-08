@@ -1,0 +1,482 @@
+/* AudioTheme */
+
+
+// AudioTheme Discography Pages
+//
+
+// overwrite AudioTheme styles for page H1
+// and replace with our original site-wide styles
+h1.audiotheme-archive-title {
+	font-size: $h1-font-size;
+	font-weight: $alt-header-font-weight;
+	color: $primary-color;
+	margin-bottom: $header-bottom-margin;
+}
+
+.audiotheme-grid {
+
+	.attachment-record-thumbnail {
+		border: 4px solid #fff;
+	}
+
+	.audiotheme-record-meta {
+		font-size: .8em;
+	}
+}
+
+
+
+.audiotheme-grid,
+.audiotheme-gigs{
+	li{
+		list-style:none;
+	}
+}
+
+/* Group Drop
+-------------------------------------------------------------- */
+
+.group-drop {
+	display: inline-block;
+
+	.group-drop-panel { display: none;}
+	.group-drop-trigger {
+		cursor: pointer;
+		display: inline-block;
+
+		&:hover { text-decoration: none;}
+	}
+
+	&.is-open {
+		.group-drop-panel { display: block;}
+		.group-drop-trigger i:before { content: "\e003";}
+	}
+}
+
+.group-drop--search {
+	.group-drop-panel {
+		overflow: hidden;
+		padding: 10px;
+		width: 100%;
+		background: #000;
+
+		#s {
+			margin: 0;
+			padding: 0 70px 0 20px;
+			width: 100%;
+			height: 50px;
+			font-size: 21px;
+			font-style: italic;
+			background: #fff;
+			border-width: 0;
+
+			&:focus { font-style: normal;}
+		}
+		#searchsubmit {
+			display: block;
+			overflow: hidden;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			margin: 0;
+			padding: 0;
+			width: 50px;
+			height: 50px;
+			font-size: 20px;
+			line-height: 50px;
+			text-align: center;
+			text-indent: 50px;
+			background: #fff;
+			border-width: 0;
+
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				text-indent: 0;
+			}
+		}
+	}
+	.group-drop-trigger i {
+		position: relative;
+		top: 2px;
+		font-size: 20px;
+
+		&:hover { color: #fff;}
+	}
+}
+
+/* IE */
+.lt-ie9 .group-drop--search {
+	.group-drop-panel {
+		#s { padding-top: 14px;}
+	}
+}
+
+.tracklist {
+	.track {
+		.track-meta {
+
+			.jp-duration,
+			.sep-jp-duration {
+				display: none;
+			}
+		}
+
+		/* Track States */
+		&.is-playable:hover {
+
+			&:before {
+				cursor: pointer;
+				content: "\e00f";
+				@extend .americanaura-icon;
+				height: 100%;
+				line-height: 145%;
+			}
+		}
+		&.is-playing,
+		&.is-playing:hover {
+			&:before {
+				content: "\e00e";
+				@extend .americanaura-icon;
+				height: 100%;
+				line-height: 145%;
+			}
+			.track-title {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+//
+// AudioTheme Music Player - fixed position
+//
+
+// if the AudioTheme jukebox is active add padding to footer
+body.has-jukebox #footer {
+	padding-bottom: 40px;
+}
+
+.jukebox {
+	z-index: 100;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	float: left;
+	clear: both;
+	padding: 0 144px 0 110px;
+	width: 100%;
+	height: 50px;
+	color: $body-font-color;
+	font-size: 11px;
+	line-height: 50px;
+	background-color: $neutral-color;
+
+	a {
+		color: $body-font-color;
+		text-decoration: none;
+	}
+	.jp-controls {
+		position: absolute;
+		top: 0;
+		left: 0;
+		float: left;
+		width: 109px;
+		font-size: 14px;
+		text-align: center;
+		border-right: 1px solid $tertiary-color;
+
+		a {
+			cursor: pointer;
+			display: inline-block;
+			vertical-align: middle;
+			float: left;
+			width: 36px;
+			height: 52px;
+			text-align: center;
+
+			&:before {
+				position: relative;
+				top: 2px;
+			}
+			&:hover { color: $primary-color;}
+		}
+		.jp-play,
+		.jp-pause {
+			margin: 0;
+			font-size: 20px;
+		}
+	}
+	.jp-progress {
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		left: 109px;
+		right: 144px;
+		height: 50px;
+
+		.jp-seek-bar {
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			cursor: pointer;
+			width: 100%;
+			height: 50px;
+		}
+		.jp-play-bar {
+			position: absolute;
+			top: 0;
+			left: 0;
+			cursor: pointer;
+			width: 100%;
+			height: 50px;
+			z-index: 2;
+			background-color: $primary-color;
+		}
+	}
+	.jp-time {
+		z-index: 10;
+		position: relative;
+		float: right;
+		margin-right: 30px;
+		font-size: 15px;
+
+		.jp-current-time { color: lighten($topbar-link-color, 50%); }
+	}
+	.track-details {
+		z-index: 10;
+		position: relative;
+		float: left;
+
+		img {
+			display: none;
+			float: left;
+			margin: 5px;
+			width: 40px;
+			height: 40px;
+			border: 1px solid $neutral-color;
+		}
+		.jp-title {
+			padding-left: 15px;
+			font-size: 13px;
+			font-weight: bold;
+		}
+	}
+	.jukebox-toggle {
+		display: block;
+		z-index: 100;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 26px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		border-left: 1px solid $tertiary-color;
+		cursor: pointer;
+
+		i {
+			position: relative;
+			top: 2px;
+		}
+		&:hover { color: #fff; background-color: $primary-color;}
+	}
+}
+
+.jp-playlist {
+	background: $neutral-color;
+	border: 1px solid $tertiary-color;
+	@include box-shadow(4px 4px rgba(0,0,0,0.2));
+
+	&:before {
+		content: "";
+		z-index: 1;
+		display: block;
+		position: absolute;
+		right: 19px;
+		bottom: -10px;
+		margin-left: -11px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 11px 11px 0 11px;
+		border-color: #ffffff transparent transparent transparent;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 16px;
+		bottom: -13px;
+		margin-left: -11px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 10px 10px 0 10px;
+		border-color: rgba(0,0,0,0.2) transparent transparent transparent;
+	}
+	a { }
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			position: relative;
+			border-top: 1px solid $tertiary-color;
+
+			&:first-child {
+  			border: none;
+			}
+
+			a {
+				display: block;
+				padding: 10px 20px 10px 40px;
+			}
+			.jp-playlist-item-order {
+				display: block;
+				position: absolute;
+				padding: 13px 0 0 0;
+				width: 30px;
+				text-align: right;
+
+				&:before { display: none;}
+				i { font-style: normal;}
+			}
+			&:hover,
+			&.jp-playlist-current {
+				padding: 0;
+				background: $primary-color;
+				border-color: $primary-color;
+				color: $neutral-color;
+				
+				a {color: $neutral-color;}
+
+				.jp-playlist-item-order {
+					&:before {
+						display: block;
+					}
+					i { display: none;}
+				}
+			}
+		}
+	}
+}
+
+/* IE */
+.lt-ie9 .jp-playlist {
+	&:after { display: none;}
+}
+
+.jukebox-group {
+	z-index: 40;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+
+	.group-drop-trigger {
+		position: absolute;
+		bottom: 0;
+		width: 60px;
+		height: 50px;
+		font-size: 16px;
+		line-height: 54px;
+		text-align: center;
+		border-left: 1px solid $tertiary-color;
+
+		&:hover { color: $primary-color;}
+	}
+}
+.jukebox-group--playlist {
+	.group-drop-panel {
+		position: absolute;
+		right: 24px;
+		bottom: 65px;
+		width: 350px;
+		font-size: 14px;
+		line-height: 1;
+		text-align: left;
+	}
+	.group-drop-trigger { right: 24px;}
+}
+.jukebox-group--volume {
+	.group-drop-panel {
+		display: none;
+		position: absolute;
+		right: 83px;
+		bottom: 53px;
+		padding: 0 20px;
+		width: 280px;
+		height: 50px;
+		font-size: 16px;
+		text-align: right;
+		background: $neutral-color;
+		border: 1px solid $tertiary-color;
+	}
+	.group-drop-trigger { right: 84px;}
+	.jp-volume-bar {
+		cursor: pointer;
+		z-index: 50;
+		position: relative;
+		float: left;
+		margin-top: 19px;
+		width: 200px;
+		height: 12px;
+		background-color: $tertiary-color;
+		@include border-radius(6px);
+
+		.jp-volume-bar-value {
+			display: block;
+			position: relative;
+			top: 2px;
+			left: 2px;
+			height: 8px;
+			background-color: $primary-color;
+			border-radius: 4px;
+		}
+	}
+}
+
+.jukebox.is-closed {
+	padding-right: 24px;
+	width: 134px;
+
+	.jp-time,
+	.jukebox-group,
+	.track-details { display: none;}
+	.jukebox-toggle i:before { content: "\e025";}
+}
+
+/* Hide the volume control on touch devices. */
+.touch .jukebox {
+	padding-right: 84px;
+
+	.jukebox-group--volume  { display: none;}
+	&.is-closed { padding-right: 24px;}
+}
+
+@media only screen and (max-width: 760px) {
+	.jukebox .jp-title { display: none !important;}
+}
+
+@media only screen and (max-width: 460px) {
+	.jukebox .jp-time { display: none;}
+}
+
+@media only screen and (max-width: 420px) {
+	.jp-playlist { border-width: 1px 0;}
+	.jukebox-group {
+		width: 100%;
+
+		.group-drop-panel {
+			right: 0;
+			width: 100%;
+		}
+	}
+}
