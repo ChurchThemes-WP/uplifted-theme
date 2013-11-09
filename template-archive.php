@@ -22,7 +22,7 @@ Template Name: Archives Page
 
             <div class="small-6 large-6 columns">
 
-                <h3><?php _e("Categories","amplify"); ?></h3>
+                <h3><?php _e("Categories",'uplifted'); ?></h3>
 
                 <ul>
                     <?php wp_list_categories('title_li=&hierarchical=0&show_count=1') ?>
