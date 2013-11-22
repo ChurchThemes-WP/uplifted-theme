@@ -5,19 +5,22 @@ define('UPTHEMES_ITEM_NAME', 'Uplifted Theme');
 define('UPTHEMES_STORE_URL', 'http://upthemes.com');
 
 // Grab some necessary PHP includes
-include_once('options/options.php');							// UpThemes Framework
-include_once('inc/theme-options.php');							// Load theme options specific to this theme
-include_once('inc/custom-header.php');							// Custom header setup
-//include_once('inc/audiotheme-shim.php');						// AudioTheme support
-//include_once('inc/audiotheme-player.php');						// AudioTheme support
-include_once('inc/foundation-navbar.php');						// Foundation navbar
-include_once('inc/responsive-slider/responsive-slider.php');				// Responsive slider
-include_once('inc/presstrends.php');               					// PressTrends
-include_once('inc/church-framework/framework.php');					// Church Framework
+include_once('inc/custom-header.php');                          // Custom header setup
+include_once('inc/foundation-navbar.php');                      // Foundation navbar
+include_once('inc/responsive-slider/responsive-slider.php');    // Responsive slider
+include_once('inc/presstrends.php');                            // PressTrends
+include_once('inc/church-framework/framework.php');             // Church Framework
+//include_once('inc/html-builder/html-builder.php');              // HTML Builder
+include_once('options/options.php');                            // UpThemes Framework
+include_once('inc/theme-options.php');                          // Load theme options specific to this theme
 
 if ( !class_exists( 'UpThemes_Theme_Updater' ) ) {
 	// Load our custom theme updater
 	include( 'inc/UpThemes_Theme_Updater.php' );
+}
+
+if ( ! isset( $content_width ) ){
+  $content_width = 560;
 }
 
 function uplifted_add_ctc_support() {
@@ -60,19 +63,12 @@ add_action( 'after_setup_theme', 'uplifted_add_ctc_support' );
  */
 function uplifted_theme_setup() {
 
-  if ( ! isset( $content_width ) ) $content_width = 560;
-
   add_theme_support( 'nav-menus' );
 
 	load_theme_textdomain( 'uplifted', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to <head>.
 	add_theme_support( 'automatic-feed-links' );
-
-	// This theme uses wp_nav_menu() in one location.
-  if( function_exists('register_nav_menu') )
-  	register_nav_menu( 'main_menu', __( 'Main Menu','uplifted' ) );
-    register_nav_menu( 'secondary_menu', __( 'Secondary Menu','uplifted' ) );
 
 	// Add support for a variety of post formats
 	add_theme_support( 'post-formats', array( 'video', 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
@@ -269,10 +265,8 @@ function uplifted_enqueue_scripts(){
 
   wp_enqueue_script( 'plugins', get_template_directory_uri() . '/scripts/plugins.js', array('jquery') );
   wp_enqueue_script( 'init', get_template_directory_uri() . '/scripts/init.js', array('plugins'), false, true );
-  wp_enqueue_script( 'foundation', get_template_directory_uri() . '/scripts/foundation.js', array('jquery') );
-  wp_enqueue_script( 'foundation-topbar', get_template_directory_uri() . '/scripts/foundation.topbar.js', array('jquery') );
-  wp_enqueue_script( 'jquery-jplayer' );
-  wp_enqueue_script( 'jquery-jplayer-playlist' );
+  wp_enqueue_script( 'foundation', get_template_directory_uri() . '/scripts/foundation.js', array('jquery'), '5.0.0', true );
+  wp_enqueue_script( 'foundation-topbar', get_template_directory_uri() . '/scripts/foundation.topbar.js', array('foundation'), '5.0.0', true );
 
 }
 
@@ -624,14 +618,3 @@ function uplifted_gallery_shortcode($attr) {
 
 	return $output;
 }
-
-function uplifted_set_rtl($classes){
-	$options = upfw_get_options();
-
-	if( $options->is_rtl == 'yes' )
-		$classes[] = 'is-rtl';
-
-	return $classes;
-}
-
-add_filter('body_class','uplifted_set_rtl');
