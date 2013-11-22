@@ -101,7 +101,6 @@ jQuery(window).load(function() {
 		slideshow: $sliderstart,
 		pauseOnHover: true,
 		smoothHeight: true,
-		easing: "inOutExpo",
 		controlNav: false
 	} );
 

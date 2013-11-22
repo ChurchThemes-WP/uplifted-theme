@@ -296,7 +296,7 @@ function responsive_slider_register_shortcode() {
  * @since 0.1
  */
 function responsive_slider_image_sizes() {
-	add_image_size( 'slide-thumbnail', 2000, 660, true );
+	add_image_size( 'slide-thumbnail', 2000, 300, true );
 }
 
 /**
@@ -381,7 +381,6 @@ function responsive_slider_settings_page() { ?>
 			<?php settings_fields( 'uplifted_responsive_slider_options' ); ?>
 			<?php do_settings_sections( 'responsive-slider-settings' ); ?>
 			<br /><p><input type="submit" name="Submit" value="<?php _e( 'Update Settings', 'responsive-slider' ); ?>" class="button-primary" /></p>
-			<br /><p class="description"><?php _e( 'Note: Whenever you change the Width and Height settings, it is a good idea to re-upload the Featured Images of your Slides. This would get them cropped to the new size.', 'responsive-slider' ); ?></p>
 		</form>
 
 	</div>
@@ -410,7 +409,7 @@ function responsive_slider_settings_init() {
 
 /* Output the section header text. */
 function responsive_slider_section_text() {
-	echo '<p class="description">' . __( 'Make sure to set the desired slide width and height BEFORE creating your slides. Ideally, this would be the maximum size the slider container expands to.', 'responsive-slider' ) . '</p>';
+	echo '<p class="description">' . __( 'These options determine the animation styles of your featured content slider.', 'responsive-slider' ) . '</p>';
 }
 
 function slide_effect() {
@@ -467,8 +466,6 @@ function responsive_slider_validate_options( $input ) {
 
 	$options = get_option( 'uplifted_responsive_slider_options' );
 
-	$options['slide_width'] = wp_filter_nohtml_kses( intval( $input['slide_width'] ) );
-	$options['slide_height'] = wp_filter_nohtml_kses( intval( $input['slide_height'] ) );
 	$options['slide_effect'] = wp_filter_nohtml_kses( $input['slide_effect'] );
 	$options['slide_delay'] = wp_filter_nohtml_kses( intval( $input['slide_delay'] ) );
 	$options['slide_duration'] = wp_filter_nohtml_kses( intval( $input['slide_duration'] ) );
