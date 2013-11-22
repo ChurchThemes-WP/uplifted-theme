@@ -3,4 +3,4 @@
 	url = git@github.com:LiftUX/UpThemes-Framework.git
 [submodule "inc/church-framework"]
 	path = inc/church-framework
-	url = git@github.com:churchthemes/church-theme-framework.git
+	url = git@github.com:LiftUX/church-theme-framework.git
