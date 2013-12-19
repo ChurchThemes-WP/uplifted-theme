@@ -1,0 +1,76 @@
+/* Post */
+
+.hentry{
+  margin-bottom: $panel-margin-bottom*3;
+}
+
+.uplifted-entry-title {
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 0;
+  font-size: $h1-font-size;
+}
+
+.uplifted-entry-image {
+  max-width:100%;
+  margin-bottom: $panel-margin-bottom;
+
+  img {
+    border: none;
+    padding: 0;
+    margin: 0;
+    float: none;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+// meta info for each post type
+.uplifted-entry-meta {
+  list-style: none;
+  position: relative;
+  color: lighten($secondary-color, 20%);
+  font-size: .8em;
+  overflow: hidden;
+  padding: ($panel-margin-bottom / 2.5) 0 $panel-margin-bottom 0;
+  margin: 0;
+
+  li{
+    float: left;
+    margin-right: 1em;
+  }
+
+  a {
+    color: lighten($secondary-color, 20%);
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .genericon {
+    font-size: 14px;
+  }
+}
+
+
+// author description widget
+.uplifted-author-box {
+  margin: $panel-margin-bottom 0;
+  overflow: auto;
+
+  .uplifted-author-avatar {
+    float: left;
+    margin: 0 1em 1em 0;
+    overflow: hidden;
+    @include border-radius($global-rounded);
+  }
+
+  .uplifted-author-content{
+    h1{
+      font-size: 1.2em;
+    }
+  }
+
+}

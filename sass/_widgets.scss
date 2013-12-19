@@ -1,0 +1,765 @@
+/* Widgets */
+
+/* Widget Styles */
+
+// entire widget can be built here, including
+// modifications for sidebar and footer
+
+
+/*  Global Widget Styles */
+
+// this is a generic global widget with
+// styles for widget and layout placement including
+// sidebar and footer
+
+.widget {
+  font-size: 13px;
+  margin-bottom: $panel-margin-bottom;
+
+  // widget title
+  h4 {
+    font-size: .9em;
+    font-weight: bold;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 0;
+
+      a {
+        display: block;
+        padding: .7em 0;
+        color: $body-font-color;
+        border-bottom: 1px solid contrast-color($neutral-color, darken($neutral-color,5%), lighten($neutral-color,5%), 50%);
+        @include transition(200ms all ease-in-out);
+
+        &:hover{
+          color: $primary-color;
+          padding-left: .5em;
+        }
+      }
+
+      > &:last-child a{
+        border-bottom: none;
+      }
+    }
+  }
+
+  // sidebar specific
+  #secondary & {
+    background-color: white;
+    border-bottom: 4px solid darken(#fff,15%);
+    padding: 20px;
+
+    h4 {
+      padding: 1em;
+      margin: -20px -20px 10px;
+      background: $secondary-color;
+      color: contrast-color($secondary-color, #fff, #f2f2f2, 50%);
+    }
+  }
+
+  // footer specific
+  #footer & {
+    text-align: center;
+    margin-bottom: 2.5em;
+
+    @media screen and (min-width: $small-screen ) {
+      text-align: left;
+    }
+
+    li {
+
+      a {
+        padding: .5em 0;
+        border-bottom: 1px solid lighten($secondary-color, 55%);
+
+        &:hover {
+          color: #fff;
+          background-color: $primary-color;
+          border-color: $primary-color;
+          padding-left: .8em;
+        }
+      }
+
+    }
+  }
+
+}
+
+/* Calendar Widget */
+
+.widget_calendar {
+
+  #calendar_wrap {
+    position: relative;
+
+    #wp-calendar {
+      width: 100%;
+      text-align: center;
+
+      caption {
+        background-color: $secondary-color;
+        color: #fff;
+        padding: 1em;
+      }
+
+      thead th {
+        padding: .5em 0;
+        background-color: $tertiary-color;
+        border-right: 1px solid white;
+
+        &:last-child { border: none; }
+      }
+
+      tbody tr {
+        border-bottom: 1px solid $tertiary-color;
+
+        &:last-child { border: none; }
+
+        td {
+          padding: .5em 0;
+          border: 1px solid $tertiary-color;
+          border-bottom: none;
+          background-color: $panel-bg;
+        }
+
+      }
+
+      tfoot {
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        td {
+          padding: 1.1em;
+          font-size: .9em;
+
+          &#next {
+            position: absolute;
+            right: 0;
+          }
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  // Sidebar specific styles:
+  // need to kill padding and heading of
+  // calendar wiget in sidebar
+  #secondary & {
+    padding: 0;
+
+    h4 { display: none; }
+  }
+
+}
+
+/* RSS Widget */
+
+.widget_rss {
+
+  // header color needs to be styled since there is
+  // an anchor link inside
+  h4 a {
+    color: #fff;
+    &:hover {
+      color: $primary-color;
+    }
+
+    // tweak color if widget is in footer
+    #footer & {
+      color: lighten($header-font-color, 20%);
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  ul li {
+    margin-bottom: .5em !important;
+
+    a {
+      border-bottom: 1px solid lighten($secondary-color, 55%) !important;
+    }
+  }
+
+  .rss-date,
+  .rssSummary,
+  cite {
+    font-size: .8em;
+  }
+
+  .rss-date {
+    font-weight: bold;
+    margin: .9em 0;
+    display: block;
+  }
+
+  cite {
+    margin: .5em 0;
+  }
+}
+
+/* Pages Widget */
+
+.widget_pages {
+
+  ul ul {
+    padding-left: 1.5em;
+  }
+}
+
+/* Search Widget */
+
+// the Search field and button need to have specific heights to match correctly
+.search-form {
+
+  input[type="text"] {
+    height: 45px;
+  }
+
+  // this is the search button
+  button {
+    height: 45px;
+    background-color: $input-border-color;
+    border: none;
+    box-shadow: none;
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
+
+// search widget container
+.widget_search {
+  background-color: transparent !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  border-bottom: none !important;
+}
+
+/* Recent Comments */
+
+.widget_recent_comments {
+
+  ul li {
+    margin-bottom: 1em;
+    //border-bottom: 1px solid contrast-color($neutral-color, darken($neutral-color,5%), lighten($neutral-color,5%), 50%);
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+/* Custom Text Widget */
+.widget_text {
+  // add line-height just in case the user does not add
+  // a paragraph tag to text
+  line-height: $paragraph-line-height;
+}
+
+/* Sidebar + Home Bottom */
+
+.uplifted-widget { /* <aside> */
+	padding: 0 20px 20px 20px;
+	line-height: 1.4em;
+	margin-top: 30px; /* in case no title */
+}
+
+	/* No top margin for sidebar */
+
+	#uplifted-sidebar-right .uplifted-widget:first-child { /* <aside> */
+		margin-top: 0;
+	}
+
+	/* Widget Title */
+
+	.uplifted-widget-title { /* <h1> */
+		display: inline-block;
+		margin: 0 -20px;
+		padding: 8px 11px 8px 11px;
+		font-size: 1.25em;
+		font-weight: normal;
+		line-height: 1.2em;
+		text-transform: uppercase;
+	}
+
+	/*
+	Move title and content up
+	jQuery adds .uplifted-widget-has-title for better widget styling
+	*/
+
+	.uplifted-widget-has-title > * {
+		position: relative;
+		top: -19px;
+	}
+
+	.uplifted-widget-has-title {
+		margin-top: 49px;
+		padding-bottom: 0;
+	}
+
+	/* No top margin first element IN widget */
+
+	.uplifted-widget > :not(.uplifted-widget-title):first-of-type {
+		margin-top: 0; /* same value as below */
+		padding-top: 20px; /* same value as below */
+	}
+
+		/* Applied for IE8 w/JavaScript since :first-of-type won't work, even with selectivizr */
+
+		.uplifted-widget-first-element { /* applied for IE8 w/JavaScript */
+			margin-top: 0 !important; /* same value as above */
+			padding-top: 20px !important; /* same value as above */
+		}
+
+	/* No bottom margin last element IN widget */
+
+	.uplifted-widget > :last-child,
+	.uplifted-widget > :last-child > :last-child { /* such as an LI */
+		margin-bottom: 0; /* same value as below */
+	}
+
+/*************** SHARED STYLES ****************/
+
+/* Widget Entry */
+
+.uplifted-widget-entry { /* <article> */
+	margin: 30px 0;
+}
+
+	/* Thumbnail Container */
+
+	.uplifted-widget-entry-thumb {
+		width: 55px;
+		height: 55px;
+		float: left;
+		margin-right: 15px;
+		margin-bottom: 5px;
+		padding-top: 2px;
+	}
+
+	/* Entry Title */
+
+	.uplifted-widget-entry-title { /* <h1> */
+		margin: 0;
+		font-size: 1em;
+		font-weight: bold;
+		line-height: 1.4em;
+	}
+
+	/* Meta List (Date, Author, etc.) */
+
+	.uplifted-widget-entry-meta { /* <ul> */
+		list-style: none;
+		margin: 0 -15px 0 0; /* negative of li right margin */
+	}
+
+		/* Meta Item */
+
+		.uplifted-widget-entry-meta > li {
+			display: inline-block;
+			margin: 12px 15px 0 0;
+			vertical-align: top;
+		}
+
+			/* Keep links from wrapping */
+
+			.uplifted-widget-entry-meta > li a {
+				white-space: nowrap;
+			}
+
+			/* Date */
+
+			.uplifted-widget-entry-date {
+				font-weight: bold;
+			}
+
+			/* Byline */
+
+			.uplifted-widget-entry-byline {
+				/*font-style: italic;*/
+			}
+
+			/* Icons */
+
+			.uplifted-widget-entry-icons .uplifted-list-icons { /* <ul> */
+				position: relative;
+				top: -2px;
+				white-space: nowrap;
+			}
+
+	/* Content / Excerpt */
+
+	.uplifted-widget-entry-content {
+		margin-top: 15px;
+	}
+
+		.uplifted-widget-entry-content p {
+			margin: 12px 0 0 0;
+		}
+
+		.uplifted-widget-entry-content p:first-child {
+			margin: 0;
+		}
+
+/* Dropdown Widgets */
+
+.widget_ctfw-archives select,
+.widget_ctfw-categories select {
+	width: 100%;
+}
+
+/* List Widgets */
+
+.widget_categories ul, /* default WP categories - blog only */
+.widget_ctfw-categories ul, /* enhanced categories - taxonomy selector */
+.widget_ctfw-archives ul, /* monthly sermon archives */
+.widget_ctfw-galleries ul, /* gallery page list */
+.widget_recent_entries ul,
+.widget_recent_comments ul,
+.widget_archive ul,
+.widget_meta ul,
+.widget_pages ul,
+.widget_links ul,
+.widget_nav_menu ul {
+	margin: 0;
+	list-style: none;
+	line-height: 1.4em;
+}
+
+.widget_categories ul ul,
+.widget_ctfw-categories ul ul,
+.widget_ctfw-archives ul ul,
+.widget_ctfw-galleries ul ul,
+.widget_recent_entries ul ul,
+.widget_recent_comments ul ul,
+.widget_archive ul ul,
+.widget_meta ul ul,
+.widget_pages ul ul,
+.widget_links ul ul,
+.widget_nav_menu ul ul {
+	margin-left: 15px;
+	list-style: none;
+	line-height: 1.4em;
+}
+
+	.widget_categories li,
+	.widget_ctfw-categories li,
+	.widget_ctfw-archives li,
+	.widget_ctfw-galleries li,
+	.widget_archive li,
+	.widget_meta li,
+	.widget_pages li,
+	.widget_links li,
+	.widget_nav_menu li {
+		padding-top: 0;
+		margin-bottom: 10px;
+	}
+
+	.widget_recent_entries li,
+	.widget_recent_comments li {
+		padding-top: 0;
+		margin-bottom: 18px;
+	}
+
+		.widget_categories li a,
+		.widget_ctfw-categories li a,
+		.widget_ctfw-archives li a,
+		.widget_ctfw-galleries li a,
+		.widget_ctfw-posts li a,
+		.widget_recent_entries li a,
+		/*.widget_recent_comments li a,*/
+		.widget_archive li a,
+		.widget_meta li a,
+		.widget_pages li a,
+		.widget_links li a,
+		.widget_nav_menu li a {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		.widget_categories li:first-child,
+		.widget_ctfw-categories li:first-child,
+		.widget_ctfw-archives li:first-child,
+		.widget_ctfw-galleries li:first-child,
+		.widget_recent_entries li:first-child,
+		.widget_recent_comments li:first-child,
+		.widget_archive li:first-child,
+		.widget_meta li:first-child,
+		.widget_pages li:first-child,
+		.widget_links li:first-child,
+		.widget_nav_menu li:first-child {
+			border-top: 0;
+			padding-top: 0;
+		}
+
+		.widget_categories li li,
+		.widget_ctfw-categories li li,
+		.widget_ctfw-archives li li,
+		.widget_ctfw-galleries li li,
+		.widget_recent_entries li li,
+		.widget_recent_comments li li,
+		.widget_archive li li,
+		.widget_meta li li,
+		.widget_pages li li,
+		.widget_links li li,
+		.widget_nav_menu li li {
+			margin: 0;
+			border-top: 0;
+			padding-top: 0;
+		}
+
+			.widget_categories li li a,
+			.widget_ctfw-categories li li a,
+			.widget_ctfw-archives li li a,
+			.widget_ctfw-galleries li li a,
+			.widget_ctfw-posts li li a,
+			.widget_recent_entries li li a,
+			.widget_recent_comments li li a,
+			.widget_archive li li a,
+			.widget_meta li li a,
+			.widget_pages li li a,
+			.widget_links li li a,
+			.widget_nav_menu li li a {
+				font-weight: normal;
+				text-transform: none;
+			}
+
+/************* WP TAG CLOUD WIDGET ************/
+
+.widget_tag_cloud {
+	line-height: 2.05em;
+}
+
+	.widget_tag_cloud a {
+		font-size: 0.75em !important; /* single size */
+		text-transform: uppercase;
+	}
+
+/************* WP CALENDAR WIDGET *************/
+
+.widget_calendar #wp-calendar {
+	width: 100%;
+}
+
+.widget_calendar #wp-calendar caption,
+.widget_calendar #wp-calendar td,
+.widget_calendar #wp-calendar th {
+	text-align: center;
+}
+
+	.widget_calendar #wp-calendar tbody td a {
+		font-weight: bold;
+	}
+
+.widget_calendar #wp-calendar caption {
+	padding: 0 0 5px 0;
+	font-weight: bold;
+}
+
+.widget_calendar #wp-calendar th {
+	border-width: 1px 0;
+	border-style: solid;
+	font-weight: bold;
+	padding: 3px 0;
+}
+
+.widget_calendar #wp-calendar tfoot td {
+	padding-top: 5px;
+}
+
+/************** WP SEARCH WIDGET **************/
+
+.widget_search form {
+	position: relative;
+}
+
+	/* Search Input */
+
+	.widget_search  .uplifted-search-field {
+		margin-right: 34px;
+	}
+
+	.widget_search .uplifted-search-field input {
+		width: 100%;
+	}
+
+	/* Search Button */
+
+	.widget_search .uplifted-search-button {
+		position: absolute;
+		top: 4px;
+		right: 2px;
+	}
+
+/*************** WP TEXT WIDGET ***************/
+
+.textwidget > :first-child {
+	margin-top: 0;
+}
+
+.textwidget > :last-child {
+	margin-bottom: 0 !important;
+}
+
+/*************** WP RSS WIDGET ****************/
+
+.widget_rss h1 img { /* hide RSS icon */
+	display: none;
+}
+
+.widget_rss ul {
+	margin: 0;
+	list-style: none;
+}
+
+	.widget_rss li {
+		margin: 32px 0;
+	}
+
+	.widget_rss li:first-child {
+		margin-top: 0;
+	}
+
+		.widget_rss li a {
+			margin-top: 0;
+			margin-bottom: 0;
+			font-size: 1em;
+			font-weight: bold;
+			line-height: 1.4em;
+			text-transform: uppercase;
+		}
+
+		.widget_rss .rss-date {
+			margin-top: 12px;
+			display: block;
+			font-weight: bold;
+		}
+
+		.widget_rss .rssSummary {
+			margin-top: 12px;
+		}
+		.widget_rss cite {
+			display: block;
+			margin-top: 12px;
+			font-style: italic;
+		}
+
+/************ CT HIGHLIGHT WIDGET *************/
+
+.widget_ctfw-highlight { /* <aside> */
+	padding: 0;
+}
+
+	.widget_ctfw-highlight .uplifted-widget-title { /* <h1> */
+		margin: 0;
+		padding: 0;
+		font-size: 1em;
+	}
+
+	.widget_ctfw-highlight.uplifted-widget-has-title > * {
+		top: 0;
+	}
+
+	.widget_ctfw-highlight.uplifted-widget-has-title {
+		margin-top: 30px;
+	}
+
+	.widget_ctfw-highlight > :not(.uplifted-widget-title):first-of-type,
+	.widget_ctfw-highlight .uplifted-widget-first-element { /* uplifted-widget-first-element applied for IE8 w/JavaScript */
+		padding-top: 0 !important;
+	}
+
+/************* CT GALLERY WIDGET **************/
+
+/* Gallery container */
+
+.uplifted-widget .gallery {
+	margin-bottom: 0;
+	position: relative;
+	top: -12px; /* offset extra space at bottom */
+}
+
+/* Link */
+
+.uplifted-gallery-widget-link { /* holds <a> */
+	text-align: center;
+	margin-top: 20px;
+}
+
+/************** CT SERMONS WIDGET *************/
+
+.uplifted-sermons-widget-entry.uplifted-widget-entry-first {
+	margin-top: 0;
+}
+
+/* Series */
+
+.uplifted-widget-entry-meta > li.uplifted-sermons-widget-entry-series a {
+	white-space: normal; /* sermon series titles may be longer than sidebar */
+}
+
+/************** CT EVENTS WIDGET **************/
+
+/* Time */
+
+.uplifted-events-widget-entry-time {
+	font-style: italic;
+}
+
+/************* CT PEOPLE WIDGET ***************/
+
+/* Position */
+
+.uplifted-people-widget-entry-position {
+	font-weight: bold;
+}
+
+
+.uplifted-people-widget-entry-phone {
+	font-style: italic;
+}
+
+/************ CT LOCATIONS WIDGET *************/
+
+/* Address */
+
+.uplifted-locations-widget-entry-address {
+	font-weight: bold;
+}
+
+/* Phone */
+
+.uplifted-locations-widget-entry-phone {
+	font-style: italic;
+}
+
+/* Map */
+
+.uplifted-locations-widget-entry-map .ctfw-google-map-container {
+	margin-top: 20px;
+}
+
+/************* CT GIVING WIDGET ***************/
+
+/* Giving Widget */
+
+.uplifted-giving-widget-text p:first-child {
+	margin-top: 0;
+}
+
+.uplifted-giving-widget-button {
+	margin-top: 24px;
+	text-align: center;
+}
