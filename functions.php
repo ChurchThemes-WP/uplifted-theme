@@ -12,6 +12,8 @@ include_once('includes/support-wp.php');                            // WordPress
 include_once('includes/icons.php');                                 // Icons
 include_once('includes/sidebars.php');                              // Sidebars
 include_once('includes/loop-after-content.php');                    // Loop after content
+include_once('includes/content-types.php');                         // Content types
+include_once('includes/gallery.php');                               // Gallery filter
 include_once('includes/custom-header.php');                         // Custom header setup
 include_once('includes/foundation-navbar.php');                     // Foundation navbar
 include_once('includes/responsive-slider/responsive-slider.php');   // Responsive slider
