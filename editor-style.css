@@ -17,7 +17,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Asap", Verdana, Geneva, sans-serif;
-  font-weight: 100;
+  font-weight: normal;
   font-style: normal;
   line-height: 1;
   position: relative;
@@ -211,7 +211,7 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #0fcfc5;
+  color: #f6653c;
   text-decoration: none;
   line-height: inherit;
   -webkit-transition: all 0.2s linear;
@@ -219,7 +219,7 @@ a {
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear; }
   a:hover, a:focus {
-    color: #0c9f98; }
+    color: #0fcfc5; }
   a img {
     border: none; }
 
@@ -239,7 +239,7 @@ p {
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: "League Gothic", Verdana, Geneva, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   color: #46463a;
   text-rendering: optimizeLegibility;
@@ -293,7 +293,7 @@ small {
 code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: bold;
-  color: #ee1a1f; }
+  color: #de734d; }
 
 /* Lists */
 ul,
