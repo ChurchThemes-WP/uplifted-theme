@@ -36,9 +36,9 @@ $experimental: true;
 
 $default-float: left;
 
-$body-bg: #f5f5f2;
-$body-font-color: #46463a;
-$body-font-family: "Open Sans", Verdana, Geneva, sans-serif;
+$body-bg: #f8f9fb;
+$body-font-color: #3c4542;
+$body-font-family: 'Asap', Verdana, Geneva, sans-serif;
 $body-font-weight: 100;
 $body-font-style: normal;
 
@@ -52,8 +52,8 @@ $text-direction: ltr;
 
 // Colors
 
-$primary-color: #f05133;
-$secondary-color: #46463a;
+$primary-color: #0fcfc5;
+$secondary-color: #f6653c;
 $tertiary-color: #e3e3e1;
 $neutral-color: #fff;
 $alert-color: #c60f13;
@@ -173,7 +173,7 @@ $block-grid-media-queries: true;
 
 // Heading font styles
 
-$header-font-family: "Open Sans", Verdana, Geneva, sans-serif;
+$header-font-family: "League Gothic", Verdana, Geneva, sans-serif;
 $header-font-weight: bold;
 $alt-header-font-weight: 100;
 $header-font-style: normal;
@@ -1247,7 +1247,8 @@ $topbar-dropdown-toggle-alpha: 1;
 
 // Set the link colors and styles for top-level nav
 
-$topbar-link-color: contrast-color($topbar-bg, $secondary-color, #fff, 50%);
+$topbar-link-color: #555;
+//$topbar-link-color: contrast-color($topbar-bg, $secondary-color, #fff, 50%);
 $topbar-link-color-hover: contrast-color($topbar-bg, aqua, darken(#fff,25%), 50%);
 $topbar-link-color-active: contrast-color($topbar-bg, lighten(#333,30%), darken(#fff,30%), 50%);
 $topbar-link-weight: bold;
