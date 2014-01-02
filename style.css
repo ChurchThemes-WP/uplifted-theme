@@ -509,7 +509,6 @@ p {
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: "League Gothic", Verdana, Geneva, sans-serif;
-  font-weight: normal;
   font-style: normal;
   color: #46463a;
   text-rendering: optimizeLegibility;
@@ -2438,12 +2437,15 @@ p.comment-form-comment label.error {
     .top-bar .name h1 {
       line-height: 70px;
       font-size: 1.0625em;
-      margin: 0; }
+      margin: 0;
+      font-family: "Asap", Verdana, Geneva, sans-serif; }
       .top-bar .name h1 a {
-        font-weight: normal;
         width: 50%;
         display: block;
-        padding: 0 23.33333px; }
+        padding: 0 23.33333px;
+        color: #555555; }
+        .top-bar .name h1 a:hover {
+          color: #0fcfc5; }
         .top-bar .name h1 a img {
           max-height: 60px;
           margin-top: -5px; }
@@ -2675,8 +2677,6 @@ p.comment-form-comment label.error {
         float: left; }
         .top-bar-section ul li .js-generated {
           display: none; }
-        .top-bar-section ul li a {
-          color: #d4d4d4; }
     .top-bar-section li a:not(.button) {
       padding: 0 23.33333px;
       line-height: 70px;
@@ -2756,7 +2756,7 @@ p.comment-form-comment label.error {
 #footer {
   margin: 3em auto 0;
   padding: 30px 0;
-  background-color: #e3e3e1; }
+  background-color: #0fcfc5; }
   #footer h4 {
     font-size: .9em;
     color: #7e7e68;
