@@ -173,8 +173,8 @@ $block-grid-media-queries: true;
 
 // Heading font styles
 
-$header-font-family: "League Gothic", Verdana, Geneva, sans-serif;
-$header-font-weight: normal;
+$header-font-family: "Oswald", Verdana, Geneva, sans-serif;
+$header-font-weight: 700;
 $alt-header-font-weight: bold;
 $header-font-style: normal;
 $header-font-color: #46463a;
@@ -185,9 +185,9 @@ $header-text-rendering: optimizeLegibility;
 
 // Heading font sizes
 
-$h1-font-size: emCalc(44px);
-$h2-font-size: emCalc(36px);
-$h3-font-size: emCalc(27px);
+$h1-font-size: emCalc(34px);
+$h2-font-size: emCalc(28px);
+$h3-font-size: emCalc(24px);
 $h4-font-size: emCalc(22px);
 $h5-font-size: emCalc(18px);
 $h6-font-size: 1em;

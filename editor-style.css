@@ -288,7 +288,7 @@ p {
 /* Default header styles */
 /* line 200, sass/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "League Gothic", Verdana, Geneva, sans-serif;
+  font-family: "Oswald", Verdana, Geneva, sans-serif;
   font-style: normal;
   color: #46463a;
   text-rendering: optimizeLegibility;
@@ -302,15 +302,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 215, sass/_type.scss */
 h1 {
-  font-size: 2.125em; }
+  font-size: 1.5em; }
 
 /* line 216, sass/_type.scss */
 h2 {
-  font-size: 1.625em; }
+  font-size: 1.125em; }
 
 /* line 217, sass/_type.scss */
 h3 {
-  font-size: 1.375em; }
+  font-size: 1.1875em; }
 
 /* line 218, sass/_type.scss */
 h4 {
@@ -480,15 +480,15 @@ cite {
 
   /* line 389, sass/_type.scss */
   h1 {
-    font-size: 2.75em; }
+    font-size: 2.125em; }
 
   /* line 390, sass/_type.scss */
   h2 {
-    font-size: 2.25em; }
+    font-size: 1.75em; }
 
   /* line 391, sass/_type.scss */
   h3 {
-    font-size: 1.6875em; }
+    font-size: 1.5em; }
 
   /* line 392, sass/_type.scss */
   h4 {

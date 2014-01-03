@@ -4,37 +4,34 @@
   margin: ($panel-margin-bottom * 2) auto 0;
   padding: 30px 0;
   background-color: $primary-color;
+  color: white;
 
   h2,h4 {
     font-size: .9em;
-    color: lighten($header-font-color, 20%);
+    color: white;
     text-transform: uppercase;
     letter-spacing: $base-letter-spacing;
-    border-bottom: 3px solid lighten($secondary-color, 50%);
+    border-bottom: 3px solid white;
     display: inline-block;
     padding-bottom: .5em;
     margin-bottom: 1.5em;
   }
 
   .columns {
-    margin: 0 0 10px 0;
-    padding: 0;
-    width: 33%;
-    float: left;
 
-    > div {
-      list-style: none;
-      padding: 20px;
-      margin: 0 0 20px 0;
-      @include border-radius(4px);
-    }
     a {
       @include transition(.2s all linear);
+      color: white;
+      border-bottom-width: 0 !important;
 
       &:hover {
         text-decoration: none;
       }
     }
+  }
+
+  abbr{
+    color: white;
   }
 
   .url {

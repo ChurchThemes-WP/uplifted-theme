@@ -51,7 +51,7 @@ add_action('admin_init','uplifted_theme_update_check',1);
 /**
  * Returns the Google font stylesheet URL, if available.
  *
- * The use of Open Sans by default is localized. For languages
+ * The use of Asap by default is localized. For languages
  * that use characters not supported by the font, the font can be disabled.
  *
  * @return string Font stylesheet or empty string if disabled.
@@ -63,13 +63,13 @@ function uplifted_fonts_url() {
    * supported by Open Sans, translate this to 'off'. Do not translate into your
    * own language.
    */
-  $open_sans = _x( 'on', 'Open Sans font: on or off', 'uplifted' );
+  $asap = _x( 'on', 'Asap font: on or off', 'uplifted' );
 
-  if ( 'off' !== $open_sans ) {
+  if ( 'off' !== $asap ) {
     $font_families = array();
 
-    if ( 'off' !== $open_sans )
-      $font_families[] = 'Open+Sans:300,500,700';
+    if ( 'off' !== $asap )
+      $font_families[] = 'Asap:400,700|Oswald:300,400,700';
 
     $query_args = array(
       'family' => urlencode( implode( '|', $font_families ) ),
@@ -96,6 +96,7 @@ function uplifted_enqueue_scripts(){
   wp_enqueue_script( 'uplifted-init', get_template_directory_uri() . '/js/init.js', array('uplifted-plugins'), false, true );
   wp_enqueue_script( 'uplifted-foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'), '5.0.0', true );
   wp_enqueue_script( 'uplifted-foundation-topbar', get_template_directory_uri() . '/js/foundation.topbar.js', array('uplifted-foundation'), '5.0.0', true );
+  wp_enqueue_style( 'uplifted-fonts', uplifted_fonts_url() );
 
 }
 
@@ -286,18 +287,6 @@ function uplifted_comment( $comment, $args, $depth ) {
 	endswitch;
 }
 endif; // ends check for uplifted_comment()
-
-function uplifted_responsive_slider(){
-  if( is_home() ){
-    echo '<div id="homepage-slider">';
-    echo '<div class="inner">';
-    echo do_shortcode( '[responsive_slider]' );
-    echo "</div>";
-    echo "</div>";
-  }
-}
-
-add_action('after_header','uplifted_responsive_slider');
 
 /**
  * The following code enables us to recommend some plugins that work well or are
