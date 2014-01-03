@@ -33,28 +33,28 @@ extract( ctfw_event_data() );
 			<ul class="uplifted-entry-meta">
 
 				<?php if ( $date ) : ?>
-					<li class="uplifted-entry-date uplifted-event-full-date uplifted-icon-content">
+					<li class="uplifted-entry-date uplifted-event-full-date uplifted-content-icon">
 						<span class="<?php uplifted_icon_class( 'event-date' ); ?>"></span>
 						<?php echo esc_html( $date ); ?>
 					</li>
 				<?php endif; ?>
 
 				<?php if ( $time ) : ?>
-					<li class="uplifted-event-full-time uplifted-icon-content">
+					<li class="uplifted-event-full-time uplifted-content-icon">
 						<span class="<?php uplifted_icon_class( 'event-time' ); ?>"></span>
 						<?php echo nl2br( wptexturize( $time ) ); ?>
 					</li>
 				<?php endif; ?>
 
 				<?php if ( $venue ) : ?>
-					<li class="uplifted-event-full-venue uplifted-icon-content">
+					<li class="uplifted-event-full-venue uplifted-content-icon">
 						<span class="<?php uplifted_icon_class( 'event-venue' ); ?>"></span>
 						<?php echo esc_html( $venue ); ?>
 					</li>
 				<?php endif; ?>
 
 				<?php if ( $address ) : ?>
-					<li class="uplifted-event-full-address uplifted-icon-content">
+					<li class="uplifted-event-full-address uplifted-content-icon">
 						<span class="<?php uplifted_icon_class( 'event-address' ); ?>"></span>
 						<?php echo nl2br( wptexturize( $address ) ); ?>
 					</li>

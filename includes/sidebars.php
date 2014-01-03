@@ -2,10 +2,10 @@
 /**
  * Sidebar Functions
  *
- * @package    Resurrect
+ * @package    Uplifted
  * @subpackage Functions
- * @copyright  Copyright (c) 2013, churchthemes.com
- * @link       http://churchthemes.com/themes/uplifted
+ * @copyright  Copyright (c) 2013, upthemes.com
+ * @link       http://upthemes.com/themes/uplifted
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      1.0
  */

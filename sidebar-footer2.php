@@ -4,12 +4,17 @@
  *
  * If no active widgets in sidebar, let's hide it completely.
  *
- * @package WordPress
- * @subpackage Uplifted
- * @since 1.0.0
+ * @package Uplifted
+ * @since 1.0
  */
 ?>
 
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer2') ) : ?>
+<?php if ( is_active_sidebar( 'uplifted-footer-column-two' ) ) : ?>
 
-<?php endif; ?>
+	<?php dynamic_sidebar( 'uplifted-footer-column-two' ); ?>
+
+<?php else:
+
+	the_widget('WP_Widget_Archives');
+
+endif; ?>

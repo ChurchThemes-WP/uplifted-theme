@@ -30,7 +30,7 @@ extract( ctfw_person_data() );
 
 		<?php if ( $position ) : ?>
 			<ul class="uplifted-entry-meta">
-				<li class="uplifted-person-position uplifted-icon-content">
+				<li class="uplifted-person-position uplifted-content-icon">
 					<span class="<?php uplifted_icon_class( 'person-position' ); ?>"></span>
 					<?php echo esc_html( $position ); ?>
 				</li>
@@ -39,7 +39,7 @@ extract( ctfw_person_data() );
 
 		<?php if ( $phone ) : ?>
 			<ul class="uplifted-entry-meta">
-				<li class="uplifted-person-phone uplifted-icon-content">
+				<li class="uplifted-person-phone uplifted-content-icon">
 					<span class="<?php uplifted_icon_class( 'person-phone' ); ?>"></span>
 					<?php echo esc_html( $phone ); ?>
 				</li>
@@ -51,7 +51,7 @@ extract( ctfw_person_data() );
 			<ul class="uplifted-entry-meta">
 
 				<?php if ( $email ) : ?>
-				<li class="uplifted-person-email uplifted-icon-content">
+				<li class="uplifted-person-email uplifted-content-icon">
 					<span class="<?php uplifted_icon_class( 'person-email' ); ?>"></span>
 					<a href="mailto:<?php echo antispambot( $email, true ); ?>"><?php echo antispambot( $email ); ?></a>
 				</li>

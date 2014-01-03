@@ -15,15 +15,15 @@
     <div class="row">
 
       <div class="small-12 large-4 columns">
-			<?php if( !dynamic_sidebar('footer-1') ) ?>
+			<?php get_template_part('sidebar-footer1'); ?>
       </div>
 
       <div class="small-12 large-4 columns">
-			<?php if( !dynamic_sidebar('footer-2') ) ?>
+      <?php get_template_part('sidebar-footer2'); ?>
       </div>
 
       <div class="small-12 large-4 columns">
-			<?php if( !dynamic_sidebar('footer-3') ) ?>
+      <?php get_template_part('sidebar-footer3'); ?>
       </div>
 
     </div><!-- /#row-->

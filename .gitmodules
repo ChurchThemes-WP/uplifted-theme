@@ -4,3 +4,6 @@
 [submodule "options"]
 	path = options
 	url = git@github.com:UpThemes/UpThemes-Framework.git
+[submodule "includes/plugin-activation"]
+	path = includes/plugin-activation
+	url = git@github.com:thomasgriffin/TGM-Plugin-Activation.git

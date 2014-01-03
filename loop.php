@@ -2,7 +2,7 @@
 /**
  * This loops to show one or multiple posts using content-*.php templates.
  *
- * It is used by index.php, resurrect_loop_after_content() and can be used elsewhere.
+ * It is used by index.php, uplifted_loop_after_content() and can be used elsewhere.
  */
 
 // No direct access

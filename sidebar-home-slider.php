@@ -11,12 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 <?php if ( is_active_sidebar( 'ctcom-home-slider' ) ) : ?>
 
-	<div id="resurrect-slider">
+	<div id="uplifted-slider">
 
-		<div id="resurrect-slider-inner">
+		<div id="uplifted-slider-inner">
 
 			<div class="flexslider">
-			
+
 				<ul class="slides">
 
 					<?php dynamic_sidebar( 'ctcom-home-slider' ); ?>

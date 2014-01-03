@@ -29,8 +29,8 @@ add_action('admin_menu', 'upthemes_sl_license_menu');
 * @since 0.1
 */
 function upthemes_sl_license_page() {
-  $license  = get_option( 'upthemes_sl_license_key' );
-  $status   = get_option( 'upthemes_sl_license_status' );
+  $license  = get_option( UPTHEMES_LICENSE_KEY );
+  $status   = get_option( UPTHEMES_LICENSE_KEY . '_status' );
   ?>
   <div class="wrap">
     <h2>Theme License</h2>
@@ -45,8 +45,8 @@ function upthemes_sl_license_page() {
               <?php _e('License Key','uplifted'); ?>
             </th>
             <td>
-              <input id="upthemes_sl_license_key" name="upthemes_sl_license_key" type="text" class="regular-text" value="<?php esc_attr_e( $license ); ?>" />
-              <label class="description" for="upthemes_sl_license_key"><?php _e('Enter your license key','uplifted'); ?></label>
+              <input id="<?php echo UPTHEMES_LICENSE_KEY; ?>" name="<?php echo UPTHEMES_LICENSE_KEY; ?>" type="text" class="regular-text" value="<?php esc_attr_e( $license ); ?>" />
+              <label class="description" for="<?php echo UPTHEMES_LICENSE_KEY; ?>"><?php _e('Enter your license key','uplifted'); ?></label>
             </td>
           </tr>
           <?php if( $license != '' ) { ?>
@@ -85,7 +85,7 @@ function upthemes_sl_license_page() {
 */
 function upthemes_sl_register_option() {
   // creates our settings in the options table
-  register_setting('upthemes_sl_license', 'upthemes_sl_license_key', 'upthemes_sl_sanitize_license' );
+  register_setting('upthemes_sl_license', UPTHEMES_LICENSE_KEY, 'upthemes_sl_sanitize_license' );
 }
 add_action('admin_init', 'upthemes_sl_register_option');
 
@@ -100,9 +100,9 @@ add_action('admin_init', 'upthemes_sl_register_option');
 * @since 0.1
 */
 function upthemes_sl_sanitize_license( $new ) {
-  $old = get_option( 'upthemes_sl_license_key' );
+  $old = get_option( UPTHEMES_LICENSE_KEY );
   if( $old && $old != $new ) {
-    delete_option( 'upthemes_sl_license_status' ); // new license has been entered, so must reactivate
+    delete_option( UPTHEMES_LICENSE_KEY . '_status' ); // new license has been entered, so must reactivate
   }
   return $new;
 }
@@ -166,7 +166,7 @@ function upthemes_sl_activate_license() {
 
     //echo $license_data->license;
 
-    update_option( 'upthemes_sl_license_status', $license_data->license );
+    update_option( UPTHEMES_LICENSE_KEY . '_status', $license_data->license );
 
   }
 }
@@ -204,7 +204,7 @@ function upthemes_sl_deactivate_license() {
       return; // get out if we didn't click the Activate button
 
     // retrieve the license from the database
-    $license = trim( get_option( 'upthemes_sl_license_key' ) );
+    $license = trim( get_option( UPTHEMES_LICENSE_KEY ) );
 
     if( !$license || $license == '' ){
       delete_option( 'upthemes_sl_license_status' );
@@ -230,7 +230,7 @@ function upthemes_sl_deactivate_license() {
 
     // $license_data->license will be either "deactivated" or "failed"
     if( $license_data->license == 'deactivated' )
-      delete_option( 'upthemes_sl_license_status' );
+      delete_option( UPTHEMES_LICENSE_KEY . '_status' );
 
   }
 }
@@ -260,7 +260,7 @@ function upthemes_sl_check_license() {
 
   global $wp_version;
 
-  $license = trim( get_option( 'upthemes_sl_license_key' ) );
+  $license = trim( get_option( UPTHEMES_LICENSE_KEY ) );
 
   $api_params = array(
     'edd_action' => 'check_license',
@@ -289,7 +289,7 @@ function upthemes_sl_enforce_license(){
   $license_status = upthemes_sl_check_license();
 
   if( $license_status !== 'valid' )
-    delete_option( 'upthemes_sl_license_status' );
+    delete_option( UPTHEMES_LICENSE_KEY . '_status' );
 }
 
 function upthemes_sl_license_expired( $plugin_data, $r ) {

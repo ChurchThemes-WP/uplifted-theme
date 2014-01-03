@@ -1,121 +1,184 @@
-/*
-Syntax error: Undefined mixin 'css-triangle'.
-        on line 65 of /Users/chriswallace/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/sass/rtl.scss, in `css-triangle'
-        from line 65 of /Users/chriswallace/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/sass/rtl.scss
+/* Variables */
+/* Global */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
-Backtrace:
-/Users/chriswallace/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/sass/rtl.scss:65:in `css-triangle'
-/Users/chriswallace/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/sass/rtl.scss:65
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:256:in `visit_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:325:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:325:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:325:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:325:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:325:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.alpha.134/lib/sass/engine.rb:265:in `render'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/compiler.rb:143:in `block (2 levels) in compile'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/compiler.rb:126:in `timed'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/compiler.rb:139:in `block in compile'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/logger.rb:45:in `red'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/compiler.rb:138:in `compile'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/compiler.rb:118:in `compile_if_required'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/compiler.rb:103:in `block (2 levels) in run'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/compiler.rb:101:in `each'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/compiler.rb:101:in `block in run'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/compiler.rb:126:in `timed'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/compiler.rb:100:in `run'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/commands/watch_project.rb:147:in `recompile'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `block in modified'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:30:in `block in temporary_multipath_handler'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:27:in `each'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:27:in `temporary_multipath_handler'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:17:in `block (2 levels) in run'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:16:in `each'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:16:in `block in run'
-/Library/Ruby/Gems/2.0.0/gems/rb-fsevent-0.9.3/lib/rb-fsevent/fsevent.rb:43:in `call'
-/Library/Ruby/Gems/2.0.0/gems/rb-fsevent-0.9.3/lib/rb-fsevent/fsevent.rb:43:in `run'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:20:in `run'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/commands/watch_project.rb:87:in `perform'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/commands/base.rb:18:in `execute'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/commands/project_base.rb:19:in `execute'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/bin/compass:30:in `block in <top (required)>'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/bin/compass:44:in `call'
-/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/bin/compass:44:in `<top (required)>'
-/usr/bin/compass:23:in `load'
-/usr/bin/compass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined mixin 'css-triangle'.\A         on line 65 of /Users/chriswallace/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/sass/rtl.scss, in `css-triangle'\A         from line 65 of /Users/chriswallace/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/sass/rtl.scss"; }
+html,
+body {
+  font-size: 100%; }
+
+body {
+  background: #f5f5f2;
+  color: #46463a;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", Verdana, Geneva, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  cursor: "default"; }
+
+a:hover {
+  cursor: "pointer"; }
+
+a:focus {
+  outline: none; }
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto; }
+
+object,
+embed {
+  height: 100%; }
+
+img {
+  -ms-interpolation-mode: bicubic; }
+
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important; }
+
+.left {
+  float: left !important; }
+
+.right {
+  float: right !important; }
+
+.text-left {
+  text-align: left !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-center {
+  text-align: center !important; }
+
+.text-justify {
+  text-align: justify !important; }
+
+.hide {
+  display: none; }
+
+.antialiased {
+  -webkit-font-smoothing: antialiased; }
+
+img {
+  display: inline-block;
+  vertical-align: middle; }
+
+textarea {
+  height: auto;
+  min-height: 50px; }
+
+select {
+  width: 100%; }
+
+/* RTL Support - Right to Left */
+body {
+  direction: rtl;
+  unicode-bidi: embed;
+  text-align: right; }
+  body input, body textarea {
+    text-align: right; }
+  body blockquote {
+    border-left: none;
+    border-right: 6px solid #f05133; }
+  body .top-bar .name h1 a {
+    display: inline-block; }
+  @media screen and (max-width: 860px) {
+    body .top-bar .toggle-topbar.menu-icon {
+      left: 0;
+      padding-left: 10px; }
+      body .top-bar .toggle-topbar.menu-icon a span {
+        text-indent: 9999px; } }
+  @media screen and (min-width: 768px) {
+    body .top-bar .title-area {
+      float: right; } }
+  body .top-bar-section .has-form {
+    padding: 23.33333px; }
+  body .top-bar-section .has-dropdown {
+    position: relative; }
+    body .top-bar-section .has-dropdown > a:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border: inset 5px;
+      border-color: transparent transparent transparent #46463a;
+      border-left-style: solid;
+      margin-left: 23.33333px;
+      margin-top: -4.5px;
+      border-color: rgba(0, 0, 0, 0) #46463a rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+      -moz-border-right-colors: #46463A;
+      position: absolute;
+      top: 50%;
+      left: 0; }
+      @media screen and (min-width: 768px) {
+        body .top-bar-section .has-dropdown > a:after {
+          -moz-border-right-colors: none !important;
+          border-color: #c5c5ba rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) !important; } }
+    body .top-bar-section .has-dropdown.moved {
+      position: static; }
+      body .top-bar-section .has-dropdown.moved > .dropdown {
+        visibility: visible; }
+  @media screen and (min-width: 768px) {
+    body .top-bar-section .has-dropdown .dropdown li.has-dropdown > a:after {
+      content: "<"; } }
+  body .top-bar-section .has-dropdown > a {
+    padding-left: 43.33333px !important;
+    padding-right: 23.33333px !important; }
+  body .gallery-item {
+    width: 49%;
+    margin: 0 1% 2%;
+    float: right; }
+    body .gallery-item .attachment-thumbnail {
+      width: 100%; }
+    @media screen and (max-width: 430px) {
+      body .gallery-item:nth-child(odd) {
+        margin-right: 0;
+        margin-left: 1%; }
+      body .gallery-item:nth-child(even) {
+        margin-left: 0;
+        margin-right: 1%; } }
+    @media screen and (min-width: 430px) {
+      body .gallery-item {
+        width: 23.5%;
+        margin: 0 0 2% 2%; }
+        body .gallery-item:nth-child(4n+4) {
+          margin-left: 0; } }
+  body #respond .comment-form-author,
+  body #respond .comment-form-email {
+    float: right;
+    margin-right: 0; }
+  body #respond .comment-form-email {
+    margin-right: 4%; }
+  body .comment-meta {
+    float: right; }
+  body .reply {
+    right: auto; }
+  body #footer .widget {
+    text-align: right; }
+  body .search-form .row > div {
+    float: right; }
+  body .paging .page-numbers {
+    float: right; }
+  body .paging .next,
+  body .paging .prev {
+    float: right; }
+  body .paging .prev {
+    border-left: 1px solid #f4f4f1; }
+  body .paging .next {
+    float: left;
+    border-right: 1px solid #f4f4f1; }

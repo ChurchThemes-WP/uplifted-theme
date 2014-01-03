@@ -10,10 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 <?php if ( is_active_sidebar( 'ctcom-home-bottom' ) ) : ?>
 
-	<div id="resurrect-home-bottom-widgets">
+	<div id="uplifted-home-bottom-widgets">
 
 		<?php dynamic_sidebar( 'ctcom-home-bottom' ); ?>
-		
+
 	</div>
 
 <?php endif; ?>

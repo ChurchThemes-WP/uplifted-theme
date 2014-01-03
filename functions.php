@@ -1,30 +1,32 @@
 <?php
 
-// Define variables for our theme updates
+// Grab some necessary PHP includes
+require_once 'framework/framework.php';                              // Church Framework
+require_once 'includes/support-ctc.php';                             // Church Framework support declarations
+require_once 'includes/support-framework.php';                       // Church Framework support
+require_once 'includes/support-wp.php';                              // WordPress feature support
+require_once 'includes/icons.php';                                   // Icons
+require_once 'includes/banner.php';                                  // Banner
+require_once 'includes/sidebars.php';                                // Sidebars
+require_once 'includes/loop-after-content.php';                      // Loop after content
+require_once 'includes/content-types.php';                           // Content types
+require_once 'includes/gallery.php';                                 // Gallery filter
+require_once 'includes/custom-header.php';                           // Custom header setup
+require_once 'includes/foundation-navbar.php';                       // Foundation navbar
+require_once 'includes/responsive-slider/responsive-slider.php';     // Responsive slider
+require_once 'includes/presstrends.php';                             // PressTrends
+require_once 'includes/template-tags.php';                           // Template Tags
+require_once 'options/options.php';                                  // UpThemes Framework
+require_once 'includes/theme-options.php';                           // Load theme options specific to this theme
+
+// Define variables for our theme updater
 define('UPTHEMES_ITEM_NAME', 'Uplifted Theme');
 define('UPTHEMES_STORE_URL', 'http://upthemes.com');
-
-// Grab some necessary PHP includes
-include_once('framework/framework.php');                            // Church Framework
-include_once('includes/support-ctc.php');                           // Church Framework support declarations
-include_once('includes/support-framework.php');                     // Church Framework support
-include_once('includes/support-wp.php');                            // WordPress feature support
-include_once('includes/icons.php');                                 // Icons
-include_once('includes/sidebars.php');                              // Sidebars
-include_once('includes/loop-after-content.php');                    // Loop after content
-include_once('includes/content-types.php');                         // Content types
-include_once('includes/gallery.php');                               // Gallery filter
-include_once('includes/custom-header.php');                         // Custom header setup
-include_once('includes/foundation-navbar.php');                     // Foundation navbar
-include_once('includes/responsive-slider/responsive-slider.php');   // Responsive slider
-include_once('includes/presstrends.php');                           // PressTrends
-include_once('includes/template-tags.php');                         // Template Tags
-include_once('options/options.php');                                // UpThemes Framework
-include_once('includes/theme-options.php');                         // Load theme options specific to this theme
+define('UPTHEMES_LICENSE_KEY', 'uplifted_license_key');
 
 if ( !class_exists( 'UpThemes_Theme_Updater' ) ) {
 	// Load our custom theme updater
-	include( 'includes/UpThemes_Theme_Updater.php' );
+	require_once 'includes/UpThemes_Theme_Updater.php';
 }
 
 if ( ! isset( $content_width ) ){
@@ -32,7 +34,7 @@ if ( ! isset( $content_width ) ){
 }
 
 function uplifted_theme_update_check(){
-	$upthemes_license = trim( get_option( 'upthemes_sl_license_key' ) );
+	$upthemes_license = trim( get_option( UPTHEMES_LICENSE_KEY ) );
 
 	$edd_updater = new UpThemes_Theme_Updater( array(
 			'remote_api_url' 	=> UPTHEMES_STORE_URL, 	// Our store URL that is running EDD
@@ -45,72 +47,39 @@ function uplifted_theme_update_check(){
 }
 add_action('admin_init','uplifted_theme_update_check',1);
 
+
 /**
- * Creates a nicely formatted and more specific title element text
- * for output in head of document, based on current view.
+ * Returns the Google font stylesheet URL, if available.
  *
+ * The use of Open Sans by default is localized. For languages
+ * that use characters not supported by the font, the font can be disabled.
  *
- * @param string $title Default title text for current view.
- * @param string $sep Optional separator.
- * @return string Filtered title.
+ * @return string Font stylesheet or empty string if disabled.
  */
-function uplifted_wp_title( $title, $sep ) {
-	global $paged, $page;
+function uplifted_fonts_url() {
+  $fonts_url = '';
 
-	if ( is_feed() )
-		return $title;
+  /* Translators: If there are characters in your language that are not
+   * supported by Open Sans, translate this to 'off'. Do not translate into your
+   * own language.
+   */
+  $open_sans = _x( 'on', 'Open Sans font: on or off', 'uplifted' );
 
-	// Add the site name.
-	$title .= get_bloginfo( 'name' );
+  if ( 'off' !== $open_sans ) {
+    $font_families = array();
 
-	// Add the site description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title = "$title $sep $site_description";
+    if ( 'off' !== $open_sans )
+      $font_families[] = 'Open+Sans:300,500,700';
 
-	// Add a page number if necessary.
-	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'uplifted' ), max( $paged, $page ) );
+    $query_args = array(
+      'family' => urlencode( implode( '|', $font_families ) ),
+      'subset' => urlencode( 'latin,latin-ext' ),
+    );
+    $fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
+  }
 
-	return $title;
+  return $fonts_url;
 }
-add_filter( 'wp_title', 'uplifted_wp_title', 10, 2 );
-
-/**
- * Google Fonts Implementation
- *
- * @package WordPress
- * @subpackage Uplifted
- * @since 1.0.0
- */
-
-/**
- * Register Google Fonts
- */
-function uplifted_register_fonts() {
-  $protocol = is_ssl() ? 'https' : 'http';
-  wp_register_style( 'default-font', "$protocol://fonts.googleapis.com/css?family=Open+Sans:300,500,700" );
-}
-add_action( 'init', 'uplifted_register_fonts' );
-
-/**
- * Enqueue Google Fonts on Front End
- */
-function uplifted_fonts() {
-  wp_enqueue_style( 'default-font' );
-}
-add_action( 'wp_enqueue_scripts', 'uplifted_fonts' );
-
-/**
- * Enqueue Google Fonts on Custom Header Page
- */
-function uplifted_admin_fonts( $hook_suffix ) {
-  if ( 'appearance_page_custom-header' != $hook_suffix )
-    return;
-
-  wp_enqueue_style( 'default-font' );
-}
-add_action( 'admin_enqueue_scripts', 'uplifted_admin_fonts' );
 
 /**
  * Set up our theme widgets
@@ -127,7 +96,7 @@ function uplifted_widgets_init(){
 
   register_sidebar( array(
   		'name'          => __('Footer First Column','uplifted'),
-  		'id'            => 'footer-1',
+  		'id'            => 'uplifted-footer-column-one',
   		'before_widget' => '<div id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</div>',
   		'before_title'  => '<h4>',
@@ -135,7 +104,7 @@ function uplifted_widgets_init(){
 
   register_sidebar( array(
   		'name'          => __('Footer Second Column','uplifted'),
-  		'id'            => 'footer-2',
+  		'id'            => 'uplifted-footer-column-two',
   		'before_widget' => '<div id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</div>',
   		'before_title'  => '<h4>',
@@ -143,7 +112,7 @@ function uplifted_widgets_init(){
 
   register_sidebar( array(
   		'name'          => __('Footer Third Column','uplifted'),
-  		'id'            => 'footer-3',
+  		'id'            => 'uplifted-footer-column-three',
   		'before_widget' => '<div id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</div>',
   		'before_title'  => '<h4>',
@@ -151,50 +120,6 @@ function uplifted_widgets_init(){
 }
 
 add_action('widgets_init','uplifted_widgets_init');
-
-/**
- * Sets the post excerpt length to 40 words.
- *
- * To override this length in a child theme, remove the filter and add your own
- * function tied to the excerpt_length filter hook.
- */
-function uplifted_excerpt_length( $length ) {
-	return 40;
-}
-add_filter( 'excerpt_length', 'uplifted_excerpt_length' );
-
-/**
- * Returns a "Continue Reading" link for excerpts
- */
-function uplifted_continue_reading_link() {
-	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'uplifted' ) . '</a>';
-}
-add_filter( 'the_content_more_link', 'uplifted_continue_reading_link' );
-
-/**
- * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and uplifted_continue_reading_link().
- *
- * To override this in a child theme, remove the filter and add your own
- * function tied to the excerpt_more filter hook.
- */
-function uplifted_auto_excerpt_more( $more ) {
-	return ' &hellip;' . uplifted_continue_reading_link();
-}
-add_filter( 'excerpt_more', 'uplifted_auto_excerpt_more' );
-
-/**
- * Adds a pretty "Continue Reading" link to custom post excerpts.
- *
- * To override this link in a child theme, remove the filter and add your own
- * function tied to the get_the_excerpt filter hook.
- */
-function uplifted_custom_excerpt_more( $output ) {
-	if ( has_excerpt() && ! is_attachment() ) {
-		$output .= uplifted_continue_reading_link();
-	}
-	return $output;
-}
-add_filter( 'get_the_excerpt', 'uplifted_custom_excerpt_more' );
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
@@ -294,7 +219,7 @@ function uplifted_pagination( $type = 'plain', $endsize = 1, $midsize = 1 ) {
 }
 
 /**
- * Prints the custom CSS from the theme options panel
+ * Outputs post metadata for each post.
  *
  */
 function uplifted_meta(){
@@ -315,7 +240,7 @@ function uplifted_meta(){
     <div class="meta-group right">
 
       <?php the_category(', ') ?>
-      <?php the_tags('&bull; Tags: ', ', ', '<br />'); ?>
+      <?php the_tags( __( '&bull; Tags: ','uplifted'), ', ', '<br />'); ?>
 
     </div> <!-- /right -->
 
@@ -413,3 +338,99 @@ function uplifted_responsive_slider(){
 }
 
 add_action('after_header','uplifted_responsive_slider');
+
+/**
+ * The following code enables us to recommend some plugins that work well or are
+ * required for this theme to be more awesome.
+ *
+ * @author     Thomas Griffin <thomas@thomasgriffinmedia.com>
+ * @author     Gary Jones <gamajo@gamajo.com>
+ * @copyright  Copyright (c) 2012, Thomas Griffin
+ * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
+ * @link       https://github.com/thomasgriffin/TGM-Plugin-Activation
+ */
+
+/**
+ * Include the TGM_Plugin_Activation class.
+ */
+require_once dirname( __FILE__ ) . '/includes/plugin-activation/tgm-plugin-activation/class-tgm-plugin-activation.php';
+
+add_action( 'tgmpa_register', 'uplifted_register_required_plugins' );
+/**
+ * Register the required plugins for this theme.
+ *
+ * The variable passed to tgmpa_register_plugins() should be an array of plugin
+ * arrays.
+ *
+ * This function is hooked into tgmpa_init, which is fired within the
+ * TGM_Plugin_Activation class constructor.
+ */
+function uplifted_register_required_plugins() {
+
+  /**
+   * Array of plugin arrays.
+   */
+  $plugins = array(
+
+    array(
+      'name'    => 'Church Theme Content',
+      'slug'    => 'church-theme-content',
+      'force-activation' => true,
+      'required'  => true,
+    ),
+
+    array(
+      'name'    => 'Page Builder by SiteOrigin',
+      'slug'    => 'siteorigin-panels',
+      'required'  => false,
+    ),
+
+    array(
+      'name'    => 'Black Studio TinyMCE Widget',
+      'slug'    => 'black-studio-tinymce-widget',
+      'required'  => false,
+    ),
+
+    array(
+      'name'    => 'Responsive WordPress Slider - Soliloquy Lite',
+      'slug'    => 'soliloquy-lite',
+      'required'  => false,
+    ),
+
+  );
+
+  $theme_text_domain = 'uplifted';
+
+  $config = array(
+    'domain'            => $theme_text_domain,
+    'parent_menu_slug'  => 'themes.php',
+    'parent_url_slug'   => 'themes.php',
+    'menu'              => 'install-required-plugins',
+    'has_notices'       => true,
+    'is_automatic'      => false,
+    'message'           => __('We recommend installing the following plugins that work with this theme to enhance your WordPress website.', $theme_text_domain ),
+    'strings'           => array(
+      'page_title'                            => __( 'Install Required Plugins', $theme_text_domain ),
+      'menu_title'                            => __( 'Install Plugins', $theme_text_domain ),
+      'installing'                            => __( 'Installing Plugin: %s', $theme_text_domain ),
+      'oops'                                  => __( 'Something went wrong with the plugin API.', $theme_text_domain ),
+      'notice_can_install_required'           => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.' ),
+      'notice_can_install_recommended'        => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.' ),
+      'notice_cannot_install'                 => _n_noop( 'This theme works well with the %s plugin, however, you do not have the correct permissions to install it. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.' ),
+      'notice_can_activate_required'          => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.' ),
+      'notice_can_activate_recommended'       => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.' ),
+      'notice_cannot_activate'                => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.' ),
+      'notice_ask_to_update'                  => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.' ),
+      'notice_cannot_update'                  => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.' ),
+      'install_link'                          => _n_noop( 'Begin installing plugin', 'Begin installing plugins' ),
+      'activate_link'                         => _n_noop( 'Activate installed plugin', 'Activate installed plugins' ),
+      'return'                                => __( 'Return to Required Plugins Installer', $theme_text_domain ),
+      'plugin_activated'                      => __( 'Plugin activated successfully.', $theme_text_domain ),
+      'complete'                              => __( 'All plugins installed and activated successfully. %s', $theme_text_domain ), // %1$s = dashboard link
+      'nag_type'                              => 'updated' // Determines admin notice type - can only be 'updated' or 'error'
+    )
+  );
+
+  tgmpa( $plugins, $config );
+
+}

@@ -2757,7 +2757,7 @@ p.comment-form-comment label.error {
   margin: 3em auto 0;
   padding: 30px 0;
   background-color: #e3e3e1; }
-  #footer h4 {
+  #footer h2, #footer h4 {
     font-size: .9em;
     color: #7e7e68;
     text-transform: uppercase;
@@ -2766,12 +2766,12 @@ p.comment-form-comment label.error {
     display: inline-block;
     padding-bottom: .5em;
     margin-bottom: 1.5em; }
-  #footer .column {
+  #footer .columns {
     margin: 0 0 10px 0;
     padding: 0;
     width: 33%;
     float: left; }
-    #footer .column > li {
+    #footer .columns > div {
       list-style: none;
       padding: 20px;
       margin: 0 0 20px 0;
@@ -2780,12 +2780,12 @@ p.comment-form-comment label.error {
       -ms-border-radius: 4px;
       -o-border-radius: 4px;
       border-radius: 4px; }
-    #footer .column a {
+    #footer .columns a {
       -webkit-transition: 0.2s all linear;
       -moz-transition: 0.2s all linear;
       -o-transition: 0.2s all linear;
       transition: 0.2s all linear; }
-      #footer .column a:hover {
+      #footer .columns a:hover {
         text-decoration: none; }
   #footer .url {
     padding-left: 0;
@@ -3126,20 +3126,6 @@ jQuery adds .uplifted-widget-has-title for better widget styling
 .widget_recent_comments li {
   padding-top: 0;
   margin-bottom: 18px; }
-
-.widget_categories li a,
-.widget_ctfw-categories li a,
-.widget_ctfw-archives li a,
-.widget_ctfw-galleries li a,
-.widget_ctfw-posts li a,
-.widget_recent_entries li a,
-.widget_archive li a,
-.widget_meta li a,
-.widget_pages li a,
-.widget_links li a,
-.widget_nav_menu li a {
-  font-weight: bold;
-  text-transform: uppercase; }
 
 .widget_categories li:first-child,
 .widget_ctfw-categories li:first-child,
