@@ -10,19 +10,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 <header class="uplifted-entry-header uplifted-clearfix">
 
-	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="uplifted-entry-image">
-			<?php uplifted_post_image(); ?>
-		</div>
-	<?php endif; ?>
-
 	<div class="uplifted-entry-title-meta">
 
 		<?php if ( ctfw_has_title() ) : ?>
-			<h1 class="uplifted-entry-title<?php if ( is_singular( get_post_type() ) ) : ?> uplifted-main-title<?php endif; ?>">
-				<?php uplifted_post_title(); // will be linked on short ?>
-			</h1>
-		<?php endif; ?>
+  		<h1 class="uplifted-entry-title<?php if ( is_singular( get_post_type() ) ) : ?> uplifted-main-title<?php endif; ?>">
+  			<?php uplifted_post_title(); // will be linked on short ?>
+  		</h1>
+  	<?php endif; ?>
 
 		<ul class="uplifted-entry-meta">
 
@@ -61,6 +55,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 		</ul>
 
-	</div>
+	</div> <!-- /uplifted-entry-title-meta -->
+	
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div class="uplifted-entry-image">
+			<?php uplifted_post_image(); ?>
+		</div>
+	<?php endif; ?>
 
 </header>

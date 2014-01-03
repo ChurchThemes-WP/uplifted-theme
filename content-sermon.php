@@ -80,7 +80,7 @@ HTML;
 ?>
   <!-- a single sermon page -->
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'uplifted-entry-full uplifted-sermon-full' ); ?>>
-
+    
 		<?php get_template_part( 'content-sermon-header' ); ?>
 
 		<?php
