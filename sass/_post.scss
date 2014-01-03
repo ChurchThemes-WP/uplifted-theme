@@ -30,7 +30,7 @@
 .uplifted-entry-meta {
   list-style: none;
   position: relative;
-  color: lighten($secondary-color, 20%);
+  //color: lighten($secondary-color, 20%);
   font-size: .8em;
   overflow: hidden;
   padding: ($panel-margin-bottom / 2.5) 0 $panel-margin-bottom 0;
@@ -42,7 +42,7 @@
   }
 
   a {
-    color: lighten($secondary-color, 20%);
+    //color: lighten($secondary-color, 20%);
 
     &:hover {
       color: $primary-color;
