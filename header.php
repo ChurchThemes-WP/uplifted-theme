@@ -67,5 +67,7 @@ $up_options = upfw_get_options();
   </header>
 
   <?php do_action('after_header'); ?>
+  
+  <?php uplifted_breadcrumbs( 'content' ); ?>
 
   <div id="container" class="clearfix">

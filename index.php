@@ -14,11 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 get_header(); // header.php ?>
 
+
+
 <div id="uplifted-content" class="<?php echo uplifted_sidebar_enabled() ? 'uplifted-has-sidebar' : 'uplifted-no-sidebar'; ?>">
 
   <div id="uplifted-content-inner">
 
-    <?php uplifted_breadcrumbs( 'content' ); ?>
+    
 
     <div class="uplifted-content-block uplifted-content-block-close uplifted-clearfix">
 
