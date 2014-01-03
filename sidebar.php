@@ -1,37 +1,22 @@
 <?php
 /**
- * The sidebar containing the main widget area.
- *
- * If no active widgets in sidebar, let's hide it completely.
- *
- * @package WordPress
- * @subpackage Uplifted
- * @since 1.0.0
+ * Load the appropriate sidebar for content being shown.
  */
-?>
-	<div id="secondary" class="widget-area" role="complementary">
-		<?php do_action( 'before_sidebar' ); ?>
-		<?php if ( ! dynamic_sidebar( 'sidebar' ) ) : ?>
 
-			<aside id="search" class="widget widget_search">
-				<?php get_search_form(); ?>
-			</aside>
+// No direct access
+if ( ! defined( 'ABSPATH' ) ) exit;
 
-			<aside id="archives" class="widget">
-				<h4><?php _e( 'Archives', '_s' ); ?></h4>
-				<ul>
-					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
-				</ul>
-			</aside>
+// Show if exists, has widgets and is not disabled via post/page Layout Options
+if ( uplifted_sidebar_enabled() ) : ?>
 
-			<aside id="meta" class="widget">
-				<h4><?php _e( 'Meta', '_s' ); ?></h4>
-				<ul>
-					<?php wp_register(); ?>
-					<li><?php wp_loginout(); ?></li>
-					<?php wp_meta(); ?>
-				</ul>
-			</aside>
+	<div id="uplifted-sidebar-right" role="complementary">
 
-		<?php endif; // end sidebar widget area ?>
-	</div><!-- #secondary -->
+		<?php do_action( 'uplifted_before_sidebar_widgets' ); ?>
+
+		<?php dynamic_sidebar( uplifted_sidebar_id() ); ?>
+
+		<?php do_action( 'uplifted_after_sidebar_widgets' ); ?>
+
+	</div>
+
+<?php endif; ?>

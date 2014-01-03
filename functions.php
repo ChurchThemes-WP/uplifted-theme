@@ -82,46 +82,6 @@ function uplifted_fonts_url() {
 }
 
 /**
- * Set up our theme widgets
- *
- */
-function uplifted_widgets_init(){
-  register_sidebar( array(
-  		'name'          => __('Sidebar','uplifted'),
-  		'id'            => 'sidebar',
-  		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-  		'after_widget'  => '</div>',
-  		'before_title'  => '<h4>',
-  		'after_title'   => '</h4>' ));
-
-  register_sidebar( array(
-  		'name'          => __('Footer First Column','uplifted'),
-  		'id'            => 'uplifted-footer-column-one',
-  		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-  		'after_widget'  => '</div>',
-  		'before_title'  => '<h4>',
-  		'after_title'   => '</h4>' ));
-
-  register_sidebar( array(
-  		'name'          => __('Footer Second Column','uplifted'),
-  		'id'            => 'uplifted-footer-column-two',
-  		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-  		'after_widget'  => '</div>',
-  		'before_title'  => '<h4>',
-  		'after_title'   => '</h4>' ));
-
-  register_sidebar( array(
-  		'name'          => __('Footer Third Column','uplifted'),
-  		'id'            => 'uplifted-footer-column-three',
-  		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-  		'after_widget'  => '</div>',
-  		'before_title'  => '<h4>',
-  		'after_title'   => '</h4>' ));
-}
-
-add_action('widgets_init','uplifted_widgets_init');
-
-/**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
 function uplifted_page_menu_args( $args ) {

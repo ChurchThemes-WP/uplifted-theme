@@ -15,7 +15,7 @@
 }
 
 // this is the Sidebar section
-#secondary {
+#uplifted-sidebar-right {
   @include grid-column(12);
 }
 
@@ -25,25 +25,25 @@
 @media screen and (min-width: $small-screen) {
 
 	// this is the Main Content section
-	#uplifted-content {
+	#uplifted-content.uplifted-has-sidebar {
 		@include grid-column(8);
 	}
 
 	// this is the Sidebar section
-	#secondary {
+	#uplifted-sidebar-right {
 		@include grid-column(4,true,false);
 	}
 
 	// if the layout is reversed
 	.layout_reversed {
 
-		#uplifted-content {
+		#uplifted-content.uplifted-has-sidebar {
 			@include grid-column(8,true,false);
 			float: right; // should be able to added via above include, but not sure how
 			              // so could be changed later
 		}
 
-		#secondary {
+		#uplifted-sidebar-right {
 			@include grid-column(4);
 		}
 	}

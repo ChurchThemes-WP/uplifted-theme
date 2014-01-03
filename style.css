@@ -2126,7 +2126,7 @@ small.error {
   width: 100%;
   float: left; }
 
-#secondary {
+#uplifted-sidebar-right {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
@@ -2134,14 +2134,14 @@ small.error {
   float: left; }
 
 @media screen and (min-width: 768px) {
-  #uplifted-content {
+  #uplifted-content.uplifted-has-sidebar {
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
     width: 66.66667%;
     float: left; }
 
-  #secondary {
+  #uplifted-sidebar-right {
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
@@ -2149,7 +2149,7 @@ small.error {
     float: right;
     float: left; }
 
-  .layout_reversed #uplifted-content {
+  .layout_reversed #uplifted-content.uplifted-has-sidebar {
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
@@ -2157,7 +2157,7 @@ small.error {
     float: right;
     float: left;
     float: right; }
-  .layout_reversed #secondary {
+  .layout_reversed #uplifted-sidebar-right {
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
