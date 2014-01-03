@@ -1,4 +1,5 @@
 @media print {
+  /* line 3, sass/print.scss */
   body, #content, #container {
     width: 100%;
     margin: 0;
@@ -6,52 +7,66 @@
     background: white url(none);
     line-height: 1.5em; }
 
+  /* line 10, sass/print.scss */
   #wrapper {
     background: none; }
 
+  /* line 13, sass/print.scss */
   #header, .ad, .noprint, #footer, form, #sidebar, .featured-image, .meta, .theme_footer {
     display: none; }
 
+  /* line 16, sass/print.scss */
   body {
     font: 1em Georgia, "Times New Roman", Times, serif;
     color: #000; }
 
+  /* line 21, sass/print.scss */
   h1, h2, h3, h4, h5, h6 {
     font-family: Helvetica, Arial, sans-serif;
     color: #000; }
 
+  /* line 25, sass/print.scss */
   h1 {
     font-size: 250%; }
 
+  /* line 26, sass/print.scss */
   h2 {
     font-size: 175%; }
 
+  /* line 27, sass/print.scss */
   h3 {
     font-size: 135%; }
 
+  /* line 28, sass/print.scss */
   h4 {
     font-size: 100%;
     font-variant: small-caps; }
 
+  /* line 29, sass/print.scss */
   h5 {
     font-size: 100%; }
 
+  /* line 30, sass/print.scss */
   h6 {
     font-size: 90%;
     font-style: italic; }
 
+  /* line 32, sass/print.scss */
   a:link, a:visited {
     color: #00c;
     font-weight: bold;
     text-decoration: underline; }
 
+  /* line 38, sass/print.scss */
   #content a:link:after, #content a:visited:after {
     content: " (" attr(href) ") "; }
 
+  /* line 42, sass/print.scss */
   #container, #header .inner, #footer .inner, .theme_footer .inner {
     max-width: 100%;
     min-width: 0;
     margin: 0 auto; }
 
+  /* line 48, sass/print.scss */
   #content .inner {
     padding: 50px; } }

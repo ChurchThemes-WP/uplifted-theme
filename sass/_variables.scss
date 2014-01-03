@@ -36,10 +36,10 @@ $experimental: true;
 
 $default-float: left;
 
-$body-bg: #f5f5f2;
-$body-font-color: #46463a;
-$body-font-family: "Open Sans", Verdana, Geneva, sans-serif;
-$body-font-weight: 100;
+$body-bg: #f8f9fb;
+$body-font-color: #3c4542;
+$body-font-family: 'Asap', Verdana, Geneva, sans-serif;
+$body-font-weight: normal;
 $body-font-style: normal;
 
 // Font-smoothing
@@ -52,12 +52,12 @@ $text-direction: ltr;
 
 // Colors
 
-$primary-color: #f05133;
-$secondary-color: #46463a;
+$primary-color: #0fcfc5; //blue color
+$secondary-color: #f6653c; //orange color
 $tertiary-color: #e3e3e1;
 $neutral-color: #fff;
-$alert-color: #c60f13;
-$success-color: #5da423;
+$alert-color: #d15327;
+$success-color: #9fe150;
 
 // Make sure border radius matches unless we want it different.
 
@@ -173,9 +173,9 @@ $block-grid-media-queries: true;
 
 // Heading font styles
 
-$header-font-family: "Open Sans", Verdana, Geneva, sans-serif;
-$header-font-weight: bold;
-$alt-header-font-weight: 100;
+$header-font-family: "League Gothic", Verdana, Geneva, sans-serif;
+$header-font-weight: normal;
+$alt-header-font-weight: bold;
 $header-font-style: normal;
 $header-font-color: #46463a;
 $header-line-height: 1.4;
@@ -226,8 +226,8 @@ $code-font-weight: bold;
 // Anchors
 
 $anchor-text-decoration: none;
-$anchor-font-color: $primary-color;
-$anchor-font-color-hover: darken($primary-color, 10%);
+$anchor-font-color: $secondary-color;
+$anchor-font-color-hover: $primary-color;
 
 // <hr> element
 
@@ -1233,7 +1233,7 @@ $topbar-input-height: 2.45em;
 
 // Controlling the styles for the title in the top bar
 
-$topbar-title-weight: bold;
+$topbar-title-weight: normal;
 $topbar-title-font-size: emCalc(17px);
 
 // Style the top bar dropdown elements
@@ -1247,10 +1247,11 @@ $topbar-dropdown-toggle-alpha: 1;
 
 // Set the link colors and styles for top-level nav
 
-$topbar-link-color: contrast-color($topbar-bg, $secondary-color, #fff, 50%);
+$topbar-link-color: #555;
+//$topbar-link-color: contrast-color($topbar-bg, $secondary-color, #fff, 50%);
 $topbar-link-color-hover: contrast-color($topbar-bg, aqua, darken(#fff,25%), 50%);
 $topbar-link-color-active: contrast-color($topbar-bg, lighten(#333,30%), darken(#fff,30%), 50%);
-$topbar-link-weight: bold;
+$topbar-link-weight: normal;
 $topbar-link-font-size: emCalc(11px);
 $topbar-link-hover-lightness: -30%; // Darken by 30%
 $topbar-link-bg-hover: darken($topbar-bg, 3%);

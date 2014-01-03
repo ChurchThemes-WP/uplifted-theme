@@ -3,6 +3,8 @@
 
 /* RTL Support - Right to Left */
 
+@import 'global';
+
 body {
   direction: rtl;
   unicode-bidi: embed;
