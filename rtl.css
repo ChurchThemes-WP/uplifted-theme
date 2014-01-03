@@ -1,6 +1,6 @@
 /* Variables */
 /* Global */
-/* line 272, sass/_global.scss */
+/* line 274, sass/_global.scss */
 *,
 *:before,
 *:after {
@@ -8,7 +8,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 278, sass/_global.scss */
+/* line 279, sass/_global.scss */
 html,
 body {
   font-size: 100%; }
@@ -34,14 +34,14 @@ a:hover {
 a:focus {
   outline: none; }
 
-/* line 301, sass/_global.scss */
+/* line 303, sass/_global.scss */
 img,
 object,
 embed {
   max-width: 100%;
   height: auto; }
 
-/* line 305, sass/_global.scss */
+/* line 306, sass/_global.scss */
 object,
 embed {
   height: 100%; }
@@ -50,7 +50,7 @@ embed {
 img {
   -ms-interpolation-mode: bicubic; }
 
-/* line 311, sass/_global.scss */
+/* line 313, sass/_global.scss */
 #map_canvas img,
 #map_canvas embed,
 #map_canvas object,
@@ -107,7 +107,7 @@ select {
 
 /* RTL Support - Right to Left */
 /* Global */
-/* line 272, sass/_global.scss */
+/* line 274, sass/_global.scss */
 *,
 *:before,
 *:after {
@@ -115,7 +115,7 @@ select {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 278, sass/_global.scss */
+/* line 279, sass/_global.scss */
 html,
 body {
   font-size: 100%; }
@@ -141,14 +141,14 @@ a:hover {
 a:focus {
   outline: none; }
 
-/* line 301, sass/_global.scss */
+/* line 303, sass/_global.scss */
 img,
 object,
 embed {
   max-width: 100%;
   height: auto; }
 
-/* line 305, sass/_global.scss */
+/* line 306, sass/_global.scss */
 object,
 embed {
   height: 100%; }
@@ -157,7 +157,7 @@ embed {
 img {
   -ms-interpolation-mode: bicubic; }
 
-/* line 311, sass/_global.scss */
+/* line 313, sass/_global.scss */
 #map_canvas img,
 #map_canvas embed,
 #map_canvas object,
@@ -305,7 +305,7 @@ body {
         /* line 133, sass/rtl.scss */
         body .gallery-item:nth-child(4n+4) {
           margin-left: 0; } }
-  /* line 144, sass/rtl.scss */
+  /* line 145, sass/rtl.scss */
   body #respond .comment-form-author,
   body #respond .comment-form-email {
     float: right;
@@ -328,7 +328,7 @@ body {
   /* line 188, sass/rtl.scss */
   body .paging .page-numbers {
     float: right; }
-  /* line 192, sass/rtl.scss */
+  /* line 193, sass/rtl.scss */
   body .paging .next,
   body .paging .prev {
     float: right; }

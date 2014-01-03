@@ -1280,7 +1280,7 @@ button, .button {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5em;
+  max-width: 73.75em;
   *zoom: 1; }
   /* line 131, sass/_global.scss */
   .row:before, .row:after {
@@ -2535,7 +2535,7 @@ small.error {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5em;
+  max-width: 73.75em;
   *zoom: 1;
   margin-top: 2em; }
   /* line 131, sass/_global.scss */
@@ -2626,7 +2626,6 @@ small.error {
 .uplifted-entry-meta {
   list-style: none;
   position: relative;
-  color: #fbb29e;
   font-size: .8em;
   overflow: hidden;
   padding: 0.6em 0 1.5em 0;
@@ -2635,12 +2634,9 @@ small.error {
   .uplifted-entry-meta li {
     float: left;
     margin-right: 1em; }
-  /* line 44, sass/_post.scss */
-  .uplifted-entry-meta a {
-    color: #fbb29e; }
-    /* line 47, sass/_post.scss */
-    .uplifted-entry-meta a:hover {
-      color: #0fcfc5; }
+  /* line 47, sass/_post.scss */
+  .uplifted-entry-meta a:hover {
+    color: #0fcfc5; }
   /* line 52, sass/_post.scss */
   .uplifted-entry-meta .genericon {
     font-size: 14px; }
@@ -3202,7 +3198,7 @@ p.comment-form-comment label.error {
 
   /* line 448, sass/_top-bar.scss */
   .contain-to-grid .top-bar {
-    max-width: 62.5em;
+    max-width: 73.75em;
     margin: 0 auto;
     margin-bottom: 0; }
 
@@ -4528,12 +4524,25 @@ img.alignright {
 .ctfw-breadcrumbs {
   margin: 1em .5em;
   font-size: .8em;
-  font-weight: bold;
   color: #bcc4c1; }
-  /* line 9, sass/_breadcrumbs.scss */
+  /* line 8, sass/_breadcrumbs.scss */
   .ctfw-breadcrumbs a {
     color: #bcc4c1;
     margin: 0 .6em; }
-    /* line 13, sass/_breadcrumbs.scss */
+    /* line 12, sass/_breadcrumbs.scss */
     .ctfw-breadcrumbs a:hover {
       color: #0fcfc5; }
+
+/* Sermons */
+/* line 4, sass/_sermons.scss */
+.single-ctc_sermon .uplifted-entry-title-meta {
+  text-align: center; }
+  /* line 7, sass/_sermons.scss */
+  .single-ctc_sermon .uplifted-entry-title-meta ul {
+    display: inline-block;
+    margin: 0 auto; }
+
+/* line 13, sass/_sermons.scss */
+.uplifted-list-buttons {
+  margin: 0;
+  list-style: none; }
