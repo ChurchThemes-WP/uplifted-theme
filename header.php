@@ -42,7 +42,7 @@ $up_options = upfw_get_options();
 
   <header id="masthead">
 
-    <div class="top-bar-container contain-to-grid fixed">
+    <div class="top-bar-container fixed">
         <nav class="top-bar">
             <ul class="title-area">
                 <li class="name">
