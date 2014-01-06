@@ -204,6 +204,7 @@ $microformat-abbr-font-decoration: none !default;
     text-rendering: $header-text-rendering;
     margin-bottom: $header-bottom-margin;
     line-height: $header-line-height;
+    font-weight: $header-font-weight;
 
     small {
       font-size: $small-font-size;
