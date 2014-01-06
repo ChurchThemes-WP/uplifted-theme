@@ -31,28 +31,29 @@ function uplifted_register_sidebars() {
 		'name'			=> _x( 'Footer (First Column)', 'widget area', 'uplifted' ),
 		'description' 	=> __( 'These show up in the first column of the footer.', 'uplifted' ),
   		'id'            => 'uplifted-footer-column-one',
-  		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-  		'after_widget'  => '</div>',
-  		'before_title'  => '<h4>',
-  		'after_title'   => '</h4>' ));
+		'before_widget'	=> '<aside id="%1$s" class="uplifted-widget uplifted-sidebar-widget %2$s">',
+		'after_widget'	=> '</aside>',
+		'before_title' 	=> '<h1 class="uplifted-widget-title">',
+		'after_title' 	=> '</h1>',
 
   register_sidebar( array(
 		'name'			=> _x( 'Footer (Second Column)', 'widget area', 'uplifted' ),
 		'description' 	=> __( 'These show up in the second column of the footer.', 'uplifted' ),
   		'id'            => 'uplifted-footer-column-two',
-  		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-  		'after_widget'  => '</div>',
-  		'before_title'  => '<h4>',
-  		'after_title'   => '</h4>' ));
+		'before_widget'	=> '<aside id="%1$s" class="uplifted-widget uplifted-sidebar-widget %2$s">',
+		'after_widget'	=> '</aside>',
+		'before_title' 	=> '<h1 class="uplifted-widget-title">',
+		'after_title' 	=> '</h1>',
 
   register_sidebar( array(
 		'name'			=> _x( 'Footer (Third Column)', 'widget area', 'uplifted' ),
 		'description' 	=> __( 'These show up in the last column of the footer.', 'uplifted' ),
 		'id'            => 'uplifted-footer-column-three',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>' ));
+		'before_widget'	=> '<aside id="%1$s" class="uplifted-widget uplifted-sidebar-widget %2$s">',
+		'after_widget'	=> '</aside>',
+		'before_title' 	=> '<h1 class="uplifted-widget-title">',
+		'after_title' 	=> '</h1>',
+
 	// Home Slider
 	register_sidebar( array(
 		'id'			=> 'ctcom-home-slider',
