@@ -290,7 +290,7 @@
 }
 
 // Entry Title
-.uplifted-widget-entry-title { /* <h1> */
+.uplifted-widget-entry-title {
   margin: 0;
   font-size: 1em;
 }
@@ -303,25 +303,21 @@
 }
 
 			/* Keep links from wrapping */
-
 			.uplifted-widget-entry-meta > li a {
 				white-space: nowrap;
 			}
 
 			/* Date */
-
 			.uplifted-widget-entry-date {
 				font-weight: bold;
 			}
 
 			/* Byline */
-
 			.uplifted-widget-entry-byline {
 				/*font-style: italic;*/
 			}
 
 			/* Icons */
-
 			.uplifted-widget-entry-icons .uplifted-list-icons { /* <ul> */
 				position: relative;
 				top: -2px;

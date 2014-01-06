@@ -3588,7 +3588,6 @@ p.comment-form-comment label.error {
 
 /* line 293, sass/_widgets.scss */
 .uplifted-widget-entry-title {
-  /* <h1> */
   margin: 0;
   font-size: 1em; }
 
@@ -3599,22 +3598,22 @@ p.comment-form-comment label.error {
   vertical-align: top; }
 
 /* Keep links from wrapping */
-/* line 307, sass/_widgets.scss */
+/* line 306, sass/_widgets.scss */
 .uplifted-widget-entry-meta > li a {
   white-space: nowrap; }
 
 /* Date */
-/* line 313, sass/_widgets.scss */
+/* line 311, sass/_widgets.scss */
 .uplifted-widget-entry-date {
   font-weight: bold; }
 
 /* Byline */
-/* line 319, sass/_widgets.scss */
+/* line 316, sass/_widgets.scss */
 .uplifted-widget-entry-byline {
   /*font-style: italic;*/ }
 
 /* Icons */
-/* line 325, sass/_widgets.scss */
+/* line 321, sass/_widgets.scss */
 .uplifted-widget-entry-icons .uplifted-list-icons {
   /* <ul> */
   position: relative;
@@ -3622,26 +3621,26 @@ p.comment-form-comment label.error {
   white-space: nowrap; }
 
 /* Content / Excerpt */
-/* line 333, sass/_widgets.scss */
+/* line 329, sass/_widgets.scss */
 .uplifted-widget-entry-content {
   margin-top: 15px; }
 
-/* line 337, sass/_widgets.scss */
+/* line 333, sass/_widgets.scss */
 .uplifted-widget-entry-content p {
   margin: 12px 0 0 0; }
 
-/* line 341, sass/_widgets.scss */
+/* line 337, sass/_widgets.scss */
 .uplifted-widget-entry-content p:first-child {
   margin: 0; }
 
 /* Dropdown Widgets */
-/* line 348, sass/_widgets.scss */
+/* line 344, sass/_widgets.scss */
 .widget_ctfw-archives select,
 .widget_ctfw-categories select {
   width: 100%; }
 
 /* List Widgets */
-/* line 364, sass/_widgets.scss */
+/* line 360, sass/_widgets.scss */
 .widget_categories ul,
 .widget_ctfw-categories ul,
 .widget_ctfw-archives ul,
@@ -3657,7 +3656,7 @@ p.comment-form-comment label.error {
   list-style: none;
   line-height: 1.4em; }
 
-/* line 380, sass/_widgets.scss */
+/* line 376, sass/_widgets.scss */
 .widget_categories ul ul,
 .widget_ctfw-categories ul ul,
 .widget_ctfw-archives ul ul,
@@ -3673,7 +3672,7 @@ p.comment-form-comment label.error {
   list-style: none;
   line-height: 1.4em; }
 
-/* line 394, sass/_widgets.scss */
+/* line 390, sass/_widgets.scss */
 .widget_categories li,
 .widget_ctfw-categories li,
 .widget_ctfw-archives li,
@@ -3686,13 +3685,13 @@ p.comment-form-comment label.error {
   padding-top: 0;
   margin-bottom: 10px; }
 
-/* line 400, sass/_widgets.scss */
+/* line 396, sass/_widgets.scss */
 .widget_recent_entries li,
 .widget_recent_comments li {
   padding-top: 0;
   margin-bottom: 18px; }
 
-/* line 415, sass/_widgets.scss */
+/* line 411, sass/_widgets.scss */
 .widget_categories li:first-child,
 .widget_ctfw-categories li:first-child,
 .widget_ctfw-archives li:first-child,
@@ -3707,7 +3706,7 @@ p.comment-form-comment label.error {
   border-top: 0;
   padding-top: 0; }
 
-/* line 430, sass/_widgets.scss */
+/* line 426, sass/_widgets.scss */
 .widget_categories li li,
 .widget_ctfw-categories li li,
 .widget_ctfw-archives li li,
@@ -3723,7 +3722,7 @@ p.comment-form-comment label.error {
   border-top: 0;
   padding-top: 0; }
 
-/* line 447, sass/_widgets.scss */
+/* line 443, sass/_widgets.scss */
 .widget_categories li li a,
 .widget_ctfw-categories li li a,
 .widget_ctfw-archives li li a,
@@ -3740,97 +3739,97 @@ p.comment-form-comment label.error {
   text-transform: none; }
 
 /************* WP TAG CLOUD WIDGET ************/
-/* line 454, sass/_widgets.scss */
+/* line 450, sass/_widgets.scss */
 .widget_tag_cloud {
   line-height: 2.05em; }
 
-/* line 458, sass/_widgets.scss */
+/* line 454, sass/_widgets.scss */
 .widget_tag_cloud a {
   font-size: 0.75em !important;
   /* single size */
   text-transform: uppercase; }
 
 /************* WP CALENDAR WIDGET *************/
-/* line 465, sass/_widgets.scss */
+/* line 461, sass/_widgets.scss */
 .widget_calendar #wp-calendar {
   width: 100%; }
 
-/* line 471, sass/_widgets.scss */
+/* line 467, sass/_widgets.scss */
 .widget_calendar #wp-calendar caption,
 .widget_calendar #wp-calendar td,
 .widget_calendar #wp-calendar th {
   text-align: center; }
 
-/* line 475, sass/_widgets.scss */
+/* line 471, sass/_widgets.scss */
 .widget_calendar #wp-calendar tbody td a {
   font-weight: bold; }
 
-/* line 479, sass/_widgets.scss */
+/* line 475, sass/_widgets.scss */
 .widget_calendar #wp-calendar caption {
   padding: 0 0 5px 0;
   font-weight: bold; }
 
-/* line 484, sass/_widgets.scss */
+/* line 480, sass/_widgets.scss */
 .widget_calendar #wp-calendar th {
   border-width: 1px 0;
   border-style: solid;
   font-weight: bold;
   padding: 3px 0; }
 
-/* line 491, sass/_widgets.scss */
+/* line 487, sass/_widgets.scss */
 .widget_calendar #wp-calendar tfoot td {
   padding-top: 5px; }
 
 /************** WP SEARCH WIDGET **************/
-/* line 497, sass/_widgets.scss */
+/* line 493, sass/_widgets.scss */
 .widget_search form {
   position: relative; }
 
 /* Search Input */
-/* line 503, sass/_widgets.scss */
+/* line 499, sass/_widgets.scss */
 .widget_search .uplifted-search-field {
   margin-right: 34px; }
 
-/* line 507, sass/_widgets.scss */
+/* line 503, sass/_widgets.scss */
 .widget_search .uplifted-search-field input {
   width: 100%; }
 
 /* Search Button */
-/* line 513, sass/_widgets.scss */
+/* line 509, sass/_widgets.scss */
 .widget_search .uplifted-search-button {
   position: absolute;
   top: 4px;
   right: 2px; }
 
 /*************** WP TEXT WIDGET ***************/
-/* line 521, sass/_widgets.scss */
+/* line 517, sass/_widgets.scss */
 .textwidget > :first-child {
   margin-top: 0; }
 
-/* line 525, sass/_widgets.scss */
+/* line 521, sass/_widgets.scss */
 .textwidget > :last-child {
   margin-bottom: 0 !important; }
 
 /*************** WP RSS WIDGET ****************/
-/* line 531, sass/_widgets.scss */
+/* line 527, sass/_widgets.scss */
 .widget_rss h1 img {
   /* hide RSS icon */
   display: none; }
 
-/* line 535, sass/_widgets.scss */
+/* line 531, sass/_widgets.scss */
 .widget_rss ul {
   margin: 0;
   list-style: none; }
 
-/* line 540, sass/_widgets.scss */
+/* line 536, sass/_widgets.scss */
 .widget_rss li {
   margin: 32px 0; }
 
-/* line 544, sass/_widgets.scss */
+/* line 540, sass/_widgets.scss */
 .widget_rss li:first-child {
   margin-top: 0; }
 
-/* line 548, sass/_widgets.scss */
+/* line 544, sass/_widgets.scss */
 .widget_rss li a {
   margin-top: 0;
   margin-bottom: 0;
@@ -3839,44 +3838,44 @@ p.comment-form-comment label.error {
   line-height: 1.4em;
   text-transform: uppercase; }
 
-/* line 557, sass/_widgets.scss */
+/* line 553, sass/_widgets.scss */
 .widget_rss .rss-date {
   margin-top: 12px;
   display: block;
   font-weight: bold; }
 
-/* line 563, sass/_widgets.scss */
+/* line 559, sass/_widgets.scss */
 .widget_rss .rssSummary {
   margin-top: 12px; }
 
-/* line 566, sass/_widgets.scss */
+/* line 562, sass/_widgets.scss */
 .widget_rss cite {
   display: block;
   margin-top: 12px;
   font-style: italic; }
 
 /************ CT HIGHLIGHT WIDGET *************/
-/* line 574, sass/_widgets.scss */
+/* line 570, sass/_widgets.scss */
 .widget_ctfw-highlight {
   /* <aside> */
   padding: 0; }
 
-/* line 578, sass/_widgets.scss */
+/* line 574, sass/_widgets.scss */
 .widget_ctfw-highlight .uplifted-widget-title {
   /* <h1> */
   margin: 0;
   padding: 0;
   font-size: 1em; }
 
-/* line 584, sass/_widgets.scss */
+/* line 580, sass/_widgets.scss */
 .widget_ctfw-highlight.uplifted-widget-has-title > * {
   top: 0; }
 
-/* line 588, sass/_widgets.scss */
+/* line 584, sass/_widgets.scss */
 .widget_ctfw-highlight.uplifted-widget-has-title {
   margin-top: 30px; }
 
-/* line 593, sass/_widgets.scss */
+/* line 589, sass/_widgets.scss */
 .widget_ctfw-highlight > :not(.uplifted-widget-title):first-of-type,
 .widget_ctfw-highlight .uplifted-widget-first-element {
   /* uplifted-widget-first-element applied for IE8 w/JavaScript */
@@ -3884,7 +3883,7 @@ p.comment-form-comment label.error {
 
 /************* CT GALLERY WIDGET **************/
 /* Gallery container */
-/* line 601, sass/_widgets.scss */
+/* line 597, sass/_widgets.scss */
 .uplifted-widget .gallery {
   margin-bottom: 0;
   position: relative;
@@ -3892,62 +3891,62 @@ p.comment-form-comment label.error {
   /* offset extra space at bottom */ }
 
 /* Link */
-/* line 609, sass/_widgets.scss */
+/* line 605, sass/_widgets.scss */
 .uplifted-gallery-widget-link {
   /* holds <a> */
   text-align: center;
   margin-top: 20px; }
 
 /************** CT SERMONS WIDGET *************/
-/* line 616, sass/_widgets.scss */
+/* line 612, sass/_widgets.scss */
 .uplifted-sermons-widget-entry.uplifted-widget-entry-first {
   margin-top: 0; }
 
 /* Series */
-/* line 622, sass/_widgets.scss */
+/* line 618, sass/_widgets.scss */
 .uplifted-widget-entry-meta > li.uplifted-sermons-widget-entry-series a {
   white-space: normal;
   /* sermon series titles may be longer than sidebar */ }
 
 /************** CT EVENTS WIDGET **************/
 /* Time */
-/* line 630, sass/_widgets.scss */
+/* line 626, sass/_widgets.scss */
 .uplifted-events-widget-entry-time {
   font-style: italic; }
 
 /************* CT PEOPLE WIDGET ***************/
 /* Position */
-/* line 638, sass/_widgets.scss */
+/* line 634, sass/_widgets.scss */
 .uplifted-people-widget-entry-position {
   font-weight: bold; }
 
-/* line 643, sass/_widgets.scss */
+/* line 639, sass/_widgets.scss */
 .uplifted-people-widget-entry-phone {
   font-style: italic; }
 
 /************ CT LOCATIONS WIDGET *************/
 /* Address */
-/* line 651, sass/_widgets.scss */
+/* line 647, sass/_widgets.scss */
 .uplifted-locations-widget-entry-address {
   font-weight: bold; }
 
 /* Phone */
-/* line 657, sass/_widgets.scss */
+/* line 653, sass/_widgets.scss */
 .uplifted-locations-widget-entry-phone {
   font-style: italic; }
 
 /* Map */
-/* line 663, sass/_widgets.scss */
+/* line 659, sass/_widgets.scss */
 .uplifted-locations-widget-entry-map .ctfw-google-map-container {
   margin-top: 20px; }
 
 /************* CT GIVING WIDGET ***************/
 /* Giving Widget */
-/* line 671, sass/_widgets.scss */
+/* line 667, sass/_widgets.scss */
 .uplifted-giving-widget-text p:first-child {
   margin-top: 0; }
 
-/* line 675, sass/_widgets.scss */
+/* line 671, sass/_widgets.scss */
 .uplifted-giving-widget-button {
   margin-top: 24px;
   text-align: center; }
