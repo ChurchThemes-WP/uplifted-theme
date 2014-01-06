@@ -17,9 +17,9 @@ if ( is_singular( get_post_type() ) ) :
 
 ?>
 
+  <?php get_template_part( 'content-person-header' ); ?>
+  
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'uplifted-entry-full uplifted-person-full' ); ?>>
-
-		<?php get_template_part( 'content-person-header' ); ?>
 
 		<div class="uplifted-entry-content uplifted-clearfix">
 
@@ -47,13 +47,7 @@ else :
 
 		<?php get_template_part( 'content-person-header' ); ?>
 
-		<?php if ( ctfw_has_excerpt() || ctfw_has_more_tag() ) : ?>
-			<div class="uplifted-entry-content uplifted-clearfix">
-				<?php uplifted_short_content(); // output excerpt or post content up until <!--more--> quicktag used ?>
-			</div>
-		<?php endif; ?>
-
-		<?php get_template_part( 'content-footer-short' ); // show appropriate button(s) ?>
+		<!-- <?php get_template_part( 'content-footer-short' ); // show appropriate button(s) ?> -->
 
 	</article>
 

@@ -12,13 +12,15 @@ extract( ctfw_person_data() );
 
 ?>
 
-<header class="uplifted-entry-header uplifted-clearfix">
+<div class="person-profile-card">
 
-	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="uplifted-entry-image">
+<?php if ( has_post_thumbnail() ) : ?>
+		<div class="profile-image">
 			<?php uplifted_post_image(); ?>
 		</div>
 	<?php endif; ?>
+
+<header class="uplifted-entry-header clearfix">
 
 	<div class="uplifted-entry-title-meta">
 
@@ -70,3 +72,5 @@ extract( ctfw_person_data() );
 	</div>
 
 </header>
+
+</div> <!-- /person-profile-card -->
