@@ -1,0 +1,19 @@
+/* People */
+
+.person-profile-card {
+  background-color: $panel-bg;
+  overflow: hidden;
+  border: $panel-border;
+  margin-bottom: $panel-margin-bottom;
+  
+  .uplifted-entry-header {
+    padding: $panel-padding;
+  }
+}
+
+//profile image
+.profile-image {
+  float: left;
+  width: 33%;
+  margin-right: $panel-padding;
+}
