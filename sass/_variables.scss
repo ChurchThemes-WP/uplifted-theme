@@ -56,6 +56,7 @@ $primary-color: #0fcfc5; //blue color
 $secondary-color: #f6653c; //orange color
 $tertiary-color: #e3e3e1;
 $neutral-color: #fff;
+$transparent-neutral-color: rgba(255,255,255,.3);
 $alert-color: #d15327;
 $success-color: #9fe150;
 
@@ -131,6 +132,8 @@ $panel-border-size: 1px;
 $panel-border-color: #e5e6ea;
 $panel-border: $panel-border-size $panel-border-style $panel-border-color;
 $panel-box-shadow: 4px 4px 0 0 $panel-border-color;
+
+$footer-box-shadow: 4px 4px 0 0 $transparent-neutral-color;
 
 // Control how much we darken things on hover
 

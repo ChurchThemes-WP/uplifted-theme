@@ -13,16 +13,20 @@
 // sidebar and footer
 
 .uplifted-widget {
-  margin-bottom: $panel-margin-bottom;
   background-color: $neutral-color;
+  margin-bottom: $panel-margin-bottom;
   padding: $panel-padding;
   border: $panel-border;
   box-shadow: $panel-box-shadow;
   
   .uplifted-widget-title {
-    font-size: .9em;
-    text-transform: uppercase;
-    letter-spacing: $base-letter-spacing;
+    display: inline-block;
+    color: $secondary-color;
+    font-family: $body-font-family;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-bottom: 3px solid $panel-border-color;
+    margin-bottom: .8em;
   }
 
   ul {
@@ -52,27 +56,22 @@
     }
   }
 
-  // sidebar specific
-  #secondary & {
-    background-color: white;
-    border-bottom: 4px solid darken(#fff,15%);
-    padding: 20px;
-
-    h4 {
-      padding: 1em;
-      margin: -20px -20px 10px;
-      background: $secondary-color;
-      color: contrast-color($secondary-color, #fff, #f2f2f2, 50%);
-    }
-  }
-
   // footer specific
   #footer & {
     text-align: center;
     margin-bottom: 2.5em;
+    background-color: transparent;
+    border-color: $transparent-neutral-color;
+    border-width: 3px;
+    box-shadow: $footer-box-shadow;
 
     @media screen and (min-width: $small-screen ) {
       text-align: left;
+    }
+    
+    .uplifted-widget-title {
+      color: rgba($body-font-color,.8);
+      border-color: $transparent-neutral-color;
     }
 
     li {
@@ -90,7 +89,7 @@
       }
 
     }
-  }
+  } // end footer specific styles for uplifted-widget
 
 } // end uplifted-widget
 
@@ -101,6 +100,7 @@
 /* Calendar Widget */
 
 .widget_calendar {
+  padding: 0;
 
   #calendar_wrap {
     position: relative;
@@ -157,15 +157,6 @@
         }
       }
     }
-  }
-
-  // Sidebar specific styles:
-  // need to kill padding and heading of
-  // calendar wiget in sidebar
-  #secondary & {
-    padding: 0;
-
-    h4 { display: none; }
   }
 
 }
@@ -282,43 +273,34 @@
 
 /* Widget Entry */
 
-.uplifted-widget-entry { /* <article> */
-	margin: 30px 0;
+.uplifted-widget-entry { // <article>
+	margin-bottom: 1em;
+	
+	header {
+  	display: inline-block;
+  	clear: both; // clears floated elements inside
+	}
 }
 
-	/* Thumbnail Container */
+// Thumbnail Container
+.uplifted-widget-entry-thumb {
+	width: 4em;
+	float: left;
+	margin: 0 .8em .8em 0;
+}
 
-	.uplifted-widget-entry-thumb {
-		width: 55px;
-		height: 55px;
-		float: left;
-		margin-right: 15px;
-		margin-bottom: 5px;
-		padding-top: 2px;
-	}
+// Entry Title
+.uplifted-widget-entry-title { /* <h1> */
+  margin: 0;
+  font-size: 1em;
+}
 
-	/* Entry Title */
-
-	.uplifted-widget-entry-title { /* <h1> */
-		margin: 0;
-		font-size: 1em;
-		line-height: 1.4em;
-	}
-
-	/* Meta List (Date, Author, etc.) */
-
-	.uplifted-widget-entry-meta { /* <ul> */
-		list-style: none;
-		margin: 0 -15px 0 0; /* negative of li right margin */
-	}
-
-		/* Meta Item */
-
-		.uplifted-widget-entry-meta > li {
-			display: inline-block;
-			margin: 12px 15px 0 0;
-			vertical-align: top;
-		}
+// Meta Item
+.uplifted-widget-entry-meta > li {
+	display: inline-block;
+	margin: 12px 15px 0 0;
+	vertical-align: top;
+}
 
 			/* Keep links from wrapping */
 
