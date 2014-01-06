@@ -15,7 +15,7 @@ $base-font-size: 100% !default;
 $base-line-height: 150%;
 
 // $base-letter-spacing should be used for all instances where letter-spacing is required
-$base-letter-spacing: .1em;
+$base-letter-spacing: .03em;
 
 // This is the default html and body font-size for the base em value.
 
@@ -126,8 +126,11 @@ $cursor-help-value: "help";
 // Background and border styles
 
 $panel-bg: #fff;
-// $panel-border-style: solid;
-// $panel-border-size: 1px;
+$panel-border-style: solid;
+$panel-border-size: 1px;
+$panel-border-color: #e5e6ea;
+$panel-border: $panel-border-size $panel-border-style $panel-border-color;
+$panel-box-shadow: 4px 4px 0 0 $panel-border-color;
 
 // Control how much we darken things on hover
 
@@ -174,7 +177,7 @@ $block-grid-media-queries: true;
 // Heading font styles
 
 $header-font-family: "Oswald", Verdana, Geneva, sans-serif;
-$header-font-weight: 700;
+$header-font-weight: normal;
 $alt-header-font-weight: bold;
 $header-font-style: normal;
 $header-font-color: #46463a;

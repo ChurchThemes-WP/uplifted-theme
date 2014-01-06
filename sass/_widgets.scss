@@ -12,14 +12,17 @@
 // styles for widget and layout placement including
 // sidebar and footer
 
-.widget {
-  font-size: 13px;
+.uplifted-widget {
   margin-bottom: $panel-margin-bottom;
-
-  // widget title
-  h4 {
+  background-color: $neutral-color;
+  padding: $panel-padding;
+  border: $panel-border;
+  box-shadow: $panel-box-shadow;
+  
+  .uplifted-widget-title {
     font-size: .9em;
-    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: $base-letter-spacing;
   }
 
   ul {
@@ -89,7 +92,11 @@
     }
   }
 
-}
+} // end uplifted-widget
+
+
+
+
 
 /* Calendar Widget */
 
@@ -270,65 +277,6 @@
 
 /* Sidebar + Home Bottom */
 
-.uplifted-widget { /* <aside> */
-	padding: 0 20px 20px 20px;
-	line-height: 1.4em;
-	margin-top: 30px; /* in case no title */
-}
-
-	/* No top margin for sidebar */
-
-	#uplifted-sidebar-right .uplifted-widget:first-child { /* <aside> */
-		margin-top: 0;
-	}
-
-	/* Widget Title */
-
-	.uplifted-widget-title { /* <h1> */
-		display: inline-block;
-		margin: 0 -20px;
-		padding: 8px 11px 8px 11px;
-		font-size: 1.25em;
-		font-weight: normal;
-		line-height: 1.2em;
-		text-transform: uppercase;
-	}
-
-	/*
-	Move title and content up
-	jQuery adds .uplifted-widget-has-title for better widget styling
-	*/
-
-	.uplifted-widget-has-title > * {
-		position: relative;
-		top: -19px;
-	}
-
-	.uplifted-widget-has-title {
-		margin-top: 49px;
-		padding-bottom: 0;
-	}
-
-	/* No top margin first element IN widget */
-
-	.uplifted-widget > :not(.uplifted-widget-title):first-of-type {
-		margin-top: 0; /* same value as below */
-		padding-top: 20px; /* same value as below */
-	}
-
-		/* Applied for IE8 w/JavaScript since :first-of-type won't work, even with selectivizr */
-
-		.uplifted-widget-first-element { /* applied for IE8 w/JavaScript */
-			margin-top: 0 !important; /* same value as above */
-			padding-top: 20px !important; /* same value as above */
-		}
-
-	/* No bottom margin last element IN widget */
-
-	.uplifted-widget > :last-child,
-	.uplifted-widget > :last-child > :last-child { /* such as an LI */
-		margin-bottom: 0; /* same value as below */
-	}
 
 /*************** SHARED STYLES ****************/
 
