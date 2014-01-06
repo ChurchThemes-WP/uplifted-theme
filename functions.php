@@ -322,13 +322,6 @@ function uplifted_register_required_plugins() {
   $plugins = array(
 
     array(
-      'name'    => 'Church Theme Content',
-      'slug'    => 'church-theme-content',
-      'force-activation' => true,
-      'required'  => true,
-    ),
-
-    array(
       'name'    => 'Page Builder by SiteOrigin',
       'slug'    => 'siteorigin-panels',
       'required'  => false,
