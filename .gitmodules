@@ -1,9 +1,9 @@
-[submodule "framework"]
-	path = framework
-	url = git@github.com:UpThemes/church-theme-framework.git
 [submodule "options"]
 	path = options
 	url = git@github.com:UpThemes/UpThemes-Framework.git
 [submodule "includes/plugin-activation"]
 	path = includes/plugin-activation
 	url = git@github.com:thomasgriffin/TGM-Plugin-Activation.git
+[submodule "framework"]
+	path = framework
+	url = https://github.com/churchthemes/church-theme-framework.git

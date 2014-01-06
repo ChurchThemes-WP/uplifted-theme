@@ -58,67 +58,6 @@ function uplifted_add_theme_support_framework() {
 	// Handy for Customizer: [ctcom_site_name], [ctcom_rss_url], [ctcom_current_year]
  	add_theme_support( 'ctfw-non-content-shortcodes' );
 
-	// Preset backgrounds for Customizer
-	// Images are stored in images/backgrounds (first is default)
-	add_theme_support( 'ctfw-preset-backgrounds', array(
-		'asphalt.jpg' => array(
-			'thumb' 		=> 'asphalt-thumb.png',
-			'fullscreen' 	=> true,					// true or false (default)
-			'repeat' 		=> 'no-repeat',				// no-repeat (default), repeat, repeat-x or repeat-y
-			'attachment'	=> '',						// fixed or scroll (default)
-			'position' 		=> '',						// left, center or right (default is empty value)
-			'colorable' 	=> false 					// true or false (default)
-		),
-		'concrete.jpg' => array(
-			'thumb' 		=> 'concrete-thumb.png',
-			'fullscreen' 	=> true,
-			'repeat' 		=> 'no-repeat',
-			'attachment' 	=> '',
-			'position' 		=> '',
-			'colorable' 	=> false
-		),
-		'grunge.png' => array(
-			'thumb' 		=> 'grunge-thumb.png',
-			'fullscreen' 	=> false,
-			'repeat' 		=> 'repeat',
-			'attachment' 	=> 'scroll',
-			'position' 		=> '',
-			'colorable' 	=> true
-		),
-		'screen.png' => array(
-			'thumb' 		=> 'screen-thumb.png',
-			'fullscreen' 	=> false,
-			'repeat' 		=> 'repeat',
-			'attachment' 	=> 'scroll',
-			'position' 		=> '',
-			'colorable' 	=> true
-		),
-		'horizontal.png' => array(
-			'thumb' 		=> 'horizontal-thumb.png',
-			'fullscreen' 	=> false,
-			'repeat' 		=> 'repeat',
-			'attachment' 	=> 'scroll',
-			'position' 		=> '',
-			'colorable' 	=> true
-		),
-		'vertical.png' => array(
-			'thumb' 		=> 'vertical-thumb.png',
-			'fullscreen' 	=> false,
-			'repeat' 		=> 'repeat',
-			'attachment' 	=> 'scroll',
-			'position' 		=> '',
-			'colorable' 	=> true
-		),
-		'diagonal.png' => array(
-			'thumb' 		=> 'diagonal-thumb.png',
-			'fullscreen' 	=> false,
-			'repeat' 		=> 'repeat',
-			'attachment' 	=> 'scroll',
-			'position' 		=> '',
-			'colorable' 	=> true
-		)
-	) );
-
 	/**
 	 * Posts
 	 */
@@ -237,7 +176,7 @@ function uplifted_add_theme_support_framework() {
 
 	// Correct imported URL's in menu, content, widgets, etc.
 	// Sample import files may have URLs from the dev site in menu, content, meta fields, etc.
-	add_theme_support( 'ctfw-import-correct-urls', 'http://wp.dev/' . CTFW_THEME_SLUG );
+	add_theme_support( 'ctfw-import-correct-urls', 'http://local.demos.upthemes.com/' . CTFW_THEME_SLUG );
 
 	// Set homepage as static front page after import
 	// If no static front and page using homepage template doesn't exist before import, set it
