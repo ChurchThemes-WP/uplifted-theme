@@ -3595,11 +3595,10 @@ p.comment-form-comment label.error {
   /* <h1> */
   margin: 0;
   font-size: 1em;
-  font-weight: bold;
   line-height: 1.4em; }
 
 /* Meta List (Date, Author, etc.) */
-/* line 311, sass/_widgets.scss */
+/* line 310, sass/_widgets.scss */
 .uplifted-widget-entry-meta {
   /* <ul> */
   list-style: none;
@@ -3607,29 +3606,29 @@ p.comment-form-comment label.error {
   /* negative of li right margin */ }
 
 /* Meta Item */
-/* line 318, sass/_widgets.scss */
+/* line 317, sass/_widgets.scss */
 .uplifted-widget-entry-meta > li {
   display: inline-block;
   margin: 12px 15px 0 0;
   vertical-align: top; }
 
 /* Keep links from wrapping */
-/* line 326, sass/_widgets.scss */
+/* line 325, sass/_widgets.scss */
 .uplifted-widget-entry-meta > li a {
   white-space: nowrap; }
 
 /* Date */
-/* line 332, sass/_widgets.scss */
+/* line 331, sass/_widgets.scss */
 .uplifted-widget-entry-date {
   font-weight: bold; }
 
 /* Byline */
-/* line 338, sass/_widgets.scss */
+/* line 337, sass/_widgets.scss */
 .uplifted-widget-entry-byline {
   /*font-style: italic;*/ }
 
 /* Icons */
-/* line 344, sass/_widgets.scss */
+/* line 343, sass/_widgets.scss */
 .uplifted-widget-entry-icons .uplifted-list-icons {
   /* <ul> */
   position: relative;
@@ -3637,26 +3636,26 @@ p.comment-form-comment label.error {
   white-space: nowrap; }
 
 /* Content / Excerpt */
-/* line 352, sass/_widgets.scss */
+/* line 351, sass/_widgets.scss */
 .uplifted-widget-entry-content {
   margin-top: 15px; }
 
-/* line 356, sass/_widgets.scss */
+/* line 355, sass/_widgets.scss */
 .uplifted-widget-entry-content p {
   margin: 12px 0 0 0; }
 
-/* line 360, sass/_widgets.scss */
+/* line 359, sass/_widgets.scss */
 .uplifted-widget-entry-content p:first-child {
   margin: 0; }
 
 /* Dropdown Widgets */
-/* line 367, sass/_widgets.scss */
+/* line 366, sass/_widgets.scss */
 .widget_ctfw-archives select,
 .widget_ctfw-categories select {
   width: 100%; }
 
 /* List Widgets */
-/* line 383, sass/_widgets.scss */
+/* line 382, sass/_widgets.scss */
 .widget_categories ul,
 .widget_ctfw-categories ul,
 .widget_ctfw-archives ul,
@@ -3672,7 +3671,7 @@ p.comment-form-comment label.error {
   list-style: none;
   line-height: 1.4em; }
 
-/* line 399, sass/_widgets.scss */
+/* line 398, sass/_widgets.scss */
 .widget_categories ul ul,
 .widget_ctfw-categories ul ul,
 .widget_ctfw-archives ul ul,
@@ -3688,7 +3687,7 @@ p.comment-form-comment label.error {
   list-style: none;
   line-height: 1.4em; }
 
-/* line 413, sass/_widgets.scss */
+/* line 412, sass/_widgets.scss */
 .widget_categories li,
 .widget_ctfw-categories li,
 .widget_ctfw-archives li,
@@ -3701,13 +3700,13 @@ p.comment-form-comment label.error {
   padding-top: 0;
   margin-bottom: 10px; }
 
-/* line 419, sass/_widgets.scss */
+/* line 418, sass/_widgets.scss */
 .widget_recent_entries li,
 .widget_recent_comments li {
   padding-top: 0;
   margin-bottom: 18px; }
 
-/* line 434, sass/_widgets.scss */
+/* line 433, sass/_widgets.scss */
 .widget_categories li:first-child,
 .widget_ctfw-categories li:first-child,
 .widget_ctfw-archives li:first-child,
@@ -3722,7 +3721,7 @@ p.comment-form-comment label.error {
   border-top: 0;
   padding-top: 0; }
 
-/* line 449, sass/_widgets.scss */
+/* line 448, sass/_widgets.scss */
 .widget_categories li li,
 .widget_ctfw-categories li li,
 .widget_ctfw-archives li li,
@@ -3738,7 +3737,7 @@ p.comment-form-comment label.error {
   border-top: 0;
   padding-top: 0; }
 
-/* line 466, sass/_widgets.scss */
+/* line 465, sass/_widgets.scss */
 .widget_categories li li a,
 .widget_ctfw-categories li li a,
 .widget_ctfw-archives li li a,
@@ -3755,97 +3754,97 @@ p.comment-form-comment label.error {
   text-transform: none; }
 
 /************* WP TAG CLOUD WIDGET ************/
-/* line 473, sass/_widgets.scss */
+/* line 472, sass/_widgets.scss */
 .widget_tag_cloud {
   line-height: 2.05em; }
 
-/* line 477, sass/_widgets.scss */
+/* line 476, sass/_widgets.scss */
 .widget_tag_cloud a {
   font-size: 0.75em !important;
   /* single size */
   text-transform: uppercase; }
 
 /************* WP CALENDAR WIDGET *************/
-/* line 484, sass/_widgets.scss */
+/* line 483, sass/_widgets.scss */
 .widget_calendar #wp-calendar {
   width: 100%; }
 
-/* line 490, sass/_widgets.scss */
+/* line 489, sass/_widgets.scss */
 .widget_calendar #wp-calendar caption,
 .widget_calendar #wp-calendar td,
 .widget_calendar #wp-calendar th {
   text-align: center; }
 
-/* line 494, sass/_widgets.scss */
+/* line 493, sass/_widgets.scss */
 .widget_calendar #wp-calendar tbody td a {
   font-weight: bold; }
 
-/* line 498, sass/_widgets.scss */
+/* line 497, sass/_widgets.scss */
 .widget_calendar #wp-calendar caption {
   padding: 0 0 5px 0;
   font-weight: bold; }
 
-/* line 503, sass/_widgets.scss */
+/* line 502, sass/_widgets.scss */
 .widget_calendar #wp-calendar th {
   border-width: 1px 0;
   border-style: solid;
   font-weight: bold;
   padding: 3px 0; }
 
-/* line 510, sass/_widgets.scss */
+/* line 509, sass/_widgets.scss */
 .widget_calendar #wp-calendar tfoot td {
   padding-top: 5px; }
 
 /************** WP SEARCH WIDGET **************/
-/* line 516, sass/_widgets.scss */
+/* line 515, sass/_widgets.scss */
 .widget_search form {
   position: relative; }
 
 /* Search Input */
-/* line 522, sass/_widgets.scss */
+/* line 521, sass/_widgets.scss */
 .widget_search .uplifted-search-field {
   margin-right: 34px; }
 
-/* line 526, sass/_widgets.scss */
+/* line 525, sass/_widgets.scss */
 .widget_search .uplifted-search-field input {
   width: 100%; }
 
 /* Search Button */
-/* line 532, sass/_widgets.scss */
+/* line 531, sass/_widgets.scss */
 .widget_search .uplifted-search-button {
   position: absolute;
   top: 4px;
   right: 2px; }
 
 /*************** WP TEXT WIDGET ***************/
-/* line 540, sass/_widgets.scss */
+/* line 539, sass/_widgets.scss */
 .textwidget > :first-child {
   margin-top: 0; }
 
-/* line 544, sass/_widgets.scss */
+/* line 543, sass/_widgets.scss */
 .textwidget > :last-child {
   margin-bottom: 0 !important; }
 
 /*************** WP RSS WIDGET ****************/
-/* line 550, sass/_widgets.scss */
+/* line 549, sass/_widgets.scss */
 .widget_rss h1 img {
   /* hide RSS icon */
   display: none; }
 
-/* line 554, sass/_widgets.scss */
+/* line 553, sass/_widgets.scss */
 .widget_rss ul {
   margin: 0;
   list-style: none; }
 
-/* line 559, sass/_widgets.scss */
+/* line 558, sass/_widgets.scss */
 .widget_rss li {
   margin: 32px 0; }
 
-/* line 563, sass/_widgets.scss */
+/* line 562, sass/_widgets.scss */
 .widget_rss li:first-child {
   margin-top: 0; }
 
-/* line 567, sass/_widgets.scss */
+/* line 566, sass/_widgets.scss */
 .widget_rss li a {
   margin-top: 0;
   margin-bottom: 0;
@@ -3854,44 +3853,44 @@ p.comment-form-comment label.error {
   line-height: 1.4em;
   text-transform: uppercase; }
 
-/* line 576, sass/_widgets.scss */
+/* line 575, sass/_widgets.scss */
 .widget_rss .rss-date {
   margin-top: 12px;
   display: block;
   font-weight: bold; }
 
-/* line 582, sass/_widgets.scss */
+/* line 581, sass/_widgets.scss */
 .widget_rss .rssSummary {
   margin-top: 12px; }
 
-/* line 585, sass/_widgets.scss */
+/* line 584, sass/_widgets.scss */
 .widget_rss cite {
   display: block;
   margin-top: 12px;
   font-style: italic; }
 
 /************ CT HIGHLIGHT WIDGET *************/
-/* line 593, sass/_widgets.scss */
+/* line 592, sass/_widgets.scss */
 .widget_ctfw-highlight {
   /* <aside> */
   padding: 0; }
 
-/* line 597, sass/_widgets.scss */
+/* line 596, sass/_widgets.scss */
 .widget_ctfw-highlight .uplifted-widget-title {
   /* <h1> */
   margin: 0;
   padding: 0;
   font-size: 1em; }
 
-/* line 603, sass/_widgets.scss */
+/* line 602, sass/_widgets.scss */
 .widget_ctfw-highlight.uplifted-widget-has-title > * {
   top: 0; }
 
-/* line 607, sass/_widgets.scss */
+/* line 606, sass/_widgets.scss */
 .widget_ctfw-highlight.uplifted-widget-has-title {
   margin-top: 30px; }
 
-/* line 612, sass/_widgets.scss */
+/* line 611, sass/_widgets.scss */
 .widget_ctfw-highlight > :not(.uplifted-widget-title):first-of-type,
 .widget_ctfw-highlight .uplifted-widget-first-element {
   /* uplifted-widget-first-element applied for IE8 w/JavaScript */
@@ -3899,7 +3898,7 @@ p.comment-form-comment label.error {
 
 /************* CT GALLERY WIDGET **************/
 /* Gallery container */
-/* line 620, sass/_widgets.scss */
+/* line 619, sass/_widgets.scss */
 .uplifted-widget .gallery {
   margin-bottom: 0;
   position: relative;
@@ -3907,62 +3906,62 @@ p.comment-form-comment label.error {
   /* offset extra space at bottom */ }
 
 /* Link */
-/* line 628, sass/_widgets.scss */
+/* line 627, sass/_widgets.scss */
 .uplifted-gallery-widget-link {
   /* holds <a> */
   text-align: center;
   margin-top: 20px; }
 
 /************** CT SERMONS WIDGET *************/
-/* line 635, sass/_widgets.scss */
+/* line 634, sass/_widgets.scss */
 .uplifted-sermons-widget-entry.uplifted-widget-entry-first {
   margin-top: 0; }
 
 /* Series */
-/* line 641, sass/_widgets.scss */
+/* line 640, sass/_widgets.scss */
 .uplifted-widget-entry-meta > li.uplifted-sermons-widget-entry-series a {
   white-space: normal;
   /* sermon series titles may be longer than sidebar */ }
 
 /************** CT EVENTS WIDGET **************/
 /* Time */
-/* line 649, sass/_widgets.scss */
+/* line 648, sass/_widgets.scss */
 .uplifted-events-widget-entry-time {
   font-style: italic; }
 
 /************* CT PEOPLE WIDGET ***************/
 /* Position */
-/* line 657, sass/_widgets.scss */
+/* line 656, sass/_widgets.scss */
 .uplifted-people-widget-entry-position {
   font-weight: bold; }
 
-/* line 662, sass/_widgets.scss */
+/* line 661, sass/_widgets.scss */
 .uplifted-people-widget-entry-phone {
   font-style: italic; }
 
 /************ CT LOCATIONS WIDGET *************/
 /* Address */
-/* line 670, sass/_widgets.scss */
+/* line 669, sass/_widgets.scss */
 .uplifted-locations-widget-entry-address {
   font-weight: bold; }
 
 /* Phone */
-/* line 676, sass/_widgets.scss */
+/* line 675, sass/_widgets.scss */
 .uplifted-locations-widget-entry-phone {
   font-style: italic; }
 
 /* Map */
-/* line 682, sass/_widgets.scss */
+/* line 681, sass/_widgets.scss */
 .uplifted-locations-widget-entry-map .ctfw-google-map-container {
   margin-top: 20px; }
 
 /************* CT GIVING WIDGET ***************/
 /* Giving Widget */
-/* line 690, sass/_widgets.scss */
+/* line 689, sass/_widgets.scss */
 .uplifted-giving-widget-text p:first-child {
   margin-top: 0; }
 
-/* line 694, sass/_widgets.scss */
+/* line 693, sass/_widgets.scss */
 .uplifted-giving-widget-button {
   margin-top: 24px;
   text-align: center; }
