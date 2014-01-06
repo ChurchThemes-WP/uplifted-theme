@@ -1,5 +1,20 @@
 /* Sermons */
 
+
+
+/* temp code - we don't want a sidebar on single sermon pages
+ * but right now we have to hack to make that happen */
+.single-ctc_sermon #uplifted-content.uplifted-has-sidebar {
+  width: 100% !important;
+}
+
+.single-ctc_sermon #uplifted-sidebar-right {
+  display: none;
+}
+/* temp code - we don't want a sidebar on single sermon pages
+ * but right now we have to hack to make that happen */
+
+
 // Single Sermon Page Meta Header 
 .single-ctc_sermon .uplifted-entry-title-meta {
   text-align: center;

@@ -4534,15 +4534,27 @@ img.alignright {
       color: #0fcfc5; }
 
 /* Sermons */
-/* line 4, sass/_sermons.scss */
+/* temp code - we don't want a sidebar on single sermon pages
+ * but right now we have to hack to make that happen */
+/* line 7, sass/_sermons.scss */
+.single-ctc_sermon #uplifted-content.uplifted-has-sidebar {
+  width: 100% !important; }
+
+/* line 11, sass/_sermons.scss */
+.single-ctc_sermon #uplifted-sidebar-right {
+  display: none; }
+
+/* temp code - we don't want a sidebar on single sermon pages
+ * but right now we have to hack to make that happen */
+/* line 19, sass/_sermons.scss */
 .single-ctc_sermon .uplifted-entry-title-meta {
   text-align: center; }
-  /* line 7, sass/_sermons.scss */
+  /* line 22, sass/_sermons.scss */
   .single-ctc_sermon .uplifted-entry-title-meta ul {
     display: inline-block;
     margin: 0 auto; }
 
-/* line 13, sass/_sermons.scss */
+/* line 28, sass/_sermons.scss */
 .uplifted-list-buttons {
   margin: 0;
   list-style: none; }
