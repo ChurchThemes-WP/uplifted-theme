@@ -1244,11 +1244,11 @@ $topbar-title-font-size: emCalc(17px);
 
 // Style the top bar dropdown elements
 
-$topbar-dropdown-bg: $tertiary-color;
+$topbar-dropdown-bg: #e5e6ea;
 $topbar-dropdown-link-color: $secondary-color;
 $topbar-dropdown-link-bg: $tertiary-color;
 $topbar-dropdown-toggle-size: 5px;
-$topbar-dropdown-toggle-color: $secondary-color;
+$topbar-dropdown-toggle-color: #555;
 $topbar-dropdown-toggle-alpha: 1;
 
 // Set the link colors and styles for top-level nav
@@ -1274,8 +1274,7 @@ $topbar-menu-link-transform: uppercase;
 $topbar-menu-link-font-size: emCalc(13px);
 $topbar-menu-link-weight: bold;
 $topbar-menu-link-color: #fff;
-$topbar-menu-icon-color: $secondary-color;
-$topbar-menu-link-color-toggled: #888;
+$topbar-menu-icon-color: $topbar-link-color;
 $topbar-menu-icon-color-toggled: $primary-color;
 
 // Transitions and breakpoint styles

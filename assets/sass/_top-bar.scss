@@ -279,12 +279,11 @@ $topbar-sticky-class: ".sticky" !default;
         width: 100%;
         color: $topbar-link-color;
         padding: 12px ($topbar-height / 3) 12px ($topbar-height / 3);
-        //padding-#{$default-float}: ;
         font-size: $topbar-link-font-size;
         text-transform: uppercase;
         letter-spacing: $base-letter-spacing;
         font-weight: $topbar-link-weight;
-        background: $topbar-dropdown-bg;
+        background-color: $topbar-dropdown-bg;
         
         &:hover {
 	        background-color: $primary-color;
@@ -292,28 +291,28 @@ $topbar-sticky-class: ".sticky" !default;
         }
 
         &.button {
-          background: $primary-color;
+          background-color: $primary-color;
           font-size: $topbar-link-font-size;
           &.hover {
-            background: darken($primary-color, 10%);
+            background-color: darken($primary-color, 10%);
           }
         }
         &.button.secondary {
-          background: $secondary-color;
+          background-color: $secondary-color;
           &.hover {
-            background: darken($secondary-color, 10%);
+            background-color: darken($secondary-color, 10%);
           }
         }
         &.button.success {
-          background: $success-color;
+          background-color: $success-color;
           &.hover {
-            background: darken($success-color, 10%);
+            background-color: darken($success-color, 10%);
           }
         }
         &.button.alert {
-          background: $alert-color;
+          background-color: $alert-color;
           &.hover {
-            background: darken($alert-color, 10%);
+            background-color: darken($alert-color, 10%);
           }
         }
 
@@ -389,7 +388,7 @@ $topbar-sticky-class: ".sticky" !default;
             line-height: $topbar-height / 2;
             display: block;
             padding: 12px ($topbar-height / 3) 12px ($topbar-height / 3);
-            //padding-#{$default-float}: $topbar-height / 3;
+            font-family: $body-font-family;
 			
 			&:hover {
 	        	background-color: $primary-color;
@@ -538,12 +537,12 @@ $topbar-sticky-class: ".sticky" !default;
           
           // secondary nav links
           a {
-            color: $topbar-dropdown-link-color;
-            font-weight: bold;
+            //color: $topbar-dropdown-link-color;
+            //font-weight: bold;
             line-height: 1;
             white-space: nowrap;
             padding: 12px $topbar-height / 3;
-            background: $topbar-dropdown-link-bg;
+            background: $topbar-dropdown-bg;
           }
 
           label {
