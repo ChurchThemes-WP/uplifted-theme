@@ -2,36 +2,20 @@
 
 #footer {
   margin: ($panel-margin-bottom * 2) auto 0;
-  padding: 30px 0;
+  padding: ($panel-padding * 1.5) 0;
   background-color: $primary-color;
-  color: white;
-
-  h2,h4 {
-    font-size: .9em;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: $base-letter-spacing;
-    border-bottom: 3px solid white;
-    display: inline-block;
-    padding-bottom: .5em;
-    margin-bottom: 1.5em;
-  }
+  color: $neutral-color;
 
   .columns {
 
     a {
       @include transition(.2s all linear);
-      color: white;
-      border-bottom-width: 0 !important;
-
-      &:hover {
-        text-decoration: none;
-      }
+      color: $neutral-color;
     }
   }
 
-  abbr{
-    color: white;
+  abbr {
+    color: $neutral-color;
   }
 
   .url {
