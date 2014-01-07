@@ -2606,14 +2606,17 @@ small.error {
 .uplifted-entry-title {
   font-weight: 400;
   line-height: 1.2;
-  margin-bottom: 0;
-  font-size: 2.125em; }
+  margin-bottom: 0; }
+  @media screen and (min-width: 568px) {
+    /* line 8, ../sass/_post.scss */
+    .uplifted-entry-title {
+      font-size: 2.125em; } }
 
-/* line 15, ../sass/_post.scss */
+/* line 18, ../sass/_post.scss */
 .uplifted-entry-image {
   max-width: 100%;
   margin-bottom: 1.5em; }
-  /* line 19, ../sass/_post.scss */
+  /* line 22, ../sass/_post.scss */
   .uplifted-entry-image img {
     border: none;
     padding: 0;
@@ -2623,7 +2626,7 @@ small.error {
     height: auto;
     display: block; }
 
-/* line 31, ../sass/_post.scss */
+/* line 35, ../sass/_post.scss */
 .uplifted-entry-meta {
   list-style: none;
   position: relative;
@@ -2631,22 +2634,22 @@ small.error {
   overflow: hidden;
   padding: 0.6em 0 1.5em 0;
   margin: 0; }
-  /* line 40, ../sass/_post.scss */
+  /* line 44, ../sass/_post.scss */
   .uplifted-entry-meta li {
     float: left;
     margin-right: 1em; }
-  /* line 48, ../sass/_post.scss */
+  /* line 52, ../sass/_post.scss */
   .uplifted-entry-meta a:hover {
     color: #0fcfc5; }
-  /* line 53, ../sass/_post.scss */
+  /* line 57, ../sass/_post.scss */
   .uplifted-entry-meta .genericon {
     font-size: 14px; }
 
-/* line 60, ../sass/_post.scss */
+/* line 64, ../sass/_post.scss */
 .uplifted-author-box {
   margin: 1.5em 0;
   overflow: auto; }
-  /* line 64, ../sass/_post.scss */
+  /* line 68, ../sass/_post.scss */
   .uplifted-author-box .uplifted-author-avatar {
     float: left;
     margin: 0 1em 1em 0;
@@ -2656,7 +2659,7 @@ small.error {
     -ms-border-radius: 1000px;
     -o-border-radius: 1000px;
     border-radius: 1000px; }
-  /* line 72, ../sass/_post.scss */
+  /* line 77, ../sass/_post.scss */
   .uplifted-author-box .uplifted-author-content h1 {
     font-size: 1.2em; }
 
@@ -4484,18 +4487,39 @@ img.alignright {
 
 /* test soemthign */
 /* People */
-/* line 3, ../sass/_people.scss */
+/* line 8, ../sass/_people.scss */
 .person-profile-card {
   background-color: white;
   overflow: hidden;
   border: 1px solid #e5e6ea;
   margin-bottom: 1.5em; }
-  /* line 9, ../sass/_people.scss */
+  /* line 15, ../sass/_people.scss */
+  .person-profile-card .profile-image {
+    float: left;
+    width: 33%;
+    margin-right: 24px; }
+  /* line 21, ../sass/_people.scss */
   .person-profile-card .uplifted-entry-header {
     padding: 24px; }
-
-/* line 15, ../sass/_people.scss */
-.profile-image {
-  float: left;
-  width: 33%;
-  margin-right: 24px; }
+  /* line 28, ../sass/_people.scss */
+  .person-profile-card .uplifted-entry-title a {
+    color: #3c4542; }
+    /* line 31, ../sass/_people.scss */
+    .person-profile-card .uplifted-entry-title a:hover {
+      color: #f6653c; }
+  /* line 37, ../sass/_people.scss */
+  .person-profile-card .uplifted-entry-meta {
+    padding: 0; }
+    /* line 40, ../sass/_people.scss */
+    .person-profile-card .uplifted-entry-meta .entry-meta-item {
+      float: none; }
+      /* line 43, ../sass/_people.scss */
+      .person-profile-card .uplifted-entry-meta .entry-meta-item.uplifted-person-position {
+        color: #f6653c;
+        font-size: 1.3em; }
+        @media screen and (min-width: 568px) {
+          /* line 43, ../sass/_people.scss */
+          .person-profile-card .uplifted-entry-meta .entry-meta-item.uplifted-person-position {
+            margin-bottom: .5em;
+            padding-bottom: .5em;
+            border-bottom: 1px solid #e5e6ea; } }

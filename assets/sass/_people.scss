@@ -1,19 +1,56 @@
 /* People */
 
+
+//
+// Individual Person Block widget
+// on multi and single person page
+//
 .person-profile-card {
   background-color: $panel-bg;
   overflow: hidden;
   border: $panel-border;
   margin-bottom: $panel-margin-bottom;
   
+  //profile image
+  .profile-image {
+    float: left;
+    width: 33%;
+    margin-right: $panel-padding;
+  }
+  
   .uplifted-entry-header {
     padding: $panel-padding;
   }
+  
+  // person name
+  .uplifted-entry-title {
+    
+    a {
+      color: $body-font-color;
+      
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+  
+  .uplifted-entry-meta {
+    padding: 0;
+    
+    .entry-meta-item {
+      float: none;
+      
+      &.uplifted-person-position {
+        color: $secondary-color;
+        font-size: 1.3em;
+        
+        @media screen and (min-width: ($small-screen - 200px) ) {
+      	  margin-bottom: .5em;
+      	  padding-bottom: .5em;
+      	  border-bottom: 1px solid $panel-border-color;
+      	}
+      }
+    }
+  }
 }
 
-//profile image
-.profile-image {
-  float: left;
-  width: 33%;
-  margin-right: $panel-padding;
-}

@@ -30,47 +30,45 @@ extract( ctfw_person_data() );
 			</h1>
 		<?php endif; ?>
 
-		<?php if ( $position ) : ?>
-			<ul class="uplifted-entry-meta">
-				<li class="uplifted-person-position uplifted-content-icon">
+		
+		<ul class="uplifted-entry-meta">
+			
+			<?php if ( $position ) : ?>
+				<li class="uplifted-person-position uplifted-content-icon entry-meta-item">
 					<span class="<?php uplifted_icon_class( 'person-position' ); ?>"></span>
 					<?php echo esc_html( $position ); ?>
 				</li>
-			</ul>
-		<?php endif; ?>
-
-		<?php if ( $phone ) : ?>
-			<ul class="uplifted-entry-meta">
-				<li class="uplifted-person-phone uplifted-content-icon">
+		  <?php endif; ?>
+		  
+		  <?php if ( $phone ) : ?>
+		    <li class="uplifted-person-phone uplifted-content-icon entry-meta-item">
 					<span class="<?php uplifted_icon_class( 'person-phone' ); ?>"></span>
 					<?php echo esc_html( $phone ); ?>
 				</li>
-			</ul>
-		<?php endif; ?>
-
-		<?php if ( $email || $urls ) : ?>
-
-			<ul class="uplifted-entry-meta">
+		  <?php endif; ?>
+		  
+		 		 
+		  <?php if ( $email || $urls ) : ?>
 
 				<?php if ( $email ) : ?>
-				<li class="uplifted-person-email uplifted-content-icon">
+				<li class="uplifted-person-email uplifted-content-icon entry-meta-item">
 					<span class="<?php uplifted_icon_class( 'person-email' ); ?>"></span>
 					<a href="mailto:<?php echo antispambot( $email, true ); ?>"><?php echo antispambot( $email ); ?></a>
 				</li>
 				<?php endif; ?>
 
 				<?php if ( $urls ) : ?>
-				<li class="uplifted-entry-icons uplifted-person-icons">
+				<li class="uplifted-entry-icons uplifted-person-icons entry-meta-item">
 					<?php uplifted_social_icons( $urls ); ?>
 				</li>
 				<?php endif; ?>
 
-			</ul>
+  		<?php endif; ?>
+		
+		</ul>
 
-		<?php endif; ?>
+	</div> <!-- /uplifted-entry-title-meta -->
 
-	</div>
-
-</header>
+</header> <!-- /uplifted-entry-header -->
 
 </div> <!-- /person-profile-card -->
