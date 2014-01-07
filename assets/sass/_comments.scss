@@ -110,20 +110,11 @@
   margin-top: 60px;
 }
 
-/**************** COMMENT FORM ****************/
+/*
+ * Comment Form
+ *
+ */
 
-/* Comment Form */
-
-#respond { /* hard coded by WP */
-  position: relative;
-  margin: 50px 0 60px 0;
-}
-
-  /* No bottom margin when at bottom */
-
-  #respond:last-child {
-    margin-bottom: 0;
-  }
 
   /* Cancel Reply Link */
 
@@ -143,46 +134,8 @@
     margin: 25px 0 35px 0;
   }
 
-  /* Text Inputs */
-
-  .comment-form-author,
-  .comment-form-email,
-  .comment-form-url {
-    position: relative;
-    margin: 10px 0;
-    text-transform: uppercase;
-  }
-
-    #respond label {
-      font-weight: bold;
-      line-height: 34px;
-    }
-
-    .comment-form-comment label {
-      display: none;
-    }
-
     #respond .required {
-      margin-left: 5px;
-    }
-
-    #respond input[type=text] {
-      position: absolute;
-      left: 90px;
-      width: 250px;
-    }
-
-  /* Comment Field */
-
-  .comment-form-comment {
-    clear: left;
-    margin: 10px 0;
-  }
-
-    /* Comment Textarea */
-
-    .comment-form-comment textarea {
-      width: 95%;
+      color: $secondary-color;
     }
 
   /* Error Messages */
