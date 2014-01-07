@@ -98,9 +98,9 @@ $glowing-effect-color: $input-focus-border-color !default;
   display: block;
   font-size: $input-font-size;
   margin: 0 0 ($form-spacing / 2) 0;
-  //padding: $form-spacing / 2;
-  padding: $form-spacing;
-  //height: emCalc(13) + ($form-spacing * 1.5);
+  padding: $form-spacing / 2;
+  //padding: $form-spacing;
+  height: emCalc(13) + ($form-spacing * 1.5);
   width: 100%;
   @include box-sizing(border-box);
   // @if $input-include-glowing-effect {
@@ -344,6 +344,11 @@ $glowing-effect-color: $input-focus-border-color !default;
   /* Normalize file input width */
   input[type="file"] {
     width:100%;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: ($form-spacing * 5);
   }
 
   /* We add basic fieldset styling */

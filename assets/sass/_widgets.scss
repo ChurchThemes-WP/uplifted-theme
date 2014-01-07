@@ -246,18 +246,35 @@
 // the Search field and button need to have specific heights to match correctly
 .search-form {
 
-  input[type="text"] {
-    height: 45px;
+  input,
+  button {
+    margin: 0;
   }
 
   // this is the search button
   button {
-    height: 45px;
+    height: emCalc(13) + ($form-spacing * 1.5);
+    font-size: $input-font-size;
     background-color: $input-border-color;
     border: none;
     box-shadow: none;
     &:hover {
       background-color: $primary-color;
+    }
+  }
+  
+  #footer & {
+    
+    input {
+      border: none;
+    }
+    
+    button {
+      background-color: transparent;
+      
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.3)
+      }
     }
   }
 }
