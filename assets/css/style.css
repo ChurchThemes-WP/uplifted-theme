@@ -3404,10 +3404,9 @@ p.comment-form-comment label.error {
       margin: 0; }
       /* line 40, ../sass/_widgets.scss */
       .uplifted-widget ul li a {
-        display: block;
-        padding: .7em 0;
+        display: inline-block;
+        padding: .3em 0;
         color: #3c4542;
-        border-bottom: 1px solid #f2f2f2;
         -webkit-transition: 200ms all ease-in-out;
         -moz-transition: 200ms all ease-in-out;
         -o-transition: 200ms all ease-in-out;
@@ -3446,112 +3445,126 @@ p.comment-form-comment label.error {
         border-color: #0fcfc5;
         padding-left: .8em; }
 
+/* Category & Archive Widgets */
+/* line 104, ../sass/_widgets.scss */
+.widget_ctfw-archives li,
+.widget_ctfw-categories li {
+  color: #f6653c; }
+  /* line 108, ../sass/_widgets.scss */
+  .widget_ctfw-archives li a,
+  .widget_ctfw-categories li a {
+    color: #3c4542; }
+    /* line 111, ../sass/_widgets.scss */
+    .widget_ctfw-archives li a:hover,
+    .widget_ctfw-categories li a:hover {
+      color: #0fcfc5; }
+
 /* Calendar Widget */
-/* line 102, ../sass/_widgets.scss */
+/* line 121, ../sass/_widgets.scss */
 .widget_calendar {
   padding: 0; }
-  /* line 105, ../sass/_widgets.scss */
+  /* line 124, ../sass/_widgets.scss */
   .widget_calendar #calendar_wrap {
     position: relative; }
-    /* line 108, ../sass/_widgets.scss */
+    /* line 127, ../sass/_widgets.scss */
     .widget_calendar #calendar_wrap #wp-calendar {
       width: 100%;
       text-align: center; }
-      /* line 112, ../sass/_widgets.scss */
+      /* line 131, ../sass/_widgets.scss */
       .widget_calendar #calendar_wrap #wp-calendar caption {
         background-color: #f6653c;
         color: #fff;
         padding: 1em; }
-      /* line 118, ../sass/_widgets.scss */
+      /* line 137, ../sass/_widgets.scss */
       .widget_calendar #calendar_wrap #wp-calendar thead th {
         padding: .5em 0;
         background-color: #e3e3e1;
         border-right: 1px solid white; }
-        /* line 123, ../sass/_widgets.scss */
+        /* line 142, ../sass/_widgets.scss */
         .widget_calendar #calendar_wrap #wp-calendar thead th:last-child {
           border: none; }
-      /* line 126, ../sass/_widgets.scss */
+      /* line 145, ../sass/_widgets.scss */
       .widget_calendar #calendar_wrap #wp-calendar tbody tr {
         border-bottom: 1px solid #e3e3e1; }
-        /* line 129, ../sass/_widgets.scss */
+        /* line 148, ../sass/_widgets.scss */
         .widget_calendar #calendar_wrap #wp-calendar tbody tr:last-child {
           border: none; }
-        /* line 131, ../sass/_widgets.scss */
+        /* line 150, ../sass/_widgets.scss */
         .widget_calendar #calendar_wrap #wp-calendar tbody tr td {
           padding: .5em 0;
           border: 1px solid #e3e3e1;
           border-bottom: none;
           background-color: white; }
-      /* line 140, ../sass/_widgets.scss */
+      /* line 159, ../sass/_widgets.scss */
       .widget_calendar #calendar_wrap #wp-calendar tfoot {
         position: absolute;
         top: 0;
         width: 100%; }
-        /* line 145, ../sass/_widgets.scss */
+        /* line 164, ../sass/_widgets.scss */
         .widget_calendar #calendar_wrap #wp-calendar tfoot td {
           padding: 1.1em;
           font-size: .9em; }
-          /* line 149, ../sass/_widgets.scss */
+          /* line 168, ../sass/_widgets.scss */
           .widget_calendar #calendar_wrap #wp-calendar tfoot td#next {
             position: absolute;
             right: 0; }
-          /* line 154, ../sass/_widgets.scss */
+          /* line 173, ../sass/_widgets.scss */
           .widget_calendar #calendar_wrap #wp-calendar tfoot td a {
             color: #fff; }
 
 /* RSS Widget */
-/* line 170, ../sass/_widgets.scss */
+/* line 189, ../sass/_widgets.scss */
 .widget_rss h4 a {
   color: #fff; }
-  /* line 172, ../sass/_widgets.scss */
+  /* line 191, ../sass/_widgets.scss */
   .widget_rss h4 a:hover {
     color: #0fcfc5; }
-  /* line 177, ../sass/_widgets.scss */
+  /* line 196, ../sass/_widgets.scss */
   #footer .widget_rss h4 a {
     color: #7e7e68; }
-    /* line 179, ../sass/_widgets.scss */
+    /* line 198, ../sass/_widgets.scss */
     #footer .widget_rss h4 a:hover {
       color: #0fcfc5; }
-/* line 185, ../sass/_widgets.scss */
+/* line 204, ../sass/_widgets.scss */
 .widget_rss ul li {
   margin-bottom: .5em !important; }
-  /* line 188, ../sass/_widgets.scss */
+  /* line 207, ../sass/_widgets.scss */
   .widget_rss ul li a {
     border-bottom: 1px solid white !important; }
-/* line 195, ../sass/_widgets.scss */
+/* line 214, ../sass/_widgets.scss */
 .widget_rss .rss-date,
 .widget_rss .rssSummary,
 .widget_rss cite {
   font-size: .8em; }
-/* line 199, ../sass/_widgets.scss */
+/* line 218, ../sass/_widgets.scss */
 .widget_rss .rss-date {
   font-weight: bold;
   margin: .9em 0;
   display: block; }
-/* line 205, ../sass/_widgets.scss */
+/* line 224, ../sass/_widgets.scss */
 .widget_rss cite {
   margin: .5em 0; }
 
 /* Pages Widget */
-/* line 214, ../sass/_widgets.scss */
+/* line 233, ../sass/_widgets.scss */
 .widget_pages ul ul {
   padding-left: 1.5em; }
 
 /* Search Widget */
-/* line 224, ../sass/_widgets.scss */
+/* line 243, ../sass/_widgets.scss */
 .search-form input[type="text"] {
   height: 45px; }
-/* line 229, ../sass/_widgets.scss */
+/* line 248, ../sass/_widgets.scss */
 .search-form button {
   height: 45px;
   background-color: #c7cfdf;
   border: none;
   box-shadow: none; }
-  /* line 234, ../sass/_widgets.scss */
+  /* line 253, ../sass/_widgets.scss */
   .search-form button:hover {
     background-color: #0fcfc5; }
 
-/* line 241, ../sass/_widgets.scss */
+/* line 260, ../sass/_widgets.scss */
 .widget_search {
   background-color: transparent !important;
   margin-bottom: 0 !important;
@@ -3559,63 +3572,63 @@ p.comment-form-comment label.error {
   border-bottom: none !important; }
 
 /* Recent Comments */
-/* line 252, ../sass/_widgets.scss */
+/* line 271, ../sass/_widgets.scss */
 .widget_recent_comments ul li {
   margin-bottom: 1em; }
-  /* line 256, ../sass/_widgets.scss */
+  /* line 275, ../sass/_widgets.scss */
   .widget_recent_comments ul li:last-child {
     margin: 0; }
 
 /* Custom Text Widget */
-/* line 263, ../sass/_widgets.scss */
+/* line 282, ../sass/_widgets.scss */
 .widget_text {
   line-height: 1.45; }
 
 /* Sidebar + Home Bottom */
 /*************** SHARED STYLES ****************/
 /* Widget Entry */
-/* line 276, ../sass/_widgets.scss */
+/* line 295, ../sass/_widgets.scss */
 .uplifted-widget-entry {
   margin-bottom: 1em; }
-  /* line 279, ../sass/_widgets.scss */
+  /* line 298, ../sass/_widgets.scss */
   .uplifted-widget-entry header {
     display: inline-block;
     clear: both; }
 
-/* line 286, ../sass/_widgets.scss */
+/* line 305, ../sass/_widgets.scss */
 .uplifted-widget-entry-thumb {
   width: 4em;
   float: left;
   margin: 0 .8em .8em 0; }
 
-/* line 293, ../sass/_widgets.scss */
+/* line 312, ../sass/_widgets.scss */
 .uplifted-widget-entry-title {
   margin: 0;
   font-size: 1em; }
 
-/* line 299, ../sass/_widgets.scss */
+/* line 318, ../sass/_widgets.scss */
 .uplifted-widget-entry-meta > li {
   display: inline-block;
   margin: 12px 15px 0 0;
   vertical-align: top; }
 
 /* Keep links from wrapping */
-/* line 306, ../sass/_widgets.scss */
+/* line 325, ../sass/_widgets.scss */
 .uplifted-widget-entry-meta > li a {
   white-space: nowrap; }
 
 /* Date */
-/* line 311, ../sass/_widgets.scss */
+/* line 330, ../sass/_widgets.scss */
 .uplifted-widget-entry-date {
   font-weight: bold; }
 
 /* Byline */
-/* line 316, ../sass/_widgets.scss */
+/* line 335, ../sass/_widgets.scss */
 .uplifted-widget-entry-byline {
   /*font-style: italic;*/ }
 
 /* Icons */
-/* line 321, ../sass/_widgets.scss */
+/* line 340, ../sass/_widgets.scss */
 .uplifted-widget-entry-icons .uplifted-list-icons {
   /* <ul> */
   position: relative;
@@ -3623,26 +3636,26 @@ p.comment-form-comment label.error {
   white-space: nowrap; }
 
 /* Content / Excerpt */
-/* line 329, ../sass/_widgets.scss */
+/* line 348, ../sass/_widgets.scss */
 .uplifted-widget-entry-content {
   margin-top: 15px; }
 
-/* line 333, ../sass/_widgets.scss */
+/* line 352, ../sass/_widgets.scss */
 .uplifted-widget-entry-content p {
   margin: 12px 0 0 0; }
 
-/* line 337, ../sass/_widgets.scss */
+/* line 356, ../sass/_widgets.scss */
 .uplifted-widget-entry-content p:first-child {
   margin: 0; }
 
 /* Dropdown Widgets */
-/* line 344, ../sass/_widgets.scss */
+/* line 363, ../sass/_widgets.scss */
 .widget_ctfw-archives select,
 .widget_ctfw-categories select {
   width: 100%; }
 
 /* List Widgets */
-/* line 360, ../sass/_widgets.scss */
+/* line 379, ../sass/_widgets.scss */
 .widget_categories ul,
 .widget_ctfw-categories ul,
 .widget_ctfw-archives ul,
@@ -3658,7 +3671,7 @@ p.comment-form-comment label.error {
   list-style: none;
   line-height: 1.4em; }
 
-/* line 376, ../sass/_widgets.scss */
+/* line 395, ../sass/_widgets.scss */
 .widget_categories ul ul,
 .widget_ctfw-categories ul ul,
 .widget_ctfw-archives ul ul,
@@ -3674,7 +3687,7 @@ p.comment-form-comment label.error {
   list-style: none;
   line-height: 1.4em; }
 
-/* line 390, ../sass/_widgets.scss */
+/* line 409, ../sass/_widgets.scss */
 .widget_categories li,
 .widget_ctfw-categories li,
 .widget_ctfw-archives li,
@@ -3687,13 +3700,13 @@ p.comment-form-comment label.error {
   padding-top: 0;
   margin-bottom: 10px; }
 
-/* line 396, ../sass/_widgets.scss */
+/* line 415, ../sass/_widgets.scss */
 .widget_recent_entries li,
 .widget_recent_comments li {
   padding-top: 0;
   margin-bottom: 18px; }
 
-/* line 411, ../sass/_widgets.scss */
+/* line 430, ../sass/_widgets.scss */
 .widget_categories li:first-child,
 .widget_ctfw-categories li:first-child,
 .widget_ctfw-archives li:first-child,
@@ -3708,7 +3721,7 @@ p.comment-form-comment label.error {
   border-top: 0;
   padding-top: 0; }
 
-/* line 426, ../sass/_widgets.scss */
+/* line 445, ../sass/_widgets.scss */
 .widget_categories li li,
 .widget_ctfw-categories li li,
 .widget_ctfw-archives li li,
@@ -3724,7 +3737,7 @@ p.comment-form-comment label.error {
   border-top: 0;
   padding-top: 0; }
 
-/* line 443, ../sass/_widgets.scss */
+/* line 462, ../sass/_widgets.scss */
 .widget_categories li li a,
 .widget_ctfw-categories li li a,
 .widget_ctfw-archives li li a,
@@ -3741,97 +3754,97 @@ p.comment-form-comment label.error {
   text-transform: none; }
 
 /************* WP TAG CLOUD WIDGET ************/
-/* line 450, ../sass/_widgets.scss */
+/* line 469, ../sass/_widgets.scss */
 .widget_tag_cloud {
   line-height: 2.05em; }
 
-/* line 454, ../sass/_widgets.scss */
+/* line 473, ../sass/_widgets.scss */
 .widget_tag_cloud a {
   font-size: 0.75em !important;
   /* single size */
   text-transform: uppercase; }
 
 /************* WP CALENDAR WIDGET *************/
-/* line 461, ../sass/_widgets.scss */
+/* line 480, ../sass/_widgets.scss */
 .widget_calendar #wp-calendar {
   width: 100%; }
 
-/* line 467, ../sass/_widgets.scss */
+/* line 486, ../sass/_widgets.scss */
 .widget_calendar #wp-calendar caption,
 .widget_calendar #wp-calendar td,
 .widget_calendar #wp-calendar th {
   text-align: center; }
 
-/* line 471, ../sass/_widgets.scss */
+/* line 490, ../sass/_widgets.scss */
 .widget_calendar #wp-calendar tbody td a {
   font-weight: bold; }
 
-/* line 475, ../sass/_widgets.scss */
+/* line 494, ../sass/_widgets.scss */
 .widget_calendar #wp-calendar caption {
   padding: 0 0 5px 0;
   font-weight: bold; }
 
-/* line 480, ../sass/_widgets.scss */
+/* line 499, ../sass/_widgets.scss */
 .widget_calendar #wp-calendar th {
   border-width: 1px 0;
   border-style: solid;
   font-weight: bold;
   padding: 3px 0; }
 
-/* line 487, ../sass/_widgets.scss */
+/* line 506, ../sass/_widgets.scss */
 .widget_calendar #wp-calendar tfoot td {
   padding-top: 5px; }
 
 /************** WP SEARCH WIDGET **************/
-/* line 493, ../sass/_widgets.scss */
+/* line 512, ../sass/_widgets.scss */
 .widget_search form {
   position: relative; }
 
 /* Search Input */
-/* line 499, ../sass/_widgets.scss */
+/* line 518, ../sass/_widgets.scss */
 .widget_search .uplifted-search-field {
   margin-right: 34px; }
 
-/* line 503, ../sass/_widgets.scss */
+/* line 522, ../sass/_widgets.scss */
 .widget_search .uplifted-search-field input {
   width: 100%; }
 
 /* Search Button */
-/* line 509, ../sass/_widgets.scss */
+/* line 528, ../sass/_widgets.scss */
 .widget_search .uplifted-search-button {
   position: absolute;
   top: 4px;
   right: 2px; }
 
 /*************** WP TEXT WIDGET ***************/
-/* line 517, ../sass/_widgets.scss */
+/* line 536, ../sass/_widgets.scss */
 .textwidget > :first-child {
   margin-top: 0; }
 
-/* line 521, ../sass/_widgets.scss */
+/* line 540, ../sass/_widgets.scss */
 .textwidget > :last-child {
   margin-bottom: 0 !important; }
 
 /*************** WP RSS WIDGET ****************/
-/* line 527, ../sass/_widgets.scss */
+/* line 546, ../sass/_widgets.scss */
 .widget_rss h1 img {
   /* hide RSS icon */
   display: none; }
 
-/* line 531, ../sass/_widgets.scss */
+/* line 550, ../sass/_widgets.scss */
 .widget_rss ul {
   margin: 0;
   list-style: none; }
 
-/* line 536, ../sass/_widgets.scss */
+/* line 555, ../sass/_widgets.scss */
 .widget_rss li {
   margin: 32px 0; }
 
-/* line 540, ../sass/_widgets.scss */
+/* line 559, ../sass/_widgets.scss */
 .widget_rss li:first-child {
   margin-top: 0; }
 
-/* line 544, ../sass/_widgets.scss */
+/* line 563, ../sass/_widgets.scss */
 .widget_rss li a {
   margin-top: 0;
   margin-bottom: 0;
@@ -3840,44 +3853,44 @@ p.comment-form-comment label.error {
   line-height: 1.4em;
   text-transform: uppercase; }
 
-/* line 553, ../sass/_widgets.scss */
+/* line 572, ../sass/_widgets.scss */
 .widget_rss .rss-date {
   margin-top: 12px;
   display: block;
   font-weight: bold; }
 
-/* line 559, ../sass/_widgets.scss */
+/* line 578, ../sass/_widgets.scss */
 .widget_rss .rssSummary {
   margin-top: 12px; }
 
-/* line 562, ../sass/_widgets.scss */
+/* line 581, ../sass/_widgets.scss */
 .widget_rss cite {
   display: block;
   margin-top: 12px;
   font-style: italic; }
 
 /************ CT HIGHLIGHT WIDGET *************/
-/* line 570, ../sass/_widgets.scss */
+/* line 589, ../sass/_widgets.scss */
 .widget_ctfw-highlight {
   /* <aside> */
   padding: 0; }
 
-/* line 574, ../sass/_widgets.scss */
+/* line 593, ../sass/_widgets.scss */
 .widget_ctfw-highlight .uplifted-widget-title {
   /* <h1> */
   margin: 0;
   padding: 0;
   font-size: 1em; }
 
-/* line 580, ../sass/_widgets.scss */
+/* line 599, ../sass/_widgets.scss */
 .widget_ctfw-highlight.uplifted-widget-has-title > * {
   top: 0; }
 
-/* line 584, ../sass/_widgets.scss */
+/* line 603, ../sass/_widgets.scss */
 .widget_ctfw-highlight.uplifted-widget-has-title {
   margin-top: 30px; }
 
-/* line 589, ../sass/_widgets.scss */
+/* line 608, ../sass/_widgets.scss */
 .widget_ctfw-highlight > :not(.uplifted-widget-title):first-of-type,
 .widget_ctfw-highlight .uplifted-widget-first-element {
   /* uplifted-widget-first-element applied for IE8 w/JavaScript */
@@ -3885,7 +3898,7 @@ p.comment-form-comment label.error {
 
 /************* CT GALLERY WIDGET **************/
 /* Gallery container */
-/* line 597, ../sass/_widgets.scss */
+/* line 616, ../sass/_widgets.scss */
 .uplifted-widget .gallery {
   margin-bottom: 0;
   position: relative;
@@ -3893,62 +3906,62 @@ p.comment-form-comment label.error {
   /* offset extra space at bottom */ }
 
 /* Link */
-/* line 605, ../sass/_widgets.scss */
+/* line 624, ../sass/_widgets.scss */
 .uplifted-gallery-widget-link {
   /* holds <a> */
   text-align: center;
   margin-top: 20px; }
 
 /************** CT SERMONS WIDGET *************/
-/* line 612, ../sass/_widgets.scss */
+/* line 631, ../sass/_widgets.scss */
 .uplifted-sermons-widget-entry.uplifted-widget-entry-first {
   margin-top: 0; }
 
 /* Series */
-/* line 618, ../sass/_widgets.scss */
+/* line 637, ../sass/_widgets.scss */
 .uplifted-widget-entry-meta > li.uplifted-sermons-widget-entry-series a {
   white-space: normal;
   /* sermon series titles may be longer than sidebar */ }
 
 /************** CT EVENTS WIDGET **************/
 /* Time */
-/* line 626, ../sass/_widgets.scss */
+/* line 645, ../sass/_widgets.scss */
 .uplifted-events-widget-entry-time {
   font-style: italic; }
 
 /************* CT PEOPLE WIDGET ***************/
 /* Position */
-/* line 634, ../sass/_widgets.scss */
+/* line 653, ../sass/_widgets.scss */
 .uplifted-people-widget-entry-position {
   font-weight: bold; }
 
-/* line 639, ../sass/_widgets.scss */
+/* line 658, ../sass/_widgets.scss */
 .uplifted-people-widget-entry-phone {
   font-style: italic; }
 
 /************ CT LOCATIONS WIDGET *************/
 /* Address */
-/* line 647, ../sass/_widgets.scss */
+/* line 666, ../sass/_widgets.scss */
 .uplifted-locations-widget-entry-address {
   font-weight: bold; }
 
 /* Phone */
-/* line 653, ../sass/_widgets.scss */
+/* line 672, ../sass/_widgets.scss */
 .uplifted-locations-widget-entry-phone {
   font-style: italic; }
 
 /* Map */
-/* line 659, ../sass/_widgets.scss */
+/* line 678, ../sass/_widgets.scss */
 .uplifted-locations-widget-entry-map .ctfw-google-map-container {
   margin-top: 20px; }
 
 /************* CT GIVING WIDGET ***************/
 /* Giving Widget */
-/* line 667, ../sass/_widgets.scss */
+/* line 686, ../sass/_widgets.scss */
 .uplifted-giving-widget-text p:first-child {
   margin-top: 0; }
 
-/* line 671, ../sass/_widgets.scss */
+/* line 690, ../sass/_widgets.scss */
 .uplifted-giving-widget-button {
   margin-top: 24px;
   text-align: center; }
