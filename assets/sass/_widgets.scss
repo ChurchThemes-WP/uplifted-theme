@@ -55,8 +55,8 @@
       }
     }
   }
-
-  // footer specific
+  
+  // footer specific uplifted-widget styles
   #footer & {
     text-align: center;
     margin-bottom: 2.5em;
@@ -78,12 +78,10 @@
 
       a {
         padding: .5em 0;
-        border-bottom: 1px solid lighten($secondary-color, 55%);
+        border-bottom: 1px solid rgba($neutral-color,.4);
 
         &:hover {
-          color: #fff;
-          background-color: $primary-color;
-          border-color: $primary-color;
+          border-color: rgba($neutral-color,.7);
           padding-left: .8em;
         }
       }
@@ -112,6 +110,14 @@
         color: $primary-color;
       }  
     }
+    #footer & {
+      color: $neutral-color;
+      
+      a {
+        border: none;
+      }
+    }
+    
   }
 }
 
