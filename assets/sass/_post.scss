@@ -1,7 +1,7 @@
 
 /* Post */
 
-.hentry{
+.hentry {
   margin-bottom: $panel-margin-bottom;
 }
 
@@ -9,7 +9,10 @@
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 0;
-  font-size: $h1-font-size;
+  
+  @media screen and (min-width: ($small-screen - 200px) ) {
+	  font-size: $h1-font-size;
+	}
 }
 
 .uplifted-entry-image {
@@ -28,6 +31,7 @@
 }
 
 // meta info for each post type
+// as well as meta for people, sermons, etc
 .uplifted-entry-meta {
   list-style: none;
   position: relative;
@@ -37,7 +41,7 @@
   padding: ($panel-margin-bottom / 2.5) 0 $panel-margin-bottom 0;
   margin: 0;
 
-  li{
+  li {
     float: left;
     margin-right: 1em;
   }
@@ -68,8 +72,9 @@
     @include border-radius($global-rounded);
   }
 
-  .uplifted-author-content{
-    h1{
+  .uplifted-author-content {
+    
+    h1 {
       font-size: 1.2em;
     }
   }
