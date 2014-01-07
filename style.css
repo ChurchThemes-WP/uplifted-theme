@@ -4501,3 +4501,9 @@ img.alignright {
             margin-bottom: .5em;
             padding-bottom: .5em;
             border-bottom: 1px solid #e5e6ea; } }
+
+/* Location */
+/* line 3, assets/sass/_locations.scss */
+.ctfw-google-map {
+  display: block;
+  min-height: 400px; }
