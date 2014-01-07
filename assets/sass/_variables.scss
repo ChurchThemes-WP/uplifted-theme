@@ -302,7 +302,7 @@ $microformat-abbr-font-decoration: none;
 
 // Base for lots of form spacing and positioning styles
 
-$form-spacing: emCalc(16px);
+$form-spacing: emCalc(30px);
 
 // Labels
 
@@ -316,10 +316,10 @@ $input-font-color: rgba(0,0,0,0.75);
 $input-font-size: emCalc(14px);
 $input-bg-color: #fff;
 $input-focus-bg-color: #fff;
-$input-border-color: darken($body-bg, 15%);
+$input-border-color: #e5e6ea;
 $input-focus-border-color: $primary-color;
 $input-border-style: solid;
-$input-border-width: 2px;
+$input-border-width: 1px;
 $input-disabled-bg: #ddd;
 $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 $input-include-glowing-effect: true;
