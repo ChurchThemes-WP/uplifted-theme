@@ -1,15 +1,43 @@
-
 /* Post */
 
-.hentry {
-  margin-bottom: $panel-margin-bottom;
-}
+// a post is a general module that controls the design
+// and styling of many things, including blog post, people,
+// locations, events, and sermons, and more
 
 // Meta Entry Widget 
 //
 // global styles for each post type including
 // meta for people, sermons, etc
 //
+
+// post container
+#uplifted-loop-after-content .hentry,
+.single .hentry {
+  margin-bottom: $panel-margin-bottom;
+  background-color: $panel-bg;
+  border: $panel-border;
+}
+
+// the feature image of a post
+.uplifted-entry-image {
+  max-width: 100%;
+
+  img {
+    border: none;
+    padding: 0;
+    margin: 0;
+    float: none;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+// post content container
+.uplifted-content-meta {
+  padding: $panel-padding;
+}
+
 .uplifted-entry-meta {
   list-style: none;
   position: relative;
@@ -49,22 +77,6 @@
 	}
 }
 
-.uplifted-entry-image {
-  max-width:100%;
-  margin-bottom: $panel-margin-bottom;
-
-  img {
-    border: none;
-    padding: 0;
-    margin: 0;
-    float: none;
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-}
-
-
 // author description widget
 .uplifted-author-box {
   margin: $panel-margin-bottom 0;
@@ -84,4 +96,12 @@
     }
   }
 
+}
+
+/* Attachment Post */
+.type-attachment {
+  
+  .uplifted-entry-attachment {
+    margin: 0 -($panel-padding);
+  }
 }
