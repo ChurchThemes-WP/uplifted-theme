@@ -12,13 +12,15 @@ extract( ctfw_location_data() );
 
 ?>
 
-<header class="uplifted-entry-header uplifted-clearfix">
+<?php if ( has_post_thumbnail() ) : ?>
+	<div class="uplifted-entry-image">
+		<?php uplifted_post_image(); ?>
+	</div>
+<?php endif; ?>
 
-	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="uplifted-entry-image">
-			<?php uplifted_post_image(); ?>
-		</div>
-	<?php endif; ?>
+<div class="location-content">
+
+<header class="uplifted-entry-header clearfix">	
 
 	<div class="uplifted-entry-title-meta">
 
