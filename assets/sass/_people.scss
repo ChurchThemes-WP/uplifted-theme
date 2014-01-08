@@ -25,12 +25,8 @@
   // person name
   .uplifted-entry-title {
     
-    a {
-      color: $body-font-color;
-      
-      &:hover {
-        color: $secondary-color;
-      }
+    a:hover {
+      color: $primary-color;
     }
   }
   
@@ -41,7 +37,6 @@
       float: none;
       
       &.uplifted-person-position {
-        color: $secondary-color;
         font-size: 1.3em;
         
         @media screen and (min-width: ($small-screen - 200px) ) {
