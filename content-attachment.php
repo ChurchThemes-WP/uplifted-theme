@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 		<?php endif; ?>
 
-	</div>
+	</div> <!-- /uplifted-entry-attachment -->
 
 	<?php if ( ctfw_has_content() ) : ?>
 	<div class="uplifted-entry-content uplifted-clearfix">
