@@ -12,7 +12,7 @@
 
 // post container
 #uplifted-loop-after-content .hentry,
-.single .hentry {
+.single #uplifted-content .hentry {
   margin-bottom: $panel-margin-bottom;
   background-color: $panel-bg;
   border: $panel-border;
@@ -102,6 +102,6 @@
 .type-attachment {
   
   .uplifted-entry-attachment {
-    margin: 0 -($panel-padding);
+    margin: 0 (-$panel-padding);
   }
 }

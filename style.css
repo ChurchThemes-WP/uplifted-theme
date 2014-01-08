@@ -2606,7 +2606,7 @@ small.error {
 /* Post */
 /* line 15, assets/sass/_post.scss */
 #uplifted-loop-after-content .hentry,
-.single .hentry {
+.single #uplifted-content .hentry {
   margin-bottom: 1.5em;
   background-color: white;
   border: 1px solid #e5e6ea; }
@@ -2681,7 +2681,7 @@ small.error {
 /* Attachment Post */
 /* line 104, assets/sass/_post.scss */
 .type-attachment .uplifted-entry-attachment {
-  margin: -24px; }
+  margin: 0 -24px; }
 
 /*************** COMMENT LIST *****************/
 /* line 4, assets/sass/_comments.scss */
