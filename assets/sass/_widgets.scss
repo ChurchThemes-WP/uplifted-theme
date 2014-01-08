@@ -1,15 +1,15 @@
 /* Widgets */
 
-/* Widget Styles */
-
-// entire widget can be built here, including
-// modifications for sidebar and footer
+// the entire widget should be built here,
+// including modifications for sidebar and footer.
+// a Global Widget is included that will generally
+// style most widgets, modify from there
 
 
 /*  Global Widget Styles */
 
-// this is a generic global widget with
-// styles for widget and layout placement including
+// this is a generic global widget with styles
+// for widget and layout placement including
 // sidebar and footer
 
 .uplifted-widget {
@@ -41,7 +41,6 @@
         display: inline-block;
         padding: .3em 0;
         color: $body-font-color;
-        //border-bottom: 1px solid contrast-color($neutral-color, darken($neutral-color,5%), lighten($neutral-color,5%), 50%);
         @include transition(200ms all ease-in-out);
 
         &:hover{
@@ -93,6 +92,9 @@
 
 
 /* Category & Archive Widgets */
+
+// category and archive widgets include list
+// items like sermons, post, topics, books, etc
 
 // add styles to link and item number
 .widget_ctfw-archives,
@@ -306,6 +308,18 @@
   // add line-height just in case the user does not add
   // a paragraph tag to text
   line-height: $paragraph-line-height;
+}
+
+/* ChurchTheme Location Widget */
+.widget_ctfw-locations {
+  
+  .ctc_location {
+    border: none;
+  }
+  
+  .ctfw-google-map {
+    min-height: 12em;
+  }
 }
 
 /* Sidebar + Home Bottom */
@@ -680,26 +694,6 @@
 
 .uplifted-people-widget-entry-phone {
 	font-style: italic;
-}
-
-/************ CT LOCATIONS WIDGET *************/
-
-/* Address */
-
-.uplifted-locations-widget-entry-address {
-	font-weight: bold;
-}
-
-/* Phone */
-
-.uplifted-locations-widget-entry-phone {
-	font-style: italic;
-}
-
-/* Map */
-
-.uplifted-locations-widget-entry-map .ctfw-google-map-container {
-	margin-top: 20px;
 }
 
 /************* CT GIVING WIDGET ***************/
