@@ -4,3 +4,24 @@
   display: block;
   min-height: 400px;
 }
+
+
+// Individual Location Item
+// 
+// appears on Multi and Single Location pages
+//
+.ctc_location {
+  background-color: $panel-bg;
+  border: $panel-border;
+  
+  // Location featured image
+  .uplifted-entry-image {
+    margin: 0;
+  }
+  
+  .location-content {
+    padding: $panel-padding;
+    //border: $panel-border;
+    //border-top: none;
+  }
+}
