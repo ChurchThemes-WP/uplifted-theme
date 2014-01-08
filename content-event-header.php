@@ -12,58 +12,60 @@ extract( ctfw_event_data() );
 
 ?>
 
-<header class="uplifted-entry-header uplifted-clearfix">
-
-	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="uplifted-entry-image">
-			<?php uplifted_post_image(); ?>
-		</div>
-	<?php endif; ?>
-
-	<div class="uplifted-entry-title-meta">
-
-		<?php if ( ctfw_has_title() ) : ?>
-			<h1 class="uplifted-entry-title<?php if ( is_singular( get_post_type() ) ) : ?> uplifted-main-title<?php endif; ?>">
-				<?php uplifted_post_title(); // will be linked on short ?>
-			</h1>
-		<?php endif; ?>
-
-		<?php if ( $date || $time || $venue || $address ) : ?>
-
-			<ul class="uplifted-entry-meta">
-
-				<?php if ( $date ) : ?>
-					<li class="uplifted-entry-date uplifted-event-full-date uplifted-content-icon">
-						<span class="<?php uplifted_icon_class( 'event-date' ); ?>"></span>
-						<?php echo esc_html( $date ); ?>
-					</li>
-				<?php endif; ?>
-
-				<?php if ( $time ) : ?>
-					<li class="uplifted-event-full-time uplifted-content-icon">
-						<span class="<?php uplifted_icon_class( 'event-time' ); ?>"></span>
-						<?php echo nl2br( wptexturize( $time ) ); ?>
-					</li>
-				<?php endif; ?>
-
-				<?php if ( $venue ) : ?>
-					<li class="uplifted-event-full-venue uplifted-content-icon">
-						<span class="<?php uplifted_icon_class( 'event-venue' ); ?>"></span>
-						<?php echo esc_html( $venue ); ?>
-					</li>
-				<?php endif; ?>
-
-				<?php if ( $address ) : ?>
-					<li class="uplifted-event-full-address uplifted-content-icon">
-						<span class="<?php uplifted_icon_class( 'event-address' ); ?>"></span>
-						<?php echo nl2br( wptexturize( $address ) ); ?>
-					</li>
-				<?php endif; ?>
-
-			</ul>
-
-		<?php endif; ?>
-
+<?php if ( has_post_thumbnail() ) : ?>
+	<div class="uplifted-entry-image">
+		<?php uplifted_post_image(); ?>
 	</div>
+<?php endif; ?>
 
-</header>
+<div class="uplifted-content-meta">
+
+  <header class="uplifted-entry-header uplifted-clearfix">
+  
+  	<div class="uplifted-entry-title-meta">
+  
+  		<?php if ( ctfw_has_title() ) : ?>
+  			<h1 class="uplifted-entry-title<?php if ( is_singular( get_post_type() ) ) : ?> uplifted-main-title<?php endif; ?>">
+  				<?php uplifted_post_title(); // will be linked on short ?>
+  			</h1>
+  		<?php endif; ?>
+  
+  		<?php if ( $date || $time || $venue || $address ) : ?>
+  
+  			<ul class="uplifted-entry-meta">
+  
+  				<?php if ( $date ) : ?>
+  					<li class="uplifted-entry-date uplifted-event-full-date uplifted-content-icon">
+  						<span class="<?php uplifted_icon_class( 'event-date' ); ?>"></span>
+  						<?php echo esc_html( $date ); ?>
+  					</li>
+  				<?php endif; ?>
+  
+  				<?php if ( $time ) : ?>
+  					<li class="uplifted-event-full-time uplifted-content-icon">
+  						<span class="<?php uplifted_icon_class( 'event-time' ); ?>"></span>
+  						<?php echo nl2br( wptexturize( $time ) ); ?>
+  					</li>
+  				<?php endif; ?>
+  
+  				<?php if ( $venue ) : ?>
+  					<li class="uplifted-event-full-venue uplifted-content-icon">
+  						<span class="<?php uplifted_icon_class( 'event-venue' ); ?>"></span>
+  						<?php echo esc_html( $venue ); ?>
+  					</li>
+  				<?php endif; ?>
+  
+  				<?php if ( $address ) : ?>
+  					<li class="uplifted-event-full-address uplifted-content-icon">
+  						<span class="<?php uplifted_icon_class( 'event-address' ); ?>"></span>
+  						<?php echo nl2br( wptexturize( $address ) ); ?>
+  					</li>
+  				<?php endif; ?>
+  
+  			</ul>
+  
+  		<?php endif; ?>
+  
+  	</div> <!-- /uplifted-entry-title-meta -->
+  
+  </header>
