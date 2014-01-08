@@ -1281,7 +1281,7 @@ button, .button {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 73.75em;
+  max-width: 80em;
   *zoom: 1; }
   /* line 131, assets/sass/_global.scss */
   .row:before, .row:after {
@@ -2542,7 +2542,7 @@ small.error {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 73.75em;
+  max-width: 80em;
   *zoom: 1;
   margin-top: 2em; }
   /* line 131, assets/sass/_global.scss */
@@ -3179,7 +3179,7 @@ p.comment-form-comment label.error {
 
   /* line 447, assets/sass/_top-bar.scss */
   .contain-to-grid .top-bar {
-    max-width: 73.75em;
+    max-width: 80em;
     margin: 0 auto;
     margin-bottom: 0; }
 
@@ -4257,7 +4257,7 @@ body.term-post-format-gallery #content > .panel {
   display: none; }
 
 /* line 53, assets/sass/_pages.scss */
-.single-attachment .hentry {
+.single-attachment #uplifted-content .hentry {
   background-color: white;
   margin-bottom: 1.5em;
   padding: 24px; }
