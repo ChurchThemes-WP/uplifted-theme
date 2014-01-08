@@ -2681,7 +2681,7 @@ small.error {
 /* Attachment Post */
 /* line 104, assets/sass/_post.scss */
 .type-attachment .uplifted-entry-attachment {
-  margin: -24px; }
+  margin: 0 -24px; }
 
 /*************** COMMENT LIST *****************/
 /* line 4, assets/sass/_comments.scss */
