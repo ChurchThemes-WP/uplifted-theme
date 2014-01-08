@@ -5,6 +5,40 @@
   margin-bottom: $panel-margin-bottom;
 }
 
+// Meta Entry Widget 
+//
+// global styles for each post type including
+// meta for people, sermons, etc
+//
+.uplifted-entry-meta {
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+  padding: ($panel-margin-bottom / 2.5) 0 $panel-margin-bottom 0;
+  margin: 0;
+  
+  @media screen and (max-width: ($small-screen) ) {
+	  font-size: .8em;
+	}
+
+  li {
+    float: left;
+    margin-right: 1em;
+  }
+
+  a {
+    //color: lighten($secondary-color, 20%);
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .genericon {
+    font-size: 14px;
+  }
+}
+
 .uplifted-entry-title {
   font-weight: 400;
   line-height: 1.2;
@@ -27,35 +61,6 @@
     width: 100%;
     height: auto;
     display: block;
-  }
-}
-
-// meta info for each post type
-// as well as meta for people, sermons, etc
-.uplifted-entry-meta {
-  list-style: none;
-  position: relative;
-  //color: lighten($secondary-color, 20%);
-  font-size: .8em;
-  overflow: hidden;
-  padding: ($panel-margin-bottom / 2.5) 0 $panel-margin-bottom 0;
-  margin: 0;
-
-  li {
-    float: left;
-    margin-right: 1em;
-  }
-
-  a {
-    //color: lighten($secondary-color, 20%);
-
-    &:hover {
-      color: $primary-color;
-    }
-  }
-
-  .genericon {
-    font-size: 14px;
   }
 }
 
