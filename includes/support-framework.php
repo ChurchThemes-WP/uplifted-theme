@@ -383,7 +383,7 @@ function uplifted_add_theme_support_framework_widgets() {
 	) );
 
 	// Slide Widget
-	/*add_theme_support( 'ctfw-widget-slide', array(
+	add_theme_support( 'ctfw-widget-slide', array(
 		'fields' => array(
 			'title',
 			'description',
@@ -401,10 +401,10 @@ function uplifted_add_theme_support_framework_widgets() {
 				'desc' => __( 'To make this a video slide, enter a YouTube or Vimeo video page URL.', 'uplifted' ),
 			),
 		),
-	) );*/
+	) );
 
 	// Highlight Widget
-	/*add_theme_support( 'ctfw-widget-highlight', array(
+	add_theme_support( 'ctfw-widget-highlight', array(
 		'fields' => array(
 			'title',
 			'description',
@@ -417,7 +417,7 @@ function uplifted_add_theme_support_framework_widgets() {
 				'desc' => sprintf( __( 'Image cropped to %s.', 'uplifted' ), ctfw_image_size_dimensions( 'uplifted-rect-large' ) ),
 			),
 		),
-	) );*/
+	) );
 
 }
 
