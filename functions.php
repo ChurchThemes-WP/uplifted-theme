@@ -13,7 +13,6 @@ require_once 'includes/content-types.php';                           // Content 
 require_once 'includes/gallery.php';                                 // Gallery filter
 require_once 'includes/custom-header.php';                           // Custom header setup
 require_once 'includes/foundation-navbar.php';                       // Foundation navbar
-require_once 'includes/responsive-slider/responsive-slider.php';     // Responsive slider
 require_once 'includes/presstrends.php';                             // PressTrends
 require_once 'includes/template-tags.php';                           // Template Tags
 require_once 'options/options.php';                                  // UpThemes Framework
