@@ -31,6 +31,8 @@ if ( is_singular( get_post_type() ) ) :
 
 		<?php get_template_part( 'content-footer-full' ); // multipage nav, term lists, "Edit" button, etc. ?>
 
+  </div> <!-- /uplifted-content-meta -->
+  
 	</article>
 
 <?php
@@ -55,6 +57,8 @@ else :
 
 		<?php get_template_part( 'content-footer-short' ); // show appropriate button(s) ?>
 
+  </div> <!-- /uplifted-content-meta -->
+  
 	</article>
 
 <?php endif; ?>
