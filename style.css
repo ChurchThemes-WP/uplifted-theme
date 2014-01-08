@@ -2606,7 +2606,7 @@ small.error {
 /* Post */
 /* line 15, assets/sass/_post.scss */
 #uplifted-loop-after-content .hentry,
-.single .hentry {
+.single #uplifted-content .hentry {
   margin-bottom: 1.5em;
   background-color: white;
   border: 1px solid #e5e6ea; }
