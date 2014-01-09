@@ -254,10 +254,10 @@ $definition-list-margin-bottom: emCalc(12px);
 // Blockquotes
 
 $blockquote-font-size: emCalc(24px);
-$blockquote-font-color: lighten($header-font-color, 20%);
+$blockquote-font-color: lighten($body-font-color, 20%);
 $blockquote-bg-color: #fbfbfb;
 $blockquote-padding: $panel-padding; // this should be the same as the .panel to align with outside content
-$blockquote-margin: 0 (-$panel-padding); // this is the inverse of the .panel padding to make it appear flush with .panel edge
+$blockquote-margin: 0 (-$panel-padding) 1em; // this is the inverse of the .panel padding to make it appear flush with .panel edge
 $blockquote-border: 6px solid $primary-color;
 $blockquote-cite-font-size: emCalc(13px);
 $blockquote-cite-font-color: lighten($header-font-color, 20%);
