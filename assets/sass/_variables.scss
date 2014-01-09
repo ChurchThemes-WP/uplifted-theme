@@ -62,7 +62,7 @@ $success-color: #9fe150;
 
 // Make sure border radius matches unless we want it different.
 
-$global-radius: 6px;
+$global-radius: 4px;
 $global-rounded: 1000px;
 
 // Inset shadow shiny edges and depressions.
@@ -381,13 +381,13 @@ $button-margin-bottom: .5em;
 // Button text styles.
 
 $button-font-family: inherit;
-$button-font-color: #fff;
+$button-font-color: $neutral-color;
 $button-font-color-alt: $header-font-color;
 $button-font-med: emCalc(14px);
 $button-font-tny: emCalc(10px);
 $button-font-sml: emCalc(12px);
 $button-font-lrg: emCalc(24px);
-$button-font-weight: bold;
+$button-font-weight: normal;
 $button-font-align: center;
 
 // Various hover effects.
