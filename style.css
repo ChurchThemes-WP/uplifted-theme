@@ -4459,11 +4459,11 @@ img.alignright {
       color: #0fcfc5; }
 
 /* Sermons */
-/* line 7, assets/sass/_sermons.scss */
+/* line 6, assets/sass/_sermons.scss */
 .single-ctc_sermon #uplifted-content.uplifted-has-sidebar {
   width: 100% !important; }
 
-/* line 11, assets/sass/_sermons.scss */
+/* line 10, assets/sass/_sermons.scss */
 .single-ctc_sermon #uplifted-sidebar-right {
   display: none; }
 
@@ -4471,41 +4471,45 @@ img.alignright {
  * Single Sermon Page
  *
  */
-/* line 25, assets/sass/_sermons.scss */
+/* line 23, assets/sass/_sermons.scss */
 .single-ctc_sermon #uplifted-content .hentry {
   background-color: transparent;
   border: none; }
 
-/* line 34, assets/sass/_sermons.scss */
+/* line 31, assets/sass/_sermons.scss */
 .single-ctc_sermon .uplifted-entry-title-meta {
   text-align: center;
   margin: .5em 0; }
   @media screen and (min-width: 768px) {
-    /* line 34, assets/sass/_sermons.scss */
+    /* line 31, assets/sass/_sermons.scss */
     .single-ctc_sermon .uplifted-entry-title-meta {
       font-size: 1.2em; } }
-  /* line 42, assets/sass/_sermons.scss */
+  /* line 39, assets/sass/_sermons.scss */
   .single-ctc_sermon .uplifted-entry-title-meta ul {
     display: inline-block;
     font-weight: bold; }
-    /* line 46, assets/sass/_sermons.scss */
+    /* line 43, assets/sass/_sermons.scss */
     .single-ctc_sermon .uplifted-entry-title-meta ul li {
       border-right: 3px solid #3c4542;
       margin-right: .8em;
       padding-right: .8em; }
-      /* line 51, assets/sass/_sermons.scss */
+      /* line 48, assets/sass/_sermons.scss */
       .single-ctc_sermon .uplifted-entry-title-meta ul li:last-child {
         border: none; }
-      /* line 55, assets/sass/_sermons.scss */
+      /* line 52, assets/sass/_sermons.scss */
       .single-ctc_sermon .uplifted-entry-title-meta ul li a {
         color: #3c4542; }
-        /* line 58, assets/sass/_sermons.scss */
+        /* line 55, assets/sass/_sermons.scss */
         .single-ctc_sermon .uplifted-entry-title-meta ul li a:hover {
           color: #f6653c; }
-/* line 67, assets/sass/_sermons.scss */
+/* line 64, assets/sass/_sermons.scss */
 .single-ctc_sermon .single-sermon-content {
   padding-left: 0; }
-/* line 72, assets/sass/_sermons.scss */
+  @media screen and (max-width: 768px) {
+    /* line 64, assets/sass/_sermons.scss */
+    .single-ctc_sermon .single-sermon-content {
+      padding-right: 0; } }
+/* line 74, assets/sass/_sermons.scss */
 .single-ctc_sermon .uplifted-entry-content {
   background-color: white;
   border: 1px solid #e5e6ea;
@@ -4513,10 +4517,14 @@ img.alignright {
   margin-bottom: 1.5em; }
 
 /* Single Sermon Faux Sidebar */
-/* line 88, assets/sass/_sermons.scss */
+/* line 90, assets/sass/_sermons.scss */
 .single-sermon-meta-sidebar {
   padding-right: 0; }
-  /* line 91, assets/sass/_sermons.scss */
+  @media screen and (max-width: 768px) {
+    /* line 90, assets/sass/_sermons.scss */
+    .single-sermon-meta-sidebar {
+      display: none; } }
+  /* line 98, assets/sass/_sermons.scss */
   .single-sermon-meta-sidebar .uplifted-entry-title-meta {
     text-align: left;
     margin: 0 0 1.5em;
@@ -4524,35 +4532,35 @@ img.alignright {
     background-color: white;
     border: 1px solid #e5e6ea;
     box-shadow: 4px 4px 0 0 #e5e6ea; }
-    /* line 101, assets/sass/_sermons.scss */
+    /* line 108, assets/sass/_sermons.scss */
     .single-sermon-meta-sidebar .uplifted-entry-title-meta ul li {
       float: none;
       border: none; }
-  /* line 108, assets/sass/_sermons.scss */
+  /* line 115, assets/sass/_sermons.scss */
   .single-sermon-meta-sidebar h3 {
     color: #f6653c; }
 
 /* Sermon Media Module */
-/* line 119, assets/sass/_sermons.scss */
+/* line 126, assets/sass/_sermons.scss */
 .uplifted-list-buttons-container {
   margin: .5em 0 2em; }
 
-/* line 123, assets/sass/_sermons.scss */
+/* line 130, assets/sass/_sermons.scss */
 .uplifted-list-buttons {
   margin: 0;
   list-style: none;
   display: inline; }
-  /* line 128, assets/sass/_sermons.scss */
+  /* line 135, assets/sass/_sermons.scss */
   .uplifted-list-buttons:last-child {
     float: right; }
-  /* line 132, assets/sass/_sermons.scss */
+  /* line 139, assets/sass/_sermons.scss */
   .uplifted-list-buttons li {
     display: inline-block;
     margin-right: .5em; }
-    /* line 136, assets/sass/_sermons.scss */
+    /* line 143, assets/sass/_sermons.scss */
     .uplifted-list-buttons li:last-child {
       margin-right: 0; }
-    /* line 141, assets/sass/_sermons.scss */
+    /* line 148, assets/sass/_sermons.scss */
     .uplifted-list-buttons li a {
       cursor: "pointer";
       font-family: inherit;
@@ -4579,6 +4587,16 @@ img.alignright {
       /* line 135, assets/sass/_buttons.scss */
       .uplifted-list-buttons li a:hover, .uplifted-list-buttons li a:focus {
         color: white; }
+
+@media screen and (min-width: 768px) {
+  /* line 156, assets/sass/_sermons.scss */
+  .single-ctc_sermon #comments,
+  .uplifted-nav-left-right {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 66.66667%;
+    float: left; } }
 
 /* People */
 /* line 8, assets/sass/_people.scss */

@@ -1,7 +1,6 @@
 /* Sermons */
 
 
-
 // temp code - we don't want a sidebar on single sermon pages
 // but right now we have to hack to make that happen
 .single-ctc_sermon #uplifted-content.uplifted-has-sidebar {
@@ -15,7 +14,6 @@
 // but right now we have to hack to make that happen
 
 
-
 /*
  * Single Sermon Page
  *
@@ -26,7 +24,6 @@
   background-color: transparent;
   border: none;
 }
-
 
 .single-ctc_sermon  {
   
@@ -66,6 +63,11 @@
   // single sermon main content area
   .single-sermon-content {
     padding-left: 0;
+    
+    // part of the page hack, need to kill the right padding on mobile
+    @media screen and (max-width: $small-screen) {
+  	  padding-right: 0;
+  	}
   }
   
   // content block
@@ -87,6 +89,11 @@
 // through CSS to attain the desired effect
 .single-sermon-meta-sidebar {
   padding-right: 0;
+  
+  // hide the Faux Sidebar on mobile
+  @media screen and (max-width: $small-screen) {
+	  display: none;
+	}
   
   .uplifted-entry-title-meta {
     text-align: left;
@@ -143,4 +150,12 @@
     }
     
   }
+}
+
+.single-ctc_sermon #comments,
+.uplifted-nav-left-right {
+  
+  @media screen and (min-width: $small-screen) {
+	  @include grid-column(8); 
+	}
 }
