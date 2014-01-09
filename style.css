@@ -4502,6 +4502,9 @@ img.alignright {
         /* line 58, assets/sass/_sermons.scss */
         .single-ctc_sermon .uplifted-entry-title-meta ul li a:hover {
           color: #f6653c; }
+/* line 67, assets/sass/_sermons.scss */
+.single-ctc_sermon .single-sermon-content {
+  padding-left: 0; }
 /* line 72, assets/sass/_sermons.scss */
 .single-ctc_sermon .uplifted-entry-content {
   background-color: white;
@@ -4509,27 +4512,47 @@ img.alignright {
   padding: 24px;
   margin-bottom: 1.5em; }
 
+/* Single Sermon Faux Sidebar */
+/* line 88, assets/sass/_sermons.scss */
+.single-sermon-meta-sidebar {
+  padding-right: 0; }
+  /* line 91, assets/sass/_sermons.scss */
+  .single-sermon-meta-sidebar .uplifted-entry-title-meta {
+    text-align: left;
+    margin: 0 0 1.5em;
+    padding: 24px;
+    background-color: white;
+    border: 1px solid #e5e6ea;
+    box-shadow: 4px 4px 0 0 #e5e6ea; }
+    /* line 101, assets/sass/_sermons.scss */
+    .single-sermon-meta-sidebar .uplifted-entry-title-meta ul li {
+      float: none;
+      border: none; }
+  /* line 108, assets/sass/_sermons.scss */
+  .single-sermon-meta-sidebar h3 {
+    color: #f6653c; }
+
 /* Sermon Media Module */
-/* line 91, assets/sass/_sermons.scss */
+/* line 119, assets/sass/_sermons.scss */
 .uplifted-list-buttons-container {
   margin: .5em 0 2em; }
 
-/* line 95, assets/sass/_sermons.scss */
+/* line 123, assets/sass/_sermons.scss */
 .uplifted-list-buttons {
   margin: 0;
   list-style: none;
   display: inline; }
-  /* line 100, assets/sass/_sermons.scss */
+  /* line 128, assets/sass/_sermons.scss */
   .uplifted-list-buttons:last-child {
     float: right; }
-  /* line 104, assets/sass/_sermons.scss */
+  /* line 132, assets/sass/_sermons.scss */
   .uplifted-list-buttons li {
     display: inline-block;
     margin-right: .5em; }
-    /* line 108, assets/sass/_sermons.scss */
+    /* line 136, assets/sass/_sermons.scss */
     .uplifted-list-buttons li:last-child {
       margin-right: 0; }
-    /* line 113, assets/sass/_sermons.scss */
+    /* line 141, assets/sass/_sermons.scss */
     .uplifted-list-buttons li a {
       cursor: "pointer";
       font-family: inherit;

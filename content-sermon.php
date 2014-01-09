@@ -233,7 +233,7 @@ HTML;
     </header>
     <!-- a working Header containing Sermon meta, will be changing -->
     
-		<div class="row collapse">
+		<div class="row">
 		
 		  <div class="single-sermon-content large-8 column">
 
@@ -253,14 +253,14 @@ HTML;
   		
 		  </div><!-- /single-sermon-content -->
 		  
-		  <div class="single-sermon-meta large-4 column hide-for-mobile">
+		  <div class="single-sermon-meta-sidebar large-4 column">
 		    
 		    <div class="uplifted-entry-title-meta">
     
       		<?php if ( ctfw_has_title() ) : ?>
-        		<h1 class="uplifted-entry-title<?php if ( is_singular( get_post_type() ) ) : ?> uplifted-main-title<?php endif; ?>">
+        		<h3>
         			<?php uplifted_post_title(); // will be linked on short ?>
-        		</h1>
+        		</h3>
         	<?php endif; ?>
       
       		<ul class="uplifted-entry-meta">

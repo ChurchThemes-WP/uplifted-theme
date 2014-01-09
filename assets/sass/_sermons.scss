@@ -65,7 +65,7 @@
   
   // single sermon main content area
   .single-sermon-content {
-    //@include grid-column(8);
+    padding-left: 0;
   }
   
   // content block
@@ -76,9 +76,37 @@
     margin-bottom: $panel-margin-bottom;
   }
   
-  // single sermon mock sidebar
-  .uplifted-entry-footer {
-    //@include grid-column(4,true,false);
+  
+}
+
+/* Single Sermon Faux Sidebar */
+
+// because of the way standard pages are setup
+// and the Single Sermon deviates from that template,
+// the content layout is being drastically altered 
+// through CSS to attain the desired effect
+.single-sermon-meta-sidebar {
+  padding-right: 0;
+  
+  .uplifted-entry-title-meta {
+    text-align: left;
+    margin: 0 0 $panel-margin-bottom;
+    padding: $panel-padding;
+    background-color: $panel-bg;
+    border: $panel-border;
+    box-shadow: $panel-box-shadow;
+    
+    ul {
+      
+        li {
+          float: none;
+          border: none;
+        }
+      }
+    }
+  
+  h3 {
+    color: $secondary-color;
   }
 }
 
