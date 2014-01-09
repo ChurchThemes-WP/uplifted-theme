@@ -2619,17 +2619,18 @@ small.error {
     width: 33.33333%;
     float: left; } }
 /* Post */
-/* line 15, assets/sass/_post.scss */
+/* line 16, assets/sass/_post.scss */
 #uplifted-loop-after-content .hentry,
-.single #uplifted-content .hentry {
+.single #uplifted-content .hentry,
+.archive .hentry {
   margin-bottom: 1.5em;
   background-color: white;
   border: 1px solid #e5e6ea; }
 
-/* line 22, assets/sass/_post.scss */
+/* line 23, assets/sass/_post.scss */
 .uplifted-entry-image {
   max-width: 100%; }
-  /* line 25, assets/sass/_post.scss */
+  /* line 26, assets/sass/_post.scss */
   .uplifted-entry-image img {
     border: none;
     padding: 0;
@@ -2639,11 +2640,11 @@ small.error {
     height: auto;
     display: block; }
 
-/* line 37, assets/sass/_post.scss */
+/* line 38, assets/sass/_post.scss */
 .uplifted-content-meta {
   padding: 24px; }
 
-/* line 41, assets/sass/_post.scss */
+/* line 42, assets/sass/_post.scss */
 .uplifted-entry-meta {
   list-style: none;
   position: relative;
@@ -2651,35 +2652,35 @@ small.error {
   padding: 0.6em 0 1.5em 0;
   margin: 0; }
   @media screen and (max-width: 768px) {
-    /* line 41, assets/sass/_post.scss */
+    /* line 42, assets/sass/_post.scss */
     .uplifted-entry-meta {
       font-size: .8em; } }
-  /* line 52, assets/sass/_post.scss */
+  /* line 53, assets/sass/_post.scss */
   .uplifted-entry-meta li {
     float: left;
     margin-right: 1em; }
-  /* line 60, assets/sass/_post.scss */
+  /* line 61, assets/sass/_post.scss */
   .uplifted-entry-meta a:hover {
     color: #0fcfc5; }
-  /* line 65, assets/sass/_post.scss */
+  /* line 66, assets/sass/_post.scss */
   .uplifted-entry-meta .genericon {
     font-size: 14px; }
 
-/* line 70, assets/sass/_post.scss */
+/* line 71, assets/sass/_post.scss */
 .uplifted-entry-title {
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 0; }
   @media screen and (min-width: 568px) {
-    /* line 70, assets/sass/_post.scss */
+    /* line 71, assets/sass/_post.scss */
     .uplifted-entry-title {
       font-size: 2.125em; } }
 
-/* line 81, assets/sass/_post.scss */
+/* line 82, assets/sass/_post.scss */
 .uplifted-author-box {
   margin: 1.5em 0;
   overflow: auto; }
-  /* line 85, assets/sass/_post.scss */
+  /* line 86, assets/sass/_post.scss */
   .uplifted-author-box .uplifted-author-avatar {
     float: left;
     margin: 0 1em 1em 0;
@@ -2689,12 +2690,12 @@ small.error {
     -ms-border-radius: 1000px;
     -o-border-radius: 1000px;
     border-radius: 1000px; }
-  /* line 94, assets/sass/_post.scss */
+  /* line 95, assets/sass/_post.scss */
   .uplifted-author-box .uplifted-author-content h1 {
     font-size: 1.2em; }
 
 /* Attachment Post */
-/* line 104, assets/sass/_post.scss */
+/* line 105, assets/sass/_post.scss */
 .type-attachment .uplifted-entry-attachment {
   margin: 0 -24px; }
 

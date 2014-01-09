@@ -12,7 +12,8 @@
 
 // post container
 #uplifted-loop-after-content .hentry,
-.single #uplifted-content .hentry {
+.single #uplifted-content .hentry,
+.archive .hentry {
   margin-bottom: $panel-margin-bottom;
   background-color: $panel-bg;
   border: $panel-border;
