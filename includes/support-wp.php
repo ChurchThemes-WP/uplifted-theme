@@ -38,8 +38,6 @@ function uplifted_add_theme_support_wp() {
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size('featured-image',2000,600,true);
-
 	// Custom background with defaults
 	add_theme_support( 'custom-background', array(
 		'default-color' => '888888', // default color for Customizer (somewhere between light and dark)

@@ -8,6 +8,7 @@ require_once 'includes/support-wp.php';                              // WordPres
 require_once 'includes/icons.php';                                   // Icons
 require_once 'includes/banner.php';                                  // Banner
 require_once 'includes/sidebars.php';                                // Sidebars
+require_once 'includes/images.php';                                  // Images
 require_once 'includes/loop-after-content.php';                      // Loop after content
 require_once 'includes/content-types.php';                           // Content types
 require_once 'includes/gallery.php';                                 // Gallery filter
