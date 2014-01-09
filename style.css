@@ -1272,6 +1272,21 @@ button, .button {
     right: 20px;
     padding-left: 0;
     padding-top: 0; } }
+/* line 232, assets/sass/_clearing.scss */
+.clearfix,
+.uplifted-clearfix {
+  *zoom: 1; }
+  /* line 131, assets/sass/_global.scss */
+  .clearfix:before, .clearfix:after,
+  .uplifted-clearfix:before,
+  .uplifted-clearfix:after {
+    content: " ";
+    display: table; }
+  /* line 132, assets/sass/_global.scss */
+  .clearfix:after,
+  .uplifted-clearfix:after {
+    clear: both; }
+
 /* Grid */
 /* Grid HTML Classes */
 /* line 118, assets/sass/_grid.scss */
@@ -4444,8 +4459,6 @@ img.alignright {
       color: #0fcfc5; }
 
 /* Sermons */
-/* temp code - we don't want a sidebar on single sermon pages
- * but right now we have to hack to make that happen */
 /* line 7, assets/sass/_sermons.scss */
 .single-ctc_sermon #uplifted-content.uplifted-has-sidebar {
   width: 100% !important; }
@@ -4454,22 +4467,60 @@ img.alignright {
 .single-ctc_sermon #uplifted-sidebar-right {
   display: none; }
 
-/* temp code - we don't want a sidebar on single sermon pages
- * but right now we have to hack to make that happen */
-/* line 19, assets/sass/_sermons.scss */
+/*
+ * Single Sermon Page
+ *
+ */
+/* line 25, assets/sass/_sermons.scss */
+.single-ctc_sermon #uplifted-content .hentry {
+  background-color: transparent;
+  border: none; }
+
+/* line 34, assets/sass/_sermons.scss */
 .single-ctc_sermon .uplifted-entry-title-meta {
   text-align: center; }
-  /* line 22, assets/sass/_sermons.scss */
+  /* line 37, assets/sass/_sermons.scss */
   .single-ctc_sermon .uplifted-entry-title-meta ul {
     display: inline-block;
     margin: 0 auto; }
+/* line 49, assets/sass/_sermons.scss */
+.single-ctc_sermon .uplifted-entry-content {
+  background-color: white;
+  border: 1px solid #e5e6ea;
+  padding: 24px;
+  margin-bottom: 1.5em; }
 
-/* line 28, assets/sass/_sermons.scss */
+/* Sermon Media Module */
+/* line 65, assets/sass/_sermons.scss */
 .uplifted-list-buttons {
   margin: 0;
   list-style: none; }
+  /* line 69, assets/sass/_sermons.scss */
+  .uplifted-list-buttons li {
+    cursor: "pointer";
+    font-family: inherit;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 0 0.5em;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding-top: 0.75em;
+    padding-right: 1.5em;
+    padding-bottom: 0.8125em;
+    padding-left: 1.5em;
+    font-size: 0.875em;
+    background-color: #0fcfc5;
+    border-color: #0c9f98;
+    color: white; }
+    /* line 123, assets/sass/_buttons.scss */
+    .uplifted-list-buttons li:hover, .uplifted-list-buttons li:focus {
+      background-color: #0c9f98; }
+    /* line 134, assets/sass/_buttons.scss */
+    .uplifted-list-buttons li:hover, .uplifted-list-buttons li:focus {
+      color: white; }
 
-/* test soemthign */
 /* People */
 /* line 8, assets/sass/_people.scss */
 .person-profile-card {

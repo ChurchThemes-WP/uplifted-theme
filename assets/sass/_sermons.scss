@@ -2,8 +2,8 @@
 
 
 
-/* temp code - we don't want a sidebar on single sermon pages
- * but right now we have to hack to make that happen */
+// temp code - we don't want a sidebar on single sermon pages
+// but right now we have to hack to make that happen
 .single-ctc_sermon #uplifted-content.uplifted-has-sidebar {
   width: 100% !important;
 }
@@ -11,27 +11,63 @@
 .single-ctc_sermon #uplifted-sidebar-right {
   display: none;
 }
-/* temp code - we don't want a sidebar on single sermon pages
- * but right now we have to hack to make that happen */
+// temp code - we don't want a sidebar on single sermon pages
+// but right now we have to hack to make that happen
 
 
-// Single Sermon Page Meta Header 
-.single-ctc_sermon .uplifted-entry-title-meta {
-  text-align: center;
+
+/*
+ * Single Sermon Page
+ *
+ */
+
+// remove post content styling for Single Sermons
+.single-ctc_sermon #uplifted-content .hentry {
+  background-color: transparent;
+  border: none;
+}
+
+
+.single-ctc_sermon  {
   
-  ul {
-    display: inline-block;
-    margin: 0 auto;
+  // sermon title, date, and speaker
+  .uplifted-entry-title-meta {
+    text-align: center;
+    
+    ul {
+      display: inline-block;
+      margin: 0 auto;
+    } 
+  }
+  
+  // single sermon main content area
+  .single-sermon-content {
+    //@include grid-column(8);
+  }
+  
+  // content block
+  .uplifted-entry-content {
+    background-color: $panel-bg;
+    border: $panel-border;
+    padding: $panel-padding;
+    margin-bottom: $panel-margin-bottom;
+  }
+  
+  // single sermon mock sidebar
+  .uplifted-entry-footer {
+    //@include grid-column(4,true,false);
   }
 }
+
+
+/* Sermon Media Module */
 
 .uplifted-list-buttons {
   margin: 0;
   list-style: none;
   
   li {
+    @include button;
     
   }
 }
-
-/* test soemthign */
