@@ -155,15 +155,17 @@ HTML;
   				// Show buttons if need to switch between video and audio players or have at least one download link
   				if ( $show_buttons ) :
   				?>
-  
-  					<ul id="uplifted-sermon-full-buttons" class="uplifted-list-buttons">
+          
+          <div class="uplifted-list-buttons-container">
+          
+  					<ul class="uplifted-list-buttons">
   
   						<?php
   
   						// Make sure there is no whitespace between items since they are inline-block
   
   						if ( $video_player && 'audio' == $show_player ) : // have video player but currently showing audio
-  							?><li id="uplifted-sermon-full-video-player-button">
+  							?><li id="uplifted-sermon-full-video-player-button" class="media-toggle">
   								<a href="?player=video">
   									<span class="uplifted-button-icon <?php uplifted_icon_class( 'video-play' ); ?>"></span>
   									<?php _e( 'Show Video Player', 'uplifted' ); ?>
@@ -172,16 +174,25 @@ HTML;
   						endif;
   
   						if ( $audio_player && 'video' == $show_player ) : // have audio player but currently showing video
-  							?><li id="uplifted-sermon-full-audio-player-button">
+  							?><li id="uplifted-sermon-full-audio-player-button" class="media-toggle">
   								<a href="?player=audio">
   									<span class="uplifted-button-icon <?php uplifted_icon_class( 'audio-play' ); ?>"></span>
   									<?php _e( 'Show Audio Player', 'uplifted' ); ?>
   								</a>
   							</li><?php
-  						endif;
+  						endif;  
+  						?>
+  
+  					</ul>
+  					
+  					<ul class="uplifted-list-buttons">
+  
+  						<?php
+  
+  						// Make sure there is no whitespace between items since they are inline-block
   
   						if ( $video_download_url ) :
-  							?><li id="uplifted-sermon-full-video-download-button">
+  							?><li id="uplifted-sermon-full-video-download-button" class="media-download">
   								<a href="<?php echo esc_url( $video_download_url ); ?>" title="<?php echo esc_attr( __( 'Download Video', 'uplifted' ) ); ?>">
   									<span class="uplifted-button-icon <?php uplifted_icon_class( 'video-download' ); ?>"></span>
   									<?php _e( 'Save Video', 'uplifted' ); ?>
@@ -190,7 +201,7 @@ HTML;
   						endif;
   
   						if ( $audio_download_url ) :
-  							?><li id="uplifted-sermon-full-audio-download-button">
+  							?><li id="uplifted-sermon-full-audio-download-button" class="media-download">
   								<a href="<?php echo esc_url( $audio_download_url ); ?>" title="<?php echo esc_attr( __( 'Download Audio', 'uplifted' ) ); ?>">
   									<span class="uplifted-button-icon <?php uplifted_icon_class( 'audio-download' ); ?>"></span>
   									<?php _e( 'Save Audio', 'uplifted' ); ?>
@@ -199,7 +210,7 @@ HTML;
   						endif;
   
   						if ( $pdf_download_url ) :
-  							?><li id="uplifted-sermon-full-pdf-download-button">
+  							?><li id="uplifted-sermon-full-pdf-download-button" class="media-download">
   								<a href="<?php echo esc_url( $pdf_download_url ); ?>" title="<?php echo esc_attr( __( 'Download PDF', 'uplifted' ) ); ?>">
   									<span class="uplifted-button-icon <?php uplifted_icon_class( 'pdf-download' ); ?>"></span>
   									<?php _e( 'Save PDF', 'uplifted' ); ?>
@@ -211,7 +222,9 @@ HTML;
   
   					</ul>
   
-  				<?php endif; ?>
+            <?php endif; ?>
+  				
+          </div><!-- /uplifted-list-buttons-container -->
   
   			</div><!-- /uplifted-sermon-full-media -->
   

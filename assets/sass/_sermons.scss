@@ -33,10 +33,33 @@
   // sermon title, date, and speaker
   .uplifted-entry-title-meta {
     text-align: center;
+    margin: .5em 0;
+    
+    @media screen and (min-width: $small-screen) {
+  	  font-size: 1.2em;
+  	}
     
     ul {
       display: inline-block;
-      margin: 0 auto;
+      font-weight: bold;
+      
+      li {
+        border-right: 3px solid $body-font-color;
+        margin-right: .8em;
+        padding-right: .8em;
+        
+        &:last-child {
+          border: none;
+        }
+        
+        a {
+          color: $body-font-color;
+          
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
     } 
   }
   
@@ -62,12 +85,34 @@
 
 /* Sermon Media Module */
 
+// the Media Module contains the Sermon video player
+// and Sermon Audio player tied to a Featured Image.
+// the two players will toggle visibility
+.uplifted-list-buttons-container {
+  margin: .5em 0 2em;
+}
+
 .uplifted-list-buttons {
   margin: 0;
   list-style: none;
+  display: inline;
+  
+  &:last-child {
+    float: right;
+  }
   
   li {
-    @include button;
+    display: inline-block;
+    margin-right: .5em;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    // style the buttons in media section
+    a {
+      @include button($padding:$button-med, $bg:$body-font-color, $radius:true, $full-width:false, $disabled:false, $is-input:false, $is-prefix:false);  
+    }
     
   }
 }
