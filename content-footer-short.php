@@ -116,7 +116,7 @@ $post_type = get_post_type();
 		// Make sure there is no whitespace between items since they are inline-block
 
 		if ( $directions_url ) :
-			?><li><a href="<?php echo esc_url( $directions_url ); ?>" target="_blank"><span class="uplifted-button-icon <?php uplifted_icon_class( 'event-directions' ); ?>"></span><?php _e( 'Directions', 'uplifted' ); ?></a></li><?php
+			?><li><a href="<?php echo esc_url( $directions_url ); ?>" target="_blank"><i class="genericon genericon-location"></i><?php _e( 'Directions', 'uplifted' ); ?></a></li><?php
 		endif;
 
 		?>

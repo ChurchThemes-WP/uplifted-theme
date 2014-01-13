@@ -35,29 +35,29 @@ extract( ctfw_event_data() );
   			<ul class="uplifted-entry-meta">
   
   				<?php if ( $date ) : ?>
-  					<li class="uplifted-entry-date uplifted-event-full-date uplifted-content-icon">
-  						<span class="<?php uplifted_icon_class( 'event-date' ); ?>"></span>
+  					<li class="uplifted-entry-date uplifted-event-full-date">
+  						<i class="genericon genericon-month"></i>
   						<?php echo esc_html( $date ); ?>
   					</li>
   				<?php endif; ?>
   
   				<?php if ( $time ) : ?>
-  					<li class="uplifted-event-full-time uplifted-content-icon">
-  						<span class="<?php uplifted_icon_class( 'event-time' ); ?>"></span>
+  					<li class="uplifted-event-full-time">
+  						<i class="genericon genericon-time"></i>
   						<?php echo nl2br( wptexturize( $time ) ); ?>
   					</li>
   				<?php endif; ?>
   
   				<?php if ( $venue ) : ?>
-  					<li class="uplifted-event-full-venue uplifted-content-icon">
-  						<span class="<?php uplifted_icon_class( 'event-venue' ); ?>"></span>
+  					<li class="uplifted-event-full-venue">
+  						<i class="genericon genericon-home"></i>
   						<?php echo esc_html( $venue ); ?>
   					</li>
   				<?php endif; ?>
   
   				<?php if ( $address ) : ?>
-  					<li class="uplifted-event-full-address uplifted-content-icon">
-  						<span class="<?php uplifted_icon_class( 'event-address' ); ?>"></span>
+  					<li class="uplifted-event-full-address">
+  						<i class="genericon genericon-location"></i>
   						<?php echo nl2br( wptexturize( $address ) ); ?>
   					</li>
   				<?php endif; ?>
