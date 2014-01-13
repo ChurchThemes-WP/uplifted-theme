@@ -143,7 +143,7 @@ $post_type = get_post_type();
 
 			<li>
 				<a href="<?php the_permalink(); ?>">
-					<span class="uplifted-button-icon <?php uplifted_icon_class( 'gallery' ); ?>"></span>
+					<i class="genericon genericon-gallery"></i>
 					<?php _e( 'View Gallery', 'uplifted' ); ?>
 				</a>
 			</li>
