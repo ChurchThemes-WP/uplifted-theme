@@ -41,7 +41,7 @@ if ( is_singular( get_post_type() ) ) :
 		<?php if ( $directions_url ) : ?>
 			<div class="uplifted-location-full-direction">
 				<a href="<?php echo esc_url( $directions_url ); ?>" target="_blank" class="uplifted-button">
-					<span class="<?php uplifted_icon_class( 'location-directions' ); ?> uplifted-button-icon"></span>
+					<i class="genericon genericon-location"></i>
 					<?php _ex( 'Get Directions', 'location', 'uplifted' ); ?>
 				</a>
 			</div>
