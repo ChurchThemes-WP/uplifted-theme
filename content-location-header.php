@@ -35,7 +35,6 @@ extract( ctfw_location_data() );
   			<?php if ( $address ) : ?>
   				<li class="uplifted-location-address">
   				  <i class="genericon genericon-location"></i>
-  					<span class="<?php uplifted_icon_class( 'location-address' ); ?>"></span>
   					<?php echo nl2br( wptexturize( $address ) ); ?>
   				</li>
   			<?php endif; ?>
@@ -43,7 +42,6 @@ extract( ctfw_location_data() );
   			<?php if ( $phone ) : ?>
   				<li class="uplifted-location-phone">
   					<i class="genericon genericon-phone"></i>
-  					<span class="<?php uplifted_icon_class( 'location-phone' ); ?>"></span>
   					<?php echo esc_html( $phone ); ?>
   				</li>
   			<?php endif; ?>
@@ -51,7 +49,6 @@ extract( ctfw_location_data() );
   			<?php if ( $times ) : ?>
   				<li class="uplifted-location-times">
   					<i class="genericon genericon-time"></i>
-  					<span class="<?php uplifted_icon_class( 'location-times' ); ?>"></span>
   					<?php echo nl2br( wptexturize( $times ) ); ?>
   				</li>
   			<?php endif; ?>
