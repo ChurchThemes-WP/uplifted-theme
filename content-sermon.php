@@ -167,7 +167,7 @@ HTML;
   						if ( $video_player && 'audio' == $show_player ) : // have video player but currently showing audio
   							?><li id="uplifted-sermon-full-video-player-button" class="media-toggle">
   								<a href="?player=video">
-  									<span class="uplifted-button-icon <?php uplifted_icon_class( 'video-play' ); ?>"></span>
+  									<i class="genericon genericon-video"></i>
   									<?php _e( 'Show Video Player', 'uplifted' ); ?>
   								</a>
   							</li><?php
@@ -176,7 +176,7 @@ HTML;
   						if ( $audio_player && 'video' == $show_player ) : // have audio player but currently showing video
   							?><li id="uplifted-sermon-full-audio-player-button" class="media-toggle">
   								<a href="?player=audio">
-  									<span class="uplifted-button-icon <?php uplifted_icon_class( 'audio-play' ); ?>"></span>
+  									<i class="genericon genericon-audio"></i>
   									<?php _e( 'Show Audio Player', 'uplifted' ); ?>
   								</a>
   							</li><?php
@@ -194,7 +194,7 @@ HTML;
   						if ( $video_download_url ) :
   							?><li id="uplifted-sermon-full-video-download-button" class="media-download">
   								<a href="<?php echo esc_url( $video_download_url ); ?>" title="<?php echo esc_attr( __( 'Download Video', 'uplifted' ) ); ?>">
-  									<span class="uplifted-button-icon <?php uplifted_icon_class( 'video-download' ); ?>"></span>
+  									<i class="genericon genericon-cloud-download"></i>
   									<?php _e( 'Save Video', 'uplifted' ); ?>
   								</a>
   							</li><?php
@@ -203,7 +203,7 @@ HTML;
   						if ( $audio_download_url ) :
   							?><li id="uplifted-sermon-full-audio-download-button" class="media-download">
   								<a href="<?php echo esc_url( $audio_download_url ); ?>" title="<?php echo esc_attr( __( 'Download Audio', 'uplifted' ) ); ?>">
-  									<span class="uplifted-button-icon <?php uplifted_icon_class( 'audio-download' ); ?>"></span>
+  									<i class="genericon genericon-cloud-download"></i>
   									<?php _e( 'Save Audio', 'uplifted' ); ?>
   								</a>
   							</li><?php
@@ -212,7 +212,7 @@ HTML;
   						if ( $pdf_download_url ) :
   							?><li id="uplifted-sermon-full-pdf-download-button" class="media-download">
   								<a href="<?php echo esc_url( $pdf_download_url ); ?>" title="<?php echo esc_attr( __( 'Download PDF', 'uplifted' ) ); ?>">
-  									<span class="uplifted-button-icon <?php uplifted_icon_class( 'pdf-download' ); ?>"></span>
+  									<i class="genericon genericon-cloud-download"></i>
   									<?php _e( 'Save PDF', 'uplifted' ); ?>
   								</a
   							></li><?php
@@ -265,35 +265,35 @@ HTML;
       
       		<ul class="uplifted-entry-meta">
       
-      			<li class="uplifted-entry-date uplifted-content-icon">
-      				<span class="<?php uplifted_icon_class( 'entry-date' ); ?>"></span>
+      			<li class="uplifted-entry-date">
+      				<i class="genericon genericon-month"></i>
       				<time datetime="<?php esc_attr( the_time( 'c' ) ); ?>"><?php ctfw_post_date(); ?></time>
       			</li>
       
       			<?php if ( $speakers = get_the_term_list( $post->ID, 'ctc_sermon_speaker', '', __( ', ', 'uplifted' ) ) ) : ?>
-      				<li class="uplifted-entry-byline uplifted-sermon-speaker uplifted-content-icon">
-      					<span class="<?php uplifted_icon_class( 'sermon-speaker' ); ?>"></span>
+      				<li class="uplifted-entry-byline uplifted-sermon-speaker">
+      					<i class="genericon genericon-user"></i>
       					<?php echo $speakers; ?>
       				</li>
       			<?php endif; ?>
       
       			<?php if ( $topics = get_the_term_list( $post->ID, 'ctc_sermon_topic', '', __( ', ', 'uplifted' ) ) ) : ?>
-      				<li class="uplifted-entry-category uplifted-sermon-topic uplifted-content-icon">
-      					<span class="<?php uplifted_icon_class( 'sermon-topic' ); ?>"></span>
+      				<li class="uplifted-entry-category uplifted-sermon-topic">
+      					<i class="genericon genericon-category"></i>
       					<?php echo $topics; ?>
       				</li>
       			<?php endif; ?>
       
       			<?php if ( $books = get_the_term_list( $post->ID, 'ctc_sermon_book', '', __( ', ', 'uplifted' ) ) ) : ?>
-      				<li class="uplifted-entry-category uplifted-sermon-book uplifted-content-icon">
-      					<span class="<?php uplifted_icon_class( 'sermon-book' ); ?>"></span>
+      				<li class="uplifted-entry-category uplifted-sermon-book">
+      					<i class="genericon genericon-book"></i>
       					<?php echo $books; ?>
       				</li>
       			<?php endif; ?>
       
       			<?php if ( uplifted_show_comments() ) : ?>
-      				<li class="uplifted-entry-comments-link uplifted-content-icon">
-      					<span class="<?php uplifted_icon_class( 'comments-link' ); ?>"></span>
+      				<li class="uplifted-entry-comments-link">
+      					<i class="genericon genericon-comment"></i>
       					<?php uplifted_comments_link(); ?>
       				</li>
       			<?php endif; ?>

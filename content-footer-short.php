@@ -38,7 +38,7 @@ $post_type = get_post_type();
 		?><li>
 			<a href="<?php the_permalink(); ?>">
 				<?php if ( $has_full_text ) : ?>
-					<span class="uplifted-button-icon <?php uplifted_icon_class( 'read' ); ?>"></span>
+					<i class="genericon genericon-book"></i>
 					<?php _e( 'Read', 'uplifted' ); ?>
 				<?php else : ?>
 					<?php _ex( 'Details', 'sermon button', 'uplifted' ); ?>
@@ -49,7 +49,7 @@ $post_type = get_post_type();
 		if ( $video_player || $video_download_url ) :
 			?><li>
 				<a href="<?php the_permalink(); ?><?php if ( $video_player ) : ?>?player=video<?php endif; ?>">
-					<span class="uplifted-button-icon <?php uplifted_icon_class( 'video-play' ); ?>"></span>
+					<i class="genericon genericon-video"></i>
 					<?php _e( 'Watch', 'uplifted' ); ?>
 				</a>
 			</li><?php
@@ -58,7 +58,7 @@ $post_type = get_post_type();
 		if ( $audio_player || $audio_download_url ) :
 			?><li>
 				<a href="<?php the_permalink(); ?><?php if ( $audio_player ) : ?>?player=audio<?php endif; ?>">
-					<span class="uplifted-button-icon <?php uplifted_icon_class( 'audio-play' ); ?>"></span>
+					<i class="genericon genericon-audio"></i>
 					<?php _e( 'Listen', 'uplifted' ); ?>
 				</a>
 			</li><?php
@@ -67,7 +67,7 @@ $post_type = get_post_type();
 		if ( $pdf_download_url ) :
 			?><li>
 				<a href="<?php echo esc_url( $pdf_download_url ); ?>" title="<?php echo esc_attr( __( 'Download PDF', 'uplifted' ) ); ?>">
-					<span class="uplifted-button-icon <?php uplifted_icon_class( 'pdf-download' ); ?>"></span>
+					<i class="genericon genericon-cloud-download"></i>
 					<?php _e( 'PDF', 'uplifted' ); ?>
 				</a>
 			</li><?php

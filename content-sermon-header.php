@@ -28,35 +28,35 @@ if ( ! defined( 'ABSPATH' ) ) exit;
   
   		<ul class="uplifted-entry-meta">
   
-  			<li class="uplifted-entry-date uplifted-content-icon">
-  				<span class="<?php uplifted_icon_class( 'entry-date' ); ?>"></span>
+  			<li class="uplifted-entry-date">
+  				<i class="genericon genericon-month"></i>
   				<time datetime="<?php esc_attr( the_time( 'c' ) ); ?>"><?php ctfw_post_date(); ?></time>
   			</li>
   
   			<?php if ( $speakers = get_the_term_list( $post->ID, 'ctc_sermon_speaker', '', __( ', ', 'uplifted' ) ) ) : ?>
-  				<li class="uplifted-entry-byline uplifted-sermon-speaker uplifted-content-icon">
-  					<span class="<?php uplifted_icon_class( 'sermon-speaker' ); ?>"></span>
+  				<li class="uplifted-entry-byline uplifted-sermon-speaker">
+  					<i class="genericon genericon-user"></i>
   					<?php echo $speakers; ?>
   				</li>
   			<?php endif; ?>
   
   			<?php if ( $topics = get_the_term_list( $post->ID, 'ctc_sermon_topic', '', __( ', ', 'uplifted' ) ) ) : ?>
-  				<li class="uplifted-entry-category uplifted-sermon-topic uplifted-content-icon">
-  					<span class="<?php uplifted_icon_class( 'sermon-topic' ); ?>"></span>
+  				<li class="uplifted-entry-category uplifted-sermon-topic">
+  					<i class="genericon genericon-category"></i>
   					<?php echo $topics; ?>
   				</li>
   			<?php endif; ?>
   
   			<?php if ( $books = get_the_term_list( $post->ID, 'ctc_sermon_book', '', __( ', ', 'uplifted' ) ) ) : ?>
-  				<li class="uplifted-entry-category uplifted-sermon-book uplifted-content-icon">
-  					<span class="<?php uplifted_icon_class( 'sermon-book' ); ?>"></span>
+  				<li class="uplifted-entry-category uplifted-sermon-book">
+  					<i class="genericon genericon-book"></i>
   					<?php echo $books; ?>
   				</li>
   			<?php endif; ?>
   
   			<?php if ( uplifted_show_comments() ) : ?>
-  				<li class="uplifted-entry-comments-link uplifted-content-icon">
-  					<span class="<?php uplifted_icon_class( 'comments-link' ); ?>"></span>
+  				<li class="uplifted-entry-comments-link">
+  					<i class="genericon genericon-comment"></i>
   					<?php uplifted_comments_link(); ?>
   				</li>
   			<?php endif; ?>
