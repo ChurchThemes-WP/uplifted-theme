@@ -56,7 +56,8 @@
   }
 
   a {
-    //color: lighten($secondary-color, 20%);
+    color: $body-font-color;
+    border-bottom: 1px solid $panel-border-color;
 
     &:hover {
       color: $primary-color;
@@ -64,7 +65,7 @@
   }
 
   .genericon {
-    font-size: 14px;
+    font-size: 1.3em;
   }
 }
 
