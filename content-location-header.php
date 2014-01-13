@@ -33,21 +33,24 @@ extract( ctfw_location_data() );
   		<ul class="uplifted-entry-meta">
   
   			<?php if ( $address ) : ?>
-  				<li class="uplifted-location-address uplifted-content-icon">
+  				<li class="uplifted-location-address">
+  				  <i class="genericon genericon-location"></i>
   					<span class="<?php uplifted_icon_class( 'location-address' ); ?>"></span>
   					<?php echo nl2br( wptexturize( $address ) ); ?>
   				</li>
   			<?php endif; ?>
   
   			<?php if ( $phone ) : ?>
-  				<li class="uplifted-location-phone uplifted-content-icon">
+  				<li class="uplifted-location-phone">
+  					<i class="genericon genericon-phone"></i>
   					<span class="<?php uplifted_icon_class( 'location-phone' ); ?>"></span>
   					<?php echo esc_html( $phone ); ?>
   				</li>
   			<?php endif; ?>
   
   			<?php if ( $times ) : ?>
-  				<li class="uplifted-location-times uplifted-content-icon">
+  				<li class="uplifted-location-times">
+  					<i class="genericon genericon-time"></i>
   					<span class="<?php uplifted_icon_class( 'location-times' ); ?>"></span>
   					<?php echo nl2br( wptexturize( $times ) ); ?>
   				</li>
