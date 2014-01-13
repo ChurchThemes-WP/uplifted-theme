@@ -44,7 +44,7 @@ extract( ctfw_person_data() );
   		  
   		  <?php if ( $phone ) : ?>
   		    <li class="uplifted-person-phone entry-meta-item">
-  					<i class="genericon genericon-location"></i>
+  					<i class="genericon genericon-phone"></i>
   					<?php echo esc_html( $phone ); ?>
   				</li>
   		  <?php endif; ?>
@@ -54,7 +54,7 @@ extract( ctfw_person_data() );
   
   				<?php if ( $email ) : ?>
   				<li class="uplifted-person-email entry-meta-item">
-  					<i class="genericon genericon-location"></i>
+  					<i class="genericon genericon-mail"></i>
   					<a href="mailto:<?php echo antispambot( $email, true ); ?>"><?php echo antispambot( $email ); ?></a>
   				</li>
   				<?php endif; ?>
