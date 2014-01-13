@@ -2655,33 +2655,37 @@ small.error {
   /* line 53, assets/sass/_post.scss */
   .uplifted-entry-meta li {
     float: left;
-    margin-right: 1em; }
-  /* line 58, assets/sass/_post.scss */
+    margin-right: 2em;
+    padding-left: 2em;
+    position: relative; }
+  /* line 60, assets/sass/_post.scss */
   .uplifted-entry-meta a {
     color: #3c4542;
     border-bottom: 1px solid #e5e6ea; }
-    /* line 62, assets/sass/_post.scss */
+    /* line 64, assets/sass/_post.scss */
     .uplifted-entry-meta a:hover {
       color: #0fcfc5; }
-  /* line 67, assets/sass/_post.scss */
+  /* line 69, assets/sass/_post.scss */
   .uplifted-entry-meta .genericon {
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    position: absolute;
+    left: 0; }
 
-/* line 72, assets/sass/_post.scss */
+/* line 76, assets/sass/_post.scss */
 .uplifted-entry-title {
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 0; }
   @media screen and (min-width: 568px) {
-    /* line 72, assets/sass/_post.scss */
+    /* line 76, assets/sass/_post.scss */
     .uplifted-entry-title {
       font-size: 2.125em; } }
 
-/* line 83, assets/sass/_post.scss */
+/* line 87, assets/sass/_post.scss */
 .uplifted-author-box {
   margin: 1.5em 0;
   overflow: auto; }
-  /* line 87, assets/sass/_post.scss */
+  /* line 91, assets/sass/_post.scss */
   .uplifted-author-box .uplifted-author-avatar {
     float: left;
     margin: 0 1em 1em 0;
@@ -2691,12 +2695,12 @@ small.error {
     -ms-border-radius: 1000px;
     -o-border-radius: 1000px;
     border-radius: 1000px; }
-  /* line 96, assets/sass/_post.scss */
+  /* line 100, assets/sass/_post.scss */
   .uplifted-author-box .uplifted-author-content h1 {
     font-size: 1.2em; }
 
 /* Attachment Post */
-/* line 106, assets/sass/_post.scss */
+/* line 110, assets/sass/_post.scss */
 .type-attachment .uplifted-entry-attachment {
   margin: 0 -24px; }
 
