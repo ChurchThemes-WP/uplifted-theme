@@ -27,37 +27,41 @@
 
 .single-ctc_sermon  {
   
-  // sermon title, date, and speaker
-  .uplifted-entry-title-meta {
-    text-align: center;
-    margin: .5em 0;
-    
-    @media screen and (min-width: $small-screen) {
-  	  font-size: 1.2em;
-  	}
-    
-    ul {
-      display: inline-block;
-      font-weight: bold;
+  .uplifted-entry-header {
+  
+    // sermon title, date, and speaker
+    .uplifted-entry-title-meta {
+      text-align: center;
+      margin: .5em 0;
       
-      li {
-        border-right: 3px solid $body-font-color;
-        margin-right: .8em;
-        padding-right: .8em;
+      @media screen and (min-width: $small-screen) {
+    	  font-size: 1.2em;
+    	}
+      
+      ul {
+        display: inline-block;
+        font-weight: bold;
         
-        &:last-child {
-          border: none;
-        }
-        
-        a {
-          color: $body-font-color;
+        li {
+          margin-right: 0;
+          padding: 0 .3em;
           
-          &:hover {
-            color: $secondary-color;
+          &:first-child:after {
+            content: " | ";
+            padding-left: .3em;
+          }
+          
+          a {
+            color: $body-font-color;
+            border: none;
+            
+            &:hover {
+              color: $secondary-color;
+            }
           }
         }
-      }
-    } 
+      } 
+    }
   }
   
   // single sermon main content area
