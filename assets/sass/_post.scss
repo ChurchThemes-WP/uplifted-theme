@@ -90,11 +90,31 @@
 // Post Footer - usually buttons
 .uplifted-entry-footer {
   
+
+  .view-details {
+    display: inline-block;
+    padding: .75em 0;
+    //@include vertical-align;
+  }
+  
   // tweak icons in footer buttons
   .genericon {
     font-size: 1.3em;
     position: relative;
     top: -1px;
+    margin-right: .3em;
+  }
+  
+  .genericon-location {
+    top: auto;
+  }
+  
+  .genericon-cloud-download {
+    top: -2px;
+  }
+  
+  .genericon-standard {
+    font-size: 1.5em;
   }
 }
 
