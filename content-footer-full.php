@@ -46,7 +46,7 @@ elseif ( is_singular( 'ctc_sermon' ) ) {
 if ( ( ctfw_is_multipage() && ! post_password_required() ) || ! empty( $term_lists ) || ctfw_can_edit_post() ) :
 ?>
 
-	<footer class="uplifted-entry-footer uplifted-clearfix">
+	<footer class="uplifted-entry-footer clearfix">
 
 		<?php
 		// "Pages: 1 2 3" when <!--nextpage--> used

@@ -13,7 +13,7 @@ $post_type = get_post_type();
 
 ?>
 
-<footer class="uplifted-entry-footer uplifted-clearfix">
+<footer class="uplifted-entry-footer clearfix">
 
 	<?php
 	// Sermon Buttons
@@ -158,7 +158,7 @@ $post_type = get_post_type();
 
 	?>
 
-		<div class="uplifted-entry-footer-item uplifted-clearfix">
+		<div class="uplifted-entry-footer-item clearfix">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="uplifted-button">
 
 				<?php
