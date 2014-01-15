@@ -96,13 +96,11 @@ HTML;
     		<ul class="uplifted-entry-meta">
     
     			<li class="uplifted-entry-date uplifted-content-icon">
-    				<span class="<?php uplifted_icon_class( 'entry-date' ); ?>"></span>
     				<time datetime="<?php esc_attr( the_time( 'c' ) ); ?>"><?php ctfw_post_date(); ?></time>
     			</li>
     
     			<?php if ( $speakers = get_the_term_list( $post->ID, 'ctc_sermon_speaker', '', __( ', ', 'uplifted' ) ) ) : ?>
     				<li class="uplifted-entry-byline uplifted-sermon-speaker uplifted-content-icon">
-    					<span class="<?php uplifted_icon_class( 'sermon-speaker' ); ?>"></span>
     					<?php echo $speakers; ?>
     				</li>
     			<?php endif; ?>
