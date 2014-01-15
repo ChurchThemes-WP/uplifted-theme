@@ -871,7 +871,7 @@ cite {
   .show-for-print {
     display: inherit !important; } }
 /* Buttons */
-/* line 173, assets/sass/_buttons.scss */
+/* line 174, assets/sass/_buttons.scss */
 button, .button {
   cursor: "pointer";
   font-family: inherit;
@@ -884,86 +884,86 @@ button, .button {
   display: inline-block;
   padding-top: 0.75em;
   padding-right: 1.5em;
-  padding-bottom: 0.8125em;
+  padding-bottom: 0.75em;
   padding-left: 1.5em;
   font-size: 0.875em;
   background-color: #0fcfc5;
   border-color: #0c9f98;
   color: white; }
-  /* line 123, assets/sass/_buttons.scss */
+  /* line 124, assets/sass/_buttons.scss */
   button:hover, button:focus, .button:hover, .button:focus {
     background-color: #0fcfc5; }
-  /* line 135, assets/sass/_buttons.scss */
+  /* line 136, assets/sass/_buttons.scss */
   button:hover, button:focus, .button:hover, .button:focus {
     color: white; }
-  /* line 178, assets/sass/_buttons.scss */
+  /* line 179, assets/sass/_buttons.scss */
   button.secondary, .button.secondary {
     background-color: #f6653c;
     border-color: #f43e0b;
     color: white; }
-    /* line 123, assets/sass/_buttons.scss */
+    /* line 124, assets/sass/_buttons.scss */
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
       background-color: #0fcfc5; }
-    /* line 135, assets/sass/_buttons.scss */
+    /* line 136, assets/sass/_buttons.scss */
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
       color: white; }
-  /* line 179, assets/sass/_buttons.scss */
+  /* line 180, assets/sass/_buttons.scss */
   button.success, .button.success {
     background-color: #9fe150;
     border-color: #87d925;
     color: white; }
-    /* line 123, assets/sass/_buttons.scss */
+    /* line 124, assets/sass/_buttons.scss */
     button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
       background-color: #0fcfc5; }
-    /* line 135, assets/sass/_buttons.scss */
+    /* line 136, assets/sass/_buttons.scss */
     button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
       color: white; }
-  /* line 180, assets/sass/_buttons.scss */
+  /* line 181, assets/sass/_buttons.scss */
   button.alert, .button.alert {
     background-color: #d15327;
     border-color: #a6421f;
     color: white; }
-    /* line 123, assets/sass/_buttons.scss */
+    /* line 124, assets/sass/_buttons.scss */
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
       background-color: #0fcfc5; }
-    /* line 135, assets/sass/_buttons.scss */
+    /* line 136, assets/sass/_buttons.scss */
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
       color: white; }
-  /* line 182, assets/sass/_buttons.scss */
+  /* line 183, assets/sass/_buttons.scss */
   button.large, .button.large {
     padding-top: 1em;
     padding-right: 2em;
-    padding-bottom: 1.0625em;
+    padding-bottom: 1em;
     padding-left: 2em;
     font-size: 1.5em; }
-  /* line 183, assets/sass/_buttons.scss */
+  /* line 184, assets/sass/_buttons.scss */
   button.small, .button.small {
     padding-top: 0.5625em;
     padding-right: 1.125em;
-    padding-bottom: 0.625em;
+    padding-bottom: 0.5625em;
     padding-left: 1.125em;
     font-size: 0.75em; }
-  /* line 184, assets/sass/_buttons.scss */
+  /* line 185, assets/sass/_buttons.scss */
   button.tiny, .button.tiny {
     padding-top: 0.4375em;
     padding-right: 0.875em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.4375em;
     padding-left: 0.875em;
     font-size: 0.625em; }
-  /* line 185, assets/sass/_buttons.scss */
+  /* line 186, assets/sass/_buttons.scss */
   button.expand, .button.expand {
     padding-right: 0px;
     padding-left: 0px;
     width: 100%; }
-  /* line 187, assets/sass/_buttons.scss */
+  /* line 188, assets/sass/_buttons.scss */
   button.left-align, .button.left-align {
     text-align: left;
     text-indent: 0.75em; }
-  /* line 188, assets/sass/_buttons.scss */
+  /* line 189, assets/sass/_buttons.scss */
   button.right-align, .button.right-align {
     text-align: right;
     padding-right: 0.75em; }
-  /* line 190, assets/sass/_buttons.scss */
+  /* line 191, assets/sass/_buttons.scss */
   button.disabled, button[disabled], .button.disabled, .button[disabled] {
     background-color: #0fcfc5;
     border-color: #0c9f98;
@@ -972,16 +972,16 @@ button, .button {
     opacity: 0.6;
     -webkit-box-shadow: none;
     box-shadow: none; }
-    /* line 123, assets/sass/_buttons.scss */
+    /* line 124, assets/sass/_buttons.scss */
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       background-color: #0fcfc5; }
-    /* line 135, assets/sass/_buttons.scss */
+    /* line 136, assets/sass/_buttons.scss */
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       color: white; }
-    /* line 148, assets/sass/_buttons.scss */
+    /* line 149, assets/sass/_buttons.scss */
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       background-color: #0fcfc5; }
-    /* line 191, assets/sass/_buttons.scss */
+    /* line 192, assets/sass/_buttons.scss */
     button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
       background-color: #f6653c;
       border-color: #f43e0b;
@@ -990,16 +990,16 @@ button, .button {
       opacity: 0.6;
       -webkit-box-shadow: none;
       box-shadow: none; }
-      /* line 123, assets/sass/_buttons.scss */
+      /* line 124, assets/sass/_buttons.scss */
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
         background-color: #0fcfc5; }
-      /* line 135, assets/sass/_buttons.scss */
+      /* line 136, assets/sass/_buttons.scss */
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
         color: white; }
-      /* line 148, assets/sass/_buttons.scss */
+      /* line 149, assets/sass/_buttons.scss */
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
         background-color: #f6653c; }
-    /* line 192, assets/sass/_buttons.scss */
+    /* line 193, assets/sass/_buttons.scss */
     button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
       background-color: #9fe150;
       border-color: #87d925;
@@ -1008,16 +1008,16 @@ button, .button {
       opacity: 0.6;
       -webkit-box-shadow: none;
       box-shadow: none; }
-      /* line 123, assets/sass/_buttons.scss */
+      /* line 124, assets/sass/_buttons.scss */
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
         background-color: #0fcfc5; }
-      /* line 135, assets/sass/_buttons.scss */
+      /* line 136, assets/sass/_buttons.scss */
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
         color: white; }
-      /* line 148, assets/sass/_buttons.scss */
+      /* line 149, assets/sass/_buttons.scss */
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
         background-color: #9fe150; }
-    /* line 193, assets/sass/_buttons.scss */
+    /* line 194, assets/sass/_buttons.scss */
     button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
       background-color: #d15327;
       border-color: #a6421f;
@@ -1026,39 +1026,39 @@ button, .button {
       opacity: 0.6;
       -webkit-box-shadow: none;
       box-shadow: none; }
-      /* line 123, assets/sass/_buttons.scss */
+      /* line 124, assets/sass/_buttons.scss */
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         background-color: #0fcfc5; }
-      /* line 135, assets/sass/_buttons.scss */
+      /* line 136, assets/sass/_buttons.scss */
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         color: white; }
-      /* line 148, assets/sass/_buttons.scss */
+      /* line 149, assets/sass/_buttons.scss */
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         background-color: #d15327; }
 
-/* line 198, assets/sass/_buttons.scss */
+/* line 199, assets/sass/_buttons.scss */
 button, .button {
   padding-top: 0.8125em;
   padding-bottom: 0.75em;
   -webkit-appearance: none; }
-  /* line 200, assets/sass/_buttons.scss */
+  /* line 201, assets/sass/_buttons.scss */
   button.tiny, .button.tiny {
     padding-top: 0.5em;
     padding-bottom: 0.4375em;
     -webkit-appearance: none; }
-  /* line 201, assets/sass/_buttons.scss */
+  /* line 202, assets/sass/_buttons.scss */
   button.small, .button.small {
     padding-top: 0.625em;
     padding-bottom: 0.5625em;
     -webkit-appearance: none; }
-  /* line 202, assets/sass/_buttons.scss */
+  /* line 203, assets/sass/_buttons.scss */
   button.large, .button.large {
     padding-top: 1.03125em;
     padding-bottom: 1.03125em;
     -webkit-appearance: none; }
 
 @media only screen {
-  /* line 208, assets/sass/_buttons.scss */
+  /* line 209, assets/sass/_buttons.scss */
   button, .button {
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
@@ -1069,16 +1069,16 @@ button, .button {
     button:active, .button:active {
       -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
       box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
-    /* line 216, assets/sass/_buttons.scss */
+    /* line 217, assets/sass/_buttons.scss */
     button.radius, .button.radius {
       -webkit-border-radius: 4px;
       border-radius: 4px; }
-    /* line 217, assets/sass/_buttons.scss */
+    /* line 218, assets/sass/_buttons.scss */
     button.round, .button.round {
       -webkit-border-radius: 1000px;
       border-radius: 1000px; } }
 @media only screen and (min-width: 768px) {
-  /* line 225, assets/sass/_buttons.scss */
+  /* line 226, assets/sass/_buttons.scss */
   button, .button {
     display: inline-block; } }
 /* Clearing */
@@ -2616,7 +2616,7 @@ small.error {
     width: 33.33333%;
     float: left; } }
 /* Post */
-/* line 16, assets/sass/_post.scss */
+/* line 24, assets/sass/_post.scss */
 #uplifted-loop-after-content .hentry,
 .single #uplifted-content .hentry,
 .archive .hentry {
@@ -2624,10 +2624,10 @@ small.error {
   background-color: white;
   border: 1px solid #e5e6ea; }
 
-/* line 23, assets/sass/_post.scss */
+/* line 31, assets/sass/_post.scss */
 .uplifted-entry-image {
   max-width: 100%; }
-  /* line 26, assets/sass/_post.scss */
+  /* line 34, assets/sass/_post.scss */
   .uplifted-entry-image img {
     border: none;
     padding: 0;
@@ -2637,50 +2637,56 @@ small.error {
     height: auto;
     display: block; }
 
-/* line 38, assets/sass/_post.scss */
+/* line 46, assets/sass/_post.scss */
 .uplifted-content-meta {
   padding: 24px; }
 
-/* line 42, assets/sass/_post.scss */
+/* line 50, assets/sass/_post.scss */
 .uplifted-entry-meta {
   list-style: none;
   position: relative;
   overflow: hidden;
   margin-left: 0; }
-  /* line 49, assets/sass/_post.scss */
+  /* line 56, assets/sass/_post.scss */
   .uplifted-entry-meta li {
     float: left;
     margin: 0 2em .5em 0;
     padding-left: 2em;
     position: relative; }
-  /* line 56, assets/sass/_post.scss */
+  /* line 63, assets/sass/_post.scss */
   .uplifted-entry-meta a {
     color: #3c4542;
     border-bottom: 1px solid #e5e6ea; }
-    /* line 60, assets/sass/_post.scss */
+    /* line 67, assets/sass/_post.scss */
     .uplifted-entry-meta a:hover {
       color: #0fcfc5; }
-  /* line 65, assets/sass/_post.scss */
+  /* line 73, assets/sass/_post.scss */
   .uplifted-entry-meta .genericon {
     font-size: 1.3em;
     position: absolute;
     left: 0;
     top: -2px; }
 
-/* line 73, assets/sass/_post.scss */
+/* line 81, assets/sass/_post.scss */
 .uplifted-entry-title {
   font-weight: 400;
   line-height: 1.2; }
   @media screen and (min-width: 568px) {
-    /* line 73, assets/sass/_post.scss */
+    /* line 81, assets/sass/_post.scss */
     .uplifted-entry-title {
       font-size: 2.125em; } }
 
-/* line 84, assets/sass/_post.scss */
+/* line 94, assets/sass/_post.scss */
+.uplifted-entry-footer .genericon {
+  font-size: 1.3em;
+  position: relative;
+  top: -1px; }
+
+/* line 109, assets/sass/_post.scss */
 .uplifted-author-box {
   margin: 1.5em 0;
   overflow: auto; }
-  /* line 88, assets/sass/_post.scss */
+  /* line 113, assets/sass/_post.scss */
   .uplifted-author-box .uplifted-author-avatar {
     float: left;
     margin: 0 1em 1em 0;
@@ -2690,12 +2696,12 @@ small.error {
     -ms-border-radius: 1000px;
     -o-border-radius: 1000px;
     border-radius: 1000px; }
-  /* line 97, assets/sass/_post.scss */
+  /* line 122, assets/sass/_post.scss */
   .uplifted-author-box .uplifted-author-content h1 {
     font-size: 1.2em; }
 
 /* Attachment Post */
-/* line 107, assets/sass/_post.scss */
+/* line 132, assets/sass/_post.scss */
 .type-attachment .uplifted-entry-attachment {
   margin: 0 -24px; }
 
@@ -4477,40 +4483,41 @@ img.alignright {
   background-color: transparent;
   border: none; }
 
-/* line 31, assets/sass/_sermons.scss */
-.single-ctc_sermon .uplifted-entry-title-meta {
+/* line 33, assets/sass/_sermons.scss */
+.single-ctc_sermon .uplifted-entry-header .uplifted-entry-title-meta {
   text-align: center;
   margin: .5em 0; }
   @media screen and (min-width: 768px) {
-    /* line 31, assets/sass/_sermons.scss */
-    .single-ctc_sermon .uplifted-entry-title-meta {
+    /* line 33, assets/sass/_sermons.scss */
+    .single-ctc_sermon .uplifted-entry-header .uplifted-entry-title-meta {
       font-size: 1.2em; } }
-  /* line 39, assets/sass/_sermons.scss */
-  .single-ctc_sermon .uplifted-entry-title-meta ul {
+  /* line 41, assets/sass/_sermons.scss */
+  .single-ctc_sermon .uplifted-entry-header .uplifted-entry-title-meta ul {
     display: inline-block;
     font-weight: bold; }
-    /* line 43, assets/sass/_sermons.scss */
-    .single-ctc_sermon .uplifted-entry-title-meta ul li {
-      border-right: 3px solid #3c4542;
-      margin-right: .8em;
-      padding-right: .8em; }
-      /* line 48, assets/sass/_sermons.scss */
-      .single-ctc_sermon .uplifted-entry-title-meta ul li:last-child {
+    /* line 45, assets/sass/_sermons.scss */
+    .single-ctc_sermon .uplifted-entry-header .uplifted-entry-title-meta ul li {
+      margin-right: 0;
+      padding: 0 .3em; }
+      /* line 49, assets/sass/_sermons.scss */
+      .single-ctc_sermon .uplifted-entry-header .uplifted-entry-title-meta ul li:first-child:after {
+        content: " | ";
+        padding-left: .3em; }
+      /* line 54, assets/sass/_sermons.scss */
+      .single-ctc_sermon .uplifted-entry-header .uplifted-entry-title-meta ul li a {
+        color: #3c4542;
         border: none; }
-      /* line 52, assets/sass/_sermons.scss */
-      .single-ctc_sermon .uplifted-entry-title-meta ul li a {
-        color: #3c4542; }
-        /* line 55, assets/sass/_sermons.scss */
-        .single-ctc_sermon .uplifted-entry-title-meta ul li a:hover {
+        /* line 58, assets/sass/_sermons.scss */
+        .single-ctc_sermon .uplifted-entry-header .uplifted-entry-title-meta ul li a:hover {
           color: #f6653c; }
-/* line 64, assets/sass/_sermons.scss */
+/* line 68, assets/sass/_sermons.scss */
 .single-ctc_sermon .single-sermon-content {
   padding-left: 0; }
   @media screen and (max-width: 768px) {
-    /* line 64, assets/sass/_sermons.scss */
+    /* line 68, assets/sass/_sermons.scss */
     .single-ctc_sermon .single-sermon-content {
       padding-right: 0; } }
-/* line 74, assets/sass/_sermons.scss */
+/* line 78, assets/sass/_sermons.scss */
 .single-ctc_sermon .uplifted-entry-content {
   background-color: white;
   border: 1px solid #e5e6ea;
@@ -4518,14 +4525,14 @@ img.alignright {
   margin-bottom: 1.5em; }
 
 /* Single Sermon Faux Sidebar */
-/* line 90, assets/sass/_sermons.scss */
+/* line 94, assets/sass/_sermons.scss */
 .single-sermon-meta-sidebar {
   padding-right: 0; }
   @media screen and (max-width: 768px) {
-    /* line 90, assets/sass/_sermons.scss */
+    /* line 94, assets/sass/_sermons.scss */
     .single-sermon-meta-sidebar {
       display: none; } }
-  /* line 98, assets/sass/_sermons.scss */
+  /* line 102, assets/sass/_sermons.scss */
   .single-sermon-meta-sidebar .uplifted-entry-title-meta {
     text-align: left;
     margin: 0 0 1.5em;
@@ -4533,35 +4540,35 @@ img.alignright {
     background-color: white;
     border: 1px solid #e5e6ea;
     box-shadow: 4px 4px 0 0 #e5e6ea; }
-    /* line 108, assets/sass/_sermons.scss */
+    /* line 112, assets/sass/_sermons.scss */
     .single-sermon-meta-sidebar .uplifted-entry-title-meta ul li {
       float: none;
       border: none; }
-  /* line 115, assets/sass/_sermons.scss */
+  /* line 119, assets/sass/_sermons.scss */
   .single-sermon-meta-sidebar h3 {
     color: #f6653c; }
 
 /* Sermon Media Module */
-/* line 126, assets/sass/_sermons.scss */
+/* line 130, assets/sass/_sermons.scss */
 .uplifted-list-buttons-container {
   margin: .5em 0 2em; }
 
-/* line 130, assets/sass/_sermons.scss */
+/* line 134, assets/sass/_sermons.scss */
 .uplifted-list-buttons {
   margin: 0;
   list-style: none;
   display: inline; }
-  /* line 135, assets/sass/_sermons.scss */
+  /* line 139, assets/sass/_sermons.scss */
   .uplifted-list-buttons:last-child {
     float: right; }
-  /* line 139, assets/sass/_sermons.scss */
+  /* line 143, assets/sass/_sermons.scss */
   .uplifted-list-buttons li {
     display: inline-block;
     margin-right: .5em; }
-    /* line 143, assets/sass/_sermons.scss */
+    /* line 147, assets/sass/_sermons.scss */
     .uplifted-list-buttons li:last-child {
       margin-right: 0; }
-    /* line 148, assets/sass/_sermons.scss */
+    /* line 152, assets/sass/_sermons.scss */
     .uplifted-list-buttons li a {
       cursor: "pointer";
       font-family: inherit;
@@ -4574,7 +4581,7 @@ img.alignright {
       display: inline-block;
       padding-top: 0.75em;
       padding-right: 1.5em;
-      padding-bottom: 0.8125em;
+      padding-bottom: 0.75em;
       padding-left: 1.5em;
       font-size: 0.875em;
       background-color: #3c4542;
@@ -4582,15 +4589,15 @@ img.alignright {
       color: white;
       -webkit-border-radius: 4px;
       border-radius: 4px; }
-      /* line 123, assets/sass/_buttons.scss */
+      /* line 124, assets/sass/_buttons.scss */
       .uplifted-list-buttons li a:hover, .uplifted-list-buttons li a:focus {
         background-color: #0fcfc5; }
-      /* line 135, assets/sass/_buttons.scss */
+      /* line 136, assets/sass/_buttons.scss */
       .uplifted-list-buttons li a:hover, .uplifted-list-buttons li a:focus {
         color: white; }
 
 @media screen and (min-width: 768px) {
-  /* line 156, assets/sass/_sermons.scss */
+  /* line 160, assets/sass/_sermons.scss */
   .single-ctc_sermon #comments,
   .uplifted-nav-left-right {
     position: relative;
