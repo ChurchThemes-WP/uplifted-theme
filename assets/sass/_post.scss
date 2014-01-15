@@ -43,16 +43,12 @@
   list-style: none;
   position: relative;
   overflow: hidden;
-  padding: ($panel-margin-bottom / 2.5) 0 $panel-margin-bottom 0;
-  margin: 0;
-  
-  @media screen and (max-width: ($small-screen) ) {
-	  font-size: .8em;
-	}
+  //padding: ($panel-margin-bottom / 2.5) 0 $panel-margin-bottom 0;
+  margin-left: 0;
 
   li {
     float: left;
-    margin-right: 2em;
+    margin: 0 2em .5em 0;
     padding-left: 2em;
     position: relative;
   }
@@ -70,13 +66,14 @@
     font-size: 1.3em;
     position: absolute;
     left: 0;
+    top: -2px;
   }
 }
 
 .uplifted-entry-title {
   font-weight: 400;
   line-height: 1.2;
-  margin-bottom: 0;
+  //margin-bottom: 0;
   
   @media screen and (min-width: ($small-screen - 200px) ) {
 	  font-size: $h1-font-size;
