@@ -69,7 +69,8 @@ $button-disabled-opacity: 0.6 !default;
   @if $padding {
     padding-top: $padding;
     padding-#{$opposite-direction}: $padding * 2;
-    padding-bottom: $padding + emCalc(1);
+    //padding-bottom: $padding + emCalc(1);
+    padding-bottom: $padding;
     padding-#{$default-float}: $padding * 2;
 
     // We control the font-size based on mixin input.
