@@ -86,9 +86,12 @@ $post_type = get_post_type();
 		extract( ctfw_location_data() );
 
 	?>
+	
+	<a class="view-details" href="<?php the_permalink(); ?>"><?php _e( 'View Details &rarr;', 'uplifted' ); ?></a>
+	
 	<ul class="uplifted-entry-footer-item uplifted-list-buttons">
 
-		<li><a href="<?php the_permalink(); ?>"><?php _e( 'Location Details', 'uplifted' ); ?></a></li><?php
+		<?php
 
 		// Make sure there is no whitespace between items since they are inline-block
 
@@ -109,9 +112,12 @@ $post_type = get_post_type();
 		extract( ctfw_event_data() );
 
 	?>
+	
+	<a class="view-details" href="<?php the_permalink(); ?>"><?php _e( 'View Details &rarr;', 'uplifted' ); ?></a>
+	
 	<ul class="uplifted-entry-footer-item uplifted-list-buttons">
 
-		<li><a href="<?php the_permalink(); ?>"><?php _e( 'Event Details', 'uplifted' ); ?></a></li><?php
+		<?php
 
 		// Make sure there is no whitespace between items since they are inline-block
 
