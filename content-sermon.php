@@ -321,7 +321,7 @@ else :
 		<?php get_template_part( 'content-sermon-header' ); ?>
 
 		<?php if ( ctfw_has_excerpt() || ctfw_has_more_tag() ) : ?>
-			<div class="uplifted-entry-content uplifted-clearfix">
+			<div class="uplifted-entry-content clearfix">
 				<?php uplifted_short_content(); // output excerpt or post content up until <!--more--> quicktag used ?>
 			</div>
 		<?php endif; ?>
