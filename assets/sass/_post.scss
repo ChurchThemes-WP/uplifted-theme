@@ -12,20 +12,45 @@
 //   footer - .uplifted-entry-footer
 
 
+//
+// Global .hentry styles - this is for all post
+// and article types, some styles will be overwritten
+// below in speacial cases
+//
+#uplifted-content .hentry {
+  margin-bottom: $panel-margin-bottom;
+  background-color: $panel-bg;
+  border: $panel-border;
+  padding: $panel-padding;
+}
+
+// on pages with a double loop we need to negate the container
+// padding to achieve the style we want - Sermons, People, Events, Locations
+#uplifted-loop-after-content .hentry {
+  padding: 0;
+}
+// due to the double loop, ChurchTheme template pages we need to pay
+// special attention to the loop container, negate the .hentry styles
+// of the page article but keep the Post .hentry intact
+.page-template-page-templatespeople-php,
+.page-template-page-templatessermons-php,
+.page-template-page-templateslocations-php,
+.page-template-page-templatesevents-upcoming-php,
+.page-template-page-templatesevents-past-php {
+
+  #wrapper .uplifted-entry-full.hentry {
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+}
+
 // Meta Entry Widget 
 //
 // global styles for each post type including
 // meta for people, sermons, etc
 //
-
-// post container
-#uplifted-loop-after-content .hentry,
-.single #uplifted-content .hentry,
-.archive .hentry {
-  margin-bottom: $panel-margin-bottom;
-  background-color: $panel-bg;
-  border: $panel-border;
-}
 
 // Feature Image of a Post
 .uplifted-entry-image {
@@ -94,7 +119,6 @@
   .view-details {
     display: inline-block;
     padding: .75em 0;
-    //@include vertical-align;
   }
   
   // tweak icons in footer buttons
