@@ -26,7 +26,8 @@
 
 // on pages with a double loop we need to negate the container
 // padding to achieve the style we want - Sermons, People, Events, Locations
-#uplifted-loop-after-content .hentry {
+#uplifted-loop-after-content .hentry,
+.blog #wrapper .hentry {
   padding: 0;
 }
 // due to the double loop, ChurchTheme template pages we need to pay
