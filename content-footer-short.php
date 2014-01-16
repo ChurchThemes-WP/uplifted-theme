@@ -29,22 +29,24 @@ $post_type = get_post_type();
 		extract( ctfw_sermon_data() );
 
 	?>
+	
+	<a class="view-details" href="<?php the_permalink(); ?>">
+				<?php if ( $has_full_text ) : ?>
+					<?php _e( 'Read Full &rarr;', 'uplifted' ); ?>
+				<?php else : ?>
+					<?php _ex( 'View Details &rarr;', 'sermon button', 'uplifted' ); ?>
+				<?php endif; ?>
+			</a>
+			
 	<ul class="uplifted-entry-footer-item uplifted-list-buttons">
 
 		<?php
 
 		// Make sure there is no whitespace between items since they are inline-block
 
-		?><li>
-			<a href="<?php the_permalink(); ?>">
-				<?php if ( $has_full_text ) : ?>
-					<i class="genericon genericon-book"></i>
-					<?php _e( 'Read', 'uplifted' ); ?>
-				<?php else : ?>
-					<?php _ex( 'Details', 'sermon button', 'uplifted' ); ?>
-				<?php endif; ?>
-			</a>
-		</li><?php
+		?>
+		
+		<?php
 
 		if ( $video_player || $video_download_url ) :
 			?><li>
