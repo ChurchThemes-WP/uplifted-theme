@@ -4522,12 +4522,9 @@ body.term-post-format-gallery #content > .panel {
   .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets:after {
     clear: both; }
 /* line 159, assets/sass/_pages.scss */
-.page-template-page-templateshomepage-php #ctcom-home-highlights {
-  margin-bottom: 1.875em; }
-/* line 163, assets/sass/_pages.scss */
 .page-template-page-templateshomepage-php #uplifted-intro {
   margin-bottom: 1.875em; }
-/* line 167, assets/sass/_pages.scss */
+/* line 163, assets/sass/_pages.scss */
 .page-template-page-templateshomepage-php #uplifted-slider,
 .page-template-page-templateshomepage-php #uplifted-intro-inner {
   position: relative;
@@ -4535,6 +4532,9 @@ body.term-post-format-gallery #content > .panel {
   padding-right: 0.9375em;
   width: 100%;
   float: left; }
+/* line 168, assets/sass/_pages.scss */
+.page-template-page-templateshomepage-php #uplifted-intro-inner {
+  text-align: center; }
 /* line 172, assets/sass/_pages.scss */
 .page-template-page-templateshomepage-php .uplifted-highlight {
   margin-bottom: 1.875em; }
@@ -4589,18 +4589,15 @@ body.term-post-format-gallery #content > .panel {
     .page-template-page-templateshomepage-php .uplifted-caption-image-caption .uplifted-caption-image-title {
       color: white;
       margin-bottom: .25em; }
-  /* line 227, assets/sass/_pages.scss */
+  /* line 229, assets/sass/_pages.scss */
+  .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .wall {
+    width: auto;
+    margin: 0 auto; }
+  /* line 234, assets/sass/_pages.scss */
   .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .uplifted-widget {
-    width: 49%;
-    float: left;
-    margin-right: 2%; }
-    /* line 232, assets/sass/_pages.scss */
-    .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .uplifted-widget:nth-child(2n) {
-      margin-right: 0; }
-    /* line 236, assets/sass/_pages.scss */
-    .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .uplifted-widget:nth-child(2n+1) {
-      clear: none; }
-    /* line 240, assets/sass/_pages.scss */
+    width: 343px;
+    margin-bottom: 40px; }
+    /* line 238, assets/sass/_pages.scss */
     .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .uplifted-widget .uplifted-sermons-widget-entry-icons {
       display: none; } }
 

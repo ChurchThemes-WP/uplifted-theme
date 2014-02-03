@@ -4,6 +4,8 @@
 // No direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+wp_enqueue_script('jquery-masonry');
+
 // Header
 get_header();
 
@@ -41,6 +43,32 @@ while ( have_posts() ) : the_post();
 
 ?>>
 
+	<?php if ( empty( $no_intro ) ) : ?>
+
+		<section id="uplifted-intro"<?php if ( get_the_title() ) : ?> class="uplifted-intro-has-heading"<?php endif; ?>>
+
+			<div id="uplifted-intro-inner">
+
+				<div class="panel">
+
+					<?php if ( ctfw_has_title() ) : ?>
+					<h1 id="uplifted-intro-heading"><?php the_title(); ?></h1>
+					<?php endif; ?>
+
+					<?php if ( ctfw_has_content() ) : ?>
+					<div id="uplifted-intro-content">
+						<?php the_content(); ?>
+					</div>
+					<?php endif; ?>
+
+				</div>
+
+			</div>
+
+		</section>
+
+	<?php endif; ?>
+
 	<?php if ( empty( $no_slider ) || empty( $no_highlights ) ) : ?>
 
 		<div id="uplifted-slider-boxes" class="uplifted-clearfix">
@@ -57,29 +85,18 @@ while ( have_posts() ) : the_post();
 
 	<?php endif; ?>
 
-	<?php if ( empty( $no_intro ) ) : ?>
-
-		<section id="uplifted-intro"<?php if ( get_the_title() ) : ?> class="uplifted-intro-has-heading"<?php endif; ?>>
-
-			<div id="uplifted-intro-inner">
-
-				<?php if ( ctfw_has_title() ) : ?>
-				<h1 id="uplifted-intro-heading"><?php the_title(); ?></h1>
-				<?php endif; ?>
-
-				<?php if ( ctfw_has_content() ) : ?>
-				<div id="uplifted-intro-content">
-					<?php the_content(); ?>
-				</div>
-				<?php endif; ?>
-
-			</div>
-
-		</section>
-
-	<?php endif; ?>
-
 	<?php get_sidebar( 'home-bottom' ); ?>
+
+	<script>
+	jQuery(document).ready(function($){
+		$('.wall').masonry({
+			"columnWidth"	: Number( $('.uplifted-widget').get(0).width ),
+  			"itemSelector"	: '.uplifted-widget',
+  			"gutterWidth"	: 30,
+  			"isFitWidth"	: true
+		});
+	})
+	</script>
 
 </div>
 

@@ -153,11 +153,7 @@ body.term-post-format-gallery #content > .panel {
   #uplifted-slider-boxes,
   #uplifted-intro,
   #uplifted-home-bottom-widgets{
-    @include grid-row();
-  }
-
-  #ctcom-home-highlights{
-    margin-bottom: 1.875em;
+    @include grid-row;
   }
 
   #uplifted-intro{
@@ -167,6 +163,10 @@ body.term-post-format-gallery #content > .panel {
   #uplifted-slider,
   #uplifted-intro-inner{
     @include grid-column(12);
+  }
+
+  #uplifted-intro-inner{
+    text-align: center;
   }
 
   .uplifted-highlight{
@@ -224,21 +224,20 @@ body.term-post-format-gallery #content > .panel {
       }
     }
 
-    #uplifted-home-bottom-widgets .uplifted-widget{
-      width: 49%;
-      float: left;
-      margin-right: 2%;
+    #uplifted-home-bottom-widgets {
 
-      &:nth-child(2n){
-        margin-right: 0;
+      .wall{
+        width: auto;
+        margin: 0 auto;
       }
 
-      &:nth-child(2n+1){
-        clear: none;
-      }
+      .uplifted-widget{
+        width: 343px;
+        margin-bottom: 40px;
 
-      .uplifted-sermons-widget-entry-icons{
-        display: none;
+        .uplifted-sermons-widget-entry-icons{
+          display: none;
+        }
       }
     }
   }
