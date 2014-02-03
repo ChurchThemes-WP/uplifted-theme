@@ -40,9 +40,9 @@ $has_image = wp_get_attachment_image_src( $instance['image_id'] ) ? true : false
 		<?php endif; ?>
 
 			<?php if ( $title ) : ?>
-				<div class="uplifted-caption-image-title">
+				<h3 class="uplifted-caption-image-title">
 					<?php echo $title; ?>
-				</div>
+				</h3>
 			<?php endif; ?>
 
 			<?php if ( $instance['description'] ) : ?>

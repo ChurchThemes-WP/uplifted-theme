@@ -43,7 +43,7 @@ function uplifted_image_sizes() {
 	 *********************************/
 
 	// Slider Image (Widget)
-	add_image_size( 'uplifted-slide', 1600, 850, true ); // crop for exact size
+	add_image_size( 'uplifted-slide', 1434, 1000, true ); // crop for exact size
 
 	// Banner Image
 	// Featured image to appear at the top of pages

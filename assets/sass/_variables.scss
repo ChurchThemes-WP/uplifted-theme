@@ -156,7 +156,7 @@ $panel-padding: 24px;
 // Grid Variables
 //
 
-$row-width: emCalc(1280px);
+$row-width: emCalc(1120px);
 $column-gutter: emCalc(30px);
 $total-columns: 12;
 
@@ -307,10 +307,10 @@ $form-spacing: emCalc(30px);
 // Labels
 
 $form-label-pointer: pointer;
-$form-label-font-size: emCalc(12px);
+$form-label-font-size: emCalc(16px);
 $form-label-font-weight: bold;
 $form-label-font-color: $body-font-color;
-$form-label-bottom-margin: emCalc(3px);
+$form-label-bottom-margin: emCalc(5px);
 $input-font-family: inherit;
 $input-font-color: rgba(0,0,0,0.75);
 $input-font-size: emCalc(14px);

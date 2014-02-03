@@ -18,10 +18,10 @@
   padding: $panel-padding;
   border: $panel-border;
   box-shadow: $panel-box-shadow;
-  
+
   .uplifted-widget-title {
     display: inline-block;
-    color: $secondary-color;
+    color: $body-font-color;
     font-family: $body-font-family;
     font-weight: bold;
     font-size: 1.1em;
@@ -54,7 +54,7 @@
       }
     }
   }
-  
+
   // footer specific uplifted-widget styles
   #footer & {
     text-align: center;
@@ -67,9 +67,9 @@
     @media screen and (min-width: $small-screen ) {
       text-align: left;
     }
-    
+
     .uplifted-widget-title {
-      color: rgba($body-font-color,.8);
+      color: $neutral-color;
       border-color: $transparent-neutral-color;
     }
 
@@ -99,27 +99,27 @@
 // add styles to link and item number
 .widget_ctfw-archives,
 .widget_ctfw-categories {
-  
+
   // color item number
   li {
     color: $secondary-color;
-    
+
     //
     a {
       color: $body-font-color;
-      
+
       &:hover {
         color: $primary-color;
-      }  
+      }
     }
     #footer & {
       color: $neutral-color;
-      
+
       a {
         border: none;
       }
     }
-    
+
   }
 }
 
@@ -127,7 +127,6 @@
 /* Calendar Widget */
 
 .widget_calendar {
-  padding: 0;
 
   #calendar_wrap {
     position: relative;
@@ -137,36 +136,50 @@
       text-align: center;
 
       caption {
-        background-color: $secondary-color;
+        background-color: darken($tertiary-color,20%);
         color: #fff;
         padding: 1em;
+
+        #footer &{
+          background-color: transparent;
+        }
       }
 
       thead th {
         padding: .5em 0;
         background-color: $tertiary-color;
-        border-right: 1px solid white;
+        border: 1px solid #aaa;
 
-        &:last-child { border: none; }
+        #footer &{
+          background-color: rgba(0,0,0,.06);
+          border-color: transparent;
+        }
       }
 
       tbody tr {
         border-bottom: 1px solid $tertiary-color;
 
-        &:last-child { border: none; }
+        #footer &{
+          border-color: transparent;
+        }
 
         td {
           padding: .5em 0;
           border: 1px solid $tertiary-color;
           border-bottom: none;
           background-color: $panel-bg;
+
+          #footer &{
+            border-color: transparent;
+            background-color: transparent;
+          }
         }
 
       }
 
       tfoot {
         position: absolute;
-        top: 0;
+        top: 4px;
         width: 100%;
 
         td {
@@ -257,25 +270,26 @@
   button {
     height: emCalc(13) + ($form-spacing * 1.5);
     font-size: $input-font-size;
-    background-color: $input-border-color;
+    background-color: $primary-color;
     border: none;
     box-shadow: none;
+
     &:hover {
-      background-color: $primary-color;
+      background-color: darken($primary-color,5%);
     }
   }
-  
+
   #footer & {
-    
+
     input {
       border: none;
     }
-    
+
     button {
-      background-color: transparent;
-      
+      background-color: darken($primary-color,10%);
+
       &:hover {
-        background-color: rgba(255, 255, 255, 0.3)
+        background-color: darken($primary-color,20%)
       }
     }
   }
@@ -283,10 +297,9 @@
 
 // search widget container
 .widget_search {
-  background-color: transparent !important;
-  margin-bottom: 0 !important;
-  padding: 0 !important;
-  border-bottom: none !important;
+  .search-form {
+    margin-bottom: 0;
+  }
 }
 
 /* Recent Comments */
@@ -312,12 +325,12 @@
 
 /* ChurchTheme Location Widget */
 .widget_ctfw-locations {
-  
+
   .ctc_location {
     border: none;
     background-color: transparent;
   }
-  
+
   .ctfw-google-map {
     min-height: 12em;
   }
@@ -332,7 +345,7 @@
 
 .uplifted-widget-entry { // <article>
 	margin-bottom: 1em;
-	
+
 	header {
   	display: inline-block;
   	clear: both; // clears floated elements inside
@@ -620,6 +633,10 @@
 			display: block;
 			margin-top: 12px;
 			font-style: italic;
+
+      #footer & {
+        color: rgba(255,255,255,.8);
+      }
 		}
 
 /************ CT HIGHLIGHT WIDGET *************/

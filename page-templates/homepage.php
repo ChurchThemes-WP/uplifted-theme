@@ -61,15 +61,19 @@ while ( have_posts() ) : the_post();
 
 		<section id="uplifted-intro"<?php if ( get_the_title() ) : ?> class="uplifted-intro-has-heading"<?php endif; ?>>
 
-			<?php if ( ctfw_has_title() ) : ?>
-			<h1 id="uplifted-intro-heading"><?php the_title(); ?></h1>
-			<?php endif; ?>
+			<div id="uplifted-intro-inner">
 
-			<?php if ( ctfw_has_content() ) : ?>
-			<div id="uplifted-intro-content">
-				<?php the_content(); ?>
+				<?php if ( ctfw_has_title() ) : ?>
+				<h1 id="uplifted-intro-heading"><?php the_title(); ?></h1>
+				<?php endif; ?>
+
+				<?php if ( ctfw_has_content() ) : ?>
+				<div id="uplifted-intro-content">
+					<?php the_content(); ?>
+				</div>
+				<?php endif; ?>
+
 			</div>
-			<?php endif; ?>
 
 		</section>
 

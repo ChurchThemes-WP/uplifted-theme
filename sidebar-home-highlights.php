@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	<div id="ctcom-home-highlights">
 
 		<?php dynamic_sidebar( 'ctcom-home-highlights' ); ?>
-		
+
 	</div>
 
 <?php endif; ?>

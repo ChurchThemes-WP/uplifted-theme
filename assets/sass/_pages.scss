@@ -6,7 +6,7 @@
 .search-results {
 	h1 {
 		font-size: emCalc(30px);
-		
+
 		#search-terms {
 			color: $primary-color;
 		}
@@ -17,13 +17,13 @@
 // AudioTheme Video Page
 //
 .post-type-archive-audiotheme_video {
-	
+
 	@media screen and (max-width: 445px) {
 	  // kill the weird margin on left side of videos on one-column mobile
 	  ul.audiotheme-videos {
 		  margin: 0;
 	  }
-	
+
 	}
 }
 
@@ -40,7 +40,7 @@ body.term-post-format-gallery #content > .panel {
 }
 
 .term-post-format-gallery {
-  
+
   h1.archive-title { display: none; }
 }
 
@@ -49,37 +49,37 @@ body.term-post-format-gallery #content > .panel {
 //
 
 .single-attachment {
-  
+
   #uplifted-content .hentry {
     background-color: white;
     margin-bottom: $panel-margin-bottom;
     padding: $panel-padding;
   }
-  
+
   .entry-header {
     word-wrap: break-word;
-    
+
     h1 {
       margin-top: 0;
     }
   }
-  
+
   .entry-attachment {
     margin: 0 (-$panel-padding) 1.5em;
     position: relative;
-    
+
     // shouldn't need this, but do. Make img element 100% width
     .attachment img {
       width: 100%;
     }
-    
+
     .previous-image,
     .next-image {
       position: absolute;
       top: 45%;
       left: 0;
-      
-      a {        
+
+      a {
         background-color: $primary-color;
         color: #fff;
         position: relative;
@@ -91,9 +91,9 @@ body.term-post-format-gallery #content > .panel {
         &:hover {
           background-color: $anchor-font-color-hover;
         }
-        
+
         &:before {
-          font-family: "flexslider-icon"; 
+          font-family: "flexslider-icon";
           font-size: 18px;
           content: '\f001';
           position: absolute;
@@ -101,21 +101,21 @@ body.term-post-format-gallery #content > .panel {
           left: 39%;
         }
       }
-      
+
     }
     .next-image {
       right: 0;
       left: auto;
-      
+
       a:before {content: '\f002';}
     }
   }
-  
+
   .entry-meta {
     font-size: .7em;
     font-weight: bold;
     color: lighten($topbar-link-color, 50%);
-    
+
     a {
       color: $body-font-color;
       &:hover {
@@ -123,14 +123,123 @@ body.term-post-format-gallery #content > .panel {
       }
     }
   }
-  
+
   .entry-description {
     line-height: $paragraph-line-height;
-    
+
     // if there is a description, padding will be added to space
     // away from meta data, but clear global margin of p element
     p {
       margin: 1.5em 0 0 0;
+    }
+  }
+}
+
+//
+// Homepage
+//
+
+.page-template-page-templateshomepage-php{
+
+  #container{
+    width: auto;
+    margin: 1.875em 0 0 0;
+    padding: 0;
+    float: none;
+    overflow: auto;
+    max-width: none;
+  }
+
+  #uplifted-slider-boxes,
+  #uplifted-intro,
+  #uplifted-home-bottom-widgets{
+    @include grid-row();
+  }
+
+  #ctcom-home-highlights{
+    margin-bottom: 1.875em;
+  }
+
+  #uplifted-intro{
+    margin-bottom: 1.875em;
+  }
+
+  #uplifted-slider,
+  #uplifted-intro-inner{
+    @include grid-column(12);
+  }
+
+  .uplifted-highlight{
+    margin-bottom: 1.875em;
+
+    @media screen and (max-width: 640px){
+      @include grid-column(6);
+    }
+
+    a{
+      display: block;
+      position: relative;
+    }
+
+    img{
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  .uplifted-caption-image-caption{
+    color: $body-font-color;
+  }
+
+  @media screen and (min-width: 641px){
+
+    .flexslider{
+      margin-bottom: 0;
+    }
+
+    #uplifted-slider{
+      @include grid-column(8);
+    }
+
+    #ctcom-home-highlights{
+      @include grid-column(4);
+    }
+
+    .uplifted-caption-image-caption{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      color: white;
+      padding: 20px;
+      background: linear-gradient(color-stops(rgba(0,0,0,0), rgba(0,0,0,.1) 65%, rgba(0,0,0,.6)));
+
+      .uplifted-caption-image-title{
+        color: white;
+        margin-bottom: .25em;
+      }
+      .uplifted-caption-image-description{
+
+      }
+    }
+
+    #uplifted-home-bottom-widgets .uplifted-widget{
+      width: 49%;
+      float: left;
+      margin-right: 2%;
+
+      &:nth-child(2n){
+        margin-right: 0;
+      }
+
+      &:nth-child(2n+1){
+        clear: none;
+      }
+
+      .uplifted-sermons-widget-entry-icons{
+        display: none;
+      }
     }
   }
 }

@@ -64,25 +64,29 @@ if ( wp_get_attachment_image_src( $instance['image_id'] ) ) :
 
 			<div class="flex-caption">
 
-				<?php if ( $instance['title'] ) : // title provided ?>
+				<div class="flex-position">
 
-					<?php if ( $instance['click_url'] ) : // slide is linked ?>
+					<?php if ( $instance['title'] ) : // title provided ?>
 
-						<a href="<?php echo do_shortcode( $instance['click_url'] ); ?>" class="flex-title"<?php if ( $instance['click_new'] ) : ?> target="_blank"<?php endif; ?>>
-							<?php echo $instance['title']; ?>
-						</a>
+						<?php if ( $instance['click_url'] ) : // slide is linked ?>
 
-					<?php else : // slide not linked ?>
+							<h2 class="flex-title"><a href="<?php echo do_shortcode( $instance['click_url'] ); ?>" <?php if ( $instance['click_new'] ) : ?> target="_blank"<?php endif; ?>>
+								<?php echo $instance['title']; ?>
+							</a></h2>
 
-						<div class="flex-title"><?php echo force_balance_tags( $instance['title'] ); // auto-close <b> tag to prevent messing up whole page ?></div>
+						<?php else : // slide not linked ?>
+
+							<h2 class="flex-title"><?php echo force_balance_tags( $instance['title'] ); // auto-close <b> tag to prevent messing up whole page ?></h2>
+
+						<?php endif; ?>
 
 					<?php endif; ?>
 
-				<?php endif; ?>
+					<?php if ( $instance['description'] ) : // description provided ?>
+						<div class="flex-description"><?php echo force_balance_tags( $instance['description'] ); // auto-close <b> tag to prevent messing up whole page ?></div>
+					<?php endif; ?>
 
-				<?php if ( $instance['description'] ) : // description provided ?>
-					<div class="flex-description"><?php echo force_balance_tags( $instance['description'] ); // auto-close <b> tag to prevent messing up whole page ?></div>
-				<?php endif; ?>
+				</div>
 
 			</div>
 

@@ -26,54 +26,54 @@
 }
 
 .single-ctc_sermon  {
-  
+
   .uplifted-entry-header {
-  
+
     // sermon title, date, and speaker
     .uplifted-entry-title-meta {
       text-align: center;
       margin: .5em 0;
-      
+
       @media screen and (min-width: $small-screen) {
     	  font-size: 1.2em;
     	}
-      
+
       ul {
         display: inline-block;
         font-weight: bold;
-        
+
         li {
           margin-right: 0;
           padding: 0 .3em;
-          
+
           &:first-child:after {
             content: " | ";
             padding-left: .3em;
           }
-          
+
           a {
             color: $body-font-color;
             border: none;
-            
+
             &:hover {
               color: $secondary-color;
             }
           }
         }
-      } 
+      }
     }
   }
-  
+
   // single sermon main content area
   .single-sermon-content {
     padding-left: 0;
-    
+
     // part of the page hack, need to kill the right padding on mobile
     @media screen and (max-width: $small-screen) {
   	  padding-right: 0;
   	}
   }
-  
+
   // content block
   .uplifted-entry-content {
     background-color: $panel-bg;
@@ -81,24 +81,24 @@
     padding: $panel-padding;
     margin-bottom: $panel-margin-bottom;
   }
-  
-  
+
+
 }
 
 /* Single Sermon Faux Sidebar */
 
 // because of the way standard pages are setup
 // and the Single Sermon deviates from that template,
-// the content layout is being drastically altered 
+// the content layout is being drastically altered
 // through CSS to attain the desired effect
 .single-sermon-meta-sidebar {
   padding-right: 0;
-  
+
   // hide the Faux Sidebar on mobile
   @media screen and (max-width: $small-screen) {
 	  display: none;
 	}
-  
+
   .uplifted-entry-title-meta {
     text-align: left;
     margin: 0 0 $panel-margin-bottom;
@@ -106,16 +106,16 @@
     background-color: $panel-bg;
     border: $panel-border;
     box-shadow: $panel-box-shadow;
-    
+
     ul {
-      
+
         li {
           float: none;
           border: none;
         }
       }
     }
-  
+
   h3 {
     color: $secondary-color;
   }
@@ -135,31 +135,23 @@
   margin: 0;
   list-style: none;
   display: inline;
-  
+
   &:last-child {
     float: right;
   }
-  
+
   li {
     display: inline-block;
     margin-right: .5em;
-    
+
     &:last-child {
       margin-right: 0;
     }
-    
+
     // style the buttons in media section
     a {
-      @include button($padding:$button-med, $bg:$body-font-color, $radius:true, $full-width:false, $disabled:false, $is-input:false, $is-prefix:false);  
+      @include button($padding:$button-med, $bg:$body-font-color, $radius:true, $full-width:false, $disabled:false, $is-input:false, $is-prefix:false);
     }
-    
-  }
-}
 
-.single-ctc_sermon #comments,
-.uplifted-nav-left-right {
-  
-  @media screen and (min-width: $small-screen) {
-	  @include grid-column(8); 
-	}
+  }
 }
