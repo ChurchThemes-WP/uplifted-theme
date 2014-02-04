@@ -6,7 +6,6 @@ require_once 'includes/support-ctc.php';                             // Church F
 require_once 'includes/support-framework.php';                       // Church Framework support
 require_once 'includes/support-wp.php';                              // WordPress feature support
 require_once 'includes/icons.php';                                   // Icons
-require_once 'includes/banner.php';                                  // Banner
 require_once 'includes/sidebars.php';                                // Sidebars
 require_once 'includes/images.php';                                  // Images
 require_once 'includes/loop-after-content.php';                      // Loop after content

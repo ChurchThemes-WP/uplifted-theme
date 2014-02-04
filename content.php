@@ -51,7 +51,7 @@ if ( is_singular( get_post_type() ) ) :
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'uplifted-entry-full' ); ?>>
 
-		<?php if ( ctfw_has_title() && ! uplifted_hide_page_title() ) : // do not repeat title if already shown via header-banner.php ?>
+		<?php if ( ctfw_has_title() ) : // do not repeat title if already shown via header-banner.php ?>
 			<h1 class="uplifted-entry-title uplifted-main-title"><?php uplifted_title_paged(); // show with (Page #) if multipage ?></h1>
 		<?php endif; ?>
 

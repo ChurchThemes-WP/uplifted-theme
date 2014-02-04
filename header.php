@@ -44,18 +44,24 @@ $up_options = upfw_get_options();
 
     <div class="top-bar-container fixed">
         <nav class="top-bar">
+
             <ul class="title-area">
-                <li class="name">
-                  <h1 id="logo">
-                  <?php if( get_header_image() ): ?>
-                    <a title="<?php bloginfo('name'); ?>" href="<?php echo home_url(); ?>"><img src="<?php echo header_image(); ?>" alt="<?php echo bloginfo('name'); ?>"/></a>
-                  <?php else: ?>
-                    <h1 id="title"><a class="title" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+              <li class="name">
+                <h1 id="title">
+                  <a class="title" href="<?php echo esc_attr( home_url('/') ); ?>">
+                  <?php $header_image = get_header_image();
+                  if ( ! empty( $header_image ) ) : ?>
+                    <img src="<?php echo esc_attr( $header_image ); ?>" alt="" />
                   <?php endif; ?>
-                  </h1>
-                </li>
-                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                  <?php if( display_header_text() ): ?>
+                    <?php bloginfo('name'); ?>
+                  <?php endif; ?>
+                  </a>
+                </h1>
+              </li>
+              <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
             </ul>
+
             <section class="top-bar-section">
                 <?php foundation_top_bar_l(); ?>
 
@@ -67,7 +73,7 @@ $up_options = upfw_get_options();
   </header>
 
   <?php do_action('after_header'); ?>
-  
+
   <?php uplifted_breadcrumbs( 'content' ); ?>
 
   <div id="container" class="clearfix">

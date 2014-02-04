@@ -3,17 +3,8 @@
  * Sample implementation of the Custom Header feature
  * http://codex.wordpress.org/Custom_Headers
  *
- * You can add an optional custom header image to header.php like so ...
-
-	<?php $header_image = get_header_image();
-	if ( ! empty( $header_image ) ) { ?>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
-		</a>
-	<?php } // if ( ! empty( $header_image ) ) ?>
-
  *
- * @package amplify
+ * @package Uplifted
  */
 
 /**
@@ -28,14 +19,14 @@
  * @uses uplifted_admin_header_style()
  * @uses uplifted_admin_header_image()
  *
- * @package amplify
  */
 function uplifted_custom_header_setup() {
 	$args = array(
 		'default-image'          => '',
-		'default-text-color'     => 'FFF',
-		'width'                  => 385,
-		'height'                 => 102,
+		'default-text-color'     => '222222',
+		'width'                  => 300,
+		'height'                 => 100,
+		'flex-width'             => true,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'uplifted_header_style',
 		'admin-head-callback'    => 'uplifted_admin_header_style',
@@ -57,9 +48,6 @@ add_action( 'after_setup_theme', 'uplifted_custom_header_setup' );
  * of this function.
  *
  * @return stdClass All properties represent attributes of the curent header image.
- *
- * @package amplify
- * @since _s 1.1
  */
 
 if ( ! function_exists( 'get_custom_header' ) ) {
@@ -78,8 +66,6 @@ if ( ! function_exists( 'uplifted_header_style' ) ) :
  * Styles the header image and text displayed on the blog
  *
  * @see uplifted_custom_header_setup().
- *
- * @since _s 1.0
  */
 function uplifted_header_style() {
 
@@ -88,29 +74,11 @@ function uplifted_header_style() {
 	if ( HEADER_TEXTCOLOR == get_header_textcolor() )
 		return;
 	// If we get this far, we have custom styles. Let's do this.
-	?>
-	<style type="text/css">
-	<?php
-		// Has the text been hidden?
-		if ( 'blank' == get_header_textcolor() ) :
-	?>
-		.site-title,
-		.site-description {
-			position: absolute !important;
-			clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-			clip: rect(1px, 1px, 1px, 1px);
-		}
-	<?php
-		// If the user has set a custom color for the text use that
-		else :
-	?>
-		.site-title a,
-		.site-description {
-			color: #<?php echo get_header_textcolor(); ?> !important;
-		}
-	<?php endif; ?>
-	</style>
-	<?php
+
+	if( get_header_textcolor() != 'blank' || ! empty(get_header_textcolor() ) ){
+	  echo "<style type='text/css' id='custom-header-textcolor'>.title-area #title a{ color: #" . get_header_textcolor() . "; } </style>";
+	}
+
 }
 endif; // uplifted_header_style
 
@@ -128,21 +96,56 @@ function uplifted_admin_header_style() {
 	.appearance_page_custom-header #headimg {
 		border: none;
 	}
-	#headimg h1,
-	#desc {
+	.title-area{
+		overflow: hidden;
+		height: 80px;
+		line-height: 80px;
+		position: relative;
+		background: white;
+		margin-bottom: 0;
+		box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2);
+		font-size: 1em;
+		margin: 0;
 	}
-	#headimg h1 {
+	.title-area li{
+		margin: 0;
+		height: 80px;
+		line-height: 80px;
 	}
-	#headimg h1 a {
+	.title-area #title{
+		line-height: 80px;
+		height: 80px;
+		font-size: 1.0625em;
+		margin: 0;
+		padding: 0;
+		font-family: "Asap", Verdana, Geneva, sans-serif;
 	}
-	#desc {
+	.title-area #title a{
+		padding: 0 26.66667px;
+		color: #555555;
+		font-size: 16px;
+		font-weight: 100;
+		text-decoration: none;
 	}
-	#headimg img {
+	.title-area img{
+		max-height: 65px;
+		margin-left: 10px;
+		vertical-align: middle;
 	}
 	</style>
 <?php
 }
 endif; // uplifted_admin_header_style
+
+/**
+ * Enqueue fonts for custom header
+ *
+ */
+function uplifted_admin_fonts($hook_suffix) {
+    wp_enqueue_style( 'uplifted-fonts', uplifted_fonts_url() );
+}
+add_action('admin_print_styles-appearance_page_custom-header', 'uplifted_admin_fonts');
+
 
 if ( ! function_exists( 'uplifted_admin_header_image' ) ) :
 /**
@@ -151,20 +154,27 @@ if ( ! function_exists( 'uplifted_admin_header_image' ) ) :
  * @see uplifted_custom_header_setup().
  *
  */
-function uplifted_admin_header_image() { ?>
-	<div id="headimg">
-		<?php
-		if ( 'blank' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) || '' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) )
-			$style = ' style="display:none;"';
-		else
-			$style = ' style="color:#' . get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) . ';"';
-		?>
-		<h1><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<div id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<img src="<?php echo esc_url( $header_image ); ?>" alt="" />
-		<?php endif; ?>
-	</div>
+function uplifted_admin_header_image() {
+
+	if( get_header_textcolor() != 'blank' || ! empty(get_header_textcolor() ) ){
+		echo "<style>.title-area #title a{ color: #" . get_header_textcolor() . "; } </style>";
+	}
+
+	?>
+
+	<ul class="title-area">
+		<li class="name">
+			<h1 id="title">
+			<?php $header_image = get_header_image();
+			if ( ! empty( $header_image ) ) : ?>
+				<img src="<?php echo esc_url( $header_image ); ?>" alt="" />
+			<?php endif; ?>
+			<?php if( display_header_text() ): ?>
+				<a class="title" href="#"><?php bloginfo('name'); ?></a>
+			<?php endif; ?>
+			</h1>
+		</li>
+	</ul>
+
 <?php }
 endif; // uplifted_admin_header_image

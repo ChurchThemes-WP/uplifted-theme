@@ -43,6 +43,22 @@ while ( have_posts() ) : the_post();
 
 ?>>
 
+	<?php if ( empty( $no_slider ) || empty( $no_highlights ) ) : ?>
+
+		<div id="uplifted-slider-boxes" class="uplifted-clearfix">
+
+			<?php if ( empty( $no_slider ) ) : ?>
+			<?php get_sidebar( 'home-slider' ); ?>
+			<?php endif; ?>
+
+			<?php if ( empty( $no_highlights ) ) : ?>
+			<?php get_sidebar( 'home-highlights' ); ?>
+			<?php endif; ?>
+
+		</div>
+
+	<?php endif; ?>
+
 	<?php if ( empty( $no_intro ) ) : ?>
 
 		<section id="uplifted-intro"<?php if ( get_the_title() ) : ?> class="uplifted-intro-has-heading"<?php endif; ?>>
@@ -66,22 +82,6 @@ while ( have_posts() ) : the_post();
 			</div>
 
 		</section>
-
-	<?php endif; ?>
-
-	<?php if ( empty( $no_slider ) || empty( $no_highlights ) ) : ?>
-
-		<div id="uplifted-slider-boxes" class="uplifted-clearfix">
-
-			<?php if ( empty( $no_slider ) ) : ?>
-			<?php get_sidebar( 'home-slider' ); ?>
-			<?php endif; ?>
-
-			<?php if ( empty( $no_highlights ) ) : ?>
-			<?php get_sidebar( 'home-highlights' ); ?>
-			<?php endif; ?>
-
-		</div>
 
 	<?php endif; ?>
 

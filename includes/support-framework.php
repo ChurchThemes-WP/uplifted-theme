@@ -106,8 +106,7 @@ function uplifted_add_theme_support_framework() {
 			'ctc_sermon'	=> 'post-thumbnail',
 			'ctc_event'		=> 'post-thumbnail',
 			'ctc_person'	=> 'post-thumbnail',
-			'ctc_location'	=> 'post-thumbnail',
-			'page'			=> 'uplifted-banner'
+			'ctc_location'	=> 'post-thumbnail'
 		),
 		__( 'Optionally provide an image that is at least %s (it will be cropped/resized). An image exactly this size is ideal.', 'uplifted' )
 	);

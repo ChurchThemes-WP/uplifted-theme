@@ -139,9 +139,9 @@ body.term-post-format-gallery #content > .panel {
 // Homepage
 //
 
-.page-template-page-templateshomepage-php{
+.page-template-page-templateshomepage-php {
 
-  #container{
+  #container {
     width: auto;
     margin: 1.875em 0 0 0;
     padding: 0;
@@ -152,60 +152,82 @@ body.term-post-format-gallery #content > .panel {
 
   #uplifted-slider-boxes,
   #uplifted-intro,
-  #uplifted-home-bottom-widgets{
+  #uplifted-home-bottom-widgets {
     @include grid-row;
   }
 
-  #uplifted-intro{
+  #uplifted-intro {
     margin-bottom: 1.875em;
   }
 
   #uplifted-slider,
-  #uplifted-intro-inner{
+  #uplifted-intro-inner {
     @include grid-column(12);
   }
 
-  #uplifted-intro-inner{
+  #uplifted-intro-inner {
     text-align: center;
+
+    #uplifted-intro-heading{
+      font-size: emCalc(24);
+    }
+
+    .panel{
+      border: 1px solid rgba(0,0,0,.1);
+      border-left-width: 0;
+      border-right-width: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    #uplifted-intro-content{
+      p:last-child{
+        margin-bottom: 0;
+      }
+    }
   }
 
-  .uplifted-highlight{
+  .uplifted-highlight {
     margin-bottom: 1.875em;
 
-    @media screen and (max-width: 640px){
+    @media screen and (max-width: 640px) {
       @include grid-column(6);
     }
 
-    a{
+    a {
       display: block;
       position: relative;
     }
 
-    img{
+    img {
       display: block;
       margin-bottom: 10px;
     }
   }
 
-  .uplifted-caption-image-caption{
+  .uplifted-caption-image-caption {
     color: $body-font-color;
+  }
+
+  .slides .uplifted-caption-image-caption {
+    background: linear-gradient(color-stops(rgba(0,0,0,0), rgba(0,0,0,.1) 65%, rgba(0,0,0,.6)));
   }
 
   @media screen and (min-width: 641px){
 
-    .flexslider{
+    .flexslider {
       margin-bottom: 0;
     }
 
-    #uplifted-slider{
+    #uplifted-slider {
       @include grid-column(8);
     }
 
-    #ctcom-home-highlights{
+    #ctcom-home-highlights {
       @include grid-column(4);
     }
 
-    .uplifted-caption-image-caption{
+    .uplifted-caption-image-caption {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -213,29 +235,29 @@ body.term-post-format-gallery #content > .panel {
       right: 0;
       color: white;
       padding: 20px;
-      background: linear-gradient(color-stops(rgba(0,0,0,0), rgba(0,0,0,.1) 65%, rgba(0,0,0,.6)));
+      background: linear-gradient(color-stops(rgba(0,0,0,.3), rgba(0,0,0,.1) 35%, rgba(0,0,0,.1)));
 
-      .uplifted-caption-image-title{
+      .uplifted-caption-image-title {
         color: white;
         margin-bottom: .25em;
       }
-      .uplifted-caption-image-description{
+      .uplifted-caption-image-description {
 
       }
     }
 
     #uplifted-home-bottom-widgets {
 
-      .wall{
+      .wall {
         width: auto;
         margin: 0 auto;
       }
 
-      .uplifted-widget{
+      .uplifted-widget {
         width: 343px;
         margin-bottom: 40px;
 
-        .uplifted-sermons-widget-entry-icons{
+        .uplifted-sermons-widget-entry-icons {
           display: none;
         }
       }

@@ -671,7 +671,10 @@
 .uplifted-widget .gallery {
 	margin-bottom: 0;
 	position: relative;
-	top: -12px; /* offset extra space at bottom */
+
+  br{
+    display:none;
+  }
 }
 
 /* Link */

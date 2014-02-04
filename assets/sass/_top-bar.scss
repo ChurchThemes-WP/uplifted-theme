@@ -63,9 +63,29 @@ $topbar-divider-border-top: solid 1px darken($topbar-bg, 10%) !default;
 // Sticky Class
 $topbar-sticky-class: ".sticky" !default;
 
+@media screen and (max-width: 600px){
+  #wpadminbar{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 782px){
+  html[xmlns] {
+    margin-top: 0 !important;
+  }
+}
+
 // If we have a fixed header and logged-in as admin bump header down page
 .admin-bar .top-bar-container.fixed {
-	top: 28px !important;
+  top: 0;
+
+  @media screen and (min-width:768px){
+  	top: 32px !important;
+  }
+
+  @media screen and (min-width:601px) and (max-width: 782px){
+    top: 46px !important;
+  }
 }
 
 @if $include-html-top-bar-classes != false {
@@ -127,20 +147,21 @@ $topbar-sticky-class: ".sticky" !default;
         font-size: $topbar-title-font-size;
         margin: 0;
         font-family: $body-font-family;
-        
+
         a {
           width: 50%;
           display: block;
           padding: 0 $topbar-height / 3;
           color: $topbar-link-color;
-          
+
           &:hover {
             color: $primary-color;
           }
-          
+
           img {
             max-height: 60px;
             margin-top: -5px;
+            margin-right: 10px;
           }
         }
       }
@@ -241,11 +262,11 @@ $topbar-sticky-class: ".sticky" !default;
       font-size: $em-base;
       margin: 0;
     }
-    
+
     // if there is a second navigational menu, need to add
     // a border to the ul on mobile only
     @media screen and (max-width: $small-screen) {
-    
+
   	  // if second menu is on left
   	  #menu-second.left {
         border-bottom: $topbar-divider-border-bottom;
@@ -256,7 +277,7 @@ $topbar-sticky-class: ".sticky" !default;
         border-top: $topbar-divider-border-bottom;
         border-bottom: $topbar-divider-border-top;
       }
-      
+
   	}
 
     .divider,
@@ -267,12 +288,12 @@ $topbar-sticky-class: ".sticky" !default;
       height: 1px;
       width: 100%;
     }
-    
+
     // hide the first divider in the list
     li.divider:first-child {
 	    display: none;
     }
-	
+
 	// nav links
     ul li {
       & > a {
@@ -285,7 +306,7 @@ $topbar-sticky-class: ".sticky" !default;
         letter-spacing: $base-letter-spacing;
         font-weight: $topbar-link-weight;
         background-color: $topbar-dropdown-bg;
-        
+
         &:hover {
 	        background-color: $primary-color;
 	        color: contrast-color($primary-color, #fff, #f2f2f2, 50%);
@@ -329,7 +350,7 @@ $topbar-sticky-class: ".sticky" !default;
       &.active > a {
         background: $topbar-link-bg-active;
         color: #fff;
-        
+
         &:after {
 	        border-color: #fff transparent transparent !important;
         }
@@ -377,7 +398,7 @@ $topbar-sticky-class: ".sticky" !default;
         a {
           font-weight: normal;
           border-bottom: $topbar-divider-border-bottom;
-          
+
           &.parent-link {
             font-weight: $topbar-link-weight;
           }
@@ -390,7 +411,7 @@ $topbar-sticky-class: ".sticky" !default;
             display: block;
             padding: 12px ($topbar-height / 3) 12px ($topbar-height / 3);
             font-family: $body-font-family;
-			
+
 			&:hover {
 	        	background-color: $primary-color;
 	        	color: contrast-color($primary-color, #fff, #f2f2f2, 50%);
@@ -417,7 +438,7 @@ $topbar-sticky-class: ".sticky" !default;
   }
   .js-generated { display: block; }
 
-  
+
   //
   // Top Bar styles intended for screen sizes above the breakpoint.
   //
@@ -454,13 +475,13 @@ $topbar-sticky-class: ".sticky" !default;
     .top-bar-section {
       @include single-transition(none,0,0);
       #{$default-float}: 0 !important;
-      
+
       // we don't want the dividers on desktop
 	  .divider,
 	  [role="separator"] {
 			border: none !important;
 	  }
-	  
+
 	  // change the color of the dropdown arrow on desktop
 	  .has-dropdown > a:after {
 		  border-color: lighten($topbar-link-color, 50%) transparent transparent !important;
@@ -474,7 +495,7 @@ $topbar-sticky-class: ".sticky" !default;
         li {
           float: $default-float;
           .js-generated { display: none; }
-          
+
         }
       }
 
@@ -507,7 +528,7 @@ $topbar-sticky-class: ".sticky" !default;
             visibility: visible;
           }
         }
-        
+
 		// double arrows on second-level dropdown
         .dropdown li.has-dropdown {
           & > a {
@@ -529,13 +550,13 @@ $topbar-sticky-class: ".sticky" !default;
         min-width: 100%;
 
         li {
-        
+
           // no border for the parent element in the dropdown, which
           // is only visible and needed on mobile
           &.parent-link {
 	          border: none;
           }
-          
+
           // secondary nav links
           a {
             //color: $topbar-dropdown-link-color;

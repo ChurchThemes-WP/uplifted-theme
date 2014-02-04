@@ -86,11 +86,11 @@ function uplifted_set_content_width() {
 	if ( ! isset( $content_width ) ) {
 
 		// Full page content
-		$content_width = 880;
+		$content_width = 1120;
 
 		// Sideabar is used
 		if ( uplifted_sidebar_enabled() ) {
-			$content_width = 600;
+			$content_width = 717;
 		}
 
 	}

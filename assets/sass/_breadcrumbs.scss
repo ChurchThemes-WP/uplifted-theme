@@ -1,16 +1,32 @@
 /* Breadcrumbs */
 
 .ctfw-breadcrumbs {
-	margin: 1em .5em;
-	font-size: .8em;
-	color: lighten($body-font-color,50%);
-	
+	@include grid-row;
+	margin-top: 2em;
+
+	.ctfw-breadcrumbs-inner{
+		@include grid-column(12);
+		margin: 1em .5em;
+		font-size: .8em;
+		color: lighten($body-font-color,50%);
+	}
+
+	.separator{
+		@extend .genericon;
+		@extend .genericon-collapse;
+		@include rotate(90deg);
+	}
+
 	a {
-  	color: lighten($body-font-color,50%);
-  	margin: 0 .6em;
-  	
-  	&:hover {
-    	color: $primary-color;
-  	}
+		color: lighten($body-font-color,50%);
+		margin: 0 .3em;
+
+		&:first-child{
+			margin-left: 0;
+		}
+
+		&:hover {
+			color: $primary-color;
+		}
 	}
 }

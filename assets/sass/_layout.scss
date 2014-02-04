@@ -6,7 +6,6 @@
 
 #container {
   @include grid-row();
-  margin-top: 2em; // need to bump away from fixed header
 }
 
 // this is the Main Content section

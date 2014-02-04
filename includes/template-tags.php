@@ -84,30 +84,6 @@ function uplifted_title_paged( $title = '', $return = false ) {
 
 }
 
-/**
- * Hide page title
- *
- * @since 1.0
- * @return bool True if page title is not to be shown
- */
-function uplifted_hide_page_title() {
-
-	$hide_page_title = false;
-
-	// Get banner data
-	$banner = uplifted_banner_data();
-
-	// Banner is being shown (banner page found)
-	// Banner is from current page or this is "Posts page" (when static front page used) and title is set to show over image
-	// Therefore, do not repeat the title above the page content
-	if ( $banner['page'] && ! $banner['no_text'] && ( 'page_self' == $banner['relation'] || ctfw_is_posts_page() ) ) {
-		$hide_page_title = true;
-	}
-
-	return apply_filters( 'uplifted_hide_page_title', $hide_page_title );
-
-}
-
 /********************************
  * BREADCRUMBS
  ********************************/

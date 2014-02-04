@@ -19,9 +19,7 @@ if ( is_singular() ) return;
 // Possibility: Simplify by making this condition cause Blog tempate to load with "Posts page" $post global?
 if ( ctfw_is_posts_page() ) : ?>
 
-	<?php if ( ! uplifted_hide_page_title() ) : // do not repeat title if already shown via header-banner.php ?>
-		<h1 class="uplifted-main-title"><?php uplifted_title_paged( get_post_field( 'post_title', get_queried_object_id() ) ); ?></h1>
-	<?php endif; ?>
+	<h1 class="uplifted-main-title"><?php uplifted_title_paged( get_post_field( 'post_title', get_queried_object_id() ) ); ?></h1>
 
 	<?php if ( $content = apply_filters( 'the_content', get_post_field( 'post_content', get_queried_object_id() ) ) ) : ?>
 		<div class="uplifted-entry-content">
