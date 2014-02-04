@@ -6,4 +6,4 @@
 	url = git@github.com:thomasgriffin/TGM-Plugin-Activation.git
 [submodule "framework"]
 	path = framework
-	url = https://github.com/churchthemes/church-theme-framework.git
+	url = git@github.com:UpThemes/church-theme-framework.git
