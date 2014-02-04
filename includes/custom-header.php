@@ -150,8 +150,10 @@ if ( ! function_exists( 'uplifted_admin_header_image' ) ) :
  */
 function uplifted_admin_header_image() {
 
-	if( get_header_textcolor() != 'blank' || ! empty(get_header_textcolor() ) ){
-		echo "<style>.title-area #title a{ color: #" . get_header_textcolor() . "; } </style>";
+	$header_textcolor = get_header_textcolor();
+
+	if( $header_textcolor != 'blank' || ! empty( $header_textcolor ) ){
+	  echo "<style type='text/css' id='custom-header-textcolor'>.title-area #title a{ color: #$header_textcolor; } </style>";
 	}
 
 	?>
