@@ -78,7 +78,7 @@ function uplifted_header_style() {
 	// If we get this far, we have custom styles. Let's do this.
 
 	if( $header_textcolor != 'blank' || ! empty( $header_textcolor ) ){
-	  echo "<style type='text/css' id='custom-header-textcolor'>.title-area #title a{ color: #$header_textcolor; } </style>";
+	  return "<style type='text/css' id='custom-header-textcolor'>.title-area #title a{ color: #$header_textcolor; } </style>";
 	}
 
 }
@@ -89,8 +89,6 @@ if ( ! function_exists( 'uplifted_admin_header_style' ) ) :
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
  * @see uplifted_custom_header_setup().
- *
- * @since _s 1.0
  */
 function uplifted_admin_header_style() {
 ?>
