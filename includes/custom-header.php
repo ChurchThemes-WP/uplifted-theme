@@ -69,14 +69,16 @@ if ( ! function_exists( 'uplifted_header_style' ) ) :
  */
 function uplifted_header_style() {
 
+	$header_textcolor = get_header_textcolor();
+
 	// If no custom options for text are set, let's bail
 	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
-	if ( HEADER_TEXTCOLOR == get_header_textcolor() )
+	if ( HEADER_TEXTCOLOR == $header_textcolor )
 		return;
 	// If we get this far, we have custom styles. Let's do this.
 
-	if( get_header_textcolor() != 'blank' || ! empty(get_header_textcolor() ) ){
-	  echo "<style type='text/css' id='custom-header-textcolor'>.title-area #title a{ color: #" . get_header_textcolor() . "; } </style>";
+	if( $header_textcolor != 'blank' || ! empty( $header_textcolor ) ){
+	  echo "<style type='text/css' id='custom-header-textcolor'>.title-area #title a{ color: #$header_textcolor; } </style>";
 	}
 
 }
