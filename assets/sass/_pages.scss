@@ -156,6 +156,10 @@ body.term-post-format-gallery #content > .panel {
     @include grid-row;
   }
 
+  .uplifted-intro-wrapper {
+    background-color: darken($body-bg, 5%);
+  }
+
   #uplifted-intro {
     margin-bottom: 1.875em;
   }
@@ -170,18 +174,32 @@ body.term-post-format-gallery #content > .panel {
 
     #uplifted-intro-heading{
       font-size: emCalc(24);
+      border-bottom: 3px solid darken($body-bg, 10%);
+      display: inline-block;
+      text-align: center;
+      padding-bottom: .3em;
+      margin-bottom: 1.5em;
     }
 
-    .panel{
-      border: 1px solid rgba(0,0,0,.1);
-      border-left-width: 0;
-      border-right-width: 0;
-      padding-top: 20px;
-      padding-bottom: 20px;
+    .panel {
+      padding-top: 2.5em;
+      padding-bottom: 4em;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    #uplifted-intro-content{
-      p:last-child{
+    #uplifted-intro-content {
+      text-align: left;
+      
+
+      @media screen and (min-width: $small-screen) {
+        -moz-column-count: 2;
+       -moz-column-gap: 20px;
+       -webkit-column-count: 2;
+       -webkit-column-gap: 20px;
+      }
+
+      p:last-child {
         margin-bottom: 0;
       }
     }
