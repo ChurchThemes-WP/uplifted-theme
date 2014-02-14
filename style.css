@@ -2509,102 +2509,70 @@ small.error {
 .genericon-leftarrow:before {
   content: '\f503'; }
 
-/* Pagination */
-/* line 7, assets/sass/_pagination.scss */
+/* 
+ *
+ * Pagination
+ *
+ */
+/* line 14, assets/sass/_pagination.scss */
 .pagination {
   text-align: center;
   overflow: auto;
   background-color: white;
   margin-bottom: 1.5em;
-  border: 1px solid #e5e6ea;
-  	/* > .page-numbers {
-  		padding: 1.3em;
-  		display: inline-block;
-  		color: contrast-color($neutral-color, lighten($topbar-link-color, 50%), #f2f2f2, 50%);
-  		margin: 0; // kill defaul ul margin
-  
-  		&:hover {
-  		  background-color: contrast-color($neutral-color, $primary-color, lighten(#222,10%), 50%);
-  		  color: #fff;
-  		  text-decoration: none;
-  		}
-  
-  		&.current,
-  		&.dots {
-  		  color: contrast-color($neutral-color, $primary-color, darken(#f2f2f2,50%), 50%);
-  		  background: transparent;
-  		}
-  	} */
-  	/* .next,
-  	.prev {
-  		font-weight: bold;
-  		float: $default-float;
-  
-  		&:hover {
-  		  border-color: $primary-color;
-  		}
-  	}
-  
-  	.prev {
-  		border-right: 1px solid lighten($topbar-link-color, 70%);
-  	}
-  
-  	.next {
-  		float: right;
-  		border-left: 1px solid lighten($topbar-link-color, 70%);
-  	} */ }
-  /* line 14, assets/sass/_pagination.scss */
+  border: 1px solid #e5e6ea; }
+  /* line 21, assets/sass/_pagination.scss */
   .pagination ul {
     margin: 0; }
-    /* line 17, assets/sass/_pagination.scss */
+    /* line 24, assets/sass/_pagination.scss */
     .pagination ul li {
       display: inline-block; }
-      /* line 20, assets/sass/_pagination.scss */
+      /* line 27, assets/sass/_pagination.scss */
       .pagination ul li a {
         padding: 1em;
         display: block;
         color: #d4d4d4; }
-        /* line 25, assets/sass/_pagination.scss */
+        /* line 32, assets/sass/_pagination.scss */
         .pagination ul li a:hover {
           background-color: #0fcfc5;
           color: white; }
-      /* line 30, assets/sass/_pagination.scss */
+      /* line 37, assets/sass/_pagination.scss */
       .pagination ul li span.current {
         color: #f6653c;
         padding: 1em;
         display: block; }
 
-/* line 80, assets/sass/_pagination.scss */
+/* line 51, assets/sass/_pagination.scss */
 .uplifted-nav-left-right div:first-child {
   border-bottom: 1px solid #e5e6ea; }
 @media screen and (min-width: 568px) {
-  /* line 85, assets/sass/_pagination.scss */
+  /* line 56, assets/sass/_pagination.scss */
   .uplifted-nav-left-right > div {
     width: 50%;
     float: left; }
-    /* line 89, assets/sass/_pagination.scss */
+    /* line 60, assets/sass/_pagination.scss */
     .uplifted-nav-left-right > div:first-child {
       border-bottom: none;
       border-right: 1px solid #e5e6ea; } }
-/* line 96, assets/sass/_pagination.scss */
+/* line 67, assets/sass/_pagination.scss */
 .uplifted-nav-left-right a {
   padding: 1em;
   display: block;
   color: #d4d4d4; }
-  /* line 101, assets/sass/_pagination.scss */
+  /* line 72, assets/sass/_pagination.scss */
   .uplifted-nav-left-right a:hover {
     background-color: #0fcfc5;
     color: white; }
 
-/* line 108, assets/sass/_pagination.scss */
+/* line 82, assets/sass/_pagination.scss */
 .attachment-pagination {
   display: inline-block; }
-  /* line 111, assets/sass/_pagination.scss */
+  /* line 85, assets/sass/_pagination.scss */
   .attachment-pagination a {
     padding: 1em;
     display: block;
     color: #d4d4d4; }
-    /* line 116, assets/sass/_pagination.scss */
+    /* line 90, assets/sass/_pagination.scss */
     .attachment-pagination a:hover {
       background-color: #0fcfc5;
       color: white; }
