@@ -27,11 +27,16 @@
       </div>
 
     </div><!-- /#row-->
+
+    <div class="row">
+      <?php global $up_options;
+      echo apply_filters('footertext',$up_options->footertext); ?>
+    </div>
   </div><!-- /#footer-->
 
 </div><!-- /#wrapper -->
 
-<?php wp_footer() ?>
+<?php wp_footer(); ?>
 
 <script>
 jQuery(document).foundation();

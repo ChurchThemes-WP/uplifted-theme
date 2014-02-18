@@ -98,4 +98,3 @@ function uplifted_set_content_width() {
 }
 
 add_action( 'wp', 'uplifted_set_content_width' );
-

@@ -534,7 +534,7 @@ td {
 /* Default Link Styles */
 /* line 169, assets/sass/_type.scss */
 a {
-  color: #f6653c;
+  color: #e8665a;
   text-decoration: none;
   line-height: inherit;
   -webkit-transition: all 0.2s linear;
@@ -733,13 +733,10 @@ cite {
     color: #7e7e68; }
 
 /* Microformats */
-/* line 359, assets/sass/_type.scss */
-.vcard {
-  display: inline-block; }
-  /* line 365, assets/sass/_type.scss */
-  .vcard li {
-    margin: 0;
-    display: block; }
+/* line 365, assets/sass/_type.scss */
+.vcard li {
+  margin: 0;
+  display: block; }
 
 /* line 376, assets/sass/_type.scss */
 .vevent .summary {
@@ -863,7 +860,7 @@ cite {
 /* Wordpress */
 /* line 8, assets/sass/_wordpress.scss */
 .sticky .panel {
-  border: 4px solid #e3e3e1; }
+  border: 4px solid #ece67a; }
 
 /* line 15, assets/sass/_wordpress.scss */
 .gallery-caption {

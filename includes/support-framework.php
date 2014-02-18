@@ -271,18 +271,20 @@ function uplifted_add_theme_support_framework_widgets() {
 	) );
 
 	// Events Widget
-	add_theme_support( 'ctfw-widget-events', array(
-		'fields' => array(
-			'title',
-			'timeframe',
-			'limit',
-			'show_image',
-			'show_date',
-			'show_time',
-			'show_excerpt',
-		),
-		'field_overrides' => array(),
-	) );
+	if( ! class_exists('TribeEvents') ) {
+		add_theme_support( 'ctfw-widget-events', array(
+			'fields' => array(
+				'title',
+				'timeframe',
+				'limit',
+				'show_image',
+				'show_date',
+				'show_time',
+				'show_excerpt',
+			),
+			'field_overrides' => array(),
+		) );
+	}
 
 	// Gallery Widget
 	add_theme_support( 'ctfw-widget-gallery', array(

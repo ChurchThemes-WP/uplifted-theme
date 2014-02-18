@@ -544,7 +544,7 @@ td {
 /* Default Link Styles */
 /* line 169, assets/sass/_type.scss */
 a {
-  color: #f6653c;
+  color: #e8665a;
   text-decoration: none;
   line-height: inherit;
   -webkit-transition: all 0.2s linear;
@@ -743,13 +743,10 @@ cite {
     color: #7e7e68; }
 
 /* Microformats */
-/* line 359, assets/sass/_type.scss */
-.vcard {
-  display: inline-block; }
-  /* line 365, assets/sass/_type.scss */
-  .vcard li {
-    margin: 0;
-    display: block; }
+/* line 365, assets/sass/_type.scss */
+.vcard li {
+  margin: 0;
+  display: block; }
 
 /* line 376, assets/sass/_type.scss */
 .vevent .summary {
@@ -898,8 +895,8 @@ button, .button {
     color: white; }
   /* line 179, assets/sass/_buttons.scss */
   button.secondary, .button.secondary {
-    background-color: #f6653c;
-    border-color: #f43e0b;
+    background-color: #e8665a;
+    border-color: #e23c2d;
     color: white; }
     /* line 123, assets/sass/_buttons.scss */
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
@@ -983,8 +980,8 @@ button, .button {
       background-color: #0fcfc5; }
     /* line 192, assets/sass/_buttons.scss */
     button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
-      background-color: #f6653c;
-      border-color: #f43e0b;
+      background-color: #e8665a;
+      border-color: #e23c2d;
       color: white;
       cursor: "default";
       opacity: 0.6;
@@ -998,7 +995,7 @@ button, .button {
         color: white; }
       /* line 148, assets/sass/_buttons.scss */
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-        background-color: #f6653c; }
+        background-color: #e8665a; }
     /* line 193, assets/sass/_buttons.scss */
     button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
       background-color: #9fe150;
@@ -2868,7 +2865,7 @@ small.error {
 
 /* line 137, assets/sass/_comments.scss */
 #respond .required {
-  color: #f6653c; }
+  color: #e8665a; }
 
 /* Error Messages */
 /* line 143, assets/sass/_comments.scss */
@@ -3168,10 +3165,10 @@ p.comment-form-comment label.error {
         background-color: #0c9f98; }
     /* line 322, assets/sass/_top-bar.scss */
     .top-bar-section ul li > a.button.secondary {
-      background-color: #f6653c; }
+      background-color: #e8665a; }
       /* line 324, assets/sass/_top-bar.scss */
       .top-bar-section ul li > a.button.secondary.hover {
-        background-color: #f43e0b; }
+        background-color: #e23c2d; }
     /* line 328, assets/sass/_top-bar.scss */
     .top-bar-section ul li > a.button.success {
       background-color: #9fe150; }
@@ -3540,7 +3537,7 @@ p.comment-form-comment label.error {
 /* line 104, assets/sass/_widgets.scss */
 .widget_ctfw-archives li,
 .widget_ctfw-categories li {
-  color: #f6653c; }
+  color: #e8665a; }
   /* line 108, assets/sass/_widgets.scss */
   .widget_ctfw-archives li a,
   .widget_ctfw-categories li a {
@@ -3568,7 +3565,7 @@ p.comment-form-comment label.error {
     text-align: center; }
     /* line 138, assets/sass/_widgets.scss */
     .widget_calendar #calendar_wrap #wp-calendar caption {
-      background-color: #b2b2ac;
+      background-color: #dfd521;
       color: #fff;
       padding: 1em; }
       /* line 143, assets/sass/_widgets.scss */
@@ -3577,7 +3574,7 @@ p.comment-form-comment label.error {
     /* line 148, assets/sass/_widgets.scss */
     .widget_calendar #calendar_wrap #wp-calendar thead th {
       padding: .5em 0;
-      background-color: #e3e3e1;
+      background-color: #ece67a;
       border: 1px solid #aaa; }
       /* line 153, assets/sass/_widgets.scss */
       #footer .widget_calendar #calendar_wrap #wp-calendar thead th {
@@ -3585,14 +3582,14 @@ p.comment-form-comment label.error {
         border-color: transparent; }
     /* line 159, assets/sass/_widgets.scss */
     .widget_calendar #calendar_wrap #wp-calendar tbody tr {
-      border-bottom: 1px solid #e3e3e1; }
+      border-bottom: 1px solid #ece67a; }
       /* line 162, assets/sass/_widgets.scss */
       #footer .widget_calendar #calendar_wrap #wp-calendar tbody tr {
         border-color: transparent; }
       /* line 166, assets/sass/_widgets.scss */
       .widget_calendar #calendar_wrap #wp-calendar tbody tr td {
         padding: .5em 0;
-        border: 1px solid #e3e3e1;
+        border: 1px solid #ece67a;
         border-bottom: none;
         background-color: white; }
         /* line 172, assets/sass/_widgets.scss */
@@ -4637,7 +4634,7 @@ body.term-post-format-gallery #content > .panel {
 /* Wordpress */
 /* line 8, assets/sass/_wordpress.scss */
 .sticky .panel {
-  border: 4px solid #e3e3e1; }
+  border: 4px solid #ece67a; }
 
 /* line 15, assets/sass/_wordpress.scss */
 .gallery-caption {
@@ -4929,7 +4926,7 @@ img.alignright {
         border: none; }
         /* line 58, assets/sass/_sermons.scss */
         .single-ctc_sermon .uplifted-entry-header .uplifted-entry-title-meta ul li a:hover {
-          color: #f6653c; }
+          color: #e8665a; }
 /* line 68, assets/sass/_sermons.scss */
 .single-ctc_sermon .single-sermon-content {
   padding-left: 0; }
@@ -4966,7 +4963,7 @@ img.alignright {
       border: none; }
   /* line 119, assets/sass/_sermons.scss */
   .single-sermon-meta-sidebar h3 {
-    color: #f6653c; }
+    color: #e8665a; }
 
 /* Sermon Media Module */
 /* line 130, assets/sass/_sermons.scss */
@@ -5058,3 +5055,85 @@ img.alignright {
 .uplifted-event-full-map,
 .uplifted-event-full-direction {
   margin-bottom: 1.5em; }
+
+/* line 2, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted .ctfw-breadcrumbs {
+  max-width: 1000px; }
+/* line 6, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted.events-archive #tribe-events-pg-template {
+  margin-top: 60px; }
+/* line 10, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted .tribe-events-list h2.tribe-events-page-title {
+  margin-top: .75em;
+  margin-bottom: 0;
+  font-weight: 400; }
+/* line 16, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted .tribe-events-list h2.tribe-events-list-event-title {
+  font-weight: 100; }
+/* line 20, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted.single-tribe_events .tribe-events-event-image {
+  margin-left: -25px;
+  margin-right: -25px; }
+/* line 25, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted .tribe-events-list-separator-month {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-family: "Oswald", Verdana, Geneva, sans-serif;
+  letter-spacing: 2px; }
+/* line 33, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted #tribe-bar-form .tribe-bar-submit input[type=submit] {
+  background-color: #0fcfc5;
+  border-color: #0c9f98;
+  color: white; }
+  /* line 123, assets/sass/_buttons.scss */
+  .tribe-theme-uplifted #tribe-bar-form .tribe-bar-submit input[type=submit]:hover, .tribe-theme-uplifted #tribe-bar-form .tribe-bar-submit input[type=submit]:focus {
+    background-color: #0fcfc5; }
+  /* line 135, assets/sass/_buttons.scss */
+  .tribe-theme-uplifted #tribe-bar-form .tribe-bar-submit input[type=submit]:hover, .tribe-theme-uplifted #tribe-bar-form .tribe-bar-submit input[type=submit]:focus {
+    color: white; }
+/* line 37, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted #tribe-events-content.tribe-events-list, .tribe-theme-uplifted.single-tribe_events #tribe-events {
+  margin-bottom: 1.5em;
+  background-color: white;
+  border: 1px solid #e5e6ea;
+  padding: 24px; }
+/* line 45, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted .tribe-events-calendar thead th {
+  background-color: #ece67a;
+  color: rgba(0, 0, 0, 0.6);
+  border-top: 1px solid #dfd521;
+  border-left-color: #dfd521;
+  border-right-color: #dfd521; }
+/* line 53, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted #tribe-bar-form {
+  background-color: rgba(255, 255, 255, 0.3); }
+/* line 57, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted .tribe-events-calendar td.tribe-events-past div[id*="tribe-events-daynum-"],
+.tribe-theme-uplifted .tribe-events-calendar td.tribe-events-past div[id*="tribe-events-daynum-"] > a {
+  color: rgba(0, 0, 0, 0.4);
+  background-color: #f9f7d3; }
+/* line 63, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted .tribe-events-calendar div[id*="tribe-events-daynum-"], .tribe-theme-uplifted .tribe-events-calendar div[id*="tribe-events-daynum-"] a {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #f2eea7; }
+/* line 68, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted #tribe-events-content .tribe-events-calendar td {
+  background-color: white; }
+/* line 72, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"],
+.tribe-theme-uplifted .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"] > a,
+.tribe-theme-uplifted #tribe_events_filters_wrapper input[type=submit],
+.tribe-theme-uplifted .tribe-events-button,
+.tribe-theme-uplifted .entry-content .tribe-events-button,
+.tribe-theme-uplifted .tribe-events-button.tribe-inactive,
+.tribe-theme-uplifted .entry-content .tribe-events-button:hover,
+.tribe-theme-uplifted .tribe-events-button:hover,
+.tribe-theme-uplifted .tribe-events-button.tribe-active:hover {
+  background-color: #e8665a; }
+/* line 84, assets/sass/_events-calendar.scss */
+.tribe-theme-uplifted #tribe-events-content .tribe-events-tooltip h4,
+.tribe-theme-uplifted #tribe_events_filters_wrapper .tribe_events_slider_val,
+.tribe-theme-uplifted .single-tribe_events a.tribe-events-ical,
+.tribe-theme-uplifted .single-tribe_events a.tribe-events-gcal {
+  color: #e8665a; }

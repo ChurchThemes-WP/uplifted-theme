@@ -64,31 +64,33 @@ function uplifted_add_theme_support_ctc() {
 	) );
 
 	// Events
-	add_theme_support( 'ctc-events', array(
-		'taxonomies' => array(),
-		'fields' => array(
-			'_ctc_event_start_date',
-			'_ctc_event_end_date',
-			'_ctc_event_time',
-			'_ctc_event_recurrence',
-			'_ctc_event_recurrence_end_date',
-			'_ctc_event_venue',
-			'_ctc_event_address',
-			'_ctc_event_show_directions_link',
-			'_ctc_event_map_lat',
-			'_ctc_event_map_lng',
-			'_ctc_event_map_type',
-			'_ctc_event_map_zoom',
-		),
-		'field_overrides' => array(
-			'_ctc_event_map_type' => array(
-				'default' => 'HYBRID',
+	if( ! class_exists('TribeEvents') ) {
+		add_theme_support( 'ctc-events', array(
+			'taxonomies' => array(),
+			'fields' => array(
+				'_ctc_event_start_date',
+				'_ctc_event_end_date',
+				'_ctc_event_time',
+				'_ctc_event_recurrence',
+				'_ctc_event_recurrence_end_date',
+				'_ctc_event_venue',
+				'_ctc_event_address',
+				'_ctc_event_show_directions_link',
+				'_ctc_event_map_lat',
+				'_ctc_event_map_lng',
+				'_ctc_event_map_type',
+				'_ctc_event_map_zoom',
 			),
-			'_ctc_event_map_zoom' => array(
-				'default' => '14',
-			),
-		)
-	) );
+			'field_overrides' => array(
+				'_ctc_event_map_type' => array(
+					'default' => 'HYBRID',
+				),
+				'_ctc_event_map_zoom' => array(
+					'default' => '14',
+				),
+			)
+		) );
+	}
 
 	// People
 	add_theme_support( 'ctc-people', array(
@@ -136,4 +138,4 @@ function uplifted_add_theme_support_ctc() {
 
 }
 
-add_action( 'after_setup_theme', 'uplifted_add_theme_support_ctc' );
+add_action( 'after_setup_theme', 'uplifted_add_theme_support_ctc', 9999 );
