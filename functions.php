@@ -1,5 +1,30 @@
 <?php
 
+/**
+ * Amplify automatic updater init
+ */
+
+// Define variables for our theme updates
+define('UPTHEMES_LICENSE_KEY','uplifted_theme');
+define('UPTHEMES_ITEM_NAME', 'Uplifted Theme');
+define('UPTHEMES_STORE_URL', 'https://upthemes.com');
+
+function uplifted_theme_update_check(){
+  $upthemes_license = trim( get_option( UPTHEMES_LICENSE_KEY ) );
+
+  $edd_updater = new UpThemes_Theme_Updater(
+    array(
+      'remote_api_url'  => UPTHEMES_STORE_URL,  // Our store URL that is running EDD
+      'license'         => $upthemes_license, // The license key (used get_option above to retrieve from DB)
+      'item_name'       => UPTHEMES_ITEM_NAME,  // The name of this theme
+      'author'          => 'UpThemes'
+    )
+  );
+}
+add_action('admin_init','uplifted_theme_update_check',1);
+
+/* end Amplify automatic updater init script */
+
 // Grab some necessary PHP includes
 require_once 'framework/framework.php';                              // Church Framework
 require_once 'includes/support-ctc.php';                             // Church Framework support declarations
@@ -18,34 +43,9 @@ require_once 'includes/template-tags.php';                           // Template
 require_once 'options/options.php';                                  // UpThemes Framework
 require_once 'includes/theme-options.php';                           // Load theme options specific to this theme
 
-// Define variables for our theme updater
-define('UPTHEMES_ITEM_NAME', 'Uplifted Theme');
-define('UPTHEMES_STORE_URL', 'http://upthemes.com');
-define('UPTHEMES_LICENSE_KEY', 'uplifted_license_key');
-
-if ( !class_exists( 'UpThemes_Theme_Updater' ) ) {
-	// Load our custom theme updater
-	require_once 'includes/UpThemes_Theme_Updater.php';
-}
-
 if ( ! isset( $content_width ) ){
   $content_width = 560;
 }
-
-function uplifted_theme_update_check(){
-	$upthemes_license = trim( get_option( UPTHEMES_LICENSE_KEY ) );
-
-	$edd_updater = new UpThemes_Theme_Updater( array(
-			'remote_api_url' 	=> UPTHEMES_STORE_URL, 	// Our store URL that is running EDD
-			'version' 			=> '1.0', 				// The current theme version we are running
-			'license' 			=> $upthemes_license, 		// The license key (used get_option above to retrieve from DB)
-			'item_name' 		=> UPTHEMES_ITEM_NAME,	// The name of this theme
-			'author'			=> 'UpThemes'	// The author's name
-		)
-	);
-}
-add_action('admin_init','uplifted_theme_update_check',1);
-
 
 /**
  * Returns the Google font stylesheet URL, if available.
