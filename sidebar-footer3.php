@@ -13,8 +13,4 @@
 
 	<?php dynamic_sidebar( 'uplifted-footer-column-three' ); ?>
 
-<?php else:
-
-	the_widget('WP_Widget_Meta');
-
-endif; ?>
+<?php endif; ?>

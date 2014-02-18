@@ -63,9 +63,9 @@ $up_options = upfw_get_options();
             </ul>
 
             <section class="top-bar-section">
-                <?php foundation_top_bar_l(); ?>
+                <?php get_template_part('menu','topleft'); ?>
 
-                <?php foundation_top_bar_r(); ?>
+                <?php get_template_part('menu','topright'); ?>
             </section>
         </nav>
     </div>

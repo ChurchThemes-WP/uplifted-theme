@@ -13,8 +13,4 @@
 
 	<?php dynamic_sidebar( 'uplifted-footer-column-one' ); ?>
 
-<?php else:
-
-	the_widget('WP_Widget_Search');
-
-endif; ?>
+<?php endif; ?>

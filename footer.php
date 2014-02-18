@@ -28,10 +28,14 @@
 
     </div><!-- /#row-->
 
-    <div class="row">
-      <?php global $up_options;
-      echo apply_filters('footertext',$up_options->footertext); ?>
-    </div>
+    <div id="footer-meta" class="row">
+      <div class="large-12 columns">
+        <?php uplifted_theme_footer(); ?>
+        <?php get_template_part('menu','social'); ?>
+      </div>
+
+    </div><!-- /#row-->
+
   </div><!-- /#footer-->
 
 </div><!-- /#wrapper -->

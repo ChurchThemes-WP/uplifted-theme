@@ -6,6 +6,14 @@
   background-color: $primary-color;
   color: $neutral-color;
 
+  #footer-meta{
+    text-align: center;
+
+    @media screen and (min-width: 641px){
+      text-align: left;
+    }
+  }
+
   .columns {
 
     a {

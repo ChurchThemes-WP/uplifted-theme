@@ -1,8 +1,10 @@
 <?php
 
 /**
- * Amplify automatic updater init
+ * automatic updater init
  */
+
+require_once 'includes/UpThemes_Theme_Updater.php';
 
 // Define variables for our theme updates
 define('UPTHEMES_LICENSE_KEY','uplifted_theme');
@@ -10,6 +12,7 @@ define('UPTHEMES_ITEM_NAME', 'Uplifted Theme');
 define('UPTHEMES_STORE_URL', 'https://upthemes.com');
 
 function uplifted_theme_update_check(){
+
   $upthemes_license = trim( get_option( UPTHEMES_LICENSE_KEY ) );
 
   $edd_updater = new UpThemes_Theme_Updater(
@@ -31,13 +34,13 @@ require_once 'includes/support-ctc.php';                             // Church F
 require_once 'includes/support-framework.php';                       // Church Framework support
 require_once 'includes/support-wp.php';                              // WordPress feature support
 require_once 'includes/icons.php';                                   // Icons
+require_once 'includes/foundation-navbar.php';                       // Foundation Navbar Walker
 require_once 'includes/sidebars.php';                                // Sidebars
 require_once 'includes/images.php';                                  // Images
 require_once 'includes/loop-after-content.php';                      // Loop after content
 require_once 'includes/content-types.php';                           // Content types
 require_once 'includes/gallery.php';                                 // Gallery filter
 require_once 'includes/custom-header.php';                           // Custom header setup
-require_once 'includes/foundation-navbar.php';                       // Foundation navbar
 require_once 'includes/presstrends.php';                             // PressTrends
 require_once 'includes/template-tags.php';                           // Template Tags
 require_once 'options/options.php';                                  // UpThemes Framework
@@ -89,6 +92,20 @@ function uplifted_page_menu_args( $args ) {
 }
 add_filter( 'wp_page_menu_args', 'uplifted_page_menu_args' );
 
+/**
+ * Register Menus
+ * http://codex.wordpress.org/Function_Reference/register_nav_menus#Examples
+ */
+register_nav_menus(array(
+    'top-left' => 'Left Top Menu',
+    'top-right' => 'Right Top Menu',
+    'social'    => 'Social Menu'
+));
+
+/**
+ * Enqueue required scripts and styles for theme
+ *
+ */
 function uplifted_enqueue_scripts(){
 
   wp_enqueue_script( 'uplifted-plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery') );
@@ -129,7 +146,7 @@ function uplifted_theme_footer() {
 
   $up_options = upfw_get_options();
 
-  echo $up_options->footertext;
+  echo apply_filters('footertext',$up_options->footertext);
 
 }
 

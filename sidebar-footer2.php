@@ -13,8 +13,4 @@
 
 	<?php dynamic_sidebar( 'uplifted-footer-column-two' ); ?>
 
-<?php else:
-
-	the_widget('WP_Widget_Archives');
-
-endif; ?>
+<?php endif; ?>
