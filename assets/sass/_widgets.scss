@@ -136,7 +136,7 @@
       text-align: center;
 
       caption {
-        background-color: darken($tertiary-color,20%);
+        background-color: darken($primary-color,10%);
         color: #fff;
         padding: 1em;
 
@@ -147,8 +147,9 @@
 
       thead th {
         padding: .5em 0;
-        background-color: $tertiary-color;
-        border: 1px solid #aaa;
+        background-color: $primary-color;
+        border: 1px solid darken($primary-color,10%);
+        color: contrast-color($primary-color,#222,#fff,50%);
 
         #footer &{
           background-color: rgba(0,0,0,.06);
@@ -157,7 +158,7 @@
       }
 
       tbody tr {
-        border-bottom: 1px solid $tertiary-color;
+        border-bottom: 1px solid $primary-color;
 
         #footer &{
           border-color: transparent;
@@ -165,8 +166,9 @@
 
         td {
           padding: .5em 0;
-          border: 1px solid $tertiary-color;
+          border: 1px solid $primary-color;
           border-bottom: none;
+          color: #888;
           background-color: $panel-bg;
 
           #footer &{

@@ -143,7 +143,7 @@ body.term-post-format-gallery #content > .panel {
 
   #container {
     width: auto;
-    margin: 1.875em 0 0 0;
+    margin: 3em 0 0 0;
     padding: 0;
     float: none;
     overflow: auto;
@@ -156,12 +156,17 @@ body.term-post-format-gallery #content > .panel {
     @include grid-row;
   }
 
-  .uplifted-intro-wrapper {
-    background-color: darken($body-bg, 5%);
+  #uplifted-slider-boxes,
+  .uplifted-intro-wrapper,
+  #uplifted-home-bottom-widgets {
+    margin-bottom: 3em;
   }
 
-  #uplifted-intro {
-    margin-bottom: 1.875em;
+  .uplifted-intro-wrapper {
+    background-color: $neutral-color;
+    padding: $panel-padding;
+    border: $panel-border;
+    box-shadow: $panel-box-shadow;
   }
 
   #uplifted-slider,
@@ -173,31 +178,23 @@ body.term-post-format-gallery #content > .panel {
     text-align: center;
 
     #uplifted-intro-heading{
-      font-size: emCalc(24);
+      font-size: emCalc(32);
       border-bottom: 3px solid darken($body-bg, 10%);
       display: inline-block;
       text-align: center;
       padding-bottom: .3em;
-      margin-bottom: 1.5em;
+      margin-bottom: 1em;
     }
 
     .panel {
       padding-top: 2.5em;
-      padding-bottom: 4em;
+      padding-bottom: 2.5em;
       max-width: 800px;
       margin: 0 auto;
     }
 
     #uplifted-intro-content {
-      text-align: left;
-      
-
-      @media screen and (min-width: $small-screen) {
-        -moz-column-count: 2;
-       -moz-column-gap: 20px;
-       -webkit-column-count: 2;
-       -webkit-column-gap: 20px;
-      }
+      font-size: 1.4em;
 
       p:last-child {
         margin-bottom: 0;
@@ -220,6 +217,10 @@ body.term-post-format-gallery #content > .panel {
     img {
       display: block;
       margin-bottom: 10px;
+    }
+
+    &:nth-of-type(2){
+      margin-bottom: 0;
     }
   }
 
