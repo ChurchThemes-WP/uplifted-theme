@@ -60,28 +60,32 @@ while ( have_posts() ) : the_post();
 	<?php endif; ?>
 
 	<?php if ( empty( $no_intro ) ) : ?>
+		
+		<div class="uplifted-intro-wrapper">
+			
+			<section id="uplifted-intro"<?php if ( get_the_title() ) : ?> class="uplifted-intro-has-heading"<?php endif; ?>>
 
-		<section id="uplifted-intro"<?php if ( get_the_title() ) : ?> class="uplifted-intro-has-heading"<?php endif; ?>>
+				<div id="uplifted-intro-inner">
 
-			<div id="uplifted-intro-inner">
+					<div class="panel">
 
-				<div class="panel">
+						<?php if ( ctfw_has_title() ) : ?>
+						<h1 id="uplifted-intro-heading"><?php the_title(); ?></h1>
+						<?php endif; ?>
 
-					<?php if ( ctfw_has_title() ) : ?>
-					<h1 id="uplifted-intro-heading"><?php the_title(); ?></h1>
-					<?php endif; ?>
+						<?php if ( ctfw_has_content() ) : ?>
+						<div id="uplifted-intro-content">
+							<?php the_content(); ?>
+						</div>
+						<?php endif; ?>
 
-					<?php if ( ctfw_has_content() ) : ?>
-					<div id="uplifted-intro-content">
-						<?php the_content(); ?>
 					</div>
-					<?php endif; ?>
 
 				</div>
 
-			</div>
-
-		</section>
+			</section>
+		
+		</div><!-- /uplifted-intro-wrapper -->
 
 	<?php endif; ?>
 
