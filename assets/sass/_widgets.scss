@@ -343,13 +343,8 @@
 
 /* Widget Entry */
 
-.uplifted-widget-entry { // <article>
-	margin-bottom: 1em;
-
-	header {
-  	display: inline-block;
-  	clear: both; // clears floated elements inside
-	}
+.uplifted-widget-entry {
+	margin-bottom: $panel-margin-bottom;
 }
 
 // Thumbnail Container

@@ -3785,13 +3785,21 @@ p.comment-form-comment label.error {
   margin: 0; }
 
 /* Dropdown Widgets */
-/* line 408, assets/sass/_widgets.scss */
+<<<<<<< HEAD
+/* line 413, assets/sass/_widgets.scss */
+=======
+/* line 409, assets/sass/_widgets.scss */
+>>>>>>> 5c92cb7f7aa164f414cdbfe04f5a14b98052e733
 .widget_ctfw-archives select,
 .widget_ctfw-categories select {
   width: 100%; }
 
 /* List Widgets */
-/* line 415, assets/sass/_widgets.scss */
+<<<<<<< HEAD
+/* line 420, assets/sass/_widgets.scss */
+=======
+/* line 425, assets/sass/_widgets.scss */
+>>>>>>> 5c92cb7f7aa164f414cdbfe04f5a14b98052e733
 .widget_categories ul,
 .widget_ctfw-categories ul,
 .widget_ctfw-archives ul,
@@ -3807,7 +3815,11 @@ p.comment-form-comment label.error {
   list-style: none;
   line-height: 1.4em; }
 
-/* line 431, assets/sass/_widgets.scss */
+<<<<<<< HEAD
+/* line 436, assets/sass/_widgets.scss */
+=======
+/* line 441, assets/sass/_widgets.scss */
+>>>>>>> 5c92cb7f7aa164f414cdbfe04f5a14b98052e733
 .widget_categories ul ul,
 .widget_ctfw-categories ul ul,
 .widget_ctfw-archives ul ul,
@@ -3823,7 +3835,11 @@ p.comment-form-comment label.error {
   list-style: none;
   line-height: 1.4em; }
 
-/* line 447, assets/sass/_widgets.scss */
+<<<<<<< HEAD
+/* line 452, assets/sass/_widgets.scss */
+=======
+/* line 455, assets/sass/_widgets.scss */
+>>>>>>> 5c92cb7f7aa164f414cdbfe04f5a14b98052e733
 .widget_categories li,
 .widget_ctfw-categories li,
 .widget_ctfw-archives li,
@@ -3836,13 +3852,21 @@ p.comment-form-comment label.error {
   padding-top: 0;
   margin-bottom: 10px; }
 
-/* line 460, assets/sass/_widgets.scss */
+<<<<<<< HEAD
+/* line 465, assets/sass/_widgets.scss */
+=======
+/* line 461, assets/sass/_widgets.scss */
+>>>>>>> 5c92cb7f7aa164f414cdbfe04f5a14b98052e733
 .widget_recent_entries li,
 .widget_recent_comments li {
   padding-top: 0;
   margin-bottom: 18px; }
 
-/* line 466, assets/sass/_widgets.scss */
+<<<<<<< HEAD
+/* line 471, assets/sass/_widgets.scss */
+=======
+/* line 476, assets/sass/_widgets.scss */
+>>>>>>> 5c92cb7f7aa164f414cdbfe04f5a14b98052e733
 .widget_categories li:first-child,
 .widget_ctfw-categories li:first-child,
 .widget_ctfw-archives li:first-child,
@@ -3857,7 +3881,11 @@ p.comment-form-comment label.error {
   border-top: 0;
   padding-top: 0; }
 
-/* line 481, assets/sass/_widgets.scss */
+<<<<<<< HEAD
+/* line 486, assets/sass/_widgets.scss */
+=======
+/* line 491, assets/sass/_widgets.scss */
+>>>>>>> 5c92cb7f7aa164f414cdbfe04f5a14b98052e733
 .widget_categories li li,
 .widget_ctfw-categories li li,
 .widget_ctfw-archives li li,
@@ -3873,7 +3901,11 @@ p.comment-form-comment label.error {
   border-top: 0;
   padding-top: 0; }
 
-/* line 497, assets/sass/_widgets.scss */
+<<<<<<< HEAD
+/* line 502, assets/sass/_widgets.scss */
+=======
+/* line 508, assets/sass/_widgets.scss */
+>>>>>>> 5c92cb7f7aa164f414cdbfe04f5a14b98052e733
 .widget_categories li li a,
 .widget_ctfw-categories li li a,
 .widget_ctfw-archives li li a,
@@ -3905,7 +3937,11 @@ p.comment-form-comment label.error {
 .widget_calendar #wp-calendar {
   width: 100%; }
 
-/* line 530, assets/sass/_widgets.scss */
+<<<<<<< HEAD
+/* line 535, assets/sass/_widgets.scss */
+=======
+/* line 532, assets/sass/_widgets.scss */
+>>>>>>> 5c92cb7f7aa164f414cdbfe04f5a14b98052e733
 .widget_calendar #wp-calendar caption,
 .widget_calendar #wp-calendar td,
 .widget_calendar #wp-calendar th {
@@ -4029,7 +4065,11 @@ p.comment-form-comment label.error {
 .widget_ctfw-highlight.uplifted-widget-has-title {
   margin-top: 30px; }
 
-/* line 657, assets/sass/_widgets.scss */
+<<<<<<< HEAD
+/* line 662, assets/sass/_widgets.scss */
+=======
+/* line 658, assets/sass/_widgets.scss */
+>>>>>>> 5c92cb7f7aa164f414cdbfe04f5a14b98052e733
 .widget_ctfw-highlight > :not(.uplifted-widget-title):first-of-type,
 .widget_ctfw-highlight .uplifted-widget-first-element {
   /* uplifted-widget-first-element applied for IE8 w/JavaScript */
