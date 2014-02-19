@@ -97,7 +97,7 @@ function be_password_pointer_print_admin_bar() {
 // Insert your PressTrends tracking code block here
 function upthemes_pt_theme() {
     // PressTrends Account API Key
-    $api_key = 'ijd5r0ywkki9akgl0foy7msb30ibm201d508';
+    $api_key = '24mjr1pl5kjkzj8w639zm94l701sltupx';
     $auth = '';
     // Start of Metrics
     global $wpdb;
