@@ -3294,14 +3294,14 @@ p.comment-form-comment label.error {
 
 /* line 435, assets/sass/_top-bar.scss */
 .top-bar-js-breakpoint {
-  width: 48em !important;
+  width: 59.375em !important;
   visibility: hidden; }
 
 /* line 439, assets/sass/_top-bar.scss */
 .js-generated {
   display: block; }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 59.375em) {
   /* line 446, assets/sass/_top-bar.scss */
   .top-bar {
     background: white;
