@@ -36,7 +36,8 @@ extract( ctfw_person_data() );
   		<ul class="uplifted-entry-meta">
 
   			<?php if ( $position ) : ?>
-  				<li class="uplifted-person-position uplifted-content-icon entry-meta-item">
+  				<li class="uplifted-person-position entry-meta-item">
+            <i class="genericon genericon-user"></i>
   					<?php echo esc_html( $position ); ?>
   				</li>
   		  <?php endif; ?>
@@ -57,12 +58,6 @@ extract( ctfw_person_data() );
   					<a href="mailto:<?php echo antispambot( $email, true ); ?>"><?php echo antispambot( $email ); ?></a>
   				</li>
   				<?php endif; ?>
-
-  				<!-- <?php if ( $urls ) : ?>
-  				<li class="uplifted-entry-icons uplifted-person-icons entry-meta-item">
-  					<?php uplifted_social_icons( $urls ); ?>
-  				</li>
-  				<?php endif; ?> -->
 
     		<?php endif; ?>
 

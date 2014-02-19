@@ -127,9 +127,7 @@ function uplifted_breadcrumbs( $location ) {
 function uplifted_post_image() {
 
 	// Featured image
-	$image = get_the_post_thumbnail( null, apply_filters('uplifted_post_image_size', 'post-thumbnail'), array(
-		'class' => 'uplifted-image' )
-	);
+	$image = get_the_post_thumbnail( null, apply_filters('uplifted_post_image_size', 'uplifted-post-header'), array('class' => 'uplifted-image' ) );
 
 	// Link if short / multiple
 	if ( ! is_singular( get_post_type() ) ) {

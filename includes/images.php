@@ -46,11 +46,7 @@ function uplifted_image_sizes() {
 	add_image_size( 'uplifted-slide', 1434, 1000, true ); // crop for exact size
 
 	// Custom Post Header Size
-	add_image_size( 'uplifted-post-header', 700, 350, true ); // crop for exact size
-
-	// Banner Image
-	// Featured image to appear at the top of pages
-	// add_image_size( 'uplifted-banner', 960, 250, true ); // crop for exact size
+	add_image_size( 'uplifted-post-header', 717, 420, true ); // crop for exact size
 
 	/*********************************
 	 * RECTANGULAR IMAGES
@@ -101,3 +97,17 @@ function uplifted_set_content_width() {
 }
 
 add_action( 'wp', 'uplifted_set_content_width' );
+
+
+function uplifted_modify_post_image_size($image_size){
+	global $post;
+
+	if( is_archive() && get_post_type($post) == 'ctc_person' ){
+		return $image_size;
+	} else {
+		return 'uplifted-post-header';
+	}
+
+}
+
+add_filter('uplifted_post_image_size', 'uplifted_modify_post_image_size');
