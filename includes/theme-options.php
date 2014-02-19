@@ -55,6 +55,27 @@ $options = array(
 			)
 		)
 	),
+	"sticky_navbar" => array(
+		"tab" => "general",
+		"name" => "sticky_navbar",
+		"title" => "Sticky Navbar",
+		"description" => __( "Toggle this option to enable or disable the sticky navbar.", 'uplifted' ),
+		"section" => "appearance",
+		"since" => "1.0",
+		"id" => "appearance",
+		"type" => "select",
+		"default" => 'enabled',
+		"valid_options" => array(
+			"enabled" => array(
+				"name" => "enabled",
+				"title" => __( "Enabled", 'uplifted' )
+			),
+			"disabled" => array(
+				"name" => "disabled",
+				"title" => __( "Disabled", 'uplifted' )
+			)
+		)
+	),
 );
 
 register_theme_options($options);
@@ -94,3 +115,11 @@ $options = array(
 );
 
 register_theme_options($options);
+
+function uplifted_sticky_navbar(){
+	global $up_options;
+
+	if( $up_options->sticky_navbar == 'enabled' ){
+		echo ' fixed';
+	}
+}

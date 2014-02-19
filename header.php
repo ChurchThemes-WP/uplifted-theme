@@ -42,7 +42,7 @@ $up_options = upfw_get_options();
 
   <header id="masthead">
 
-    <div class="top-bar-container fixed">
+    <div class="top-bar-container<?php uplifted_sticky_navbar(); ?>">
         <nav class="top-bar">
 
             <ul class="title-area">
@@ -59,12 +59,11 @@ $up_options = upfw_get_options();
                   </a>
                 </h1>
               </li>
-              <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+              <li class="toggle-topbar menu-icon"><a href="#"><span><?php _e('Menu','uplifted'); ?></span></a></li>
             </ul>
 
             <section class="top-bar-section">
                 <?php get_template_part('menu','topleft'); ?>
-
                 <?php get_template_part('menu','topright'); ?>
             </section>
         </nav>

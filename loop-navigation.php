@@ -6,10 +6,6 @@
 // No direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-// Left/right icons
-$icon_left = '<span class="uplifted-button-icon ' . uplifted_get_icon_class( 'nav-left' ) . '"></span>';
-$icon_right = '<span class="uplifted-button-icon ' . uplifted_get_icon_class( 'nav-right' ) . '"></span>';
-
 /*********************************
  * ATTACHMENT - Back to Parent
  *********************************/
@@ -25,7 +21,7 @@ if ( is_attachment() ) :
 	if ( ! empty( $post->post_parent ) && $parent_post = get_post( $post->post_parent ) ) : ?>
 
 		<nav class="pagination attachment-pagination">
-			<div class="uplifted-nav-left"><?php previous_post_link( '%link', sprintf( __( '&larr;  %s Back to %s', 'uplifted' ), $icon_left, $parent_post->post_title ) ); ?></div>
+			<div class="uplifted-nav-left"><?php previous_post_link( '%link', sprintf( __( '&larr; Back to %s', 'uplifted' ), $parent_post->post_title ) ); ?></div>
 		</nav>
 
 	<?php endif; ?>
@@ -56,7 +52,7 @@ elseif ( is_singular() && ! uplifted_loop_after_content_used() ) : // use Multip
 				<div class="uplifted-nav-left">
 					<?php
 					/* translators: %1$s is left arrow icon, %2$s is post title */
-					previous_post_link( '%link', sprintf( _x( '&larr; %1$s %2$s', 'previous post link', 'uplifted' ), $icon_left, ctfw_shorten( $prev_post->post_title, $prev_next_title_characters ) ) );
+					previous_post_link( '%link', sprintf( _x( '&larr; %1$s', 'previous post link', 'uplifted' ), ctfw_shorten( $prev_post->post_title, $prev_next_title_characters ) ) );
 					?>
 				</div>
 			<?php endif; ?>
@@ -65,7 +61,7 @@ elseif ( is_singular() && ! uplifted_loop_after_content_used() ) : // use Multip
 				<div class="uplifted-nav-right">
 					<?php
 					/* translators: %1$s is post title, %2$s is right arrow icon */
-					next_post_link( '%link', sprintf( _x( '%1$s %2$s &rarr;', 'next post link', 'uplifted' ), ctfw_shorten( $next_post->post_title, $prev_next_title_characters ), $icon_right ) );
+					next_post_link( '%link', sprintf( _x( '%1$s &rarr;', 'next post link', 'uplifted' ), ctfw_shorten( $next_post->post_title, $prev_next_title_characters ) ) );
 					?>
 				</div>
 			<?php endif; ?>

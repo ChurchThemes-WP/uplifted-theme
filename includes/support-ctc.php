@@ -104,9 +104,6 @@ function uplifted_add_theme_support_ctc() {
 			'_ctc_person_urls',
 		),
 		'field_overrides' => array(
-			/* '_ctc_person_urls' => array(
-				'desc' => sprintf( __( 'Enter one URL per line for %s.', 'uplifted' ), uplifted_social_icon_sites( 'or' ) ),
-			), */
 			'_ctc_person_email' => array(
 				'desc' => sprintf( __( 'The WordPress <a href="%s" target="_blank">antispambot</a> function is used to help deter automated email harvesting.', 'uplifted' ), 'http://codex.wordpress.org/Function_Reference/antispambot' ),
 			),

@@ -2644,7 +2644,7 @@ small.error {
     float: left; } }
 /* Post */
 /* line 20, assets/sass/_post.scss */
-#uplifted-content .hentry {
+.uplifted-content-meta {
   margin-bottom: 1.5em;
   background-color: white;
   border: 1px solid #e5e6ea;

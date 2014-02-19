@@ -127,7 +127,7 @@ function uplifted_breadcrumbs( $location ) {
 function uplifted_post_image() {
 
 	// Featured image
-	$image = get_the_post_thumbnail( null, 'post-thumbnail', array(
+	$image = get_the_post_thumbnail( null, apply_filters('uplifted_post_image_size', 'post-thumbnail'), array(
 		'class' => 'uplifted-image' )
 	);
 

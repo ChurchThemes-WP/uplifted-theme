@@ -82,36 +82,6 @@ foreach ( $posts as $post ) : setup_postdata( $post ); $i++;
 					</li>
 				<?php endif; ?>
 
-				<?php /*
-				<?php if ( $instance['show_media_types'] ) : ?>
-
-					<li class="uplifted-widget-entry-icons uplifted-sermons-widget-entry-icons">
-
-						<ul class="uplifted-list-icons">
-
-							<?php if ( $has_full_text ) : ?>
-								<li><a href="<?php the_permalink(); ?>" class="<?php uplifted_icon_class( 'read' ); ?>" title="<?php echo esc_attr( _x( 'Read Online', 'sermons widget', 'uplifted' ) ); ?>"><i class="genericon genericon-month"></i></a></li>
-							<?php endif; ?>
-
-							<?php if ( $video_player || $video_download_url ) : ?>
-								<li><a href="<?php the_permalink(); ?><?php if ( $video_player ) : ?>?player=video<?php endif; ?>" class="<?php uplifted_icon_class( 'video-play' ); ?>" title="<?php echo esc_attr( _x( 'Watch Video', 'sermons widget', 'uplifted' ) ); ?>"><i class="genericon genericon-video"></i></a></li>
-							<?php endif; ?>
-
-							<?php if ( $audio_player || $audio_download_url ) : ?>
-								<li><a href="<?php the_permalink(); ?><?php if ( $audio_player ) : ?>?player=audio<?php endif; ?>" class="<?php uplifted_icon_class( 'audio-play' ); ?>" title="<?php echo esc_attr( _x( 'Listen to Audio', 'sermons widget', 'uplifted' ) ); ?>"><i class="genericon genericon-audio"></i></a></li>
-							<?php endif; ?>
-
-							<?php if ( $pdf_download_url ) : ?>
-								<li><a href="<?php echo esc_url( $pdf_download_url ); ?>" class="<?php uplifted_icon_class( 'pdf-download' ); ?>" title="<?php echo esc_attr( _x( 'Download PDF', 'sermons widget', 'uplifted' ) ); ?>"><i class="genericon genericon-document"></i></a></li>
-							<?php endif; ?>
-
-						</ul>
-
-					</li>
-
-				<?php endif; ?>
-				*/ ?>
-
 			</ul>
 
 		</header>

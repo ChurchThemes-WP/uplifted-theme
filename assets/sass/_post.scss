@@ -17,7 +17,7 @@
 // and article types, some styles will be overwritten
 // below in speacial cases
 //
-#uplifted-content .hentry {
+.uplifted-content-meta {
   margin-bottom: $panel-margin-bottom;
   background-color: $panel-bg;
   border: $panel-border;
@@ -47,7 +47,7 @@
   }
 }
 
-// Meta Entry Widget 
+// Meta Entry Widget
 //
 // global styles for each post type including
 // meta for people, sermons, etc
@@ -94,7 +94,7 @@
       color: $primary-color;
     }
   }
-  
+
   // tweak icons in meta list
   .genericon {
     font-size: 1.3em;
@@ -107,7 +107,7 @@
 .uplifted-entry-title {
   font-weight: 400;
   line-height: 1.2;
-  
+
   @media screen and (min-width: ($small-screen - 200px) ) {
 	  font-size: $h1-font-size;
 	}
@@ -115,13 +115,13 @@
 
 // Post Footer - usually buttons
 .uplifted-entry-footer {
-  
+
 
   .view-details {
     display: inline-block;
     padding: .75em 0;
   }
-  
+
   // tweak icons in footer buttons
   .genericon {
     font-size: 1.3em;
@@ -129,15 +129,15 @@
     top: -1px;
     margin-right: .3em;
   }
-  
+
   .genericon-location {
     top: auto;
   }
-  
+
   .genericon-cloud-download {
     top: -2px;
   }
-  
+
   .genericon-standard {
     font-size: 1.5em;
   }
@@ -163,7 +163,7 @@
   }
 
   .uplifted-author-content {
-    
+
     h1 {
       font-size: 1.2em;
     }
@@ -173,7 +173,7 @@
 
 /* Attachment Post */
 .type-attachment {
-  
+
   .uplifted-entry-attachment {
     margin: 0 (-$panel-padding);
   }

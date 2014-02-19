@@ -38,7 +38,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		?>
 
 			<a href="<?php echo esc_url( ctfw_force_download_url( wp_get_attachment_url( $post->ID ) ) ); ?>" class="uplifted-button uplifted-attachment-download">
-				<span class="uplifted-button-icon <?php uplifted_icon_class( 'download' ); ?>"></span>
 				<?php
 				$filetype = wp_check_filetype( wp_get_attachment_url( $post->ID ) );
 				if ( $filetype['ext'] ) {

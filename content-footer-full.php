@@ -17,7 +17,7 @@ if ( is_singular( 'post' ) ) {
 	// Blog Tags
 	/* translators: used between list items, there is a space after the comma */
 	if ( $list = get_the_tag_list( '', __( ', ', 'uplifted' ) ) ) {
-		$term_lists[] = '<div class="uplifted-content-icon"><span class="' . uplifted_icon_class( 'entry-tag', 'return' ) . '"></span>' . sprintf( __( 'Tagged with %s', 'uplifted' ), $list ) . '</div>';
+		$term_lists[] = sprintf( __( 'Tagged with %s', 'uplifted' ), $list );
 	}
 
 }
@@ -28,13 +28,13 @@ elseif ( is_singular( 'ctc_sermon' ) ) {
 	// Series
 	/* translators: used between list items, there is a space after the comma */
 	if ( $list = get_the_term_list( $post->ID, 'ctc_sermon_series', '', __( ', ', 'uplifted' ) ) ) {
-		$term_lists[] = '<div class="uplifted-content-icon"><span class="' . uplifted_icon_class( 'sermon-series', 'return' ) . '"></span>' . sprintf( __( 'Series: %s', 'uplifted' ), $list ) . '</div>';
+		$term_lists[] = sprintf( __( 'Series: %s', 'uplifted' ), $list );
 	}
 
 	// Sermon Tags
 	/* translators: used between list items, there is a space after the comma */
 	if ( $list = get_the_term_list( $post->ID, 'ctc_sermon_tag', '', __( ', ', 'uplifted' ) ) ) {
-		$term_lists[] = '<div class="uplifted-content-icon"><span class="' . uplifted_icon_class( 'entry-tag', 'return' ) . '"></span>' . sprintf( __( 'Tagged with %s', 'uplifted' ), $list ) . '</div>';
+		$term_lists[] = sprintf( __( 'Tagged with %s', 'uplifted' ), $list );
 	}
 
 }
@@ -91,8 +91,7 @@ if ( ( ctfw_is_multipage() && ! post_password_required() ) || ! empty( $term_lis
 				/* translators: %1$s is icon, %1$s is post type singular name */
 				edit_post_link(
 					sprintf(
-						__( '%1$s Edit %2$s', 'uplifted' ), // Link text format
-						'<span class="uplifted-button-icon ' . uplifted_get_icon_class( 'edit-post' ) . '"></span>', // Icon
+						__( ' Edit %1$s', 'uplifted' ), // Link text format
 						$post_type_obj->labels->singular_name // Post type name
 					)
 				);

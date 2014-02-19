@@ -65,8 +65,8 @@ if ( ! have_comments() && ! comments_open() ) {
 			if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 			?>
 				<nav class="uplifted-nav-left-right uplifted-clearfix" id="uplifted-comment-nav">
-					<div class="uplifted-nav-left"><?php previous_comments_link( sprintf( __( ' %s Older Comments', 'uplifted' ), '<span class="uplifted-button-icon ' . uplifted_get_icon_class( 'nav-left' ) . '"></span>' ) ); ?></div>
-					<div class="uplifted-nav-right"><?php next_comments_link( sprintf( __( 'Newer Comments %s', 'uplifted' ), '<span class="uplifted-button-icon ' . uplifted_get_icon_class( 'nav-right' ) . '"></span>' ) ); ?></div>
+					<div class="uplifted-nav-left"><?php previous_comments_link( sprintf( __( ' %s Older Comments', 'uplifted' ) ) ); ?></div>
+					<div class="uplifted-nav-right"><?php next_comments_link( sprintf( __( 'Newer Comments %s', 'uplifted' ) ) ); ?></div>
 				</nav>
 			<?php endif; ?>
 
