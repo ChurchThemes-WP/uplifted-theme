@@ -367,7 +367,7 @@ $topbar-sticky-class: ".sticky" !default;
       & > a {
         &:after {
           @include css-triangle($topbar-dropdown-toggle-size, rgba($topbar-dropdown-toggle-color, $topbar-dropdown-toggle-alpha), $default-float);
-          margin-#{$opposite-direction}: $topbar-height / 3;
+          margin-#{$opposite-direction}: $topbar-height / 5.5;
           margin-top: -($topbar-dropdown-toggle-size / 2) - 2;
           position: absolute;
           top: 50%;
@@ -501,7 +501,7 @@ $topbar-sticky-class: ".sticky" !default;
 
       li {
         a:not(.button) {
-          padding: 0 $topbar-height / 3;
+          padding: 0 $topbar-height / 4;
           line-height: $topbar-height;
           background: $topbar-bg;
           &.hover { background: adjust-color($topbar-dropdown-bg, $lightness: $topbar-link-hover-lightness); }
@@ -510,7 +510,7 @@ $topbar-sticky-class: ".sticky" !default;
 
       .has-dropdown {
         & > a {
-          padding-#{$opposite-direction}: $topbar-height / 3 + 20 !important;
+          padding-#{$opposite-direction}: $topbar-height / 3 + 10 !important; // padding to provide room for dropdown arrow
 
           &:after {
             @include css-triangle($topbar-dropdown-toggle-size, rgba($topbar-dropdown-toggle-color, $topbar-dropdown-toggle-alpha), top);
