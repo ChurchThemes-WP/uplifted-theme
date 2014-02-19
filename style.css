@@ -4158,16 +4158,18 @@ html[xmlns] .slides {
 .flexslider {
   margin: 0 0 1.875em;
   position: relative;
-  zoom: 1; }
-  /* line 29, assets/sass/_flexslider.scss */
+  zoom: 1;
+  width: 100%;
+  min-height: 500px; }
+  /* line 31, assets/sass/_flexslider.scss */
   .flexslider ul {
     margin: 0;
     padding: 0;
     list-style: none; }
-  /* line 35, assets/sass/_flexslider.scss */
+  /* line 37, assets/sass/_flexslider.scss */
   .flexslider li {
     position: relative; }
-    /* line 38, assets/sass/_flexslider.scss */
+    /* line 40, assets/sass/_flexslider.scss */
     .flexslider li .flex-caption {
       position: absolute;
       bottom: 0;
@@ -4180,24 +4182,24 @@ html[xmlns] .slides {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none; }
-      /* line 49, assets/sass/_flexslider.scss */
+      /* line 51, assets/sass/_flexslider.scss */
       .flexslider li .flex-caption .flex-position {
         position: absolute;
         bottom: 1.875em;
         right: 1.875em;
         left: 1.875em;
         top: auto; }
-      /* line 57, assets/sass/_flexslider.scss */
+      /* line 59, assets/sass/_flexslider.scss */
       .flexslider li .flex-caption h2 {
         margin-bottom: 0.1em; }
-        /* line 60, assets/sass/_flexslider.scss */
+        /* line 62, assets/sass/_flexslider.scss */
         .flexslider li .flex-caption h2 a {
           color: white; }
-          /* line 63, assets/sass/_flexslider.scss */
+          /* line 65, assets/sass/_flexslider.scss */
           .flexslider li .flex-caption h2 a:hover {
             color: #0fcfc5; }
 
-/* line 72, assets/sass/_flexslider.scss */
+/* line 74, assets/sass/_flexslider.scss */
 .flex-viewport {
   max-height: 2000px;
   -webkit-transition: all 1s ease;
@@ -4205,30 +4207,30 @@ html[xmlns] .slides {
   -o-transition: all 1s ease;
   transition: all 1s ease; }
 
-/* line 77, assets/sass/_flexslider.scss */
+/* line 79, assets/sass/_flexslider.scss */
 .loading .flex-viewport {
   max-height: 300px; }
 
-/* line 78, assets/sass/_flexslider.scss */
+/* line 80, assets/sass/_flexslider.scss */
 .flexslider .slides {
   zoom: 1; }
 
-/* line 79, assets/sass/_flexslider.scss */
+/* line 81, assets/sass/_flexslider.scss */
 .carousel li {
   margin-right: 5px; }
 
-/* line 83, assets/sass/_flexslider.scss */
+/* line 85, assets/sass/_flexslider.scss */
 .flex-direction-nav {
   position: absolute;
   left: 1em;
   top: 1em; }
 
-/* line 89, assets/sass/_flexslider.scss */
+/* line 91, assets/sass/_flexslider.scss */
 .flex-direction-nav li {
   display: inline-block;
   padding-right: 10px; }
 
-/* line 94, assets/sass/_flexslider.scss */
+/* line 96, assets/sass/_flexslider.scss */
 .flex-direction-nav a {
   margin: 0;
   position: relative;
@@ -4254,7 +4256,7 @@ html[xmlns] .slides {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-  /* line 112, assets/sass/_flexslider.scss */
+  /* line 114, assets/sass/_flexslider.scss */
   .flex-direction-nav a.flex-prev:before {
     margin-right: 6px;
     font-family: "Genericons";
@@ -4262,10 +4264,10 @@ html[xmlns] .slides {
     height: 9px;
     width: 9px;
     content: '\f503'; }
-  /* line 121, assets/sass/_flexslider.scss */
+  /* line 123, assets/sass/_flexslider.scss */
   .flex-direction-nav a.flex-next {
     padding: 8px 10px 8px 16px; }
-    /* line 124, assets/sass/_flexslider.scss */
+    /* line 126, assets/sass/_flexslider.scss */
     .flex-direction-nav a.flex-next:after {
       margin-left: 6px;
       font-family: "Genericons";
@@ -4274,50 +4276,50 @@ html[xmlns] .slides {
       width: 9px;
       content: '\f501'; }
 
-/* line 134, assets/sass/_flexslider.scss */
+/* line 136, assets/sass/_flexslider.scss */
 .flex-direction-nav .flex-prev {
   text-align: right; }
 
-/* line 135, assets/sass/_flexslider.scss */
+/* line 137, assets/sass/_flexslider.scss */
 .flex-direction-nav .flex-next {
   text-align: left; }
 
-/* line 136, assets/sass/_flexslider.scss */
+/* line 138, assets/sass/_flexslider.scss */
 .flexslider:hover .flex-prev {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7; }
 
-/* line 137, assets/sass/_flexslider.scss */
+/* line 139, assets/sass/_flexslider.scss */
 .flexslider:hover .flex-next {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7; }
 
-/* line 138, assets/sass/_flexslider.scss */
+/* line 140, assets/sass/_flexslider.scss */
 .flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
   opacity: 1;
   color: #3c4542; }
 
-/* line 139, assets/sass/_flexslider.scss */
+/* line 141, assets/sass/_flexslider.scss */
 .flex-direction-nav .flex-disabled {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   cursor: default; }
 
-/* line 146, assets/sass/_flexslider.scss */
+/* line 148, assets/sass/_flexslider.scss */
 .flex-control-nav {
   position: absolute;
   right: 10px;
   top: 10px;
   z-index: 40; }
 
-/* line 152, assets/sass/_flexslider.scss */
+/* line 154, assets/sass/_flexslider.scss */
 .flex-control-nav li {
   margin: 0 0 0 3px;
   display: inline-block;
   zoom: 1;
   *display: inline; }
 
-/* line 159, assets/sass/_flexslider.scss */
+/* line 161, assets/sass/_flexslider.scss */
 .flex-control-paging li a {
   width: 11px;
   height: 11px;
@@ -4333,29 +4335,29 @@ html[xmlns] .slides {
   -o-border-radius: 20px;
   border-radius: 20px; }
 
-/* line 171, assets/sass/_flexslider.scss */
+/* line 173, assets/sass/_flexslider.scss */
 .flex-control-paging li a:hover {
   background: #fff;
   background: rgba(255, 255, 255, 0.8); }
 
-/* line 176, assets/sass/_flexslider.scss */
+/* line 178, assets/sass/_flexslider.scss */
 .flex-control-paging li a.flex-active {
   background: #fff;
   cursor: default; }
 
-/* line 181, assets/sass/_flexslider.scss */
+/* line 183, assets/sass/_flexslider.scss */
 .flex-control-thumbs {
   margin: 5px 0 0;
   position: static;
   overflow: hidden; }
 
-/* line 187, assets/sass/_flexslider.scss */
+/* line 189, assets/sass/_flexslider.scss */
 .flex-control-thumbs li {
   width: 25%;
   float: left;
   margin: 0; }
 
-/* line 193, assets/sass/_flexslider.scss */
+/* line 195, assets/sass/_flexslider.scss */
 .flex-control-thumbs img {
   width: 100%;
   display: block;
@@ -4363,52 +4365,52 @@ html[xmlns] .slides {
   opacity: 0.7;
   cursor: pointer; }
 
-/* line 200, assets/sass/_flexslider.scss */
+/* line 202, assets/sass/_flexslider.scss */
 .flex-control-thumbs img:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1; }
 
-/* line 204, assets/sass/_flexslider.scss */
+/* line 206, assets/sass/_flexslider.scss */
 .flex-control-thumbs .flex-active {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   cursor: default; }
 
-/* line 209, assets/sass/_flexslider.scss */
+/* line 211, assets/sass/_flexslider.scss */
 .slide-text {
   z-index: 999;
   -webkit-transition: 200ms opacity ease-in-out;
   -moz-transition: 200ms opacity ease-in-out;
   -o-transition: 200ms opacity ease-in-out;
   transition: 200ms opacity ease-in-out; }
-  /* line 213, assets/sass/_flexslider.scss */
+  /* line 215, assets/sass/_flexslider.scss */
   .slide-text .slide-title {
     margin: 0; }
-  /* line 217, assets/sass/_flexslider.scss */
+  /* line 219, assets/sass/_flexslider.scss */
   .slide-text .slide-title a,
   .slide-text p {
     display: block;
     padding: .3em .8em; }
-  /* line 223, assets/sass/_flexslider.scss */
+  /* line 225, assets/sass/_flexslider.scss */
   .slide-text .slide-title a {
     background-color: #0fcfc5;
     color: blue; }
-  /* line 228, assets/sass/_flexslider.scss */
+  /* line 230, assets/sass/_flexslider.scss */
   .slide-text p {
     background-color: rgba(50, 50, 48, 0.8);
     color: white;
     padding: 1em; }
 
-/* line 236, assets/sass/_flexslider.scss */
+/* line 238, assets/sass/_flexslider.scss */
 .flex-direction-nav {
   display: none; }
 
 @media screen and (min-width: 768px) {
-  /* line 242, assets/sass/_flexslider.scss */
+  /* line 244, assets/sass/_flexslider.scss */
   .flex-direction-nav {
     display: block; }
 
-  /* line 246, assets/sass/_flexslider.scss */
+  /* line 248, assets/sass/_flexslider.scss */
   .slide-text {
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
@@ -4418,24 +4420,24 @@ html[xmlns] .slides {
     position: absolute;
     top: 60%;
     left: 50%; }
-    /* line 252, assets/sass/_flexslider.scss */
+    /* line 254, assets/sass/_flexslider.scss */
     .slide-text .slide-title {
       margin-bottom: .1em; }
-    /* line 256, assets/sass/_flexslider.scss */
+    /* line 258, assets/sass/_flexslider.scss */
     .slide-text .slide-title a,
     .slide-text p {
       display: inline-block; }
-    /* line 264, assets/sass/_flexslider.scss */
+    /* line 266, assets/sass/_flexslider.scss */
     .slide-text p {
       max-width: 55%; } }
 @media screen and (max-width: 860px) {
-  /* line 272, assets/sass/_flexslider.scss */
+  /* line 274, assets/sass/_flexslider.scss */
   .flex-direction-nav .flex-prev {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     left: 10px; }
 
-  /* line 273, assets/sass/_flexslider.scss */
+  /* line 275, assets/sass/_flexslider.scss */
   .flex-direction-nav .flex-next {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;

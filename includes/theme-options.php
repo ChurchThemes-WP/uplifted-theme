@@ -116,6 +116,42 @@ $options = array(
 
 register_theme_options($options);
 
+/**
+ * Adds a theme layout based on selected admin option
+ *
+ */
+function uplifted_set_layout($body_class){
+
+	$up_options = upfw_get_options();
+
+	if( isset($up_options->layout) && $up_options->layout ){
+
+		$body_class[] = "layout_" . esc_attr($up_options->layout);
+
+	}
+
+	return $body_class;
+
+}
+
+add_filter('body_class','uplifted_set_layout');
+
+/**
+ * Outputs theme footer option text.
+ *
+ */
+function uplifted_theme_footer() {
+
+	$up_options = upfw_get_options();
+
+	echo apply_filters('footertext',$up_options->footertext);
+
+}
+
+/**
+ * Adds a class of "fixed" to the navbar.
+ *
+ */
 function uplifted_sticky_navbar(){
 	global $up_options;
 

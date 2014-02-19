@@ -11,6 +11,10 @@ define('UPTHEMES_LICENSE_KEY','uplifted_theme');
 define('UPTHEMES_ITEM_NAME', 'Uplifted Theme');
 define('UPTHEMES_STORE_URL', 'https://upthemes.com');
 
+/**
+ * Check for available theme updates
+ *
+ */
 function uplifted_theme_update_check(){
 
 	$upthemes_license = trim( get_option( UPTHEMES_LICENSE_KEY ) );
@@ -91,14 +95,22 @@ function uplifted_page_menu_args( $args ) {
 add_filter( 'wp_page_menu_args', 'uplifted_page_menu_args' );
 
 /**
- * Register Menus
- * http://codex.wordpress.org/Function_Reference/register_nav_menus#Examples
+ * Register our nav menu locations
+ *
  */
-register_nav_menus(array(
-		'top-left' => 'Left Top Menu',
-		'top-right' => 'Right Top Menu',
-		'social'    => 'Social Menu'
-));
+function uplifted_register_menus() {
+	/**
+	 * Register Menus
+	 * http://codex.wordpress.org/Function_Reference/register_nav_menus#Examples
+	 */
+	register_nav_menus(array(
+			'top-left' => 'Left Top Menu',
+			'top-right' => 'Right Top Menu',
+			'social'    => 'Social Menu'
+	));
+}
+
+add_action('after_setup_theme','uplifted_register_menus');
 
 /**
  * Enqueue required scripts and styles for theme
@@ -106,201 +118,16 @@ register_nav_menus(array(
  */
 function uplifted_enqueue_scripts(){
 
-	wp_enqueue_script( 'uplifted-plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery') );
-	wp_enqueue_script( 'uplifted-init', get_template_directory_uri() . '/js/init.js', array('uplifted-plugins'), false, true );
-	wp_enqueue_script( 'uplifted-foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'), '5.0.0', true );
-	wp_enqueue_script( 'uplifted-foundation-topbar', get_template_directory_uri() . '/js/foundation.topbar.js', array('uplifted-foundation'), '5.0.0', true );
+	wp_enqueue_script( 'uplifted-fitvids', get_template_directory_uri() . '/assets/js/jquery.fitvids.js', array('jquery') );
+	wp_enqueue_script( 'uplifted-flexslider', get_template_directory_uri() . '/assets/js/jquery.flexslider.js', array('jquery') );
+	wp_enqueue_script( 'uplifted-init', get_template_directory_uri() . '/assets/js/init.js', array('uplifted-fitvids','uplifted-flexslider'), false, true );
+	wp_enqueue_script( 'uplifted-foundation', get_template_directory_uri() . '/assets/js/foundation.js', array('jquery'), '5.0.0', true );
+	wp_enqueue_script( 'uplifted-foundation-topbar', get_template_directory_uri() . '/assets/js/foundation.topbar.js', array('uplifted-foundation'), '5.0.0', true );
 	wp_enqueue_style( 'uplifted-fonts', uplifted_fonts_url() );
 
 }
 
 add_action('wp_enqueue_scripts','uplifted_enqueue_scripts');
-
-/**
- * Adds a theme layout based on selected admin option
- *
- */
-function uplifted_set_layout($body_class){
-
-	$up_options = upfw_get_options();
-
-	if( isset($up_options->layout) && $up_options->layout ){
-
-		$body_class[] = "layout_" . esc_attr($up_options->layout);
-
-	}
-
-	return $body_class;
-
-}
-
-add_filter('body_class','uplifted_set_layout');
-
-/**
- * Outputs theme footer option text.
- *
- */
-function uplifted_theme_footer() {
-
-	$up_options = upfw_get_options();
-
-	echo apply_filters('footertext',$up_options->footertext);
-
-}
-
-/**
- * Outputs built-in pagination links
- *
- * @uses add_query_arg()
- * @uses get_query_var()
- * @uses paginate_links()
- *
- */
-function uplifted_pagination( $type = 'plain', $endsize = 1, $midsize = 1 ) {
-
-	echo '  <div class="paging">'."\n";
-
-		global $wp_query, $wp_rewrite;
-		$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
-
-		// Sanitize input argument values
-		if ( ! in_array( $type, array( 'plain', 'list', 'array' ) ) ) $type = 'plain';
-		$endsize = (int) $endsize;
-		$midsize = (int) $midsize;
-
-		// Setup argument array for paginate_links()
-		$pagination = array(
-				'base' => @add_query_arg('paged','%#%'),
-				'format' => '',
-				'total' => $wp_query->max_num_pages,
-				'current' => $current,
-				'show_all' => false,
-				'end_size' => $endsize,
-				'mid_size' => $midsize,
-				'type' => $type,
-				'prev_text' => __('&larr; Previous','uplifted'),
-				'next_text' => __('Next &rarr;','uplifted')
-		);
-
-		if( $wp_rewrite->using_permalinks() )
-				$pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
-
-		if( !empty($wp_query->query_vars['s']) )
-				$pagination['add_args'] = array( 's' => get_query_var( 's' ) );
-
-		echo paginate_links( $pagination );
-
-	echo '  </div>'."\n";
-}
-
-/**
- * Outputs post metadata for each post.
- *
- */
-function uplifted_meta(){
-
-?>
-		<div class="meta-group left">
-
-			<div class="date">
-				<i class="genericon genericon-month"></i>
-				<a href="<?php the_permalink(); ?>"><?php the_time( get_option('date_format') ); ?></a>
-			</div>
-			<div class="post-author">
-				&#8901; <?php the_author_posts_link(); ?>
-			</div>
-
-		</div> <!-- /left -->
-
-		<div class="meta-group right">
-
-			<?php the_category(', ') ?>
-			<?php the_tags( __( '&bull; Tags: ','uplifted'), ', ', '<br />'); ?>
-
-		</div> <!-- /right -->
-
-<?php
-
-}
-
-if ( ! function_exists( 'uplifted_comment' ) ) :
-/**
- * Template for comments and pingbacks.
- *
- * To override this walker in a child theme without modifying the comments template
- * simply create your own uplifted_comment(), and that function will be used instead.
- *
- * Used as a callback by wp_list_comments() for displaying the comments.
- *
- */
-function uplifted_comment( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment;
-	switch ( $comment->comment_type ) :
-		case 'pingback' :
-		case 'trackback' :
-	?>
-	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'uplifted' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'uplifted' ), '<span class="edit-link">', '</span>' ); ?></p>
-	<?php
-			break;
-		default :
-	?>
-	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		<article id="comment-<?php comment_ID(); ?>" class="comment">
-			<footer class="comment-meta">
-				<div class="comment-author vcard">
-					<?php
-						$avatar_size = 68;
-						if ( '0' != $comment->comment_parent )
-							$avatar_size = 39;
-
-						echo '<div class="avatar-wrap">' . get_avatar( $comment, $avatar_size ) . '</div>';
-					?>
-
-					<?php edit_comment_link( __( 'Edit', 'uplifted' ), '<span style="clear:both;display:block;"></span><div class="edit-link">', '</div>' ); ?>
-				</div><!-- .comment-author .vcard -->
-
-				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'uplifted' ); ?></em>
-					<br />
-				<?php endif; ?>
-
-			</footer>
-
-			<div class="comment-content">
-				<div class="author-name">
-				<?php
-				/* translators: 1: comment author, 2: date and time */
-				printf( __( '%1$s <span class="says">says:</span>', 'uplifted' ),
-					sprintf( '<span class="fn">%s</span>', get_comment_author_link() ));
-
-				?>
-			</div>
-				<?php
-
-				comment_text();
-
-				printf( __( '%1$s', 'uplifted' ),
-					sprintf( '<a class="comment-date" href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
-						esc_url( get_comment_link( $comment->comment_ID ) ),
-						get_comment_time( 'c' ),
-						/* translators: 1: date, 2: time */
-						sprintf( __( '%1$s at %2$s', 'uplifted' ), get_comment_date(), get_comment_time() )
-					));
-
-				?>
-
-				<div class="reply">
-					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( '<span>&#171;</span> Reply', 'uplifted' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-				</div><!-- .reply -->
-			</div>
-		</article><!-- #comment-## -->
-
-	<?php
-			break;
-	endswitch;
-}
-endif; // ends check for uplifted_comment()
 
 /**
  * The following code enables us to recommend some plugins that work well or are
@@ -391,6 +218,10 @@ function uplifted_register_required_plugins() {
 
 }
 
+/**
+ * Adds a class to the body if the page has a sidebar or not.
+ *
+ */
 function uplifted_sidebar_body_class($body_classes){
 	$body_classes[] = uplifted_sidebar_enabled() ? 'uplifted-has-sidebar' : 'uplifted-no-sidebar';
 
