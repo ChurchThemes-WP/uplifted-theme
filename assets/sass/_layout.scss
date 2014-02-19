@@ -5,17 +5,22 @@
 //
 
 #container {
-  @include grid-row();
+  @include grid-row;
+  @extend .clearfix;
 }
 
-// this is the Main Content section
-#uplifted-content {
-  @include grid-column(12);
-}
+@media screen and (max-width: $small-screen) {
 
-// this is the Sidebar section
-#uplifted-sidebar-right {
-  @include grid-column(12);
+	// this is the Main Content section
+	#uplifted-content {
+	  @include grid-column(12);
+	}
+
+	// this is the Sidebar section
+	#uplifted-sidebar-right {
+	  @include grid-column(12);
+	}
+
 }
 
 //
@@ -24,8 +29,12 @@
 @media screen and (min-width: $small-screen) {
 
 	// this is the Main Content section
-	#uplifted-content.uplifted-has-sidebar {
-		@include grid-column(8);
+	.uplifted-has-sidebar #uplifted-content {
+		@include grid-column(8,false,false,0);
+	}
+
+	.uplifted-no-sidebar #uplifted-content {
+		@include grid-column(8,true,true,2);
 	}
 
 	// this is the Sidebar section
@@ -34,10 +43,10 @@
 	}
 
 	// if the layout is reversed
-	.layout_reversed {
+	.layout_reversed.uplifted-has-sidebar {
 
-		#uplifted-content.uplifted-has-sidebar {
-			@include grid-column(8,true,false);
+		#uplifted-content {
+			@include grid-column(8,true,false,0);
 			float: right; // should be able to added via above include, but not sure how
 			              // so could be changed later
 		}

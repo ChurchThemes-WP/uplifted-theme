@@ -1,35 +1,35 @@
 /* Wordpress */
 
 .screen-reader-text{
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
 }
 
 // if a post is sticky
 
 .sticky {
 
-  // custom style of sticky post container
-  .panel {
-    border: 4px solid $tertiary-color;
-  }
+	// custom style of sticky post container
+	.panel {
+		border: 4px solid $tertiary-color;
+	}
 }
 
 // this is only here to comply with Wordpress standards
 // we have custom markup for the captions, but do not delete
 .gallery-caption {
-  display: inherit;
+	display: inherit;
 }
 
 // style author comments differently
 .bypostauthor {
-  @include border-radius(10px);
+	@include border-radius(10px);
 }
 
 .aligncenter,
@@ -85,5 +85,5 @@ img.alignright{
 
 .wp-video,
 .wp-audio{
-  margin: 0 auto 2em;
+	margin: 0 auto 2em;
 }

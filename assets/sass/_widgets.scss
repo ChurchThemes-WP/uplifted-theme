@@ -13,80 +13,79 @@
 // sidebar and footer
 
 .uplifted-widget {
-  background-color: $neutral-color;
-  margin-bottom: $panel-margin-bottom;
-  padding: $panel-padding;
-  border: $panel-border;
-  box-shadow: $panel-box-shadow;
+	background-color: $neutral-color;
+	margin-bottom: $panel-margin-bottom;
+	padding: $panel-padding;
+	border: $panel-border;
 
-  .uplifted-widget-title {
-    display: inline-block;
-    color: $body-font-color;
-    font-family: $body-font-family;
-    font-weight: bold;
-    font-size: 1.1em;
-    border-bottom: 3px solid $panel-border-color;
-    margin-bottom: .8em;
-  }
+	.uplifted-widget-title {
+		display: inline-block;
+		color: $body-font-color;
+		font-family: $body-font-family;
+		font-weight: bold;
+		font-size: 1.1em;
+		border-bottom: 3px solid $panel-border-color;
+		margin-bottom: .8em;
+	}
 
-  ul {
-    margin: 0;
-    padding: 0;
+	ul {
+		margin: 0;
+		padding: 0;
 
-    li {
-      list-style: none;
-      margin: 0;
+		li {
+			list-style: none;
+			margin: 0;
 
-      a {
-        display: inline-block;
-        padding: .3em 0;
-        color: $body-font-color;
-        @include transition(200ms all ease-in-out);
+			a {
+				display: inline-block;
+				padding: .3em 0;
+				color: $body-font-color;
+				@include transition(200ms all ease-in-out);
 
-        &:hover{
-          color: $primary-color;
-          padding-left: .5em;
-        }
-      }
+				&:hover{
+					color: $primary-color;
+					padding-left: .5em;
+				}
+			}
 
-      > &:last-child a{
-        border-bottom: none;
-      }
-    }
-  }
+			> &:last-child a{
+				border-bottom: none;
+			}
+		}
+	}
 
-  // footer specific uplifted-widget styles
-  #footer & {
-    text-align: center;
-    margin-bottom: 2.5em;
-    background-color: transparent;
-    border-color: $transparent-neutral-color;
-    border-width: 3px;
-    box-shadow: $footer-box-shadow;
+	// footer specific uplifted-widget styles
+	#footer & {
+		text-align: center;
+		margin-bottom: 2.5em;
+		background-color: transparent;
+		border-color: $transparent-neutral-color;
+		border-width: 3px;
+		box-shadow: $footer-box-shadow;
 
-    @media screen and (min-width: $small-screen ) {
-      text-align: left;
-    }
+		@media screen and (min-width: $small-screen ) {
+			text-align: left;
+		}
 
-    .uplifted-widget-title {
-      color: $neutral-color;
-      border-color: $transparent-neutral-color;
-    }
+		.uplifted-widget-title {
+			color: $neutral-color;
+			border-color: $transparent-neutral-color;
+		}
 
-    li {
+		li {
 
-      a {
-        padding: .5em 0;
-        border-bottom: 1px solid rgba($neutral-color,.4);
+			a {
+				padding: .5em 0;
+				border-bottom: 1px solid rgba($neutral-color,.4);
 
-        &:hover {
-          border-color: rgba($neutral-color,.7);
-          padding-left: .8em;
-        }
-      }
+				&:hover {
+					border-color: rgba($neutral-color,.7);
+					padding-left: .8em;
+				}
+			}
 
-    }
-  } // end footer specific styles for uplifted-widget
+		}
+	} // end footer specific styles for uplifted-widget
 
 } // end uplifted-widget
 
@@ -100,27 +99,27 @@
 .widget_ctfw-archives,
 .widget_ctfw-categories {
 
-  // color item number
-  li {
-    color: $secondary-color;
+	// color item number
+	li {
+		color: $secondary-color;
 
-    //
-    a {
-      color: $body-font-color;
+		//
+		a {
+			color: $body-font-color;
 
-      &:hover {
-        color: $primary-color;
-      }
-    }
-    #footer & {
-      color: $neutral-color;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+		#footer & {
+			color: $neutral-color;
 
-      a {
-        border: none;
-      }
-    }
+			a {
+				border: none;
+			}
+		}
 
-  }
+	}
 }
 
 
@@ -128,78 +127,78 @@
 
 .widget_calendar {
 
-  #calendar_wrap {
-    position: relative;
+	#calendar_wrap {
+		position: relative;
 
-    #wp-calendar {
-      width: 100%;
-      text-align: center;
+		#wp-calendar {
+			width: 100%;
+			text-align: center;
 
-      caption {
-        background-color: darken($primary-color,10%);
-        color: #fff;
-        padding: 1em;
+			caption {
+				background-color: darken($primary-color,10%);
+				color: #fff;
+				padding: 1em;
 
-        #footer &{
-          background-color: transparent;
-        }
-      }
+				#footer &{
+					background-color: transparent;
+				}
+			}
 
-      thead th {
-        padding: .5em 0;
-        background-color: $primary-color;
-        border: 1px solid darken($primary-color,10%);
-        color: contrast-color($primary-color,#222,#fff,50%);
+			thead th {
+				padding: .5em 0;
+				background-color: $primary-color;
+				border: 1px solid darken($primary-color,10%);
+				color: contrast-color($primary-color,#222,#fff,50%);
 
-        #footer &{
-          background-color: rgba(0,0,0,.06);
-          border-color: transparent;
-        }
-      }
+				#footer &{
+					background-color: rgba(0,0,0,.06);
+					border-color: transparent;
+				}
+			}
 
-      tbody tr {
-        border-bottom: 1px solid $primary-color;
+			tbody tr {
+				border-bottom: 1px solid $primary-color;
 
-        #footer &{
-          border-color: transparent;
-        }
+				#footer &{
+					border-color: transparent;
+				}
 
-        td {
-          padding: .5em 0;
-          border: 1px solid $primary-color;
-          border-bottom: none;
-          color: #888;
-          background-color: $panel-bg;
+				td {
+					padding: .5em 0;
+					border: 1px solid $primary-color;
+					border-bottom: none;
+					color: #888;
+					background-color: $panel-bg;
 
-          #footer &{
-            border-color: transparent;
-            background-color: transparent;
-          }
-        }
+					#footer &{
+						border-color: transparent;
+						background-color: transparent;
+					}
+				}
 
-      }
+			}
 
-      tfoot {
-        position: absolute;
-        top: 4px;
-        width: 100%;
+			tfoot {
+				position: absolute;
+				top: 4px;
+				width: 100%;
 
-        td {
-          padding: 1.1em;
-          font-size: .9em;
+				td {
+					padding: 1.1em;
+					font-size: .9em;
 
-          &#next {
-            position: absolute;
-            right: 0;
-          }
+					&#next {
+						position: absolute;
+						right: 0;
+					}
 
-          a {
-            color: #fff;
-          }
-        }
-      }
-    }
-  }
+					a {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
 
 }
 
@@ -207,55 +206,55 @@
 
 .widget_rss {
 
-  // header color needs to be styled since there is
-  // an anchor link inside
-  h4 a {
-    color: #fff;
-    &:hover {
-      color: $primary-color;
-    }
+	// header color needs to be styled since there is
+	// an anchor link inside
+	h4 a {
+		color: #fff;
+		&:hover {
+			color: $primary-color;
+		}
 
-    // tweak color if widget is in footer
-    #footer & {
-      color: lighten($header-font-color, 20%);
-      &:hover {
-        color: $primary-color;
-      }
-    }
-  }
+		// tweak color if widget is in footer
+		#footer & {
+			color: lighten($header-font-color, 20%);
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
 
-  ul li {
-    margin-bottom: .5em !important;
+	ul li {
+		margin-bottom: .5em !important;
 
-    a {
-      border-bottom: 1px solid lighten($secondary-color, 55%) !important;
-    }
-  }
+		a {
+			border-bottom: 1px solid lighten($secondary-color, 55%) !important;
+		}
+	}
 
-  .rss-date,
-  .rssSummary,
-  cite {
-    font-size: .8em;
-  }
+	.rss-date,
+	.rssSummary,
+	cite {
+		font-size: .8em;
+	}
 
-  .rss-date {
-    font-weight: bold;
-    margin: .9em 0;
-    display: block;
-  }
+	.rss-date {
+		font-weight: bold;
+		margin: .9em 0;
+		display: block;
+	}
 
-  cite {
-    margin: .5em 0;
-  }
+	cite {
+		margin: .5em 0;
+	}
 }
 
 /* Pages Widget */
 
 .widget_pages {
 
-  ul ul {
-    padding-left: 1.5em;
-  }
+	ul ul {
+		padding-left: 1.5em;
+	}
 }
 
 /* Search Widget */
@@ -263,79 +262,79 @@
 // the Search field and button need to have specific heights to match correctly
 .search-form {
 
-  input,
-  button {
-    margin: 0;
-  }
+	input,
+	button {
+		margin: 0;
+	}
 
-  // this is the search button
-  button {
-    height: emCalc(13) + ($form-spacing * 1.5);
-    font-size: $input-font-size;
-    background-color: $primary-color;
-    border: none;
-    box-shadow: none;
+	// this is the search button
+	button {
+		height: emCalc(13) + ($form-spacing * 1.5);
+		font-size: $input-font-size;
+		background-color: $primary-color;
+		border: none;
+		box-shadow: none;
 
-    &:hover {
-      background-color: darken($primary-color,5%);
-    }
-  }
+		&:hover {
+			background-color: darken($primary-color,5%);
+		}
+	}
 
-  #footer & {
+	#footer & {
 
-    input {
-      border: none;
-    }
+		input {
+			border: none;
+		}
 
-    button {
-      background-color: darken($primary-color,10%);
+		button {
+			background-color: darken($primary-color,10%);
 
-      &:hover {
-        background-color: darken($primary-color,20%)
-      }
-    }
-  }
+			&:hover {
+				background-color: darken($primary-color,20%)
+			}
+		}
+	}
 }
 
 // search widget container
 .widget_search {
-  .search-form {
-    margin-bottom: 0;
-  }
+	.search-form {
+		margin-bottom: 0;
+	}
 }
 
 /* Recent Comments */
 
 .widget_recent_comments {
 
-  ul li {
-    margin-bottom: 1em;
-    //border-bottom: 1px solid contrast-color($neutral-color, darken($neutral-color,5%), lighten($neutral-color,5%), 50%);
+	ul li {
+		margin-bottom: 1em;
+		//border-bottom: 1px solid contrast-color($neutral-color, darken($neutral-color,5%), lighten($neutral-color,5%), 50%);
 
-    &:last-child {
-      margin: 0;
-    }
-  }
+		&:last-child {
+			margin: 0;
+		}
+	}
 }
 
 /* Custom Text Widget */
 .widget_text {
-  // add line-height just in case the user does not add
-  // a paragraph tag to text
-  line-height: $paragraph-line-height;
+	// add line-height just in case the user does not add
+	// a paragraph tag to text
+	line-height: $paragraph-line-height;
 }
 
 /* ChurchTheme Location Widget */
 .widget_ctfw-locations {
 
-  .ctc_location {
-    border: none;
-    background-color: transparent;
-  }
+	.ctc_location {
+		border: none;
+		background-color: transparent;
+	}
 
-  .ctfw-google-map {
-    min-height: 12em;
-  }
+	.ctfw-google-map {
+		min-height: 12em;
+	}
 }
 
 /* Sidebar + Home Bottom */
@@ -358,8 +357,8 @@
 
 // Entry Title
 .uplifted-widget-entry-title {
-  margin: 0;
-  font-size: 1em;
+	margin: 0;
+	font-size: 1em;
 }
 
 // Meta Item
@@ -631,9 +630,9 @@
 			margin-top: 12px;
 			font-style: italic;
 
-      #footer & {
-        color: rgba(255,255,255,.8);
-      }
+			#footer & {
+				color: rgba(255,255,255,.8);
+			}
 		}
 
 /************ CT HIGHLIGHT WIDGET *************/
@@ -669,9 +668,9 @@
 	margin-bottom: 0;
 	position: relative;
 
-  br{
-    display:none;
-  }
+	br{
+		display:none;
+	}
 }
 
 /* Link */

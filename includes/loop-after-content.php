@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @return object WP_Query object
  */
 function uplifted_loop_after_content_query() {
- 	return apply_filters( 'uplifted_loop_after_content_query', false );
+	return apply_filters( 'uplifted_loop_after_content_query', false );
 }
 
 /**
@@ -35,13 +35,13 @@ function uplifted_loop_after_content_query() {
  */
 function uplifted_loop_after_content_used() {
 
- 	$used = false;
+	$used = false;
 
- 	if ( uplifted_loop_after_content_query() ) {
- 		$used = true;
- 	}
+	if ( uplifted_loop_after_content_query() ) {
+		$used = true;
+	}
 
- 	return apply_filters( 'uplifted_loop_after_content_used', $used );
+	return apply_filters( 'uplifted_loop_after_content_used', $used );
 
 }
 

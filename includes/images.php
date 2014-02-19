@@ -98,7 +98,18 @@ function uplifted_set_content_width() {
 
 add_action( 'wp', 'uplifted_set_content_width' );
 
-
+/**
+ * Set content width
+ *
+ * This affect maximum embed and image sizes.
+ * On front end CSS handles most of this but content editor also uses.
+ *
+ * Keep an eye on this for possible future add_theme_support() implementation:
+ * http://core.trac.wordpress.org/ticket/21256
+ *
+ * @since 1.0
+ * @global int $content_width
+ */
 function uplifted_modify_post_image_size($image_size){
 	global $post;
 

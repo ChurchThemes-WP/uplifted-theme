@@ -30,7 +30,7 @@ function uplifted_register_sidebars() {
 	register_sidebar( array(
 		'name'			=> _x( 'Footer (First Column)', 'widget area', 'uplifted' ),
 		'description' 	=> __( 'These show up in the first column of the footer.', 'uplifted' ),
-  		'id'            => 'uplifted-footer-column-one',
+		'id'            => 'uplifted-footer-column-one',
 		'before_widget'	=> '<aside id="%1$s" class="uplifted-widget uplifted-sidebar-widget %2$s">',
 		'after_widget'	=> '</aside>',
 		'before_title' 	=> '<h1 class="uplifted-widget-title">',
@@ -40,7 +40,7 @@ function uplifted_register_sidebars() {
 	register_sidebar( array(
 		'name'			=> _x( 'Footer (Second Column)', 'widget area', 'uplifted' ),
 		'description' 	=> __( 'These show up in the second column of the footer.', 'uplifted' ),
-  		'id'            => 'uplifted-footer-column-two',
+		'id'            => 'uplifted-footer-column-two',
 		'before_widget'	=> '<aside id="%1$s" class="uplifted-widget uplifted-sidebar-widget %2$s">',
 		'after_widget'	=> '</aside>',
 		'before_title' 	=> '<h1 class="uplifted-widget-title">',

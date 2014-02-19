@@ -38,41 +38,41 @@ $up_options = upfw_get_options();
 
 <div id="wrapper">
 
-  <?php do_action('before_header'); ?>
+	<?php do_action('before_header'); ?>
 
-  <header id="masthead">
+	<header id="masthead">
 
-    <div class="top-bar-container<?php uplifted_sticky_navbar(); ?>">
-        <nav class="top-bar">
+		<div class="top-bar-container<?php uplifted_sticky_navbar(); ?>">
+				<nav class="top-bar">
 
-            <ul class="title-area">
-              <li class="name">
-                <h1 id="title">
-                  <a class="title" href="<?php echo esc_attr( home_url('/') ); ?>">
-                  <?php $header_image = get_header_image();
-                  if ( ! empty( $header_image ) ) : ?>
-                    <img src="<?php echo esc_attr( $header_image ); ?>" alt="" />
-                  <?php endif; ?>
-                  <?php if( display_header_text() ): ?>
-                    <?php bloginfo('name'); ?>
-                  <?php endif; ?>
-                  </a>
-                </h1>
-              </li>
-              <li class="toggle-topbar menu-icon"><a href="#"><span><?php _e('Menu','uplifted'); ?></span></a></li>
-            </ul>
+					<ul class="title-area">
+						<li class="name">
+							<h1 id="title">
+								<a class="title" href="<?php echo esc_attr( home_url('/') ); ?>">
+								<?php $header_image = get_header_image();
+								if ( ! empty( $header_image ) ) : ?>
+									<img src="<?php echo esc_attr( $header_image ); ?>" alt="" />
+								<?php endif; ?>
+								<?php if( display_header_text() ): ?>
+									<?php bloginfo('name'); ?>
+								<?php endif; ?>
+								</a>
+							</h1>
+						</li>
+						<li class="toggle-topbar menu-icon"><a href="#"><span><?php _e('Menu','uplifted'); ?></span></a></li>
+					</ul>
 
-            <section class="top-bar-section">
-                <?php get_template_part('menu','topleft'); ?>
-                <?php get_template_part('menu','topright'); ?>
-            </section>
-        </nav>
-    </div>
+					<section class="top-bar-section">
+							<?php get_template_part('menu','topleft'); ?>
+							<?php get_template_part('menu','topright'); ?>
+					</section>
+				</nav>
+		</div>
 
-  </header>
+	</header>
 
-  <?php do_action('after_header'); ?>
+	<?php do_action('after_header'); ?>
 
-  <?php uplifted_breadcrumbs( 'content' ); ?>
+	<?php uplifted_breadcrumbs( 'content' ); ?>
 
-  <div id="container" class="clearfix">
+	<div id="container">

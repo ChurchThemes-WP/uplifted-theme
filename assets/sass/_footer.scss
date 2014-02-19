@@ -1,34 +1,34 @@
 /* Footer */
 
 #footer {
-  margin: ($panel-margin-bottom * 2) auto 0;
-  padding: ($panel-padding * 1.5) 0;
-  background-color: $primary-color;
-  color: $neutral-color;
+	margin: ($panel-margin-bottom * 2) auto 0;
+	padding: ($panel-padding * 1.5) 0;
+	background-color: $primary-color;
+	color: $neutral-color;
 
-  #footer-meta{
-    text-align: center;
+	#footer-meta{
+		text-align: center;
 
-    @media screen and (min-width: 641px){
-      text-align: left;
-    }
-  }
+		@media screen and (min-width: 641px){
+			text-align: left;
+		}
+	}
 
-  .columns {
+	.columns {
 
-    a {
-      @include transition(.2s all linear);
-      color: $neutral-color;
-    }
-  }
+		a {
+			@include transition(.2s all linear);
+			color: $neutral-color;
+		}
+	}
 
-  abbr {
-    color: $neutral-color;
-  }
+	abbr {
+		color: $neutral-color;
+	}
 
-  .url {
-    padding-left: 0;
-    background: none;
-  }
+	.url {
+		padding-left: 0;
+		background: none;
+	}
 
 }

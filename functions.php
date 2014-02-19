@@ -13,16 +13,16 @@ define('UPTHEMES_STORE_URL', 'https://upthemes.com');
 
 function uplifted_theme_update_check(){
 
-  $upthemes_license = trim( get_option( UPTHEMES_LICENSE_KEY ) );
+	$upthemes_license = trim( get_option( UPTHEMES_LICENSE_KEY ) );
 
-  $edd_updater = new UpThemes_Theme_Updater(
-    array(
-      'remote_api_url'  => UPTHEMES_STORE_URL,  // Our store URL that is running EDD
-      'license'         => $upthemes_license, // The license key (used get_option above to retrieve from DB)
-      'item_name'       => UPTHEMES_ITEM_NAME,  // The name of this theme
-      'author'          => 'UpThemes'
-    )
-  );
+	$edd_updater = new UpThemes_Theme_Updater(
+		array(
+			'remote_api_url'  => UPTHEMES_STORE_URL,  // Our store URL that is running EDD
+			'license'         => $upthemes_license, // The license key (used get_option above to retrieve from DB)
+			'item_name'       => UPTHEMES_ITEM_NAME,  // The name of this theme
+			'author'          => 'UpThemes'
+		)
+	);
 }
 add_action('admin_init','uplifted_theme_update_check',1);
 
@@ -45,7 +45,7 @@ require_once 'options/options.php';                                  // UpThemes
 require_once 'includes/theme-options.php';                           // Load theme options specific to this theme
 
 if ( ! isset( $content_width ) ){
-  $content_width = 560;
+	$content_width = 560;
 }
 
 /**
@@ -57,28 +57,28 @@ if ( ! isset( $content_width ) ){
  * @return string Font stylesheet or empty string if disabled.
  */
 function uplifted_fonts_url() {
-  $fonts_url = '';
+	$fonts_url = '';
 
-  /* Translators: If there are characters in your language that are not
-   * supported by Open Sans, translate this to 'off'. Do not translate into your
-   * own language.
-   */
-  $asap = _x( 'on', 'Asap font: on or off', 'uplifted' );
+	/* Translators: If there are characters in your language that are not
+	 * supported by Open Sans, translate this to 'off'. Do not translate into your
+	 * own language.
+	 */
+	$asap = _x( 'on', 'Asap font: on or off', 'uplifted' );
 
-  if ( 'off' !== $asap ) {
-    $font_families = array();
+	if ( 'off' !== $asap ) {
+		$font_families = array();
 
-    if ( 'off' !== $asap )
-      $font_families[] = 'Asap:400,700|Oswald:300,400,700';
+		if ( 'off' !== $asap )
+			$font_families[] = 'Asap:400,700|Oswald:300,400,700';
 
-    $query_args = array(
-      'family' => urlencode( implode( '|', $font_families ) ),
-      'subset' => urlencode( 'latin,latin-ext' ),
-    );
-    $fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
-  }
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+		$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
+	}
 
-  return $fonts_url;
+	return $fonts_url;
 }
 
 /**
@@ -95,9 +95,9 @@ add_filter( 'wp_page_menu_args', 'uplifted_page_menu_args' );
  * http://codex.wordpress.org/Function_Reference/register_nav_menus#Examples
  */
 register_nav_menus(array(
-    'top-left' => 'Left Top Menu',
-    'top-right' => 'Right Top Menu',
-    'social'    => 'Social Menu'
+		'top-left' => 'Left Top Menu',
+		'top-right' => 'Right Top Menu',
+		'social'    => 'Social Menu'
 ));
 
 /**
@@ -106,11 +106,11 @@ register_nav_menus(array(
  */
 function uplifted_enqueue_scripts(){
 
-  wp_enqueue_script( 'uplifted-plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery') );
-  wp_enqueue_script( 'uplifted-init', get_template_directory_uri() . '/js/init.js', array('uplifted-plugins'), false, true );
-  wp_enqueue_script( 'uplifted-foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'), '5.0.0', true );
-  wp_enqueue_script( 'uplifted-foundation-topbar', get_template_directory_uri() . '/js/foundation.topbar.js', array('uplifted-foundation'), '5.0.0', true );
-  wp_enqueue_style( 'uplifted-fonts', uplifted_fonts_url() );
+	wp_enqueue_script( 'uplifted-plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery') );
+	wp_enqueue_script( 'uplifted-init', get_template_directory_uri() . '/js/init.js', array('uplifted-plugins'), false, true );
+	wp_enqueue_script( 'uplifted-foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'), '5.0.0', true );
+	wp_enqueue_script( 'uplifted-foundation-topbar', get_template_directory_uri() . '/js/foundation.topbar.js', array('uplifted-foundation'), '5.0.0', true );
+	wp_enqueue_style( 'uplifted-fonts', uplifted_fonts_url() );
 
 }
 
@@ -122,11 +122,11 @@ add_action('wp_enqueue_scripts','uplifted_enqueue_scripts');
  */
 function uplifted_set_layout($body_class){
 
-  $up_options = upfw_get_options();
+	$up_options = upfw_get_options();
 
 	if( isset($up_options->layout) && $up_options->layout ){
 
-	  $body_class[] = "layout_" . esc_attr($up_options->layout);
+		$body_class[] = "layout_" . esc_attr($up_options->layout);
 
 	}
 
@@ -142,9 +142,9 @@ add_filter('body_class','uplifted_set_layout');
  */
 function uplifted_theme_footer() {
 
-  $up_options = upfw_get_options();
+	$up_options = upfw_get_options();
 
-  echo apply_filters('footertext',$up_options->footertext);
+	echo apply_filters('footertext',$up_options->footertext);
 
 }
 
@@ -158,39 +158,39 @@ function uplifted_theme_footer() {
  */
 function uplifted_pagination( $type = 'plain', $endsize = 1, $midsize = 1 ) {
 
-  echo '  <div class="paging">'."\n";
+	echo '  <div class="paging">'."\n";
 
-    global $wp_query, $wp_rewrite;
-    $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+		global $wp_query, $wp_rewrite;
+		$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
 
-    // Sanitize input argument values
-    if ( ! in_array( $type, array( 'plain', 'list', 'array' ) ) ) $type = 'plain';
-    $endsize = (int) $endsize;
-    $midsize = (int) $midsize;
+		// Sanitize input argument values
+		if ( ! in_array( $type, array( 'plain', 'list', 'array' ) ) ) $type = 'plain';
+		$endsize = (int) $endsize;
+		$midsize = (int) $midsize;
 
-    // Setup argument array for paginate_links()
-    $pagination = array(
-        'base' => @add_query_arg('paged','%#%'),
-        'format' => '',
-        'total' => $wp_query->max_num_pages,
-        'current' => $current,
-        'show_all' => false,
-        'end_size' => $endsize,
-        'mid_size' => $midsize,
-        'type' => $type,
-        'prev_text' => __('&larr; Previous','uplifted'),
-        'next_text' => __('Next &rarr;','uplifted')
-    );
+		// Setup argument array for paginate_links()
+		$pagination = array(
+				'base' => @add_query_arg('paged','%#%'),
+				'format' => '',
+				'total' => $wp_query->max_num_pages,
+				'current' => $current,
+				'show_all' => false,
+				'end_size' => $endsize,
+				'mid_size' => $midsize,
+				'type' => $type,
+				'prev_text' => __('&larr; Previous','uplifted'),
+				'next_text' => __('Next &rarr;','uplifted')
+		);
 
-    if( $wp_rewrite->using_permalinks() )
-        $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
+		if( $wp_rewrite->using_permalinks() )
+				$pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
 
-    if( !empty($wp_query->query_vars['s']) )
-        $pagination['add_args'] = array( 's' => get_query_var( 's' ) );
+		if( !empty($wp_query->query_vars['s']) )
+				$pagination['add_args'] = array( 's' => get_query_var( 's' ) );
 
-    echo paginate_links( $pagination );
+		echo paginate_links( $pagination );
 
-  echo '  </div>'."\n";
+	echo '  </div>'."\n";
 }
 
 /**
@@ -200,24 +200,24 @@ function uplifted_pagination( $type = 'plain', $endsize = 1, $midsize = 1 ) {
 function uplifted_meta(){
 
 ?>
-    <div class="meta-group left">
+		<div class="meta-group left">
 
-      <div class="date">
-        <i class="genericon genericon-month"></i>
-        <a href="<?php the_permalink(); ?>"><?php the_time( get_option('date_format') ); ?></a>
-      </div>
-      <div class="post-author">
-        &#8901; <?php the_author_posts_link(); ?>
-      </div>
+			<div class="date">
+				<i class="genericon genericon-month"></i>
+				<a href="<?php the_permalink(); ?>"><?php the_time( get_option('date_format') ); ?></a>
+			</div>
+			<div class="post-author">
+				&#8901; <?php the_author_posts_link(); ?>
+			</div>
 
-    </div> <!-- /left -->
+		</div> <!-- /left -->
 
-    <div class="meta-group right">
+		<div class="meta-group right">
 
-      <?php the_category(', ') ?>
-      <?php the_tags( __( '&bull; Tags: ','uplifted'), ', ', '<br />'); ?>
+			<?php the_category(', ') ?>
+			<?php the_tags( __( '&bull; Tags: ','uplifted'), ', ', '<br />'); ?>
 
-    </div> <!-- /right -->
+		</div> <!-- /right -->
 
 <?php
 
@@ -268,32 +268,32 @@ function uplifted_comment( $comment, $args, $depth ) {
 			</footer>
 
 			<div class="comment-content">
-        <div class="author-name">
-        <?php
-        /* translators: 1: comment author, 2: date and time */
-        printf( __( '%1$s <span class="says">says:</span>', 'uplifted' ),
-          sprintf( '<span class="fn">%s</span>', get_comment_author_link() ));
+				<div class="author-name">
+				<?php
+				/* translators: 1: comment author, 2: date and time */
+				printf( __( '%1$s <span class="says">says:</span>', 'uplifted' ),
+					sprintf( '<span class="fn">%s</span>', get_comment_author_link() ));
 
-        ?>
-      </div>
-        <?php
+				?>
+			</div>
+				<?php
 
-        comment_text();
+				comment_text();
 
-        printf( __( '%1$s', 'uplifted' ),
-          sprintf( '<a class="comment-date" href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
-            esc_url( get_comment_link( $comment->comment_ID ) ),
-            get_comment_time( 'c' ),
-            /* translators: 1: date, 2: time */
-            sprintf( __( '%1$s at %2$s', 'uplifted' ), get_comment_date(), get_comment_time() )
-          ));
+				printf( __( '%1$s', 'uplifted' ),
+					sprintf( '<a class="comment-date" href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
+						esc_url( get_comment_link( $comment->comment_ID ) ),
+						get_comment_time( 'c' ),
+						/* translators: 1: date, 2: time */
+						sprintf( __( '%1$s at %2$s', 'uplifted' ), get_comment_date(), get_comment_time() )
+					));
 
-        ?>
+				?>
 
-        <div class="reply">
-          <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( '<span>&#171;</span> Reply', 'uplifted' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-        </div><!-- .reply -->
-      </div>
+				<div class="reply">
+					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( '<span>&#171;</span> Reply', 'uplifted' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				</div><!-- .reply -->
+			</div>
 		</article><!-- #comment-## -->
 
 	<?php
@@ -330,63 +330,71 @@ add_action( 'tgmpa_register', 'uplifted_register_required_plugins' );
  */
 function uplifted_register_required_plugins() {
 
-  /**
-   * Array of plugin arrays.
-   */
-  $plugins = array(
+	/**
+	 * Array of plugin arrays.
+	 */
+	$plugins = array(
 
-    array(
-      'name'    => 'Page Builder by SiteOrigin',
-      'slug'    => 'siteorigin-panels',
-      'required'  => false,
-    ),
+		array(
+			'name'    => 'Page Builder by SiteOrigin',
+			'slug'    => 'siteorigin-panels',
+			'required'  => false,
+		),
 
-    array(
-      'name'    => 'Black Studio TinyMCE Widget',
-      'slug'    => 'black-studio-tinymce-widget',
-      'required'  => false,
-    ),
+		array(
+			'name'    => 'Black Studio TinyMCE Widget',
+			'slug'    => 'black-studio-tinymce-widget',
+			'required'  => false,
+		),
 
-    array(
-      'name'    => 'Responsive WordPress Slider - Soliloquy Lite',
-      'slug'    => 'soliloquy-lite',
-      'required'  => false,
-    ),
+		array(
+			'name'    => 'Responsive WordPress Slider - Soliloquy Lite',
+			'slug'    => 'soliloquy-lite',
+			'required'  => false,
+		),
 
-  );
+	);
 
-  $theme_text_domain = 'uplifted';
+	$theme_text_domain = 'uplifted';
 
-  $config = array(
-    'domain'            => $theme_text_domain,
-    'parent_menu_slug'  => 'themes.php',
-    'parent_url_slug'   => 'themes.php',
-    'menu'              => 'install-required-plugins',
-    'has_notices'       => true,
-    'is_automatic'      => false,
-    'message'           => __('We recommend installing the following plugins that work with this theme to enhance your WordPress website.', $theme_text_domain ),
-    'strings'           => array(
-      'page_title'                            => __( 'Install Required Plugins', $theme_text_domain ),
-      'menu_title'                            => __( 'Install Plugins', $theme_text_domain ),
-      'installing'                            => __( 'Installing Plugin: %s', $theme_text_domain ),
-      'oops'                                  => __( 'Something went wrong with the plugin API.', $theme_text_domain ),
-      'notice_can_install_required'           => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.' ),
-      'notice_can_install_recommended'        => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.' ),
-      'notice_cannot_install'                 => _n_noop( 'This theme works well with the %s plugin, however, you do not have the correct permissions to install it. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.' ),
-      'notice_can_activate_required'          => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.' ),
-      'notice_can_activate_recommended'       => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.' ),
-      'notice_cannot_activate'                => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.' ),
-      'notice_ask_to_update'                  => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.' ),
-      'notice_cannot_update'                  => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.' ),
-      'install_link'                          => _n_noop( 'Begin installing plugin', 'Begin installing plugins' ),
-      'activate_link'                         => _n_noop( 'Activate installed plugin', 'Activate installed plugins' ),
-      'return'                                => __( 'Return to Required Plugins Installer', $theme_text_domain ),
-      'plugin_activated'                      => __( 'Plugin activated successfully.', $theme_text_domain ),
-      'complete'                              => __( 'All plugins installed and activated successfully. %s', $theme_text_domain ), // %1$s = dashboard link
-      'nag_type'                              => 'updated' // Determines admin notice type - can only be 'updated' or 'error'
-    )
-  );
+	$config = array(
+		'domain'            => $theme_text_domain,
+		'parent_menu_slug'  => 'themes.php',
+		'parent_url_slug'   => 'themes.php',
+		'menu'              => 'install-required-plugins',
+		'has_notices'       => true,
+		'is_automatic'      => false,
+		'message'           => __('We recommend installing the following plugins that work with this theme to enhance your WordPress website.', $theme_text_domain ),
+		'strings'           => array(
+			'page_title'                            => __( 'Install Required Plugins', $theme_text_domain ),
+			'menu_title'                            => __( 'Install Plugins', $theme_text_domain ),
+			'installing'                            => __( 'Installing Plugin: %s', $theme_text_domain ),
+			'oops'                                  => __( 'Something went wrong with the plugin API.', $theme_text_domain ),
+			'notice_can_install_required'           => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.' ),
+			'notice_can_install_recommended'        => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.' ),
+			'notice_cannot_install'                 => _n_noop( 'This theme works well with the %s plugin, however, you do not have the correct permissions to install it. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.' ),
+			'notice_can_activate_required'          => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.' ),
+			'notice_can_activate_recommended'       => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.' ),
+			'notice_cannot_activate'                => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.' ),
+			'notice_ask_to_update'                  => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.' ),
+			'notice_cannot_update'                  => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.' ),
+			'install_link'                          => _n_noop( 'Begin installing plugin', 'Begin installing plugins' ),
+			'activate_link'                         => _n_noop( 'Activate installed plugin', 'Activate installed plugins' ),
+			'return'                                => __( 'Return to Required Plugins Installer', $theme_text_domain ),
+			'plugin_activated'                      => __( 'Plugin activated successfully.', $theme_text_domain ),
+			'complete'                              => __( 'All plugins installed and activated successfully. %s', $theme_text_domain ), // %1$s = dashboard link
+			'nag_type'                              => 'updated' // Determines admin notice type - can only be 'updated' or 'error'
+		)
+	);
 
-  tgmpa( $plugins, $config );
+	tgmpa( $plugins, $config );
 
 }
+
+function uplifted_sidebar_body_class($body_classes){
+	$body_classes[] = uplifted_sidebar_enabled() ? 'uplifted-has-sidebar' : 'uplifted-no-sidebar';
+
+	return $body_classes;
+}
+
+add_filter('body_class','uplifted_sidebar_body_class');

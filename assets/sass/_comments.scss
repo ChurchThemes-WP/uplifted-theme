@@ -2,112 +2,112 @@
 
 .uplifted-comments, /* <ol> */
 .uplifted-comments ul {
-  list-style: none;
-  margin: 50px 0 0 0;
+	list-style: none;
+	margin: 50px 0 0 0;
 }
 
-  /* Comment or Trackback/Pingback Item */
+	/* Comment or Trackback/Pingback Item */
 
-  .uplifted-comment {
-    margin: 60px 0 0 0;
-  }
+	.uplifted-comment {
+		margin: 60px 0 0 0;
+	}
 
-    /* Comment Meta */
+		/* Comment Meta */
 
-    .uplifted-comment-meta {
-      line-height: 1.4em;
-      min-height: 50px;
-    }
+		.uplifted-comment-meta {
+			line-height: 1.4em;
+			min-height: 50px;
+		}
 
-      /* Avatar Container */
+			/* Avatar Container */
 
-      .uplifted-comment-avatar {
-        float: left;
-        margin-right: 18px;
-      }
+			.uplifted-comment-avatar {
+				float: left;
+				margin-right: 18px;
+			}
 
-        /* Image */
+				/* Image */
 
-        .uplifted-comment-avatar img {
-          width: 50px;
-          height: 50px;
-        }
+				.uplifted-comment-avatar img {
+					width: 50px;
+					height: 50px;
+				}
 
-      /* Comment Author or Trackback */
+			/* Comment Author or Trackback */
 
-      .uplifted-comment-author,
-      .uplifted-comment-trackback-link {
-        padding: 0 0 0 0;
-        text-transform: uppercase;
-      }
+			.uplifted-comment-author,
+			.uplifted-comment-trackback-link {
+				padding: 0 0 0 0;
+				text-transform: uppercase;
+			}
 
-        /* Author/Trackback Name */
+				/* Author/Trackback Name */
 
-        .uplifted-comment-author,
-        .uplifted-comment-trackback-link {
-          font-weight: bold;
-        }
+				.uplifted-comment-author,
+				.uplifted-comment-trackback-link {
+					font-weight: bold;
+				}
 
-        /* Post author, or trackback or pingback note - after name/link */
+				/* Post author, or trackback or pingback note - after name/link */
 
-        .uplifted-comment-author span,
-        .uplifted-comment-trackback-link span {
-          font-weight: normal;
-          text-transform: none;
-        }
+				.uplifted-comment-author span,
+				.uplifted-comment-trackback-link span {
+					font-weight: normal;
+					text-transform: none;
+				}
 
-      /* Date */
+			/* Date */
 
-      .uplifted-comment-meta time {
-        display: inline-block;
-        padding-top: 10px;
-        font-weight: bold;
-      }
+			.uplifted-comment-meta time {
+				display: inline-block;
+				padding-top: 10px;
+				font-weight: bold;
+			}
 
-      /* Buttons */
+			/* Buttons */
 
-      .uplifted-comment-buttons {
-        float: right;
-        margin-top: 8px;
-      }
+			.uplifted-comment-buttons {
+				float: right;
+				margin-top: 8px;
+			}
 
-        .comment-reply-link,
-        .comment-edit-link {
-          float: left;
-          margin-left: 14px;
-        }
+				.comment-reply-link,
+				.comment-edit-link {
+					float: left;
+					margin-left: 14px;
+				}
 
-    /* Comment Content */
+		/* Comment Content */
 
-    .uplifted-comment-content {
-      margin-top: 30px;
-    }
+		.uplifted-comment-content {
+			margin-top: 30px;
+		}
 
-    /* Moderation Note */
+		/* Moderation Note */
 
-    .uplifted-comment-moderation {
-      font-style: italic;
-    }
+		.uplifted-comment-moderation {
+			font-style: italic;
+		}
 
-    /* Indentations */
+		/* Indentations */
 
-    .uplifted-comment,
-    .uplifted-comment #respond {
-      margin-left: 6%;
-    }
+		.uplifted-comment,
+		.uplifted-comment #respond {
+			margin-left: 6%;
+		}
 
-    .uplifted-comment.depth-1 { /* first level flush left */
-      margin-left: 0;
-    }
+		.uplifted-comment.depth-1 { /* first level flush left */
+			margin-left: 0;
+		}
 
-  /* Required style */
+	/* Required style */
 
-  .bypostauthor {
+	.bypostauthor {
 
-  }
+	}
 
 #uplifted-comment-nav { /* .uplifted-nav-left-right */
-  margin-top: 60px;
+	margin-top: 60px;
 }
 
 /*
@@ -116,85 +116,85 @@
  */
 
 
-  /* Cancel Reply Link */
+	/* Cancel Reply Link */
 
-  #cancel-comment-reply-link { /* this is within #reply-title heading so here we give it regular font */
-    position: relative;
-    bottom: 6px;
-    margin-left: 25px;
-    font-size: 0.5em;
-    font-weight: normal;
-    text-transform: none;
-  }
+	#cancel-comment-reply-link { /* this is within #reply-title heading so here we give it regular font */
+		position: relative;
+		bottom: 6px;
+		margin-left: 25px;
+		font-size: 0.5em;
+		font-weight: normal;
+		text-transform: none;
+	}
 
-  /* Message above form */
+	/* Message above form */
 
-  #respond .comment-notes,
-  #respond .logged-in-as {
-    margin: 25px 0 35px 0;
-  }
+	#respond .comment-notes,
+	#respond .logged-in-as {
+		margin: 25px 0 35px 0;
+	}
 
-    #respond .required {
-      color: $secondary-color;
-    }
+		#respond .required {
+			color: $secondary-color;
+		}
 
-  /* Error Messages */
+	/* Error Messages */
 
-  #respond label.error {
-    font-weight: normal;
-  }
+	#respond label.error {
+		font-weight: normal;
+	}
 
-    /* Error Message for Name, Email, URL after input */
+		/* Error Message for Name, Email, URL after input */
 
-    .comment-form-author label.error,
-    .comment-form-email label.error,
-    .comment-form-url label.error {
-      position: absolute;
-      left: 370px;
-      white-space: nowrap;
-      font-size: 13px;
-    }
+		.comment-form-author label.error,
+		.comment-form-email label.error,
+		.comment-form-url label.error {
+			position: absolute;
+			left: 370px;
+			white-space: nowrap;
+			font-size: 13px;
+		}
 
-    /* Error Message for Comment */
+		/* Error Message for Comment */
 
-    p.comment-form-comment label.error {
-      position: relative;
-      top: -5px;
-      display: block;
-      font-size: 13px;
-    }
+		p.comment-form-comment label.error {
+			position: relative;
+			top: -5px;
+			display: block;
+			font-size: 13px;
+		}
 
-  /* Allowed tags note */
+	/* Allowed tags note */
 
-  .form-allowed-tags {
-    display: none;
-  }
+	.form-allowed-tags {
+		display: none;
+	}
 
-  /* Submit Button */
+	/* Submit Button */
 
-  #respond .form-submit {
-    margin: 20px 0 0 0;
+	#respond .form-submit {
+		margin: 20px 0 0 0;
 
-    button,
-    input[type="submit"]{
-      border: none;
-      @include border-radius(4px);
-      @include button-base;
-      @include button-size();
-      @include button-style(black);
-      @include box-shadow(none);
-      @include transition(200ms background-color linear);
-      font-weight: bold;
+		button,
+		input[type="submit"]{
+			border: none;
+			@include border-radius(4px);
+			@include button-base;
+			@include button-size();
+			@include button-style(black);
+			@include box-shadow(none);
+			@include transition(200ms background-color linear);
+			font-weight: bold;
 
-      &:hover{
-        background-color: $primary-color;
-      }
-    }
-  }
+			&:hover{
+				background-color: $primary-color;
+			}
+		}
+	}
 
 /* Comments closed message (in place of add form if comments have already been made) */
 
 #uplifted-comments-closed {
-  margin-top: 40px;
-  font-style: italic;
+	margin-top: 40px;
+	font-style: italic;
 }

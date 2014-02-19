@@ -10,33 +10,33 @@
  * @since 1.0.0
  */
 ?>
-  </div><!-- /#container -->
-  <div id="footer">
-    <div class="row">
+	</div><!-- /#container -->
+	<div id="footer">
+		<div class="row">
 
-      <div class="small-12 large-4 columns">
+			<div class="small-12 large-4 columns">
 			<?php get_template_part('sidebar-footer1'); ?>
-      </div>
+			</div>
 
-      <div class="small-12 large-4 columns">
-      <?php get_template_part('sidebar-footer2'); ?>
-      </div>
+			<div class="small-12 large-4 columns">
+			<?php get_template_part('sidebar-footer2'); ?>
+			</div>
 
-      <div class="small-12 large-4 columns">
-      <?php get_template_part('sidebar-footer3'); ?>
-      </div>
+			<div class="small-12 large-4 columns">
+			<?php get_template_part('sidebar-footer3'); ?>
+			</div>
 
-    </div><!-- /#row-->
+		</div><!-- /#row-->
 
-    <div id="footer-meta" class="row">
-      <div class="large-12 columns">
-        <?php uplifted_theme_footer(); ?>
-        <?php get_template_part('menu','social'); ?>
-      </div>
+		<div id="footer-meta" class="row">
+			<div class="large-12 columns">
+				<?php uplifted_theme_footer(); ?>
+				<?php get_template_part('menu','social'); ?>
+			</div>
 
-    </div><!-- /#row-->
+		</div><!-- /#row-->
 
-  </div><!-- /#footer-->
+	</div><!-- /#footer-->
 
 </div><!-- /#wrapper -->
 

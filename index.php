@@ -14,44 +14,40 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 get_header(); // header.php ?>
 
+<div id="uplifted-content">
 
+	<div id="uplifted-content-inner">
 
-<div id="uplifted-content" class="<?php echo uplifted_sidebar_enabled() ? 'uplifted-has-sidebar' : 'uplifted-no-sidebar'; ?>">
+		<div class="uplifted-content-block uplifted-content-block-close uplifted-clearfix">
 
-  <div id="uplifted-content-inner">
+			<?php
+			// loop-header.php shows title, description, etc. for categories, tags, archives, etc. (not used by single posts)
+			get_template_part( 'loop-header' );
+			?>
 
-    
+			<?php
+			// loop.php shows single or multiple posts
+			get_template_part( 'loop' );
+			?>
 
-    <div class="uplifted-content-block uplifted-content-block-close uplifted-clearfix">
+		</div>
 
-      <?php
-      // loop-header.php shows title, description, etc. for categories, tags, archives, etc. (not used by single posts)
-      get_template_part( 'loop-header' );
-      ?>
+		<?php
+		// author-box.php shows bio below blog posts and author archives
+		get_template_part( 'loop-author' );
+		?>
 
-      <?php
-      // loop.php shows single or multiple posts
-      get_template_part( 'loop' );
-      ?>
+		<?php
+		// loop-navigation.php shows the appropriate navigation at bottom
+		get_template_part( 'loop-navigation' );
+		?>
 
-    </div>
+		<?php
+		// comments.php lists comments when enabled (single posts only)
+		comments_template();
+		?>
 
-    <?php
-    // author-box.php shows bio below blog posts and author archives
-    get_template_part( 'loop-author' );
-    ?>
-
-    <?php
-    // loop-navigation.php shows the appropriate navigation at bottom
-    get_template_part( 'loop-navigation' );
-    ?>
-
-    <?php
-    // comments.php lists comments when enabled (single posts only)
-    comments_template();
-    ?>
-
-  </div>
+	</div>
 
 </div>
 
