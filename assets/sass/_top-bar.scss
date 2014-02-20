@@ -625,13 +625,13 @@ $topbar-sticky-class: ".sticky" !default;
         }
       }
 
-    .has-dropdown {
+      .has-dropdown {
         &:hover {
           & > .dropdown {
             visibility: visible;
           }
         }
-    }
+      }
   }
   }
 

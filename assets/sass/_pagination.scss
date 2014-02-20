@@ -47,19 +47,37 @@
 // Single Page Pagination
 //
 .uplifted-nav-left-right {
-	
-	div:first-child {
-		border-bottom: $panel-border;
+
+	// kill container styles and add them to the buttons
+	// so things look nice if there is only one button available
+	&.pagination {
+		background-color: transparent;
+		border: none;
 	}
 
+	>div {
+		background-color: $panel-bg;
+		border: $panel-border;
+	}
+	
+	// remove top border of second button only on mobile so we
+	// don't have a double thickness line in-between the buttons
+	@media screen and (max-width: $small-screen - 200px) {
+		div:nth-child(2) {
+			border-top: none;
+		}
+	}
+
+	// re-position buttons above mobile
 	@media screen and (min-width: $small-screen - 200px) {
 		> div {
 			width: 50%;
 			float: left;
 
-			&:first-child {
-				border-bottom: none;
-				border-right: $panel-border;
+			// remove left border of second button only above mobile so we
+			// don't have a double thickness line in-between the buttons
+			&:nth-child(2) {
+				border-left: none;
 			}
 		}
 	}
