@@ -3655,129 +3655,136 @@ p.comment-form-comment label.error {
       border: none; }
 
 /* Calendar Widget */
-/* line 130, assets/sass/_widgets.scss */
-.widget_calendar #calendar_wrap {
-  position: relative; }
-  /* line 133, assets/sass/_widgets.scss */
-  .widget_calendar #calendar_wrap #wp-calendar {
-    width: 100%;
-    text-align: center; }
-    /* line 137, assets/sass/_widgets.scss */
-    .widget_calendar #calendar_wrap #wp-calendar caption {
-      background-color: #0c9f98;
-      color: #fff;
-      padding: 1em; }
-      /* line 142, assets/sass/_widgets.scss */
-      #footer .widget_calendar #calendar_wrap #wp-calendar caption {
-        background-color: transparent; }
-    /* line 147, assets/sass/_widgets.scss */
-    .widget_calendar #calendar_wrap #wp-calendar thead th {
-      padding: .5em 0;
-      background-color: #0fcfc5;
-      border: 1px solid #0c9f98;
-      color: white; }
-      /* line 153, assets/sass/_widgets.scss */
-      #footer .widget_calendar #calendar_wrap #wp-calendar thead th {
-        background-color: rgba(0, 0, 0, 0.06);
-        border-color: transparent; }
-    /* line 159, assets/sass/_widgets.scss */
-    .widget_calendar #calendar_wrap #wp-calendar tbody tr {
-      border-bottom: 1px solid #0fcfc5; }
-      /* line 162, assets/sass/_widgets.scss */
-      #footer .widget_calendar #calendar_wrap #wp-calendar tbody tr {
-        border-color: transparent; }
-      /* line 166, assets/sass/_widgets.scss */
-      .widget_calendar #calendar_wrap #wp-calendar tbody tr td {
-        padding: .5em 0;
-        border: 1px solid #0fcfc5;
-        border-bottom: none;
-        color: #888;
-        background-color: white; }
-        /* line 173, assets/sass/_widgets.scss */
-        #footer .widget_calendar #calendar_wrap #wp-calendar tbody tr td {
-          border-color: transparent;
+/* line 128, assets/sass/_widgets.scss */
+.widget_calendar {
+  padding: 0; }
+  /* line 132, assets/sass/_widgets.scss */
+  #uplifted-sidebar-right .widget_calendar, #uplifted-sidebar-left .widget_calendar {
+    border: none; }
+  /* line 136, assets/sass/_widgets.scss */
+  .widget_calendar #calendar_wrap {
+    position: relative; }
+    /* line 139, assets/sass/_widgets.scss */
+    .widget_calendar #calendar_wrap #wp-calendar {
+      width: 100%;
+      text-align: center; }
+      /* line 143, assets/sass/_widgets.scss */
+      .widget_calendar #calendar_wrap #wp-calendar caption {
+        background-color: #0c9f98;
+        color: #fff;
+        padding: 1em; }
+        /* line 148, assets/sass/_widgets.scss */
+        #footer .widget_calendar #calendar_wrap #wp-calendar caption {
           background-color: transparent; }
-    /* line 181, assets/sass/_widgets.scss */
-    .widget_calendar #calendar_wrap #wp-calendar tfoot {
-      position: absolute;
-      top: 4px;
-      width: 100%; }
-      /* line 186, assets/sass/_widgets.scss */
-      .widget_calendar #calendar_wrap #wp-calendar tfoot td {
-        padding: 1.1em;
-        font-size: .9em; }
-        /* line 190, assets/sass/_widgets.scss */
-        .widget_calendar #calendar_wrap #wp-calendar tfoot td#next {
-          position: absolute;
-          right: 0; }
-        /* line 195, assets/sass/_widgets.scss */
-        .widget_calendar #calendar_wrap #wp-calendar tfoot td a {
-          color: #fff; }
+      /* line 153, assets/sass/_widgets.scss */
+      .widget_calendar #calendar_wrap #wp-calendar thead th {
+        padding: .5em 0;
+        background-color: #0fcfc5;
+        border: 1px solid #0fcfc5;
+        color: white; }
+        /* line 159, assets/sass/_widgets.scss */
+        #footer .widget_calendar #calendar_wrap #wp-calendar thead th {
+          background-color: rgba(0, 0, 0, 0.06);
+          border-color: transparent; }
+      /* line 165, assets/sass/_widgets.scss */
+      .widget_calendar #calendar_wrap #wp-calendar tbody tr {
+        border-bottom: 1px solid #0fcfc5; }
+        /* line 168, assets/sass/_widgets.scss */
+        #footer .widget_calendar #calendar_wrap #wp-calendar tbody tr {
+          border-color: transparent; }
+        /* line 172, assets/sass/_widgets.scss */
+        .widget_calendar #calendar_wrap #wp-calendar tbody tr td {
+          padding: .5em 0;
+          border: 1px solid #0fcfc5;
+          border-bottom: none;
+          color: #3c4542;
+          background-color: white; }
+          /* line 179, assets/sass/_widgets.scss */
+          #footer .widget_calendar #calendar_wrap #wp-calendar tbody tr td {
+            border-color: rgba(255, 255, 255, 0.3);
+            background-color: transparent;
+            color: white; }
+      /* line 188, assets/sass/_widgets.scss */
+      .widget_calendar #calendar_wrap #wp-calendar tfoot {
+        position: absolute;
+        top: 4px;
+        width: 100%; }
+        /* line 193, assets/sass/_widgets.scss */
+        .widget_calendar #calendar_wrap #wp-calendar tfoot td {
+          padding: 1.1em;
+          font-size: .9em; }
+          /* line 197, assets/sass/_widgets.scss */
+          .widget_calendar #calendar_wrap #wp-calendar tfoot td#next {
+            position: absolute;
+            right: 0; }
+          /* line 202, assets/sass/_widgets.scss */
+          .widget_calendar #calendar_wrap #wp-calendar tfoot td a {
+            color: #fff; }
 
 /* RSS Widget */
-/* line 211, assets/sass/_widgets.scss */
+/* line 218, assets/sass/_widgets.scss */
 .widget_rss h4 a {
   color: #fff; }
-  /* line 213, assets/sass/_widgets.scss */
+  /* line 220, assets/sass/_widgets.scss */
   .widget_rss h4 a:hover {
     color: #0fcfc5; }
-  /* line 218, assets/sass/_widgets.scss */
+  /* line 225, assets/sass/_widgets.scss */
   #footer .widget_rss h4 a {
     color: #7e7e68; }
-    /* line 220, assets/sass/_widgets.scss */
+    /* line 227, assets/sass/_widgets.scss */
     #footer .widget_rss h4 a:hover {
       color: #0fcfc5; }
-/* line 226, assets/sass/_widgets.scss */
+/* line 233, assets/sass/_widgets.scss */
 .widget_rss ul li {
   margin-bottom: .5em !important; }
-  /* line 229, assets/sass/_widgets.scss */
+  /* line 236, assets/sass/_widgets.scss */
   .widget_rss ul li a {
     border-bottom: 1px solid white !important; }
-/* line 236, assets/sass/_widgets.scss */
+/* line 243, assets/sass/_widgets.scss */
 .widget_rss .rss-date,
 .widget_rss .rssSummary,
 .widget_rss cite {
   font-size: .8em; }
-/* line 240, assets/sass/_widgets.scss */
+/* line 247, assets/sass/_widgets.scss */
 .widget_rss .rss-date {
   font-weight: bold;
   margin: .9em 0;
   display: block; }
-/* line 246, assets/sass/_widgets.scss */
+/* line 253, assets/sass/_widgets.scss */
 .widget_rss cite {
   margin: .5em 0; }
 
 /* Pages Widget */
-/* line 255, assets/sass/_widgets.scss */
+/* line 262, assets/sass/_widgets.scss */
 .widget_pages ul ul {
   padding-left: 1.5em; }
 
 /* Search Widget */
-/* line 266, assets/sass/_widgets.scss */
+/* line 273, assets/sass/_widgets.scss */
 .search-form input,
 .search-form button {
   margin: 0; }
-/* line 271, assets/sass/_widgets.scss */
+/* line 278, assets/sass/_widgets.scss */
 .search-form button {
   height: 3.625em;
   font-size: 0.875em;
   background-color: #0fcfc5;
   border: none;
   box-shadow: none; }
-  /* line 278, assets/sass/_widgets.scss */
+  /* line 285, assets/sass/_widgets.scss */
   .search-form button:hover {
     background-color: #0db7ae; }
-/* line 285, assets/sass/_widgets.scss */
+/* line 292, assets/sass/_widgets.scss */
 #footer .search-form input {
   border: none; }
-/* line 289, assets/sass/_widgets.scss */
+/* line 296, assets/sass/_widgets.scss */
 #footer .search-form button {
   background-color: #0c9f98; }
-  /* line 292, assets/sass/_widgets.scss */
+  /* line 299, assets/sass/_widgets.scss */
   #footer .search-form button:hover {
     background-color: #08706a; }
 
-/* line 300, assets/sass/_widgets.scss */
+/* line 307, assets/sass/_widgets.scss */
 .widget_search {
   background-color: transparent;
   margin: 0;
@@ -3785,68 +3792,68 @@ p.comment-form-comment label.error {
   padding: 0; }
 
 /* Recent Comments */
-/* line 315, assets/sass/_widgets.scss */
+/* line 322, assets/sass/_widgets.scss */
 .widget_recent_comments ul li {
   margin-bottom: 1em; }
-  /* line 319, assets/sass/_widgets.scss */
+  /* line 326, assets/sass/_widgets.scss */
   .widget_recent_comments ul li:last-child {
     margin: 0; }
 
 /* Custom Text Widget */
-/* line 326, assets/sass/_widgets.scss */
+/* line 333, assets/sass/_widgets.scss */
 .widget_text {
   line-height: 1.45; }
 
 /* ChurchTheme Location Widget */
-/* line 335, assets/sass/_widgets.scss */
+/* line 342, assets/sass/_widgets.scss */
 .widget_ctfw-locations .ctc_location {
   border: none;
   background-color: transparent; }
-/* line 340, assets/sass/_widgets.scss */
+/* line 347, assets/sass/_widgets.scss */
 .widget_ctfw-locations .ctfw-google-map {
   min-height: 12em; }
 
 /* Sidebar + Home Bottom */
 /*************** SHARED STYLES ****************/
 /* Widget Entry */
-/* line 352, assets/sass/_widgets.scss */
+/* line 359, assets/sass/_widgets.scss */
 .uplifted-widget-entry {
   margin-bottom: 1.5em; }
 
-/* line 357, assets/sass/_widgets.scss */
+/* line 364, assets/sass/_widgets.scss */
 .uplifted-widget-entry-thumb {
   width: 4em;
   float: left;
   margin: 0 .8em .8em 0; }
 
-/* line 364, assets/sass/_widgets.scss */
+/* line 371, assets/sass/_widgets.scss */
 .uplifted-widget-entry-title {
   margin: 0;
   font-size: 1em; }
 
-/* line 370, assets/sass/_widgets.scss */
+/* line 377, assets/sass/_widgets.scss */
 .uplifted-widget-entry-meta > li {
   display: inline-block;
   margin: 12px 15px 0 0;
   vertical-align: top; }
 
 /* Keep links from wrapping */
-/* line 377, assets/sass/_widgets.scss */
+/* line 384, assets/sass/_widgets.scss */
 .uplifted-widget-entry-meta > li a {
   white-space: nowrap; }
 
 /* Date */
-/* line 382, assets/sass/_widgets.scss */
+/* line 389, assets/sass/_widgets.scss */
 .uplifted-widget-entry-date {
   font-weight: bold; }
 
 /* Byline */
-/* line 387, assets/sass/_widgets.scss */
+/* line 394, assets/sass/_widgets.scss */
 .uplifted-widget-entry-byline {
   /*font-style: italic;*/ }
 
 /* Icons */
-/* line 392, assets/sass/_widgets.scss */
+/* line 399, assets/sass/_widgets.scss */
 .uplifted-widget-entry-icons .uplifted-list-icons {
   /* <ul> */
   position: relative;
@@ -3854,26 +3861,26 @@ p.comment-form-comment label.error {
   white-space: nowrap; }
 
 /* Content / Excerpt */
-/* line 400, assets/sass/_widgets.scss */
+/* line 407, assets/sass/_widgets.scss */
 .uplifted-widget-entry-content {
   margin-top: 15px; }
 
-/* line 404, assets/sass/_widgets.scss */
+/* line 411, assets/sass/_widgets.scss */
 .uplifted-widget-entry-content p {
   margin: 12px 0 0 0; }
 
-/* line 408, assets/sass/_widgets.scss */
+/* line 415, assets/sass/_widgets.scss */
 .uplifted-widget-entry-content p:first-child {
   margin: 0; }
 
 /* Dropdown Widgets */
-/* line 415, assets/sass/_widgets.scss */
+/* line 422, assets/sass/_widgets.scss */
 .widget_ctfw-archives select,
 .widget_ctfw-categories select {
   width: 100%; }
 
 /* List Widgets */
-/* line 431, assets/sass/_widgets.scss */
+/* line 438, assets/sass/_widgets.scss */
 .widget_categories ul,
 .widget_ctfw-categories ul,
 .widget_ctfw-archives ul,
@@ -3889,7 +3896,7 @@ p.comment-form-comment label.error {
   list-style: none;
   line-height: 1.4em; }
 
-/* line 447, assets/sass/_widgets.scss */
+/* line 454, assets/sass/_widgets.scss */
 .widget_categories ul ul,
 .widget_ctfw-categories ul ul,
 .widget_ctfw-archives ul ul,
@@ -3905,7 +3912,7 @@ p.comment-form-comment label.error {
   list-style: none;
   line-height: 1.4em; }
 
-/* line 461, assets/sass/_widgets.scss */
+/* line 468, assets/sass/_widgets.scss */
 .widget_categories li,
 .widget_ctfw-categories li,
 .widget_ctfw-archives li,
@@ -3918,13 +3925,13 @@ p.comment-form-comment label.error {
   padding-top: 0;
   margin-bottom: 10px; }
 
-/* line 467, assets/sass/_widgets.scss */
+/* line 474, assets/sass/_widgets.scss */
 .widget_recent_entries li,
 .widget_recent_comments li {
   padding-top: 0;
   margin-bottom: 18px; }
 
-/* line 482, assets/sass/_widgets.scss */
+/* line 489, assets/sass/_widgets.scss */
 .widget_categories li:first-child,
 .widget_ctfw-categories li:first-child,
 .widget_ctfw-archives li:first-child,
@@ -3939,7 +3946,7 @@ p.comment-form-comment label.error {
   border-top: 0;
   padding-top: 0; }
 
-/* line 497, assets/sass/_widgets.scss */
+/* line 504, assets/sass/_widgets.scss */
 .widget_categories li li,
 .widget_ctfw-categories li li,
 .widget_ctfw-archives li li,
@@ -3955,7 +3962,7 @@ p.comment-form-comment label.error {
   border-top: 0;
   padding-top: 0; }
 
-/* line 514, assets/sass/_widgets.scss */
+/* line 521, assets/sass/_widgets.scss */
 .widget_categories li li a,
 .widget_ctfw-categories li li a,
 .widget_ctfw-archives li li a,
@@ -3972,75 +3979,44 @@ p.comment-form-comment label.error {
   text-transform: none; }
 
 /* Tag Cloud Widget */
-/* line 520, assets/sass/_widgets.scss */
+/* line 527, assets/sass/_widgets.scss */
 .widget_tag_cloud {
   line-height: 2.05em; }
 
-/* line 524, assets/sass/_widgets.scss */
+/* line 531, assets/sass/_widgets.scss */
 .widget_tag_cloud a {
   font-size: 0.75em !important;
   /* single size */
   text-transform: uppercase; }
 
-/* Calendar Widget */
-/* line 530, assets/sass/_widgets.scss */
-.widget_calendar #wp-calendar {
-  width: 100%; }
-
-/* line 536, assets/sass/_widgets.scss */
-.widget_calendar #wp-calendar caption,
-.widget_calendar #wp-calendar td,
-.widget_calendar #wp-calendar th {
-  text-align: center; }
-
-/* line 540, assets/sass/_widgets.scss */
-.widget_calendar #wp-calendar tbody td a {
-  font-weight: bold; }
-
-/* line 544, assets/sass/_widgets.scss */
-.widget_calendar #wp-calendar caption {
-  padding: 0 0 5px 0;
-  font-weight: bold; }
-
-/* line 549, assets/sass/_widgets.scss */
-.widget_calendar #wp-calendar th {
-  border-width: 1px 0;
-  border-style: solid;
-  font-weight: bold;
-  padding: 3px 0; }
-
-/* line 556, assets/sass/_widgets.scss */
-.widget_calendar #wp-calendar tfoot td {
-  padding-top: 5px; }
-
 /* Text Widget */
-/* line 561, assets/sass/_widgets.scss */
+/* line 537, assets/sass/_widgets.scss */
 .textwidget > :first-child {
   margin-top: 0; }
 
-/* line 565, assets/sass/_widgets.scss */
+/* line 541, assets/sass/_widgets.scss */
 .textwidget > :last-child {
   margin-bottom: 0 !important; }
 
 /* RSS Widget */
-/* line 572, assets/sass/_widgets.scss */
+/* line 548, assets/sass/_widgets.scss */
 .widget_rss h1 img {
   display: none; }
 
-/* line 576, assets/sass/_widgets.scss */
+/* line 552, assets/sass/_widgets.scss */
 .widget_rss ul {
   margin: 0;
   list-style: none; }
 
-/* line 581, assets/sass/_widgets.scss */
+/* line 557, assets/sass/_widgets.scss */
 .widget_rss li {
   margin: 32px 0; }
 
-/* line 585, assets/sass/_widgets.scss */
+/* line 561, assets/sass/_widgets.scss */
 .widget_rss li:first-child {
   margin-top: 0; }
 
-/* line 589, assets/sass/_widgets.scss */
+/* line 565, assets/sass/_widgets.scss */
 .widget_rss li a {
   margin-top: 0;
   margin-bottom: 0;
@@ -4049,51 +4025,51 @@ p.comment-form-comment label.error {
   line-height: 1.4em;
   text-transform: uppercase; }
 
-/* line 598, assets/sass/_widgets.scss */
+/* line 574, assets/sass/_widgets.scss */
 .widget_rss .rss-date {
   margin-top: 12px;
   display: block;
   font-weight: bold; }
 
-/* line 604, assets/sass/_widgets.scss */
+/* line 580, assets/sass/_widgets.scss */
 .widget_rss .rssSummary {
   margin-top: 12px; }
 
-/* line 607, assets/sass/_widgets.scss */
+/* line 583, assets/sass/_widgets.scss */
 .widget_rss cite {
   display: block;
   margin-top: 12px;
   font-style: italic; }
-  /* line 612, assets/sass/_widgets.scss */
+  /* line 588, assets/sass/_widgets.scss */
   #footer .widget_rss cite {
     color: rgba(255, 255, 255, 0.8); }
 
 /* Highlight Widget */
-/* line 618, assets/sass/_widgets.scss */
+/* line 594, assets/sass/_widgets.scss */
 .widget_ctfw-highlight {
   padding: 0; }
 
-/* line 622, assets/sass/_widgets.scss */
+/* line 598, assets/sass/_widgets.scss */
 .widget_ctfw-highlight .uplifted-widget-title {
   margin: 0;
   padding: 0;
   font-size: 1em; }
 
-/* line 628, assets/sass/_widgets.scss */
+/* line 604, assets/sass/_widgets.scss */
 .widget_ctfw-highlight.uplifted-widget-has-title > * {
   top: 0; }
 
-/* line 632, assets/sass/_widgets.scss */
+/* line 608, assets/sass/_widgets.scss */
 .widget_ctfw-highlight.uplifted-widget-has-title {
   margin-top: 30px; }
 
-/* line 637, assets/sass/_widgets.scss */
+/* line 613, assets/sass/_widgets.scss */
 .widget_ctfw-highlight > :not(.uplifted-widget-title):first-of-type,
 .widget_ctfw-highlight .uplifted-widget-first-element {
   padding-top: 0 !important; }
 
 /* Gallery Widget */
-/* line 642, assets/sass/_widgets.scss */
+/* line 618, assets/sass/_widgets.scss */
 .widget_ctfw-gallery {
   *zoom: 1; }
   /* line 131, assets/sass/_global.scss */
@@ -4103,41 +4079,41 @@ p.comment-form-comment label.error {
   /* line 132, assets/sass/_global.scss */
   .widget_ctfw-gallery:after {
     clear: both; }
-  /* line 645, assets/sass/_widgets.scss */
+  /* line 621, assets/sass/_widgets.scss */
   .widget_ctfw-gallery br {
     display: none; }
 
 /* Sermons Widget */
-/* line 652, assets/sass/_widgets.scss */
+/* line 628, assets/sass/_widgets.scss */
 .uplifted-sermons-widget-entry.uplifted-widget-entry-first {
   margin-top: 0; }
 
 /* Series */
-/* line 658, assets/sass/_widgets.scss */
+/* line 634, assets/sass/_widgets.scss */
 .uplifted-widget-entry-meta > li.uplifted-sermons-widget-entry-series a {
   white-space: normal;
   /* sermon series titles may be longer than sidebar */ }
 
 /* Events Widget */
-/* line 665, assets/sass/_widgets.scss */
+/* line 641, assets/sass/_widgets.scss */
 .uplifted-events-widget-entry-time {
   font-style: italic; }
 
 /* People Widget */
-/* line 672, assets/sass/_widgets.scss */
+/* line 648, assets/sass/_widgets.scss */
 .uplifted-people-widget-entry-position {
   font-weight: bold; }
 
-/* line 676, assets/sass/_widgets.scss */
+/* line 652, assets/sass/_widgets.scss */
 .uplifted-people-widget-entry-phone {
   font-style: italic; }
 
 /* Giving Widget */
-/* line 681, assets/sass/_widgets.scss */
+/* line 657, assets/sass/_widgets.scss */
 .uplifted-giving-widget-text p:first-child {
   margin-top: 0; }
 
-/* line 685, assets/sass/_widgets.scss */
+/* line 661, assets/sass/_widgets.scss */
 .uplifted-giving-widget-button {
   margin-top: 24px;
   text-align: center; }
