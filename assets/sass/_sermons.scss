@@ -157,3 +157,18 @@
 
   }
 }
+
+// Since we are using a special layout method we need to size the pagination
+// element and comments section accordingly
+.single-ctc_sermon .pagination,
+.single-ctc_sermon #comments {
+  @extend .large-8;
+  @extend .column;
+  @extend .clearfix;
+  padding-left: 0;
+
+  // part of the page hack, need to kill the right padding on mobile
+    @media screen and (max-width: $small-screen) {
+      padding-right: 0;
+    }
+}

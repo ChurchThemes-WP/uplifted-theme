@@ -1270,17 +1270,21 @@ button, .button {
     padding-left: 0;
     padding-top: 0; } }
 /* line 232, assets/sass/_clearing.scss */
-.clearfix, #container,
+.clearfix, #container, .single-ctc_sermon .pagination,
+.single-ctc_sermon #comments,
 .uplifted-clearfix {
   *zoom: 1; }
   /* line 131, assets/sass/_global.scss */
-  .clearfix:before, #container:before, .clearfix:after, #container:after,
+  .clearfix:before, #container:before, .single-ctc_sermon .pagination:before,
+  .single-ctc_sermon #comments:before, .clearfix:after, #container:after, .single-ctc_sermon .pagination:after,
+  .single-ctc_sermon #comments:after,
   .uplifted-clearfix:before,
   .uplifted-clearfix:after {
     content: " ";
     display: table; }
   /* line 132, assets/sass/_global.scss */
-  .clearfix:after, #container:after,
+  .clearfix:after, #container:after, .single-ctc_sermon .pagination:after,
+  .single-ctc_sermon #comments:after,
   .uplifted-clearfix:after {
     clear: both; }
 
@@ -1303,7 +1307,9 @@ button, .button {
   .row:after {
     clear: both; }
   /* line 123, assets/sass/_grid.scss */
-  .row.collapse .column,
+  .row.collapse .column, .row.collapse .single-ctc_sermon .pagination, .single-ctc_sermon .row.collapse .pagination,
+  .row.collapse .single-ctc_sermon #comments,
+  .single-ctc_sermon .row.collapse #comments,
   .row.collapse .columns {
     position: relative;
     padding-left: 0;
@@ -1340,7 +1346,8 @@ button, .button {
         clear: both; }
 
 /* line 132, assets/sass/_grid.scss */
-.column,
+.column, .single-ctc_sermon .pagination,
+.single-ctc_sermon #comments,
 .columns {
   position: relative;
   padding-left: 0.9375em;
@@ -1350,7 +1357,8 @@ button, .button {
 
 @media only screen {
   /* line 137, assets/sass/_grid.scss */
-  .column,
+  .column, .single-ctc_sermon .pagination,
+  .single-ctc_sermon #comments,
   .columns {
     position: relative;
     padding-left: 0.9375em;
@@ -1481,7 +1489,8 @@ button, .button {
     float: left; }
 
   /* line 151, assets/sass/_grid.scss */
-  .column.small-centered,
+  .column.small-centered, .single-ctc_sermon .small-centered.pagination,
+  .single-ctc_sermon .small-centered#comments,
   .columns.small-centered {
     position: relative;
     margin-left: auto;
@@ -1525,7 +1534,8 @@ button, .button {
     width: 58.33333%; }
 
   /* line 158, assets/sass/_grid.scss */
-  .large-8 {
+  .large-8, .single-ctc_sermon .pagination,
+  .single-ctc_sermon #comments {
     position: relative;
     width: 66.66667%; }
 
@@ -1742,7 +1752,8 @@ button, .button {
     left: auto; }
 
   /* line 171, assets/sass/_grid.scss */
-  .column.large-centered,
+  .column.large-centered, .single-ctc_sermon .large-centered.pagination,
+  .single-ctc_sermon .large-centered#comments,
   .columns.large-centered {
     position: relative;
     margin-left: auto;
@@ -1750,14 +1761,16 @@ button, .button {
     float: none !important; }
 
   /* line 174, assets/sass/_grid.scss */
-  .column.large-uncentered,
+  .column.large-uncentered, .single-ctc_sermon .large-uncentered.pagination,
+  .single-ctc_sermon .large-uncentered#comments,
   .columns.large-uncentered {
     margin-left: 0;
     margin-right: 0;
     float: left !important; }
 
   /* line 181, assets/sass/_grid.scss */
-  .column.large-uncentered.opposite,
+  .column.large-uncentered.opposite, .single-ctc_sermon .large-uncentered.opposite.pagination,
+  .single-ctc_sermon .large-uncentered.opposite#comments,
   .columns.large-uncentered.opposite {
     float: right !important; } }
 /* Forms */
@@ -1771,20 +1784,30 @@ form {
 form .row .row {
   margin: 0 -0.9375em; }
   /* line 72, assets/sass/_forms.scss */
-  form .row .row .column,
+  form .row .row .column, form .row .row .single-ctc_sermon .pagination, .single-ctc_sermon form .row .row .pagination,
+  form .row .row .single-ctc_sermon #comments,
+  .single-ctc_sermon form .row .row #comments,
   form .row .row .columns {
     padding: 0 0.9375em; }
   /* line 75, assets/sass/_forms.scss */
   form .row .row.collapse {
     margin: 0; }
     /* line 78, assets/sass/_forms.scss */
-    form .row .row.collapse .column,
+    form .row .row.collapse .column, form .row .row.collapse .single-ctc_sermon .pagination, .single-ctc_sermon form .row .row.collapse .pagination,
+    form .row .row.collapse .single-ctc_sermon #comments,
+    .single-ctc_sermon form .row .row.collapse #comments,
     form .row .row.collapse .columns {
       padding: 0; }
 /* line 85, assets/sass/_forms.scss */
-form .row input.column,
+form .row input.column, form .row .single-ctc_sermon input.pagination, .single-ctc_sermon form .row input.pagination,
+form .row .single-ctc_sermon input#comments,
+.single-ctc_sermon form .row input#comments,
 form .row input.columns,
 form .row textarea.column,
+form .row .single-ctc_sermon textarea.pagination,
+.single-ctc_sermon form .row textarea.pagination,
+form .row .single-ctc_sermon textarea#comments,
+.single-ctc_sermon form .row textarea#comments,
 form .row textarea.columns {
   padding-left: 0.9375em; }
 
@@ -5096,6 +5119,16 @@ img.alignright {
       /* line 136, assets/sass/_buttons.scss */
       .uplifted-list-buttons li a:hover, .uplifted-list-buttons li a:focus {
         color: white; }
+
+/* line 164, assets/sass/_sermons.scss */
+.single-ctc_sermon .pagination,
+.single-ctc_sermon #comments {
+  padding-left: 0; }
+  @media screen and (max-width: 768px) {
+    /* line 164, assets/sass/_sermons.scss */
+    .single-ctc_sermon .pagination,
+    .single-ctc_sermon #comments {
+      padding-right: 0; } }
 
 /* People */
 /* line 8, assets/sass/_people.scss */
