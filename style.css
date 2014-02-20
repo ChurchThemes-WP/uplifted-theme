@@ -3979,44 +3979,38 @@ p.comment-form-comment label.error {
   text-transform: none; }
 
 /* Tag Cloud Widget */
-/* line 527, assets/sass/_widgets.scss */
-.widget_tag_cloud {
-  line-height: 2.05em; }
-
 /* line 531, assets/sass/_widgets.scss */
-.widget_tag_cloud a {
-  font-size: 0.75em !important;
-  /* single size */
-  text-transform: uppercase; }
+#footer .widget_tag_cloud a:hover {
+  opacity: .7; }
 
 /* Text Widget */
-/* line 537, assets/sass/_widgets.scss */
+/* line 538, assets/sass/_widgets.scss */
 .textwidget > :first-child {
   margin-top: 0; }
 
-/* line 541, assets/sass/_widgets.scss */
+/* line 542, assets/sass/_widgets.scss */
 .textwidget > :last-child {
   margin-bottom: 0 !important; }
 
 /* RSS Widget */
-/* line 548, assets/sass/_widgets.scss */
+/* line 549, assets/sass/_widgets.scss */
 .widget_rss h1 img {
   display: none; }
 
-/* line 552, assets/sass/_widgets.scss */
+/* line 553, assets/sass/_widgets.scss */
 .widget_rss ul {
   margin: 0;
   list-style: none; }
 
-/* line 557, assets/sass/_widgets.scss */
+/* line 558, assets/sass/_widgets.scss */
 .widget_rss li {
   margin: 32px 0; }
 
-/* line 561, assets/sass/_widgets.scss */
+/* line 562, assets/sass/_widgets.scss */
 .widget_rss li:first-child {
   margin-top: 0; }
 
-/* line 565, assets/sass/_widgets.scss */
+/* line 566, assets/sass/_widgets.scss */
 .widget_rss li a {
   margin-top: 0;
   margin-bottom: 0;
@@ -4025,51 +4019,51 @@ p.comment-form-comment label.error {
   line-height: 1.4em;
   text-transform: uppercase; }
 
-/* line 574, assets/sass/_widgets.scss */
+/* line 575, assets/sass/_widgets.scss */
 .widget_rss .rss-date {
   margin-top: 12px;
   display: block;
   font-weight: bold; }
 
-/* line 580, assets/sass/_widgets.scss */
+/* line 581, assets/sass/_widgets.scss */
 .widget_rss .rssSummary {
   margin-top: 12px; }
 
-/* line 583, assets/sass/_widgets.scss */
+/* line 584, assets/sass/_widgets.scss */
 .widget_rss cite {
   display: block;
   margin-top: 12px;
   font-style: italic; }
-  /* line 588, assets/sass/_widgets.scss */
+  /* line 589, assets/sass/_widgets.scss */
   #footer .widget_rss cite {
     color: rgba(255, 255, 255, 0.8); }
 
 /* Highlight Widget */
-/* line 594, assets/sass/_widgets.scss */
+/* line 595, assets/sass/_widgets.scss */
 .widget_ctfw-highlight {
   padding: 0; }
 
-/* line 598, assets/sass/_widgets.scss */
+/* line 599, assets/sass/_widgets.scss */
 .widget_ctfw-highlight .uplifted-widget-title {
   margin: 0;
   padding: 0;
   font-size: 1em; }
 
-/* line 604, assets/sass/_widgets.scss */
+/* line 605, assets/sass/_widgets.scss */
 .widget_ctfw-highlight.uplifted-widget-has-title > * {
   top: 0; }
 
-/* line 608, assets/sass/_widgets.scss */
+/* line 609, assets/sass/_widgets.scss */
 .widget_ctfw-highlight.uplifted-widget-has-title {
   margin-top: 30px; }
 
-/* line 613, assets/sass/_widgets.scss */
+/* line 614, assets/sass/_widgets.scss */
 .widget_ctfw-highlight > :not(.uplifted-widget-title):first-of-type,
 .widget_ctfw-highlight .uplifted-widget-first-element {
   padding-top: 0 !important; }
 
 /* Gallery Widget */
-/* line 618, assets/sass/_widgets.scss */
+/* line 619, assets/sass/_widgets.scss */
 .widget_ctfw-gallery {
   *zoom: 1; }
   /* line 131, assets/sass/_global.scss */
@@ -4079,41 +4073,41 @@ p.comment-form-comment label.error {
   /* line 132, assets/sass/_global.scss */
   .widget_ctfw-gallery:after {
     clear: both; }
-  /* line 621, assets/sass/_widgets.scss */
+  /* line 622, assets/sass/_widgets.scss */
   .widget_ctfw-gallery br {
     display: none; }
 
 /* Sermons Widget */
-/* line 628, assets/sass/_widgets.scss */
+/* line 629, assets/sass/_widgets.scss */
 .uplifted-sermons-widget-entry.uplifted-widget-entry-first {
   margin-top: 0; }
 
 /* Series */
-/* line 634, assets/sass/_widgets.scss */
+/* line 635, assets/sass/_widgets.scss */
 .uplifted-widget-entry-meta > li.uplifted-sermons-widget-entry-series a {
   white-space: normal;
   /* sermon series titles may be longer than sidebar */ }
 
 /* Events Widget */
-/* line 641, assets/sass/_widgets.scss */
+/* line 642, assets/sass/_widgets.scss */
 .uplifted-events-widget-entry-time {
   font-style: italic; }
 
 /* People Widget */
-/* line 648, assets/sass/_widgets.scss */
+/* line 649, assets/sass/_widgets.scss */
 .uplifted-people-widget-entry-position {
   font-weight: bold; }
 
-/* line 652, assets/sass/_widgets.scss */
+/* line 653, assets/sass/_widgets.scss */
 .uplifted-people-widget-entry-phone {
   font-style: italic; }
 
 /* Giving Widget */
-/* line 657, assets/sass/_widgets.scss */
+/* line 658, assets/sass/_widgets.scss */
 .uplifted-giving-widget-text p:first-child {
   margin-top: 0; }
 
-/* line 661, assets/sass/_widgets.scss */
+/* line 662, assets/sass/_widgets.scss */
 .uplifted-giving-widget-button {
   margin-top: 24px;
   text-align: center; }
