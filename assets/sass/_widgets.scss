@@ -298,8 +298,13 @@
 
 // search widget container
 .widget_search {
+	background-color: transparent;
+	margin: 0;
+	border: none;
+	padding: 0;
+
 	.search-form {
-		margin-bottom: 0;
+		//margin-bottom: 0;
 	}
 }
 
@@ -511,8 +516,7 @@
 				text-transform: none;
 			}
 
-/************* WP TAG CLOUD WIDGET ************/
-
+/* Tag Cloud Widget */
 .widget_tag_cloud {
 	line-height: 2.05em;
 }
@@ -522,8 +526,7 @@
 		text-transform: uppercase;
 	}
 
-/************* WP CALENDAR WIDGET *************/
-
+/* Calendar Widget */
 .widget_calendar #wp-calendar {
 	width: 100%;
 }
@@ -554,32 +557,7 @@
 	padding-top: 5px;
 }
 
-/************** WP SEARCH WIDGET **************/
-
-.widget_search form {
-	position: relative;
-}
-
-	/* Search Input */
-
-	.widget_search  .uplifted-search-field {
-		margin-right: 34px;
-	}
-
-	.widget_search .uplifted-search-field input {
-		width: 100%;
-	}
-
-	/* Search Button */
-
-	.widget_search .uplifted-search-button {
-		position: absolute;
-		top: 4px;
-		right: 2px;
-	}
-
-/*************** WP TEXT WIDGET ***************/
-
+/* Text Widget */
 .textwidget > :first-child {
 	margin-top: 0;
 }
@@ -588,9 +566,10 @@
 	margin-bottom: 0 !important;
 }
 
-/*************** WP RSS WIDGET ****************/
+/* RSS Widget */
 
-.widget_rss h1 img { /* hide RSS icon */
+// hide RSS icon
+.widget_rss h1 img {
 	display: none;
 }
 
@@ -635,13 +614,12 @@
 			}
 		}
 
-/************ CT HIGHLIGHT WIDGET *************/
-
-.widget_ctfw-highlight { /* <aside> */
+/* Highlight Widget */
+.widget_ctfw-highlight {
 	padding: 0;
 }
 
-	.widget_ctfw-highlight .uplifted-widget-title { /* <h1> */
+	.widget_ctfw-highlight .uplifted-widget-title {
 		margin: 0;
 		padding: 0;
 		font-size: 1em;
@@ -656,12 +634,11 @@
 	}
 
 	.widget_ctfw-highlight > :not(.uplifted-widget-title):first-of-type,
-	.widget_ctfw-highlight .uplifted-widget-first-element { /* uplifted-widget-first-element applied for IE8 w/JavaScript */
+	.widget_ctfw-highlight .uplifted-widget-first-element { // uplifted-widget-first-element applied for IE8 w/JavaScript
 		padding-top: 0 !important;
 	}
 
 /* Gallery Widget */
-
 .widget_ctfw-gallery {
 	@include clearfix;
 
@@ -670,15 +647,8 @@
 	}
 }
 
-/* Link */
 
-.uplifted-gallery-widget-link { /* holds <a> */
-	text-align: center;
-	margin-top: 20px;
-}
-
-/************** CT SERMONS WIDGET *************/
-
+/* Sermons Widget */
 .uplifted-sermons-widget-entry.uplifted-widget-entry-first {
 	margin-top: 0;
 }
@@ -689,31 +659,25 @@
 	white-space: normal; /* sermon series titles may be longer than sidebar */
 }
 
-/************** CT EVENTS WIDGET **************/
+/* Events Widget */
 
-/* Time */
-
+// time
 .uplifted-events-widget-entry-time {
 	font-style: italic;
 }
 
-/************* CT PEOPLE WIDGET ***************/
+/* People Widget */
 
-/* Position */
-
+// position
 .uplifted-people-widget-entry-position {
 	font-weight: bold;
 }
-
 
 .uplifted-people-widget-entry-phone {
 	font-style: italic;
 }
 
-/************* CT GIVING WIDGET ***************/
-
 /* Giving Widget */
-
 .uplifted-giving-widget-text p:first-child {
 	margin-top: 0;
 }
