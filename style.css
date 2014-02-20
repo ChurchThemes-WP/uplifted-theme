@@ -4114,57 +4114,62 @@ p.comment-form-comment label.error {
   /* uplifted-widget-first-element applied for IE8 w/JavaScript */
   padding-top: 0 !important; }
 
-/************* CT GALLERY WIDGET **************/
-/* Gallery container */
-/* line 667, assets/sass/_widgets.scss */
-.uplifted-widget .gallery {
-  margin-bottom: 0;
-  position: relative; }
-  /* line 671, assets/sass/_widgets.scss */
-  .uplifted-widget .gallery br {
+/* Gallery Widget */
+/* line 665, assets/sass/_widgets.scss */
+.widget_ctfw-gallery {
+  *zoom: 1; }
+  /* line 131, assets/sass/_global.scss */
+  .widget_ctfw-gallery:before, .widget_ctfw-gallery:after {
+    content: " ";
+    display: table; }
+  /* line 132, assets/sass/_global.scss */
+  .widget_ctfw-gallery:after {
+    clear: both; }
+  /* line 668, assets/sass/_widgets.scss */
+  .widget_ctfw-gallery br {
     display: none; }
 
 /* Link */
-/* line 678, assets/sass/_widgets.scss */
+/* line 675, assets/sass/_widgets.scss */
 .uplifted-gallery-widget-link {
   /* holds <a> */
   text-align: center;
   margin-top: 20px; }
 
 /************** CT SERMONS WIDGET *************/
-/* line 685, assets/sass/_widgets.scss */
+/* line 682, assets/sass/_widgets.scss */
 .uplifted-sermons-widget-entry.uplifted-widget-entry-first {
   margin-top: 0; }
 
 /* Series */
-/* line 691, assets/sass/_widgets.scss */
+/* line 688, assets/sass/_widgets.scss */
 .uplifted-widget-entry-meta > li.uplifted-sermons-widget-entry-series a {
   white-space: normal;
   /* sermon series titles may be longer than sidebar */ }
 
 /************** CT EVENTS WIDGET **************/
 /* Time */
-/* line 699, assets/sass/_widgets.scss */
+/* line 696, assets/sass/_widgets.scss */
 .uplifted-events-widget-entry-time {
   font-style: italic; }
 
 /************* CT PEOPLE WIDGET ***************/
 /* Position */
-/* line 707, assets/sass/_widgets.scss */
+/* line 704, assets/sass/_widgets.scss */
 .uplifted-people-widget-entry-position {
   font-weight: bold; }
 
-/* line 712, assets/sass/_widgets.scss */
+/* line 709, assets/sass/_widgets.scss */
 .uplifted-people-widget-entry-phone {
   font-style: italic; }
 
 /************* CT GIVING WIDGET ***************/
 /* Giving Widget */
-/* line 720, assets/sass/_widgets.scss */
+/* line 717, assets/sass/_widgets.scss */
 .uplifted-giving-widget-text p:first-child {
   margin-top: 0; }
 
-/* line 724, assets/sass/_widgets.scss */
+/* line 721, assets/sass/_widgets.scss */
 .uplifted-giving-widget-button {
   margin-top: 24px;
   text-align: center; }

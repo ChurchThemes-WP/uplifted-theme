@@ -660,13 +660,10 @@
 		padding-top: 0 !important;
 	}
 
-/************* CT GALLERY WIDGET **************/
+/* Gallery Widget */
 
-/* Gallery container */
-
-.uplifted-widget .gallery {
-	margin-bottom: 0;
-	position: relative;
+.widget_ctfw-gallery {
+	@include clearfix;
 
 	br{
 		display:none;
