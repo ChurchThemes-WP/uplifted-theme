@@ -1,10 +1,13 @@
 /* Breadcrumbs */
 
 .ctfw-breadcrumbs {
-	@include grid-row;
-	margin-top: 2em;
+	//@include grid-row;
+	//margin-top: 2em;
+	font-size: .8em;
+	margin: 1em 1em 2em;
+	color: lighten($body-font-color,50%);
 
-	.ctfw-breadcrumbs-inner{
+	/*.ctfw-breadcrumbs-inner{
 		@include grid-column(8,true,true,2);
 		margin-top: 1em;
 		margin-bottom: 1em;
@@ -20,7 +23,7 @@
 		@extend .genericon;
 		@extend .genericon-collapse;
 		@include rotate(90deg);
-	}
+	}*/
 
 	a {
 		color: lighten($body-font-color,50%);

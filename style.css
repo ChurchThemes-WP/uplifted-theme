@@ -2155,7 +2155,7 @@ small.error {
  * All Genericons
  */
 /* line 20, assets/sass/_genericons.scss */
-.genericon, .ctfw-breadcrumbs .separator, #menu-social ul li a {
+.genericon, #menu-social ul li a {
   display: inline-block;
   -webkit-font-smoothing: antialiased;
   font-family: 'Genericons';
@@ -2168,7 +2168,7 @@ small.error {
  * IE7 and IE6 hacks
  */
 /* line 38, assets/sass/_genericons.scss */
-.genericon, .ctfw-breadcrumbs .separator, #menu-social ul li a {
+.genericon, #menu-social ul li a {
   *overflow: auto;
   *zoom: 1;
   *display: inline; }
@@ -2453,7 +2453,7 @@ small.error {
   content: '\f431'; }
 
 /* line 123, assets/sass/_genericons.scss */
-.genericon-collapse:before, .ctfw-breadcrumbs .separator:before {
+.genericon-collapse:before {
   content: '\f432'; }
 
 /* line 124, assets/sass/_genericons.scss */
@@ -2781,7 +2781,7 @@ small.error {
     .uplifted-entry-meta a:hover {
       color: #0fcfc5; }
   /* line 99, assets/sass/_post.scss */
-  .uplifted-entry-meta .genericon, .uplifted-entry-meta .ctfw-breadcrumbs .separator, .ctfw-breadcrumbs .uplifted-entry-meta .separator, .uplifted-entry-meta #menu-social ul li a, #menu-social ul li .uplifted-entry-meta a {
+  .uplifted-entry-meta .genericon, .uplifted-entry-meta #menu-social ul li a, #menu-social ul li .uplifted-entry-meta a {
     font-size: 1.3em;
     position: absolute;
     left: 0;
@@ -2801,7 +2801,7 @@ small.error {
   display: inline-block;
   padding: .75em 0; }
 /* line 126, assets/sass/_post.scss */
-.uplifted-entry-footer .genericon, .uplifted-entry-footer .ctfw-breadcrumbs .separator, .ctfw-breadcrumbs .uplifted-entry-footer .separator, .uplifted-entry-footer #menu-social ul li a, #menu-social ul li .uplifted-entry-footer a {
+.uplifted-entry-footer .genericon, .uplifted-entry-footer #menu-social ul li a, #menu-social ul li .uplifted-entry-footer a {
   font-size: 1.3em;
   position: relative;
   top: -1px;
@@ -4966,56 +4966,31 @@ img.alignright {
 /* Breadcrumbs */
 /* line 3, assets/sass/_breadcrumbs.scss */
 .ctfw-breadcrumbs {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: 70em;
-  *zoom: 1;
-  margin-top: 2em; }
-  /* line 131, assets/sass/_global.scss */
-  .ctfw-breadcrumbs:before, .ctfw-breadcrumbs:after {
-    content: " ";
-    display: table; }
-  /* line 132, assets/sass/_global.scss */
-  .ctfw-breadcrumbs:after {
-    clear: both; }
-  /* line 7, assets/sass/_breadcrumbs.scss */
-  .ctfw-breadcrumbs .ctfw-breadcrumbs-inner {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 66.66667%;
-    float: right;
-    margin-left: 16.66667%;
-    margin-left: auto;
-    margin-right: auto;
-    float: none !important;
-    float: left;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: .8em;
-    color: #bcc4c1; }
-    /* line 14, assets/sass/_breadcrumbs.scss */
-    .uplifted-has-sidebar .ctfw-breadcrumbs .ctfw-breadcrumbs-inner {
-      position: relative;
-      padding-left: 0.9375em;
-      padding-right: 0.9375em;
-      width: 100%;
-      float: left; }
-  /* line 19, assets/sass/_breadcrumbs.scss */
-  .ctfw-breadcrumbs .separator {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg); }
-  /* line 25, assets/sass/_breadcrumbs.scss */
+  font-size: .8em;
+  margin: 1em 1em 2em;
+  color: #bcc4c1;
+  	/*.ctfw-breadcrumbs-inner{
+  		@include grid-column(8,true,true,2);
+  		margin-top: 1em;
+  		margin-bottom: 1em;
+  		font-size: .8em;
+  		color: lighten($body-font-color,50%);
+  
+  		.uplifted-has-sidebar &{
+  			@include grid-column(12);
+  		}
+  	}
+  
+  	.separator{
+  		@extend .genericon;
+  		@extend .genericon-collapse;
+  		@include rotate(90deg);
+  	}*/ }
+  /* line 28, assets/sass/_breadcrumbs.scss */
   .ctfw-breadcrumbs a {
     color: #bcc4c1;
     margin: 0 .3em; }
-    /* line 29, assets/sass/_breadcrumbs.scss */
+    /* line 32, assets/sass/_breadcrumbs.scss */
     .ctfw-breadcrumbs a:hover {
       color: #0fcfc5; }
 
