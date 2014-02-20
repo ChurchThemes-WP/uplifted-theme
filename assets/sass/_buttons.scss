@@ -237,7 +237,7 @@ $button-disabled-opacity: 0.6 !default;
 // only visible when logged into WordPress
 .post-edit-link {
 	@include button($radius:true);
-	margin-bottom: $panel-margin-bottom;
+	margin: $panel-margin-bottom 0;
 
 	&:hover {
 		background-color: $secondary-color;

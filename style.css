@@ -1099,7 +1099,7 @@ button, .button {
   color: white;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  margin-bottom: 1.5em; }
+  margin: 1.5em 0; }
   /* line 124, assets/sass/_buttons.scss */
   .post-edit-link:hover, .post-edit-link:focus {
     background-color: #0fcfc5; }
