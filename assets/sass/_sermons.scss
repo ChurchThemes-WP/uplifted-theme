@@ -1,23 +1,25 @@
 /* Sermons */
 
 
-// temp code - we don't want a sidebar on single sermon pages
-// but right now we have to hack to make that happen
-.single-ctc_sermon #uplifted-content.uplifted-has-sidebar {
+// for the Single Sermon pages we are creating the special layout with
+// a hack. Forcing the content to be full-width whether there is a sidebar
+// or not, and then hiding the sidebar.
+.single-ctc_sermon.uplifted-no-sidebar #uplifted-content,
+.single-ctc_sermon.uplifted-has-sidebar #uplifted-content {
   width: 100% !important;
 }
 
+// hiding the sidebar on Single Sermon to get the layout we want
 .single-ctc_sermon #uplifted-sidebar-right {
-  display: none;
+  display: none !important;
 }
-// temp code - we don't want a sidebar on single sermon pages
-// but right now we have to hack to make that happen
 
 
-/*
- * Single Sermon Page
- *
- */
+/* 
+  *
+  * Single Sermon Page 
+  *
+  */
 
 // remove post content styling for Single Sermons
 .single-ctc_sermon #uplifted-content .hentry {
