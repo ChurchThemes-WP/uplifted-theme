@@ -1078,6 +1078,38 @@ button, .button {
   /* line 226, assets/sass/_buttons.scss */
   button, .button {
     display: inline-block; } }
+/* line 238, assets/sass/_buttons.scss */
+.post-edit-link {
+  cursor: "pointer";
+  font-family: inherit;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 0 0.5em;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding-top: 0.75em;
+  padding-right: 1.5em;
+  padding-bottom: 0.75em;
+  padding-left: 1.5em;
+  font-size: 0.875em;
+  background-color: #0fcfc5;
+  border-color: #0c9f98;
+  color: white;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  margin-bottom: 1.5em; }
+  /* line 124, assets/sass/_buttons.scss */
+  .post-edit-link:hover, .post-edit-link:focus {
+    background-color: #0fcfc5; }
+  /* line 136, assets/sass/_buttons.scss */
+  .post-edit-link:hover, .post-edit-link:focus {
+    color: white; }
+  /* line 242, assets/sass/_buttons.scss */
+  .post-edit-link:hover {
+    background-color: #e8665a; }
+
 /* Clearing */
 /* Clearing Styles */
 /* line 38, assets/sass/_clearing.scss */

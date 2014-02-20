@@ -231,3 +231,15 @@ $button-disabled-opacity: 0.6 !default;
 	}
 
 }
+
+//
+// Quick Edit Button for Site Editors
+// only visible when logged into WordPress
+.post-edit-link {
+	@include button($radius:true);
+	margin-bottom: $panel-margin-bottom;
+
+	&:hover {
+		background-color: $secondary-color;
+	}
+}
