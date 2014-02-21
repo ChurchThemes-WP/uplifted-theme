@@ -8,16 +8,19 @@
 
 // we want the Gallery page width to be 100% all the time. the page does
 // not support a sidebar, but lets write styles just to make sure
-
 .page-template-page-templatesgalleries-php.uplifted-no-sidebar #uplifted-content,
 .page-template-page-templatesgalleries-php.uplifted-has-sidebar #uplifted-content {
     width: 100%;
 }
 
+// mobile gallery item styles
+.gallery-item {
+	margin-bottom: $panel-margin-bottom;
+}
 .gallery-item a,
 .gallery-item img {
     display: block;
-    margin: 0 auto .5em;
+    margin: 0 auto;
 }
 
 .gallery-caption {
@@ -45,7 +48,7 @@
 	}
 }
 
-@media screen and (min-width: $small-screen) {
+@media screen and (min-width: $small-screen - 140px) {
     .gallery {
         margin-bottom: 20px;
     }
