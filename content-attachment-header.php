@@ -21,17 +21,20 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<ul class="uplifted-entry-meta">
 
 			<li class="uplifted-attachment-date">
+				<i class="genericon genericon-month"></i>
 				<time datetime="<?php esc_attr( the_time( 'c' ) ); ?>"><?php printf( __( 'Uploaded %s', 'uplifted' ), '<span>' . ctfw_post_date( array( 'return' => true ) ) . '</span>' ); ?></time>
 			</li>
 
 			<?php if ( $post->post_parent ) : ?>
 				<li class="uplifted-entry-parent">
+					<i class="genericon genericon-category"></i>
 					<a href="<?php echo esc_url( get_permalink( $post->post_parent ) ); ?>" title="<?php echo esc_attr( get_the_title( $post->post_parent ) ); ?>"><?php echo get_the_title( $post->post_parent ); ?></a>
 				</li>
 			<?php endif; ?>
 
 			<?php if ( uplifted_show_comments() ) : ?>
 				<li class="uplifted-entry-comments-link">
+					<i class="genericon genericon-comment"></i>
 					<?php uplifted_comments_link(); ?>
 				</li>
 			<?php endif; ?>
