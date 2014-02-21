@@ -13,6 +13,13 @@
     width: 100%;
 }
 
+// for Single Gallery pages we need to style the container holding our images
+.page-template-page-templatesgallery-php .uplifted-entry-content .gallery {
+	background-color: $panel-bg;
+	padding: $panel-padding;
+	border: $panel-border;
+}
+
 // mobile gallery item styles
 .gallery-item {
 	margin-bottom: $panel-margin-bottom;
@@ -50,7 +57,7 @@
 
 @media screen and (min-width: $small-screen - 140px) {
     .gallery {
-        margin-bottom: 20px;
+        margin-bottom: $panel-margin-bottom;
     }
     .gallery-item {
         float: left;
@@ -120,7 +127,8 @@
         margin-right: 0;
     }
     .gallery-caption {
-        background-color: rgba(0, 0, 0, 0.7);
+        //background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba($body-font-color,  .8);
         @include box-sizing(border-box);
         color: #fff;
         margin: 0;
