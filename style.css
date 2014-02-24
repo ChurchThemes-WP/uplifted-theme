@@ -3544,10 +3544,13 @@ p.comment-form-comment label.error {
     -o-transition: 0.2s all linear;
     transition: 0.2s all linear;
     color: white; }
-  /* line 25, assets/sass/_footer.scss */
+    /* line 23, assets/sass/_footer.scss */
+    #footer .columns a:hover {
+      opacity: .7; }
+  /* line 29, assets/sass/_footer.scss */
   #footer abbr {
     color: white; }
-  /* line 29, assets/sass/_footer.scss */
+  /* line 33, assets/sass/_footer.scss */
   #footer .url {
     padding-left: 0;
     background: none; }
@@ -3979,38 +3982,34 @@ p.comment-form-comment label.error {
   text-transform: none; }
 
 /* Tag Cloud Widget */
-/* line 531, assets/sass/_widgets.scss */
-#footer .widget_tag_cloud a:hover {
-  opacity: .7; }
-
 /* Text Widget */
-/* line 538, assets/sass/_widgets.scss */
+/* line 536, assets/sass/_widgets.scss */
 .textwidget > :first-child {
   margin-top: 0; }
 
-/* line 542, assets/sass/_widgets.scss */
+/* line 540, assets/sass/_widgets.scss */
 .textwidget > :last-child {
   margin-bottom: 0 !important; }
 
 /* RSS Widget */
-/* line 549, assets/sass/_widgets.scss */
+/* line 547, assets/sass/_widgets.scss */
 .widget_rss h1 img {
   display: none; }
 
-/* line 553, assets/sass/_widgets.scss */
+/* line 551, assets/sass/_widgets.scss */
 .widget_rss ul {
   margin: 0;
   list-style: none; }
 
-/* line 558, assets/sass/_widgets.scss */
+/* line 556, assets/sass/_widgets.scss */
 .widget_rss li {
   margin: 32px 0; }
 
-/* line 562, assets/sass/_widgets.scss */
+/* line 560, assets/sass/_widgets.scss */
 .widget_rss li:first-child {
   margin-top: 0; }
 
-/* line 566, assets/sass/_widgets.scss */
+/* line 564, assets/sass/_widgets.scss */
 .widget_rss li a {
   margin-top: 0;
   margin-bottom: 0;
@@ -4019,51 +4018,51 @@ p.comment-form-comment label.error {
   line-height: 1.4em;
   text-transform: uppercase; }
 
-/* line 575, assets/sass/_widgets.scss */
+/* line 573, assets/sass/_widgets.scss */
 .widget_rss .rss-date {
   margin-top: 12px;
   display: block;
   font-weight: bold; }
 
-/* line 581, assets/sass/_widgets.scss */
+/* line 579, assets/sass/_widgets.scss */
 .widget_rss .rssSummary {
   margin-top: 12px; }
 
-/* line 584, assets/sass/_widgets.scss */
+/* line 582, assets/sass/_widgets.scss */
 .widget_rss cite {
   display: block;
   margin-top: 12px;
   font-style: italic; }
-  /* line 589, assets/sass/_widgets.scss */
+  /* line 587, assets/sass/_widgets.scss */
   #footer .widget_rss cite {
     color: rgba(255, 255, 255, 0.8); }
 
 /* Highlight Widget */
-/* line 595, assets/sass/_widgets.scss */
+/* line 593, assets/sass/_widgets.scss */
 .widget_ctfw-highlight {
   padding: 0; }
 
-/* line 599, assets/sass/_widgets.scss */
+/* line 597, assets/sass/_widgets.scss */
 .widget_ctfw-highlight .uplifted-widget-title {
   margin: 0;
   padding: 0;
   font-size: 1em; }
 
-/* line 605, assets/sass/_widgets.scss */
+/* line 603, assets/sass/_widgets.scss */
 .widget_ctfw-highlight.uplifted-widget-has-title > * {
   top: 0; }
 
-/* line 609, assets/sass/_widgets.scss */
+/* line 607, assets/sass/_widgets.scss */
 .widget_ctfw-highlight.uplifted-widget-has-title {
   margin-top: 30px; }
 
-/* line 614, assets/sass/_widgets.scss */
+/* line 612, assets/sass/_widgets.scss */
 .widget_ctfw-highlight > :not(.uplifted-widget-title):first-of-type,
 .widget_ctfw-highlight .uplifted-widget-first-element {
   padding-top: 0 !important; }
 
 /* Gallery Widget */
-/* line 619, assets/sass/_widgets.scss */
+/* line 617, assets/sass/_widgets.scss */
 .widget_ctfw-gallery {
   *zoom: 1; }
   /* line 131, assets/sass/_global.scss */
@@ -4073,41 +4072,41 @@ p.comment-form-comment label.error {
   /* line 132, assets/sass/_global.scss */
   .widget_ctfw-gallery:after {
     clear: both; }
-  /* line 622, assets/sass/_widgets.scss */
+  /* line 620, assets/sass/_widgets.scss */
   .widget_ctfw-gallery br {
     display: none; }
 
 /* Sermons Widget */
-/* line 629, assets/sass/_widgets.scss */
+/* line 627, assets/sass/_widgets.scss */
 .uplifted-sermons-widget-entry.uplifted-widget-entry-first {
   margin-top: 0; }
 
 /* Series */
-/* line 635, assets/sass/_widgets.scss */
+/* line 633, assets/sass/_widgets.scss */
 .uplifted-widget-entry-meta > li.uplifted-sermons-widget-entry-series a {
   white-space: normal;
   /* sermon series titles may be longer than sidebar */ }
 
 /* Events Widget */
-/* line 642, assets/sass/_widgets.scss */
+/* line 640, assets/sass/_widgets.scss */
 .uplifted-events-widget-entry-time {
   font-style: italic; }
 
 /* People Widget */
-/* line 649, assets/sass/_widgets.scss */
+/* line 647, assets/sass/_widgets.scss */
 .uplifted-people-widget-entry-position {
   font-weight: bold; }
 
-/* line 653, assets/sass/_widgets.scss */
+/* line 651, assets/sass/_widgets.scss */
 .uplifted-people-widget-entry-phone {
   font-style: italic; }
 
 /* Giving Widget */
-/* line 658, assets/sass/_widgets.scss */
+/* line 656, assets/sass/_widgets.scss */
 .uplifted-giving-widget-button {
   margin-top: 1.5em;
   text-align: center; }
-  /* line 662, assets/sass/_widgets.scss */
+  /* line 660, assets/sass/_widgets.scss */
   .uplifted-giving-widget-button a {
     cursor: "pointer";
     font-family: inherit;
@@ -4134,7 +4133,7 @@ p.comment-form-comment label.error {
     /* line 136, assets/sass/_buttons.scss */
     .uplifted-giving-widget-button a:hover, .uplifted-giving-widget-button a:focus {
       color: white; }
-    /* line 665, assets/sass/_widgets.scss */
+    /* line 663, assets/sass/_widgets.scss */
     .uplifted-giving-widget-button a:hover {
       background-color: #e8665a; }
 
