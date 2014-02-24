@@ -9,7 +9,7 @@
 body {
 	// for mobile we want the base font size to be 14px
 	font-size: 87.5%;
-			line-height: $base-line-height;
+	line-height: $base-line-height;
 
 	// for above mobile we set the base font size back to 16px
 	@media screen and (min-width: $medium-screen) {
