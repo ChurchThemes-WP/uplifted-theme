@@ -154,7 +154,7 @@ HTML;
 					if ( $show_buttons ) :
 					?>
 
-					<div class="uplifted-list-buttons-container">
+					<div class="uplifted-list-buttons-container clearfix">
 
 						<ul class="uplifted-list-buttons">
 
