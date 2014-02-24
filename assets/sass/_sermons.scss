@@ -66,6 +66,13 @@
     }
   }
 
+//
+// in some cases the embed media may need to be bumped away from hero image.
+// SoundCloud is one example if using the large square player
+  #uplifted-sermon-full-audio-player iframe {
+    margin-top: $panel-margin-bottom;
+  }
+
   // single sermon main content area
   .single-sermon-content {
     padding-left: 0;
