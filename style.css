@@ -4104,13 +4104,39 @@ p.comment-form-comment label.error {
 
 /* Giving Widget */
 /* line 658, assets/sass/_widgets.scss */
-.uplifted-giving-widget-text p:first-child {
-  margin-top: 0; }
-
-/* line 662, assets/sass/_widgets.scss */
 .uplifted-giving-widget-button {
-  margin-top: 24px;
+  margin-top: 1.5em;
   text-align: center; }
+  /* line 662, assets/sass/_widgets.scss */
+  .uplifted-giving-widget-button a {
+    cursor: "pointer";
+    font-family: inherit;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0 0 0.5em;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding-top: 0.75em;
+    padding-right: 1.5em;
+    padding-bottom: 0.75em;
+    padding-left: 1.5em;
+    font-size: 0.875em;
+    background-color: #0fcfc5;
+    border-color: #0c9f98;
+    color: white;
+    -webkit-border-radius: 6px;
+    border-radius: 6px; }
+    /* line 124, assets/sass/_buttons.scss */
+    .uplifted-giving-widget-button a:hover, .uplifted-giving-widget-button a:focus {
+      background-color: #0fcfc5; }
+    /* line 136, assets/sass/_buttons.scss */
+    .uplifted-giving-widget-button a:hover, .uplifted-giving-widget-button a:focus {
+      color: white; }
+    /* line 665, assets/sass/_widgets.scss */
+    .uplifted-giving-widget-button a:hover {
+      background-color: #e8665a; }
 
 /* FlexSlider */
 /* line 7, assets/sass/_flexslider.scss */

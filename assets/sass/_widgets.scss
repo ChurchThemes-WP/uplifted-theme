@@ -655,11 +655,15 @@
 }
 
 /* Giving Widget */
-.uplifted-giving-widget-text p:first-child {
-	margin-top: 0;
-}
-
 .uplifted-giving-widget-button {
-	margin-top: 24px;
+	margin-top: $panel-margin-bottom;
 	text-align: center;
+
+	a {
+		@include button;
+
+		&:hover {
+			background-color: $secondary-color;
+		}
+	}
 }
