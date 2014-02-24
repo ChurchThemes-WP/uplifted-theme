@@ -216,7 +216,6 @@ body.term-post-format-gallery #content > .panel {
 
     img {
       display: block;
-      margin-bottom: 10px;
     }
 
     &:nth-of-type(2){
@@ -261,7 +260,7 @@ body.term-post-format-gallery #content > .panel {
         margin-bottom: .25em;
       }
       .uplifted-caption-image-description {
-
+        color: $neutral-color;
       }
     }
 

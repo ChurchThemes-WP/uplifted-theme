@@ -51,13 +51,7 @@
 	.uplifted-caption-image-description {
 		color: lighten($body-font-color,50%);
 		font-size: .8em;
-		font-weight: bold;
-
-		// we want image styles to be different on Homepage Highlight blocks
-		#ctcom-home-highlights & {
-			color: $neutral-color;
-			font-weight: normal;
-		}
+		//font-weight: bold;
 	}
 }
 
