@@ -4823,80 +4823,84 @@ img.alignright {
     color: #bcc4c1;
     font-size: .8em;
     font-weight: bold; }
+    /* line 57, assets/sass/_galleries.scss */
+    #ctcom-home-highlights .uplifted-caption-image-caption .uplifted-caption-image-description {
+      color: white;
+      font-weight: normal; }
 
 @media screen and (min-width: 628px) {
-  /* line 59, assets/sass/_galleries.scss */
+  /* line 65, assets/sass/_galleries.scss */
   .gallery {
     margin-bottom: 1.5em; }
 
-  /* line 62, assets/sass/_galleries.scss */
+  /* line 68, assets/sass/_galleries.scss */
   .gallery-item {
     float: left;
     margin: 0 4px 4px 0;
     overflow: hidden;
     position: relative; }
-    /* line 68, assets/sass/_galleries.scss */
+    /* line 74, assets/sass/_galleries.scss */
     .gallery-item a,
     .gallery-item img {
       margin-bottom: 0; }
 
-  /* line 72, assets/sass/_galleries.scss */
+  /* line 78, assets/sass/_galleries.scss */
   .gallery-icon {
     margin: 0; }
 
-  /* line 75, assets/sass/_galleries.scss */
+  /* line 81, assets/sass/_galleries.scss */
   .gallery-columns-1 .gallery-item {
     max-width: 100%; }
 
-  /* line 78, assets/sass/_galleries.scss */
+  /* line 84, assets/sass/_galleries.scss */
   .gallery-columns-2 .gallery-item {
     max-width: 48%;
     max-width: -webkit-calc(50% - 4px);
     max-width: calc(50% - 4px); }
 
-  /* line 83, assets/sass/_galleries.scss */
+  /* line 89, assets/sass/_galleries.scss */
   .gallery-columns-3 .gallery-item {
     max-width: 32%;
     max-width: -webkit-calc(33.3% - 4px);
     max-width: calc(33.3% - 4px); }
 
-  /* line 88, assets/sass/_galleries.scss */
+  /* line 94, assets/sass/_galleries.scss */
   .gallery-columns-4 .gallery-item {
     max-width: 23%;
     max-width: -webkit-calc(25% - 4px);
     max-width: calc(25% - 4px); }
 
-  /* line 93, assets/sass/_galleries.scss */
+  /* line 99, assets/sass/_galleries.scss */
   .gallery-columns-5 .gallery-item {
     max-width: 19%;
     max-width: -webkit-calc(20% - 4px);
     max-width: calc(20% - 4px); }
 
-  /* line 98, assets/sass/_galleries.scss */
+  /* line 104, assets/sass/_galleries.scss */
   .gallery-columns-6 .gallery-item {
     max-width: 15%;
     max-width: -webkit-calc(16.7% - 4px);
     max-width: calc(16.7% - 4px); }
 
-  /* line 103, assets/sass/_galleries.scss */
+  /* line 109, assets/sass/_galleries.scss */
   .gallery-columns-7 .gallery-item {
     max-width: 13%;
     max-width: -webkit-calc(14.28% - 4px);
     max-width: calc(14.28% - 4px); }
 
-  /* line 108, assets/sass/_galleries.scss */
+  /* line 114, assets/sass/_galleries.scss */
   .gallery-columns-8 .gallery-item {
     max-width: 11%;
     max-width: -webkit-calc(12.5% - 4px);
     max-width: calc(12.5% - 4px); }
 
-  /* line 113, assets/sass/_galleries.scss */
+  /* line 119, assets/sass/_galleries.scss */
   .gallery-columns-9 .gallery-item {
     max-width: 9%;
     max-width: -webkit-calc(11.1% - 4px);
     max-width: calc(11.1% - 4px); }
 
-  /* line 126, assets/sass/_galleries.scss */
+  /* line 132, assets/sass/_galleries.scss */
   .gallery-columns-1 .gallery-item:nth-of-type(1n),
   .gallery-columns-2 .gallery-item:nth-of-type(2n),
   .gallery-columns-3 .gallery-item:nth-of-type(3n),
@@ -4908,7 +4912,7 @@ img.alignright {
   .gallery-columns-9 .gallery-item:nth-of-type(9n) {
     margin-right: 0; }
 
-  /* line 129, assets/sass/_galleries.scss */
+  /* line 135, assets/sass/_galleries.scss */
   .gallery-caption {
     background-color: rgba(60, 69, 66, 0.8);
     -webkit-box-sizing: border-box;
@@ -4925,7 +4929,7 @@ img.alignright {
     bottom: 0;
     left: 0;
     width: 100%; }
-    /* line 144, assets/sass/_galleries.scss */
+    /* line 150, assets/sass/_galleries.scss */
     .gallery-caption:before {
       content: "";
       height: 100%;
@@ -4934,11 +4938,11 @@ img.alignright {
       top: 0;
       left: 0;
       width: 100%; }
-    /* line 153, assets/sass/_galleries.scss */
+    /* line 159, assets/sass/_galleries.scss */
     .gallery-item:hover .gallery-caption {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1; }
-    /* line 158, assets/sass/_galleries.scss */
+    /* line 164, assets/sass/_galleries.scss */
     .gallery-columns-7 .gallery-caption, .gallery-columns-8 .gallery-caption, .gallery-columns-9 .gallery-caption {
       display: none; } }
 /* Breadcrumbs */
