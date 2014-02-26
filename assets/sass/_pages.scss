@@ -1,5 +1,10 @@
 /* Pages */
 
+.uplifted-main-title > span {
+  font-size: .6em;
+  color: lighten($topbar-link-color, 50%);
+}
+
 //
 // Search Page
 //
@@ -233,6 +238,10 @@ body.term-post-format-gallery #content > .panel {
 
   .uplifted-caption-image-caption {
     color: $body-font-color;
+
+    @media screen and (max-width: 640px) {
+      padding: 1em;
+    }
   }
 
   .slides .uplifted-caption-image-caption {
