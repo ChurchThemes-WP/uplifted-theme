@@ -324,6 +324,11 @@
 		margin-bottom: 1em;
 		//border-bottom: 1px solid contrast-color($neutral-color, darken($neutral-color,5%), lighten($neutral-color,5%), 50%);
 
+		a {
+			border-bottom: 1px solid rgba($body-font-color, 0.4);
+			//opacity: .6;
+		}
+
 		&:last-child {
 			margin: 0;
 		}
