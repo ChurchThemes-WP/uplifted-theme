@@ -22,9 +22,6 @@ $up_options = upfw_get_options();
 
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/print.css" media="print" />
-
 <?php if( isset( $up_options->favicon ) && $up_options->favicon ): ?>
 <link rel="icon" type="image/png" href="<?php echo $up_options->favicon; ?>">
 <?php endif; ?>

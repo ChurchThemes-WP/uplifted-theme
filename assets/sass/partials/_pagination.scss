@@ -1,4 +1,4 @@
-/* 
+/*
  *
  * Pagination
  *
@@ -6,7 +6,7 @@
 
 // _pagination.scss contains all styles for pagination elements - archive, single, attachment pages
 
-@import "compass/css3";
+@import "../vendor/compass/css3";
 
 //
 // Archive Page Pagination
@@ -59,7 +59,7 @@
 		background-color: $panel-bg;
 		border: $panel-border;
 	}
-	
+
 	// remove top border of second button only on mobile so we
 	// don't have a double thickness line in-between the buttons
 	@media screen and (max-width: $small-screen - 200px) {
