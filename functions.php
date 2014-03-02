@@ -46,6 +46,7 @@ require_once 'includes/gallery.php';                                 // Gallery 
 require_once 'includes/custom-header.php';                           // Custom header setup
 require_once 'includes/template-tags.php';                           // Template Tags
 require_once 'options/options.php';                                  // UpThemes Framework
+require_once 'includes/style-generator.php';                         // Style regeneration
 require_once 'includes/theme-options.php';                           // Load theme options specific to this theme
 
 if ( ! isset( $content_width ) ){
@@ -230,77 +231,3 @@ function uplifted_sidebar_body_class($body_classes){
 }
 
 add_filter('body_class','uplifted_sidebar_body_class');
-
-function my_theme_custom_upload_mimes( $existing_mimes ) {
-	// add webm to the list of mime types
-	$existing_mimes['css'] = 'text/css';
-
-	// return the array back to the function with our added mime type
-	return $existing_mimes;
-}
-add_filter( 'upload_mimes', 'my_theme_custom_upload_mimes' );
-
-function uplifted_css_redirect(){
-    if( $_REQUEST['sass'] == 'style.css' ) {
-		header("Content-Type: text/css");
-
-		require get_template_directory() . "/inc/scssphp/scss.inc.php";
-
-		$base_import_path = get_template_directory() . '/assets/sass/';
-
-		$scss = new scssc();
-		$scss->setImportPaths($base_import_path);
-		$scss->setFormatter("scss_formatter_compressed");
-
-		$style_overrides = '';
-
-		try {
-			$style_content = $scss->compile("
-				$style_overrides
-				@import 'modules/_variables.scss';
-				@import 'partials/_all.scss';
-			");
-
-			$style_scss = wp_upload_bits('style.css',null,$style_content);
-
-			if( ! get_option( 'uplifted-style-override' ) ){
-				add_option('uplifted-style-override',$style_scss);
-			} else {
-				update_option('uplifted-style-override',$style_scss);
-			}
-
-		} catch (Exception $e) {
-		    echo 'Caught exception: ',  $e->getMessage(), "\n";
-		}
-
-        exit();
-    }
-}
-add_action( 'template_redirect', 'uplifted_css_redirect', 2 );
-
-function uplifted_override_default_styles(){
-	if( $custom_style = get_option( 'uplifted-style-override' ) ){
-		wp_dequeue_style('uplifted-style');
-		wp_enqueue_style('uplifted-style-override',$custom_style['file']);
-	}
-}
-
-add_action('wp_enqueue_scripts','uplifted_override_default_styles',50);
-
-function uplifted_sass_variables(){
-    if( $_REQUEST['sass'] == 'variables.scss' ) {
-		header("Content-Type: text/css");
-
-		echo '$header-font-family: "Oswald", Verdana, Geneva, sans-serif;
-$header-font-weight: normal;
-$alt-header-font-weight: bold;
-$header-font-style: normal;
-$header-font-color: #46463a;
-$header-line-height: 1.4;
-$header-top-margin: .2em;
-$header-bottom-margin: .5em;
-$header-text-rendering: optimizeLegibility;';
-        exit();
-    }
-}
-add_action( 'template_redirect', 'uplifted_sass_variables', 1 );

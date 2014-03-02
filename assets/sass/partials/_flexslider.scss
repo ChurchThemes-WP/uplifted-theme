@@ -1,6 +1,7 @@
 /* FlexSlider */
 
-@import "../vendor/compass/utilities/color/contrast";
+@import "compass/utilities/color/contrast";
+@import "compass/css3";
 
 // FlexSlider Necessary Styles
 
@@ -46,7 +47,7 @@ html[xmlns] .slides {display: block;}
 	    left: 0;
 	    right: 0;
 	    top: 0;
-	    background: linear-gradient(color-stops(rgba(0,0,0,0), rgba(0,0,0,.1) 65%, rgba(0,0,0,.6)));
+	    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.1) 65%, rgba(0,0,0,.6));
 	    color: white;
 	    padding: 24px;
 	    @include box-shadow(none);
