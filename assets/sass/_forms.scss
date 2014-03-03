@@ -334,6 +334,16 @@ $glowing-effect-color: $input-focus-border-color !default;
     //}
     @include radius(0);
     -webkit-appearance: none;
+
+    // if an input is in the content area we want to give it a darker color
+    // background that transitions to white on focus
+    .post & {
+      background-color: lighten($input-border-color, 5%);
+
+      &:focus {
+        background-color: $input-bg-color;
+      }
+    }
   }
 
   /* Adjust margin for form elements below */

@@ -2081,9 +2081,41 @@ textarea {
   input[type="url"][disabled],
   textarea[disabled] {
     background-color: #dddddd; }
+  /* line 340, assets/sass/_forms.scss */
+  .post input[type="text"], .post
+  input[type="password"], .post
+  input[type="date"], .post
+  input[type="datetime"], .post
+  input[type="datetime-local"], .post
+  input[type="month"], .post
+  input[type="week"], .post
+  input[type="email"], .post
+  input[type="number"], .post
+  input[type="search"], .post
+  input[type="tel"], .post
+  input[type="time"], .post
+  input[type="url"], .post
+  textarea {
+    background-color: #f3f4f5; }
+    /* line 343, assets/sass/_forms.scss */
+    .post input[type="text"]:focus, .post
+    input[type="password"]:focus, .post
+    input[type="date"]:focus, .post
+    input[type="datetime"]:focus, .post
+    input[type="datetime-local"]:focus, .post
+    input[type="month"]:focus, .post
+    input[type="week"]:focus, .post
+    input[type="email"]:focus, .post
+    input[type="number"]:focus, .post
+    input[type="search"]:focus, .post
+    input[type="tel"]:focus, .post
+    input[type="time"]:focus, .post
+    input[type="url"]:focus, .post
+    textarea:focus {
+      background-color: white; }
 
 /* Adjust margin for form elements below */
-/* line 343, assets/sass/_forms.scss */
+/* line 353, assets/sass/_forms.scss */
 input[type="file"],
 input[type="checkbox"],
 input[type="radio"],
@@ -2091,17 +2123,17 @@ select {
   margin: 0 0 1.875em 0; }
 
 /* Normalize file input width */
-/* line 348, assets/sass/_forms.scss */
+/* line 358, assets/sass/_forms.scss */
 input[type="file"] {
   width: 100%; }
 
-/* line 352, assets/sass/_forms.scss */
+/* line 362, assets/sass/_forms.scss */
 textarea {
   resize: vertical;
   min-height: 9.375em; }
 
 /* We add basic fieldset styling */
-/* line 358, assets/sass/_forms.scss */
+/* line 368, assets/sass/_forms.scss */
 fieldset {
   border: solid 1px #dddddd;
   padding: 1.25em;
@@ -2115,7 +2147,7 @@ fieldset {
     margin-left: -0.1875em; }
 
 /* Error Handling */
-/* line 366, assets/sass/_forms.scss */
+/* line 376, assets/sass/_forms.scss */
 .error input,
 input.error,
 .error textarea,
@@ -2130,12 +2162,12 @@ textarea.error {
     background: white;
     border-color: #0fcfc5; }
 
-/* line 371, assets/sass/_forms.scss */
+/* line 381, assets/sass/_forms.scss */
 .error label,
 label.error {
   color: #d15327; }
 
-/* line 374, assets/sass/_forms.scss */
+/* line 384, assets/sass/_forms.scss */
 .error small,
 small.error {
   display: block;
