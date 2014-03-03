@@ -2041,6 +2041,9 @@ textarea {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear;
   -webkit-border-radius: 0;
   border-radius: 0;
   -webkit-appearance: none; }
@@ -2080,7 +2083,7 @@ textarea {
     background-color: #dddddd; }
 
 /* Adjust margin for form elements below */
-/* line 342, assets/sass/_forms.scss */
+/* line 343, assets/sass/_forms.scss */
 input[type="file"],
 input[type="checkbox"],
 input[type="radio"],
@@ -2088,17 +2091,17 @@ select {
   margin: 0 0 1.875em 0; }
 
 /* Normalize file input width */
-/* line 347, assets/sass/_forms.scss */
+/* line 348, assets/sass/_forms.scss */
 input[type="file"] {
   width: 100%; }
 
-/* line 351, assets/sass/_forms.scss */
+/* line 352, assets/sass/_forms.scss */
 textarea {
   resize: vertical;
   min-height: 9.375em; }
 
 /* We add basic fieldset styling */
-/* line 357, assets/sass/_forms.scss */
+/* line 358, assets/sass/_forms.scss */
 fieldset {
   border: solid 1px #dddddd;
   padding: 1.25em;
@@ -2112,7 +2115,7 @@ fieldset {
     margin-left: -0.1875em; }
 
 /* Error Handling */
-/* line 365, assets/sass/_forms.scss */
+/* line 366, assets/sass/_forms.scss */
 .error input,
 input.error,
 .error textarea,
@@ -2127,12 +2130,12 @@ textarea.error {
     background: white;
     border-color: #0fcfc5; }
 
-/* line 370, assets/sass/_forms.scss */
+/* line 371, assets/sass/_forms.scss */
 .error label,
 label.error {
   color: #d15327; }
 
-/* line 373, assets/sass/_forms.scss */
+/* line 374, assets/sass/_forms.scss */
 .error small,
 small.error {
   display: block;
