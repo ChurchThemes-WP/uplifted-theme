@@ -139,21 +139,22 @@ function uplifted_customizations_not_saved_notice() {
  */
 function uplifted_css_regenerate(){
 
-	require get_template_directory() . "/inc/scssphp/scss.inc.php";
-
-	$base_import_path = get_template_directory() . '/assets/sass/';
-
 	try {
+
+		require get_template_directory() . "/includes/scssphp/scss.inc.php";
+
+		$base_import_path = apply_filters('uplifted_base_import_path',get_template_directory() . '/assets/sass/');
 
 		$scss = new scssc();
 		$scss->setImportPaths($base_import_path);
 		$scss->setFormatter("scss_formatter");
 
 		$style_overrides = apply_filters('uplifted_style_variables','');
+		$style_scss_imports = apply_filters('uplifted_style_scss_imports',"@import 'style.scss';");
 
 		$style_content = $scss->compile("
 			$style_overrides
-			@import 'style.scss';
+			$style_scss_imports
 		");
 
 		$old_file = get_option('uplifted-style-override');
