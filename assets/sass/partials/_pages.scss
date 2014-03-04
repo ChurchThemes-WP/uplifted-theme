@@ -2,6 +2,11 @@
 
 /* Pages */
 
+.uplifted-main-title > span {
+  font-size: .6em;
+  color: lighten($topbar-link-color, 50%);
+}
+
 //
 // Search Page
 //
@@ -12,20 +17,6 @@
 		#search-terms {
 			color: $primary-color;
 		}
-	}
-}
-
-//
-// AudioTheme Video Page
-//
-.post-type-archive-audiotheme_video {
-
-	@media screen and (max-width: 445px) {
-	  // kill the weird margin on left side of videos on one-column mobile
-	  ul.audiotheme-videos {
-		  margin: 0;
-	  }
-
 	}
 }
 
@@ -176,6 +167,8 @@ body.term-post-format-gallery #content > .panel {
     @include grid-column(12);
   }
 
+
+// welcome text
   #uplifted-intro-inner {
     text-align: center;
 
@@ -189,14 +182,20 @@ body.term-post-format-gallery #content > .panel {
     }
 
     .panel {
-      padding-top: 2.5em;
-      padding-bottom: 2.5em;
+      padding-bottom: $panel-margin-bottom;
       max-width: 800px;
       margin: 0 auto;
+
+      @media screen and (min-width: $small-screen) {
+        padding-top: $panel-margin-bottom;
+      }
     }
 
     #uplifted-intro-content {
-      font-size: 1.4em;
+      
+      @media screen and (min-width: $small-screen) {
+        font-size: 1.4em;
+      }
 
       p:last-child {
         margin-bottom: 0;
@@ -227,6 +226,10 @@ body.term-post-format-gallery #content > .panel {
 
   .uplifted-caption-image-caption {
     color: $body-font-color;
+
+    @media screen and (max-width: 640px) {
+      padding: 1em;
+    }
   }
 
   .slides .uplifted-caption-image-caption {

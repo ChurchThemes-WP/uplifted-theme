@@ -89,6 +89,80 @@
 
 } // end uplifted-widget
 
+// Widget Entry
+
+.uplifted-widget-entry {
+	margin-bottom: $panel-margin-bottom;
+}
+
+// Thumbnail Container
+.uplifted-widget-entry-thumb {
+	width: 4em;
+	float: left;
+	margin: 0 .8em .8em 0;
+}
+
+// Entry Title
+.uplifted-widget-entry-title {
+	margin: 0;
+	font-size: 1em;
+}
+
+// Meta Item
+.uplifted-widget-entry-meta > li {
+	display: inline-block;
+	vertical-align: top;
+
+	// Keep links from wrapping
+	a {
+		white-space: nowrap;
+	}
+}
+
+// Date
+.uplifted-widget-entry-date {
+	font-weight: bold;
+}
+
+/* Dropdown Widgets */
+
+.widget_ctfw-archives select,
+.widget_ctfw-categories select {
+	width: 100%;
+}
+
+/* List Widgets */
+
+.widget_categories ul, // default WP categories - blog only
+.widget_ctfw-categories ul, // enhanced categories - taxonomy selector
+.widget_ctfw-archives ul, // monthly sermon archives
+.widget_ctfw-galleries ul, // gallery page list
+.widget_recent_entries ul,
+.widget_recent_comments ul,
+.widget_archive ul,
+.widget_meta ul,
+.widget_pages ul,
+.widget_links ul,
+.widget_nav_menu ul {
+	margin: 0;
+	list-style: none;
+}
+
+.widget_categories ul ul,
+.widget_ctfw-categories ul ul,
+.widget_ctfw-archives ul ul,
+.widget_ctfw-galleries ul ul,
+.widget_recent_entries ul ul,
+.widget_recent_comments ul ul,
+.widget_archive ul ul,
+.widget_meta ul ul,
+.widget_pages ul ul,
+.widget_links ul ul,
+.widget_nav_menu ul ul {
+	margin-left: .5em;
+	list-style: none;
+}
+
 
 /* Category & Archive Widgets */
 
@@ -127,6 +201,7 @@
 
 .widget_calendar {
 	padding: 0;
+	background-color: transparent;
 
 	#uplifted-sidebar-right &,
 	#uplifted-sidebar-left & {
@@ -323,6 +398,10 @@
 		margin-bottom: 1em;
 		//border-bottom: 1px solid contrast-color($neutral-color, darken($neutral-color,5%), lighten($neutral-color,5%), 50%);
 
+		a {
+			border-bottom: 1px solid rgba($body-font-color, 0.4);
+		}
+
 		&:last-child {
 			margin: 0;
 		}
@@ -348,180 +427,6 @@
 		min-height: 12em;
 	}
 }
-
-/* Sidebar + Home Bottom */
-
-
-/*************** SHARED STYLES ****************/
-
-/* Widget Entry */
-
-.uplifted-widget-entry {
-	margin-bottom: $panel-margin-bottom;
-}
-
-// Thumbnail Container
-.uplifted-widget-entry-thumb {
-	width: 4em;
-	float: left;
-	margin: 0 .8em .8em 0;
-}
-
-// Entry Title
-.uplifted-widget-entry-title {
-	margin: 0;
-	font-size: 1em;
-}
-
-// Meta Item
-.uplifted-widget-entry-meta > li {
-	display: inline-block;
-	margin: 12px 15px 0 0;
-	vertical-align: top;
-}
-
-	/* Keep links from wrapping */
-	.uplifted-widget-entry-meta > li a {
-		white-space: nowrap;
-	}
-
-	/* Date */
-	.uplifted-widget-entry-date {
-		font-weight: bold;
-	}
-
-	/* Byline */
-	.uplifted-widget-entry-byline {
-		/*font-style: italic;*/
-	}
-
-	/* Icons */
-	.uplifted-widget-entry-icons .uplifted-list-icons { /* <ul> */
-		position: relative;
-		top: -2px;
-		white-space: nowrap;
-	}
-
-	/* Content / Excerpt */
-
-	.uplifted-widget-entry-content {
-		margin-top: 15px;
-	}
-
-		.uplifted-widget-entry-content p {
-			margin: 12px 0 0 0;
-		}
-
-		.uplifted-widget-entry-content p:first-child {
-			margin: 0;
-		}
-
-/* Dropdown Widgets */
-
-.widget_ctfw-archives select,
-.widget_ctfw-categories select {
-	width: 100%;
-}
-
-/* List Widgets */
-
-.widget_categories ul, /* default WP categories - blog only */
-.widget_ctfw-categories ul, /* enhanced categories - taxonomy selector */
-.widget_ctfw-archives ul, /* monthly sermon archives */
-.widget_ctfw-galleries ul, /* gallery page list */
-.widget_recent_entries ul,
-.widget_recent_comments ul,
-.widget_archive ul,
-.widget_meta ul,
-.widget_pages ul,
-.widget_links ul,
-.widget_nav_menu ul {
-	margin: 0;
-	list-style: none;
-	line-height: 1.4em;
-}
-
-.widget_categories ul ul,
-.widget_ctfw-categories ul ul,
-.widget_ctfw-archives ul ul,
-.widget_ctfw-galleries ul ul,
-.widget_recent_entries ul ul,
-.widget_recent_comments ul ul,
-.widget_archive ul ul,
-.widget_meta ul ul,
-.widget_pages ul ul,
-.widget_links ul ul,
-.widget_nav_menu ul ul {
-	margin-left: 15px;
-	list-style: none;
-	line-height: 1.4em;
-}
-
-	.widget_categories li,
-	.widget_ctfw-categories li,
-	.widget_ctfw-archives li,
-	.widget_ctfw-galleries li,
-	.widget_archive li,
-	.widget_meta li,
-	.widget_pages li,
-	.widget_links li,
-	.widget_nav_menu li {
-		padding-top: 0;
-		margin-bottom: 10px;
-	}
-
-	.widget_recent_entries li,
-	.widget_recent_comments li {
-		padding-top: 0;
-		margin-bottom: 18px;
-	}
-
-		.widget_categories li:first-child,
-		.widget_ctfw-categories li:first-child,
-		.widget_ctfw-archives li:first-child,
-		.widget_ctfw-galleries li:first-child,
-		.widget_recent_entries li:first-child,
-		.widget_recent_comments li:first-child,
-		.widget_archive li:first-child,
-		.widget_meta li:first-child,
-		.widget_pages li:first-child,
-		.widget_links li:first-child,
-		.widget_nav_menu li:first-child {
-			border-top: 0;
-			padding-top: 0;
-		}
-
-		.widget_categories li li,
-		.widget_ctfw-categories li li,
-		.widget_ctfw-archives li li,
-		.widget_ctfw-galleries li li,
-		.widget_recent_entries li li,
-		.widget_recent_comments li li,
-		.widget_archive li li,
-		.widget_meta li li,
-		.widget_pages li li,
-		.widget_links li li,
-		.widget_nav_menu li li {
-			margin: 0;
-			border-top: 0;
-			padding-top: 0;
-		}
-
-			.widget_categories li li a,
-			.widget_ctfw-categories li li a,
-			.widget_ctfw-archives li li a,
-			.widget_ctfw-galleries li li a,
-			.widget_ctfw-posts li li a,
-			.widget_recent_entries li li a,
-			.widget_recent_comments li li a,
-			.widget_archive li li a,
-			.widget_meta li li a,
-			.widget_pages li li a,
-			.widget_links li li a,
-			.widget_nav_menu li li a {
-				font-weight: normal;
-				text-transform: none;
-			}
 
 /* Tag Cloud Widget */
 .widget_tag_cloud {
