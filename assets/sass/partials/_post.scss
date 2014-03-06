@@ -81,9 +81,13 @@
 
   li {
     float: left;
-    margin: 0 2em .5em 0;
+    margin: 0 .5em .5em 0;
     padding-left: 2em;
     position: relative;
+
+    @media screen and (min-width: $medium-screen) {
+      margin: 0 2em .5em 0;
+    }
   }
 
   a {
@@ -111,7 +115,7 @@
   @media screen and (min-width: ($small-screen - 200px) ) {
 	  font-size: $h1-font-size;
 	}
-}
+  }
 
 // Post Footer - usually buttons
 .uplifted-entry-footer {

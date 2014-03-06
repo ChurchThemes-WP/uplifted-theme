@@ -1,6 +1,6 @@
 /* Variables */
 /* Global */
-/* line 280, assets/sass/_global.scss */
+/* line 285, assets/sass/partials/_global.scss */
 *,
 *:before,
 *:after {
@@ -8,15 +8,15 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 286, assets/sass/_global.scss */
+/* line 290, assets/sass/partials/_global.scss */
 html,
 body {
   font-size: 100%; }
 
-/* line 290, assets/sass/_global.scss */
+/* line 293, assets/sass/partials/_global.scss */
 body {
   background: #f8f9fb;
-  color: #3c4542;
+  color: #222222;
   padding: 0;
   margin: 0;
   font-family: "Asap", Verdana, Geneva, sans-serif;
@@ -26,31 +26,31 @@ body {
   position: relative;
   cursor: "default"; }
 
-/* line 303, assets/sass/_global.scss */
+/* line 306, assets/sass/partials/_global.scss */
 a:hover {
   cursor: "pointer"; }
 
-/* line 306, assets/sass/_global.scss */
+/* line 309, assets/sass/partials/_global.scss */
 a:focus {
   outline: none; }
 
-/* line 309, assets/sass/_global.scss */
+/* line 314, assets/sass/partials/_global.scss */
 img,
 object,
 embed {
   max-width: 100%;
   height: auto; }
 
-/* line 313, assets/sass/_global.scss */
+/* line 317, assets/sass/partials/_global.scss */
 object,
 embed {
   height: 100%; }
 
-/* line 315, assets/sass/_global.scss */
+/* line 318, assets/sass/partials/_global.scss */
 img {
   -ms-interpolation-mode: bicubic; }
 
-/* line 319, assets/sass/_global.scss */
+/* line 324, assets/sass/partials/_global.scss */
 #map_canvas img,
 #map_canvas embed,
 #map_canvas object,
@@ -59,49 +59,49 @@ img {
 .map_canvas object {
   max-width: none !important; }
 
-/* line 326, assets/sass/_global.scss */
+/* line 329, assets/sass/partials/_global.scss */
 .left {
   float: left !important; }
 
-/* line 327, assets/sass/_global.scss */
+/* line 330, assets/sass/partials/_global.scss */
 .right {
   float: right !important; }
 
-/* line 328, assets/sass/_global.scss */
+/* line 331, assets/sass/partials/_global.scss */
 .text-left {
   text-align: left !important; }
 
-/* line 329, assets/sass/_global.scss */
+/* line 332, assets/sass/partials/_global.scss */
 .text-right {
   text-align: right !important; }
 
-/* line 330, assets/sass/_global.scss */
+/* line 333, assets/sass/partials/_global.scss */
 .text-center {
   text-align: center !important; }
 
-/* line 331, assets/sass/_global.scss */
+/* line 334, assets/sass/partials/_global.scss */
 .text-justify {
   text-align: justify !important; }
 
-/* line 332, assets/sass/_global.scss */
+/* line 335, assets/sass/partials/_global.scss */
 .hide {
   display: none; }
 
-/* line 338, assets/sass/_global.scss */
+/* line 341, assets/sass/partials/_global.scss */
 .antialiased {
   -webkit-font-smoothing: antialiased; }
 
-/* line 341, assets/sass/_global.scss */
+/* line 344, assets/sass/partials/_global.scss */
 img {
   display: inline-block;
   vertical-align: middle; }
 
-/* line 351, assets/sass/_global.scss */
+/* line 354, assets/sass/partials/_global.scss */
 textarea {
   height: auto;
   min-height: 50px; }
 
-/* line 354, assets/sass/_global.scss */
+/* line 357, assets/sass/partials/_global.scss */
 select {
   width: 100%; }
 
@@ -199,7 +199,7 @@ body {
         /* line 131, assets/sass/rtl.scss */
         body .gallery-item:nth-child(4n+4) {
           margin-left: 0; } }
-  /* line 142, assets/sass/rtl.scss */
+  /* line 143, assets/sass/rtl.scss */
   body #respond .comment-form-author,
   body #respond .comment-form-email {
     float: right;
@@ -222,7 +222,7 @@ body {
   /* line 186, assets/sass/rtl.scss */
   body .paging .page-numbers {
     float: right; }
-  /* line 190, assets/sass/rtl.scss */
+  /* line 191, assets/sass/rtl.scss */
   body .paging .next,
   body .paging .prev {
     float: right; }
