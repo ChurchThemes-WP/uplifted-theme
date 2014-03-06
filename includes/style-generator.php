@@ -24,6 +24,7 @@ $color_options = array(
 					"secondary"	=> '#666666',
 					"tertiary"	=> '#999999',
 					"neutral"	=> '#555555',
+					"background"	=> '#f8f9fb',
 				)
 			),
 			"scheme_2" => array(
@@ -34,16 +35,18 @@ $color_options = array(
 					"secondary"	=> '#1B5469',
 					"tertiary"	=> 'green',
 					"neutral"	=> '#EFE3D1',
+					"background"	=> '#f8f9fb',
 				)
 			),
 			"scheme_3" => array(
 				"name" => "scheme_3",
 				"title" => __( "Color Scheme #3", 'uplifted' ),
 				"colors" => array(
-					"primary"	=> '#E65E2D',
-					"secondary"	=> '#AE956B',
-					"tertiary"	=> '#222222',
-					"neutral"	=> '#E1DFE0',
+					"primary"	=> '#e65e2d',
+					"secondary"	=> '#ae956b',
+					"tertiary"	=> '#222',
+					"neutral"	=> '#efefef',
+					"background"	=> '#e1dfe0',
 				)
 			)
 		)
@@ -92,6 +95,7 @@ function uplifted_update_custom_color_vars($variables){
 		$variables .= '$secondary-color:' . $colors['secondary'] . ';';
 		$variables .= '$tertiary-color:' . $colors['tertiary'] . ';';
 		$variables .= '$neutral-color:' . $colors['neutral'] . ';';
+		$variables .= '$body-bg:' . $colors['background'] . ';';
 
 	}
 
