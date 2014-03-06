@@ -47,7 +47,7 @@ $tertiary-color: #ECE67A !default;
 $neutral-color: #fff !default;
 $transparent-neutral-color: rgba($neutral-color,.3) !default;
 
-$body-font-color: contrast-color( $transparent-neutral-color, #222, #f2f2f2, 60% ) !default;
+$body-font-color: contrast-color( $neutral-color, #323232, #f2f2f2, 60% ) !default;
 $header-font-color: $body-font-color !default;
 
 $alert-color: #d15327 !default;
@@ -133,7 +133,7 @@ $cursor-help-value: "help";
 
 // Background and border styles
 
-$panel-bg: $neutral-color;
+$panel-bg: #fff !default;
 $panel-border-style: solid;
 $panel-border-size: 1px;
 $panel-border-color: $transparent-neutral-color;
@@ -1232,7 +1232,7 @@ $label-font-color-alt: #fff;
 
 // Background color for the top bar
 
-$topbar-bg: $neutral-color !default;
+$topbar-bg: $panel-bg !default;
 
 // Height and margin
 

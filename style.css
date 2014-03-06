@@ -404,7 +404,7 @@ body {
 /* line 293, assets/sass/partials/_global.scss */
 body {
   background: #f8f9fb;
-  color: #222222;
+  color: #323232;
   padding: 0;
   margin: 0;
   font-family: "Asap", Verdana, Geneva, sans-serif;
@@ -511,7 +511,7 @@ p.lead {
 /* line 133, assets/sass/partials/_type.scss */
 .subheader {
   line-height: 1.4;
-  color: #6f6f6f;
+  color: #7f7f7f;
   font-weight: 100;
   margin-top: 0.2em;
   margin-bottom: 0.5em; }
@@ -578,7 +578,7 @@ p {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", Verdana, Geneva, sans-serif;
   font-style: normal;
-  color: #222222;
+  color: #323232;
   text-rendering: optimizeLegibility;
   margin-bottom: 0.5em;
   line-height: 1.4;
@@ -586,7 +586,7 @@ h1, h2, h3, h4, h5, h6 {
   /* line 209, assets/sass/partials/_type.scss */
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 60%;
-    color: #6f6f6f;
+    color: #7f7f7f;
     line-height: 0; }
 
 /* line 216, assets/sass/partials/_type.scss */
@@ -706,7 +706,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #222222;
+  color: #323232;
   border-bottom: 1px dotted #dddddd;
   cursor: "help"; }
 
@@ -722,7 +722,7 @@ blockquote {
   margin: 0 -24px 1em;
   padding: 24px;
   border-left: 6px solid #0fcfc5;
-  color: #555555; }
+  color: #656565; }
   /* line 337, assets/sass/partials/_type.scss */
   blockquote p {
     margin-bottom: 0;
@@ -732,7 +732,7 @@ blockquote {
 cite {
   display: block;
   font-size: 0.8125em;
-  color: #555555;
+  color: #656565;
   margin: .5em 0; }
   /* line 348, assets/sass/partials/_type.scss */
   cite:before {
@@ -740,7 +740,7 @@ cite {
   /* line 353, assets/sass/partials/_type.scss */
   cite a,
   cite a:visited {
-    color: #555555; }
+    color: #656565; }
 
 /* Microformats */
 /* line 365, assets/sass/partials/_type.scss */
@@ -1847,7 +1847,7 @@ form .row textarea.columns {
 /* line 269, assets/sass/partials/_forms.scss */
 label {
   font-size: 1em;
-  color: #222222;
+  color: #323232;
   cursor: pointer;
   display: block;
   font-weight: bold;
@@ -2817,7 +2817,7 @@ small.error {
         margin: 0 2em .5em 0; } }
   /* line 93, assets/sass/partials/_post.scss */
   .uplifted-entry-meta a {
-    color: #222222;
+    color: #323232;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
     /* line 97, assets/sass/partials/_post.scss */
     .uplifted-entry-meta a:hover {
@@ -3589,7 +3589,7 @@ p.comment-form-comment label.error {
   /* line 21, assets/sass/partials/_widgets.scss */
   .uplifted-widget .uplifted-widget-title {
     display: inline-block;
-    color: #222222;
+    color: #323232;
     font-family: "Asap", Verdana, Geneva, sans-serif;
     font-weight: bold;
     font-size: 1.1em;
@@ -3607,7 +3607,7 @@ p.comment-form-comment label.error {
       .uplifted-widget ul li a {
         display: inline-block;
         padding: .3em 0;
-        color: #222222;
+        color: #323232;
         -webkit-transition: 200ms all ease-in-out;
         -moz-transition: 200ms all ease-in-out;
         -o-transition: 200ms all ease-in-out;
@@ -3716,7 +3716,7 @@ p.comment-form-comment label.error {
   /* line 181, assets/sass/partials/_widgets.scss */
   .widget_ctfw-archives li a,
   .widget_ctfw-categories li a {
-    color: #222222; }
+    color: #323232; }
     /* line 184, assets/sass/partials/_widgets.scss */
     .widget_ctfw-archives li a:hover,
     .widget_ctfw-categories li a:hover {
@@ -3774,7 +3774,7 @@ p.comment-form-comment label.error {
           padding: .5em 0;
           border: 1px solid #0fcfc5;
           border-bottom: none;
-          color: #222222;
+          color: #323232;
           background-color: white; }
           /* line 254, assets/sass/partials/_widgets.scss */
           #footer .widget_calendar #calendar_wrap #wp-calendar tbody tr td {
@@ -3807,7 +3807,7 @@ p.comment-form-comment label.error {
     color: #0fcfc5; }
   /* line 300, assets/sass/partials/_widgets.scss */
   #footer .widget_rss h4 a {
-    color: #555555; }
+    color: #656565; }
     /* line 302, assets/sass/partials/_widgets.scss */
     #footer .widget_rss h4 a:hover {
       color: #0fcfc5; }
@@ -3874,7 +3874,7 @@ p.comment-form-comment label.error {
   margin-bottom: 1em; }
   /* line 401, assets/sass/partials/_widgets.scss */
   .widget_recent_comments ul li a {
-    border-bottom: 1px solid rgba(34, 34, 34, 0.4); }
+    border-bottom: 1px solid rgba(50, 50, 50, 0.4); }
   /* line 405, assets/sass/partials/_widgets.scss */
   .widget_recent_comments ul li:last-child {
     margin: 0; }
@@ -4197,7 +4197,7 @@ html[xmlns] .slides {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   cursor: pointer;
-  color: rgba(34, 34, 34, 0.7);
+  color: rgba(50, 50, 50, 0.7);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -4243,7 +4243,7 @@ html[xmlns] .slides {
 /* line 144, assets/sass/partials/_flexslider.scss */
 .flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
   opacity: 1;
-  color: #222222; }
+  color: #323232; }
 
 /* line 145, assets/sass/partials/_flexslider.scss */
 .flex-direction-nav .flex-disabled {
@@ -4475,7 +4475,7 @@ body.term-post-format-gallery #content > .panel {
   color: #d4d4d4; }
   /* line 113, assets/sass/partials/_pages.scss */
   .single-attachment .entry-meta a {
-    color: #222222; }
+    color: #323232; }
     /* line 115, assets/sass/partials/_pages.scss */
     .single-attachment .entry-meta a:hover {
       color: #0fcfc5; }
@@ -4586,7 +4586,7 @@ body.term-post-format-gallery #content > .panel {
     margin-bottom: 0; }
 /* line 227, assets/sass/partials/_pages.scss */
 .page-template-page-templateshomepage-php .uplifted-caption-image-caption {
-  color: #222222; }
+  color: #323232; }
   @media screen and (max-width: 640px) {
     /* line 227, assets/sass/partials/_pages.scss */
     .page-template-page-templateshomepage-php .uplifted-caption-image-caption {
@@ -4713,7 +4713,7 @@ img.alignright {
 /* line 76, assets/sass/partials/_wordpress.scss */
 .wp-caption p.wp-caption-text {
   font-size: .8em;
-  color: #a2a2a2;
+  color: #b2b2b2;
   padding: 1em 0;
   margin: 0;
   clear: both;
@@ -4770,7 +4770,7 @@ img.alignright {
     font-size: 1.5em; }
   /* line 51, assets/sass/partials/_galleries.scss */
   .uplifted-caption-image-caption .uplifted-caption-image-description {
-    color: #a2a2a2;
+    color: #b2b2b2;
     font-size: .8em; }
 
 @media screen and (min-width: 628px) {
@@ -4901,7 +4901,7 @@ img.alignright {
 .ctfw-breadcrumbs {
   font-size: .8em;
   margin: 1em 1em 2em;
-  color: #a2a2a2;
+  color: #b2b2b2;
   	/*.ctfw-breadcrumbs-inner{
   		@include grid-column(8,true,true,2);
   		margin-top: 1em;
@@ -4921,7 +4921,7 @@ img.alignright {
   	}*/ }
   /* line 28, assets/sass/partials/_breadcrumbs.scss */
   .ctfw-breadcrumbs a {
-    color: #a2a2a2;
+    color: #b2b2b2;
     margin: 0 .3em; }
     /* line 32, assets/sass/partials/_breadcrumbs.scss */
     .ctfw-breadcrumbs a:hover {
@@ -4969,7 +4969,7 @@ img.alignright {
         padding-left: .3em; }
       /* line 56, assets/sass/partials/_sermons.scss */
       .single-ctc_sermon .uplifted-entry-header .uplifted-entry-title-meta ul li a {
-        color: #222222;
+        color: #323232;
         border: none; }
         /* line 60, assets/sass/partials/_sermons.scss */
         .single-ctc_sermon .uplifted-entry-header .uplifted-entry-title-meta ul li a:hover {
@@ -5051,8 +5051,8 @@ img.alignright {
       padding-bottom: 0.75em;
       padding-left: 1.5em;
       font-size: 0.875em;
-      background-color: #222222;
-      border-color: #090909;
+      background-color: #323232;
+      border-color: #191919;
       color: white;
       -webkit-border-radius: 6px;
       border-radius: 6px; }
