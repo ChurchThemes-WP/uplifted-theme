@@ -23,7 +23,7 @@ $color_options = array(
 					"primary"	=> '#333333',
 					"secondary"	=> '#c3d47f',
 					"tertiary"	=> '#999999',
-					"neutral"	=> '#555555',
+					"panel"	=> '#555555',
 					"background"	=> '#333333',
 				)
 			),
@@ -34,7 +34,7 @@ $color_options = array(
 					"primary"	=> '#F7B928',
 					"secondary"	=> '#54786f',
 					"tertiary"	=> 'green',
-					"neutral"	=> '#b1b36b',
+					"panel"	=> '#b1b36b',
 					"background"	=> '#1b5469',
 				)
 			),
@@ -45,7 +45,7 @@ $color_options = array(
 					"primary"	=> '#4e526a',
 					"secondary"	=> '#d97159',
 					"tertiary"	=> 'green',
-					"neutral"	=> '#ebe9e7',
+					"panel"	=> '#ebe9e7',
 					"background"	=> '#f7f6f5',
 				)
 			),
@@ -56,7 +56,7 @@ $color_options = array(
 					"primary"	=> '#e65e2d',
 					"secondary"	=> '#ae956b',
 					"tertiary"	=> '#222',
-					"neutral"	=> '#efefef',
+					"panel"	=> '#efefef',
 					"background"	=> '#e1dfe0',
 				)
 			)
@@ -105,7 +105,7 @@ function uplifted_update_custom_color_vars($variables){
 		$variables .= '$primary-color:' . $colors['primary'] . ';';
 		$variables .= '$secondary-color:' . $colors['secondary'] . ';';
 		$variables .= '$tertiary-color:' . $colors['tertiary'] . ';';
-		$variables .= '$neutral-color:' . $colors['neutral'] . ';';
+		$variables .= '$panel-bg:' . $colors['panel'] . ';';
 		$variables .= '$body-bg:' . $colors['background'] . ';';
 
 	}
