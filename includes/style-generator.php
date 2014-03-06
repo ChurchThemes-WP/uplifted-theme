@@ -21,10 +21,10 @@ $color_options = array(
 				"title" => __( "Color Scheme #1", 'uplifted' ),
 				"colors" => array(
 					"primary"	=> '#333333',
-					"secondary"	=> '#666666',
+					"secondary"	=> '#c3d47f',
 					"tertiary"	=> '#999999',
 					"neutral"	=> '#555555',
-					"background"	=> '#f8f9fb',
+					"background"	=> '#333333',
 				)
 			),
 			"scheme_2" => array(
@@ -32,14 +32,25 @@ $color_options = array(
 				"title" => __( "Color Scheme #2", 'uplifted' ),
 				"colors" => array(
 					"primary"	=> '#F7B928',
-					"secondary"	=> '#1B5469',
+					"secondary"	=> '#54786f',
 					"tertiary"	=> 'green',
-					"neutral"	=> '#EFE3D1',
-					"background"	=> '#f8f9fb',
+					"neutral"	=> '#b1b36b',
+					"background"	=> '#1b5469',
 				)
 			),
 			"scheme_3" => array(
 				"name" => "scheme_3",
+				"title" => __( "Color Scheme #2", 'uplifted' ),
+				"colors" => array(
+					"primary"	=> '#4e526a',
+					"secondary"	=> '#d97159',
+					"tertiary"	=> 'green',
+					"neutral"	=> '#ebe9e7',
+					"background"	=> '#f7f6f5',
+				)
+			),
+			"scheme_4" => array(
+				"name" => "scheme_4",
 				"title" => __( "Color Scheme #3", 'uplifted' ),
 				"colors" => array(
 					"primary"	=> '#e65e2d',
