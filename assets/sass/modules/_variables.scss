@@ -1250,17 +1250,17 @@ $topbar-title-font-size: emCalc(17px);
 
 // Style the top bar dropdown elements
 
-$topbar-dropdown-bg: #e5e6ea;
+$topbar-dropdown-bg: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 20%), 50%); // if we have a dark site bg then we lighten that color for the dropdown items, if a light site bg then we darken it for the dropdown items
 $topbar-dropdown-link-color: $secondary-color;
 $topbar-dropdown-link-bg: $tertiary-color;
 $topbar-dropdown-toggle-size: 5px;
-$topbar-dropdown-toggle-color: #555;
+$topbar-dropdown-toggle-color: aqua;
 $topbar-dropdown-toggle-alpha: 1;
 
 // Set the link colors and styles for top-level nav
 
-$topbar-link-color: #555;
-//$topbar-link-color: contrast-color($topbar-bg, $secondary-color, #fff, 50%);
+//$topbar-link-color: #555;
+$topbar-link-color: contrast-color($panel-bg, $body-font-color, #fff, 50%);
 $topbar-link-color-hover: contrast-color($topbar-bg, aqua, darken(#fff,25%), 50%);
 $topbar-link-color-active: contrast-color($topbar-bg, lighten(#333,30%), darken(#fff,30%), 50%);
 $topbar-link-weight: normal;

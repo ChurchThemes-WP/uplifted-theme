@@ -352,7 +352,7 @@ $topbar-sticky-class: ".sticky" !default;
         color: #fff;
 
         &:after {
-	        border-color: #fff transparent transparent !important;
+	        border-color: $topbar-dropdown-toggle-color transparent transparent !important;
         }
       }
     }
@@ -484,7 +484,8 @@ $topbar-sticky-class: ".sticky" !default;
 
 	  // change the color of the dropdown arrow on desktop
 	  .has-dropdown > a:after {
-		  border-color: lighten($topbar-link-color, 50%) transparent transparent !important;
+		  //border-color: lighten($topbar-link-color, 50%) transparent transparent !important;
+              //border-color: $topbar-dropdown-toggle-color transparent transparent !important;
 	  }
 
       ul {
