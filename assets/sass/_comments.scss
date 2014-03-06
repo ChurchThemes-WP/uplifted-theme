@@ -175,13 +175,13 @@
 	#respond .form-submit {
 		margin: 20px 0 0 0;
 
-		button,
+		/*button,
 		input[type="submit"]{
 			border: none;
 			@include border-radius(4px);
 			@include button-base;
 			@include button-size();
-			@include button-style(black);
+			@include button-style($primary-color);
 			@include box-shadow(none);
 			@include transition(200ms background-color linear);
 			font-weight: bold;
@@ -189,7 +189,7 @@
 			&:hover{
 				background-color: $primary-color;
 			}
-		}
+		} */
 	}
 
 /* Comments closed message (in place of add form if comments have already been made) */

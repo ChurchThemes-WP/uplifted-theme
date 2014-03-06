@@ -3029,55 +3029,22 @@ p.comment-form-comment label.error {
 /* Submit Button */
 /* line 175, assets/sass/_comments.scss */
 #respond .form-submit {
-  margin: 20px 0 0 0; }
-  /* line 179, assets/sass/_comments.scss */
-  #respond .form-submit button,
-  #respond .form-submit input[type="submit"] {
-    border: none;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-    border-radius: 4px;
-    cursor: "pointer";
-    font-family: inherit;
-    font-weight: normal;
-    line-height: 1;
-    margin: 0 0 0.5em;
-    position: relative;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    padding-top: 0.75em;
-    padding-right: 1.5em;
-    padding-bottom: 0.75em;
-    padding-left: 1.5em;
-    font-size: 0.875em;
-    background-color: black;
-    border-color: black;
-    color: white;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    -webkit-transition: 200ms background-color linear;
-    -moz-transition: 200ms background-color linear;
-    -o-transition: 200ms background-color linear;
-    transition: 200ms background-color linear;
-    font-weight: bold; }
-    /* line 124, assets/sass/_buttons.scss */
-    #respond .form-submit button:hover, #respond .form-submit button:focus,
-    #respond .form-submit input[type="submit"]:hover,
-    #respond .form-submit input[type="submit"]:focus {
-      background-color: #0fcfc5; }
-    /* line 136, assets/sass/_buttons.scss */
-    #respond .form-submit button:hover, #respond .form-submit button:focus,
-    #respond .form-submit input[type="submit"]:hover,
-    #respond .form-submit input[type="submit"]:focus {
-      color: white; }
-    /* line 189, assets/sass/_comments.scss */
-    #respond .form-submit button:hover,
-    #respond .form-submit input[type="submit"]:hover {
-      background-color: #0fcfc5; }
+  margin: 20px 0 0 0;
+  		/*button,
+  		input[type="submit"]{
+  			border: none;
+  			@include border-radius(4px);
+  			@include button-base;
+  			@include button-size();
+  			@include button-style($primary-color);
+  			@include box-shadow(none);
+  			@include transition(200ms background-color linear);
+  			font-weight: bold;
+  
+  			&:hover{
+  				background-color: $primary-color;
+  			}
+  		} */ }
 
 /* Comments closed message (in place of add form if comments have already been made) */
 /* line 197, assets/sass/_comments.scss */
