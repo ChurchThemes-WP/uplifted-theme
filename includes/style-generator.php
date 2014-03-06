@@ -30,20 +30,20 @@ $color_options = array(
 				"name" => "scheme_2",
 				"title" => __( "Color Scheme #2", 'uplifted' ),
 				"colors" => array(
-					"primary"	=> 'purple',
-					"secondary"	=> 'aqua',
+					"primary"	=> '#F7B928',
+					"secondary"	=> '#1B5469',
 					"tertiary"	=> 'green',
-					"neutral"	=> 'red',
+					"neutral"	=> '#EFE3D1',
 				)
 			),
 			"scheme_3" => array(
 				"name" => "scheme_3",
 				"title" => __( "Color Scheme #3", 'uplifted' ),
 				"colors" => array(
-					"primary"	=> 'orange',
-					"secondary"	=> 'yellow',
-					"tertiary"	=> 'blue',
-					"neutral"	=> 'tan',
+					"primary"	=> '#E65E2D',
+					"secondary"	=> '#AE956B',
+					"tertiary"	=> '#222222',
+					"neutral"	=> '#E1DFE0',
 				)
 			)
 		)
