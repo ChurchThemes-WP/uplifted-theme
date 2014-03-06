@@ -46,6 +46,7 @@ require_once 'includes/gallery.php';                                 // Gallery 
 require_once 'includes/custom-header.php';                           // Custom header setup
 require_once 'includes/template-tags.php';                           // Template Tags
 require_once 'options/options.php';                                  // UpThemes Framework
+require_once 'includes/style-generator.php';                         // Style regeneration
 require_once 'includes/theme-options.php';                           // Load theme options specific to this theme
 
 if ( ! isset( $content_width ) ){
@@ -124,6 +125,7 @@ function uplifted_enqueue_scripts(){
 	wp_enqueue_script( 'uplifted-foundation', get_template_directory_uri() . '/assets/js/foundation.js', array('jquery'), '5.0.0', true );
 	wp_enqueue_script( 'uplifted-foundation-topbar', get_template_directory_uri() . '/assets/js/foundation.topbar.js', array('uplifted-foundation'), '5.0.0', true );
 	wp_enqueue_style( 'uplifted-fonts', uplifted_fonts_url() );
+	wp_enqueue_style( 'uplifted-style', get_template_directory_uri() . '/style.css' );
 
 }
 

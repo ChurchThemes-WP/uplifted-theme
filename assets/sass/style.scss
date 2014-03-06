@@ -10,35 +10,5 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
 */
 
-@import 'variables';
-@import 'normalize';
-@import 'global';
-@import 'type';
-@import 'buttons';
-@import 'clearing';
-@import 'grid';
-@import 'forms';
-@import 'genericons';
-@import 'pagination';
-@import 'layout';
-@import 'post';
-@import 'comments';
-@import 'top-bar';
-@import 'footer';
-@import 'sidebar';
-@import 'widgets';
-@import 'flexslider';
-@import 'pages';
-@import 'wordpress';
-@import 'galleries';
-@import 'breadcrumbs';
-@import 'sermons';
-@import 'people';
-@import 'locations';
-@import 'social-menu';
-
-@import 'events-calendar';
-
-
-// the _shame.scss partial should always be last
-@import 'shame';
+@import 'modules/variables';
+@import 'partials/all';

@@ -37,8 +37,24 @@ $experimental: true;
 
 $default-float: left;
 
-$body-bg: #f8f9fb;
-$body-font-color: #3c4542;
+// Colors
+
+$body-bg: #f8f9fb !default;
+
+$primary-color: #0fcfc5 !default;
+$secondary-color: #E8665A !default;
+$tertiary-color: #ECE67A !default;
+$neutral-color: #fff !default;
+$transparent-neutral-color: rgba($neutral-color,.3) !default;
+
+$body-font-color: contrast-color( $transparent-neutral-color, #222, #f2f2f2, 60% ) !default;
+$header-font-color: $body-font-color !default;
+
+$alert-color: #d15327 !default;
+$success-color: #9fe150 !default;
+
+
+// Body Font
 $body-font-family: 'Asap', Verdana, Geneva, sans-serif;
 $body-font-weight: normal;
 $body-font-style: normal;
@@ -50,16 +66,6 @@ $font-smoothing: antialiased;
 // Text direction settings
 
 $text-direction: ltr;
-
-// Colors
-
-$primary-color: #0fcfc5; //blue color
-$secondary-color: #E8665A; //orange color
-$tertiary-color: #ECE67A;
-$neutral-color: #fff;
-$transparent-neutral-color: rgba(255,255,255,.3);
-$alert-color: #d15327;
-$success-color: #9fe150;
 
 // Make sure border radius matches unless we want it different.
 
@@ -127,10 +133,10 @@ $cursor-help-value: "help";
 
 // Background and border styles
 
-$panel-bg: #fff;
+$panel-bg: $neutral-color;
 $panel-border-style: solid;
 $panel-border-size: 1px;
-$panel-border-color: #e5e6ea;
+$panel-border-color: $transparent-neutral-color;
 $panel-border: $panel-border-size $panel-border-style $panel-border-color;
 $panel-box-shadow: 4px 4px 0 0 $panel-border-color;
 
@@ -184,7 +190,6 @@ $header-font-family: "Oswald", Verdana, Geneva, sans-serif;
 $header-font-weight: normal;
 $alt-header-font-weight: bold;
 $header-font-style: normal;
-$header-font-color: #46463a;
 $header-line-height: 1.4;
 $header-top-margin: .2em;
 $header-bottom-margin: .5em;

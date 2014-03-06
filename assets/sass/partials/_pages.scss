@@ -1,3 +1,5 @@
+@import "../compass/css3";
+
 /* Pages */
 
 .uplifted-main-title > span {
@@ -231,7 +233,7 @@ body.term-post-format-gallery #content > .panel {
   }
 
   .slides .uplifted-caption-image-caption {
-    background: linear-gradient(color-stops(rgba(0,0,0,0), rgba(0,0,0,.1) 65%, rgba(0,0,0,.6)));
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.1) 65%, rgba(0,0,0,.6));
   }
 
   @media screen and (min-width: 641px){
@@ -256,7 +258,7 @@ body.term-post-format-gallery #content > .panel {
       right: 0;
       color: white;
       padding: 20px;
-      background: linear-gradient(color-stops(rgba(0,0,0,.3), rgba(0,0,0,.1) 35%, rgba(0,0,0,.1)));
+      background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.1) 35%, rgba(0,0,0,.1));
 
       .uplifted-caption-image-title {
         color: white;
