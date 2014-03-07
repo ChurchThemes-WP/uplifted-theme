@@ -35,7 +35,7 @@ $color_options = array(
 					"secondary"	=> '#c3d47f',
 					"tertiary"	=> '#999999',
 					"panel"	=> '#555555',
-					"background"	=> '#fbfbfb',
+					"background"	=> '#333333',
 				)
 			),
 			"scheme_3" => array(
