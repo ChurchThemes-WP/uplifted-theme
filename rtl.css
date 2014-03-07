@@ -146,7 +146,7 @@ body {
       width: 0;
       height: 0;
       border: inset 5px;
-      border-color: transparent transparent transparent cyan;
+      border-color: transparent transparent transparent #999999;
       border-left-style: solid;
       margin-left: 26.66667px;
       margin-top: -4.5px;

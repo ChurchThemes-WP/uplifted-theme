@@ -310,6 +310,13 @@ $topbar-sticky-class: ".sticky" !default;
         &:hover {
 	        background-color: $primary-color;
 	        color: contrast-color($primary-color, #fff, #f2f2f2, 50%);
+
+          @media screen and (min-width: $medium-screen) {
+            // change color of dropdown arrow when menu item is :active. setting it in a media-query because the stupid menu system is overly complicated and modifying the arrow color between mobile and desktop is crazy. maybe i'll look at it agian someday
+            &:after {
+                border-color: $topbar-dropdown-toggle-color-hover transparent transparent !important;
+            }
+          }
         }
 
         &.button {
@@ -351,9 +358,13 @@ $topbar-sticky-class: ".sticky" !default;
         background: $topbar-link-bg-active;
         color: #fff;
 
-        &:after {
-	        border-color: $topbar-dropdown-toggle-color transparent transparent !important;
+        @media screen and (min-width: $medium-screen) {
+          // change color of dropdown arrow when menu item is :active. setting it in a media-query because the stupid menu system is overly complicated and modifying the arrow color between mobile and desktop is crazy. maybe i'll look at it agian someday
+          &:after {
+              border-color: $topbar-dropdown-toggle-color-hover transparent transparent !important;
+          }
         }
+        
       }
     }
 
