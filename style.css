@@ -3226,16 +3226,16 @@ p.comment-form-comment label.error {
   @media screen and (max-width: 768px) {
     /* line 271, assets/sass/partials/_top-bar.scss */
     .top-bar-section #menu-second.left {
-      border-bottom: 1px solid #f8f9fb;
+      border-bottom: 1px solid #b3b3b3;
       border-top: none; }
     /* line 276, assets/sass/partials/_top-bar.scss */
     .top-bar-section #menu-second.right {
-      border-top: 1px solid #f8f9fb;
+      border-top: 1px solid #b3b3b3;
       border-bottom: none; } }
   /* line 284, assets/sass/partials/_top-bar.scss */
   .top-bar-section .divider,
   .top-bar-section [role="separator"] {
-    border-bottom: 1px solid #f8f9fb;
+    border-bottom: 1px solid #b3b3b3;
     border-top: none;
     clear: both;
     height: 1px;
@@ -3342,7 +3342,7 @@ p.comment-form-comment label.error {
       /* line 409, assets/sass/partials/_top-bar.scss */
       .top-bar-section .dropdown li a {
         font-weight: normal;
-        border-bottom: 1px solid #f8f9fb; }
+        border-bottom: 1px solid #b3b3b3; }
         /* line 413, assets/sass/partials/_top-bar.scss */
         .top-bar-section .dropdown li a.parent-link {
           font-weight: normal; }
@@ -3505,7 +3505,7 @@ p.comment-form-comment label.error {
     .top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
       border-bottom: none;
       border-top: none;
-      border-right: 1px solid #f8f9fb;
+      border-right: 1px solid #b3b3b3;
       border-left: none;
       clear: none;
       height: 80px;
