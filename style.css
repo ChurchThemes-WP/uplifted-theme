@@ -2610,7 +2610,7 @@ small.error {
   overflow: auto;
   background-color: white;
   margin-bottom: 1.5em;
-  border: 1px solid rgba(255, 255, 255, 0.3); }
+  border: 1px solid #e6e6e6; }
   /* line 21, assets/sass/partials/_pagination.scss */
   .pagination ul {
     margin: 0; }
@@ -2639,7 +2639,7 @@ small.error {
 /* line 58, assets/sass/partials/_pagination.scss */
 .uplifted-nav-left-right > div {
   background-color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3); }
+  border: 1px solid #e6e6e6; }
 @media screen and (max-width: 568px) {
   /* line 66, assets/sass/partials/_pagination.scss */
   .uplifted-nav-left-right div:nth-child(2) {
@@ -2763,7 +2763,7 @@ small.error {
 .uplifted-content-meta {
   margin-bottom: 1.5em;
   background-color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #e6e6e6;
   padding: 24px; }
 
 /* line 30, assets/sass/partials/_post.scss */
@@ -2818,7 +2818,7 @@ small.error {
   /* line 93, assets/sass/partials/_post.scss */
   .uplifted-entry-meta a {
     color: #323232;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+    border-bottom: 1px solid #e6e6e6; }
     /* line 97, assets/sass/partials/_post.scss */
     .uplifted-entry-meta a:hover {
       color: #0fcfc5; }
@@ -3587,7 +3587,7 @@ p.comment-form-comment label.error {
   background-color: white;
   margin-bottom: 1.5em;
   padding: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.3); }
+  border: 1px solid #e6e6e6; }
   /* line 21, assets/sass/partials/_widgets.scss */
   .uplifted-widget .uplifted-widget-title {
     display: inline-block;
@@ -3595,7 +3595,7 @@ p.comment-form-comment label.error {
     font-family: "Asap", Verdana, Geneva, sans-serif;
     font-weight: bold;
     font-size: 1.1em;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 3px solid #e6e6e6;
     margin-bottom: .8em; }
   /* line 31, assets/sass/partials/_widgets.scss */
   .uplifted-widget ul {
@@ -4419,7 +4419,7 @@ body.term-post-format-gallery #content > .panel {
   background-color: white;
   margin-bottom: 1.5em;
   padding: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.3); }
+  border: 1px solid #e6e6e6; }
 /* line 53, assets/sass/partials/_pages.scss */
 .single-attachment .entry-header {
   word-wrap: break-word; }
@@ -4529,7 +4529,7 @@ body.term-post-format-gallery #content > .panel {
 .page-template-page-templateshomepage-php .uplifted-intro-wrapper {
   background-color: #e8ebf2;
   padding: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #e6e6e6;
   color: #323232; }
 /* line 168, assets/sass/partials/_pages.scss */
 .page-template-page-templateshomepage-php #uplifted-slider,
@@ -4702,7 +4702,7 @@ img.alignright {
 .wp-caption {
   text-align: center;
   margin: 0 0 2em 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid #e6e6e6;
   position: relative;
   max-width: 100% !important; }
 
@@ -4743,7 +4743,7 @@ img.alignright {
 .page-template-page-templatesgallery-php .uplifted-entry-content .gallery {
   background-color: white;
   padding: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.3); }
+  border: 1px solid #e6e6e6; }
 
 /* line 24, assets/sass/partials/_galleries.scss */
 .gallery-item {
@@ -4767,7 +4767,7 @@ img.alignright {
 .uplifted-caption-image-caption {
   background-color: white;
   padding: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.3); }
+  border: 1px solid #e6e6e6; }
   /* line 46, assets/sass/partials/_galleries.scss */
   .uplifted-caption-image-caption .uplifted-caption-image-title {
     font-family: "Oswald", Verdana, Geneva, sans-serif;
@@ -4991,7 +4991,7 @@ img.alignright {
 /* line 87, assets/sass/partials/_sermons.scss */
 .single-ctc_sermon .uplifted-entry-content {
   background-color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #e6e6e6;
   padding: 24px;
   margin-bottom: 1.5em; }
 
@@ -5009,8 +5009,8 @@ img.alignright {
     margin: 0 0 1.5em;
     padding: 24px;
     background-color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 4px 4px 0 0 rgba(255, 255, 255, 0.3); }
+    border: 1px solid #e6e6e6;
+    box-shadow: 4px 4px 0 0 #e6e6e6; }
     /* line 121, assets/sass/partials/_sermons.scss */
     .single-sermon-meta-sidebar .uplifted-entry-title-meta ul li {
       float: none;
@@ -5107,7 +5107,7 @@ img.alignright {
           .person-profile-card .uplifted-entry-meta .entry-meta-item.uplifted-person-position {
             margin-bottom: .5em;
             padding-bottom: .5em;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3); } }
+            border-bottom: 1px solid #e6e6e6; } }
 
 /* Location */
 /* line 3, assets/sass/partials/_locations.scss */
@@ -5275,7 +5275,7 @@ img.alignright {
 .tribe-theme-uplifted #tribe-events-content.tribe-events-list, .tribe-theme-uplifted.single-tribe_events #tribe-events {
   margin-bottom: 1.5em;
   background-color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #e6e6e6;
   padding: 24px; }
 /* line 45, assets/sass/partials/_events-calendar.scss */
 .tribe-theme-uplifted .tribe-events-calendar thead th {

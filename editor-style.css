@@ -914,7 +914,7 @@ img.alignright {
 .wp-caption {
   text-align: center;
   margin: 0 0 2em 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid #e6e6e6;
   position: relative;
   max-width: 100% !important; }
 

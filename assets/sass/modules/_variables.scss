@@ -136,7 +136,8 @@ $cursor-help-value: "help";
 $panel-bg: #fff !default;
 $panel-border-style: solid;
 $panel-border-size: 1px;
-$panel-border-color: $transparent-neutral-color;
+//$panel-border-color: $transparent-neutral-color;
+$panel-border-color: contrast-color($panel-bg, darken($panel-bg, 10%), lighten($panel-bg, 10%), 50%);
 $panel-border: $panel-border-size $panel-border-style $panel-border-color;
 $panel-box-shadow: 4px 4px 0 0 $panel-border-color;
 
