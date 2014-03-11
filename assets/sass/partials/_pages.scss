@@ -157,9 +157,11 @@ body.term-post-format-gallery #content > .panel {
   }
 
   .uplifted-intro-wrapper {
-    background-color: $neutral-color;
+    background-color: contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%), 50%); // set section bg color based off of site background color, either lighten or darken
     padding: $panel-padding;
     border: $panel-border;
+    color: contrast-color($body-bg, $body-font-color, lighten($body-bg,70%), 50%);
+
   }
 
   #uplifted-slider,
@@ -172,9 +174,10 @@ body.term-post-format-gallery #content > .panel {
   #uplifted-intro-inner {
     text-align: center;
 
-    #uplifted-intro-heading{
+    #uplifted-intro-heading {
       font-size: emCalc(32);
-      border-bottom: 3px solid darken($body-bg, 10%);
+      color: contrast-color($body-bg, $body-font-color, lighten($body-bg,70%), 50%);
+      border-bottom: 3px solid contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg,25%), 50%);
       display: inline-block;
       text-align: center;
       padding-bottom: .3em;
