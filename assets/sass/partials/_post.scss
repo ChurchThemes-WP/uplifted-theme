@@ -22,7 +22,7 @@
   background-color: $panel-bg;
   border: $panel-border;
   padding: $panel-padding;
-  color: red;
+  color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 70%), 50%);
 }
 
 // on pages with a double loop we need to negate the container
