@@ -1,11 +1,10 @@
 /* Breadcrumbs */
 
 .ctfw-breadcrumbs {
-	//@include grid-row;
-	//margin-top: 2em;
 	font-size: .8em;
 	margin: 1em 1em 2em;
-	color: lighten($body-font-color,50%);
+	//color: lighten($body-font-color,50%);
+	color: contrast-color($body-bg, lighten($body-font-color,50%), lighten($body-bg, 50%));
 
 	/*.ctfw-breadcrumbs-inner{
 		@include grid-column(8,true,true,2);
@@ -26,7 +25,8 @@
 	}*/
 
 	a {
-		color: lighten($body-font-color,50%);
+		//color: lighten($body-font-color,50%);
+		color: contrast-color($body-bg, lighten($body-font-color,50%), lighten($body-bg, 50%));
 		margin: 0 .3em;
 
 		&:hover {

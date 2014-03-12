@@ -4934,7 +4934,7 @@ img.alignright {
   		@extend .genericon-collapse;
   		@include rotate(90deg);
   	}*/ }
-  /* line 28, assets/sass/partials/_breadcrumbs.scss */
+  /* line 27, assets/sass/partials/_breadcrumbs.scss */
   .ctfw-breadcrumbs a {
     color: #b2b2b2;
     margin: 0 .3em; }
