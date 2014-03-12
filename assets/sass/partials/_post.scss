@@ -23,6 +23,10 @@
   border: $panel-border;
   padding: $panel-padding;
   color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 70%), 50%);
+
+  .uplifted-content-block & h1, h2, h3, h4, h5, h6 {
+    color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 70%), 50%);
+  }
 }
 
 // on pages with a double loop we need to negate the container

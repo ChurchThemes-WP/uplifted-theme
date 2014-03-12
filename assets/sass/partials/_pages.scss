@@ -9,7 +9,7 @@
 }
 
 // set the page body text to be based off of site background color, light or dark
-#uplifted-content {
+.uplifted-content-block {
   color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 70%), 50%); // covers p elements and text not wrapped in elements
 
   h1, h2, h3, h4, h5, h6 {
