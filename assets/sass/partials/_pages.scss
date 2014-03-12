@@ -2,9 +2,19 @@
 
 /* Pages */
 
+// some page titles have a sub-header
 .uplifted-main-title > span {
   font-size: .6em;
   color: lighten($topbar-link-color, 50%);
+}
+
+// set the page body text to be based off of site background color, light or dark
+#uplifted-content {
+  color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 70%), 50%); // covers p elements and text not wrapped in elements
+
+  h1, h2, h3, h4, h5, h6 {
+    color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 70%), 50%);
+  }
 }
 
 //
