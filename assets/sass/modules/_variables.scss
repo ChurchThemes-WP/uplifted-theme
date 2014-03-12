@@ -47,7 +47,7 @@ $tertiary-color: #ece67a !default;
 $neutral-color: #fff !default;
 $transparent-neutral-color: rgba($neutral-color,.3) !default;
 
-$body-font-color: contrast-color( $neutral-color, #323232, #f2f2f2, 60% ) !default;
+$body-font-color: #323232 !default;
 $header-font-color: $body-font-color !default;
 
 $alert-color: #d15327 !default;
