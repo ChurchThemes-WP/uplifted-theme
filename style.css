@@ -3545,27 +3545,27 @@ p.comment-form-comment label.error {
   padding: 36px 0;
   background-color: #0fcfc5;
   color: white; }
-  /* line 9, assets/sass/partials/_footer.scss */
+  /* line 10, assets/sass/partials/_footer.scss */
   #footer #footer-meta {
     text-align: center; }
     @media screen and (min-width: 641px) {
-      /* line 9, assets/sass/partials/_footer.scss */
+      /* line 10, assets/sass/partials/_footer.scss */
       #footer #footer-meta {
         text-align: left; } }
-  /* line 19, assets/sass/partials/_footer.scss */
+  /* line 20, assets/sass/partials/_footer.scss */
   #footer .columns a {
     -webkit-transition: 0.2s all linear;
     -moz-transition: 0.2s all linear;
     -o-transition: 0.2s all linear;
     transition: 0.2s all linear;
     color: white; }
-    /* line 23, assets/sass/partials/_footer.scss */
+    /* line 24, assets/sass/partials/_footer.scss */
     #footer .columns a:hover {
       opacity: .7; }
-  /* line 29, assets/sass/partials/_footer.scss */
+  /* line 30, assets/sass/partials/_footer.scss */
   #footer abbr {
     color: white; }
-  /* line 33, assets/sass/partials/_footer.scss */
+  /* line 34, assets/sass/partials/_footer.scss */
   #footer .url {
     padding-left: 0;
     background: none; }

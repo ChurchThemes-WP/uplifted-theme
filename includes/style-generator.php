@@ -64,6 +64,17 @@ $color_options = array(
 				"name" => "scheme_5",
 				"title" => __( "Color Scheme #5", 'uplifted' ),
 				"colors" => array(
+					"primary"	=> '#f1e19f',
+					"secondary"	=> '#d2d9e1',
+					"tertiary"	=> 'pink',
+					"panel"	=> '#ebe9e7',
+					"background"	=> '#fbfbfb',
+				)
+			),
+			"scheme_6" => array(
+				"name" => "scheme_6",
+				"title" => __( "Color Scheme #6", 'uplifted' ),
+				"colors" => array(
 					"primary"	=> '#e65e2d',
 					"secondary"	=> '#ae956b',
 					"tertiary"	=> '#222',
