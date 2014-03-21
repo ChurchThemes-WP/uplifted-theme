@@ -231,3 +231,13 @@ function uplifted_sidebar_body_class($body_classes){
 }
 
 add_filter('body_class','uplifted_sidebar_body_class');
+
+/**
+ * Change map marker location from Church Theme Framework default.
+ */
+function uplifted_return_map_marker($map_icon_url){
+	return get_template_directory_uri() . '/assets/images/map-icon.png';
+}
+
+add_filter('ctfw_maps_icon_color_file','uplifted_return_map_marker',999);
+add_filter('ctfw_maps_icon_shadow_color_file','uplifted_return_map_marker',999);
