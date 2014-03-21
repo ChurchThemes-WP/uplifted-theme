@@ -145,7 +145,7 @@ add_action('wp_enqueue_scripts','uplifted_enqueue_scripts');
 /**
  * Include the TGM_Plugin_Activation class.
  */
-require_once dirname( __FILE__ ) . '/includes/plugin-activation/tgm-plugin-activation/class-tgm-plugin-activation.php';
+require_once dirname( __FILE__ ) . '/includes/plugin-activation/class-tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'uplifted_register_required_plugins' );
 /**
@@ -165,21 +165,11 @@ function uplifted_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'    => 'Page Builder by SiteOrigin',
-			'slug'    => 'siteorigin-panels',
-			'required'  => false,
-		),
-
-		array(
-			'name'    => 'Black Studio TinyMCE Widget',
-			'slug'    => 'black-studio-tinymce-widget',
-			'required'  => false,
-		),
-
-		array(
-			'name'    => 'Responsive WordPress Slider - Soliloquy Lite',
-			'slug'    => 'soliloquy-lite',
-			'required'  => false,
+			'name'    		=> 'MP Stacks',
+			'slug'    		=> 'mp-stacks',
+			'source' 		=> 'http://moveplugins.com/repo/mp-stacks/?downloadfile=true',
+			'required'  	=> false,
+			'external_url'	=> 'https://github.com/moveplugins/mp-stacks',
 		),
 
 	);
