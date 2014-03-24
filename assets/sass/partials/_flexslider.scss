@@ -149,40 +149,40 @@ html[xmlns] .slides {display: block;}
 }
 
 // Control Nav
-
 .flex-control-nav {
 	position: absolute;
-	right: 10px;
-	top: 10px;
+	left: 50%;
+	bottom: 10px;
+	@include transform(translateX(-50%) );
 	z-index: 40;
-}
-.flex-control-nav li {
-	margin: 0 0 0 3px;
-	display: inline-block;
-	zoom: 1;
-	*display: inline;
-}
+	margin: 0;
 
-.flex-control-paging li a {
-	width: 11px;
-	height: 11px;
-	margin-left: 5px;
-	display: block;
-	background: #666;
-	background: rgba(255,255,255,0.5);
-	cursor: pointer;
-	text-indent: -9999px;
-	@include border-radius(20px);
-}
+	li {
+		margin: 0 3px;
+		display: inline-block;
+		zoom: 1;
 
-.flex-control-paging li a:hover {
-	background: #fff;
-	background: rgba(255,255,255,0.8);
-}
+		a {
+			width: 11px;
+			height: 11px;
+			display: block;
+			background: #666;
+			background: rgba(255,255,255,0.5);
+			cursor: pointer;
+			text-indent: -9999px;
+			@include border-radius(20px);
 
-.flex-control-paging li a.flex-active {
-	background: #fff;
-	cursor: default;
+			&:hover {
+				background: #fff;
+				background: rgba(255,255,255,0.8);
+			}
+
+			&.flex-active {
+				background: #fff;
+				cursor: default;
+			}
+		}
+	}
 }
 
 .flex-control-thumbs {

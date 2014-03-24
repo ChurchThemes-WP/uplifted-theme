@@ -4320,45 +4320,45 @@ html[xmlns] .slides {
   opacity: 0;
   cursor: default; }
 
-/* line 153, assets/sass/partials/_flexslider.scss */
+/* line 152, assets/sass/partials/_flexslider.scss */
 .flex-control-nav {
   position: absolute;
-  right: 10px;
-  top: 10px;
-  z-index: 40; }
-
-/* line 159, assets/sass/partials/_flexslider.scss */
-.flex-control-nav li {
-  margin: 0 0 0 3px;
-  display: inline-block;
-  zoom: 1;
-  *display: inline; }
-
-/* line 166, assets/sass/partials/_flexslider.scss */
-.flex-control-paging li a {
-  width: 11px;
-  height: 11px;
-  margin-left: 5px;
-  display: block;
-  background: #666;
-  background: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  text-indent: -9999px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px; }
-
-/* line 178, assets/sass/partials/_flexslider.scss */
-.flex-control-paging li a:hover {
-  background: #fff;
-  background: rgba(255, 255, 255, 0.8); }
-
-/* line 183, assets/sass/partials/_flexslider.scss */
-.flex-control-paging li a.flex-active {
-  background: #fff;
-  cursor: default; }
+  left: 50%;
+  bottom: 10px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 40;
+  margin: 0; }
+  /* line 160, assets/sass/partials/_flexslider.scss */
+  .flex-control-nav li {
+    margin: 0 3px;
+    display: inline-block;
+    zoom: 1; }
+    /* line 165, assets/sass/partials/_flexslider.scss */
+    .flex-control-nav li a {
+      width: 11px;
+      height: 11px;
+      display: block;
+      background: #666;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      text-indent: -9999px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      border-radius: 20px; }
+      /* line 175, assets/sass/partials/_flexslider.scss */
+      .flex-control-nav li a:hover {
+        background: #fff;
+        background: rgba(255, 255, 255, 0.8); }
+      /* line 180, assets/sass/partials/_flexslider.scss */
+      .flex-control-nav li a.flex-active {
+        background: #fff;
+        cursor: default; }
 
 /* line 188, assets/sass/partials/_flexslider.scss */
 .flex-control-thumbs {
