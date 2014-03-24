@@ -23,8 +23,29 @@ $color_options = array(
 				"name" => "no",
 				"title" => __( "No", 'uplifted' )
 			),
-		)
-	)
+		),
+	),
+	"color_scheme_toggle" => array(
+		"tab" => "general",
+		"name" => "color_scheme_toggle",
+		"title" => "Custom Color Type",
+		"description" => __( "Do you want to select a pre-defined color scheme or define your own colors?", 'uplifted' ),
+		"section" => "appearance",
+		"since" => "1.0",
+		"id" => "appearance",
+		"type" => "radio",
+		"default" => "yes",
+		"valid_options" => array(
+			"scheme" => array(
+				"name" => "scheme",
+				"title" => __( "Pre-defined color schemes", 'uplifted' )
+			),
+			"hex" => array(
+				"name" => "hex",
+				"title" => __( "My own colors", 'uplifted' )
+			),
+		),
+	),
 );
 
 /**
@@ -326,7 +347,7 @@ add_action('customize_save_after','uplifted_customizer_save_regenerate_css',1);
 function uplifted_override_default_styles(){
 	$up_options = upfw_get_options();
 
-	if( $custom_style = get_option( 'uplifted-style-override' ) && $up_options->enable_custom_styles == 'yes' ){
+	if( $custom_style = get_option( 'uplifted-style-override' ) ){
 		wp_dequeue_style('uplifted-style');
 		wp_enqueue_style('uplifted-style-override',$custom_style['url'],false,$custom_style['date']);
 	}
