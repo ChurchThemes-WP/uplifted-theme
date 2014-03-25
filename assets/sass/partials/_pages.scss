@@ -216,13 +216,10 @@ body.term-post-format-gallery #content > .panel {
     }
   }
 
+  // two widget blocks below image slider
   .uplifted-highlight {
     margin: 1.875em 0;
     @include grid-column(6);
-
-    //@media screen and (max-width: 640px) {
-    //  @include grid-column(6);
-    //}
 
     a {
       display: block;
@@ -231,10 +228,6 @@ body.term-post-format-gallery #content > .panel {
 
     img {
       display: block;
-    }
-
-    &:nth-of-type(2){
-      margin-bottom: 0;
     }
   }
 

@@ -4634,7 +4634,7 @@ body.term-post-format-gallery #content > .panel {
   /* line 213, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php #uplifted-intro-inner #uplifted-intro-content p:last-child {
     margin-bottom: 0; }
-/* line 219, assets/sass/partials/_pages.scss */
+/* line 220, assets/sass/partials/_pages.scss */
 .page-template-page-templateshomepage-php .uplifted-highlight {
   margin: 1.875em 0;
   position: relative;
@@ -4642,31 +4642,28 @@ body.term-post-format-gallery #content > .panel {
   padding-right: 0.9375em;
   width: 50%;
   float: left; }
-  /* line 227, assets/sass/partials/_pages.scss */
+  /* line 224, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php .uplifted-highlight a {
     display: block;
     position: relative; }
-  /* line 232, assets/sass/partials/_pages.scss */
+  /* line 229, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php .uplifted-highlight img {
     display: block; }
-  /* line 236, assets/sass/partials/_pages.scss */
-  .page-template-page-templateshomepage-php .uplifted-highlight:nth-of-type(2) {
-    margin-bottom: 0; }
-/* line 241, assets/sass/partials/_pages.scss */
+/* line 234, assets/sass/partials/_pages.scss */
 .page-template-page-templateshomepage-php .uplifted-caption-image-caption {
   color: #323232; }
   @media screen and (max-width: 640px) {
-    /* line 241, assets/sass/partials/_pages.scss */
+    /* line 234, assets/sass/partials/_pages.scss */
     .page-template-page-templateshomepage-php .uplifted-caption-image-caption {
       padding: 1em; } }
-/* line 249, assets/sass/partials/_pages.scss */
+/* line 242, assets/sass/partials/_pages.scss */
 .page-template-page-templateshomepage-php .slides .uplifted-caption-image-caption {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.6)); }
 @media screen and (min-width: 641px) {
-  /* line 255, assets/sass/partials/_pages.scss */
+  /* line 248, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php .flexslider {
     margin-bottom: 0; }
-  /* line 263, assets/sass/partials/_pages.scss */
+  /* line 256, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php #ctcom-home-highlights {
     width: 100%;
     margin-left: auto;
@@ -4682,7 +4679,7 @@ body.term-post-format-gallery #content > .panel {
     /* line 135, assets/sass/partials/_global.scss */
     .page-template-page-templateshomepage-php #ctcom-home-highlights:after {
       clear: both; }
-  /* line 268, assets/sass/partials/_pages.scss */
+  /* line 261, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php .uplifted-caption-image-caption {
     position: absolute;
     bottom: 0;
@@ -4692,22 +4689,22 @@ body.term-post-format-gallery #content > .panel {
     color: white;
     padding: 20px;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) 35%, rgba(0, 0, 0, 0.1)); }
-    /* line 278, assets/sass/partials/_pages.scss */
+    /* line 271, assets/sass/partials/_pages.scss */
     .page-template-page-templateshomepage-php .uplifted-caption-image-caption .uplifted-caption-image-title {
       color: white;
       margin-bottom: .25em; }
-    /* line 282, assets/sass/partials/_pages.scss */
+    /* line 275, assets/sass/partials/_pages.scss */
     .page-template-page-templateshomepage-php .uplifted-caption-image-caption .uplifted-caption-image-description {
       color: white; }
-  /* line 289, assets/sass/partials/_pages.scss */
+  /* line 282, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .wall {
     width: auto;
     margin: 0 auto; }
-  /* line 294, assets/sass/partials/_pages.scss */
+  /* line 287, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .uplifted-widget {
     width: 343px;
     margin-bottom: 40px; }
-    /* line 298, assets/sass/partials/_pages.scss */
+    /* line 291, assets/sass/partials/_pages.scss */
     .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .uplifted-widget .uplifted-sermons-widget-entry-icons {
       display: none; } }
 
