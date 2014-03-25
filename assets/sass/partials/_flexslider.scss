@@ -22,7 +22,7 @@ html[xmlns] .slides {display: block;}
 .no-js .slides > li:first-child {display: block;}
 
 // FlexSlider Default Theme
-.flexslider{
+.flexslider {
 	//margin: 0 0 1.875em;
 	margin: 0;
 	position: relative;
@@ -33,16 +33,16 @@ html[xmlns] .slides {display: block;}
 		min-height: 500px;
 	}
 
-	ul{
+	ul {
 	  margin: 0;
 	  padding: 0;
 	  list-style: none;
 	}
 
-	li{
+	li {
 	  position: relative;
 
-	  .flex-caption{
+	  .flex-caption {
 	    position: absolute;
 	    bottom: 0;
 	    left: 0;
@@ -53,6 +53,7 @@ html[xmlns] .slides {display: block;}
 	    padding: 24px;
 	    @include box-shadow(none);
 
+	    // text container for slides, if a title and description are added
 	    .flex-position{
 	      position: absolute;
 	      bottom: 1.875em;
@@ -91,53 +92,54 @@ html[xmlns] .slides {display: block;}
 	position: absolute;
 	left: 1em;
 	top: 1em;
-}
 
-.flex-direction-nav li{
-	display: inline-block;
-	padding-right: 10px;
-}
-
-.flex-direction-nav a  {
-	margin: 0;
-	position: relative;
-	z-index: 10;
-	overflow: hidden;
-	font-size: .7em;
-	line-height: 1;
-	text-transform: uppercase;
-	font-weight: bold;
-	background-color: #fff;
-	@include border-radius(50px);
-	padding: 8px 16px 8px 10px;
-	display: block;
-	@include opacity(0);
-	cursor: pointer;
-	color: rgba($body-font-color,.7);
-	@include transition(all .3s ease);
-
-	&.flex-prev:before{
-		margin-right: 6px;
-		font-family: "Genericons";
-		font-size: 9px;
-		height: 9px;
-		width: 9px;
-		content: '\f503';
+	li {
+		display: inline-block;
+		padding-right: 10px;
 	}
 
-	&.flex-next{
-		padding: 8px 10px 8px 16px;
+	a  {
+		margin: 0;
+		position: relative;
+		z-index: 10;
+		overflow: hidden;
+		font-size: .7em;
+		line-height: 1;
+		text-transform: uppercase;
+		font-weight: bold;
+		background-color: #fff;
+		@include border-radius(50px);
+		padding: 8px 16px 8px 10px;
+		display: block;
+		@include opacity(0);
+		cursor: pointer;
+		color: rgba($body-font-color,.7);
+		@include transition(all .3s ease);
 
-		&:after{
-			margin-left: 6px;
+		&.flex-prev:before{
+			margin-right: 6px;
 			font-family: "Genericons";
 			font-size: 9px;
 			height: 9px;
 			width: 9px;
-			content: '\f501';
+			content: '\f503';
+		}
+
+		&.flex-next{
+			padding: 8px 10px 8px 16px;
+
+			&:after{
+				margin-left: 6px;
+				font-family: "Genericons";
+				font-size: 9px;
+				height: 9px;
+				width: 9px;
+				content: '\f501';
+			}
 		}
 	}
 }
+
 .flex-direction-nav .flex-prev { text-align: right; }
 .flex-direction-nav .flex-next { text-align: left; }
 .flexslider:hover .flex-prev { @include opacity(.7); }
@@ -189,28 +191,28 @@ html[xmlns] .slides {display: block;}
 	margin: 5px 0 0;
 	position: static;
 	overflow: hidden;
-}
 
-.flex-control-thumbs li {
-	width: 25%;
-	float: left;
-	margin: 0;
-}
+	li {
+		width: 25%;
+		float: left;
+		margin: 0;
+	}
 
-.flex-control-thumbs img {
-	width: 100%;
-	display: block;
-	@include opacity(.7);
-	cursor: pointer;
-}
+	img {
+		width: 100%;
+		display: block;
+		@include opacity(.7);
+		cursor: pointer;
 
-.flex-control-thumbs img:hover {
-	@include opacity(1);
-}
+		&:hover {
+			@include opacity(1);
+		}
+	}
 
-.flex-control-thumbs .flex-active {
-	@include opacity(1);
-	cursor: default;
+	.flex-active {
+		@include opacity(1);
+		cursor: default;
+	}
 }
 
 .slide-text {
