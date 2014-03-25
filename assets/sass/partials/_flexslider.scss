@@ -54,12 +54,17 @@ html[xmlns] .slides {display: block;}
 	    @include box-shadow(none);
 
 	    // text container for slides, if a title and description are added
-	    .flex-position{
+	    .flex-position {
+	      text-align: center;
+	      max-width: 35em;
 	      position: absolute;
-	      bottom: 1.875em;
-	      right: 1.875em;
-	      left: 1.875em;
-	      top: auto;
+	      top: 50%;
+	      @include transform(translateY(-50%) );
+
+	      @media screen and (min-width: $small-screen) {
+		      left: 50%;
+		      @include transform(translate(-50%) );
+	      }
 	    }
 
 	    h2 {
