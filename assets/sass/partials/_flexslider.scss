@@ -68,12 +68,14 @@ html[xmlns] .slides {display: block;}
 	    }
 
 	    h2 {
+	    	font-size: 3em;
 	      margin-bottom: 0.1em;
+	      color: $neutral-color;
 
-	      a{
+	      a {
 	        color: white;
 
-	        &:hover{
+	        &:hover {
 	          color: $primary-color;
 	        }
 	      }
