@@ -17,10 +17,12 @@
 	margin-bottom: $panel-margin-bottom;
 	padding: $panel-padding;
 	border: $panel-border;
+	//color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 60%), 50%);
 
 	.uplifted-widget-title {
 		display: inline-block;
-		color: $body-font-color;
+		//color: $body-font-color;
+		color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 60%), 50%);
 		font-family: $body-font-family;
 		font-weight: bold;
 		font-size: 1.1em;
@@ -54,32 +56,37 @@
 		}
 	}
 
+	#uplifted-home-bottom-widgets &,
+	#uplifted-sidebar-right & {
+		color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 60%), 50%);
+	}
+
 	// footer specific uplifted-widget styles
 	#footer & {
 		text-align: center;
 		margin-bottom: 2.5em;
 		background-color: transparent;
-		border-color: $transparent-neutral-color;
+		border-color: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 30%), 50%);
 		border-width: 3px;
-		box-shadow: $footer-box-shadow;
+		//box-shadow: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 30%), 50%);
 
 		@media screen and (min-width: $small-screen ) {
 			text-align: left;
 		}
 
 		.uplifted-widget-title {
-			color: $neutral-color;
-			border-color: $transparent-neutral-color;
+			color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 60%), 50%);
+			//border-color: contrast-color($body-bg, lighten($body-font-color, 60%), lighten($body-bg, 30%), 50%);
+			border-color: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 30%), 50%);
 		}
 
 		li {
 
 			a {
 				padding: .5em 0;
-				border-bottom: 1px solid rgba($neutral-color,.4);
+				//border-bottom: 1px solid contrast-color($body-bg, lighten($body-font-color, 40%), lighten($body-bg, 20%), 50%);;
 
 				&:hover {
-					border-color: rgba($neutral-color,.7);
 					padding-left: .8em;
 				}
 			}
@@ -186,7 +193,8 @@
 			}
 		}
 		#footer & {
-			color: $neutral-color;
+			//color: $neutral-color;
+			color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 50%), 50%);
 
 			a {
 				border: none;
@@ -217,11 +225,12 @@
 
 			caption {
 				background-color: darken($primary-color,10%);
-				color: #fff;
+				color: contrast-color($primary-color, $body-font-color, lighten($primary-color, 60%), 50%);
 				padding: 1em;
 
-				#footer &{
+				#footer & {
 					background-color: transparent;
+					color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 60%), 50%);
 				}
 			}
 
@@ -229,32 +238,33 @@
 				padding: .5em 0;
 				background-color: $primary-color;
 				border: 1px solid $primary-color;
-				color: contrast-color($primary-color,#222,#fff,50%);
+				color: contrast-color($primary-color, $body-font-color, lighten($primary-color, 60%), 50%);
 
-				#footer &{
-					background-color: rgba(0,0,0,.06);
+				#footer & {
+					background-color: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 30%), 50%);
 					border-color: transparent;
+					color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 60%), 50%);
 				}
 			}
 
 			tbody tr {
-				border-bottom: 1px solid $primary-color;
+				border-bottom: 1px solid contrast-color($panel-bg, darken($panel-bg, 10%), lighten($panel-bg, 30%), 50%);
 
-				#footer &{
+				#footer & {
 					border-color: transparent;
 				}
 
 				td {
 					padding: .5em 0;
-					border: 1px solid $primary-color;
+					border: 1px solid contrast-color($panel-bg, darken($panel-bg, 10%), lighten($panel-bg, 30%), 50%);
 					border-bottom: none;
-					color: $body-font-color;
+					//color: $body-font-color;
 					background-color: $panel-bg;
 
 					#footer &{
-						border-color: $transparent-neutral-color;
+						border-color: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 30%), 50%);
 						background-color: transparent;
-						color: white;
+						//color: white;
 					}
 				}
 
@@ -275,7 +285,11 @@
 					}
 
 					a {
-						color: #fff;
+						color: contrast-color($primary-color, $body-font-color, lighten($primary-color, 60%), 50%);
+
+						#footer & {
+							color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 60%), 50%);
+						}
 					}
 				}
 			}
@@ -369,10 +383,10 @@
 		}
 
 		button {
-			background-color: darken($primary-color,10%);
+			background-color: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 30%), 50%);
 
 			&:hover {
-				background-color: darken($primary-color,20%)
+				background-color: $primary-color;
 			}
 		}
 	}
@@ -399,7 +413,7 @@
 		//border-bottom: 1px solid contrast-color($neutral-color, darken($neutral-color,5%), lighten($neutral-color,5%), 50%);
 
 		a {
-			border-bottom: 1px solid rgba($body-font-color, 0.4);
+			border-bottom: 1px solid contrast-color($body-bg, lighten($body-font-color, 40%), lighten($body-bg, 20%), 50%);;
 		}
 
 		&:last-child {
