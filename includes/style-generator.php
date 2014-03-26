@@ -1,17 +1,31 @@
 <?php
 
+$appearance = array(
+	"name" => "appearance",
+	"title" => __("Appearance",'uplifted'),
+	'sections' => array(
+		'colors' => array(
+			'name' => 'colors',
+			'title' => __( 'Colors', 'uplifted' ),
+			'description' => __( 'Custom colors for this theme.','uplifted' )
+		)
+	)
+);
+
+register_theme_option_tab($appearance);
+
 /**
  * Custom color option array.
  */
 $color_options = array(
 	"enable_custom_styles" => array(
-		"tab" => "general",
+		"tab" => "appearance",
 		"name" => "enable_custom_styles",
 		"title" => "Enable Custom Styles",
 		"description" => __( "Do you want to enable custom styles?", 'uplifted' ),
-		"section" => "appearance",
+		"section" => "colors",
 		"since" => "1.0",
-		"id" => "appearance",
+		"id" => "colors",
 		"type" => "select",
 		"default" => "yes",
 		"valid_options" => array(
@@ -26,13 +40,13 @@ $color_options = array(
 		),
 	),
 	"color_scheme_toggle" => array(
-		"tab" => "general",
+		"tab" => "appearance",
 		"name" => "color_scheme_toggle",
 		"title" => "Custom Color Type",
 		"description" => __( "Do you want to select a pre-defined color scheme or define your own colors?", 'uplifted' ),
-		"section" => "appearance",
+		"section" => "colors",
 		"since" => "1.0",
-		"id" => "appearance",
+		"id" => "colors",
 		"type" => "radio",
 		"default" => "yes",
 		"valid_options" => array(
@@ -53,125 +67,156 @@ $color_options = array(
  */
 register_theme_options($color_options);
 
-function uplifted_enable_custom_styles(){
 
-	$up_options = upfw_get_options();
-
-	if( $up_options->enable_custom_styles == 'yes' ){
-
-		/**
-		 * Custom color option array.
-		 */
-		$custom_styles = array(
-			"enable_custom_styles" => array(
-				"tab" => "general",
-				"name" => "enable_custom_styles",
-				"title" => "Enable Custom Styles",
-				"description" => __( "Do you want to enable custom styles?", 'uplifted' ),
-				"section" => "appearance",
-				"since" => "1.0",
-				"id" => "appearance",
-				"type" => "select",
-				"default" => "yes",
-				"valid_options" => array(
-					"yes" => array(
-						"name" => "yes",
-						"title" => __( "Yes", 'uplifted' )
-					),
-					"no" => array(
-						"name" => "no",
-						"title" => __( "No", 'uplifted' )
-					),
+/**
+ * Custom color option array.
+ */
+$custom_styles = array(
+	"color_schemes" => array(
+		"tab" => "appearance",
+		"name" => "color_schemes",
+		"title" => "Color Schemes",
+		"description" => __( "Select the color scheme you want to use.", 'uplifted' ),
+		"section" => "colors",
+		"since" => "1.0",
+		"id" => "colors",
+		"type" => "colors",
+		"default" => "scheme_1",
+		"valid_options" => array(
+			"scheme_1" => array(
+				"name" => "scheme_1",
+				"title" => __( "Color Scheme #1", 'uplifted' ),
+				"colors" => array(
+					"primary"	=> '#0fcfc5',
+					"secondary"	=> '#e8665a',
+					"tertiary"	=> '#ece67a',
+					"panel"	=> '#ffffff',
+					"background"	=> '#f8f9fb',
 				)
 			),
-			"color_schemes" => array(
-				"tab" => "general",
-				"name" => "color_schemes",
-				"title" => "Color Schemes",
-				"description" => __( "Select the color scheme you want to use.", 'uplifted' ),
-				"section" => "appearance",
-				"since" => "1.0",
-				"id" => "appearance",
-				"type" => "colors",
-				"default" => "scheme_1",
-				"valid_options" => array(
-					"scheme_1" => array(
-						"name" => "scheme_1",
-						"title" => __( "Color Scheme #1", 'uplifted' ),
-						"colors" => array(
-							"primary"	=> '#0fcfc5',
-							"secondary"	=> '#e8665a',
-							"tertiary"	=> '#ece67a',
-							"panel"	=> '#fff',
-							"background"	=> '#f8f9fb',
-						)
-					),
-					"scheme_2" => array(
-						"name" => "scheme_2",
-						"title" => __( "Color Scheme #2", 'uplifted' ),
-						"colors" => array(
-							"primary"	=> '#333333',
-							"secondary"	=> '#c3d47f',
-							"tertiary"	=> '#999999',
-							"panel"	=> '#555555',
-							"background"	=> '#333333',
-						)
-					),
-					"scheme_3" => array(
-						"name" => "scheme_3",
-						"title" => __( "Color Scheme #3", 'uplifted' ),
-						"colors" => array(
-							"primary"	=> '#F7B928',
-							"secondary"	=> '#54786f',
-							"tertiary"	=> 'green',
-							"panel"	=> '#b1b36b',
-							"background"	=> '#1b5469',
-						)
-					),
-					"scheme_4" => array(
-						"name" => "scheme_4",
-						"title" => __( "Color Scheme #4", 'uplifted' ),
-						"colors" => array(
-							"primary"	=> '#4e526a',
-							"secondary"	=> '#d97159',
-							"tertiary"	=> 'green',
-							"panel"	=> '#ebe9e7',
-							"background"	=> '#f7f6f5',
-						)
-					),
-					"scheme_5" => array(
-						"name" => "scheme_5",
-						"title" => __( "Color Scheme #5", 'uplifted' ),
-						"colors" => array(
-							"primary"	=> '#f1e19f',
-							"secondary"	=> '#d2d9e1',
-							"tertiary"	=> 'pink',
-							"panel"	=> '#ebe9e7',
-							"background"	=> '#fbfbfb',
-						)
-					),
-					"scheme_6" => array(
-						"name" => "scheme_6",
-						"title" => __( "Color Scheme #6", 'uplifted' ),
-						"colors" => array(
-							"primary"	=> '#e65e2d',
-							"secondary"	=> '#ae956b',
-							"tertiary"	=> '#222',
-							"panel"	=> '#efefef',
-							"background"	=> '#e1dfe0',
-						)
-					)
+			"scheme_2" => array(
+				"name" => "scheme_2",
+				"title" => __( "Color Scheme #2", 'uplifted' ),
+				"colors" => array(
+					"primary"	=> '#333333',
+					"secondary"	=> '#c3d47f',
+					"tertiary"	=> '#999999',
+					"panel"	=> '#555555',
+					"background"	=> '#333333',
+				)
+			),
+			"scheme_3" => array(
+				"name" => "scheme_3",
+				"title" => __( "Color Scheme #3", 'uplifted' ),
+				"colors" => array(
+					"primary"	=> '#F7B928',
+					"secondary"	=> '#54786f',
+					"tertiary"	=> 'green',
+					"panel"	=> '#b1b36b',
+					"background"	=> '#1b5469',
+				)
+			),
+			"scheme_4" => array(
+				"name" => "scheme_4",
+				"title" => __( "Color Scheme #4", 'uplifted' ),
+				"colors" => array(
+					"primary"	=> '#4e526a',
+					"secondary"	=> '#d97159',
+					"tertiary"	=> 'green',
+					"panel"	=> '#ebe9e7',
+					"background"	=> '#f7f6f5',
+				)
+			),
+			"scheme_5" => array(
+				"name" => "scheme_5",
+				"title" => __( "Color Scheme #5", 'uplifted' ),
+				"colors" => array(
+					"primary"	=> '#f1e19f',
+					"secondary"	=> '#d2d9e1',
+					"tertiary"	=> 'pink',
+					"panel"	=> '#ebe9e7',
+					"background"	=> '#fbfbfb',
+				)
+			),
+			"scheme_6" => array(
+				"name" => "scheme_6",
+				"title" => __( "Color Scheme #6", 'uplifted' ),
+				"colors" => array(
+					"primary"	=> '#e65e2d',
+					"secondary"	=> '#ae956b',
+					"tertiary"	=> '#222',
+					"panel"	=> '#efefef',
+					"background"	=> '#e1dfe0',
 				)
 			)
-		);
+		)
+	)
+);
 
-		register_theme_options($custom_styles);
+register_theme_options($custom_styles);
 
-	}
+/**
+ * Custom color option array.
+ */
+$custom_hex_colors = array(
+	"primary_color" => array(
+		"tab" => "appearance",
+		"name" => "primary_color",
+		"title" => "Primary Color",
+		"description" => __( "Select your primary color for this site.", 'uplifted' ),
+		"section" => "colors",
+		"since" => "1.0",
+		"id" => "colors",
+		"type" => "color",
+		"default" => "0fcfc5",
+	),
+	"secondary_color" => array(
+		"tab" => "appearance",
+		"name" => "secondary_color",
+		"title" => "Secondary Color",
+		"description" => __( "Select your secondary color for this site.", 'uplifted' ),
+		"section" => "colors",
+		"since" => "1.0",
+		"id" => "colors",
+		"type" => "color",
+		"default" => "e8665a",
+	),
+	"tertiary_color" => array(
+		"tab" => "appearance",
+		"name" => "tertiary_color",
+		"title" => "Third Color",
+		"description" => __( "Select your third color for this site.", 'uplifted' ),
+		"section" => "colors",
+		"since" => "1.0",
+		"id" => "colors",
+		"type" => "color",
+		"default" => "ece67a",
+	),
+	"panel_color" => array(
+		"tab" => "appearance",
+		"name" => "panel_color",
+		"title" => "Panel Color",
+		"description" => __( "Select your panel color for this site.", 'uplifted' ),
+		"section" => "colors",
+		"since" => "1.0",
+		"id" => "colors",
+		"type" => "color",
+		"default" => "ffffff",
+	),
+	"background_color" => array(
+		"tab" => "appearance",
+		"name" => "background_color",
+		"title" => "Background Color",
+		"description" => __( "Select your background color for this site.", 'uplifted' ),
+		"section" => "colors",
+		"since" => "1.0",
+		"id" => "colors",
+		"type" => "color",
+		"default" => "f8f9fb",
+	),
+);
 
-}
-
-add_action('admin_init','uplifted_enable_custom_styles');
+register_theme_options($custom_hex_colors);
 
 /**
  * Add CSS mime type to allowed upload mime types.
@@ -200,17 +245,29 @@ function uplifted_update_custom_color_vars($variables){
 
 	$color_scheme = $up_options->color_schemes;
 
-	$valid_options = $upfw_option_parameters['color_schemes']['valid_options'];
+	if( $up_options->enable_custom_styles == 'yes' && $up_options->color_scheme_toggle != 'hex' ){
 
-	$colors = $valid_options[$color_scheme]['colors'];
+		$valid_options = $upfw_option_parameters['color_schemes']['valid_options'];
 
-	if( is_array($valid_options) ){
+		$colors = $valid_options[$color_scheme]['colors'];
 
-		$variables .= '$primary-color:' . $colors['primary'] . ';';
-		$variables .= '$secondary-color:' . $colors['secondary'] . ';';
-		$variables .= '$tertiary-color:' . $colors['tertiary'] . ';';
-		$variables .= '$panel-bg:' . $colors['panel'] . ';';
-		$variables .= '$body-bg:' . $colors['background'] . ';';
+		if( is_array($valid_options) ){
+
+			$variables .= '$primary-color:' . $colors['primary'] . ';';
+			$variables .= '$secondary-color:' . $colors['secondary'] . ';';
+			$variables .= '$tertiary-color:' . $colors['tertiary'] . ';';
+			$variables .= '$panel-bg:' . $colors['panel'] . ';';
+			$variables .= '$body-bg:' . $colors['background'] . ';';
+
+		}
+
+	} else if( $up_options->color_scheme_toggle == 'hex' ){
+
+		$variables .= '$primary-color:' . $up_options->primary_color . ';';
+		$variables .= '$secondary-color:' . $up_options->secondary_color . ';';
+		$variables .= '$tertiary-color:' . $up_options->tertiary_color . ';';
+		$variables .= '$panel-bg:' . $up_options->panel_color . ';';
+		$variables .= '$body-bg:' . $up_options->background_color . ';';
 
 	}
 
@@ -533,6 +590,11 @@ class UpThemes_Color_Scheme_Radio_Control extends WP_Customize_Control {
 			wp_enqueue_style(
 				'uplifted-color-schemes',
 				get_template_directory_uri() . '/assets/css/color-schemes.css'
+			);
+
+			wp_enqueue_script(
+				'uplifted-customize-theme',
+				get_template_directory_uri() . '/assets/js/customize-theme.js'
 			);
 		}
 
