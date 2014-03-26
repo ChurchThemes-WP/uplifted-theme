@@ -3,9 +3,9 @@
 #footer {
 	margin: ($panel-margin-bottom * 2) auto 0;
 	padding: ($panel-padding * 1.5) 0;
-	background-color: $primary-color;
-	//color: $neutral-color;
-	color: contrast-color($primary-color, darken($primary-color, 60%), lighten($primary-color, 60%), 50%);
+	//background-color: $primary-color;
+	background-color: contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%), 50%); // set section bg color based off of site background color, either lighten or darken
+	color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 60%), 50%);
 
 	#footer-meta{
 		text-align: center; // center text on mobile
@@ -19,7 +19,7 @@
 
 		a {
 			@include transition(.2s all linear);
-			color: $neutral-color;
+			color: contrast-color($body-bg, lighten($body-font-color, 20%), lighten($body-bg, 50%), 50%);
 
 			&:hover {
 				opacity: .7;
