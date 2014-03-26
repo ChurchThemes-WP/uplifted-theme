@@ -41,7 +41,7 @@
 			a {
 				display: inline-block;
 				padding: .3em 0;
-				color: $body-font-color;
+				color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 60%), 50%);
 				@include transition(200ms all ease-in-out);
 
 				&:hover{
@@ -413,7 +413,7 @@
 		//border-bottom: 1px solid contrast-color($neutral-color, darken($neutral-color,5%), lighten($neutral-color,5%), 50%);
 
 		a {
-			border-bottom: 1px solid contrast-color($body-bg, lighten($body-font-color, 40%), lighten($body-bg, 20%), 50%);;
+			border-bottom: 1px solid contrast-color($body-bg, lighten($body-font-color, 40%), lighten($panel-bg, 20%), 50%);;
 		}
 
 		&:last-child {
