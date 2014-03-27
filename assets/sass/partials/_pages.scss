@@ -168,7 +168,7 @@ body.term-post-format-gallery #content > .panel {
 
   .uplifted-intro-wrapper {
     background-color: contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%), 50%); // set section bg color based off of site background color, either lighten or darken
-    padding: $panel-padding;
+    padding: $panel-padding 0;
     border: $panel-border-size $panel-border-style contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 15%), 50%); 
     border-left: none;
     border-right: none;

@@ -4608,7 +4608,7 @@ body.term-post-format-gallery #content > .panel {
 /* line 169, assets/sass/partials/_pages.scss */
 .page-template-page-templateshomepage-php .uplifted-intro-wrapper {
   background-color: #e8ebf2;
-  padding: 24px;
+  padding: 24px 0;
   border: 1px solid #d8dde8;
   border-left: none;
   border-right: none;
