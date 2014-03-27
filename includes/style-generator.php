@@ -89,7 +89,6 @@ $custom_styles = array(
 				"colors" => array(
 					"primary"	=> '#0fcfc5',
 					"secondary"	=> '#e8665a',
-					"tertiary"	=> '#ece67a',
 					"panel"	=> '#ffffff',
 					"background"	=> '#f8f9fb',
 				)
@@ -100,7 +99,6 @@ $custom_styles = array(
 				"colors" => array(
 					"primary"	=> '#333333',
 					"secondary"	=> '#c3d47f',
-					"tertiary"	=> '#999999',
 					"panel"	=> '#555555',
 					"background"	=> '#333333',
 				)
@@ -111,7 +109,6 @@ $custom_styles = array(
 				"colors" => array(
 					"primary"	=> '#F7B928',
 					"secondary"	=> '#54786f',
-					"tertiary"	=> 'green',
 					"panel"	=> '#b1b36b',
 					"background"	=> '#1b5469',
 				)
@@ -122,7 +119,6 @@ $custom_styles = array(
 				"colors" => array(
 					"primary"	=> '#4e526a',
 					"secondary"	=> '#d97159',
-					"tertiary"	=> 'green',
 					"panel"	=> '#ebe9e7',
 					"background"	=> '#f7f6f5',
 				)
@@ -133,7 +129,6 @@ $custom_styles = array(
 				"colors" => array(
 					"primary"	=> '#f1e19f',
 					"secondary"	=> '#d2d9e1',
-					"tertiary"	=> 'pink',
 					"panel"	=> '#ebe9e7',
 					"background"	=> '#fbfbfb',
 				)
@@ -144,7 +139,6 @@ $custom_styles = array(
 				"colors" => array(
 					"primary"	=> '#e65e2d',
 					"secondary"	=> '#ae956b',
-					"tertiary"	=> '#222',
 					"panel"	=> '#efefef',
 					"background"	=> '#e1dfe0',
 				)
@@ -180,17 +174,6 @@ $custom_hex_colors = array(
 		"id" => "colors",
 		"type" => "color",
 		"default" => "e8665a",
-	),
-	"tertiary_color" => array(
-		"tab" => "appearance",
-		"name" => "tertiary_color",
-		"title" => "Third Color",
-		"description" => __( "Select your third color for this site.", 'uplifted' ),
-		"section" => "colors",
-		"since" => "1.0",
-		"id" => "colors",
-		"type" => "color",
-		"default" => "ece67a",
 	),
 	"panel_color" => array(
 		"tab" => "appearance",
@@ -255,7 +238,6 @@ function uplifted_update_custom_color_vars($variables){
 
 			$variables .= '$primary-color:' . $colors['primary'] . ';';
 			$variables .= '$secondary-color:' . $colors['secondary'] . ';';
-			$variables .= '$tertiary-color:' . $colors['tertiary'] . ';';
 			$variables .= '$panel-bg:' . $colors['panel'] . ';';
 			$variables .= '$body-bg:' . $colors['background'] . ';';
 
@@ -265,7 +247,6 @@ function uplifted_update_custom_color_vars($variables){
 
 		$variables .= '$primary-color:' . $up_options->primary_color . ';';
 		$variables .= '$secondary-color:' . $up_options->secondary_color . ';';
-		$variables .= '$tertiary-color:' . $up_options->tertiary_color . ';';
 		$variables .= '$panel-bg:' . $up_options->panel_color . ';';
 		$variables .= '$body-bg:' . $up_options->background_color . ';';
 
