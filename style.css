@@ -5139,7 +5139,8 @@ img.alignright {
       border-color: #191919;
       color: white;
       -webkit-border-radius: 6px;
-      border-radius: 6px; }
+      border-radius: 6px;
+      color: #cbcbcb; }
       /* line 124, assets/sass/partials/_buttons.scss */
       .uplifted-list-buttons li a:hover, .uplifted-list-buttons li a:focus {
         background-color: #0fcfc5; }
@@ -5147,12 +5148,12 @@ img.alignright {
       .uplifted-list-buttons li a:hover, .uplifted-list-buttons li a:focus {
         color: white; }
 
-/* line 171, assets/sass/partials/_sermons.scss */
+/* line 172, assets/sass/partials/_sermons.scss */
 .single-ctc_sermon .pagination,
 .single-ctc_sermon #comments {
   padding-left: 0; }
   @media screen and (max-width: 768px) {
-    /* line 171, assets/sass/partials/_sermons.scss */
+    /* line 172, assets/sass/partials/_sermons.scss */
     .single-ctc_sermon .pagination,
     .single-ctc_sermon #comments {
       padding-right: 0; } }

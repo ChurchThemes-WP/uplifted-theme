@@ -159,7 +159,8 @@
 
     // style the buttons in media section
     a {
-      @include button($padding:$button-med, $bg:$body-font-color, $radius:true, $full-width:false, $disabled:false, $is-input:false, $is-prefix:false);
+      @include button($padding:$button-med, $bg:contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 20%), 50%), $radius:true, $full-width:false, $disabled:false, $is-input:false, $is-prefix:false);
+      color: contrast-color($panel-bg, lighten($body-font-color, 60%), lighten($panel-bg, 60%), 50%)
     }
 
   }
