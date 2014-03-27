@@ -59,6 +59,10 @@
 	#uplifted-home-bottom-widgets &,
 	#uplifted-sidebar-right & {
 		color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 60%), 50%);
+
+		cite {
+			color: contrast-color($panel-bg, lighten($body-font-color, 20%), lighten($panel-bg, 30%), 50%);
+		}
 	}
 
 	// footer specific uplifted-widget styles
