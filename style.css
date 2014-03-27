@@ -2621,7 +2621,7 @@ small.error {
       .pagination ul li a {
         padding: 1em;
         display: block;
-        color: #b2b2b2; }
+        color: #7f7f7f; }
         /* line 32, assets/sass/partials/_pagination.scss */
         .pagination ul li a:hover {
           background-color: #0fcfc5;
@@ -2656,7 +2656,7 @@ small.error {
 .uplifted-nav-left-right a {
   padding: 1em;
   display: block;
-  color: #b2b2b2; }
+  color: #7f7f7f; }
   /* line 90, assets/sass/partials/_pagination.scss */
   .uplifted-nav-left-right a:hover {
     background-color: #0fcfc5;

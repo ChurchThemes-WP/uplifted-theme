@@ -14,7 +14,7 @@
 .pagination {
 	text-align: center;
 	overflow: auto;
-	background-color: $neutral-color;
+	background-color: $panel-bg;
 	margin-bottom: $panel-margin-bottom;
 	border: $panel-border;
 
@@ -27,7 +27,7 @@
 			a {
 				padding: 1em;
 				display: block;
-				color: contrast-color($neutral-color, lighten($topbar-link-color, 50%), #f2f2f2, 50%);
+				color: contrast-color($panel-bg, lighten($body-font-color, 30%), #f2f2f2, 50%);
 
 				&:hover {
 					background-color: $primary-color;
@@ -85,7 +85,7 @@
 	a {
 		padding: 1em;
 		display: block;
-		color: contrast-color($neutral-color, lighten($topbar-link-color, 50%), #f2f2f2, 50%);
+		color: contrast-color($panel-bg, lighten($body-font-color, 30%), #f2f2f2, 50%);
 
 		&:hover {
 			background-color: $primary-color;
