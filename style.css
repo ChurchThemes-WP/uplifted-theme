@@ -2886,50 +2886,50 @@ small.error {
   .uplifted-entry-meta a {
     color: #323232;
     border-bottom: 1px solid #e6e6e6; }
-    /* line 103, assets/sass/partials/_post.scss */
+    /* line 102, assets/sass/partials/_post.scss */
     .uplifted-entry-meta a:hover {
       color: #0fcfc5; }
-  /* line 109, assets/sass/partials/_post.scss */
+  /* line 108, assets/sass/partials/_post.scss */
   .uplifted-entry-meta .genericon, .uplifted-entry-meta #menu-social ul li a, #menu-social ul li .uplifted-entry-meta a {
     font-size: 1.3em;
     position: absolute;
     left: 0;
     top: -2px; }
 
-/* line 117, assets/sass/partials/_post.scss */
+/* line 116, assets/sass/partials/_post.scss */
 .uplifted-entry-title {
   font-weight: 400;
   line-height: 1.2; }
   @media screen and (min-width: 568px) {
-    /* line 117, assets/sass/partials/_post.scss */
+    /* line 116, assets/sass/partials/_post.scss */
     .uplifted-entry-title {
       font-size: 2.125em; } }
 
-/* line 130, assets/sass/partials/_post.scss */
+/* line 129, assets/sass/partials/_post.scss */
 .uplifted-entry-footer .view-details {
   display: inline-block;
   padding: .75em 0; }
-/* line 136, assets/sass/partials/_post.scss */
+/* line 135, assets/sass/partials/_post.scss */
 .uplifted-entry-footer .genericon, .uplifted-entry-footer #menu-social ul li a, #menu-social ul li .uplifted-entry-footer a {
   font-size: 1.3em;
   position: relative;
   top: -1px;
   margin-right: .3em; }
-/* line 143, assets/sass/partials/_post.scss */
+/* line 142, assets/sass/partials/_post.scss */
 .uplifted-entry-footer .genericon-location {
   top: auto; }
-/* line 147, assets/sass/partials/_post.scss */
+/* line 146, assets/sass/partials/_post.scss */
 .uplifted-entry-footer .genericon-cloud-download {
   top: -2px; }
-/* line 151, assets/sass/partials/_post.scss */
+/* line 150, assets/sass/partials/_post.scss */
 .uplifted-entry-footer .genericon-standard {
   font-size: 1.5em; }
 
-/* line 164, assets/sass/partials/_post.scss */
+/* line 163, assets/sass/partials/_post.scss */
 .uplifted-author-box {
   margin: 1.5em 0;
   overflow: auto; }
-  /* line 168, assets/sass/partials/_post.scss */
+  /* line 167, assets/sass/partials/_post.scss */
   .uplifted-author-box .uplifted-author-avatar {
     float: left;
     margin: 0 1em 1em 0;
@@ -2939,12 +2939,12 @@ small.error {
     -ms-border-radius: 1000px;
     -o-border-radius: 1000px;
     border-radius: 1000px; }
-  /* line 177, assets/sass/partials/_post.scss */
+  /* line 176, assets/sass/partials/_post.scss */
   .uplifted-author-box .uplifted-author-content h1 {
     font-size: 1.2em; }
 
 /* Attachment Post */
-/* line 187, assets/sass/partials/_post.scss */
+/* line 186, assets/sass/partials/_post.scss */
 .type-attachment .uplifted-entry-attachment {
   margin: 0 -24px; }
 
@@ -4609,19 +4609,21 @@ body.term-post-format-gallery #content > .panel {
 .page-template-page-templateshomepage-php .uplifted-intro-wrapper {
   background-color: #e8ebf2;
   padding: 24px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #d8dde8;
+  border-left: none;
+  border-right: none;
   color: #323232; }
-/* line 178, assets/sass/partials/_pages.scss */
+/* line 180, assets/sass/partials/_pages.scss */
 .page-template-page-templateshomepage-php #uplifted-intro-inner {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
   width: 100%;
   float: left; }
-/* line 184, assets/sass/partials/_pages.scss */
+/* line 186, assets/sass/partials/_pages.scss */
 .page-template-page-templateshomepage-php #uplifted-intro-inner {
   text-align: center; }
-  /* line 187, assets/sass/partials/_pages.scss */
+  /* line 189, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php #uplifted-intro-inner #uplifted-intro-heading {
     font-size: 2em;
     color: #323232;
@@ -4630,23 +4632,23 @@ body.term-post-format-gallery #content > .panel {
     text-align: center;
     padding-bottom: .3em;
     margin-bottom: 1em; }
-  /* line 197, assets/sass/partials/_pages.scss */
+  /* line 199, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php #uplifted-intro-inner .panel {
     padding-bottom: 1.5em;
     max-width: 800px;
     margin: 0 auto; }
     @media screen and (min-width: 768px) {
-      /* line 197, assets/sass/partials/_pages.scss */
+      /* line 199, assets/sass/partials/_pages.scss */
       .page-template-page-templateshomepage-php #uplifted-intro-inner .panel {
         padding-top: 1.5em; } }
   @media screen and (min-width: 768px) {
-    /* line 207, assets/sass/partials/_pages.scss */
+    /* line 209, assets/sass/partials/_pages.scss */
     .page-template-page-templateshomepage-php #uplifted-intro-inner #uplifted-intro-content {
       font-size: 1.4em; } }
-  /* line 213, assets/sass/partials/_pages.scss */
+  /* line 215, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php #uplifted-intro-inner #uplifted-intro-content p:last-child {
     margin-bottom: 0; }
-/* line 220, assets/sass/partials/_pages.scss */
+/* line 222, assets/sass/partials/_pages.scss */
 .page-template-page-templateshomepage-php .uplifted-highlight {
   margin: 1.875em 0;
   position: relative;
@@ -4654,28 +4656,28 @@ body.term-post-format-gallery #content > .panel {
   padding-right: 0.9375em;
   width: 50%;
   float: left; }
-  /* line 224, assets/sass/partials/_pages.scss */
+  /* line 226, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php .uplifted-highlight a {
     display: block;
     position: relative; }
-  /* line 229, assets/sass/partials/_pages.scss */
+  /* line 231, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php .uplifted-highlight img {
     display: block; }
-/* line 234, assets/sass/partials/_pages.scss */
+/* line 236, assets/sass/partials/_pages.scss */
 .page-template-page-templateshomepage-php .uplifted-caption-image-caption {
   color: #323232; }
   @media screen and (max-width: 640px) {
-    /* line 234, assets/sass/partials/_pages.scss */
+    /* line 236, assets/sass/partials/_pages.scss */
     .page-template-page-templateshomepage-php .uplifted-caption-image-caption {
       padding: 1em; } }
-/* line 242, assets/sass/partials/_pages.scss */
+/* line 244, assets/sass/partials/_pages.scss */
 .page-template-page-templateshomepage-php .slides .uplifted-caption-image-caption {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.6)); }
 @media screen and (min-width: 641px) {
-  /* line 248, assets/sass/partials/_pages.scss */
+  /* line 250, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php .flexslider {
     margin-bottom: 0; }
-  /* line 256, assets/sass/partials/_pages.scss */
+  /* line 258, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php #ctcom-home-highlights {
     width: 100%;
     margin-left: auto;
@@ -4691,7 +4693,7 @@ body.term-post-format-gallery #content > .panel {
     /* line 135, assets/sass/partials/_global.scss */
     .page-template-page-templateshomepage-php #ctcom-home-highlights:after {
       clear: both; }
-  /* line 261, assets/sass/partials/_pages.scss */
+  /* line 263, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php .uplifted-caption-image-caption {
     position: absolute;
     bottom: 0;
@@ -4701,22 +4703,22 @@ body.term-post-format-gallery #content > .panel {
     color: white;
     padding: 20px;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) 35%, rgba(0, 0, 0, 0.1)); }
-    /* line 271, assets/sass/partials/_pages.scss */
+    /* line 273, assets/sass/partials/_pages.scss */
     .page-template-page-templateshomepage-php .uplifted-caption-image-caption .uplifted-caption-image-title {
       color: white;
       margin-bottom: .25em; }
-    /* line 275, assets/sass/partials/_pages.scss */
+    /* line 277, assets/sass/partials/_pages.scss */
     .page-template-page-templateshomepage-php .uplifted-caption-image-caption .uplifted-caption-image-description {
       color: white; }
-  /* line 282, assets/sass/partials/_pages.scss */
+  /* line 284, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .wall {
     width: auto;
     margin: 0 auto; }
-  /* line 287, assets/sass/partials/_pages.scss */
+  /* line 289, assets/sass/partials/_pages.scss */
   .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .uplifted-widget {
     width: 343px;
     margin-bottom: 40px; }
-    /* line 291, assets/sass/partials/_pages.scss */
+    /* line 293, assets/sass/partials/_pages.scss */
     .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .uplifted-widget .uplifted-sermons-widget-entry-icons {
       display: none; } }
 
