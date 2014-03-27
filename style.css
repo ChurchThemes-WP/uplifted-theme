@@ -5089,37 +5089,36 @@ img.alignright {
     margin: 0 0 1.5em;
     padding: 24px;
     background-color: white;
-    border: 1px solid #e6e6e6;
-    box-shadow: 4px 4px 0 0 #e6e6e6; }
-    /* line 121, assets/sass/partials/_sermons.scss */
+    border: 1px solid #e6e6e6; }
+    /* line 120, assets/sass/partials/_sermons.scss */
     .single-sermon-meta-sidebar .uplifted-entry-title-meta ul li {
       float: none;
       border: none; }
-  /* line 128, assets/sass/partials/_sermons.scss */
+  /* line 127, assets/sass/partials/_sermons.scss */
   .single-sermon-meta-sidebar h3 {
     color: #e8665a; }
 
 /* Sermon Media Module */
-/* line 139, assets/sass/partials/_sermons.scss */
+/* line 138, assets/sass/partials/_sermons.scss */
 .uplifted-list-buttons-container {
   margin: .5em 0 2em; }
 
-/* line 143, assets/sass/partials/_sermons.scss */
+/* line 142, assets/sass/partials/_sermons.scss */
 .uplifted-list-buttons {
   margin: 0;
   list-style: none;
   display: inline; }
-  /* line 148, assets/sass/partials/_sermons.scss */
+  /* line 147, assets/sass/partials/_sermons.scss */
   .uplifted-list-buttons:last-child {
     float: right; }
-  /* line 152, assets/sass/partials/_sermons.scss */
+  /* line 151, assets/sass/partials/_sermons.scss */
   .uplifted-list-buttons li {
     display: inline-block;
     margin-right: .5em; }
-    /* line 156, assets/sass/partials/_sermons.scss */
+    /* line 155, assets/sass/partials/_sermons.scss */
     .uplifted-list-buttons li:last-child {
       margin-right: 0; }
-    /* line 161, assets/sass/partials/_sermons.scss */
+    /* line 160, assets/sass/partials/_sermons.scss */
     .uplifted-list-buttons li a {
       cursor: "pointer";
       font-family: inherit;
@@ -5148,12 +5147,12 @@ img.alignright {
       .uplifted-list-buttons li a:hover, .uplifted-list-buttons li a:focus {
         color: white; }
 
-/* line 172, assets/sass/partials/_sermons.scss */
+/* line 171, assets/sass/partials/_sermons.scss */
 .single-ctc_sermon .pagination,
 .single-ctc_sermon #comments {
   padding-left: 0; }
   @media screen and (max-width: 768px) {
-    /* line 172, assets/sass/partials/_sermons.scss */
+    /* line 171, assets/sass/partials/_sermons.scss */
     .single-ctc_sermon .pagination,
     .single-ctc_sermon #comments {
       padding-right: 0; } }
