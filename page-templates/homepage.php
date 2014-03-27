@@ -4,8 +4,6 @@
 // No direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-wp_enqueue_script('jquery-masonry');
-
 // Header
 get_header();
 
@@ -89,18 +87,7 @@ while ( have_posts() ) : the_post();
 
 	<?php endif; ?>
 
-	<?php get_sidebar( 'home-bottom' ); ?>
-
-	<script>
-	jQuery(document).ready(function($){
-		$('.wall').masonry({
-			"columnWidth"	: Number( $('.uplifted-widget').get(0).width ),
-  			"itemSelector"	: '.uplifted-widget',
-  			"gutterWidth"	: 30,
-  			"isFitWidth"	: true
-		});
-	})
-	</script>
+	<?php get_sidebar( 'home-bottom' ); ?>	
 
 </div>
 
