@@ -54,7 +54,7 @@
           }
 
           a {
-            color: $body-font-color;
+            color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 70%), 50%);
             border: none;
 
             &:hover {
