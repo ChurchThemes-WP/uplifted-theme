@@ -581,6 +581,7 @@
 
 	a {
 		@include button;
+		color: contrast-color($primary-color, $body-font-color, lighten($primary-color, 70%), 10%) !important;
 
 		&:hover {
 			background-color: $secondary-color;

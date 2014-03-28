@@ -3986,14 +3986,15 @@ p.comment-form-comment label.error {
     border-color: #0c9f98;
     color: white;
     -webkit-border-radius: 6px;
-    border-radius: 6px; }
+    border-radius: 6px;
+    color: #323232 !important; }
     /* line 124, assets/sass/partials/_buttons.scss */
     .uplifted-giving-widget-button a:hover, .uplifted-giving-widget-button a:focus {
       background-color: #0fcfc5; }
     /* line 136, assets/sass/partials/_buttons.scss */
     .uplifted-giving-widget-button a:hover, .uplifted-giving-widget-button a:focus {
       color: white; }
-    /* line 585, assets/sass/partials/_widgets.scss */
+    /* line 586, assets/sass/partials/_widgets.scss */
     .uplifted-giving-widget-button a:hover {
       background-color: #e8665a; }
 
