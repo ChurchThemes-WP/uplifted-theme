@@ -107,10 +107,10 @@ $custom_styles = array(
 				"name" => "scheme_3",
 				"title" => __( "Color Scheme #3", 'uplifted' ),
 				"colors" => array(
-					"primary"	=> '#F7B928',
-					"secondary"	=> '#54786f',
-					"panel"	=> '#b1b36b',
-					"background"	=> '#1b5469',
+					"primary"	=> '#63545e',
+					"secondary"	=> '#e2837a',
+					"panel"	=> '#f5f5e9',
+					"background"	=> '#a7ac98',
 				)
 			),
 			"scheme_4" => array(
