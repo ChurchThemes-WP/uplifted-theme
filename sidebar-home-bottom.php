@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 	<div id="uplifted-home-bottom-widgets">
 
-		<div class="wall">
+		<div class="row">
 
 			<?php dynamic_sidebar( 'ctcom-home-bottom' ); ?>
 

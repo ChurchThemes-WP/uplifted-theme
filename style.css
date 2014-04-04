@@ -4592,17 +4592,9 @@ body.term-post-format-gallery #content > .panel {
     /* line 277, assets/sass/partials/_pages.scss */
     .page-template-page-templateshomepage-php .uplifted-caption-image-caption .uplifted-caption-image-description {
       color: white; }
-  /* line 284, assets/sass/partials/_pages.scss */
-  .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .wall {
-    width: auto;
-    margin: 0 auto; }
-  /* line 289, assets/sass/partials/_pages.scss */
-  .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .uplifted-widget {
-    width: 343px;
-    margin-bottom: 40px; }
-    /* line 293, assets/sass/partials/_pages.scss */
-    .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .uplifted-widget .uplifted-sermons-widget-entry-icons {
-      display: none; } }
+  /* line 294, assets/sass/partials/_pages.scss */
+  .page-template-page-templateshomepage-php #uplifted-home-bottom-widgets .uplifted-widget .uplifted-sermons-widget-entry-icons {
+    display: none; } }
 
 /* Post */
 /* line 20, assets/sass/partials/_post.scss */

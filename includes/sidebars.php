@@ -84,8 +84,8 @@ function uplifted_register_sidebars() {
 		'id'			=> 'ctcom-home-bottom',
 		'name'			=> _x( 'Homepage Bottom', 'widget area', 'uplifted' ),
 		'description' 	=> __( 'These show at the bottom of the homepage.', 'uplifted' ),
-		'before_widget'	=> '<section id="%1$s" class="uplifted-widget uplifted-home-widget %2$s">',
-		'after_widget'	=> '</section>',
+		'before_widget'	=> '<div class="large-4 column"><section id="%1$s" class="uplifted-widget uplifted-home-widget %2$s">',
+		'after_widget'	=> '</section></div>',
 		'before_title' 	=> '<h1 class="uplifted-widget-title">',
 		'after_title' 	=> '</h1>',
 	) );
