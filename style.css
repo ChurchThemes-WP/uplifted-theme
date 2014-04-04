@@ -1,11 +1,11 @@
 /*
 Syntax error: Invalid CSS after "  }": expected selector or at-rule, was "}"
-        on line 285 of /Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/partials/_pages.scss
+        on line 284 of /Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/partials/_pages.scss
         from line 19 of /Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/partials/_all.scss
         from line 14 of /Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/style.scss
 
 Backtrace:
-/Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/partials/_pages.scss:285
+/Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/partials/_pages.scss:284
 /Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/partials/_all.scss:19
 /Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/style.scss:14
 /Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:1148:in `expected'
@@ -85,4 +85,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"  }\": expected selector or at-rule, was \"}\"\A         on line 285 of /Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/partials/_pages.scss\A         from line 19 of /Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/partials/_all.scss\A         from line 14 of /Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/style.scss"; }
+  content: "Syntax error: Invalid CSS after \"  }\": expected selector or at-rule, was \"}\"\A         on line 284 of /Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/partials/_pages.scss\A         from line 19 of /Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/partials/_all.scss\A         from line 14 of /Users/calebsylvest/Sites/upthemes-dev-server/www/upthemes.com/demos/wp-content/themes/uplifted/assets/sass/style.scss"; }

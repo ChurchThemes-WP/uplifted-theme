@@ -493,24 +493,24 @@ body {
     body {
       font-size: 100%; } }
 
-/* line 20, assets/sass/partials/_type.scss */
+/* line 21, assets/sass/partials/_type.scss */
 ::-moz-selection {
   background: #0fcfc5;
   color: #fff;
   text-shadow: none; }
 
-/* line 21, assets/sass/partials/_type.scss */
+/* line 22, assets/sass/partials/_type.scss */
 ::selection {
   background: #0fcfc5;
   color: #fff;
   text-shadow: none; }
 
-/* line 131, assets/sass/partials/_type.scss */
+/* line 132, assets/sass/partials/_type.scss */
 p.lead {
   font-size: 1.21875em;
   line-height: 1.6; }
 
-/* line 136, assets/sass/partials/_type.scss */
+/* line 137, assets/sass/partials/_type.scss */
 .subheader {
   line-height: 1.4;
   color: #7f7f7f;
@@ -519,7 +519,7 @@ p.lead {
   margin-bottom: 0.5em; }
 
 /* Typography resets */
-/* line 165, assets/sass/partials/_type.scss */
+/* line 166, assets/sass/partials/_type.scss */
 div,
 dl,
 dt,
@@ -544,7 +544,7 @@ td {
   direction: ltr; }
 
 /* Default Link Styles */
-/* line 172, assets/sass/partials/_type.scss */
+/* line 173, assets/sass/partials/_type.scss */
 a {
   color: #e8665a;
   text-decoration: none;
@@ -553,15 +553,15 @@ a {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear; }
-  /* line 179, assets/sass/partials/_type.scss */
+  /* line 180, assets/sass/partials/_type.scss */
   a:hover, a:focus {
     color: #0fcfc5; }
-  /* line 181, assets/sass/partials/_type.scss */
+  /* line 182, assets/sass/partials/_type.scss */
   a img {
     border: none; }
 
 /* Default paragraph styles */
-/* line 185, assets/sass/partials/_type.scss */
+/* line 186, assets/sass/partials/_type.scss */
 p {
   font-family: inherit;
   font-weight: 100;
@@ -569,14 +569,14 @@ p {
   line-height: 1.45;
   margin-bottom: 1em;
   text-rendering: optimizeLegibility; }
-  /* line 195, assets/sass/partials/_type.scss */
+  /* line 196, assets/sass/partials/_type.scss */
   p aside {
     font-size: 0.875em;
     line-height: 1.35;
     font-style: italic; }
 
 /* Default header styles */
-/* line 203, assets/sass/partials/_type.scss */
+/* line 204, assets/sass/partials/_type.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", Verdana, Geneva, sans-serif;
   font-style: normal;
@@ -585,37 +585,37 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
   line-height: 1.4;
   font-weight: normal; }
-  /* line 212, assets/sass/partials/_type.scss */
+  /* line 213, assets/sass/partials/_type.scss */
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 60%;
     color: #7f7f7f;
     line-height: 0; }
 
-/* line 219, assets/sass/partials/_type.scss */
+/* line 220, assets/sass/partials/_type.scss */
 h1 {
   font-size: 1.5em; }
 
-/* line 220, assets/sass/partials/_type.scss */
+/* line 221, assets/sass/partials/_type.scss */
 h2 {
   font-size: 1.125em; }
 
-/* line 221, assets/sass/partials/_type.scss */
+/* line 222, assets/sass/partials/_type.scss */
 h3 {
   font-size: 1.1875em; }
 
-/* line 222, assets/sass/partials/_type.scss */
+/* line 223, assets/sass/partials/_type.scss */
 h4 {
   font-size: 1.0625em; }
 
-/* line 223, assets/sass/partials/_type.scss */
+/* line 224, assets/sass/partials/_type.scss */
 h5 {
   font-size: 1.125em; }
 
-/* line 224, assets/sass/partials/_type.scss */
+/* line 225, assets/sass/partials/_type.scss */
 h6 {
   font-size: 1em; }
 
-/* line 228, assets/sass/partials/_type.scss */
+/* line 229, assets/sass/partials/_type.scss */
 hr {
   border: solid #dddddd;
   border-width: 1px 0 0;
@@ -624,31 +624,31 @@ hr {
   height: 0; }
 
 /* Helpful Typography Defaults */
-/* line 238, assets/sass/partials/_type.scss */
+/* line 239, assets/sass/partials/_type.scss */
 em,
 i {
   font-style: italic;
   line-height: inherit; }
 
-/* line 244, assets/sass/partials/_type.scss */
+/* line 245, assets/sass/partials/_type.scss */
 strong,
 b {
   font-weight: bold;
   line-height: inherit; }
 
-/* line 249, assets/sass/partials/_type.scss */
+/* line 250, assets/sass/partials/_type.scss */
 small {
   font-size: 60%;
   line-height: inherit; }
 
-/* line 254, assets/sass/partials/_type.scss */
+/* line 255, assets/sass/partials/_type.scss */
 code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: bold;
   color: #de734d; }
 
 /* Lists */
-/* line 263, assets/sass/partials/_type.scss */
+/* line 264, assets/sass/partials/_type.scss */
 ul,
 ol,
 dl {
@@ -658,52 +658,52 @@ dl {
   list-style-position: outside;
   font-family: inherit; }
 
-/* line 271, assets/sass/partials/_type.scss */
+/* line 272, assets/sass/partials/_type.scss */
 ul, ol {
   margin-left: 1.25em; }
 
 /* Unordered Lists */
-/* line 279, assets/sass/partials/_type.scss */
+/* line 280, assets/sass/partials/_type.scss */
 ul li ul,
 ul li ol {
   margin-left: 1.25em;
   margin-bottom: 0;
   font-size: 1em;
   /* Override nested font-size change */ }
-/* line 288, assets/sass/partials/_type.scss */
+/* line 289, assets/sass/partials/_type.scss */
 ul.square li ul, ul.circle li ul, ul.disc li ul {
   list-style: inherit; }
-/* line 291, assets/sass/partials/_type.scss */
+/* line 292, assets/sass/partials/_type.scss */
 ul.square {
   list-style-type: square; }
-/* line 292, assets/sass/partials/_type.scss */
+/* line 293, assets/sass/partials/_type.scss */
 ul.circle {
   list-style-type: circle; }
-/* line 293, assets/sass/partials/_type.scss */
+/* line 294, assets/sass/partials/_type.scss */
 ul.disc {
   list-style-type: disc; }
-/* line 294, assets/sass/partials/_type.scss */
+/* line 295, assets/sass/partials/_type.scss */
 ul.no-bullet {
   list-style: none; }
 
 /* Ordered Lists */
-/* line 301, assets/sass/partials/_type.scss */
+/* line 302, assets/sass/partials/_type.scss */
 ol li ul,
 ol li ol {
   margin-left: 1.25em;
   margin-bottom: 0; }
 
 /* Definition Lists */
-/* line 310, assets/sass/partials/_type.scss */
+/* line 311, assets/sass/partials/_type.scss */
 dl dt {
   margin-bottom: 0.3em;
   font-weight: bold; }
-/* line 314, assets/sass/partials/_type.scss */
+/* line 315, assets/sass/partials/_type.scss */
 dl dd {
   margin-bottom: 0.75em; }
 
 /* Abbreviations */
-/* line 319, assets/sass/partials/_type.scss */
+/* line 320, assets/sass/partials/_type.scss */
 abbr,
 acronym {
   text-transform: uppercase;
@@ -712,12 +712,12 @@ acronym {
   border-bottom: 1px dotted #dddddd;
   cursor: "help"; }
 
-/* line 326, assets/sass/partials/_type.scss */
+/* line 327, assets/sass/partials/_type.scss */
 abbr {
   text-transform: none; }
 
 /* Blockquotes */
-/* line 331, assets/sass/partials/_type.scss */
+/* line 332, assets/sass/partials/_type.scss */
 blockquote {
   font-size: 1.5em;
   background-color: #fbfbfb;
@@ -725,35 +725,35 @@ blockquote {
   padding: 24px;
   border-left: 6px solid #0fcfc5;
   color: #656565; }
-  /* line 340, assets/sass/partials/_type.scss */
+  /* line 341, assets/sass/partials/_type.scss */
   blockquote p {
     margin-bottom: 0;
     line-height: 1.3; }
 
-/* line 346, assets/sass/partials/_type.scss */
+/* line 347, assets/sass/partials/_type.scss */
 cite {
   display: block;
   font-size: 0.8125em;
   color: #656565;
   margin: .5em 0; }
-  /* line 351, assets/sass/partials/_type.scss */
+  /* line 352, assets/sass/partials/_type.scss */
   cite:before {
     content: "\2014 \0020"; }
-  /* line 356, assets/sass/partials/_type.scss */
+  /* line 357, assets/sass/partials/_type.scss */
   cite a,
   cite a:visited {
     color: #656565; }
 
 /* Microformats */
-/* line 368, assets/sass/partials/_type.scss */
+/* line 369, assets/sass/partials/_type.scss */
 .vcard li {
   margin: 0;
   display: block; }
 
-/* line 379, assets/sass/partials/_type.scss */
+/* line 380, assets/sass/partials/_type.scss */
 .vevent .summary {
   font-weight: bold; }
-/* line 381, assets/sass/partials/_type.scss */
+/* line 382, assets/sass/partials/_type.scss */
 .vevent abbr {
   cursor: "default";
   text-decoration: none;
@@ -762,23 +762,23 @@ cite {
   padding: 0 0.0625em; }
 
 @media only screen and (min-width: 768px) {
-  /* line 392, assets/sass/partials/_type.scss */
+  /* line 393, assets/sass/partials/_type.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
 
-  /* line 393, assets/sass/partials/_type.scss */
+  /* line 394, assets/sass/partials/_type.scss */
   h1 {
     font-size: 2.125em; }
 
-  /* line 394, assets/sass/partials/_type.scss */
+  /* line 395, assets/sass/partials/_type.scss */
   h2 {
     font-size: 1.75em; }
 
-  /* line 395, assets/sass/partials/_type.scss */
+  /* line 396, assets/sass/partials/_type.scss */
   h3 {
     font-size: 1.5em; }
 
-  /* line 396, assets/sass/partials/_type.scss */
+  /* line 397, assets/sass/partials/_type.scss */
   h4 {
     font-size: 1.375em; } }
 /*
@@ -787,12 +787,12 @@ cite {
  * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
  * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
 */
-/* line 407, assets/sass/partials/_type.scss */
+/* line 408, assets/sass/partials/_type.scss */
 .print-only {
   display: none !important; }
 
 @media print {
-  /* line 409, assets/sass/partials/_type.scss */
+  /* line 410, assets/sass/partials/_type.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -800,73 +800,73 @@ cite {
     box-shadow: none !important;
     text-shadow: none !important; }
 
-  /* line 417, assets/sass/partials/_type.scss */
+  /* line 418, assets/sass/partials/_type.scss */
   a,
   a:visited {
     text-decoration: underline; }
 
-  /* line 418, assets/sass/partials/_type.scss */
+  /* line 419, assets/sass/partials/_type.scss */
   a[href]:after {
     content: " (" attr(href) ")"; }
 
-  /* line 420, assets/sass/partials/_type.scss */
+  /* line 421, assets/sass/partials/_type.scss */
   abbr[title]:after {
     content: " (" attr(title) ")"; }
 
-  /* line 425, assets/sass/partials/_type.scss */
+  /* line 426, assets/sass/partials/_type.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
 
-  /* line 428, assets/sass/partials/_type.scss */
+  /* line 429, assets/sass/partials/_type.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
 
-  /* line 433, assets/sass/partials/_type.scss */
+  /* line 434, assets/sass/partials/_type.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */ }
 
-  /* line 436, assets/sass/partials/_type.scss */
+  /* line 437, assets/sass/partials/_type.scss */
   tr,
   img {
     page-break-inside: avoid; }
 
-  /* line 438, assets/sass/partials/_type.scss */
+  /* line 439, assets/sass/partials/_type.scss */
   img {
     max-width: 100% !important; }
 
   @page {
     margin: 0.5cm; }
 
-  /* line 444, assets/sass/partials/_type.scss */
+  /* line 445, assets/sass/partials/_type.scss */
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
 
-  /* line 450, assets/sass/partials/_type.scss */
+  /* line 451, assets/sass/partials/_type.scss */
   h2,
   h3 {
     page-break-after: avoid; }
 
-  /* line 452, assets/sass/partials/_type.scss */
+  /* line 453, assets/sass/partials/_type.scss */
   .hide-on-print {
     display: none !important; }
 
-  /* line 453, assets/sass/partials/_type.scss */
+  /* line 454, assets/sass/partials/_type.scss */
   .print-only {
     display: block !important; }
 
-  /* line 454, assets/sass/partials/_type.scss */
+  /* line 455, assets/sass/partials/_type.scss */
   .hide-for-print {
     display: none !important; }
 
-  /* line 455, assets/sass/partials/_type.scss */
+  /* line 456, assets/sass/partials/_type.scss */
   .show-for-print {
     display: inherit !important; } }
 /* Wordpress */

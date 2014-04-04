@@ -17,11 +17,9 @@
 	margin-bottom: $panel-margin-bottom;
 	padding: $panel-padding;
 	border: $panel-border;
-	//color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 60%), 50%);
 
 	.uplifted-widget-title {
 		display: inline-block;
-		//color: $body-font-color;
 		color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 60%), 50%);
 		font-family: $body-font-family;
 		font-weight: bold;
@@ -72,7 +70,6 @@
 		background-color: transparent;
 		border-color: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 30%), 50%);
 		border-width: 3px;
-		//box-shadow: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 30%), 50%);
 
 		@media screen and (min-width: $small-screen ) {
 			text-align: left;
@@ -80,7 +77,6 @@
 
 		.uplifted-widget-title {
 			color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 60%), 50%);
-			//border-color: contrast-color($body-bg, lighten($body-font-color, 60%), lighten($body-bg, 30%), 50%);
 			border-color: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 30%), 50%);
 		}
 
@@ -88,7 +84,6 @@
 
 			a {
 				padding: .5em 0;
-				//border-bottom: 1px solid contrast-color($body-bg, lighten($body-font-color, 40%), lighten($body-bg, 20%), 50%);;
 
 				&:hover {
 					padding-left: .8em;
@@ -197,7 +192,6 @@
 			}
 		}
 		#footer & {
-			//color: $neutral-color;
 			color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 50%), 50%);
 
 			a {
@@ -262,13 +256,11 @@
 					padding: .5em 0;
 					border: 1px solid contrast-color($panel-bg, darken($panel-bg, 10%), lighten($panel-bg, 30%), 50%);
 					border-bottom: none;
-					//color: $body-font-color;
 					background-color: $panel-bg;
 
 					#footer &{
 						border-color: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 30%), 50%);
 						background-color: transparent;
-						//color: white;
 					}
 				}
 
@@ -553,7 +545,7 @@
 /* Series */
 
 .uplifted-widget-entry-meta > li.uplifted-sermons-widget-entry-series a {
-	white-space: normal; /* sermon series titles may be longer than sidebar */
+	white-space: normal; // sermon series titles may be longer than sidebar
 }
 
 /* Events Widget */
@@ -581,7 +573,6 @@
 
 	a {
 		@include button;
-		//color: contrast-color($primary-color, $body-font-color, lighten($primary-color, 70%), 10%) !important;
 		color: #fff !important;
 
 		&:hover {
