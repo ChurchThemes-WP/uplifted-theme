@@ -4126,7 +4126,7 @@ html[xmlns] .slides {
 .carousel li {
   margin-right: 5px; }
 
-/* line 108, assets/sass/partials/_flexslider.scss */
+/* line 107, assets/sass/partials/_flexslider.scss */
 .flex-direction-nav a {
   margin: 0;
   z-index: 10;
@@ -4153,10 +4153,10 @@ html[xmlns] .slides {
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
   border-radius: 50px; }
-  /* line 129, assets/sass/partials/_flexslider.scss */
+  /* line 128, assets/sass/partials/_flexslider.scss */
   .flex-direction-nav a.flex-prev {
     left: 10px; }
-  /* line 133, assets/sass/partials/_flexslider.scss */
+  /* line 132, assets/sass/partials/_flexslider.scss */
   .flex-direction-nav a.flex-prev:before {
     margin-right: 6px;
     font-family: "Genericons";
@@ -4164,11 +4164,11 @@ html[xmlns] .slides {
     height: 9px;
     width: 9px;
     content: '\f503'; }
-  /* line 142, assets/sass/partials/_flexslider.scss */
+  /* line 141, assets/sass/partials/_flexslider.scss */
   .flex-direction-nav a.flex-next {
     right: 10px;
     padding: 8px 10px 8px 16px; }
-    /* line 146, assets/sass/partials/_flexslider.scss */
+    /* line 145, assets/sass/partials/_flexslider.scss */
     .flex-direction-nav a.flex-next:after {
       margin-left: 6px;
       font-family: "Genericons";
@@ -4177,36 +4177,36 @@ html[xmlns] .slides {
       width: 9px;
       content: '\f501'; }
 
-/* line 158, assets/sass/partials/_flexslider.scss */
+/* line 157, assets/sass/partials/_flexslider.scss */
 .flex-direction-nav .flex-prev {
   text-align: right; }
 
-/* line 159, assets/sass/partials/_flexslider.scss */
+/* line 158, assets/sass/partials/_flexslider.scss */
 .flex-direction-nav .flex-next {
   text-align: left; }
 
-/* line 160, assets/sass/partials/_flexslider.scss */
+/* line 159, assets/sass/partials/_flexslider.scss */
 .flexslider:hover .flex-prev {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7; }
 
-/* line 161, assets/sass/partials/_flexslider.scss */
+/* line 160, assets/sass/partials/_flexslider.scss */
 .flexslider:hover .flex-next {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7; }
 
-/* line 162, assets/sass/partials/_flexslider.scss */
+/* line 161, assets/sass/partials/_flexslider.scss */
 .flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
   opacity: 1;
   color: #323232; }
 
-/* line 163, assets/sass/partials/_flexslider.scss */
+/* line 162, assets/sass/partials/_flexslider.scss */
 .flex-direction-nav .flex-disabled {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   cursor: default; }
 
-/* line 169, assets/sass/partials/_flexslider.scss */
+/* line 168, assets/sass/partials/_flexslider.scss */
 .flex-control-nav {
   position: absolute;
   left: 50%;
@@ -4218,12 +4218,12 @@ html[xmlns] .slides {
   transform: translateX(-50%);
   z-index: 40;
   margin: 0; }
-  /* line 177, assets/sass/partials/_flexslider.scss */
+  /* line 176, assets/sass/partials/_flexslider.scss */
   .flex-control-nav li {
     margin: 0 3px;
     display: inline-block;
     zoom: 1; }
-    /* line 182, assets/sass/partials/_flexslider.scss */
+    /* line 181, assets/sass/partials/_flexslider.scss */
     .flex-control-nav li a {
       width: 11px;
       height: 11px;
@@ -4237,77 +4237,77 @@ html[xmlns] .slides {
       -ms-border-radius: 20px;
       -o-border-radius: 20px;
       border-radius: 20px; }
-      /* line 192, assets/sass/partials/_flexslider.scss */
+      /* line 191, assets/sass/partials/_flexslider.scss */
       .flex-control-nav li a:hover {
         background: #fff;
         background: rgba(255, 255, 255, 0.8); }
-      /* line 197, assets/sass/partials/_flexslider.scss */
+      /* line 196, assets/sass/partials/_flexslider.scss */
       .flex-control-nav li a.flex-active {
         background: #fff;
         cursor: default; }
 
-/* line 205, assets/sass/partials/_flexslider.scss */
+/* line 204, assets/sass/partials/_flexslider.scss */
 .flex-control-thumbs {
   margin: 5px 0 0;
   position: static;
   overflow: hidden; }
-  /* line 210, assets/sass/partials/_flexslider.scss */
+  /* line 209, assets/sass/partials/_flexslider.scss */
   .flex-control-thumbs li {
     width: 25%;
     float: left;
     margin: 0; }
-  /* line 216, assets/sass/partials/_flexslider.scss */
+  /* line 215, assets/sass/partials/_flexslider.scss */
   .flex-control-thumbs img {
     width: 100%;
     display: block;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
     opacity: 0.7;
     cursor: pointer; }
-    /* line 222, assets/sass/partials/_flexslider.scss */
+    /* line 221, assets/sass/partials/_flexslider.scss */
     .flex-control-thumbs img:hover {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1; }
-  /* line 227, assets/sass/partials/_flexslider.scss */
+  /* line 226, assets/sass/partials/_flexslider.scss */
   .flex-control-thumbs .flex-active {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     cursor: default; }
 
-/* line 233, assets/sass/partials/_flexslider.scss */
+/* line 232, assets/sass/partials/_flexslider.scss */
 .slide-text {
   z-index: 999;
   -webkit-transition: 200ms opacity ease-in-out;
   -moz-transition: 200ms opacity ease-in-out;
   -o-transition: 200ms opacity ease-in-out;
   transition: 200ms opacity ease-in-out; }
-  /* line 237, assets/sass/partials/_flexslider.scss */
+  /* line 236, assets/sass/partials/_flexslider.scss */
   .slide-text .slide-title {
     margin: 0; }
-  /* line 242, assets/sass/partials/_flexslider.scss */
+  /* line 241, assets/sass/partials/_flexslider.scss */
   .slide-text .slide-title a,
   .slide-text p {
     display: block;
     padding: .3em .8em; }
-  /* line 247, assets/sass/partials/_flexslider.scss */
+  /* line 246, assets/sass/partials/_flexslider.scss */
   .slide-text .slide-title a {
     background-color: #0fcfc5;
     color: blue; }
-  /* line 252, assets/sass/partials/_flexslider.scss */
+  /* line 251, assets/sass/partials/_flexslider.scss */
   .slide-text p {
     background-color: rgba(50, 50, 48, 0.8);
     color: white;
     padding: 1em; }
 
-/* line 260, assets/sass/partials/_flexslider.scss */
+/* line 259, assets/sass/partials/_flexslider.scss */
 .flex-direction-nav {
   display: none; }
 
 @media screen and (min-width: 768px) {
-  /* line 266, assets/sass/partials/_flexslider.scss */
+  /* line 265, assets/sass/partials/_flexslider.scss */
   .flex-direction-nav {
     display: block; }
 
-  /* line 270, assets/sass/partials/_flexslider.scss */
+  /* line 269, assets/sass/partials/_flexslider.scss */
   .slide-text {
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
@@ -4317,24 +4317,24 @@ html[xmlns] .slides {
     position: absolute;
     top: 60%;
     left: 50%; }
-    /* line 276, assets/sass/partials/_flexslider.scss */
+    /* line 275, assets/sass/partials/_flexslider.scss */
     .slide-text .slide-title {
       margin-bottom: .1em; }
-    /* line 281, assets/sass/partials/_flexslider.scss */
+    /* line 280, assets/sass/partials/_flexslider.scss */
     .slide-text .slide-title a,
     .slide-text p {
       display: inline-block; }
-    /* line 288, assets/sass/partials/_flexslider.scss */
+    /* line 287, assets/sass/partials/_flexslider.scss */
     .slide-text p {
       max-width: 55%; } }
 @media screen and (max-width: 860px) {
-  /* line 296, assets/sass/partials/_flexslider.scss */
+  /* line 295, assets/sass/partials/_flexslider.scss */
   .flex-direction-nav .flex-prev {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     left: 10px; }
 
-  /* line 297, assets/sass/partials/_flexslider.scss */
+  /* line 296, assets/sass/partials/_flexslider.scss */
   .flex-direction-nav .flex-next {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
