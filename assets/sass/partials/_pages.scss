@@ -251,12 +251,7 @@ body.term-post-format-gallery #content > .panel {
       margin-bottom: 0;
     }
 
-    //#uplifted-slider {
-    //  @include grid-column(8);
-    //}
-
     #ctcom-home-highlights {
-      //@include grid-column(4);
       @include grid-row;
     }
 
@@ -280,16 +275,6 @@ body.term-post-format-gallery #content > .panel {
     }
 
     #uplifted-home-bottom-widgets {
-
-      .wall {
-        //width: auto;
-        //margin: 0 auto;
-      }
-
-      .uplifted-widget {
-        //width: 343px;
-        //margin-bottom: 40px;
-        //@include grid-column(4);
 
         .uplifted-sermons-widget-entry-icons {
           display: none;
