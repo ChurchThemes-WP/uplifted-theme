@@ -97,7 +97,7 @@ $custom_styles = array(
 				"name" => "scheme_2",
 				"title" => __( "Color Scheme #2", 'uplifted' ),
 				"colors" => array(
-					"primary"	=> '#333333',
+					"primary"	=> '#acbb70',
 					"secondary"	=> '#c3d47f',
 					"panel"	=> '#555555',
 					"background"	=> '#333333',
@@ -126,16 +126,6 @@ $custom_styles = array(
 			"scheme_5" => array(
 				"name" => "scheme_5",
 				"title" => __( "Color Scheme #5", 'uplifted' ),
-				"colors" => array(
-					"primary"	=> '#f1e19f',
-					"secondary"	=> '#d2d9e1',
-					"panel"	=> '#ebe9e7',
-					"background"	=> '#fbfbfb',
-				)
-			),
-			"scheme_6" => array(
-				"name" => "scheme_6",
-				"title" => __( "Color Scheme #6", 'uplifted' ),
 				"colors" => array(
 					"primary"	=> '#e65e2d',
 					"secondary"	=> '#ae956b',
