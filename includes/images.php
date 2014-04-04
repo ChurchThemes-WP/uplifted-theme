@@ -43,7 +43,7 @@ function uplifted_image_sizes() {
 	 *********************************/
 
 	// Slider Image (Widget)
-	add_image_size( 'uplifted-slide', 1434, 1000, true ); // crop for exact size
+	add_image_size( 'uplifted-slide', 1400, 600, true ); // crop for exact size
 
 	// Custom Post Header Size
 	add_image_size( 'uplifted-post-header', 717, 420, true ); // crop for exact size
