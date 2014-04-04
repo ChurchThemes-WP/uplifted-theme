@@ -3,26 +3,7 @@
 .ctfw-breadcrumbs {
 	font-size: .8em;
 	margin: 1em 1em 2em;
-	//color: lighten($body-font-color,50%);
 	color: contrast-color($body-bg, lighten($body-font-color,50%), lighten($body-bg, 50%));
-
-	/*.ctfw-breadcrumbs-inner{
-		@include grid-column(8,true,true,2);
-		margin-top: 1em;
-		margin-bottom: 1em;
-		font-size: .8em;
-		color: lighten($body-font-color,50%);
-
-		.uplifted-has-sidebar &{
-			@include grid-column(12);
-		}
-	}
-
-	.separator{
-		@extend .genericon;
-		@extend .genericon-collapse;
-		@include rotate(90deg);
-	}*/
 
 	a {
 		//color: lighten($body-font-color,50%);
