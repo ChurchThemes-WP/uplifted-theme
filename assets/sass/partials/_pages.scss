@@ -157,6 +157,15 @@ body.term-post-format-gallery #content > .panel {
   #uplifted-intro,
   #uplifted-home-bottom-widgets {
     @include grid-row;
+
+    & .row > div.large-4:nth-child(3n+1) {
+      clear: both; // clear the floats so we have a working grid of three
+      float: left; // I know this is weird, don't know why any of this is necessary
+    }
+    & .row > div.large-4:last-child {
+      float: left; // yup, this is weird but need to float the last element to overwrite the
+                      // typical way the Foundation grid works
+    }
   }
 
   //#uplifted-slider-boxes,
