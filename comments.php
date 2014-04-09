@@ -54,9 +54,11 @@ if ( ! have_comments() && ! comments_open() ) {
 
 			<ol class="uplifted-comments">
 				<?php
-				wp_list_comments( array(
-					'callback' => 'ctfw_comment' // framework function that loads comment.php for each comment
-				) );
+					wp_list_comments( array(
+						'style'      => 'ol',
+						'short_ping' => true,
+						'avatar_size'=> 34,
+					) );
 				?>
 			</ol>
 
