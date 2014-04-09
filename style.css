@@ -4063,10 +4063,6 @@ html[xmlns] .slides {
   position: relative;
   zoom: 1;
   width: 100%; }
-  @media screen and (min-width: 860px) {
-    /* line 25, assets/sass/partials/_flexslider.scss */
-    .flexslider {
-      min-height: 500px; } }
   /* line 36, assets/sass/partials/_flexslider.scss */
   .flexslider ul {
     margin: 0;
