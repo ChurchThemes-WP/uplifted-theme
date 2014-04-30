@@ -217,3 +217,82 @@ function uplifted_short_content() {
 
 }
 endif;
+
+if ( ! function_exists( 'uplifted_comment' ) ) :
+/**
+ * Template for comments and pingbacks.
+ *
+ * To override this walker in a child theme without modifying the comments template
+ * simply create your own uplifted_comment(), and that function will be used instead.
+ *
+ * Used as a callback by wp_list_comments() for displaying the comments.
+ *
+ */
+function uplifted_comment( $comment, $args, $depth ) {
+	$GLOBALS['comment'] = $comment;
+	switch ( $comment->comment_type ) :
+		case 'pingback' :
+		case 'trackback' :
+	?>
+	<li class="post pingback">
+		<p><?php _e( 'Pingback:', 'uplifted' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'uplifted' ), '<span class="edit-link">', '</span>' ); ?></p>
+	<?php
+			break;
+		default :
+	?>
+	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+		<article id="comment-<?php comment_ID(); ?>" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<?php
+						$avatar_size = 68;
+						if ( '0' != $comment->comment_parent )
+							$avatar_size = 39;
+
+						echo '<div class="avatar-wrap">' . get_avatar( $comment, $avatar_size ) . '</div>';
+					?>
+
+					<?php edit_comment_link( __( 'Edit', 'uplifted' ), '<span style="clear:both;display:block;"></span><div class="edit-link">', '</div>' ); ?>
+				</div><!-- .comment-author .vcard -->
+
+				<?php if ( $comment->comment_approved == '0' ) : ?>
+					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'uplifted' ); ?></em>
+					<br />
+				<?php endif; ?>
+
+			</footer>
+
+			<div class="comment-content">
+				<div class="author-name">
+				<?php
+				/* translators: 1: comment author, 2: date and time */
+				printf( __( '%1$s <span class="says">says:</span>', 'uplifted' ),
+					sprintf( '<span class="fn">%s</span>', get_comment_author_link() ));
+
+				?>
+			</div>
+				<?php
+
+				comment_text();
+
+				printf( __( '%1$s', 'uplifted' ),
+					sprintf( '<a class="comment-date" href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
+						esc_url( get_comment_link( $comment->comment_ID ) ),
+						get_comment_time( 'c' ),
+						/* translators: 1: date, 2: time */
+						sprintf( __( '%1$s at %2$s', 'uplifted' ), get_comment_date(), get_comment_time() )
+					));
+
+				?>
+
+				<div class="reply">
+					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( '<span>&#171;</span> Reply', 'uplifted' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				</div><!-- .reply -->
+			</div>
+		</article><!-- #comment-## -->
+
+	<?php
+			break;
+	endswitch;
+}
+endif; // ends check for uplifted_comment()
