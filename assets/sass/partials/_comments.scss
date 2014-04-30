@@ -32,6 +32,7 @@
 	padding: $panel-padding;
 	margin-bottom: $panel-margin-bottom;
 	position: relative;
+	color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 70%), 50%);
 	@include clearfix;
 
 	> article {
@@ -69,13 +70,17 @@
 		}
 	}
 
-	
-
+	// reply to comment button
 	.reply {
-			position: absolute;
-			top: $panel-padding;
-			right: $panel-padding;
-		}
+		position: absolute;
+		top: $panel-padding;
+		right: $panel-padding;
+	}
+
+	// add some space to comment form when replying to previous comments
+	#respond {
+		margin-top: $panel-margin-bottom;
+	}
 }
 
 /*
@@ -202,21 +207,12 @@
  */
 
 
-/*
-////////////////////////////////////////////////
 	// Cancel Reply Link
-
-	#cancel-comment-reply-link { // this is within #reply-title heading so here we give it regular font
-		position: relative;
-		bottom: 6px;
-		margin-left: 25px;
-		font-size: 0.5em;
-		font-weight: normal;
-		text-transform: none;
+	#cancel-comment-reply-link {
+		margin-left: .5em
 	}
 
 	// Message above form
-
 	#respond .comment-notes,
 	#respond .logged-in-as {
 		margin: 25px 0 35px 0;
@@ -227,13 +223,11 @@
 		}
 
 	// Error Messages
-
 	#respond label.error {
 		font-weight: normal;
 	}
 
 		// Error Message for Name, Email, URL after input
-
 		.comment-form-author label.error,
 		.comment-form-email label.error,
 		.comment-form-url label.error {
@@ -244,7 +238,6 @@
 		}
 
 		// Error Message for Comment
-
 		p.comment-form-comment label.error {
 			position: relative;
 			top: -5px;
@@ -253,13 +246,14 @@
 		}
 
 	// Allowed tags note
-
 	.form-allowed-tags {
-		display: none;
+		font-size: .7em;
+		padding: .8em;
+		background-color: $panel-border-color;
+		@include border-radius(4px);
 	}
 
 	// Submit Button
-
 	#respond .form-submit {
 		margin: 20px 0 0 0;
 
@@ -275,17 +269,13 @@
 			font-weight: bold;
 
 			&:hover{
-				background-color: $primary-color;
+				background-color: $secondary-color;
 			}
 		} 
 	}
 
 // Comments closed message (in place of add form if comments have already been made)
-
 #uplifted-comments-closed {
 	margin-top: 40px;
 	font-style: italic;
 }
-
-////////////////////////////////////////////////
-*/

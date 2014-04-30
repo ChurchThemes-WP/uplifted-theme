@@ -2855,6 +2855,7 @@ small.error {
   padding: 24px;
   margin-bottom: 1.5em;
   position: relative;
+  color: #323232;
   *zoom: 1; }
   /* line 134, assets/sass/partials/_global.scss */
   .comment:before, .comment:after {
@@ -2863,7 +2864,7 @@ small.error {
   /* line 135, assets/sass/partials/_global.scss */
   .comment:after {
     clear: both; }
-  /* line 37, assets/sass/partials/_comments.scss */
+  /* line 38, assets/sass/partials/_comments.scss */
   .comment > article {
     *zoom: 1; }
     /* line 134, assets/sass/partials/_global.scss */
@@ -2874,11 +2875,11 @@ small.error {
     .comment > article:after {
       clear: both; }
   @media screen and (min-width: 768px) {
-    /* line 42, assets/sass/partials/_comments.scss */
+    /* line 43, assets/sass/partials/_comments.scss */
     .comment .comment-meta {
       width: 12%;
       float: left; } }
-  /* line 48, assets/sass/partials/_comments.scss */
+  /* line 49, assets/sass/partials/_comments.scss */
   .comment .comment-meta .avatar {
     margin-bottom: 1em;
     -webkit-border-radius: 6px;
@@ -2887,16 +2888,16 @@ small.error {
     -o-border-radius: 6px;
     border-radius: 6px; }
   @media screen and (min-width: 768px) {
-    /* line 54, assets/sass/partials/_comments.scss */
+    /* line 55, assets/sass/partials/_comments.scss */
     .comment .comment-content {
       width: 85%;
       float: right; } }
-  /* line 61, assets/sass/partials/_comments.scss */
+  /* line 62, assets/sass/partials/_comments.scss */
   .comment .author-name {
     font-size: 1.1em;
     font-weight: bold;
     margin-bottom: .5em; }
-    /* line 67, assets/sass/partials/_comments.scss */
+    /* line 68, assets/sass/partials/_comments.scss */
     .comment .author-name .says {
       display: none; }
   /* line 74, assets/sass/partials/_comments.scss */
@@ -2904,11 +2905,115 @@ small.error {
     position: absolute;
     top: 24px;
     right: 24px; }
+  /* line 81, assets/sass/partials/_comments.scss */
+  .comment #respond {
+    margin-top: 1.5em; }
 
 /*
  * Comment Form
  *
  */
+/* line 211, assets/sass/partials/_comments.scss */
+#cancel-comment-reply-link {
+  margin-left: 0.5em; }
+
+/* line 217, assets/sass/partials/_comments.scss */
+#respond .comment-notes,
+#respond .logged-in-as {
+  margin: 25px 0 35px 0; }
+
+/* line 221, assets/sass/partials/_comments.scss */
+#respond .required {
+  color: #e8665a; }
+
+/* line 226, assets/sass/partials/_comments.scss */
+#respond label.error {
+  font-weight: normal; }
+
+/* line 233, assets/sass/partials/_comments.scss */
+.comment-form-author label.error,
+.comment-form-email label.error,
+.comment-form-url label.error {
+  position: absolute;
+  left: 370px;
+  white-space: nowrap;
+  font-size: 13px; }
+
+/* line 241, assets/sass/partials/_comments.scss */
+p.comment-form-comment label.error {
+  position: relative;
+  top: -5px;
+  display: block;
+  font-size: 13px; }
+
+/* line 249, assets/sass/partials/_comments.scss */
+.form-allowed-tags {
+  font-size: .7em;
+  padding: .8em;
+  background-color: #e6e6e6;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+
+/* line 257, assets/sass/partials/_comments.scss */
+#respond .form-submit {
+  margin: 20px 0 0 0; }
+  /* line 261, assets/sass/partials/_comments.scss */
+  #respond .form-submit button,
+  #respond .form-submit input[type="submit"] {
+    border: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    cursor: "pointer";
+    font-family: inherit;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0 0 0.5em;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding-top: 0.75em;
+    padding-right: 1.5em;
+    padding-bottom: 0.75em;
+    padding-left: 1.5em;
+    font-size: 0.875em;
+    background-color: #0fcfc5;
+    border-color: #0c9f98;
+    color: white;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: 200ms background-color linear;
+    -moz-transition: 200ms background-color linear;
+    -o-transition: 200ms background-color linear;
+    transition: 200ms background-color linear;
+    font-weight: bold; }
+    /* line 124, assets/sass/partials/_buttons.scss */
+    #respond .form-submit button:hover, #respond .form-submit button:focus,
+    #respond .form-submit input[type="submit"]:hover,
+    #respond .form-submit input[type="submit"]:focus {
+      background-color: #0fcfc5; }
+    /* line 136, assets/sass/partials/_buttons.scss */
+    #respond .form-submit button:hover, #respond .form-submit button:focus,
+    #respond .form-submit input[type="submit"]:hover,
+    #respond .form-submit input[type="submit"]:focus {
+      color: white; }
+    /* line 271, assets/sass/partials/_comments.scss */
+    #respond .form-submit button:hover,
+    #respond .form-submit input[type="submit"]:hover {
+      background-color: #e8665a; }
+
+/* line 278, assets/sass/partials/_comments.scss */
+#uplifted-comments-closed {
+  margin-top: 40px;
+  font-style: italic; }
+
 /* Top Bar */
 @media screen and (max-width: 600px) {
   /* line 67, assets/sass/partials/_top-bar.scss */
