@@ -241,7 +241,7 @@ function uplifted_comment( $comment, $args, $depth ) {
 		default :
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		<article id="comment-<?php comment_ID(); ?>" class="comment">
+		<article id="comment-<?php comment_ID(); ?>">
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
 					<?php
@@ -252,7 +252,7 @@ function uplifted_comment( $comment, $args, $depth ) {
 						echo '<div class="avatar-wrap">' . get_avatar( $comment, $avatar_size ) . '</div>';
 					?>
 
-					<?php edit_comment_link( __( 'Edit', 'uplifted' ), '<span style="clear:both;display:block;"></span><div class="edit-link">', '</div>' ); ?>
+					<?php edit_comment_link( __( 'Edit', 'uplifted' ), '<div class="edit-link">', '</div>' ); ?>
 				</div><!-- .comment-author .vcard -->
 
 				<?php if ( $comment->comment_approved == '0' ) : ?>
