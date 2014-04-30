@@ -2857,18 +2857,20 @@ small.error {
       clear: both; }
     /* line 22, assets/sass/partials/_comments.scss */
     .comment .comment-author .avatar {
-      float: left; }
-    /* line 27, assets/sass/partials/_comments.scss */
+      float: left;
+      margin: 0 1em 1em 0; }
+    /* line 28, assets/sass/partials/_comments.scss */
     .comment .comment-author .says {
       display: none; }
-  /* line 32, assets/sass/partials/_comments.scss */
+  /* line 33, assets/sass/partials/_comments.scss */
   .comment .reply {
     position: absolute;
     top: 0;
     right: 0; }
-    /* line 37, assets/sass/partials/_comments.scss */
-    .comment .reply:before {
-      content: "«"; }
+    /* line 39, assets/sass/partials/_comments.scss */
+    .comment .reply a:before {
+      content: "«";
+      margin-right: .2em; }
 
 /*
  * Comment Form

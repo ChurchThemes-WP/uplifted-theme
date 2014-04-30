@@ -21,6 +21,7 @@
 
 		.avatar {
 			float: left;
+			margin: 0 1em 1em 0;
 		}
 
 		// hide the "says:" text added to comments
@@ -34,8 +35,10 @@
 			top: 0;
 			right: 0;
 
-			&:before {
+			// add
+			a:before {
 				content: "«";
+				margin-right: .2em;
 			}
 		}
 }
