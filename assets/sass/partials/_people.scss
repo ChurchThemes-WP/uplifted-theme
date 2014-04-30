@@ -39,3 +39,40 @@
   }
 }
 
+/*
+ *
+ * People Archive Page
+ *
+ */
+
+// we are going to make the page full width all the time
+// with the people blocks set in a two column grid
+.page-template-page-templatespeople-php {
+
+  #uplifted-content {
+    width: 100%;
+  }
+
+  #uplifted-sidebar-right {
+    display: none;
+  }
+
+  // set people blocks in two column grid for desktop
+  @media screen and (min-width: $medium-screen) {
+   
+    #uplifted-loop-after-content > article {
+      width: 48%;
+      float: left;
+      margin: 0 1%;
+
+      &:nth-child(odd) {
+        margin-left: 0;
+        clear: both;
+      }
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+  }
+
+}

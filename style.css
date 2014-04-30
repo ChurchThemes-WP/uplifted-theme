@@ -5159,6 +5159,31 @@ img.alignright {
             padding-bottom: .5em;
             border-bottom: 1px solid #e6e6e6; } }
 
+/*
+ *
+ * People Archive Page
+ *
+ */
+/* line 52, assets/sass/partials/_people.scss */
+.page-template-page-templatespeople-php #uplifted-content {
+  width: 100%; }
+/* line 56, assets/sass/partials/_people.scss */
+.page-template-page-templatespeople-php #uplifted-sidebar-right {
+  display: none; }
+@media screen and (min-width: 860px) {
+  /* line 63, assets/sass/partials/_people.scss */
+  .page-template-page-templatespeople-php #uplifted-loop-after-content > article {
+    width: 48%;
+    float: left;
+    margin: 0 1%; }
+    /* line 68, assets/sass/partials/_people.scss */
+    .page-template-page-templatespeople-php #uplifted-loop-after-content > article:nth-child(odd) {
+      margin-left: 0;
+      clear: both; }
+    /* line 72, assets/sass/partials/_people.scss */
+    .page-template-page-templatespeople-php #uplifted-loop-after-content > article:nth-child(even) {
+      margin-right: 0; } }
+
 /* Location */
 /* line 3, assets/sass/partials/_locations.scss */
 .ctfw-google-map {
