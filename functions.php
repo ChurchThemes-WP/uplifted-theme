@@ -1,4 +1,16 @@
 <?php
+/**
+ * Primary functions.php file
+ *
+ * Loads all our important PHP functions and classes.
+ *
+ * @package WordPress
+ * @subpackage Uplifted
+ * @since 1.0.0
+ */
+
+// Remove Theme Options page to use Theme Customizer method instead
+define('UPFW_NO_THEME_OPTIONS_PAGE',true);
 
 /**
  * automatic updater init
@@ -30,7 +42,7 @@ function uplifted_theme_update_check(){
 }
 add_action('admin_init','uplifted_theme_update_check',1);
 
-/* end Amplify automatic updater init script */
+/* end Uplifted automatic updater init script */
 
 // Grab some necessary PHP includes
 require_once 'framework/framework.php';                              // Church Framework
@@ -170,6 +182,11 @@ function uplifted_register_required_plugins() {
 			'source' 		=> 'http://moveplugins.com/repo/mp-stacks/?downloadfile=true',
 			'required'  	=> false,
 			'external_url'	=> 'https://github.com/moveplugins/mp-stacks',
+		),
+
+		array(
+			'name'    		=> 'The Events Calendar',
+			'slug'    		=> 'the-events-calendar',
 		),
 
 	);
