@@ -2911,26 +2911,25 @@ small.error {
 
 /*
  * Comment Form
- *
  */
-/* line 211, assets/sass/partials/_comments.scss */
+/* line 91, assets/sass/partials/_comments.scss */
 #cancel-comment-reply-link {
   margin-left: 0.5em; }
 
-/* line 217, assets/sass/partials/_comments.scss */
+/* line 97, assets/sass/partials/_comments.scss */
 #respond .comment-notes,
 #respond .logged-in-as {
   margin: 25px 0 35px 0; }
 
-/* line 221, assets/sass/partials/_comments.scss */
+/* line 101, assets/sass/partials/_comments.scss */
 #respond .required {
   color: #e8665a; }
 
-/* line 226, assets/sass/partials/_comments.scss */
+/* line 106, assets/sass/partials/_comments.scss */
 #respond label.error {
   font-weight: normal; }
 
-/* line 233, assets/sass/partials/_comments.scss */
+/* line 113, assets/sass/partials/_comments.scss */
 .comment-form-author label.error,
 .comment-form-email label.error,
 .comment-form-url label.error {
@@ -2939,14 +2938,14 @@ small.error {
   white-space: nowrap;
   font-size: 13px; }
 
-/* line 241, assets/sass/partials/_comments.scss */
+/* line 121, assets/sass/partials/_comments.scss */
 p.comment-form-comment label.error {
   position: relative;
   top: -5px;
   display: block;
   font-size: 13px; }
 
-/* line 249, assets/sass/partials/_comments.scss */
+/* line 129, assets/sass/partials/_comments.scss */
 .form-allowed-tags {
   font-size: .7em;
   padding: .8em;
@@ -2957,10 +2956,10 @@ p.comment-form-comment label.error {
   -o-border-radius: 4px;
   border-radius: 4px; }
 
-/* line 257, assets/sass/partials/_comments.scss */
+/* line 137, assets/sass/partials/_comments.scss */
 #respond .form-submit {
   margin: 20px 0 0 0; }
-  /* line 261, assets/sass/partials/_comments.scss */
+  /* line 141, assets/sass/partials/_comments.scss */
   #respond .form-submit button,
   #respond .form-submit input[type="submit"] {
     border: none;
@@ -3004,12 +3003,12 @@ p.comment-form-comment label.error {
     #respond .form-submit input[type="submit"]:hover,
     #respond .form-submit input[type="submit"]:focus {
       color: white; }
-    /* line 271, assets/sass/partials/_comments.scss */
+    /* line 151, assets/sass/partials/_comments.scss */
     #respond .form-submit button:hover,
     #respond .form-submit input[type="submit"]:hover {
       background-color: #e8665a; }
 
-/* line 278, assets/sass/partials/_comments.scss */
+/* line 158, assets/sass/partials/_comments.scss */
 #uplifted-comments-closed {
   margin-top: 40px;
   font-style: italic; }
