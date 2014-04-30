@@ -2841,36 +2841,69 @@ small.error {
 /* line 11, assets/sass/partials/_comments.scss */
 .uplifted-comments {
   margin: 0 0 3em; }
+  /* line 15, assets/sass/partials/_comments.scss */
+  .uplifted-comments .children {
+    margin: 24px -24px 0 0; }
+    /* line 19, assets/sass/partials/_comments.scss */
+    .uplifted-comments .children .comment {
+      border-right: none; }
 
-/* line 16, assets/sass/partials/_comments.scss */
+/* line 29, assets/sass/partials/_comments.scss */
 .comment {
-  position: relative; }
-  /* line 19, assets/sass/partials/_comments.scss */
-  .comment .comment-author {
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  padding: 24px;
+  margin-bottom: 1.5em;
+  position: relative;
+  *zoom: 1; }
+  /* line 134, assets/sass/partials/_global.scss */
+  .comment:before, .comment:after {
+    content: " ";
+    display: table; }
+  /* line 135, assets/sass/partials/_global.scss */
+  .comment:after {
+    clear: both; }
+  /* line 37, assets/sass/partials/_comments.scss */
+  .comment > article {
     *zoom: 1; }
     /* line 134, assets/sass/partials/_global.scss */
-    .comment .comment-author:before, .comment .comment-author:after {
+    .comment > article:before, .comment > article:after {
       content: " ";
       display: table; }
     /* line 135, assets/sass/partials/_global.scss */
-    .comment .comment-author:after {
+    .comment > article:after {
       clear: both; }
-    /* line 22, assets/sass/partials/_comments.scss */
-    .comment .comment-author .avatar {
-      float: left;
-      margin: 0 1em 1em 0; }
-    /* line 28, assets/sass/partials/_comments.scss */
-    .comment .comment-author .says {
+  @media screen and (min-width: 768px) {
+    /* line 42, assets/sass/partials/_comments.scss */
+    .comment .comment-meta {
+      width: 12%;
+      float: left; } }
+  /* line 48, assets/sass/partials/_comments.scss */
+  .comment .comment-meta .avatar {
+    margin-bottom: 1em;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px; }
+  @media screen and (min-width: 768px) {
+    /* line 54, assets/sass/partials/_comments.scss */
+    .comment .comment-content {
+      width: 85%;
+      float: right; } }
+  /* line 61, assets/sass/partials/_comments.scss */
+  .comment .author-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: .5em; }
+    /* line 67, assets/sass/partials/_comments.scss */
+    .comment .author-name .says {
       display: none; }
-  /* line 33, assets/sass/partials/_comments.scss */
+  /* line 74, assets/sass/partials/_comments.scss */
   .comment .reply {
     position: absolute;
-    top: 0;
-    right: 0; }
-    /* line 39, assets/sass/partials/_comments.scss */
-    .comment .reply a:before {
-      content: "«";
-      margin-right: .2em; }
+    top: 24px;
+    right: 24px; }
 
 /*
  * Comment Form
@@ -4601,38 +4634,40 @@ body.term-post-format-gallery #content > .panel {
 
 /* line 31, assets/sass/partials/_wordpress.scss */
 .bypostauthor {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px; }
+  border-top: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  box-shadow: inset 0 6px 0 #0fcfc5; }
 
-/* line 36, assets/sass/partials/_wordpress.scss */
+/* line 38, assets/sass/partials/_wordpress.scss */
 .aligncenter,
 div.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 42, assets/sass/partials/_wordpress.scss */
+/* line 44, assets/sass/partials/_wordpress.scss */
 .alignleft {
   float: left; }
 
-/* line 46, assets/sass/partials/_wordpress.scss */
+/* line 48, assets/sass/partials/_wordpress.scss */
 .alignright {
   float: right; }
 
-/* line 50, assets/sass/partials/_wordpress.scss */
+/* line 52, assets/sass/partials/_wordpress.scss */
 img.alignleft {
   margin-right: 1.5em;
   margin-bottom: 1.5em; }
 
-/* line 55, assets/sass/partials/_wordpress.scss */
+/* line 57, assets/sass/partials/_wordpress.scss */
 img.alignright {
   margin-left: 1.5em;
   margin-bottom: 1.5em; }
 
-/* line 60, assets/sass/partials/_wordpress.scss */
+/* line 62, assets/sass/partials/_wordpress.scss */
 .wp-caption {
   text-align: center;
   margin: 0 0 2em 0;
@@ -4640,7 +4675,7 @@ img.alignright {
   position: relative;
   max-width: 100% !important; }
 
-/* line 68, assets/sass/partials/_wordpress.scss */
+/* line 70, assets/sass/partials/_wordpress.scss */
 .wp-caption img {
   margin: 0;
   padding: 0;
@@ -4648,7 +4683,7 @@ img.alignright {
   width: auto !important;
   height: auto !important; }
 
-/* line 76, assets/sass/partials/_wordpress.scss */
+/* line 78, assets/sass/partials/_wordpress.scss */
 .wp-caption p.wp-caption-text {
   font-size: .8em;
   color: #b2b2b2;
@@ -4657,7 +4692,7 @@ img.alignright {
   clear: both;
   font-style: italic; }
 
-/* line 86, assets/sass/partials/_wordpress.scss */
+/* line 88, assets/sass/partials/_wordpress.scss */
 .wp-video,
 .wp-audio {
   margin: 0 auto 2em; }

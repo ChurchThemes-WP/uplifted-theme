@@ -10,19 +10,58 @@
 // Comments container
 .uplifted-comments {
 	margin: 0 0 3em;
+
+	// add some margin to nested comments
+	.children {
+		margin: $panel-padding (-$panel-padding) 0 0;
+
+		// remove right border of nested comments
+		.comment {
+			border-right: none;
+
+			&.bypostauthor {
+			}
+		}
+	}
 }
 
 // theaded comments
 .comment {
+	background-color: $panel-bg;
+	border: $panel-border;
+	padding: $panel-padding;
+	margin-bottom: $panel-margin-bottom;
 	position: relative;
+	@include clearfix;
 
-	.comment-author {
+	> article {
 		@include clearfix;
+	}
+
+	// contains user image and edit button
+	.comment-meta {
+		@media screen and (min-width: $small-screen) {
+			width: 12%;
+			float: left;
+		}
 
 		.avatar {
-			float: left;
-			margin: 0 1em 1em 0;
+			margin-bottom: 1em;
+			@include border-radius(6px);
 		}
+	}
+
+	.comment-content {
+		@media screen and (min-width: $small-screen) {
+			width: 85%;
+			float: right;
+		}
+	}
+
+	.author-name {
+		font-size: 1.1em;
+		font-weight: bold;
+		margin-bottom: .5em;
 
 		// hide the "says:" text added to comments
 		.says {
@@ -30,16 +69,12 @@
 		}
 	}
 
+	
+
 	.reply {
 			position: absolute;
-			top: 0;
-			right: 0;
-
-			// add
-			a:before {
-				content: "«";
-				margin-right: .2em;
-			}
+			top: $panel-padding;
+			right: $panel-padding;
 		}
 }
 
