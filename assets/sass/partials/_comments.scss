@@ -1,39 +1,66 @@
-/*************** COMMENT LIST *****************/
+/* Comments */
 
-.uplifted-comments, /* <ol> */
+#comments {
+
+	ol, ul {
+		list-style: none;
+	}
+}
+
+// Comments container
+.uplifted-comments {
+	margin: 0 0 3em;
+}
+
+// theaded comments
+.commnets {
+
+	.comment-author {
+
+		.avatar {
+			float: left;
+		}
+	}
+}
+
+/*
+
+////////////////////////////////////////////////
+
+.uplifted-comments,
 .uplifted-comments ul {
 	list-style: none;
 	margin: 50px 0 0 0;
 }
 
-	/* Comment or Trackback/Pingback Item */
+	// Comment or Trackback/Pingback Item 
 
 	.uplifted-comment {
 		margin: 60px 0 0 0;
 	}
 
-		/* Comment Meta */
+		// Comment Meta
 
 		.uplifted-comment-meta {
 			line-height: 1.4em;
 			min-height: 50px;
 		}
 
-			/* Avatar Container */
+			// Avatar Container
 
 			.uplifted-comment-avatar {
 				float: left;
 				margin-right: 18px;
 			}
 
-				/* Image */
+				// Image
 
 				.uplifted-comment-avatar img {
 					width: 50px;
 					height: 50px;
 				}
 
-			/* Comment Author or Trackback */
+			// Comment Author or Trackback
 
 			.uplifted-comment-author,
 			.uplifted-comment-trackback-link {
@@ -41,14 +68,14 @@
 				text-transform: uppercase;
 			}
 
-				/* Author/Trackback Name */
+				// Author/Trackback Name
 
 				.uplifted-comment-author,
 				.uplifted-comment-trackback-link {
 					font-weight: bold;
 				}
 
-				/* Post author, or trackback or pingback note - after name/link */
+				// Post author, or trackback or pingback note - after name/link
 
 				.uplifted-comment-author span,
 				.uplifted-comment-trackback-link span {
@@ -56,7 +83,7 @@
 					text-transform: none;
 				}
 
-			/* Date */
+			// Date
 
 			.uplifted-comment-meta time {
 				display: inline-block;
@@ -64,7 +91,7 @@
 				font-weight: bold;
 			}
 
-			/* Buttons */
+			// Buttons
 
 			.uplifted-comment-buttons {
 				float: right;
@@ -77,38 +104,42 @@
 					margin-left: 14px;
 				}
 
-		/* Comment Content */
+		// Comment Content
 
 		.uplifted-comment-content {
 			margin-top: 30px;
 		}
 
-		/* Moderation Note */
+		// Moderation Note
 
 		.uplifted-comment-moderation {
 			font-style: italic;
 		}
 
-		/* Indentations */
+		// Indentations
 
 		.uplifted-comment,
 		.uplifted-comment #respond {
 			margin-left: 6%;
 		}
 
-		.uplifted-comment.depth-1 { /* first level flush left */
+		.uplifted-comment.depth-1 { // first level flush left
 			margin-left: 0;
 		}
 
-	/* Required style */
+	// Required style
 
 	.bypostauthor {
 
 	}
 
-#uplifted-comment-nav { /* .uplifted-nav-left-right */
+#uplifted-comment-nav { // .uplifted-nav-left-right
 	margin-top: 60px;
 }
+
+////////////////////////////////////////////////
+
+*/
 
 /*
  * Comment Form
@@ -116,9 +147,11 @@
  */
 
 
-	/* Cancel Reply Link */
+/*
+////////////////////////////////////////////////
+	// Cancel Reply Link
 
-	#cancel-comment-reply-link { /* this is within #reply-title heading so here we give it regular font */
+	#cancel-comment-reply-link { // this is within #reply-title heading so here we give it regular font
 		position: relative;
 		bottom: 6px;
 		margin-left: 25px;
@@ -127,7 +160,7 @@
 		text-transform: none;
 	}
 
-	/* Message above form */
+	// Message above form
 
 	#respond .comment-notes,
 	#respond .logged-in-as {
@@ -138,13 +171,13 @@
 			color: $secondary-color;
 		}
 
-	/* Error Messages */
+	// Error Messages
 
 	#respond label.error {
 		font-weight: normal;
 	}
 
-		/* Error Message for Name, Email, URL after input */
+		// Error Message for Name, Email, URL after input
 
 		.comment-form-author label.error,
 		.comment-form-email label.error,
@@ -155,7 +188,7 @@
 			font-size: 13px;
 		}
 
-		/* Error Message for Comment */
+		// Error Message for Comment
 
 		p.comment-form-comment label.error {
 			position: relative;
@@ -164,18 +197,18 @@
 			font-size: 13px;
 		}
 
-	/* Allowed tags note */
+	// Allowed tags note
 
 	.form-allowed-tags {
 		display: none;
 	}
 
-	/* Submit Button */
+	// Submit Button
 
 	#respond .form-submit {
 		margin: 20px 0 0 0;
 
-		/*button,
+		button,
 		input[type="submit"]{
 			border: none;
 			@include border-radius(4px);
@@ -189,12 +222,15 @@
 			&:hover{
 				background-color: $primary-color;
 			}
-		} */
+		} 
 	}
 
-/* Comments closed message (in place of add form if comments have already been made) */
+// Comments closed message (in place of add form if comments have already been made)
 
 #uplifted-comments-closed {
 	margin-top: 40px;
 	font-style: italic;
 }
+
+////////////////////////////////////////////////
+*/

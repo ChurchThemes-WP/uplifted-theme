@@ -2833,181 +2833,23 @@ small.error {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-/*************** COMMENT LIST *****************/
-/* line 4, assets/sass/partials/_comments.scss */
-.uplifted-comments,
-.uplifted-comments ul {
-  list-style: none;
-  margin: 50px 0 0 0; }
+/* Comments */
+/* line 5, assets/sass/partials/_comments.scss */
+#comments ol, #comments ul {
+  list-style: none; }
 
-/* Comment or Trackback/Pingback Item */
 /* line 11, assets/sass/partials/_comments.scss */
-.uplifted-comment {
-  margin: 60px 0 0 0; }
+.uplifted-comments {
+  margin: 0 0 3em; }
 
-/* Comment Meta */
-/* line 17, assets/sass/partials/_comments.scss */
-.uplifted-comment-meta {
-  line-height: 1.4em;
-  min-height: 50px; }
-
-/* Avatar Container */
-/* line 24, assets/sass/partials/_comments.scss */
-.uplifted-comment-avatar {
-  float: left;
-  margin-right: 18px; }
-
-/* Image */
-/* line 31, assets/sass/partials/_comments.scss */
-.uplifted-comment-avatar img {
-  width: 50px;
-  height: 50px; }
-
-/* Comment Author or Trackback */
-/* line 39, assets/sass/partials/_comments.scss */
-.uplifted-comment-author,
-.uplifted-comment-trackback-link {
-  padding: 0 0 0 0;
-  text-transform: uppercase; }
-
-/* Author/Trackback Name */
-/* line 47, assets/sass/partials/_comments.scss */
-.uplifted-comment-author,
-.uplifted-comment-trackback-link {
-  font-weight: bold; }
-
-/* Post author, or trackback or pingback note - after name/link */
-/* line 54, assets/sass/partials/_comments.scss */
-.uplifted-comment-author span,
-.uplifted-comment-trackback-link span {
-  font-weight: normal;
-  text-transform: none; }
-
-/* Date */
-/* line 61, assets/sass/partials/_comments.scss */
-.uplifted-comment-meta time {
-  display: inline-block;
-  padding-top: 10px;
-  font-weight: bold; }
-
-/* Buttons */
-/* line 69, assets/sass/partials/_comments.scss */
-.uplifted-comment-buttons {
-  float: right;
-  margin-top: 8px; }
-
-/* line 75, assets/sass/partials/_comments.scss */
-.comment-reply-link,
-.comment-edit-link {
-  float: left;
-  margin-left: 14px; }
-
-/* Comment Content */
-/* line 82, assets/sass/partials/_comments.scss */
-.uplifted-comment-content {
-  margin-top: 30px; }
-
-/* Moderation Note */
-/* line 88, assets/sass/partials/_comments.scss */
-.uplifted-comment-moderation {
-  font-style: italic; }
-
-/* Indentations */
-/* line 95, assets/sass/partials/_comments.scss */
-.uplifted-comment,
-.uplifted-comment #respond {
-  margin-left: 6%; }
-
-/* line 99, assets/sass/partials/_comments.scss */
-.uplifted-comment.depth-1 {
-  /* first level flush left */
-  margin-left: 0; }
-
-/* Required style */
-/* line 109, assets/sass/partials/_comments.scss */
-#uplifted-comment-nav {
-  /* .uplifted-nav-left-right */
-  margin-top: 60px; }
+/* line 20, assets/sass/partials/_comments.scss */
+.commnets .comment-author .avatar {
+  float: left; }
 
 /*
  * Comment Form
  *
  */
-/* Cancel Reply Link */
-/* line 121, assets/sass/partials/_comments.scss */
-#cancel-comment-reply-link {
-  /* this is within #reply-title heading so here we give it regular font */
-  position: relative;
-  bottom: 6px;
-  margin-left: 25px;
-  font-size: 0.5em;
-  font-weight: normal;
-  text-transform: none; }
-
-/* Message above form */
-/* line 133, assets/sass/partials/_comments.scss */
-#respond .comment-notes,
-#respond .logged-in-as {
-  margin: 25px 0 35px 0; }
-
-/* line 137, assets/sass/partials/_comments.scss */
-#respond .required {
-  color: #e8665a; }
-
-/* Error Messages */
-/* line 143, assets/sass/partials/_comments.scss */
-#respond label.error {
-  font-weight: normal; }
-
-/* Error Message for Name, Email, URL after input */
-/* line 151, assets/sass/partials/_comments.scss */
-.comment-form-author label.error,
-.comment-form-email label.error,
-.comment-form-url label.error {
-  position: absolute;
-  left: 370px;
-  white-space: nowrap;
-  font-size: 13px; }
-
-/* Error Message for Comment */
-/* line 160, assets/sass/partials/_comments.scss */
-p.comment-form-comment label.error {
-  position: relative;
-  top: -5px;
-  display: block;
-  font-size: 13px; }
-
-/* Allowed tags note */
-/* line 169, assets/sass/partials/_comments.scss */
-.form-allowed-tags {
-  display: none; }
-
-/* Submit Button */
-/* line 175, assets/sass/partials/_comments.scss */
-#respond .form-submit {
-  margin: 20px 0 0 0;
-  		/*button,
-  		input[type="submit"]{
-  			border: none;
-  			@include border-radius(4px);
-  			@include button-base;
-  			@include button-size();
-  			@include button-style($primary-color);
-  			@include box-shadow(none);
-  			@include transition(200ms background-color linear);
-  			font-weight: bold;
-  
-  			&:hover{
-  				background-color: $primary-color;
-  			}
-  		} */ }
-
-/* Comments closed message (in place of add form if comments have already been made) */
-/* line 197, assets/sass/partials/_comments.scss */
-#uplifted-comments-closed {
-  margin-top: 40px;
-  font-style: italic; }
-
 /* Top Bar */
 @media screen and (max-width: 600px) {
   /* line 67, assets/sass/partials/_top-bar.scss */
