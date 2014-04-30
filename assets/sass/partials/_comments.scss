@@ -13,14 +13,31 @@
 }
 
 // theaded comments
-.commnets {
+.comment {
+	position: relative;
 
 	.comment-author {
+		@include clearfix;
 
 		.avatar {
 			float: left;
 		}
+
+		// hide the "says:" text added to comments
+		.says {
+			display: none;
+		}
 	}
+
+	.reply {
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			&:before {
+				content: "«";
+			}
+		}
 }
 
 /*

@@ -2842,9 +2842,33 @@ small.error {
 .uplifted-comments {
   margin: 0 0 3em; }
 
-/* line 20, assets/sass/partials/_comments.scss */
-.commnets .comment-author .avatar {
-  float: left; }
+/* line 16, assets/sass/partials/_comments.scss */
+.comment {
+  position: relative; }
+  /* line 19, assets/sass/partials/_comments.scss */
+  .comment .comment-author {
+    *zoom: 1; }
+    /* line 134, assets/sass/partials/_global.scss */
+    .comment .comment-author:before, .comment .comment-author:after {
+      content: " ";
+      display: table; }
+    /* line 135, assets/sass/partials/_global.scss */
+    .comment .comment-author:after {
+      clear: both; }
+    /* line 22, assets/sass/partials/_comments.scss */
+    .comment .comment-author .avatar {
+      float: left; }
+    /* line 27, assets/sass/partials/_comments.scss */
+    .comment .comment-author .says {
+      display: none; }
+  /* line 32, assets/sass/partials/_comments.scss */
+  .comment .reply {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    /* line 37, assets/sass/partials/_comments.scss */
+    .comment .reply:before {
+      content: "«"; }
 
 /*
  * Comment Form
