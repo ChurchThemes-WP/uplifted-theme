@@ -1293,7 +1293,7 @@ $topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})";
 
 // Divider Styles
 
-$topbar-divider-border-bottom: 1px solid contrast-color($panel-bg, darken($panel-bg, 30%), lighten($panel-bg, 40%), 50%);
+$topbar-divider-border-bottom: 1px solid contrast-color($panel-bg, darken($panel-bg, 20%), lighten($panel-bg, 30%), 50%);
 $topbar-divider-border-top: none;
 
 // Sticky Class
