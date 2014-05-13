@@ -196,21 +196,21 @@ register_theme_options($custom_hex_colors);
  *
  * @since 1.0.0
  */
-function worldview_custom_upload_mimes( $existing_mimes ) {
+function uplifted_custom_upload_mimes( $existing_mimes ) {
 	// add webm to the list of mime types
 	$existing_mimes['css'] = 'text/css';
 
 	// return the array back to the function with our added mime type
 	return $existing_mimes;
 }
-add_filter( 'upload_mimes', 'worldview_custom_upload_mimes' );
+add_filter( 'upload_mimes', 'uplifted_custom_upload_mimes' );
 
 /**
  * Generates Scss variables for custom colors.
  *
  * @since 1.0.0
  */
-function worldview_update_custom_color_vars($variables){
+function uplifted_update_custom_color_vars($variables){
 
 	$up_options = upfw_get_options();
 
@@ -246,23 +246,23 @@ function worldview_update_custom_color_vars($variables){
 
 }
 
-add_filter('worldview_style_variables','worldview_update_custom_color_vars');
+add_filter('uplifted_style_variables','uplifted_update_custom_color_vars');
 
-function worldview_customize_register($wp_customize) {
+function uplifted_customize_register($wp_customize) {
 	$up_options = upfw_get_options();
 
 	if ( $wp_customize->is_preview() && ! is_admin() ){
-	    add_action( 'wp_footer', 'worldview_customize_preview', 21);
+	    add_action( 'wp_footer', 'uplifted_customize_preview', 21);
 	}
 
 }
-add_action( 'customize_register', 'worldview_customize_register' );
+add_action( 'customize_register', 'uplifted_customize_register' );
 
-function worldview_customize_preview(){
+function uplifted_customize_preview(){
 	$up_options = upfw_get_options();
 
 	if( $up_options->enable_custom_styles == 'yes' ){
-		$styles = worldview_css_regenerate('inline');
+		$styles = uplifted_css_regenerate('inline');
 		echo '<style type="text/css" id="custom-styles">';
 		echo $styles;
 		echo '</style>';
@@ -278,10 +278,10 @@ function worldview_customize_preview(){
  *
  * @since 1.0.0
  */
-function worldview_customizations_saved_notice() {
+function uplifted_customizations_saved_notice() {
     ?>
     <div class="updated">
-        <p><?php _e( 'Your custom theme styles were saved and a new CSS file was generated successfully.', 'worldview' ); ?></p>
+        <p><?php _e( 'Your custom theme styles were saved and a new CSS file was generated successfully.', 'uplifted' ); ?></p>
     </div>
     <?php
 }
@@ -291,14 +291,14 @@ function worldview_customizations_saved_notice() {
  *
  * @since 1.0.0
  */
-function worldview_customizations_not_saved_notice() {
-	global $worldview_error;
+function uplifted_customizations_not_saved_notice() {
+	global $uplifted_error;
     ?>
     <div class="error">
-    	<?php if( $worldview_error ) : ?>
-    		<p><?php echo $worldview_error; ?>
+    	<?php if( $uplifted_error ) : ?>
+    		<p><?php echo $uplifted_error; ?>
     	<?php else: ?>
-        	<p><?php _e( 'Your custom theme styles were not saved. Please check your settings and try again.', 'worldview' ); ?></p>
+        	<p><?php _e( 'Your custom theme styles were not saved. Please check your settings and try again.', 'uplifted' ); ?></p>
         <?php endif; ?>
     </div>
     <?php
@@ -309,14 +309,14 @@ function worldview_customizations_not_saved_notice() {
  *
  * @since 1.0.0
  */
-function worldview_css_regenerate( $format = 'file' ){
+function uplifted_css_regenerate( $format = 'file' ){
 
 	try {
 
-		require get_template_directory() . "/inc/scssphp/scss.inc.php";
-		require get_template_directory() . "/inc/scssphp-compass/compass.inc.php";
+		require get_template_directory() . "/includes/scssphp/scss.inc.php";
+		require get_template_directory() . "/includes/scssphp-compass/compass.inc.php";
 
-		$base_import_path = apply_filters('worldview_base_import_path',get_template_directory() . '/assets/scss/');
+		$base_import_path = apply_filters('uplifted_base_import_path',get_template_directory() . '/assets/sass/');
 
 		$scss = new scssc();
 		$scss->setImportPaths($base_import_path);
@@ -325,15 +325,15 @@ function worldview_css_regenerate( $format = 'file' ){
 
 		$scss->setFormatter("scss_formatter");
 
-		$style_overrides = apply_filters('worldview_style_variables','');
-		$style_scss_imports = apply_filters('worldview_style_scss_imports',"@import 'style.scss';");
+		$style_overrides = apply_filters('uplifted_style_variables','');
+		$style_scss_imports = apply_filters('uplifted_style_scss_imports',"@import 'style.scss';");
 
 		$style_content = $scss->compile("
 			$style_overrides
 			$style_scss_imports
 		");
 
-		$old_file = get_option('worldview-style-override');
+		$old_file = get_option('uplifted-style-override');
 
 		if( $format === 'file' ){
 
@@ -347,18 +347,18 @@ function worldview_css_regenerate( $format = 'file' ){
 
 				$style_scss['date'] = date('Y-m-d');
 
-				$updated = update_option('worldview-style-override',$style_scss);
+				$updated = update_option('uplifted-style-override',$style_scss);
 
 				if( isset( $updated ) ){
-					add_action( 'admin_notices', 'worldview_customizations_saved_notice' );
+					add_action( 'admin_notices', 'uplifted_customizations_saved_notice' );
 				} else {
-					global $worldview_error;
-					$worldview_error = __('The option could not be saved.','worldview');
-					add_action( 'admin_notices', 'worldview_customizations_not_saved_notice' );
+					global $uplifted_error;
+					$uplifted_error = __('The option could not be saved.','uplifted');
+					add_action( 'admin_notices', 'uplifted_customizations_not_saved_notice' );
 				}
 
 			} else {
-				add_action( 'admin_notices', 'worldview_customizations_not_saved_notice' );
+				add_action( 'admin_notices', 'uplifted_customizations_not_saved_notice' );
 			}
 
 		} elseif( $format === 'inline' ) {
@@ -366,9 +366,9 @@ function worldview_css_regenerate( $format = 'file' ){
 		}
 
 	} catch (Exception $e) {
-		global $worldview_error;
-		$worldview_error = $e->getMessage();
-		add_action( 'admin_notices', 'worldview_customizations_not_saved_notice' );
+		global $uplifted_error;
+		$uplifted_error = $e->getMessage();
+		add_action( 'admin_notices', 'uplifted_customizations_not_saved_notice' );
 	}
 }
 
@@ -377,63 +377,63 @@ function worldview_css_regenerate( $format = 'file' ){
  *
  * @since 1.0.0
  */
-function worldview_options_save_regenerate_css(){
+function uplifted_options_save_regenerate_css(){
 	$up_options = upfw_get_options();
 
 	if( isset($_GET['settings-updated']) && $_GET['settings-updated'] == 'true' && $up_options->enable_custom_styles == 'yes' ) {
-		worldview_css_regenerate();
+		uplifted_css_regenerate();
 	}
 }
 
-add_action('load-appearance_page_upfw-settings','worldview_options_save_regenerate_css',1);
+add_action('load-appearance_page_upfw-settings','uplifted_options_save_regenerate_css',1);
 
 /**
  * Save new stylesheet when Theme Customizer is saved.
  *
  * @since 1.0.0
  */
-function worldview_customizer_save_regenerate_css(){
+function uplifted_customizer_save_regenerate_css(){
 	$up_options = upfw_get_options();
 
 	if( $up_options->enable_custom_styles == 'yes' ){
-		worldview_css_regenerate();
+		uplifted_css_regenerate();
 	}
 }
 
-add_action('customize_save_after','worldview_customizer_save_regenerate_css',1);
+add_action('customize_save_after','uplifted_customizer_save_regenerate_css',1);
 
 /**
  * Remove default stylesheet and enqueue new one.
  *
  * @since 1.0.0
  */
-function worldview_override_default_styles(){
+function uplifted_override_default_styles(){
 	$up_options = upfw_get_options();
-	$custom_style = get_option( 'worldview-style-override' );
+	$custom_style = get_option( 'uplifted-style-override' );
 
 	if( $up_options->enable_custom_styles == 'yes' ){
-		wp_dequeue_style('worldview-style');
-		wp_enqueue_style('worldview-style-override',$custom_style['url'],false,$custom_style['date']);
+		wp_dequeue_style('uplifted-style');
+		wp_enqueue_style('uplifted-style-override',$custom_style['url'],false,$custom_style['date']);
 	}
 }
 
-add_action('wp_enqueue_scripts','worldview_override_default_styles',9999);
+add_action('wp_enqueue_scripts','uplifted_override_default_styles',9999);
 
 /**
  * Initialize our custom theme option for color schemes.
  *
  * @since 1.0.0
  */
-function worldview_add_custom_theme_options(){
+function uplifted_add_custom_theme_options(){
 	global $pagenow;
 
 	if( $pagenow == 'themes.php' && !empty($_GET['page']) && $_GET['page'] == 'upfw-settings' ){
-		wp_enqueue_style('worldview-color-schemes', get_template_directory_uri() . '/assets/css/color-schemes.css' );
+		wp_enqueue_style('uplifted-color-schemes', get_template_directory_uri() . '/assets/css/color-schemes.css' );
 		upfw_add_custom_field('colors','upfw_colors');
 	}
 }
 
-add_action('admin_init','worldview_add_custom_theme_options',1);
+add_action('admin_init','uplifted_add_custom_theme_options',1);
 
 /**
  * Sanitize our color scheme input.
@@ -595,12 +595,12 @@ class UpThemes_Color_Scheme_Radio_Control extends WP_Customize_Control {
 
 		public function enqueue() {
 			wp_enqueue_style(
-				'worldview-color-schemes',
+				'uplifted-color-schemes',
 				get_template_directory_uri() . '/assets/css/color-schemes.css'
 			);
 
 			wp_enqueue_script(
-				'worldview-customize-theme',
+				'uplifted-customize-theme',
 				get_template_directory_uri() . '/assets/js/customize-theme.js'
 			);
 		}

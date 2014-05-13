@@ -10,3 +10,6 @@
 [submodule "includes/scssphp"]
 	path = includes/scssphp
 	url = git@github.com:leafo/scssphp.git
+[submodule "includes/scssphp-compass"]
+	path = includes/scssphp-compass
+	url = https://github.com/leafo/scssphp-compass.git

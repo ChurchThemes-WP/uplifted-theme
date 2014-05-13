@@ -13,7 +13,7 @@
 define('UPFW_NO_THEME_OPTIONS_PAGE',true);
 
 /**
- * automatic updater init
+ * automatic updater initialization
  */
 
 require_once 'includes/UpThemes_Theme_Updater.php';

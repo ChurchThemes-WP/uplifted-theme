@@ -1,7 +1,14 @@
 <?php
 
 /**
- * Customize the output of menus for Foundation top bar
+ * Foundation navbar walker function
+ *
+ * @package    Uplifted
+ * @subpackage Functions
+ * @copyright  Copyright (c) 2013, upthemes.com
+ * @link       http://upthemes.com/themes/uplifted
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @since      1.0
  */
 
 class top_bar_walker extends Walker_Nav_Menu {
