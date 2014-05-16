@@ -276,3 +276,28 @@ html[xmlns] .slides {display: block;}
 	.flex-direction-nav .flex-prev { @include opacity(1); left: 10px;}
 	.flex-direction-nav .flex-next { @include opacity(1); right: 10px;}
 }
+
+// Video Slides
+.uplifted-slide-video {
+
+	.oembed-container {
+		display: none;
+	}
+
+	&.visible {
+		.flex-image-container {
+			background-color: #000;
+
+			img {
+				opacity: .15;
+				-webkit-filter: blur(3px);
+				position: absolute;
+				top: 0;
+			}
+		}
+
+		.oembed-container {
+			display: block;
+		}
+	}
+}

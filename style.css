@@ -4335,6 +4335,22 @@ html[xmlns] .slides {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     right: 10px; } }
+/* line 283, assets/sass/partials/_flexslider.scss */
+.uplifted-slide-video .oembed-container {
+  display: none; }
+/* line 288, assets/sass/partials/_flexslider.scss */
+.uplifted-slide-video.visible .flex-image-container {
+  background-color: #000; }
+  /* line 291, assets/sass/partials/_flexslider.scss */
+  .uplifted-slide-video.visible .flex-image-container img {
+    opacity: .15;
+    -webkit-filter: blur(3px);
+    position: absolute;
+    top: 0; }
+/* line 299, assets/sass/partials/_flexslider.scss */
+.uplifted-slide-video.visible .oembed-container {
+  display: block; }
+
 /* Pages */
 /* line 6, assets/sass/partials/_pages.scss */
 .uplifted-main-title > span {
