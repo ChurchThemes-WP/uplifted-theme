@@ -15,6 +15,8 @@ jQuery(function($) {
 			e.preventDefault();
 			$(this).oembed(null, {embedMethod: "append"});
 			$('.flexslider').flexslider('pause');
+			$('.flexslider').fitVids();
+
 		});
 	});
 
