@@ -136,10 +136,9 @@ add_action('after_setup_theme','uplifted_register_menus');
  */
 function uplifted_enqueue_scripts(){
 
-	wp_enqueue_script( 'uplifted-fitvids', get_template_directory_uri() . '/assets/js/jquery.fitvids.js', array('jquery') );
 	wp_enqueue_script( 'uplifted-flexslider', get_template_directory_uri() . '/assets/js/jquery.flexslider.js', array('jquery') );
 	wp_enqueue_script( 'uplifted-oembed', get_template_directory_uri() . '/assets/js/jquery.oembed.js', array('jquery'), false, true );
-	wp_enqueue_script( 'uplifted-init', get_template_directory_uri() . '/assets/js/init.js', array('uplifted-fitvids','uplifted-flexslider'), false, true );
+	wp_enqueue_script( 'uplifted-init', get_template_directory_uri() . '/assets/js/init.js', array('uplifted-flexslider'), false, true );
 	wp_enqueue_script( 'uplifted-foundation', get_template_directory_uri() . '/assets/js/foundation.js', array('jquery'), '5.0.0', true );
 	wp_enqueue_script( 'uplifted-foundation-topbar', get_template_directory_uri() . '/assets/js/foundation.topbar.js', array('uplifted-foundation'), '5.0.0', true );
 	wp_enqueue_style( 'uplifted-fonts', uplifted_fonts_url() );
