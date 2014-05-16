@@ -15,7 +15,7 @@ jQuery(function($) {
 	$(document).ready(function() {
 		$('.oembed').on('click',function(e){
 			e.preventDefault();
-			$(this).parent().fitVids().find('.oembed-container').removeClass('hidden');
+			$(this).parent().fitVids().find('.oembed-container').addClass('visible');
 			$('.flexslider').flexslider('pause');
 		});
 	});
