@@ -10,4 +10,12 @@ jQuery(function($) {
 		$('body').addClass('touch');
 	}
 
+	$(document).ready(function() {
+		$('.oembed').on('click',function(e){
+			e.preventDefault();
+			$(this).oembed(null, {embedMethod: "append"});
+			$('.flexslider').flexslider('pause');
+		});
+	});
+
 });

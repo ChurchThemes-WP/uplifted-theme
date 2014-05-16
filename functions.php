@@ -77,16 +77,21 @@ function uplifted_fonts_url() {
 	$fonts_url = '';
 
 	/* Translators: If there are characters in your language that are not
-	 * supported by Open Sans, translate this to 'off'. Do not translate into your
+	 * supported by Asap or Oswald, translate this to 'off'. Do not translate into your
 	 * own language.
 	 */
 	$asap = _x( 'on', 'Asap font: on or off', 'uplifted' );
 
-	if ( 'off' !== $asap ) {
+	$oswald = _x( 'on', 'Oswald font: on or off', 'uplifted' );
+
+	if ( 'off' !== $asap && 'off' !== $oswald ) {
 		$font_families = array();
 
 		if ( 'off' !== $asap )
-			$font_families[] = 'Asap:400,700|Oswald:300,400,700';
+			$font_families[] = 'Asap:400,700';
+
+		if ( 'off' !== $oswald )
+			$font_families[] = 'Oswald:300,400,700';
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
@@ -133,6 +138,7 @@ function uplifted_enqueue_scripts(){
 
 	wp_enqueue_script( 'uplifted-fitvids', get_template_directory_uri() . '/assets/js/jquery.fitvids.js', array('jquery') );
 	wp_enqueue_script( 'uplifted-flexslider', get_template_directory_uri() . '/assets/js/jquery.flexslider.js', array('jquery') );
+	wp_enqueue_script( 'uplifted-oembed', get_template_directory_uri() . '/assets/js/jquery.oembed.js', array('jquery'), false, true );
 	wp_enqueue_script( 'uplifted-init', get_template_directory_uri() . '/assets/js/init.js', array('uplifted-fitvids','uplifted-flexslider'), false, true );
 	wp_enqueue_script( 'uplifted-foundation', get_template_directory_uri() . '/assets/js/foundation.js', array('jquery'), '5.0.0', true );
 	wp_enqueue_script( 'uplifted-foundation-topbar', get_template_directory_uri() . '/assets/js/foundation.topbar.js', array('uplifted-foundation'), '5.0.0', true );

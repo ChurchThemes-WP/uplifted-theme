@@ -45,7 +45,7 @@ if ( wp_get_attachment_image_src( $instance['image_id'] ) ) :
 		<div class="flex-image-container">
 
 			<?php if ( $instance['click_url'] || $video_url ) : // image is linked ?>
-				<a href="<?php echo esc_url( do_shortcode( $video_url ? $video_url : $instance['click_url'] ) ); // use video URL if is video slide ?>"<?php if ( $instance['click_new'] ) : ?> target="_blank"<?php endif; ?>>
+				<a class="oembed" href="<?php echo esc_url( do_shortcode( $video_url ? $video_url : $instance['click_url'] ) ); // use video URL if is video slide ?>"<?php if ( $instance['click_new'] ) : ?> target="_blank"<?php endif; ?>>
 			<?php endif; ?>
 
 				<?php echo wp_get_attachment_image( $instance['image_id'], 'uplifted-slide', false, array( 'alt' => '', 'title' => '', 'class' => '' ) ); ?>
