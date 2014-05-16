@@ -10,13 +10,13 @@ jQuery(function($) {
 		$('body').addClass('touch');
 	}
 
+	$('.oembed').oembed(null, {embedMethod: "append"});
+
 	$(document).ready(function() {
 		$('.oembed').on('click',function(e){
 			e.preventDefault();
-			$(this).oembed(null, {embedMethod: "append"});
+			$(this).parent().fitVids().find('.oembed-container').removeClass('hidden');
 			$('.flexslider').flexslider('pause');
-			$('.flexslider').fitVids();
-
 		});
 	});
 
