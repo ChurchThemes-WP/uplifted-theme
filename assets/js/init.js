@@ -15,6 +15,11 @@ jQuery(function($) {
 	$(document).ready(function() {
 		$('.oembed').on('click',function(e){
 			e.preventDefault();
+			var $slide = $(this).parents('li'),
+				slideHeight = $slide.height();
+
+			$slide.height(slideHeight);
+
 			$(this).parent().fitVids().find('.oembed-container').addClass('visible');
 			$('.flexslider').flexslider('pause');
 		});
