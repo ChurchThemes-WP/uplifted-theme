@@ -1,6 +1,6 @@
 /* Variables */
 /* Global */
-/* line 285, assets/sass/partials/_global.scss */
+/* line 283, assets/sass/partials/_global.scss */
 *,
 *:before,
 *:after {
@@ -8,7 +8,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 290, assets/sass/partials/_global.scss */
+/* line 289, assets/sass/partials/_global.scss */
 html,
 body {
   font-size: 100%; }
@@ -34,14 +34,14 @@ a:hover {
 a:focus {
   outline: none; }
 
-/* line 314, assets/sass/partials/_global.scss */
+/* line 312, assets/sass/partials/_global.scss */
 img,
 object,
 embed {
   max-width: 100%;
   height: auto; }
 
-/* line 317, assets/sass/partials/_global.scss */
+/* line 316, assets/sass/partials/_global.scss */
 object,
 embed {
   height: 100%; }
@@ -50,7 +50,7 @@ embed {
 img {
   -ms-interpolation-mode: bicubic; }
 
-/* line 324, assets/sass/partials/_global.scss */
+/* line 322, assets/sass/partials/_global.scss */
 #map_canvas img,
 #map_canvas embed,
 #map_canvas object,
@@ -199,7 +199,7 @@ body {
         /* line 131, assets/sass/rtl.scss */
         body .gallery-item:nth-child(4n+4) {
           margin-left: 0; } }
-  /* line 143, assets/sass/rtl.scss */
+  /* line 142, assets/sass/rtl.scss */
   body #respond .comment-form-author,
   body #respond .comment-form-email {
     float: right;
@@ -222,7 +222,7 @@ body {
   /* line 186, assets/sass/rtl.scss */
   body .paging .page-numbers {
     float: right; }
-  /* line 191, assets/sass/rtl.scss */
+  /* line 190, assets/sass/rtl.scss */
   body .paging .next,
   body .paging .prev {
     float: right; }

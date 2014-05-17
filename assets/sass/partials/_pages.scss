@@ -153,6 +153,47 @@ body.term-post-format-gallery #content > .panel {
     max-width: none;
   }
 
+  // for slides with a video embed
+  .uplifted-slide-video{
+    .flex-play-overlay{
+      @extend .genericon;
+      @extend .genericon-play;
+
+      @include border-radius(50px);
+      border: 4px solid white;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -30px;
+      margin-top: -30px;
+      width: 60px;
+      height: 60px;
+      line-height: 52px;
+      font-size: 30px;
+      z-index: 999;
+      background-color: rgba(0,0,0,.4);
+
+      &:before{
+        color: white;
+        left: 2px;
+        position: relative;
+      }
+
+    }
+
+    a:hover {
+
+      .flex-play-overlay{
+        background-color: $primary-color;
+      }
+    }
+
+    &.visible .flex-play-overlay{
+      display: none;
+    }
+  }
+
   //#uplifted-slider-boxes,
   #uplifted-intro,
   #uplifted-home-bottom-widgets {
@@ -177,7 +218,7 @@ body.term-post-format-gallery #content > .panel {
   .uplifted-intro-wrapper {
     background-color: contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%), 50%); // set section bg color based off of site background color, either lighten or darken
     padding: $panel-padding 0;
-    border: $panel-border-size $panel-border-style contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 15%), 50%); 
+    border: $panel-border-size $panel-border-style contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 15%), 50%);
     border-left: none;
     border-right: none;
     color: contrast-color($body-bg, $body-font-color, lighten($body-bg,70%), 50%);
@@ -215,7 +256,7 @@ body.term-post-format-gallery #content > .panel {
     }
 
     #uplifted-intro-content {
-      
+
       @media screen and (min-width: $small-screen) {
         font-size: 1.2em;
       }
