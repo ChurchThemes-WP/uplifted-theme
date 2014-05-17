@@ -42,37 +42,31 @@ if ( wp_get_attachment_image_src( $instance['image_id'] ) ) :
 
 	?>>
 
-		<div class="flex-image-container">
+		<?php if ( $instance['click_url'] || $video_url ) : // image is linked ?>
+			<a<?php if( $video_url ) echo ' class="oembed"'; ?> href="<?php echo esc_url( do_shortcode( $video_url ? $video_url : $instance['click_url'] ) ); // use video URL if is video slide ?>"<?php if ( $instance['click_new'] ) : ?> target="_blank"<?php endif; ?>>
+		<?php endif; ?>
 
-			<?php if ( $instance['click_url'] || $video_url ) : // image is linked ?>
-				<a<?php if( $video_url ) echo ' class="oembed"'; ?> href="<?php echo esc_url( do_shortcode( $video_url ? $video_url : $instance['click_url'] ) ); // use video URL if is video slide ?>"<?php if ( $instance['click_new'] ) : ?> target="_blank"<?php endif; ?>>
-			<?php endif; ?>
+		<div class="flex-image-container">
 
 				<?php echo wp_get_attachment_image( $instance['image_id'], 'uplifted-slide', false, array( 'alt' => '', 'title' => '', 'class' => '' ) ); ?>
 
-				<?php if ( $video_url ) : // show play button hover overlay for video slide ?>
-					<div class="flex-play-overlay"></div>
-				<?php endif; ?>
-
-			<?php if ( $instance['click_url'] || $video_url ) : // image is linked ?>
-				</a>
-			<?php endif; ?>
-
 		</div>
 
-		<?php if ( $instance['title'] || $instance['description'] ) : // title or description provided ?>
+		<?php if ( $instance['title'] || $instance['description'] || $video_url ) : // title or description provided ?>
 
 			<div class="flex-caption">
 
 				<div class="flex-position">
 
+					<?php if ( $video_url ) : // show play button hover overlay for video slide ?>
+						<div class="flex-play-overlay"></div><br>
+					<?php endif; ?>
+
 					<?php if ( $instance['title'] ) : // title provided ?>
 
 						<?php if ( $instance['click_url'] ) : // slide is linked ?>
 
-							<h2 class="flex-title"><a href="<?php echo do_shortcode( $instance['click_url'] ); ?>" <?php if ( $instance['click_new'] ) : ?> target="_blank"<?php endif; ?>>
-								<?php echo $instance['title']; ?>
-							</a></h2>
+							<h2 class="flex-title"><?php echo $instance['title']; ?></h2>
 
 						<?php else : // slide not linked ?>
 
@@ -90,6 +84,10 @@ if ( wp_get_attachment_image_src( $instance['image_id'] ) ) :
 
 			</div>
 
+		<?php endif; ?>
+
+		<?php if ( $instance['click_url'] || $video_url ) : // image is linked ?>
+			</a>
 		<?php endif; ?>
 
 	</li>
