@@ -163,13 +163,14 @@ html[xmlns] .slides {display: block;}
 		zoom: 1;
 
 		a {
-			width: 60px;
-			height: 11px;
+			width: 3.2em;
+			height: .7em;
 			display: block;
 			background: #666;
 			background: rgba(255,255,255,0.5);
 			cursor: pointer;
 			text-indent: -9999px;
+			@include border-radius(2px);
 
 			&:hover {
 				background: #fff;

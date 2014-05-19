@@ -4220,84 +4220,89 @@ html[xmlns] .slides {
     zoom: 1; }
     /* line 165, assets/sass/partials/_flexslider.scss */
     .flex-control-nav li a {
-      width: 60px;
-      height: 11px;
+      width: 3.2em;
+      height: .7em;
       display: block;
       background: #666;
       background: rgba(255, 255, 255, 0.5);
       cursor: pointer;
-      text-indent: -9999px; }
-      /* line 174, assets/sass/partials/_flexslider.scss */
+      text-indent: -9999px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px; }
+      /* line 175, assets/sass/partials/_flexslider.scss */
       .flex-control-nav li a:hover {
         background: #fff;
         background: rgba(255, 255, 255, 0.8); }
-      /* line 179, assets/sass/partials/_flexslider.scss */
+      /* line 180, assets/sass/partials/_flexslider.scss */
       .flex-control-nav li a.flex-active {
         background: #fff;
         cursor: default; }
 
-/* line 187, assets/sass/partials/_flexslider.scss */
+/* line 188, assets/sass/partials/_flexslider.scss */
 .flex-control-thumbs {
   margin: 5px 0 0;
   position: static;
   overflow: hidden; }
-  /* line 192, assets/sass/partials/_flexslider.scss */
+  /* line 193, assets/sass/partials/_flexslider.scss */
   .flex-control-thumbs li {
     width: 25%;
     float: left;
     margin: 0; }
-  /* line 198, assets/sass/partials/_flexslider.scss */
+  /* line 199, assets/sass/partials/_flexslider.scss */
   .flex-control-thumbs img {
     width: 100%;
     display: block;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
     opacity: 0.7;
     cursor: pointer; }
-    /* line 204, assets/sass/partials/_flexslider.scss */
+    /* line 205, assets/sass/partials/_flexslider.scss */
     .flex-control-thumbs img:hover {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1; }
-  /* line 209, assets/sass/partials/_flexslider.scss */
+  /* line 210, assets/sass/partials/_flexslider.scss */
   .flex-control-thumbs .flex-active {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     cursor: default; }
 
-/* line 215, assets/sass/partials/_flexslider.scss */
+/* line 216, assets/sass/partials/_flexslider.scss */
 .slide-text {
   z-index: 999;
   -webkit-transition: 200ms opacity ease-in-out;
   -moz-transition: 200ms opacity ease-in-out;
   -o-transition: 200ms opacity ease-in-out;
   transition: 200ms opacity ease-in-out; }
-  /* line 219, assets/sass/partials/_flexslider.scss */
+  /* line 220, assets/sass/partials/_flexslider.scss */
   .slide-text .slide-title {
     margin: 0; }
-  /* line 224, assets/sass/partials/_flexslider.scss */
+  /* line 225, assets/sass/partials/_flexslider.scss */
   .slide-text .slide-title a,
   .slide-text p {
     display: block;
     padding: .3em .8em; }
-  /* line 229, assets/sass/partials/_flexslider.scss */
+  /* line 230, assets/sass/partials/_flexslider.scss */
   .slide-text .slide-title a {
     background-color: #0fcfc5;
     color: blue; }
-  /* line 234, assets/sass/partials/_flexslider.scss */
+  /* line 235, assets/sass/partials/_flexslider.scss */
   .slide-text p {
     background-color: rgba(50, 50, 48, 0.8);
     color: white;
     padding: 1em; }
 
-/* line 242, assets/sass/partials/_flexslider.scss */
+/* line 243, assets/sass/partials/_flexslider.scss */
 .flex-direction-nav {
   display: none; }
 
 @media screen and (min-width: 768px) {
-  /* line 248, assets/sass/partials/_flexslider.scss */
+  /* line 249, assets/sass/partials/_flexslider.scss */
   .flex-direction-nav {
     display: block; }
 
-  /* line 252, assets/sass/partials/_flexslider.scss */
+  /* line 253, assets/sass/partials/_flexslider.scss */
   .slide-text {
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
@@ -4307,44 +4312,44 @@ html[xmlns] .slides {
     position: absolute;
     top: 60%;
     left: 50%; }
-    /* line 258, assets/sass/partials/_flexslider.scss */
+    /* line 259, assets/sass/partials/_flexslider.scss */
     .slide-text .slide-title {
       margin-bottom: .1em; }
-    /* line 263, assets/sass/partials/_flexslider.scss */
+    /* line 264, assets/sass/partials/_flexslider.scss */
     .slide-text .slide-title a,
     .slide-text p {
       display: inline-block; }
-    /* line 270, assets/sass/partials/_flexslider.scss */
+    /* line 271, assets/sass/partials/_flexslider.scss */
     .slide-text p {
       max-width: 55%; } }
 @media screen and (max-width: 860px) {
-  /* line 278, assets/sass/partials/_flexslider.scss */
+  /* line 279, assets/sass/partials/_flexslider.scss */
   .flex-direction-nav .flex-prev {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     left: 10px; }
 
-  /* line 279, assets/sass/partials/_flexslider.scss */
+  /* line 280, assets/sass/partials/_flexslider.scss */
   .flex-direction-nav .flex-next {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     right: 10px; } }
-/* line 283, assets/sass/partials/_flexslider.scss */
+/* line 284, assets/sass/partials/_flexslider.scss */
 .uplifted-slide-video {
   background-color: #000; }
-  /* line 286, assets/sass/partials/_flexslider.scss */
+  /* line 287, assets/sass/partials/_flexslider.scss */
   .uplifted-slide-video .oembed-container {
     display: none; }
-  /* line 291, assets/sass/partials/_flexslider.scss */
+  /* line 292, assets/sass/partials/_flexslider.scss */
   .uplifted-slide-video.visible .flex-image-container {
     background-color: #000; }
-    /* line 294, assets/sass/partials/_flexslider.scss */
+    /* line 295, assets/sass/partials/_flexslider.scss */
     .uplifted-slide-video.visible .flex-image-container img {
       opacity: .15;
       -webkit-filter: blur(3px);
       position: absolute;
       top: 0; }
-  /* line 302, assets/sass/partials/_flexslider.scss */
+  /* line 303, assets/sass/partials/_flexslider.scss */
   .uplifted-slide-video.visible .oembed-container {
     display: block; }
 
