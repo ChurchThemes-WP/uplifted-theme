@@ -4,8 +4,7 @@
  *
  * Used to display a search form for most situations.
  *
- * @package WordPress
- * @subpackage Uplifted
+ * @ackage Uplifted
  * @since 1.0.0
  */
 ?>

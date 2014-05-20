@@ -8,8 +8,8 @@
  * add_theme_support(): http://codex.wordpress.org/Function_Reference/get_theme_support
  *
  * @package    Uplifted
- * @subpackage Functions
- * @copyright  Copyright (c) 2013, upthemes.com
+ * @subpackage Includes
+ * @copyright  Copyright (c) 2014, upthemes.com
  * @link       http://upthemes.com/themes/uplifted
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      1.0

@@ -5,8 +5,8 @@
  * These output common elements for different post types. Use in content-*.php templates.
  *
  * @package    Uplifted
- * @subpackage Functions
- * @copyright  Copyright (c) 2013, upthemes.com
+ * @subpackage Includes
+ * @copyright  Copyright (c) 2014, upthemes.com
  * @link       http://upthemes.com/themes/uplifted
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      1.0
@@ -42,6 +42,61 @@ function uplifted_post_title() {
 	echo apply_filters( 'uplifted_post_title', $title );
 
 }
+
+/**
+ * Adds a class to the body if the page has a sidebar or not.
+ *
+ * @param 	$body_classes All body classes for current template/page.
+ * @uses 	uplifted_sidebar_enabled()
+ * @return 	array Full list of body classes.
+ */
+function uplifted_sidebar_body_class($body_classes){
+	$body_classes[] = uplifted_sidebar_enabled() ? 'uplifted-has-sidebar' : 'uplifted-no-sidebar';
+
+	return $body_classes;
+}
+
+add_filter('body_class','uplifted_sidebar_body_class');
+
+/**
+ * Returns the Google font stylesheet URL, if available.
+ *
+ * The use of Asap by default is localized. For languages
+ * that use characters not supported by the font, the font can be disabled.
+ *
+ * @since 1.0
+ * @return string Font stylesheet or empty string if disabled.
+ */
+function uplifted_fonts_url() {
+	$fonts_url = '';
+
+	/* Translators: If there are characters in your language that are not
+	 * supported by Asap or Oswald, translate this to 'off'. Do not translate into your
+	 * own language.
+	 */
+	$asap = _x( 'on', 'Asap font: on or off', 'uplifted' );
+
+	$oswald = _x( 'on', 'Oswald font: on or off', 'uplifted' );
+
+	if ( 'off' !== $asap && 'off' !== $oswald ) {
+		$font_families = array();
+
+		if ( 'off' !== $asap )
+			$font_families[] = 'Asap:400,700';
+
+		if ( 'off' !== $oswald )
+			$font_families[] = 'Oswald:300,400,700';
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+		$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
+	}
+
+	return $fonts_url;
+}
+
 
 /**
  * Output page title with "(Page #)" as needed

@@ -7,8 +7,8 @@
  * This is useful for determining which sidebar to show or displaying a banner, for example.
  *
  * @package    Uplifted
- * @subpackage Functions
- * @copyright  Copyright (c) 2013, upthemes.com
+ * @subpackage Includes
+ * @copyright  Copyright (c) 2014, upthemes.com
  * @link       http://upthemes.com/themes/uplifted
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      1.0
