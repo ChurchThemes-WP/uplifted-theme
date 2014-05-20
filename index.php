@@ -14,9 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 get_header(); // header.php ?>
 
+<?php do_action('uplifted_before_content'); ?>
+
 <div id="uplifted-content">
 
 	<div id="uplifted-content-inner">
+
+		<?php do_action('uplifted_before_content_block'); ?>
 
 		<div class="uplifted-content-block uplifted-content-block-close uplifted-clearfix">
 
@@ -31,6 +35,8 @@ get_header(); // header.php ?>
 			?>
 
 		</div>
+
+		<?php do_action('uplifted_after_content_block'); ?>
 
 		<?php
 		// author-box.php shows bio below blog posts and author archives
@@ -50,6 +56,8 @@ get_header(); // header.php ?>
 	</div>
 
 </div>
+
+<?php do_action('uplifted_after_content'); ?>
 
 <?php get_sidebar(); // load sidebar.php to show appropriate sidebar ?>
 

@@ -6,6 +6,8 @@
 // No direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+do_action('uplifted_before_navigation');
+
 /*********************************
  * ATTACHMENT - Back to Parent
  *********************************/
@@ -104,3 +106,5 @@ else :
 	<?php endif; ?>
 
 <?php endif; ?>
+
+<?php do_action('uplifted_after_navigation'); ?>

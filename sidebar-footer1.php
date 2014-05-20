@@ -11,6 +11,10 @@
 
 <?php if ( is_active_sidebar( 'uplifted-footer-column-one' ) ) : ?>
 
+    <?php do_action( 'uplifted_before_footer_column_one' ); ?>
+
 	<?php dynamic_sidebar( 'uplifted-footer-column-one' ); ?>
+
+    <?php do_action( 'uplifted_after_footer_column_one' ); ?>
 
 <?php endif; ?>

@@ -1,5 +1,7 @@
 <?php if ( has_nav_menu( 'social' ) ) {
 
+	do_action( 'uplifted_before_social_menu' );
+
 	wp_nav_menu(
 		array(
 			'theme_location'  => 'social',
@@ -14,5 +16,7 @@
 			'fallback_cb'     => '',
 		)
 	);
+
+	do_action( 'uplifted_after_social_menu' );
 
 } ?>

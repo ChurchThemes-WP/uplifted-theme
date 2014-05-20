@@ -8,6 +8,9 @@
  * @since 1.0.0
  */
 ?>
+
+<?php do_action( 'uplifted_before_search_box' ); ?>
+
 <form method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<div class="row collapse">
 		<div class="small-9 columns">
@@ -18,3 +21,5 @@
 		</div>
 	</div>
 </form>
+
+<?php do_action( 'uplifted_after_search_box' ); ?>

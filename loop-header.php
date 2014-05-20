@@ -11,6 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 // Show only on loop multiple
 if ( is_singular() ) return;
 
+do_action('uplifted_before_loop_header');
+
 /**************************************
  * BLOG POSTS
  **************************************/
@@ -174,3 +176,5 @@ elseif ( is_404() ) : ?>
 	</div>
 
 <?php endif; ?>
+
+<?php do_action('uplifted_after_loop_header'); ?>

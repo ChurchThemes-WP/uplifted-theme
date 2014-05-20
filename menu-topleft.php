@@ -1,6 +1,8 @@
 <?php if ( has_nav_menu( 'top-left' ) ) {
 
-   wp_nav_menu(array(
+    do_action( 'uplifted_before_top_left_menu' );
+
+    wp_nav_menu(array(
         'container' => false,                           // remove nav container
         'container_class' => 'menu',           		    // class of container
         'menu' => '',                      	            // menu name
@@ -11,8 +13,10 @@
         'link_before' => '',                            // before each link text
         'link_after' => '',                             // after each link text
         'depth' => 5,                                   // limit the depth of the nav
-    	'fallback_cb' => false,                         // fallback function (see below)
+        'fallback_cb' => false,                         // fallback function (see below)
         'walker' => new top_bar_walker()
-	));
+    ));
+
+    do_action( 'uplifted_after_top_left_menu' );
 
 } ?>

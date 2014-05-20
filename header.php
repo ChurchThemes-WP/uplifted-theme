@@ -34,12 +34,16 @@ $up_options = upfw_get_options();
 
 <div id="wrapper">
 
-	<?php do_action('before_header'); ?>
+	<?php do_action('uplifted_before_header'); ?>
 
 	<header id="masthead">
 
+		<?php do_action('uplifted_before_topbar'); ?>
+
 		<div class="top-bar-container<?php uplifted_sticky_navbar(); ?>">
 				<nav class="top-bar">
+
+					<?php do_action('uplifted_before_site_title'); ?>
 
 					<ul class="title-area">
 						<li class="name">
@@ -58,16 +62,25 @@ $up_options = upfw_get_options();
 						<li class="toggle-topbar menu-icon"><a href="#"><span><?php _e('Menu','uplifted'); ?></span></a></li>
 					</ul>
 
+					<?php do_action('uplifted_after_site_title'); ?>
+
 					<section class="top-bar-section">
-							<?php get_template_part('menu','topleft'); ?>
-							<?php get_template_part('menu','topright'); ?>
+						<?php do_action('uplifted_before_topleft_menu'); ?>
+						<?php get_template_part('menu','topleft'); ?>
+						<?php do_action('uplifted_after_topleft_menu'); ?>
+
+						<?php do_action('uplifted_before_topright_menu'); ?>
+						<?php get_template_part('menu','topright'); ?>
+						<?php do_action('uplifted_afte_topright_menu'); ?>
 					</section>
 				</nav>
 		</div>
 
+		<?php do_action('uplifted_after_topbar'); ?>
+
 	</header>
 
-	<?php do_action('after_header'); ?>
+	<?php do_action('uplifted_after_header'); ?>
 
 	<?php uplifted_breadcrumbs( 'content' ); ?>
 

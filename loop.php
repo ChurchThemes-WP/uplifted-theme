@@ -10,6 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 ?>
 
+<?php do_action('uplifted_before_loop'); ?>
+
 <?php if ( have_posts() ) : ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
@@ -19,3 +21,5 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	<?php endwhile; ?>
 
 <?php endif; ?>
+
+<?php do_action('uplifted_after_loop'); ?>

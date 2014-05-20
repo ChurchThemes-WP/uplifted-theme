@@ -14,6 +14,8 @@ if ( ! get_the_author_meta( 'description' ) ) return;
 
 ?>
 
+<?php do_action('uplifted_before_author_box'); ?>
+
 <aside class="uplifted-content-block uplifted-clearfix">
 
 	<div class="uplifted-author-box">
@@ -39,3 +41,5 @@ if ( ! get_the_author_meta( 'description' ) ) return;
 	</div>
 
 </aside>
+
+<?php do_action('uplifted_after_author_box'); ?>

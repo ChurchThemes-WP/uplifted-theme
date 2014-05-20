@@ -11,10 +11,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 <?php if ( is_active_sidebar( 'ctcom-home-highlights' ) ) : ?>
 
+    <?php do_action( 'uplifted_before_home_highlights' ); ?>
+
 	<div id="ctcom-home-highlights">
 
 		<?php dynamic_sidebar( 'ctcom-home-highlights' ); ?>
 
 	</div>
+
+    <?php do_action( 'uplifted_after_home_highlights' ); ?>
 
 <?php endif; ?>

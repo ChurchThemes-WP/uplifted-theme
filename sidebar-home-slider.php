@@ -11,6 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 <?php if ( is_active_sidebar( 'ctcom-home-slider' ) ) : ?>
 
+    <?php do_action( 'uplifted_before_home_slider' ); ?>
+
 	<div id="uplifted-slider">
 
 		<div id="uplifted-slider-inner">
@@ -28,5 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 
 	</div>
+
+    <?php do_action( 'uplifted_after_home_slider' ); ?>
 
 <?php endif; ?>
