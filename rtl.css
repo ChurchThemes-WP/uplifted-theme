@@ -1,6 +1,5 @@
 /* Variables */
 /* Global */
-/* line 283, assets/sass/partials/_global.scss */
 *,
 *:before,
 *:after {
@@ -8,12 +7,10 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 289, assets/sass/partials/_global.scss */
 html,
 body {
   font-size: 100%; }
 
-/* line 293, assets/sass/partials/_global.scss */
 body {
   background: #f8f9fb;
   color: #323232;
@@ -26,31 +23,25 @@ body {
   position: relative;
   cursor: "default"; }
 
-/* line 306, assets/sass/partials/_global.scss */
 a:hover {
   cursor: "pointer"; }
 
-/* line 309, assets/sass/partials/_global.scss */
 a:focus {
   outline: none; }
 
-/* line 312, assets/sass/partials/_global.scss */
 img,
 object,
 embed {
   max-width: 100%;
   height: auto; }
 
-/* line 316, assets/sass/partials/_global.scss */
 object,
 embed {
   height: 100%; }
 
-/* line 318, assets/sass/partials/_global.scss */
 img {
   -ms-interpolation-mode: bicubic; }
 
-/* line 322, assets/sass/partials/_global.scss */
 #map_canvas img,
 #map_canvas embed,
 #map_canvas object,
@@ -59,87 +50,66 @@ img {
 .map_canvas object {
   max-width: none !important; }
 
-/* line 329, assets/sass/partials/_global.scss */
 .left {
   float: left !important; }
 
-/* line 330, assets/sass/partials/_global.scss */
 .right {
   float: right !important; }
 
-/* line 331, assets/sass/partials/_global.scss */
 .text-left {
   text-align: left !important; }
 
-/* line 332, assets/sass/partials/_global.scss */
 .text-right {
   text-align: right !important; }
 
-/* line 333, assets/sass/partials/_global.scss */
 .text-center {
   text-align: center !important; }
 
-/* line 334, assets/sass/partials/_global.scss */
 .text-justify {
   text-align: justify !important; }
 
-/* line 335, assets/sass/partials/_global.scss */
 .hide {
   display: none; }
 
-/* line 341, assets/sass/partials/_global.scss */
 .antialiased {
   -webkit-font-smoothing: antialiased; }
 
-/* line 344, assets/sass/partials/_global.scss */
 img {
   display: inline-block;
   vertical-align: middle; }
 
-/* line 354, assets/sass/partials/_global.scss */
 textarea {
   height: auto;
   min-height: 50px; }
 
-/* line 357, assets/sass/partials/_global.scss */
 select {
   width: 100%; }
 
 /* RTL Support - Right to Left */
-/* line 6, assets/sass/rtl.scss */
 body {
   direction: rtl;
   unicode-bidi: embed;
   text-align: right; }
-  /* line 12, assets/sass/rtl.scss */
   body input, body textarea {
     text-align: right; }
-  /* line 16, assets/sass/rtl.scss */
   body blockquote {
     border-left: none;
     border-right: 6px solid #0fcfc5; }
-  /* line 26, assets/sass/rtl.scss */
   body .top-bar .name h1 a {
     display: inline-block; }
   @media screen and (max-width: 860px) {
-    /* line 33, assets/sass/rtl.scss */
     body .top-bar .toggle-topbar.menu-icon {
       left: 0;
       padding-left: 10px; }
-      /* line 37, assets/sass/rtl.scss */
       body .top-bar .toggle-topbar.menu-icon a span {
         text-indent: 9999px; } }
   @media screen and (min-width: 768px) {
-    /* line 48, assets/sass/rtl.scss */
     body .top-bar .title-area {
       float: right; } }
-  /* line 58, assets/sass/rtl.scss */
   body .top-bar-section .has-form {
     padding: 26.66667px; }
-  /* line 61, assets/sass/rtl.scss */
   body .top-bar-section .has-dropdown {
     position: relative; }
-    /* line 65, assets/sass/rtl.scss */
     body .top-bar-section .has-dropdown > a:after {
       content: "";
       display: block;
@@ -156,80 +126,59 @@ body {
       top: 50%;
       left: 0; }
       @media screen and (min-width: 768px) {
-        /* line 65, assets/sass/rtl.scss */
         body .top-bar-section .has-dropdown > a:after {
           -moz-border-right-colors: none !important;
           border-color: #c5c5ba rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) !important; } }
-    /* line 83, assets/sass/rtl.scss */
     body .top-bar-section .has-dropdown.moved {
       position: static; }
-      /* line 84, assets/sass/rtl.scss */
       body .top-bar-section .has-dropdown.moved > .dropdown {
         visibility: visible; }
   @media screen and (min-width: 768px) {
-    /* line 92, assets/sass/rtl.scss */
     body .top-bar-section .has-dropdown .dropdown li.has-dropdown > a:after {
       content: "<"; } }
-  /* line 98, assets/sass/rtl.scss */
   body .top-bar-section .has-dropdown > a {
     padding-left: 46.66667px !important;
     padding-right: 26.66667px !important; }
-  /* line 107, assets/sass/rtl.scss */
   body .gallery-item {
     width: 49%;
     margin: 0 1% 2%;
     float: right; }
-    /* line 112, assets/sass/rtl.scss */
     body .gallery-item .attachment-thumbnail {
       width: 100%; }
     @media screen and (max-width: 430px) {
-      /* line 117, assets/sass/rtl.scss */
       body .gallery-item:nth-child(odd) {
         margin-right: 0;
         margin-left: 1%; }
-      /* line 121, assets/sass/rtl.scss */
       body .gallery-item:nth-child(even) {
         margin-left: 0;
         margin-right: 1%; } }
     @media screen and (min-width: 430px) {
-      /* line 107, assets/sass/rtl.scss */
       body .gallery-item {
         width: 23.5%;
         margin: 0 0 2% 2%; }
-        /* line 131, assets/sass/rtl.scss */
         body .gallery-item:nth-child(4n+4) {
           margin-left: 0; } }
-  /* line 142, assets/sass/rtl.scss */
   body #respond .comment-form-author,
   body #respond .comment-form-email {
     float: right;
     margin-right: 0; }
-  /* line 148, assets/sass/rtl.scss */
   body #respond .comment-form-email {
     margin-right: 4%; }
-  /* line 153, assets/sass/rtl.scss */
   body .comment-meta {
     float: right; }
-  /* line 157, assets/sass/rtl.scss */
   body .reply {
     right: auto; }
-  /* line 165, assets/sass/rtl.scss */
   body #footer .widget {
     text-align: right; }
-  /* line 173, assets/sass/rtl.scss */
   body .search-form .row > div {
     float: right; }
-  /* line 186, assets/sass/rtl.scss */
   body .paging .page-numbers {
     float: right; }
-  /* line 190, assets/sass/rtl.scss */
   body .paging .next,
   body .paging .prev {
     float: right; }
-  /* line 195, assets/sass/rtl.scss */
   body .paging .prev {
     border-left: 1px solid #e5e5e5; }
-  /* line 199, assets/sass/rtl.scss */
   body .paging .next {
     float: left;
     border-right: 1px solid #e5e5e5; }
