@@ -10,6 +10,9 @@
  * @link       https://github.com/thomasgriffin/TGM-Plugin-Activation
  */
 
+// No direct access
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /**
  * Include the TGM_Plugin_Activation class.
  */

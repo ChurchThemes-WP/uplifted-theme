@@ -10,8 +10,14 @@
  * @since      1.0
  */
 
+// No direct access
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! isset( $content_width ) ){
-	$content_width = 560;
+	/**
+	 * @param int $content_width The content width is used by WordPress to display various types of media at the proper size.
+	 */
+ 	$content_width = 560;
 }
 
 // Remove Theme Options page to use Theme Customizer method instead
@@ -22,7 +28,7 @@ define('UPFW_NO_THEME_OPTIONS_PAGE',true);
  *
  * Initialize our auto-update script and define constants.
  */
-require_once 'includes/UpThemes_Theme_Updater.php';
+require_once trailingslashit( get_template_directory() ) . 'includes/UpThemes_Theme_Updater.php';
 
 // Define variables for our theme updates
 define('UPTHEMES_LICENSE_KEY','uplifted_theme');

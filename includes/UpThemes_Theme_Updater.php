@@ -1,5 +1,16 @@
 <?php
-
+/**
+ * Theme Updater
+ *
+ * Automatic updates for this theme.
+ *
+ * @package    Uplifted
+ * @subpackage Includes
+ * @copyright  Copyright (c) 2014, upthemes.com
+ * @link       http://upthemes.com/themes/uplifted
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @since      1.0
+ */
 
 /**
 * Create a sub-page for our theme license key
@@ -285,6 +296,12 @@ function upthemes_sl_check_license() {
 	}
 }
 
+/**
+ * Enforce the license key
+ *
+ * Checks to see if the license key is valid, and if invalid, remove
+ * the key status from the database.
+ */
 function upthemes_sl_enforce_license(){
 	$license_status = upthemes_sl_check_license();
 
@@ -292,7 +309,10 @@ function upthemes_sl_enforce_license(){
 		delete_option( UPTHEMES_LICENSE_KEY . '_status' );
 }
 
-function upthemes_sl_license_expired( $plugin_data, $r ) {
+/**
+ * Tell user license key has expired.
+ */
+function upthemes_sl_license_expired() {
 		echo 'Your license key has expired. Please <a href="http://upthemes.com">purchase a new license key</a> to enable theme support and automatic updates.';
 }
 
