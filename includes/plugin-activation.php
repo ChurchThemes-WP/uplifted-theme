@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Include the TGM_Plugin_Activation class.
  */
-require_once dirname( __FILE__ ) . '/includes/plugin-activation/class-tgm-plugin-activation.php';
+require_once dirname( __FILE__ ) . '/plugin-activation/class-tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'uplifted_register_required_plugins' );
 /**
