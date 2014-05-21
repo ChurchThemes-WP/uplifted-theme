@@ -30,7 +30,7 @@ function uplifted_add_theme_support_wp() {
 	// Add support for a variety of post formats
 	add_theme_support( 'post-formats', array( 'video', 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
 
-	add_editor_style();
+	add_editor_style( array( get_template_directory_uri() . '/editor-style.css', uplifted_fonts_url() ) );
 
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
 	add_theme_support( 'post-thumbnails' );
