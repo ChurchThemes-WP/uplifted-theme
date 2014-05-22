@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 get_header(); // header.php ?>
 
-<?php do_action('uplifted_before_content'); ?>
+<?php do_action('uplifted_before_content_div'); ?>
 
 <div id="uplifted-content">
 
@@ -57,7 +57,7 @@ get_header(); // header.php ?>
 
 </div>
 
-<?php do_action('uplifted_after_content'); ?>
+<?php do_action('uplifted_after_content_div'); ?>
 
 <?php get_sidebar(); // load sidebar.php to show appropriate sidebar ?>
 
