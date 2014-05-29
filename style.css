@@ -4426,7 +4426,12 @@ img.alignright {
 .tribe-theme-uplifted #tribe-bar-form .tribe-bar-submit input[type=submit] {
   background-color: #0fcfc5;
   border-color: #0c9f98;
-  color: white; }
+  color: white;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px; }
   .tribe-theme-uplifted #tribe-bar-form .tribe-bar-submit input[type=submit]:hover, .tribe-theme-uplifted #tribe-bar-form .tribe-bar-submit input[type=submit]:focus {
     background-color: #0fcfc5; }
   .tribe-theme-uplifted #tribe-bar-form .tribe-bar-submit input[type=submit]:hover, .tribe-theme-uplifted #tribe-bar-form .tribe-bar-submit input[type=submit]:focus {
@@ -4437,20 +4442,22 @@ img.alignright {
   border: 1px solid #e6e6e6;
   padding: 24px; }
 .tribe-theme-uplifted .tribe-events-calendar thead th {
-  background-color: #ece67a;
-  color: rgba(0, 0, 0, 0.6);
-  border-top: 1px solid #dfd521;
-  border-left-color: #dfd521;
-  border-right-color: #dfd521; }
+  background-color: #e8ebf2;
+  color: #323232;
+  border-top: 1px solid #e8ebf2;
+  border-left-color: #e8ebf2;
+  border-right-color: #e8ebf2; }
 .tribe-theme-uplifted #tribe-bar-form {
   background-color: rgba(255, 255, 255, 0.3); }
 .tribe-theme-uplifted .tribe-events-calendar td.tribe-events-past div[id*="tribe-events-daynum-"],
 .tribe-theme-uplifted .tribe-events-calendar td.tribe-events-past div[id*="tribe-events-daynum-"] > a {
   color: rgba(0, 0, 0, 0.4);
-  background-color: #f9f7d3; }
+  background-color: #e8ebf2; }
+.tribe-theme-uplifted #tribe-events-content .tribe-events-calendar td {
+  border-color: #e8ebf2; }
 .tribe-theme-uplifted .tribe-events-calendar div[id*="tribe-events-daynum-"], .tribe-theme-uplifted .tribe-events-calendar div[id*="tribe-events-daynum-"] a {
   color: rgba(0, 0, 0, 0.6);
-  background-color: #f2eea7; }
+  background-color: #f2f3f7; }
 .tribe-theme-uplifted #tribe-events-content .tribe-events-calendar td {
   background-color: white; }
 .tribe-theme-uplifted .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"],
