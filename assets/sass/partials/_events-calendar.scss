@@ -32,6 +32,8 @@
 
 	#tribe-bar-form .tribe-bar-submit input[type=submit]{
 		@include button-style($primary-color);
+		
+		@include border-radius($global-radius);
 	}
 
 	#tribe-events-content.tribe-events-list,
@@ -43,11 +45,11 @@
  	}
 
 	.tribe-events-calendar thead th{
-		background-color: $tertiary-color;
-		color: contrast-color($tertiary-color,rgba(0,0,0,0.6),rgba(255,255,255,0.6),50%);
-		border-top: 1px solid contrast-color($tertiary-color, darken($tertiary-color,20%), lighten($tertiary-color,20%),50%);
-		border-left-color: contrast-color($tertiary-color, darken($tertiary-color,20%), lighten($tertiary-color,20%),50%);
-		border-right-color: contrast-color($tertiary-color, darken($tertiary-color,20%), lighten($tertiary-color,20%),50%);
+		background-color: contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%), 50%); // set section bg color based off of site background color, either lighten or darken
+		color: contrast-color($body-bg, $body-font-color, lighten($body-bg,70%), 50%);
+		border-top: 1px solid contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%), 50%);
+		border-left-color: contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%), 50%);
+		border-right-color: contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%), 50%);
 	}
 
 	#tribe-bar-form{
@@ -57,12 +59,18 @@
 	.tribe-events-calendar td.tribe-events-past div[id*="tribe-events-daynum-"],
 	.tribe-events-calendar td.tribe-events-past div[id*="tribe-events-daynum-"]>a{
 		color: contrast-color($tertiary-color,rgba(0,0,0,0.4),rgba(255,255,255,0.4),50%);
-		background-color: contrast-color($tertiary-color, lighten($tertiary-color,20%), darken($tertiary-color,20%),50%);
+		//background-color: contrast-color($tertiary-color, lighten($tertiary-color,20%), darken($tertiary-color,20%),50%);
+		background-color: contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%), 50%);
+	}
+
+	#tribe-events-content .tribe-events-calendar td {
+		border-color: contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%), 50%);
 	}
 
 	.tribe-events-calendar div[id*="tribe-events-daynum-"], .tribe-events-calendar div[id*="tribe-events-daynum-"] a{
 		color: contrast-color($tertiary-color,rgba(0,0,0,0.6),rgba(255,255,255,0.6),50%);
-		background-color: contrast-color($tertiary-color, lighten($tertiary-color,10%), darken($tertiary-color,10%),50%);
+		//background-color: contrast-color($tertiary-color, lighten($tertiary-color,10%), darken($tertiary-color,10%),50%);
+		background-color: contrast-color($body-bg, darken($body-bg, 2%), lighten($body-bg, 10%), 50%);
 	}
 
 	#tribe-events-content .tribe-events-calendar td{
