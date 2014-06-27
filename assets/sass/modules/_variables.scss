@@ -43,7 +43,7 @@ $body-bg: #f8f9fb !default;
 
 $primary-color: #0fcfc5 !default;
 $secondary-color: #e8665a !default;
-$tertiary-color: #ece67a !default;
+$panel-border-color: #ece67a !default;
 $neutral-color: #fff !default;
 $transparent-neutral-color: rgba($neutral-color,.3) !default;
 
@@ -1253,7 +1253,7 @@ $topbar-title-font-size: emCalc(17px);
 
 $topbar-dropdown-bg: contrast-color($panel-bg, darken($panel-bg, 10%), lighten($panel-bg, 20%), 50%); // if we have a dark panel bg then we lighten that color for the dropdown items, if a light panel bg then we darken it for the dropdown items
 // $topbar-dropdown-link-color: $secondary-color;
-// $topbar-dropdown-link-bg: $tertiary-color;
+// $topbar-dropdown-link-bg: $panel-border-color;
 $topbar-dropdown-toggle-size: 5px;
 $topbar-dropdown-toggle-color: contrast-color($panel-bg, darken($panel-bg, 40%), lighten($panel-bg, 40%), 50%); // the dropdown arrow color is dependant on the color of the panel bg
 $topbar-dropdown-toggle-color-hover: contrast-color($primary-color, darken($primary-color, 40%), lighten($primary-color, 40%), 50%);
