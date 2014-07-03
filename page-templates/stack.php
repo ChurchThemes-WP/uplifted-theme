@@ -12,15 +12,19 @@ get_header(); // header.php ?>
 
 <div id="uplifted-content">
 
-	<div id="uplifted-content-inner">
+        <div id="uplifted-content-inner">
 
-		<div class="uplifted-content-block uplifted-content-block-close uplifted-clearfix">
+            <div class="uplifted-content-block uplifted-content-block-close uplifted-clearfix">
 
-			<?php the_content(); ?>
+            <?php while ( have_posts() ) : the_post(); ?>
 
-		</div>
+                    <?php the_content(); ?>
 
-	</div>
+            <?php endwhile; // end of the loop. ?>
+
+            </div>
+
+        </div>
 
 </div>
 
