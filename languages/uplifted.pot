@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uplifted\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-20 10:33-0600\n"
-"PO-Revision-Date: 2014-05-20 10:33-0600\n"
+"POT-Creation-Date: 2014-07-03 16:51-0600\n"
+"PO-Revision-Date: 2014-07-03 16:51-0600\n"
 "Last-Translator: Chris Wallace <chris@upthemes.com>\n"
 "Language-Team: UpThemes <support@upthemes.com>\n"
 "MIME-Version: 1.0\n"
@@ -175,107 +175,107 @@ msgstr ""
 msgid "Save PDF"
 msgstr ""
 
-#: header.php:58
+#: header.php:62
 msgid "Menu"
 msgstr ""
 
-#: loop-author.php:27
+#: loop-author.php:29
 #, php-format
 msgid "About %s"
 msgstr ""
 
-#: loop-author.php:33
+#: loop-author.php:35
 #, php-format
 msgid "More posts by %1$s"
 msgstr ""
 
-#: loop-header.php:46
+#: loop-header.php:48
 #, php-format
 msgid "'%s' tagged posts"
 msgstr ""
 
-#: loop-header.php:62
 #: loop-header.php:64
+#: loop-header.php:66
 #, php-format
 msgid "Sermons on %s"
 msgstr ""
 
-#: loop-header.php:66
+#: loop-header.php:68
 #, php-format
 msgid "Sermons by %s"
 msgstr ""
 
-#: loop-header.php:68
+#: loop-header.php:70
 #, php-format
 msgid "'%s' tagged sermons"
 msgstr ""
 
-#: loop-header.php:88
+#: loop-header.php:90
 #, php-format
 msgid "Posts by %s"
 msgstr ""
 
-#: loop-header.php:100
+#: loop-header.php:102
 #, php-format
 msgid "Search results for '%s'"
 msgstr ""
 
-#: loop-header.php:105
+#: loop-header.php:107
 #, php-format
 msgid "There is %d match for %s."
 msgstr ""
 
-#: loop-header.php:123
+#: loop-header.php:125
 msgid "F Y"
 msgstr ""
 
-#: loop-header.php:125
+#: loop-header.php:127
 msgid "Y"
-msgstr ""
-
-#: loop-header.php:132
-#, php-format
-msgid "Posts from %s"
 msgstr ""
 
 #: loop-header.php:134
 #, php-format
+msgid "Posts from %s"
+msgstr ""
+
+#: loop-header.php:136
+#, php-format
 msgid "Sermons from %s"
 msgstr ""
 
-#: loop-header.php:164
+#: loop-header.php:166
 msgid "Archives"
 msgstr ""
 
-#: loop-header.php:170
+#: loop-header.php:172
 msgid "Not Found"
 msgstr ""
 
-#: loop-header.php:173
+#: loop-header.php:175
 msgid "Sorry, the page or file you tried to access was not found."
 msgstr ""
 
-#: loop-navigation.php:24
+#: loop-navigation.php:26
 #, php-format
 msgid "&larr; Back to %s"
 msgstr ""
 
-#: loop-navigation.php:55
+#: loop-navigation.php:57
 #, php-format
 msgid "&larr; %1$s"
 msgstr ""
 
-#: loop-navigation.php:64
+#: loop-navigation.php:66
 #, php-format
 msgid "%1$s &rarr;"
 msgstr ""
 
-#: loop-navigation.php:97
+#: loop-navigation.php:99
 #, php-format
 msgid "&larr; %s Previous"
 msgstr ""
 
-#: loop-navigation.php:98
+#: loop-navigation.php:100
 #, php-format
 msgid "Next %s &rarr;"
 msgstr ""
@@ -317,7 +317,7 @@ msgstr ""
 msgid " - "
 msgstr ""
 
-#: framework/includes/helpers.php:190
+#: framework/includes/helpers.php:252
 msgid "&hellip;"
 msgstr ""
 
@@ -326,7 +326,7 @@ msgstr ""
 msgid "The target image size is %s."
 msgstr ""
 
-#: framework/includes/maps.php:74
+#: framework/includes/maps.php:73
 msgid "<p><b>Google Map Error:</b> <i>latitude</i> and <i>longitude</i> attributes are required. See documentation for help.</p>"
 msgstr ""
 
@@ -342,21 +342,21 @@ msgstr ""
 msgid "Yesterday"
 msgstr ""
 
-#: framework/includes/admin/admin-enqueue-scripts.php:37
-msgid "Choose Image for Widget"
-msgstr ""
-
-#: framework/includes/admin/admin-enqueue-scripts.php:38
-msgid "Use in Widget"
-msgstr ""
-
-#: framework/includes/admin/admin-enqueue-scripts.php:39
-msgid "Sorry, this widget is not made for use in this area. Please delete."
-msgstr ""
-
 #: framework/includes/admin/admin-taxonomies.php:70
 #, php-format
 msgid "<b>Custom Ordering:</b> Try <a href=\"%s\" target=\"_blank\">this plugin</a> for custom ordering your %s."
+msgstr ""
+
+#: framework/includes/admin/admin-widgets.php:33
+msgid "Choose Image for Widget"
+msgstr ""
+
+#: framework/includes/admin/admin-widgets.php:34
+msgid "Use in Widget"
+msgstr ""
+
+#: framework/includes/admin/admin-widgets.php:35
+msgid "Sorry, this widget is not made for use in this area. Please delete."
 msgstr ""
 
 #: framework/includes/admin/edd-license.php:186
@@ -399,27 +399,27 @@ msgid "<b>License Activation:</b> Please activate your <a href=\"%s\">License Ke
 msgstr ""
 
 #: framework/includes/classes/breadcrumbs.php:55
-msgid " <span class=\"separator\"></span> "
+msgid " > "
 msgstr ""
 
-#: framework/includes/classes/breadcrumbs.php:254
+#: framework/includes/classes/breadcrumbs.php:255
 msgid "F"
 msgstr ""
 
-#: framework/includes/classes/breadcrumbs.php:271
+#: framework/includes/classes/breadcrumbs.php:272
 msgid "jS"
 msgstr ""
 
-#: framework/includes/classes/breadcrumbs.php:321
+#: framework/includes/classes/breadcrumbs.php:322
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: framework/includes/classes/breadcrumbs.php:332
+#: framework/includes/classes/breadcrumbs.php:333
 msgid "Search Results"
 msgstr ""
 
-#: framework/includes/classes/breadcrumbs.php:478
+#: framework/includes/classes/breadcrumbs.php:495
 msgid "Home"
 msgstr ""
 
@@ -457,7 +457,7 @@ msgstr ""
 #: framework/includes/classes/widget-galleries.php:117
 #: framework/includes/classes/widget-gallery.php:92
 #: framework/includes/classes/widget-gallery.php:174
-#: framework/includes/classes/widget-giving.php:85
+#: framework/includes/classes/widget-giving.php:81
 #: framework/includes/classes/widget-highlight.php:81
 #: framework/includes/classes/widget-locations.php:81
 #: framework/includes/classes/widget-people.php:81
@@ -465,7 +465,7 @@ msgstr ""
 #: framework/includes/classes/widget-posts.php:142
 #: framework/includes/classes/widget-sermons.php:81
 #: framework/includes/classes/widget-sermons.php:218
-#: framework/includes/classes/widget-slide.php:85
+#: framework/includes/classes/widget-slide.php:81
 msgid "Title"
 msgstr ""
 
@@ -688,27 +688,27 @@ msgstr ""
 msgid "Shows a message and button"
 msgstr ""
 
-#: framework/includes/classes/widget-giving.php:94
+#: framework/includes/classes/widget-giving.php:90
 msgid "Giving"
 msgstr ""
 
-#: framework/includes/classes/widget-giving.php:109
+#: framework/includes/classes/widget-giving.php:105
 msgid "Message"
 msgstr ""
 
-#: framework/includes/classes/widget-giving.php:118
+#: framework/includes/classes/widget-giving.php:114
 msgid "You may give online by clicking below."
 msgstr ""
 
-#: framework/includes/classes/widget-giving.php:133
+#: framework/includes/classes/widget-giving.php:129
 msgid "Button Text"
 msgstr ""
 
-#: framework/includes/classes/widget-giving.php:142
+#: framework/includes/classes/widget-giving.php:138
 msgid "Give Now"
 msgstr ""
 
-#: framework/includes/classes/widget-giving.php:157
+#: framework/includes/classes/widget-giving.php:153
 msgid "Button URL"
 msgstr ""
 
@@ -721,22 +721,22 @@ msgid "Shows a highlight"
 msgstr ""
 
 #: framework/includes/classes/widget-highlight.php:105
-#: framework/includes/classes/widget-slide.php:109
+#: framework/includes/classes/widget-slide.php:105
 msgid "Description"
 msgstr ""
 
 #: framework/includes/classes/widget-highlight.php:129
-#: framework/includes/classes/widget-slide.php:133
+#: framework/includes/classes/widget-slide.php:129
 msgid "Click URL"
 msgstr ""
 
 #: framework/includes/classes/widget-highlight.php:157
-#: framework/includes/classes/widget-slide.php:161
+#: framework/includes/classes/widget-slide.php:157
 msgid "Open in new tab"
 msgstr ""
 
 #: framework/includes/classes/widget-highlight.php:177
-#: framework/includes/classes/widget-slide.php:181
+#: framework/includes/classes/widget-slide.php:177
 msgid "Image"
 msgstr ""
 
@@ -914,7 +914,7 @@ msgstr ""
 msgid "A slide to be shown in a slider"
 msgstr ""
 
-#: framework/includes/classes/widget-slide.php:205
+#: framework/includes/classes/widget-slide.php:201
 msgid "Video URL"
 msgstr ""
 
@@ -932,43 +932,36 @@ msgstr ""
 
 #: includes/plugin-activation.php:72
 #: includes/plugin-activation/class-tgm-plugin-activation.php:161
-#: includes/plugin-activation/example.php:91
 msgid "Install Required Plugins"
 msgstr ""
 
 #: includes/plugin-activation.php:73
 #: includes/plugin-activation/class-tgm-plugin-activation.php:162
-#: includes/plugin-activation/example.php:92
 msgid "Install Plugins"
 msgstr ""
 
 #: includes/plugin-activation.php:74
 #: includes/plugin-activation/class-tgm-plugin-activation.php:163
-#: includes/plugin-activation/example.php:93
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
 #: includes/plugin-activation.php:75
-#: includes/plugin-activation/example.php:94
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
 #: includes/plugin-activation.php:86
 #: includes/plugin-activation/class-tgm-plugin-activation.php:175
-#: includes/plugin-activation/example.php:105
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
 #: includes/plugin-activation.php:87
 #: includes/plugin-activation/class-tgm-plugin-activation.php:177
 #: includes/plugin-activation/class-tgm-plugin-activation.php:1945
-#: includes/plugin-activation/example.php:106
 msgid "Plugin activated successfully."
 msgstr ""
 
 #: includes/plugin-activation.php:88
-#: includes/plugin-activation/example.php:107
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
