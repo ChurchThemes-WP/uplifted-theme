@@ -63,12 +63,14 @@ if ( is_singular( get_post_type() ) ) :
 echo <<< HTML
 <script>
 jQuery(document).ready(function($) {
-	$.smoothScroll({
-		scrollTarget: '#uplifted-sermon-full-media',
-		offset: -60,
-		easing: 'swing',
-		speed: 800
-	});
+	if( $('#uplifted-sermon-full-media').length ){
+		$.smoothScroll({
+			scrollTarget: '#uplifted-sermon-full-media',
+			offset: -60,
+			easing: 'swing',
+			speed: 800
+		});
+	}
 });
 </script>
 HTML;
