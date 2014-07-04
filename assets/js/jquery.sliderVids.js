@@ -25,8 +25,6 @@
 			$.extend( settings, options );
 		}
 
-		console.log(options);
-
 		return this.each(function(){
 			var selectors = [
 				"iframe[src*='player.vimeo.com']",
@@ -48,8 +46,7 @@
 				var $this = $(this);
 				if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
 
-				var height = settings.slideHeight,
-					width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width();
+				var height = settings.slideHeight;
 
 				if(!$this.attr('id')){
 					var videoID = 'fitvid' + Math.floor(Math.random()*999999);
