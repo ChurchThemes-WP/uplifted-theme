@@ -53,32 +53,6 @@ if ( is_singular( get_post_type() ) ) :
 		$show_player = 'audio';
 	}
 
-	// Scroll to player requested, if any
-	if ( $player_request ) {
-
-		add_action( 'wp_footer', 'uplifted_sermon_player_scroll' );
-
-		function uplifted_sermon_player_scroll() {
-
-echo <<< HTML
-<script>
-jQuery(document).ready(function($) {
-	if( $('#uplifted-sermon-full-media').length ){
-		$.smoothScroll({
-			scrollTarget: '#uplifted-sermon-full-media',
-			offset: -60,
-			easing: 'swing',
-			speed: 800
-		});
-	}
-});
-</script>
-HTML;
-
-		}
-
-	}
-
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'uplifted-entry-full uplifted-sermon-full' ); ?>>
@@ -142,7 +116,7 @@ HTML;
 									</div>
 								<?php endif; ?>
 
-								<?php echo $audio_player ?>
+								<?php echo $audio_player; ?>
 
 							</div>
 							<?php endif; ?>
