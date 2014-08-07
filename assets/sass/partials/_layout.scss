@@ -4,6 +4,10 @@
 // Target Content Layout for Mobile Devices
 //
 
+#masthead {
+	@extend .clearfix;
+}
+
 #container {
   @include grid-row;
   @extend .clearfix;
