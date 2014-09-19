@@ -120,7 +120,7 @@ body {
       border-left-style: solid;
       margin-left: 26.66667px;
       margin-top: -4.5px;
-      border-color: rgba(0, 0, 0, 0) #46463a rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+      border-color: transparent #46463A transparent transparent;
       -moz-border-right-colors: #46463A;
       position: absolute;
       top: 50%;
@@ -128,7 +128,7 @@ body {
       @media screen and (min-width: 768px) {
         body .top-bar-section .has-dropdown > a:after {
           -moz-border-right-colors: none !important;
-          border-color: #c5c5ba rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) !important; } }
+          border-color: #C5C5BA transparent transparent transparent !important; } }
     body .top-bar-section .has-dropdown.moved {
       position: static; }
       body .top-bar-section .has-dropdown.moved > .dropdown {

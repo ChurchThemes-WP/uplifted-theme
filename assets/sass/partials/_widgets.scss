@@ -366,9 +366,20 @@
 		background-color: $primary-color;
 		border: none;
 		box-shadow: none;
+		color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 60%), 50%);
+		position: relative;
+		@include transition(200ms all ease-in-out);
+
+		span {
+			position: absolute;
+			top: 0;
+			margin-left: -($input-font-size * 1.6) / 4;
+			font-size: $input-font-size * 1.6;
+		}
 
 		&:hover {
 			background-color: darken($primary-color,5%);
+			color: #fff;
 		}
 	}
 
