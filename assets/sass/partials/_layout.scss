@@ -4,6 +4,10 @@
 // Target Content Layout for Mobile Devices
 //
 
+body {
+	padding-top: 80px;
+}
+
 #masthead {
 	@extend .clearfix;
 }
