@@ -416,15 +416,19 @@
 .widget_recent_comments {
 
 	ul li {
-		margin-bottom: 1em;
-		//border-bottom: 1px solid contrast-color($neutral-color, darken($neutral-color,5%), lighten($neutral-color,5%), 50%);
+		margin-bottom: .75em;
+		padding-bottom: .75em;
+		border-bottom: 1px solid contrast-color($neutral-color, darken($neutral-color,5%), lighten($neutral-color,5%), 50%);
 
 		a {
-			border-bottom: 1px solid contrast-color($body-bg, lighten($body-font-color, 40%), lighten($panel-bg, 20%), 50%);;
+			color: $secondary-color;
+			display: block;
 		}
 
 		&:last-child {
-			margin: 0;
+			margin-bottom: 0;
+			border-bottom: 0;
+			padding-bottom: 0;
 		}
 	}
 }
