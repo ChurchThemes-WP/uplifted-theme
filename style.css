@@ -3848,6 +3848,9 @@ body.term-post-format-gallery #content > .panel {
   border: 1px solid #e6e6e6;
   padding: 24px;
   color: #323232; }
+  .sticky .uplifted-content-meta {
+    border-color: #e8665a;
+    border-width: 2px; }
   .uplifted-content-block .uplifted-content-meta h1, .uplifted-content-meta h2, .uplifted-content-meta h3, .uplifted-content-meta h4, .uplifted-content-meta h5, .uplifted-content-meta h6 {
     color: #323232; }
 

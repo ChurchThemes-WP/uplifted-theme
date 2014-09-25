@@ -24,6 +24,11 @@
   padding: $panel-padding;
   color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 70%), 50%);
 
+  .sticky & {
+    border-color: $secondary-color;
+    border-width: 2px;
+  }
+
   // set the color of body copy and heading when in the main content area
   .uplifted-content-block & h1, h2, h3, h4, h5, h6 {
     color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 70%), 50%);
