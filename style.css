@@ -3896,20 +3896,23 @@ body.term-post-format-gallery #content > .panel {
     float: left;
     margin: 0 .5em .5em 0;
     padding-left: 2em;
-    position: relative; }
+    position: relative;
+    color: #7f7f7f;
+    font-size: .9em; }
     @media screen and (min-width: 860px) {
       .uplifted-entry-meta li {
-        margin: 0 2em .5em 0; } }
+        margin: 0 1.5em .5em 0; } }
   .uplifted-entry-meta a {
     color: #323232;
-    border-bottom: 1px solid #e6e6e6; }
+    color: #7f7f7f; }
     .uplifted-entry-meta a:hover {
       color: #0fcfc5; }
   .uplifted-entry-meta .genericon, .uplifted-entry-meta .page-template-page-templateshomepage-php .uplifted-slide-video .flex-play-overlay, .page-template-page-templateshomepage-php .uplifted-slide-video .uplifted-entry-meta .flex-play-overlay, .uplifted-entry-meta #menu-social ul li a, #menu-social ul li .uplifted-entry-meta a {
     font-size: 1.3em;
     position: absolute;
     left: 0;
-    top: -2px; }
+    top: -2px;
+    color: #7f7f7f; }
 
 .uplifted-entry-title {
   font-weight: 400;

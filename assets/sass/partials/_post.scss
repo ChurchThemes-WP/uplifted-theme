@@ -95,15 +95,17 @@
     margin: 0 .5em .5em 0;
     padding-left: 2em;
     position: relative;
+    color: contrast-color($body-bg, lighten($body-font-color,30%), lighten($body-bg, 50%));
+    font-size: .9em;
 
     @media screen and (min-width: $medium-screen) {
-      margin: 0 2em .5em 0;
+      margin: 0 1.5em .5em 0;
     }
   }
 
   a {
     color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 70%), 50%);
-    border-bottom: 1px solid $panel-border-color;
+    color: contrast-color($body-bg, lighten($body-font-color,30%), lighten($body-bg, 50%));
 
     &:hover {
       color: $primary-color;
@@ -116,6 +118,7 @@
     position: absolute;
     left: 0;
     top: -2px;
+    color: contrast-color($body-bg, lighten($body-font-color,30%), lighten($body-bg, 50%));
   }
 }
 
