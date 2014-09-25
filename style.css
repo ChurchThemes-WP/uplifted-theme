@@ -3194,7 +3194,6 @@ p.comment-form-comment label.error {
 
 /* ChurchTheme Location Widget */
 .widget_ctfw-locations .ctc_location {
-  border: none;
   background-color: transparent; }
 .widget_ctfw-locations .ctfw-google-map {
   min-height: 12em; }
@@ -3324,6 +3323,36 @@ p.comment-form-comment label.error {
       color: #fff; }
     .uplifted-giving-widget-button a:hover {
       background-color: #e8665a; }
+
+.widget_ctfw-posts article,
+.widget_ctfw-sermons article,
+.widget_ctfw-locations article {
+  margin-bottom: .75em;
+  padding-bottom: .75em;
+  border-bottom: 1px solid #f2f2f2;
+  color: #4c4c4c;
+  font-size: .9em;
+  font-weight: normal; }
+  .widget_ctfw-posts article:last-child,
+  .widget_ctfw-sermons article:last-child,
+  .widget_ctfw-locations article:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0; }
+  .widget_ctfw-posts article .uplifted-widget-entry-title,
+  .widget_ctfw-sermons article .uplifted-widget-entry-title,
+  .widget_ctfw-locations article .uplifted-widget-entry-title {
+    margin-bottom: .2em; }
+  .widget_ctfw-posts article .uplifted-widget-entry-date,
+  .widget_ctfw-sermons article .uplifted-widget-entry-date,
+  .widget_ctfw-locations article .uplifted-widget-entry-date {
+    font-size: .9em;
+    font-weight: normal; }
+  .widget_ctfw-posts article .uplifted-widget-entry-thumb,
+  .widget_ctfw-sermons article .uplifted-widget-entry-thumb,
+  .widget_ctfw-locations article .uplifted-widget-entry-thumb {
+    float: right;
+    margin: 0 0 0 .8em; }
 
 /* FlexSlider */
 .flexslider {
