@@ -25,7 +25,7 @@
 				width: 18px;
 
 				&:before{
-					color: contrast-color($primary-color,#222,#fff,50%);
+					color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 60%), 50%);
 				}
 			}
 

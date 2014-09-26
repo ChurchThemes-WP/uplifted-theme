@@ -4399,7 +4399,7 @@ img.alignright {
         height: 18px;
         width: 18px; }
         #menu-social ul li a:before {
-          color: #fff; }
+          color: #323232; }
       #menu-social ul li a[href*="wordpress.org"]:before,
       #menu-social ul li a[href*="wordpress.com"]:before {
         content: '\f205'; }
