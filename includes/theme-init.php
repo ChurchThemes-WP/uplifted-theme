@@ -5,7 +5,7 @@
  * @package    Uplifted
  * @subpackage Includes
  * @copyright  Copyright (c) 2014, upthemes.com
- * @link       http://upthemes.com/themes/uplifted
+ * @link       https://churchthemes.net/themes/uplifted-theme/
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      1.0
  */
@@ -28,12 +28,12 @@ define('UPFW_NO_THEME_OPTIONS_PAGE',true);
  *
  * Initialize our auto-update script and define constants.
  */
-require_once trailingslashit( get_template_directory() ) . 'includes/UpThemes_Theme_Updater.php';
+require_once trailingslashit( get_template_directory() ) . 'includes/CT_Theme_Updater.php';
 
 // Define variables for our theme updates
-define('UPTHEMES_LICENSE_KEY','uplifted_theme');
-define('UPTHEMES_ITEM_NAME', 'Uplifted Theme');
-define('UPTHEMES_STORE_URL', 'https://upthemes.com');
+define('CT_LICENSE_KEY','uplifted_theme');
+define('CT_ITEM_NAME', 'Uplifted');
+define('CT_STORE_URL', 'https://churchthemes.net');
 
 /**
  * Check for available theme updates
@@ -41,13 +41,13 @@ define('UPTHEMES_STORE_URL', 'https://upthemes.com');
  */
 function uplifted_theme_update_check(){
 
-	$upthemes_license = trim( get_option( UPTHEMES_LICENSE_KEY ) );
+	$upthemes_license = trim( get_option( CT_LICENSE_KEY ) );
 
 	$edd_updater = new UpThemes_Theme_Updater(
 		array(
-			'remote_api_url'  => UPTHEMES_STORE_URL,  // Our store URL that is running EDD
+			'remote_api_url'  => CT_STORE_URL,  // Our store URL that is running EDD
 			'license'         => $upthemes_license, // The license key (used get_option above to retrieve from DB)
-			'item_name'       => UPTHEMES_ITEM_NAME,  // The name of this theme
+			'item_name'       => CT_ITEM_NAME,  // The name of this theme
 			'author'          => 'UpThemes'
 		)
 	);

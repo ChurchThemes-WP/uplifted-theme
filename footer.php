@@ -40,11 +40,11 @@
 
 </div><!-- /#wrapper -->
 
+<?php wp_footer(); ?>
+
 <script>
 jQuery(document).foundation();
 </script>
-
-<?php wp_footer(); ?>
 
 </body>
 </html>

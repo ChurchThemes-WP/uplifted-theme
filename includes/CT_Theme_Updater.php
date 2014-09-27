@@ -7,7 +7,7 @@
  * @package    Uplifted
  * @subpackage Includes
  * @copyright  Copyright (c) 2014, upthemes.com
- * @link       http://upthemes.com/themes/uplifted
+ * @link       https://churchthemes.net/themes/uplifted-theme/
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      1.0
  */
@@ -21,10 +21,10 @@
 *
 * @since 0.1
 */
-function upthemes_sl_license_menu() {
-		add_submenu_page('themes.php','Theme License', 'Theme License', 'manage_options', 'upthemes_sl_license', 'upthemes_sl_license_page');
+function ct_sl_license_menu() {
+		add_submenu_page('themes.php','Theme License', 'Theme License', 'manage_options', 'ct_sl_license', 'ct_sl_license_page');
 }
-add_action('admin_menu', 'upthemes_sl_license_menu');
+add_action('admin_menu', 'ct_sl_license_menu');
 
 /**
 * Display a license key management page
@@ -39,15 +39,15 @@ add_action('admin_menu', 'upthemes_sl_license_menu');
 *
 * @since 0.1
 */
-function upthemes_sl_license_page() {
-	$license  = get_option( UPTHEMES_LICENSE_KEY );
-	$status   = get_option( UPTHEMES_LICENSE_KEY . '_status' );
+function ct_sl_license_page() {
+	$license  = get_option( CT_LICENSE_KEY );
+	$status   = get_option( CT_LICENSE_KEY . '_status' );
 	?>
 	<div class="wrap">
 		<h2>Theme License</h2>
 		<form method="post" action="options.php">
 
-			<?php settings_fields('upthemes_sl_license'); ?>
+			<?php settings_fields('ct_sl_license'); ?>
 
 			<table class="form-table">
 				<tbody>
@@ -56,8 +56,8 @@ function upthemes_sl_license_page() {
 							<?php _e('License Key','uplifted'); ?>
 						</th>
 						<td>
-							<input id="<?php echo UPTHEMES_LICENSE_KEY; ?>" name="<?php echo UPTHEMES_LICENSE_KEY; ?>" type="text" class="regular-text" value="<?php esc_attr_e( $license ); ?>" />
-							<label class="description" for="<?php echo UPTHEMES_LICENSE_KEY; ?>"><?php _e('Enter your license key','uplifted'); ?></label>
+							<input id="<?php echo CT_LICENSE_KEY; ?>" name="<?php echo CT_LICENSE_KEY; ?>" type="text" class="regular-text" value="<?php esc_attr_e( $license ); ?>" />
+							<label class="description" for="<?php echo CT_LICENSE_KEY; ?>"><?php _e('Enter your license key','uplifted'); ?></label>
 						</td>
 					</tr>
 					<?php if( $license != '' ) { ?>
@@ -68,11 +68,11 @@ function upthemes_sl_license_page() {
 							<td>
 								<?php if( $status == 'valid' ) { ?>
 									<span style="color:green;"><?php _e('active','uplifted'); ?></span>
-									<?php wp_nonce_field( 'upthemes_sl_nonce', 'upthemes_sl_nonce' ); ?>
-									<input type="submit" class="button-secondary" name="upthemes_sl_license_deactivate" value="<?php _e('Deactivate License','uplifted'); ?>"/>
+									<?php wp_nonce_field( 'ct_sl_nonce', 'ct_sl_nonce' ); ?>
+									<input type="submit" class="button-secondary" name="ct_sl_license_deactivate" value="<?php _e('Deactivate License','uplifted'); ?>"/>
 								<?php } else {
-									wp_nonce_field( 'upthemes_sl_nonce', 'upthemes_sl_nonce' ); ?>
-									<input type="submit" class="button-secondary" name="upthemes_sl_license_activate" value="<?php _e('Activate License','uplifted'); ?>"/>
+									wp_nonce_field( 'ct_sl_nonce', 'ct_sl_nonce' ); ?>
+									<input type="submit" class="button-secondary" name="ct_sl_license_activate" value="<?php _e('Activate License','uplifted'); ?>"/>
 								<?php } ?>
 							</td>
 						</tr>
@@ -94,11 +94,11 @@ function upthemes_sl_license_page() {
 *
 * @since 0.1
 */
-function upthemes_sl_register_option() {
+function ct_sl_register_option() {
 	// creates our settings in the options table
-	register_setting('upthemes_sl_license', UPTHEMES_LICENSE_KEY, 'upthemes_sl_sanitize_license' );
+	register_setting('ct_sl_license', CT_LICENSE_KEY, 'ct_sl_sanitize_license' );
 }
-add_action('admin_init', 'upthemes_sl_register_option');
+add_action('admin_init', 'ct_sl_register_option');
 
 /**
 * Sanitize the license key
@@ -110,10 +110,10 @@ add_action('admin_init', 'upthemes_sl_register_option');
 *
 * @since 0.1
 */
-function upthemes_sl_sanitize_license( $new ) {
-	$old = get_option( UPTHEMES_LICENSE_KEY );
+function ct_sl_sanitize_license( $new ) {
+	$old = get_option( CT_LICENSE_KEY );
 	if( $old && $old != $new ) {
-		delete_option( UPTHEMES_LICENSE_KEY . '_status' ); // new license has been entered, so must reactivate
+		delete_option( CT_LICENSE_KEY . '_status' ); // new license has been entered, so must reactivate
 	}
 	return $new;
 }
@@ -139,20 +139,20 @@ function upthemes_sl_sanitize_license( $new ) {
 *
 * @since 0.1
 */
-function upthemes_sl_activate_license() {
+function ct_sl_activate_license() {
 
 	// listen for our activate button to be clicked
-	if( isset( $_POST['upthemes_sl_license_activate'] ) ) {
+	if( isset( $_POST['ct_sl_license_activate'] ) ) {
 
 		// run a quick security check
-		if( ! check_admin_referer( 'upthemes_sl_nonce', 'upthemes_sl_nonce' ) )
+		if( ! check_admin_referer( 'ct_sl_nonce', 'ct_sl_nonce' ) )
 			return; // get out if we didn't click the Activate button
 
 		// retrieve the license from the database
-		$license = trim( get_option( UPTHEMES_LICENSE_KEY ) );
+		$license = trim( get_option( CT_LICENSE_KEY ) );
 
 		if( !$license || $license == '' ){
-			delete_option( UPTHEMES_LICENSE_KEY . '_status' );
+			delete_option( CT_LICENSE_KEY . '_status' );
 			return;
 		}
 
@@ -160,11 +160,11 @@ function upthemes_sl_activate_license() {
 		$api_params = array(
 			'edd_action'=> 'activate_license',
 			'license'   => $license,
-			'item_name' => urlencode( UPTHEMES_ITEM_NAME ) // the name of our product in EDD
+			'item_name' => urlencode( CT_ITEM_NAME ) // the name of our product in EDD
 		);
 
 		// Call the custom API.
-		$response = wp_remote_get( add_query_arg( $api_params, UPTHEMES_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
+		$response = wp_remote_get( add_query_arg( $api_params, CT_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
 
 		// make sure the response came back okay
 		if ( is_wp_error( $response ) )
@@ -177,11 +177,11 @@ function upthemes_sl_activate_license() {
 
 		//echo $license_data->license;
 
-		update_option( UPTHEMES_LICENSE_KEY . '_status', $license_data->license );
+		update_option( CT_LICENSE_KEY . '_status', $license_data->license );
 
 	}
 }
-add_action('admin_init', 'upthemes_sl_activate_license');
+add_action('admin_init', 'ct_sl_activate_license');
 
 
 /**
@@ -205,20 +205,20 @@ add_action('admin_init', 'upthemes_sl_activate_license');
 *
 * @since 0.1
 */
-function upthemes_sl_deactivate_license() {
+function ct_sl_deactivate_license() {
 
 	// listen for our activate button to be clicked
-	if( isset( $_POST['upthemes_sl_license_deactivate'] ) ) {
+	if( isset( $_POST['ct_sl_license_deactivate'] ) ) {
 
 		// run a quick security check
-		if( ! check_admin_referer( 'upthemes_sl_nonce', 'upthemes_sl_nonce' ) )
+		if( ! check_admin_referer( 'ct_sl_nonce', 'ct_sl_nonce' ) )
 			return; // get out if we didn't click the Activate button
 
 		// retrieve the license from the database
-		$license = trim( get_option( UPTHEMES_LICENSE_KEY ) );
+		$license = trim( get_option( CT_LICENSE_KEY ) );
 
 		if( !$license || $license == '' ){
-			delete_option( UPTHEMES_LICENSE_KEY . '_status' );
+			delete_option( CT_LICENSE_KEY . '_status' );
 			return;
 		}
 
@@ -226,11 +226,11 @@ function upthemes_sl_deactivate_license() {
 		$api_params = array(
 			'edd_action'=> 'deactivate_license',
 			'license'   => $license,
-			'item_name' => urlencode( UPTHEMES_ITEM_NAME ) // the name of our product in EDD
+			'item_name' => urlencode( CT_ITEM_NAME ) // the name of our product in EDD
 		);
 
 		// Call the custom API.
-		$response = wp_remote_get( add_query_arg( $api_params, UPTHEMES_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
+		$response = wp_remote_get( add_query_arg( $api_params, CT_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
 
 		// make sure the response came back okay
 		if ( is_wp_error( $response ) )
@@ -241,11 +241,11 @@ function upthemes_sl_deactivate_license() {
 
 		// $license_data->license will be either "deactivated" or "failed"
 		if( $license_data->license == 'deactivated' )
-			delete_option( UPTHEMES_LICENSE_KEY . '_status' );
+			delete_option( CT_LICENSE_KEY . '_status' );
 
 	}
 }
-add_action('admin_init', 'upthemes_sl_deactivate_license');
+add_action('admin_init', 'ct_sl_deactivate_license');
 
 
 /**
@@ -267,20 +267,20 @@ add_action('admin_init', 'upthemes_sl_deactivate_license');
 *
 * @since 0.1
 */
-function upthemes_sl_check_license() {
+function ct_sl_check_license() {
 
 	global $wp_version;
 
-	$license = trim( get_option( UPTHEMES_LICENSE_KEY ) );
+	$license = trim( get_option( CT_LICENSE_KEY ) );
 
 	$api_params = array(
 		'edd_action' => 'check_license',
 		'license' => $license,
-		'item_name' => urlencode( UPTHEMES_ITEM_NAME )
+		'item_name' => urlencode( CT_ITEM_NAME )
 	);
 
 	// Call the custom API.
-	$response = wp_remote_get( add_query_arg( $api_params, UPTHEMES_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
+	$response = wp_remote_get( add_query_arg( $api_params, CT_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
 
 	if ( is_wp_error( $response ) )
 		return false;
@@ -302,18 +302,18 @@ function upthemes_sl_check_license() {
  * Checks to see if the license key is valid, and if invalid, remove
  * the key status from the database.
  */
-function upthemes_sl_enforce_license(){
-	$license_status = upthemes_sl_check_license();
+function ct_sl_enforce_license(){
+	$license_status = ct_sl_check_license();
 
 	if( $license_status !== 'valid' )
-		delete_option( UPTHEMES_LICENSE_KEY . '_status' );
+		delete_option( CT_LICENSE_KEY . '_status' );
 }
 
 /**
  * Tell user license key has expired.
  */
-function upthemes_sl_license_expired() {
-		echo 'Your license key has expired. Please <a href="http://upthemes.com">purchase a new license key</a> to enable theme support and automatic updates.';
+function ct_sl_license_expired() {
+		echo 'Your license key has expired. Please <a href="https://churchthemes.net">purchase a new license key</a> to enable theme support and automatic updates.';
 }
 
 class UpThemes_Theme_Updater {
@@ -327,7 +327,7 @@ class UpThemes_Theme_Updater {
 
 	function __construct( $args = array() ) {
 		$args = wp_parse_args( $args, array(
-			'remote_api_url' => 'http://upthemes.com',
+			'remote_api_url' => 'http:s//churchthemes.net',
 			'request_data'   => array(),
 			'theme_slug'     => get_template(),
 			'item_name'      => '',

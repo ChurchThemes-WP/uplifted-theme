@@ -5,7 +5,7 @@
  * @package    Uplifted
  * @subpackage Includes
  * @copyright  Copyright (c) 2014, upthemes.com
- * @link       http://upthemes.com/themes/uplifted
+ * @link       https://churchthemes.net/themes/uplifted-theme/
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      1.0
  */
