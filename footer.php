@@ -26,17 +26,18 @@
 			<?php get_template_part('sidebar-footer3'); ?>
 			</div>
 
-		</div><!-- /#row-->
+		</div><!-- /.row-->
 
-		<div id="footer-meta" class="row">
+	</div><!-- /#footer-->
+
+	<div id="footer-meta">
+		<div class="row">
 			<div class="large-12 columns">
 				<?php uplifted_theme_footer(); ?>
 				<?php get_template_part('menu','social'); ?>
 			</div>
-
-		</div><!-- /#row-->
-
-	</div><!-- /#footer-->
+		</div>
+	</div><!-- /#footer-meta-->
 
 </div><!-- /#wrapper -->
 
