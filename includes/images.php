@@ -46,7 +46,7 @@ function uplifted_image_sizes() {
 	add_image_size( 'uplifted-slide', 1400, 600, true ); // crop for exact size
 
 	// Custom Post Header Size
-	add_image_size( 'uplifted-post-header', 717, 420, true ); // crop for exact size
+	add_image_size( 'uplifted-post-header', 1090, 639, true ); // crop for exact size
 
 	/*********************************
 	 * RECTANGULAR IMAGES
