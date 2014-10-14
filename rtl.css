@@ -13,7 +13,7 @@ body {
 
 body {
   background: #f8f9fb;
-  color: #323232;
+  color: #464b4e;
   padding: 0;
   margin: 0;
   font-family: "Asap", Verdana, Geneva, sans-serif;
@@ -178,7 +178,7 @@ body {
   body .paging .prev {
     float: right; }
   body .paging .prev {
-    border-left: 1px solid #e5e5e5; }
+    border-left: 1px solid #fcfdfd; }
   body .paging .next {
     float: left;
-    border-right: 1px solid #e5e5e5; }
+    border-right: 1px solid #fcfdfd; }

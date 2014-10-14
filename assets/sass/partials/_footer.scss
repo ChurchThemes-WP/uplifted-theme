@@ -1,18 +1,12 @@
 /* Footer */
+$footer-bg: contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%), 50%);
+$footer-meta-bg: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 30%), 50%);
 
 #footer {
 	margin: ($panel-margin-bottom * 2) auto 0;
-	padding: ($panel-padding * 1.5) 0;
-	background-color: contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%), 50%); // set section bg color based off of site background color, either lighten or darken
+	padding: ($panel-padding * 1.5) 0 0;
+	background-color: $footer-bg;
 	color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 60%), 50%);
-
-	#footer-meta{
-		text-align: center; // center text on mobile
-
-		@media screen and (min-width: 641px){
-			text-align: left; // align text on desktop
-		}
-	}
 
 	.columns {
 
@@ -35,4 +29,21 @@
 		background: none;
 	}
 
+}
+
+#footer-meta{
+	text-align: center; // center text on mobile
+	padding: 20px 0;
+	font-size: .9em;
+	letter-spacing: .01em;
+	background-color: $footer-meta-bg;
+
+	&,
+	#menu-social ul li a:before{
+		color: contrast-color($panel-bg, lighten($body-font-color, 20%), darken($body-font-color, 20%), 50%);
+	}
+
+	@media screen and (min-width: 641px){
+		text-align: left; // align text on desktop
+	}
 }
