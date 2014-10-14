@@ -47,8 +47,8 @@ $panel-border-color: #ece67a !default;
 $neutral-color: #fff !default;
 $transparent-neutral-color: rgba($neutral-color,.3) !default;
 
-$body-font-color: #323232 !default;
-$header-font-color: $body-font-color !default;
+$body-font-color: #464b4e !default;
+$header-font-color: #677073 !default;
 
 $alert-color: #d15327 !default;
 $success-color: #9fe150 !default;
@@ -164,7 +164,7 @@ $panel-padding: 24px;
 // Grid Variables
 //
 
-$row-width: emCalc(1120px);
+$row-width: 1120px;
 $column-gutter: emCalc(30px);
 $total-columns: 12;
 
