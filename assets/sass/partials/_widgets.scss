@@ -40,7 +40,7 @@
 				display: inline-block;
 				padding: .3em 0;
 				color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 60%), 50%);
-				@include transition(200ms all ease-in-out);
+				transition: 200ms all ease-in-out;
 
 				&:hover{
 					color: $primary-color;
@@ -368,7 +368,7 @@
 		box-shadow: none;
 		color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 60%), 50%);
 		position: relative;
-		@include transition(200ms all ease-in-out);
+		transition: 200ms all ease-in-out;
 
 		span {
 			position: absolute;

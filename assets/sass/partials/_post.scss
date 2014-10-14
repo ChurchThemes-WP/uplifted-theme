@@ -177,7 +177,7 @@
     float: left;
     margin: 0 1em 1em 0;
     overflow: hidden;
-    @include border-radius($global-rounded);
+    border-radius: $global-rounded;
   }
 
   .uplifted-author-content {

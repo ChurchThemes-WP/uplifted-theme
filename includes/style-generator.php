@@ -138,14 +138,11 @@ function uplifted_css_regenerate( $format = 'file' ){
 	try {
 
 		require get_template_directory() . "/includes/scssphp/scss.inc.php";
-		require get_template_directory() . "/includes/scssphp-compass/compass.inc.php";
 
 		$base_import_path = apply_filters('uplifted_base_import_path',get_template_directory() . '/assets/sass/');
 
 		$scss = new scssc();
 		$scss->setImportPaths($base_import_path);
-
-		new scss_compass($scss);
 
 		$scss->setFormatter("scss_formatter");
 
