@@ -32,8 +32,7 @@
 
 	#tribe-bar-form .tribe-bar-submit input[type=submit]{
 		@include button-style($primary-color);
-		
-		@include border-radius($global-radius);
+		border-radius: $global-radius;
 	}
 
 	#tribe-events-content.tribe-events-list,

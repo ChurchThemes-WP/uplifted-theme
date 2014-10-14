@@ -48,7 +48,7 @@
 
 		.avatar {
 			margin-bottom: 1em;
-			@include border-radius(6px);
+			border-radius: 6px;
 		}
 	}
 
@@ -130,7 +130,7 @@
 	font-size: .7em;
 	padding: .8em;
 	background-color: $panel-border-color;
-	@include border-radius(4px);
+	border-radius: 4px;
 }
 
 // Submit Button
@@ -140,18 +140,18 @@
 	button,
 	input[type="submit"]{
 		border: none;
-		@include border-radius(4px);
+		border-radius: 4px;
 		@include button-base;
 		@include button-size();
 		@include button-style($primary-color);
-		@include box-shadow(none);
-		@include transition(200ms background-color linear);
+		box-shadow: none;
+		transition: 200ms background-color linear;
 		font-weight: bold;
 
 		&:hover{
 			background-color: $secondary-color;
 		}
-	} 
+	}
 }
 
 // Comments closed message (in place of add form if comments have already been made)

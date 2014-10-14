@@ -1,17 +1,19 @@
 /* Footer */
 $footer-bg: contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%), 50%);
+$footer-text: contrast-color($footer-bg, mix(#000,$body-bg,55%), mix(#fff,$body-bg,55%), 50%);
 $footer-meta-bg: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 30%), 50%);
+$footer-meta-text: contrast-color($footer-meta-bg, mix(#000,$body-bg,55%), mix(#fff,$body-bg,55%), 50%);
 
 #footer {
 	margin: ($panel-margin-bottom * 2) auto 0;
 	padding: ($panel-padding * 1.5) 0 0;
 	background-color: $footer-bg;
-	color: contrast-color($body-bg, $body-font-color, lighten($body-bg, 60%), 50%);
+	color: $footer-text;
 
 	.columns {
 
 		a {
-			@include transition(.2s all linear);
+			transition: .2s all linear;
 			color: contrast-color($body-bg, lighten($body-font-color, 20%), lighten($body-bg, 50%), 50%);
 
 			&:hover {
@@ -40,7 +42,7 @@ $footer-meta-bg: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-b
 
 	&,
 	#menu-social ul li a:before{
-		color: contrast-color($panel-bg, lighten($body-font-color, 20%), darken($body-font-color, 20%), 50%);
+		color: $footer-meta-text;
 	}
 
 	@media screen and (min-width: 641px){
