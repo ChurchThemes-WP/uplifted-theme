@@ -108,7 +108,7 @@ function uplifted_add_theme_support_framework() {
 			'ctc_person'	=> 'post-thumbnail',
 			'ctc_location'	=> 'post-thumbnail'
 		),
-		__( 'Optionally provide an image that is at least %s (it will be cropped/resized). An image exactly this size is ideal.', 'uplifted' )
+		__( 'We suggest using images that are at least 800px wide.', 'uplifted' )
 	);
 
 	// Enable image upscaling (helpful for responsive themes)
