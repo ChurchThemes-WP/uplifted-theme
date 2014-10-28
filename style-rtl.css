@@ -317,6 +317,10 @@ table {
   border-spacing: 0; }
 
 /* Global */
+@media only screen and (max-width: 768px) {
+  .hide-on-mobile {
+    display: none; } }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
