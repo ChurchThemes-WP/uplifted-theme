@@ -36,7 +36,7 @@ function uplifted_add_theme_support_framework() {
 	// Theme activation tasks
 	add_theme_support( 'ctfw-after-activation', array(
 		'flush_rewrite_rules'	=> true, // make sure friendly URL's work
-		'notice'				=> sprintf( __( '<b>Next Steps:</b> Please continue reading the <a href="%s" target="_blank">Getting Started</a> guide for the next steps after theme activation.', 'uplifted' ), 'http://churchthemes.com/guides/user/getting-started/' ),
+		'notice'				=> sprintf( __( '<b>Next Steps:</b> Please continue reading the <a href="%s" target="_blank">Getting Started</a> guide for the next steps after theme activation.', 'uplifted' ), 'https://upthemes.com/knowledgebase/getting-started-uplifted/' ),
 		'hide_default_notice'	=> true // no need to be redundant
 	) );
 
