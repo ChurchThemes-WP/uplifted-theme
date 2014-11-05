@@ -149,7 +149,7 @@ $topbar-sticky-class: ".sticky" !default;
         font-family: $body-font-family;
 
         a {
-          width: 50%;
+          width: 80%;
           display: block;
           padding: 0 $topbar-height / 3;
           color: $topbar-link-color;
@@ -364,7 +364,7 @@ $topbar-sticky-class: ".sticky" !default;
               border-color: $topbar-dropdown-toggle-color-hover transparent transparent !important;
           }
         }
-        
+
       }
     }
 
