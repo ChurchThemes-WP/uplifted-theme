@@ -366,3 +366,44 @@ function uplifted_sticky_navbar(){
 		echo ' fixed';
 	}
 }
+
+/**
+ * Add customizer options for header image and text on mobile
+ */
+
+function uplifted_header_image_text_mobile( $wp_customize ) {
+
+	/**
+	 * Option to Display Header Text on Mobile
+	 */
+
+	$wp_customize->add_setting( 'header_text_mobile' , array(
+		    'default'     => '1',
+		    'sanitize_callback' => 'ctfw_customize_sanitize_checkbox'
+		) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_text_mobile', array(
+		'label'        => __( 'Display Header Text on Mobile', 'uplifted' ),
+		'section'    => 'title_tagline',
+		'settings'   => 'header_text_mobile',
+		'type'			 => 'checkbox'
+	) ) );
+
+	/**
+	 * Option to Display Header Image on Mobile
+	 */
+
+	$wp_customize->add_setting( 'header_image_mobile' , array(
+	    'default'     => '1',
+	    'sanitize_callback' => 'ctfw_customize_sanitize_checkbox'
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_image_mobile', array(
+		'label'        => __( 'Display Header Image on Mobile', 'uplifted' ),
+		'section'    => 'header_image',
+		'settings'   => 'header_image_mobile',
+		'type'			 => 'checkbox'
+	) ) );
+}
+
+add_action( 'customize_register', 'uplifted_header_image_text_mobile' );

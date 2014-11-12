@@ -51,10 +51,10 @@ $up_options = upfw_get_options();
 								<a class="title" href="<?php echo esc_attr( home_url('/') ); ?>">
 								<?php $header_image = get_header_image();
 								if ( ! empty( $header_image ) ) : ?>
-									<img src="<?php echo esc_attr( $header_image ); ?>" alt="" />
+									<img src="<?php echo esc_attr( $header_image ); ?>" alt="" class="<?php if ( '1' != get_theme_mod( 'header_image_mobile', true ) ) { echo "hide-on-mobile"; } ?>" />
 								<?php endif; ?>
 								<?php if( display_header_text() ): ?>
-									<?php bloginfo('name'); ?>
+									<span class="<?php if ( '1' != get_theme_mod( 'header_text_mobile' ) ) { echo "hide-on-mobile"; } ?>"><?php bloginfo('name'); ?></span>
 								<?php endif; ?>
 								</a>
 							</h1>
