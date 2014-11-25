@@ -7,7 +7,7 @@
  * @package    Uplifted
  * @subpackage Includes
  * @copyright  Copyright (c) 2014, upthemes.com
- * @link       http://upthemes.com/themes/uplifted
+ * @link       https://upthemes.com/themes/uplifted
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      1.0
  */
@@ -313,7 +313,7 @@ function upthemes_sl_enforce_license(){
  * Tell user license key has expired.
  */
 function upthemes_sl_license_expired() {
-		echo 'Your license key has expired. Please <a href="http://upthemes.com">purchase a new license key</a> to enable theme support and automatic updates.';
+		echo 'Your license key has expired. Please <a href="https://upthemes.com">purchase a new license key</a> to enable theme support and automatic updates.';
 }
 
 class UpThemes_Theme_Updater {
@@ -327,7 +327,7 @@ class UpThemes_Theme_Updater {
 
 	function __construct( $args = array() ) {
 		$args = wp_parse_args( $args, array(
-			'remote_api_url' => 'http://upthemes.com',
+			'remote_api_url' => 'https://upthemes.com',
 			'request_data'   => array(),
 			'theme_slug'     => get_template(),
 			'item_name'      => '',
