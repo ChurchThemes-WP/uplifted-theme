@@ -1,15 +1,10 @@
 <?php
 /**
- * Theme Updater
+ * Theme updater for UpThemes themes.
  *
- * Automatic updates for this theme.
+ * Allows users to activate their license key and receive automatic updates and activates Typekit fonts, when available.
  *
- * @package    Uplifted
- * @subpackage Includes
- * @copyright  Copyright (c) 2014, upthemes.com
- * @link       https://upthemes.com/themes/uplifted
- * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * @since      1.0
+ * @package upthemes_theme_updater
  */
 
 /**
@@ -22,7 +17,7 @@
 * @since 0.1
 */
 function upthemes_sl_license_menu() {
-		add_submenu_page('themes.php','Theme License', 'Theme License', 'manage_options', 'upthemes_sl_license', 'upthemes_sl_license_page');
+	$page = add_submenu_page('index.php', 'UpThemes Theme Activation', 'UpThemes', 'manage_options', 'upthemes_sl_license', 'upthemes_sl_license_page');
 }
 add_action('admin_menu', 'upthemes_sl_license_menu');
 
@@ -31,7 +26,6 @@ add_action('admin_menu', 'upthemes_sl_license_menu');
 *
 * @uses get_option()
 * @uses settings_fields()
-* @uses _e()
 * @uses wp_nonce_field()
 * @uses submit_button()
 *
@@ -40,11 +34,20 @@ add_action('admin_menu', 'upthemes_sl_license_menu');
 * @since 0.1
 */
 function upthemes_sl_license_page() {
-	$license  = get_option( UPTHEMES_LICENSE_KEY );
-	$status   = get_option( UPTHEMES_LICENSE_KEY . '_status' );
+	$license = get_option( UPTHEMES_LICENSE_KEY );
+	$status  = get_option( UPTHEMES_LICENSE_KEY . '_status' );
+
+	echo $license;
+	echo $status;
+
 	?>
 	<div class="wrap">
-		<h2>Theme License</h2>
+		<h2>UpThemes Activation &amp; Support</h2>
+
+		<p>Your UpThemes license key enables you to receive premium features and email support directly from our development team. If you purchased a theme directly from <a href="https://upthemes.com">UpThemes.com</a>, you should have received an email with your license key included.</p>
+
+		<hr>
+
 		<form method="post" action="options.php">
 
 			<?php settings_fields('upthemes_sl_license'); ?>
@@ -53,29 +56,85 @@ function upthemes_sl_license_page() {
 				<tbody>
 					<tr valign="top">
 						<th scope="row" valign="top">
-							<?php _e('License Key','uplifted'); ?>
+							<?php _e('License Key'); ?>
 						</th>
 						<td>
 							<input id="<?php echo UPTHEMES_LICENSE_KEY; ?>" name="<?php echo UPTHEMES_LICENSE_KEY; ?>" type="text" class="regular-text" value="<?php esc_attr_e( $license ); ?>" />
-							<label class="description" for="<?php echo UPTHEMES_LICENSE_KEY; ?>"><?php _e('Enter your license key','uplifted'); ?></label>
+							<label class="description" for="<?php echo UPTHEMES_LICENSE_KEY; ?>"><?php _e('Enter your license key'); ?></label>
 						</td>
 					</tr>
-					<?php if( $license != '' ) { ?>
+					<?php if( $license ) { ?>
 						<tr valign="top">
 							<th scope="row" valign="top">
-								<?php _e('Activate License','uplifted'); ?>
+								<?php _e('Activate License'); ?>
 							</th>
 							<td>
 								<?php if( $status == 'valid' ) { ?>
-									<span style="color:green;"><?php _e('active','uplifted'); ?></span>
+
+									<span style="color:green; line-height: 29px; padding: 0 10px; display: inline-block; background-color: #d9edd6; border-radius: 4px; margin-right: 5px;"><?php _e('active'); ?></span>
 									<?php wp_nonce_field( 'upthemes_sl_nonce', 'upthemes_sl_nonce' ); ?>
-									<input type="submit" class="button-secondary" name="upthemes_sl_license_deactivate" value="<?php _e('Deactivate License','uplifted'); ?>"/>
+									<input type="submit" class="button-secondary" name="upthemes_sl_license_deactivate" value="<?php esc_attr_e('Deactivate License'); ?>"/>
+
+									<br><br>
+
 								<?php } else {
 									wp_nonce_field( 'upthemes_sl_nonce', 'upthemes_sl_nonce' ); ?>
-									<input type="submit" class="button-secondary" name="upthemes_sl_license_activate" value="<?php _e('Activate License','uplifted'); ?>"/>
+									<input type="submit" class="button-secondary" name="upthemes_sl_license_activate" value="<?php esc_attr_e('Activate License'); ?>"/>
 								<?php } ?>
 							</td>
 						</tr>
+
+						<?php if( $status == 'valid' ) { ?>
+
+							<?php if ( get_theme_mod('typekit-id') ): ?>
+
+							<tr valign="top">
+								<th scope="row" valign="top">
+									<?php _e( 'Custom Typekit ID' ); ?>
+								</th>
+								<td>
+									<p>Your site currently uses custom fonts from Typekit. <br>Use your own kit ID (ex. jfr3det) by entering it here:</p>
+									<br>
+									<input id="typekit_id_custom" name="typekit_id_custom" type="text" value="<?php echo get_option( 'typekit_id_custom' ); ?>">
+									<button class="secondary button" id="reset-typekit">Clear Kit</button>
+									<p class="small" style="visibility: hidden;">Please click <em>Save Changes</em> to reset your Typekit settings.</p>
+									<script>
+									jQuery( '#reset-typekit' ).on( 'click', function(e){
+										jQuery( 'input[id="typekit_id_custom"]' ).val('').parents('form').submit();
+									});
+									</script>
+								</td>
+							</tr>
+
+							<?php endif; ?>
+
+							<tr valign="top">
+								<th>WordPress Training</th>
+								<td>
+									<p>Need help learning WordPress? Check out our 20+ WordPress training videos:</p>
+									<br>
+									<a class="button" href="https://upthemes.com/knowledgebase/wp-101/">Learn WordPress</a>
+								</td>
+							</tr>
+
+							<tr valign="top">
+								<th>Theme Documentation</th>
+								<td>
+									<p>Need help getting started with <?php echo UPTHEMES_ITEM_NAME; ?>?</p>
+									<br>
+									<a class="button" href="https://upthemes.com/knowledgebase/">Theme Knowledgebase</a>
+								</td>
+							</tr>
+
+							<tr valign="top">
+								<th>Customer Support</th>
+								<td>
+									<p>Support hours are Monday - Friday between 8 AM and 5 PM eastern.</p>
+									<br>
+									<a class="button" href="https://upthemes.com/contact/">Contact Us</a>
+								</td>
+
+						<?php } ?>
 					<?php } ?>
 				</tbody>
 			</table>
@@ -97,6 +156,7 @@ function upthemes_sl_license_page() {
 function upthemes_sl_register_option() {
 	// creates our settings in the options table
 	register_setting('upthemes_sl_license', UPTHEMES_LICENSE_KEY, 'upthemes_sl_sanitize_license' );
+	register_setting('upthemes_sl_license', 'typekit_id_custom', 'sanitize_text_field' );
 }
 add_action('admin_init', 'upthemes_sl_register_option');
 
@@ -158,9 +218,9 @@ function upthemes_sl_activate_license() {
 
 		// data to send in our API request
 		$api_params = array(
-			'edd_action'=> 'activate_license',
-			'license'   => $license,
-			'item_name' => urlencode( UPTHEMES_ITEM_NAME ) // the name of our product in EDD
+			'edd_action' => 'activate_license',
+			'license'    => $license,
+			'item_name'  => urlencode( UPTHEMES_ITEM_NAME ) // the name of our product in EDD
 		);
 
 		// Call the custom API.
@@ -173,11 +233,11 @@ function upthemes_sl_activate_license() {
 		// decode the license data
 		$license_data = json_decode( wp_remote_retrieve_body( $response ) );
 
-		// $license_data->license will be either "active" or "inactive"
-
-		//echo $license_data->license;
-
 		update_option( UPTHEMES_LICENSE_KEY . '_status', $license_data->license );
+
+		if( isset( $license_data->typekit_id ) ){
+			set_theme_mod( 'typekit-id', $license_data->typekit_id );
+		}
 
 	}
 }
@@ -224,9 +284,9 @@ function upthemes_sl_deactivate_license() {
 
 		// data to send in our API request
 		$api_params = array(
-			'edd_action'=> 'deactivate_license',
-			'license'   => $license,
-			'item_name' => urlencode( UPTHEMES_ITEM_NAME ) // the name of our product in EDD
+			'edd_action' => 'deactivate_license',
+			'license'    => $license,
+			'item_name'  => urlencode( UPTHEMES_ITEM_NAME ) // the name of our product in EDD
 		);
 
 		// Call the custom API.
@@ -240,8 +300,9 @@ function upthemes_sl_deactivate_license() {
 		$license_data = json_decode( wp_remote_retrieve_body( $response ) );
 
 		// $license_data->license will be either "deactivated" or "failed"
-		if( $license_data->license == 'deactivated' )
+		if( $license_data->license == 'deactivated' ){
 			delete_option( UPTHEMES_LICENSE_KEY . '_status' );
+		}
 
 	}
 }
@@ -296,12 +357,6 @@ function upthemes_sl_check_license() {
 	}
 }
 
-/**
- * Enforce the license key
- *
- * Checks to see if the license key is valid, and if invalid, remove
- * the key status from the database.
- */
 function upthemes_sl_enforce_license(){
 	$license_status = upthemes_sl_check_license();
 
@@ -309,10 +364,7 @@ function upthemes_sl_enforce_license(){
 		delete_option( UPTHEMES_LICENSE_KEY . '_status' );
 }
 
-/**
- * Tell user license key has expired.
- */
-function upthemes_sl_license_expired() {
+function upthemes_sl_license_expired( $plugin_data, $r ) {
 		echo 'Your license key has expired. Please <a href="https://upthemes.com">purchase a new license key</a> to enable theme support and automatic updates.';
 }
 
@@ -412,11 +464,11 @@ class UpThemes_Theme_Updater {
 				return false;
 
 			$api_params = array(
-				'edd_action'  => 'get_version',
-				'license'     => $this->license,
-				'name'      => $this->item_name,
-				'slug'      => $this->theme_slug,
-				'author'    => $this->author
+				'edd_action'    => 'get_version',
+				'license'       => $this->license,
+				'name'          => $this->item_name,
+				'slug'          => $this->theme_slug,
+				'author'        => $this->author
 			);
 
 			$response = wp_remote_post( $this->remote_api_url, array( 'timeout' => 15, 'sslverify' => false, 'body' => $api_params ) );
@@ -453,4 +505,118 @@ class UpThemes_Theme_Updater {
 
 		return (array) $update_data;
 	}
+}
+
+/**
+ * Throws up a pointer to remind users to activate theme license.
+ */
+function upthemes_license_advisor(){
+
+
+	$license = get_option( UPTHEMES_LICENSE_KEY );
+	$status  = get_option( UPTHEMES_LICENSE_KEY . '_status' );
+
+	if( $license && $status === 'valid' )
+		return;
+
+	add_action( 'admin_enqueue_scripts', 'upthemes_admin_pointers_header' );
+
+}
+
+add_action( 'admin_init', 'upthemes_license_advisor' );
+
+/**
+ * Adds scripts needed for admin pointers
+ */
+function upthemes_admin_pointers_header() {
+	 if ( upthemes_admin_pointers_check() ) {
+			add_action( 'admin_print_footer_scripts', 'upthemes_admin_pointers_footer' );
+
+			wp_enqueue_script( 'wp-pointer' );
+			wp_enqueue_style( 'wp-pointer' );
+	 }
+}
+
+/**
+ * Check if admin pointers are active
+ */
+function upthemes_admin_pointers_check() {
+	 $admin_pointers = upthemes_admin_pointers();
+	 foreach ( $admin_pointers as $pointer => $array ) {
+			if ( $array['active'] )
+				 return true;
+	 }
+}
+
+/**
+ * Print footer script for custom admin pointers
+ */
+function upthemes_admin_pointers_footer() {
+	 $admin_pointers = upthemes_admin_pointers();
+	 ?>
+<script type="text/javascript">
+/* <![CDATA[ */
+( function($) {
+	 <?php
+	 foreach ( $admin_pointers as $pointer => $array ) {
+			if ( $array['active'] ) {
+				 ?>
+				 $( '<?php echo $array['anchor_id']; ?>' ).pointer( {
+						content: '<?php echo $array['content']; ?>',
+						position: {
+						edge: '<?php echo $array['edge']; ?>',
+						align: '<?php echo $array['align']; ?>'
+				 },
+						close: function() {
+							 $.post( ajaxurl, {
+									pointer: '<?php echo $pointer; ?>',
+									action: 'dismiss-wp-pointer'
+							 } );
+						}
+				 } ).pointer( 'open' );
+				 <?php
+			}
+	 }
+	 ?>
+} )(jQuery);
+/* ]]> */
+</script>
+	 <?php
+}
+
+/**
+ * Creates our admin pointers.
+ */
+function upthemes_admin_pointers() {
+
+	global $current_screen;
+
+	$dismissed = explode( ',', (string) get_user_meta( get_current_user_id(), 'dismissed_wp_pointers', true ) );
+	$version   = '1_0'; // replace all periods in 1.0 with an underscore
+	$prefix    = 'upthemes_admin_pointers' . $version . '_';
+	$anchor_id = '#menu-dashboard';
+	$message   = '<h3>' . __( 'Activate Theme License' ) . '</h3><p>' . sprintf( __( 'Thanks for installing the %s. Please <a href="%s">activate your theme license</a> to enable special features and customer support.' ), UPTHEMES_ITEM_NAME, 'themes.php?page=upthemes_sl_license' ) . '</p>';
+
+	if( $current_screen->id === 'appearance_page_upthemes_sl_license' ){
+
+		$license = get_option( UPTHEMES_LICENSE_KEY );
+		$status  = get_option( UPTHEMES_LICENSE_KEY . '_status' );
+
+		if( isset( $license ) && $status === 'valid' )
+			return array();
+
+		$anchor_id = '#uplifted_theme';
+		$message   = '<h3>' . __( 'Enter Your Theme License' ) . '</h3><p>' . sprintf( __( 'Add your theme license key here to activate features and support for %s. You can find your license key in your email receipt or <a href="%s">purchase one here</a>.' ), UPTHEMES_ITEM_NAME, 'https://upthemes.com/themes/' ) . '</p>';
+
+	}
+
+	return array(
+		$prefix . 'new_items' => array(
+			'content' => $message,
+			'anchor_id' => $anchor_id,
+			'edge' => 'bottom',
+			'align' => 'left',
+			'active' => ( ! in_array( $prefix . 'new_items', $dismissed ) )
+		),
+	);
 }
