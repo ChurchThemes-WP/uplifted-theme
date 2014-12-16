@@ -34,6 +34,8 @@ require_once trailingslashit( get_template_directory() ) . 'includes/UpThemes_Th
 define('UPTHEMES_LICENSE_KEY','uplifted_theme');
 define('UPTHEMES_ITEM_NAME', 'Uplifted Theme');
 define('UPTHEMES_STORE_URL', 'https://upthemes.com');
+define('UPTHEMES_DOWNLOAD_ID', 3599);
+define('UPTHEMES_RENEWAL_URL', UPTHEMES_STORE_URL . '/checkout/?edd_action=add_to_cart&download_id=' . UPTHEMES_DOWNLOAD_ID);
 
 /**
  * Check for available theme updates

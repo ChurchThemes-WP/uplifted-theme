@@ -597,7 +597,7 @@ function upthemes_admin_pointers() {
 	$anchor_id = '#menu-dashboard';
 	$message   = '<h3>' . __( 'Activate Theme License' ) . '</h3><p>' . sprintf( __( 'Thanks for installing the %s. Please <a href="%s">activate your theme license</a> to enable special features and customer support.' ), UPTHEMES_ITEM_NAME, 'themes.php?page=upthemes_sl_license' ) . '</p>';
 
-	if( $current_screen->id === 'appearance_page_upthemes_sl_license' ){
+	if( $current_screen->id === 'dashboard_page_upthemes_sl_license' ){
 
 		$license = get_option( UPTHEMES_LICENSE_KEY );
 		$status  = get_option( UPTHEMES_LICENSE_KEY . '_status' );
@@ -605,8 +605,13 @@ function upthemes_admin_pointers() {
 		if( isset( $license ) && $status === 'valid' )
 			return array();
 
+		$renewal_url = 'https://upthemes.com/themes/';
+
+		if( defined( 'UPTHEMES_RENEWAL_URL' ) )
+			$renewal_url = UPTHEMES_RENEWAL_URL;
+
 		$anchor_id = '#uplifted_theme';
-		$message   = '<h3>' . __( 'Enter Your Theme License' ) . '</h3><p>' . sprintf( __( 'Add your theme license key here to activate features and support for %s. You can find your license key in your email receipt or <a href="%s">purchase one here</a>.' ), UPTHEMES_ITEM_NAME, 'https://upthemes.com/themes/' ) . '</p>';
+		$message   = '<h3>' . __( 'Enter Your Theme License' ) . '</h3><p>' . sprintf( __( 'Add your theme license key here to activate features and support for %s. You can find your license key in your email receipt or <a href="%s">purchase one here</a>.' ), UPTHEMES_ITEM_NAME, $renewal_url ) . '</p>';
 
 	}
 
