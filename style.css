@@ -1,10 +1,10 @@
 /*
 Theme Name: Uplifted Theme
-Theme URI: https://churchthemes.net/themes/uplifted/
+Theme URI: https://upthemes.com/themes/uplifted/
 Description: Uplifted Theme is a theme for churches and ministries.
 Author: UpThemes
-Author URI: https://churchthemes.net/
-Version: 1.0.7
+Author URI: https://upthemes.com/
+Version: 1.0.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -609,11 +609,11 @@ cite {
     font-size: 1.375em; } }
 
 /*
-		 * Print styles.
-		 *
-		 * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
-		 * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
-		*/
+     * Print styles.
+     *
+     * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+     * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+    */
 .print-only {
   display: none !important; }
 
@@ -3433,8 +3433,7 @@ body.term-post-format-gallery #content > .panel {
   padding: 24px;
   color: #464b4e; }
   .sticky .uplifted-content-meta {
-    border-color: #e8665a;
-    border-width: 2px; }
+    border-width: 3px; }
   .uplifted-content-block .uplifted-content-meta h1, .uplifted-content-meta h2, .uplifted-content-meta h3, .uplifted-content-meta h4, .uplifted-content-meta h5, .uplifted-content-meta h6 {
     color: #464b4e; }
 
@@ -3717,9 +3716,9 @@ img.alignright {
 .single-ctc_sermon #uplifted-sidebar-right {
   display: none !important; }
 
-/* 
+/*
   *
-  * Single Sermon Page 
+  * Single Sermon Page
   *
   */
 .single-ctc_sermon #uplifted-content .hentry {
