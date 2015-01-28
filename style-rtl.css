@@ -1,10 +1,10 @@
 /*
 Theme Name: Uplifted Theme
-Theme URI: https://churchthemes.net/themes/uplifted/
+Theme URI: https://upthemes.com/themes/uplifted/
 Description: Uplifted Theme is a theme for churches and ministries.
 Author: UpThemes
-Author URI: https://churchthemes.net/
-Version: 1.0.7
+Author URI: https://upthemes.com/
+Version: 1.0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -433,7 +433,6 @@ a {
   color: #e8665a;
   text-decoration: none;
   line-height: inherit;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear; }
   a:hover, a:focus {
     color: #0fcfc5; }
@@ -807,7 +806,6 @@ button, .button {
 @media only screen {
   button, .button {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-    -webkit-transition: background-color 300ms ease-out;
     transition: background-color 300ms ease-out; }
     button:active, .button:active {
       box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
@@ -1490,7 +1488,6 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   height: 3.625em;
   width: 100%;
   box-sizing: border-box;
-  -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
   border-radius: 0;
   -webkit-appearance: none; }
@@ -2019,8 +2016,6 @@ fieldset {
     display: table; }
   .page-template-page-templatesstack-php .mp-brick .mp-brick-outer:after {
     clear: both; }
-.page-template-page-templatesstack-php .mp-core-oembed-full-width-img {
-  display: none !important; }
 .page-template-page-templatesstack-php .mp-brick .mp-brick-edit-link, .page-template-page-templatesstack-php .mp-brick .mp-brick-add-before-link, .page-template-page-templatesstack-php .mp-brick .mp-brick-add-after-link, .page-template-page-templatesstack-php .mp-brick .mp-brick-reorder-bricks {
   margin: 5px;
   background: white !important;
@@ -2148,8 +2143,7 @@ p.comment-form-comment label.error {
     border-color: #0c9f96;
     color: #fff;
     box-shadow: none;
-    -webkit-transition: 200ms background-color linear;
-            transition: 200ms background-color linear;
+    transition: 200ms background-color linear;
     font-weight: bold; }
     #respond .form-submit button:hover, #respond .form-submit button:focus, #respond .form-submit input[type="submit"]:hover, #respond .form-submit input[type="submit"]:focus {
       background-color: #0fcfc5; }
@@ -2286,7 +2280,6 @@ p.comment-form-comment label.error {
   right: 0;
   position: relative;
   width: auto;
-  -webkit-transition: right 300ms ease-out;
   transition: right 300ms ease-out; }
   .top-bar-section ul {
     width: 100%;
@@ -2445,7 +2438,6 @@ p.comment-form-comment label.error {
     margin: 0 auto;
     margin-bottom: 0; }
   .top-bar-section {
-    -webkit-transition: none 0 0;
     transition: none 0 0;
     right: 0 !important; }
     .top-bar-section .divider, .top-bar-section [role="separator"] {
@@ -2538,8 +2530,7 @@ p.comment-form-comment label.error {
   background-color: #e8ebf2;
   color: #6f7070; }
   #footer .columns a {
-    -webkit-transition: 0.2s all linear;
-            transition: 0.2s all linear;
+    transition: 0.2s all linear;
     color: #767f84; }
     #footer .columns a:hover {
       opacity: 0.7; }
@@ -2594,8 +2585,7 @@ p.comment-form-comment label.error {
         display: inline-block;
         padding: 0.3em 0;
         color: #464b4e;
-        -webkit-transition: 200ms all ease-in-out;
-                transition: 200ms all ease-in-out; }
+        transition: 200ms all ease-in-out; }
         .uplifted-widget ul li a:hover {
           color: #0fcfc5;
           padding-right: 0.5em; }
@@ -2759,8 +2749,7 @@ p.comment-form-comment label.error {
   box-shadow: none;
   color: #464b4e;
   position: relative;
-  -webkit-transition: 200ms all ease-in-out;
-          transition: 200ms all ease-in-out; }
+  transition: 200ms all ease-in-out; }
   .search-form button span {
     position: absolute;
     top: 0;
@@ -3007,7 +2996,6 @@ html[xmlns] .slides {
     right: 0;
     left: 0;
     top: 0;
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.6));
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.6));
     color: white;
     box-shadow: none; }
@@ -3036,8 +3024,7 @@ html[xmlns] .slides {
 
 .flex-viewport {
   max-height: 2000px;
-  -webkit-transition: all 1s ease;
-          transition: all 1s ease; }
+  transition: all 1s ease; }
 
 .loading .flex-viewport {
   max-height: 300px; }
@@ -3060,8 +3047,7 @@ html[xmlns] .slides {
   position: absolute;
   top: 50%;
   opacity: 0;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
@@ -3142,8 +3128,7 @@ html[xmlns] .slides {
 
 .slide-text {
   z-index: 999;
-  -webkit-transition: 200ms opacity ease-in-out;
-          transition: 200ms opacity ease-in-out; }
+  transition: 200ms opacity ease-in-out; }
   .slide-text .slide-title {
     margin: 0; }
   .slide-text .slide-title a, .slide-text p {
@@ -3389,7 +3374,6 @@ body.term-post-format-gallery #content > .panel {
     .page-template-page-templateshomepage-php .uplifted-caption-image-caption {
       padding: 1em; } }
 .page-template-page-templateshomepage-php .slides .uplifted-caption-image-caption {
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.6));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.6)); }
 @media screen and (min-width: 641px) {
   .page-template-page-templateshomepage-php .flexslider {
@@ -3415,7 +3399,6 @@ body.term-post-format-gallery #content > .panel {
     left: 0;
     color: white;
     padding: 20px;
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) 35%, rgba(0, 0, 0, 0.1));
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) 35%, rgba(0, 0, 0, 0.1)); }
     .page-template-page-templateshomepage-php .uplifted-caption-image-caption .uplifted-caption-image-title {
       color: white;
@@ -3433,8 +3416,7 @@ body.term-post-format-gallery #content > .panel {
   padding: 24px;
   color: #464b4e; }
   .sticky .uplifted-content-meta {
-    border-color: #e8665a;
-    border-width: 2px; }
+    border-width: 3px; }
   .uplifted-content-block .uplifted-content-meta h1, .uplifted-content-meta h2, .uplifted-content-meta h3, .uplifted-content-meta h4, .uplifted-content-meta h5, .uplifted-content-meta h6 {
     color: #464b4e; }
 
@@ -3671,7 +3653,6 @@ img.alignright {
   .gallery-columns-1 .gallery-item:nth-of-type(1n), .gallery-columns-2 .gallery-item:nth-of-type(2n), .gallery-columns-3 .gallery-item:nth-of-type(3n), .gallery-columns-4 .gallery-item:nth-of-type(4n), .gallery-columns-5 .gallery-item:nth-of-type(5n), .gallery-columns-6 .gallery-item:nth-of-type(6n), .gallery-columns-7 .gallery-item:nth-of-type(7n), .gallery-columns-8 .gallery-item:nth-of-type(8n), .gallery-columns-9 .gallery-item:nth-of-type(9n) {
     margin-left: 0; }
   .gallery-caption {
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%);
     color: #fff;
     margin: 0;
@@ -3684,8 +3665,7 @@ img.alignright {
     bottom: 0;
     right: 0;
     width: 100%;
-    -webkit-transition: opacity 0.25s ease-in-out;
-            transition: opacity 0.25s ease-in-out; }
+    transition: opacity 0.25s ease-in-out; }
     .gallery-caption:before {
       content: "";
       height: 100%;

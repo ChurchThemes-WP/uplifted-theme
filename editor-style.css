@@ -422,7 +422,6 @@ a {
   color: #e8665a;
   text-decoration: none;
   line-height: inherit;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear; }
   a:hover, a:focus {
     color: #0fcfc5; }

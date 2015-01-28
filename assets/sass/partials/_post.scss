@@ -25,8 +25,7 @@
   color: contrast-color($panel-bg, $body-font-color, lighten($panel-bg, 70%), 50%);
 
   .sticky & {
-    border-color: $secondary-color;
-    border-width: 2px;
+    border-width: 3px;
   }
 
   // set the color of body copy and heading when in the main content area
