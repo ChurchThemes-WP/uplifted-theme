@@ -4,7 +4,7 @@
  *
  * Used to display a search form for most situations.
  *
- * @ackage Uplifted
+ * @package Uplifted
  * @since 1.0.0
  */
 ?>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uplifted 1.0.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-28 13:01-0400\n"
+"POT-Creation-Date: 2014-11-25 10:28-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -218,8 +218,6 @@ msgstr ""
 msgid "Sorry, this widget is not made for use in this area. Please delete."
 msgstr ""
 
-#. /activaton
-#. optional message to show on options page
 #: framework/includes/admin/edd-license.php:74
 msgid "<strong>License key could not be activated.</strong>"
 msgstr ""
@@ -253,7 +251,7 @@ msgid "unknown date"
 msgstr ""
 
 #: framework/includes/admin/edd-license.php:369
-#: framework/includes/admin/edd-license.php:397
+#: framework/includes/admin/edd-license.php:395
 msgctxt "page title"
 msgid "Theme License"
 msgstr ""
@@ -263,60 +261,60 @@ msgctxt "menu title"
 msgid "Theme License"
 msgstr ""
 
-#: framework/includes/admin/edd-license.php:414
+#: framework/includes/admin/edd-license.php:412
 msgctxt "heading"
 msgid "License Key"
 msgstr ""
 
-#: framework/includes/admin/edd-license.php:423
+#: framework/includes/admin/edd-license.php:421
 #: includes/UpThemes_Theme_Updater.php:56
 msgid "License Key"
 msgstr ""
 
-#: framework/includes/admin/edd-license.php:436
+#: framework/includes/admin/edd-license.php:434
 msgid "Save Key"
 msgstr ""
 
-#: framework/includes/admin/edd-license.php:440
-#: framework/includes/admin/edd-license.php:449
+#: framework/includes/admin/edd-license.php:438
+#: framework/includes/admin/edd-license.php:447
 msgid "License Status"
 msgstr ""
 
-#: framework/includes/admin/edd-license.php:456
+#: framework/includes/admin/edd-license.php:454
 msgctxt "license key"
 msgid "Active"
 msgstr ""
 
-#: framework/includes/admin/edd-license.php:459
+#: framework/includes/admin/edd-license.php:457
 msgid "Expiring Soon"
 msgstr ""
 
-#: framework/includes/admin/edd-license.php:464
+#: framework/includes/admin/edd-license.php:462
 msgctxt "license key"
 msgid "Expired"
 msgstr ""
 
-#: framework/includes/admin/edd-license.php:468
+#: framework/includes/admin/edd-license.php:466
 msgctxt "license key"
 msgid "Inactive"
 msgstr ""
 
-#: framework/includes/admin/edd-license.php:481
+#: framework/includes/admin/edd-license.php:479
 msgid "License Expiration"
 msgstr ""
 
-#: framework/includes/admin/edd-license.php:502
+#: framework/includes/admin/edd-license.php:500
 #: includes/UpThemes_Theme_Updater.php:72
 msgid "Deactivate License"
 msgstr ""
 
-#: framework/includes/admin/edd-license.php:506
+#: framework/includes/admin/edd-license.php:504
 #: includes/UpThemes_Theme_Updater.php:66
 #: includes/UpThemes_Theme_Updater.php:75
 msgid "Activate License"
 msgstr ""
 
-#: framework/includes/admin/edd-license.php:513
+#: framework/includes/admin/edd-license.php:511
 msgid "Renew License"
 msgstr ""
 
@@ -327,15 +325,6 @@ msgid ""
 "Please consider using a child theme for modifications."
 msgstr ""
 
-#. /strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>update now</a>.',
-#. $theme->get( 'Name' ),
-#. $api_response->new_version,
-#. '#TB_inline?width=640&amp;inlineId=' . $this->theme_slug . '_changelog',
-#. $theme->get( 'Name' ),
-#. $update_url,
-#. $update_onclick
-#. );
-#.
 #: framework/includes/classes/CTFW_EDD_SL_Theme_Updater.php:90
 #, php-format
 msgid ""
@@ -402,7 +391,6 @@ msgctxt "archives widget"
 msgid "Title"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-archives.php:92
 msgctxt "archives widget title default"
 msgid "Archives"
@@ -453,7 +441,6 @@ msgctxt "categories widget"
 msgid "Title"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-categories.php:95
 msgctxt "categories widget title default"
 msgid "Categories"
@@ -469,7 +456,6 @@ msgctxt "categories widget"
 msgid "Order By"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-categories.php:143
 msgctxt "categories widget order by"
 msgid "Title"
@@ -485,7 +471,6 @@ msgctxt "categories widget order by"
 msgid "Post Count"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-categories.php:171
 msgctxt "categories widget order"
 msgid "Low to High"
@@ -546,13 +531,11 @@ msgctxt "events widget"
 msgid "Title"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-events.php:90
 msgctxt "events widget title default"
 msgid "Events"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-events.php:114
 msgctxt "events widget order"
 msgid "Upcoming"
@@ -603,7 +586,6 @@ msgctxt "galleries widget"
 msgid "Title"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-galleries.php:92
 msgctxt "galleries widget title default"
 msgid "Galleries"
@@ -614,7 +596,6 @@ msgctxt "galleries widget"
 msgid "Order By"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-galleries.php:116
 msgctxt "galleries widget order by"
 msgid "Date Added"
@@ -625,7 +606,6 @@ msgctxt "galleries widget order by"
 msgid "Title"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-galleries.php:143
 msgctxt "galleries widget order"
 msgid "Low to High"
@@ -665,7 +645,6 @@ msgctxt "gallery widget"
 msgid "Title"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-gallery.php:101
 msgctxt "gallery widget title default"
 msgid "Gallery"
@@ -686,7 +665,6 @@ msgctxt "gallery widget"
 msgid "Order By"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-gallery.php:173
 msgctxt "gallery widget order by"
 msgid "Upload Date"
@@ -702,7 +680,6 @@ msgctxt "gallery widget order by"
 msgid "Comment Count"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-gallery.php:201
 msgctxt "gallery widget order"
 msgid "Low to High"
@@ -723,7 +700,6 @@ msgctxt "gallery widget"
 msgid "Thumbnail Size"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-gallery.php:252
 msgctxt "gallery widget"
 msgid "Small"
@@ -753,7 +729,6 @@ msgctxt "giving widget"
 msgid "Title"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-giving.php:90
 msgctxt "giving widget default title"
 msgid "Giving"
@@ -764,7 +739,6 @@ msgctxt "giving widget"
 msgid "Message"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-giving.php:114
 msgid "You may give online by clicking below."
 msgstr ""
@@ -774,7 +748,6 @@ msgctxt "giving widget"
 msgid "Button Text"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-giving.php:138
 msgctxt "giving widget"
 msgid "Give Now"
@@ -833,7 +806,6 @@ msgctxt "locations widget"
 msgid "Title"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-locations.php:90
 msgctxt "locations widget title default"
 msgid "Locations"
@@ -844,7 +816,6 @@ msgctxt "locations widget"
 msgid "Order By"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-locations.php:114
 msgctxt "locations widget order by"
 msgid "Custom Order"
@@ -855,7 +826,6 @@ msgctxt "locations widget order by"
 msgid "Name"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-locations.php:141
 msgctxt "locations widget order"
 msgid "Low to High"
@@ -905,7 +875,6 @@ msgctxt "people widget"
 msgid "Title"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-people.php:90
 msgctxt "people widget title default"
 msgid "People"
@@ -916,7 +885,6 @@ msgctxt "people widget"
 msgid "Group"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-people.php:114
 msgctxt "people widget"
 msgid "All Groups"
@@ -927,7 +895,6 @@ msgctxt "people widget"
 msgid "Order By"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-people.php:140
 msgctxt "people widget order by"
 msgid "Custom Order"
@@ -938,7 +905,6 @@ msgctxt "people widget order by"
 msgid "Name"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-people.php:167
 msgctxt "people widget order"
 msgid "Low to High"
@@ -999,7 +965,6 @@ msgctxt "posts widget"
 msgid "Title"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-posts.php:92
 msgctxt "posts widget title default"
 msgid "Posts"
@@ -1010,7 +975,6 @@ msgctxt "posts widget"
 msgid "Category"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-posts.php:116
 msgctxt "posts widget"
 msgid "All Categories"
@@ -1021,7 +985,6 @@ msgctxt "posts widget"
 msgid "Order By"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-posts.php:142
 msgctxt "posts widget order by"
 msgid "Title"
@@ -1037,7 +1000,6 @@ msgctxt "posts widget order by"
 msgid "Comment Count"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-posts.php:170
 msgctxt "posts widget order"
 msgid "Low to High"
@@ -1082,7 +1044,6 @@ msgctxt "sermons widget"
 msgid "Title"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:90
 msgctxt "sermons widget title default"
 msgid "Sermons"
@@ -1093,7 +1054,6 @@ msgctxt "sermons widget"
 msgid "Topic"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:114
 msgctxt "sermons widget"
 msgid "All Topics"
@@ -1104,7 +1064,6 @@ msgctxt "sermons widget"
 msgid "Book"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:140
 msgctxt "sermons widget"
 msgid "All Books"
@@ -1115,7 +1074,6 @@ msgctxt "sermons widget"
 msgid "Series"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:166
 msgctxt "sermons widget"
 msgid "All Series"
@@ -1126,7 +1084,6 @@ msgctxt "sermons widget"
 msgid "Speaker"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:192
 msgctxt "sermons widget"
 msgid "All Speakers"
@@ -1137,7 +1094,6 @@ msgctxt "sermons widget"
 msgid "Order By"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:218
 msgctxt "sermons widget order by"
 msgid "Title"
@@ -1153,7 +1109,6 @@ msgctxt "sermons widget order by"
 msgid "Comment Count"
 msgstr ""
 
-#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:246
 msgctxt "sermons widget order"
 msgid "Low to High"
@@ -1334,7 +1289,7 @@ msgstr ""
 msgid "Yesterday"
 msgstr ""
 
-#: header.php:62
+#: header.php:65
 msgid "Menu"
 msgstr ""
 
@@ -1762,7 +1717,6 @@ msgstr ""
 msgid "These show at the bottom of the homepage."
 msgstr ""
 
-#. /content.php
 #: includes/sidebars.php:96
 msgid "Page Sidebar"
 msgstr ""
@@ -1771,7 +1725,6 @@ msgstr ""
 msgid "These widgets show on the side of pages using the default template."
 msgstr ""
 
-#. /content.php
 #: includes/sidebars.php:110
 msgid "Sermons Sidebar"
 msgstr ""
@@ -1780,7 +1733,6 @@ msgstr ""
 msgid "These widgets show on the side of sermon pages."
 msgstr ""
 
-#. /content.php
 #: includes/sidebars.php:121
 msgid "Events Sidebar"
 msgstr ""
@@ -1789,7 +1741,6 @@ msgstr ""
 msgid "These widgets show on the side of event pages."
 msgstr ""
 
-#. /content.php
 #: includes/sidebars.php:132
 msgid "People Sidebar"
 msgstr ""
@@ -1798,7 +1749,6 @@ msgstr ""
 msgid "These widgets show on the side of people pages."
 msgstr ""
 
-#. /content.php
 #: includes/sidebars.php:143
 msgid "Locations Sidebar"
 msgstr ""
@@ -1807,7 +1757,6 @@ msgstr ""
 msgid "These widgets show on the side of locations content."
 msgstr ""
 
-#. /content.php
 #: includes/sidebars.php:154
 msgid "Gallery Sidebar"
 msgstr ""
@@ -1816,7 +1765,6 @@ msgstr ""
 msgid "These widgets show on the side of gallery pages."
 msgstr ""
 
-#. /content.php
 #: includes/sidebars.php:165
 msgid "Blog Sidebar"
 msgstr ""
@@ -1825,7 +1773,6 @@ msgstr ""
 msgid "These widgets show on the side of blog content."
 msgstr ""
 
-#. /content.php
 #: includes/sidebars.php:176
 msgid "Contact Sidebar"
 msgstr ""
@@ -1834,7 +1781,6 @@ msgstr ""
 msgid "These widgets show on the side of the contact page."
 msgstr ""
 
-#. /content.php
 #: includes/sidebars.php:187
 msgid "Search Sidebar"
 msgstr ""
@@ -2106,7 +2052,6 @@ msgstr ""
 msgid "Display Header Image on Mobile"
 msgstr ""
 
-#. /Retina
 #: loop-author.php:29
 #, php-format
 msgid "About %s"
@@ -2277,7 +2222,7 @@ msgid_plural "%d Photos"
 msgstr[0] ""
 msgstr[1] ""
 
-#: searchform.php:17
+#: searchform-ctc.php:12 searchform.php:17
 msgid "Search"
 msgstr ""
 
@@ -2286,8 +2231,6 @@ msgctxt "categories widget"
 msgid "Select One"
 msgstr ""
 
-#. // HTML Beforeecho $args['before_widget'];// Title$title = apply_filters( 'widget_title', $instance['title'] );if ( ! empty( $title ) ) {	echo $args['before_title'] . $title . $args['after_title'];}// Get posts$posts = ctfw_get_events( $instance ); // get events based on options - upcoming/past, limit, etc.// Loop posts$i = 0;foreach ( $posts as $post ) : setup_postdata( $post ); $i++;	// Get event meta data	// $date (localized range), $start_date, $end_date, $time, $venue, $address, $show_directions_link, $directions_url, $map_lat, $map_lng, $map_type, $map_zoom	extract( ctfw_event_data() );
-#. End Loopendforeach;// No items foundif ( empty( $posts ) ) {
 #: widget-templates/widget-events.php:1
 msgctxt "events widget"
 msgid "There are no events to show."
@@ -2298,10 +2241,6 @@ msgctxt "galleries widget"
 msgid "There are no galleries to show."
 msgstr ""
 
-#. // HTML Beforeecho $args['before_widget'];// Title$title = apply_filters( 'widget_title', $instance['title'] );if ( ! empty( $title ) ) {	echo $args['before_title'] . $title . $args['after_title'];}// Get posts$posts = $this->ctfw_get_posts(); // widget's default query according to field values// Determine columns based on thumb size$thumb_sizes = array(	'small'		=> 3,	'medium'	=> 2,	'large'		=> 1,);$columns = $thumb_sizes[$instance['thumb_size']];// Get ID's into list$ids_array = array();foreach ( $posts as $post ) {	$ids_array[] = $post->ID;}$ids = implode( ',', $ids_array );
-#. Show galleryif ( ! empty( $posts ) ) :
-#. Use gallery shortcode	echo gallery_shortcode( array(		'columns'	=> $columns,		'ids'		=> $ids	) );
-#. Link to gallery page	if ( $instance['show_link'] && $instance['post_id'] != 'all' ) :
 #: widget-templates/widget-gallery.php:1
 msgctxt "gallery widget"
 msgid "View Gallery"
@@ -2312,15 +2251,11 @@ msgctxt "gallery widget"
 msgid "There are no images to show."
 msgstr ""
 
-#. // HTML Beforeecho $args['before_widget'];// Title$title = apply_filters( 'widget_title', $instance['title'] );if ( ! empty( $title ) ) {	echo $args['before_title'] . $title . $args['after_title'];}// Get posts$posts = $this->ctfw_get_posts(); // widget's default query according to field values// Loop Posts$i = 0;foreach ( $posts as $post ) : setup_postdata( $post ); $i++;	// Get location meta data	// $address, $show_directions_link, $directions_url, $phone, $times, $map_lat, $map_lng, $map_type, $map_zoom	extract( ctfw_location_data() );
-#. End Loopendforeach;// No items foundif ( empty( $posts ) ) {
 #: widget-templates/widget-locations.php:1
 msgctxt "locations widget"
 msgid "There are no locations to show."
 msgstr ""
 
-#. // HTML Beforeecho $args['before_widget'];// Title$title = apply_filters( 'widget_title', $instance['title'] );if ( ! empty( $title ) ) {	echo $args['before_title'] . $title . $args['after_title'];}// Get posts$posts = $this->ctfw_get_posts(); // widget's default query according to field values// Loop Posts$i = 0;foreach ( $posts as $post ) : setup_postdata( $post ); $i++;	// Get people meta data	// $position	extract( ctfw_person_data() );
-#. End Loopendforeach;// No items foundif ( empty( $posts ) ) {
 #: widget-templates/widget-people.php:1
 msgctxt "people widget"
 msgid "There are no people to show."
