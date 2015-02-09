@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uplifted 1.0.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-25 10:28-0600\n"
+"POT-Creation-Date: 2015-02-09 07:23-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2044,11 +2044,49 @@ msgstr ""
 msgid "Text to be displayed in the footer."
 msgstr ""
 
-#: includes/theme-options.php:386
+#: includes/theme-options.php:322
+msgid "Text displayed in the header."
+msgstr ""
+
+#: includes/theme-options.php:333
+msgid ""
+"Choose between a full-width or fixed-width (boxed) layout for the homepage "
+"slider."
+msgstr ""
+
+#: includes/theme-options.php:342
+msgid "Full Width"
+msgstr ""
+
+#: includes/theme-options.php:346
+msgid "Boxed"
+msgstr ""
+
+#: includes/theme-options.php:354
+msgid "Choose where to display a search box or hide it completely."
+msgstr ""
+
+#: includes/theme-options.php:363
+msgid "None"
+msgstr ""
+
+#: includes/theme-options.php:367
+msgid "In Top Left Menu"
+msgstr ""
+
+#: includes/theme-options.php:371
+msgid "In Top Right Menu"
+msgstr ""
+
+#: includes/theme-options.php:375
+msgid "In Secondary Menu"
+msgstr ""
+
+#: includes/theme-options.php:450
 msgid "Display Header Text on Mobile"
 msgstr ""
 
-#: includes/theme-options.php:402
+#: includes/theme-options.php:466
 msgid "Display Header Image on Mobile"
 msgstr ""
 
@@ -2222,7 +2260,7 @@ msgid_plural "%d Photos"
 msgstr[0] ""
 msgstr[1] ""
 
-#: searchform-ctc.php:12 searchform.php:17
+#: searchform-ctc.php:13 searchform.php:17
 msgid "Search"
 msgstr ""
 

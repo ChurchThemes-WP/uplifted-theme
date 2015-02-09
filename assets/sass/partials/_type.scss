@@ -19,7 +19,7 @@ body {
 
 // set a color to the block around highlighted text
 ::-moz-selection{background: $primary-color; color: #fff; text-shadow: none;}
-::selection {background: $primary-color; color: #fff; text-shadow: none;} 
+::selection {background: $primary-color; color: #fff; text-shadow: none;}
 
 //
 // Typography Variables
@@ -174,7 +174,6 @@ $microformat-abbr-font-decoration: none !default;
 		color: $anchor-font-color;
 		text-decoration: $anchor-text-decoration;
 		line-height: inherit;
-		@include transition;
 
 		&:hover,
 		&:focus { color: $anchor-font-color-hover; }

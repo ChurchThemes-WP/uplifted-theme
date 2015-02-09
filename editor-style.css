@@ -19,7 +19,6 @@ body {
   font-weight: normal;
   font-style: normal;
   line-height: 1;
-  position: relative;
   cursor: "default"; }
 
 a:hover {
@@ -421,9 +420,7 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
 a {
   color: #e8665a;
   text-decoration: none;
-  line-height: inherit;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear; }
+  line-height: inherit; }
   a:hover, a:focus {
     color: #0fcfc5; }
   a img {

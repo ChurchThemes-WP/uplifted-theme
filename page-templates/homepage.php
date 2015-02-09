@@ -4,6 +4,8 @@
 // No direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+$up_options = upfw_get_options();
+
 // Header
 get_header();
 
@@ -46,7 +48,19 @@ while ( have_posts() ) : the_post();
 		<div id="uplifted-slider-boxes" class="uplifted-clearfix">
 
 			<?php if ( empty( $no_slider ) ) : ?>
-			<?php get_sidebar( 'home-slider' ); ?>
+
+				<?php if( isset( $up_options->slider_format ) && $up_options->slider_format == 'boxed' ): ?>
+					<div class="uplifted-boxed-slider">
+						<div class="uplifted-boxed-slider-inner">
+				<?php endif; ?>
+
+				<?php get_sidebar( 'home-slider' ); ?>
+
+				<?php if( isset( $up_options->slider_format ) && $up_options->slider_format == 'boxed' ): ?>
+						</div><!--.uplifted-boxed-sider-inner-->
+					</div><!--.uplifted-boxed-sider-->
+				<?php endif; ?>
+
 			<?php endif; ?>
 
 			<?php if ( empty( $no_highlights ) ) : ?>
@@ -58,9 +72,9 @@ while ( have_posts() ) : the_post();
 	<?php endif; ?>
 
 	<?php if ( empty( $no_intro ) ) : ?>
-		
+
 		<div class="uplifted-intro-wrapper">
-			
+
 			<section id="uplifted-intro"<?php if ( get_the_title() ) : ?> class="uplifted-intro-has-heading"<?php endif; ?>>
 
 				<div id="uplifted-intro-inner">
@@ -82,12 +96,12 @@ while ( have_posts() ) : the_post();
 				</div>
 
 			</section>
-		
+
 		</div><!-- /uplifted-intro-wrapper -->
 
 	<?php endif; ?>
 
-	<?php get_sidebar( 'home-bottom' ); ?>	
+	<?php get_sidebar( 'home-bottom' ); ?>
 
 </div>
 

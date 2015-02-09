@@ -67,7 +67,7 @@ $up_options = upfw_get_options();
 
 					<?php do_action('uplifted_after_site_title'); ?>
 
-					<section class="top-bar-section">
+					<section class="top-bar-section uplifted-nav-menu">
 						<?php do_action('uplifted_before_topleft_menu'); ?>
 						<?php get_template_part('menu','topleft'); ?>
 						<?php do_action('uplifted_after_topleft_menu'); ?>

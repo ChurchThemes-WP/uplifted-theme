@@ -5,12 +5,12 @@
 //
 
 #masthead {
-	@extend .clearfix;
+	@include clearfix;
 }
 
 #container {
   @include grid-row;
-  @extend .clearfix;
+  @include clearfix;
 }
 
 @media screen and (max-width: $small-screen) {
