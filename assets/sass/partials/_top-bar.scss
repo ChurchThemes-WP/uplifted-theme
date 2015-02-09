@@ -63,28 +63,23 @@ $topbar-divider-border-top: solid 1px darken($topbar-bg, 10%) !default;
 // Sticky Class
 $topbar-sticky-class: ".sticky" !default;
 
-@media screen and (max-width: 600px){
-  #wpadminbar{
-    display: none;
-  }
-}
-
-@media screen and (max-width: 782px){
-  html[xmlns] {
-    margin-top: 0 !important;
+@media screen and (max-width:600px){
+  .admin-bar.fixie {
+    #wpadminbar{
+      position: fixed !important;
+    }
+    .top-bar.expanded{
+      top: 46px !important;
+    }
   }
 }
 
 // If we have a fixed header and logged-in as admin bump header down page
 .admin-bar .top-bar-container.fixed {
-  top: 0;
+  top: 46px !important;
 
   @media screen and (min-width:768px){
   	top: 32px !important;
-  }
-
-  @media screen and (min-width:601px) and (max-width: 782px){
-    top: 46px !important;
   }
 }
 
@@ -151,7 +146,7 @@ $topbar-sticky-class: ".sticky" !default;
         a {
           width: 80%;
           display: block;
-          padding: 0 $topbar-height / 3;
+          padding: 0 20px;
           color: $topbar-link-color;
 
           &:hover {

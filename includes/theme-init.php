@@ -77,7 +77,7 @@ function uplifted_register_menus() {
 	register_nav_menus(array(
 			'top-left' => 'Left Top Menu',
 			'top-right' => 'Right Top Menu',
-			'social'    => 'Social Menu'
+			'social'    => 'Social Menu',
 	));
 }
 

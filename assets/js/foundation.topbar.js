@@ -50,7 +50,17 @@
 					}
 
 					if (self.settings.$topbar.parent().hasClass('fixed')) {
-						$('body').css('padding-top', self.outerHeight(self.settings.$topbar));
+						var topBarPadding = self.outerHeight(self.settings.$topbar);
+
+						if( $('.ctc-header').is(':visible') ){
+							topBarPadding += $('.ctc-header').height();
+						}
+
+						if( $('#wpadminbar').is(':visible') && window.matchMedia("screen and (max-width: 600px)").matches ){
+							topBarPadding += $('#wpadminbar').height();
+						}
+
+						$('body').css('padding-top', topBarPadding);
 					}
 				});
 
@@ -100,11 +110,17 @@
 						if (topbar.hasClass('fixed')) {
 							topbar.parent().addClass('fixed');
 							topbar.removeClass('fixed');
+
+							if( $('#wpadminbar').is(':visible') && window.matchMedia("screen and (max-width: 600px)").matches ){
+								offst += $('#wpadminbar').height();
+							}
+
 							$('body').css('padding-top',offst);
 						}
 					} else if (topbar.parent().hasClass('fixed')) {
 						topbar.parent().removeClass('fixed');
 						topbar.addClass('fixed');
+
 						$('body').css('padding-top','0');
 
 						if (self.settings.scrolltop) {
@@ -161,7 +177,13 @@
 							section.find('>.name').css({right: 100 * topbar.data('index') + '%'});
 						}
 
-						topbar.css('height', self.outerHeight($this.siblings('ul'), true) + self.height(titlebar));
+						var topBarPadding = self.outerHeight($this.siblings('ul'), true) + self.height(titlebar);
+
+						if( $('#wpadminbar').is(':visible') && window.matchMedia("screen and (max-width: 600px)").matches ){
+							topBarPadding += $('#wpadminbar').height();
+						}
+
+						topbar.css('height', topBarPadding);
 					}
 				});
 
@@ -209,7 +231,14 @@
 				if (topbar.data('index') === 0) {
 					topbar.css('height', '');
 				} else {
-					topbar.css('height', self.outerHeight($previousLevelUl, true) + self.height(titlebar));
+
+					var topBarPadding = self.outerHeight($previousLevelUl, true) + self.height(titlebar);
+
+					if( $('#wpadminbar').is(':visible') && window.matchMedia("screen and (max-width: 600px)").matches ){
+						topBarPadding += $('#wpadminbar').height();
+					}
+
+					topbar.css('height', topBarPadding);
 				}
 
 				setTimeout(function () {

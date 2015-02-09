@@ -314,7 +314,71 @@ $options = array(
 		"id" => "text",
 		"type" => "textarea",
 		"default" => "Copyright ".date('Y')." ".get_bloginfo('name').". All Rights Reserved."
-	)
+	),
+	"ctc_message" => array(
+		"tab" => "general",
+		"name" => "ctc_message",
+		"title" => "Header Text Message",
+		"description" => __( "Text displayed in the header.", 'uplifted' ),
+		"section" => "text",
+		"since" => "1.0",
+		"id" => "text",
+		"type" => "textarea",
+		"default" => "Join us for service at 9AM and 10:30AM this Sunday."
+	),
+	"slider_format" => array(
+		"tab" => "general",
+		"name" => "slider_format",
+		"title" => "Slider Format",
+		"description" => __( "Choose between a full-width or fixed-width (boxed) layout for the homepage slider.", 'uplifted' ),
+		"section" => "appearance",
+		"since" => "1.0",
+		"id" => "appearance",
+		"type" => "select",
+		"default" => 'full_width',
+		"valid_options" => array(
+			"full_width" => array(
+				"name" => "full_width",
+				"title" => __( "Full Width", 'uplifted' )
+			),
+			"boxed" => array(
+				"name" => "boxed",
+				"title" => __( "Boxed", 'uplifted' )
+			)
+		)
+	),
+	"show_search" => array(
+		"tab" => "general",
+		"name" => "show_search",
+		"title" => "Show Search Box?",
+		"description" => __( "Choose where to display a search box or hide it completely.", 'uplifted' ),
+		"section" => "appearance",
+		"since" => "1.0",
+		"id" => "appearance",
+		"type" => "select",
+		"default" => 'full_width',
+		"valid_options" => array(
+			"none" => array(
+				"name" => "none",
+				"title" => __( "None", 'uplifted' )
+			),
+			"top-left" => array(
+				"name" => "top-left",
+				"title" => __( "In Top Left Menu", 'uplifted' )
+			),
+			"top-right" => array(
+				"name" => "top-right",
+				"title" => __( "In Top Right Menu", 'uplifted' )
+			),
+			"ctc-menu" => array(
+				"name" => "ctc-menu",
+				"title" => __( "In Secondary Menu", 'uplifted' )
+			)
+
+		)
+	),
+
+
 );
 
 register_theme_options($options);

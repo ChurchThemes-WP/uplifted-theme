@@ -336,7 +336,6 @@ body {
   font-weight: normal;
   font-style: normal;
   line-height: 1;
-  position: relative;
   cursor: "default"; }
 
 a:hover {
@@ -432,9 +431,7 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
 a {
   color: #e8665a;
   text-decoration: none;
-  line-height: inherit;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear; }
+  line-height: inherit; }
   a:hover, a:focus {
     color: #0fcfc5; }
   a img {
@@ -807,7 +804,6 @@ button, .button {
 @media only screen {
   button, .button {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-    -webkit-transition: background-color 300ms ease-out;
     transition: background-color 300ms ease-out; }
     button:active, .button:active {
       box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
@@ -998,12 +994,12 @@ button, .button {
     padding-left: 0;
     padding-top: 0; } }
 
-.clearfix, #masthead, #container, .single-ctc_sermon .pagination, .single-ctc_sermon #comments, .uplifted-clearfix {
+.clearfix, .uplifted-clearfix {
   *zoom: 1; }
-  .clearfix:before, #masthead:before, #container:before, .single-ctc_sermon .pagination:before, .single-ctc_sermon #comments:before, .clearfix:after, #masthead:after, #container:after, .single-ctc_sermon .pagination:after, .single-ctc_sermon #comments:after, .uplifted-clearfix:before, .uplifted-clearfix:after {
+  .clearfix:before, .clearfix:after, .uplifted-clearfix:before, .uplifted-clearfix:after {
     content: " ";
     display: table; }
-  .clearfix:after, #masthead:after, #container:after, .single-ctc_sermon .pagination:after, .single-ctc_sermon #comments:after, .uplifted-clearfix:after {
+  .clearfix:after, .uplifted-clearfix:after {
     clear: both; }
 
 /* Grid */
@@ -1021,7 +1017,7 @@ button, .button {
     display: table; }
   .row:after {
     clear: both; }
-  .row.collapse .column, .row.collapse .single-ctc_sermon .pagination, .single-ctc_sermon .row.collapse .pagination, .row.collapse .single-ctc_sermon #comments, .single-ctc_sermon .row.collapse #comments, .row.collapse .columns, .row.collapse .ctc-nav {
+  .row.collapse .column, .row.collapse .single-ctc_sermon .pagination, .single-ctc_sermon .row.collapse .pagination, .row.collapse .single-ctc_sermon #comments, .single-ctc_sermon .row.collapse #comments, .row.collapse .columns {
     position: relative;
     padding-left: 0;
     padding-right: 0;
@@ -1050,7 +1046,7 @@ button, .button {
       .row .row.collapse:after {
         clear: both; }
 
-.column, .single-ctc_sermon .pagination, .single-ctc_sermon #comments, .columns, .ctc-nav {
+.column, .single-ctc_sermon .pagination, .single-ctc_sermon #comments, .columns {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
@@ -1058,7 +1054,7 @@ button, .button {
   float: left; }
 
 @media only screen {
-  .column, .single-ctc_sermon .pagination, .single-ctc_sermon #comments, .columns, .ctc-nav {
+  .column, .single-ctc_sermon .pagination, .single-ctc_sermon #comments, .columns {
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
@@ -1136,7 +1132,7 @@ button, .button {
     float: right; }
   [class*="column"] + [class*="column"].end {
     float: left; }
-  .column.small-centered, .single-ctc_sermon .small-centered.pagination, .single-ctc_sermon .small-centered#comments, .columns.small-centered, .small-centered.ctc-nav {
+  .column.small-centered, .single-ctc_sermon .small-centered.pagination, .single-ctc_sermon .small-centered#comments, .columns.small-centered {
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -1159,7 +1155,7 @@ button, .button {
   .large-5 {
     position: relative;
     width: 41.6666666667%; }
-  .large-6, .ctc-nav {
+  .large-6 {
     position: relative;
     width: 50%; }
   .large-7 {
@@ -1304,16 +1300,16 @@ button, .button {
     position: relative;
     right: 91.6666666667%;
     left: auto; }
-  .column.large-centered, .single-ctc_sermon .large-centered.pagination, .single-ctc_sermon .large-centered#comments, .columns.large-centered, .large-centered.ctc-nav {
+  .column.large-centered, .single-ctc_sermon .large-centered.pagination, .single-ctc_sermon .large-centered#comments, .columns.large-centered {
     position: relative;
     margin-left: auto;
     margin-right: auto;
     float: none !important; }
-  .column.large-uncentered, .single-ctc_sermon .large-uncentered.pagination, .single-ctc_sermon .large-uncentered#comments, .columns.large-uncentered, .large-uncentered.ctc-nav {
+  .column.large-uncentered, .single-ctc_sermon .large-uncentered.pagination, .single-ctc_sermon .large-uncentered#comments, .columns.large-uncentered {
     margin-left: 0;
     margin-right: 0;
     float: left !important; }
-  .column.large-uncentered.opposite, .single-ctc_sermon .large-uncentered.opposite.pagination, .single-ctc_sermon .large-uncentered.opposite#comments, .columns.large-uncentered.opposite, .large-uncentered.opposite.ctc-nav {
+  .column.large-uncentered.opposite, .single-ctc_sermon .large-uncentered.opposite.pagination, .single-ctc_sermon .large-uncentered.opposite#comments, .columns.large-uncentered.opposite {
     float: right !important; } }
 
 /* Forms */
@@ -1324,13 +1320,13 @@ form {
 /* Using forms within rows, we need to set some defaults */
 form .row .row {
   margin: 0 -0.9375em; }
-  form .row .row .column, form .row .row .single-ctc_sermon .pagination, .single-ctc_sermon form .row .row .pagination, form .row .row .single-ctc_sermon #comments, .single-ctc_sermon form .row .row #comments, form .row .row .columns, form .row .row .ctc-nav {
+  form .row .row .column, form .row .row .single-ctc_sermon .pagination, .single-ctc_sermon form .row .row .pagination, form .row .row .single-ctc_sermon #comments, .single-ctc_sermon form .row .row #comments, form .row .row .columns {
     padding: 0 0.9375em; }
   form .row .row.collapse {
     margin: 0; }
-    form .row .row.collapse .column, form .row .row.collapse .single-ctc_sermon .pagination, .single-ctc_sermon form .row .row.collapse .pagination, form .row .row.collapse .single-ctc_sermon #comments, .single-ctc_sermon form .row .row.collapse #comments, form .row .row.collapse .columns, form .row .row.collapse .ctc-nav {
+    form .row .row.collapse .column, form .row .row.collapse .single-ctc_sermon .pagination, .single-ctc_sermon form .row .row.collapse .pagination, form .row .row.collapse .single-ctc_sermon #comments, .single-ctc_sermon form .row .row.collapse #comments, form .row .row.collapse .columns {
       padding: 0; }
-form .row input.column, form .row .single-ctc_sermon input.pagination, .single-ctc_sermon form .row input.pagination, form .row .single-ctc_sermon input#comments, .single-ctc_sermon form .row input#comments, form .row input.columns, form .row input.ctc-nav, form .row textarea.column, form .row .single-ctc_sermon textarea.pagination, .single-ctc_sermon form .row textarea.pagination, form .row .single-ctc_sermon textarea#comments, .single-ctc_sermon form .row textarea#comments, form .row textarea.columns, form .row textarea.ctc-nav {
+form .row input.column, form .row .single-ctc_sermon input.pagination, .single-ctc_sermon form .row input.pagination, form .row .single-ctc_sermon input#comments, .single-ctc_sermon form .row input#comments, form .row input.columns, form .row textarea.column, form .row .single-ctc_sermon textarea.pagination, .single-ctc_sermon form .row textarea.pagination, form .row .single-ctc_sermon textarea#comments, .single-ctc_sermon form .row textarea#comments, form .row textarea.columns {
   padding-left: 0.9375em; }
 
 /* Label Styles */
@@ -1490,7 +1486,6 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   height: 3.625em;
   width: 100%;
   box-sizing: border-box;
-  -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
   border-radius: 0;
   -webkit-appearance: none; }
@@ -1924,6 +1919,14 @@ fieldset {
       color: #fff; }
 
 /* Layout */
+#masthead {
+  *zoom: 1; }
+  #masthead:before, #masthead:after {
+    content: " ";
+    display: table; }
+  #masthead:after {
+    clear: both; }
+
 #container {
   width: 100%;
   margin-left: auto;
@@ -1931,7 +1934,13 @@ fieldset {
   margin-top: 0;
   margin-bottom: 0;
   max-width: 1120px;
+  *zoom: 1;
   *zoom: 1; }
+  #container:before, #container:after {
+    content: " ";
+    display: table; }
+  #container:after {
+    clear: both; }
   #container:before, #container:after {
     content: " ";
     display: table; }
@@ -2148,8 +2157,7 @@ p.comment-form-comment label.error {
     border-color: #0c9f96;
     color: #fff;
     box-shadow: none;
-    -webkit-transition: 200ms background-color linear;
-            transition: 200ms background-color linear;
+    transition: 200ms background-color linear;
     font-weight: bold; }
     #respond .form-submit button:hover, #respond .form-submit button:focus, #respond .form-submit input[type="submit"]:hover, #respond .form-submit input[type="submit"]:focus {
       background-color: #0fcfc5; }
@@ -2164,21 +2172,16 @@ p.comment-form-comment label.error {
 
 /* Top Bar */
 @media screen and (max-width: 600px) {
-  #wpadminbar {
-    display: none; } }
-
-@media screen and (max-width: 782px) {
-  html[xmlns] {
-    margin-top: 0 !important; } }
+  .admin-bar.fixie #wpadminbar {
+    position: fixed !important; }
+  .admin-bar.fixie .top-bar.expanded {
+    top: 46px !important; } }
 
 .admin-bar .top-bar-container.fixed {
-  top: 0; }
+  top: 46px !important; }
   @media screen and (min-width: 768px) {
     .admin-bar .top-bar-container.fixed {
       top: 32px !important; } }
-  @media screen and (min-width: 601px) and (max-width: 782px) {
-    .admin-bar .top-bar-container.fixed {
-      top: 46px !important; } }
 
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
@@ -2230,7 +2233,7 @@ p.comment-form-comment label.error {
       .top-bar .name h1 a {
         width: 80%;
         display: block;
-        padding: 0 26.6666666667px;
+        padding: 0 20px;
         color: #464b4e; }
         .top-bar .name h1 a:hover {
           color: #0fcfc5; }
@@ -2286,7 +2289,6 @@ p.comment-form-comment label.error {
   left: 0;
   position: relative;
   width: auto;
-  -webkit-transition: left 300ms ease-out;
   transition: left 300ms ease-out; }
   .top-bar-section ul {
     width: 100%;
@@ -2445,7 +2447,6 @@ p.comment-form-comment label.error {
     margin: 0 auto;
     margin-bottom: 0; }
   .top-bar-section {
-    -webkit-transition: none 0 0;
     transition: none 0 0;
     left: 0 !important; }
     .top-bar-section .divider, .top-bar-section [role="separator"] {
@@ -2533,15 +2534,14 @@ p.comment-form-comment label.error {
 
 /* Footer */
 #footer {
-  margin: 3em auto 0;
+  margin: 0 auto;
   padding: 36px 0 0;
   background-color: #e8ebf2;
   color: #6f7070; }
-  #footer .columns a, #footer .columns .ctc-nav {
-    -webkit-transition: 0.2s all linear;
-            transition: 0.2s all linear;
+  #footer .columns a {
+    transition: 0.2s all linear;
     color: #767f84; }
-    #footer .columns a:hover, #footer .columns .ctc-nav {
+    #footer .columns a:hover {
       opacity: 0.7; }
   #footer .url {
     padding-left: 0;
@@ -2594,8 +2594,7 @@ p.comment-form-comment label.error {
         display: inline-block;
         padding: 0.3em 0;
         color: #464b4e;
-        -webkit-transition: 200ms all ease-in-out;
-                transition: 200ms all ease-in-out; }
+        transition: 200ms all ease-in-out; }
         .uplifted-widget ul li a:hover {
           color: #0fcfc5;
           padding-left: 0.5em; }
@@ -2607,7 +2606,7 @@ p.comment-form-comment label.error {
       color: #767f84; }
   #footer .uplifted-widget {
     text-align: center;
-    margin-bottom: 2.5em;
+    margin-bottom: 0.9375em;
     background-color: transparent;
     border-color: #d8dde8;
     border-width: 3px; }
@@ -2759,12 +2758,8 @@ p.comment-form-comment label.error {
   box-shadow: none;
   color: #464b4e;
   position: relative;
-  -webkit-transition: 200ms all ease-in-out;
-          transition: 200ms all ease-in-out; }
+  transition: 200ms all ease-in-out; }
   .search-form button span {
-    position: absolute;
-    top: 0;
-    margin-left: -0.35em;
     font-size: 1.4em; }
   .search-form button:hover {
     background-color: #0db7ac;
@@ -2989,11 +2984,41 @@ html[xmlns] .slides {
 .no-js .slides > li:first-child {
   display: block; }
 
+.uplifted-boxed-slider {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 1120px;
+  *zoom: 1;
+  margin-top: 0; }
+  .uplifted-boxed-slider:before, .uplifted-boxed-slider:after {
+    content: " ";
+    display: table; }
+  .uplifted-boxed-slider:after {
+    clear: both; }
+  @media screen and (min-width: 860px) {
+    .uplifted-boxed-slider {
+      margin-top: 1.875em; } }
+
+.uplifted-boxed-slider-inner {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left; }
+  @media screen and (max-width: 860px) {
+    .uplifted-boxed-slider-inner {
+      padding-left: 0;
+      padding-right: 0; } }
+
 .flexslider {
   margin: 0;
   position: relative;
   zoom: 1;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
   @media screen and (min-width: 860px) { }
   .flexslider ul {
     margin: 0;
@@ -3007,7 +3032,6 @@ html[xmlns] .slides {
     left: 0;
     right: 0;
     top: 0;
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.6));
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.6));
     color: white;
     box-shadow: none; }
@@ -3036,8 +3060,7 @@ html[xmlns] .slides {
 
 .flex-viewport {
   max-height: 2000px;
-  -webkit-transition: all 1s ease;
-          transition: all 1s ease; }
+  transition: all 1s ease; }
 
 .loading .flex-viewport {
   max-height: 300px; }
@@ -3060,8 +3083,7 @@ html[xmlns] .slides {
   position: absolute;
   top: 50%;
   opacity: 0;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
@@ -3100,7 +3122,8 @@ html[xmlns] .slides {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 40;
-  margin: 0; }
+  margin: 0;
+  width: 100%; }
   .flex-control-nav li {
     margin: 0 3px;
     display: inline-block;
@@ -3142,8 +3165,7 @@ html[xmlns] .slides {
 
 .slide-text {
   z-index: 999;
-  -webkit-transition: 200ms opacity ease-in-out;
-          transition: 200ms opacity ease-in-out; }
+  transition: 200ms opacity ease-in-out; }
   .slide-text .slide-title {
     margin: 0; }
   .slide-text .slide-title a, .slide-text p {
@@ -3371,6 +3393,9 @@ body.term-post-format-gallery #content > .panel {
       font-size: 1.2em; } }
   .page-template-page-templateshomepage-php #uplifted-intro-inner #uplifted-intro-content p:last-child {
     margin-bottom: 0; }
+.page-template-page-templateshomepage-php #ctcom-home-highlights {
+  margin-left: 0.9375em;
+  margin-right: 0.9375em; }
 .page-template-page-templateshomepage-php .uplifted-highlight {
   margin: 1.875em 0;
   position: relative;
@@ -3389,7 +3414,6 @@ body.term-post-format-gallery #content > .panel {
     .page-template-page-templateshomepage-php .uplifted-caption-image-caption {
       padding: 1em; } }
 .page-template-page-templateshomepage-php .slides .uplifted-caption-image-caption {
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.6));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.6)); }
 @media screen and (min-width: 641px) {
   .page-template-page-templateshomepage-php .flexslider {
@@ -3415,7 +3439,6 @@ body.term-post-format-gallery #content > .panel {
     right: 0;
     color: white;
     padding: 20px;
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) 35%, rgba(0, 0, 0, 0.1));
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) 35%, rgba(0, 0, 0, 0.1)); }
     .page-template-page-templateshomepage-php .uplifted-caption-image-caption .uplifted-caption-image-title {
       color: white;
@@ -3670,7 +3693,6 @@ img.alignright {
   .gallery-columns-1 .gallery-item:nth-of-type(1n), .gallery-columns-2 .gallery-item:nth-of-type(2n), .gallery-columns-3 .gallery-item:nth-of-type(3n), .gallery-columns-4 .gallery-item:nth-of-type(4n), .gallery-columns-5 .gallery-item:nth-of-type(5n), .gallery-columns-6 .gallery-item:nth-of-type(6n), .gallery-columns-7 .gallery-item:nth-of-type(7n), .gallery-columns-8 .gallery-item:nth-of-type(8n), .gallery-columns-9 .gallery-item:nth-of-type(9n) {
     margin-right: 0; }
   .gallery-caption {
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%);
     color: #fff;
     margin: 0;
@@ -3683,8 +3705,7 @@ img.alignright {
     bottom: 0;
     left: 0;
     width: 100%;
-    -webkit-transition: opacity 0.25s ease-in-out;
-            transition: opacity 0.25s ease-in-out; }
+    transition: opacity 0.25s ease-in-out; }
     .gallery-caption:before {
       content: "";
       height: 100%;
@@ -3716,9 +3737,9 @@ img.alignright {
 .single-ctc_sermon #uplifted-sidebar-right {
   display: none !important; }
 
-/* 
+/*
   *
-  * Single Sermon Page 
+  * Single Sermon Page
   *
   */
 .single-ctc_sermon #uplifted-content .hentry {
@@ -3817,7 +3838,13 @@ img.alignright {
         color: #fff; }
 
 .single-ctc_sermon .pagination, .single-ctc_sermon #comments {
+  *zoom: 1;
   padding-left: 0; }
+  .single-ctc_sermon .pagination:before, .single-ctc_sermon .pagination:after, .single-ctc_sermon #comments:before, .single-ctc_sermon #comments:after {
+    content: " ";
+    display: table; }
+  .single-ctc_sermon .pagination:after, .single-ctc_sermon #comments:after {
+    clear: both; }
   @media screen and (max-width: 768px) {
     .single-ctc_sermon .pagination, .single-ctc_sermon #comments {
       padding-right: 0; } }
@@ -3950,7 +3977,92 @@ img.alignright {
 
 .ctc-header {
   background-color: #0fcfc5;
-  color: rgba(255, 255, 255, 0.9); }
+  color: #fff;
+  line-height: 44px;
+  *zoom: 1;
+  display: none;
+  font-size: 0.85em; }
+  .ctc-header:before, .ctc-header:after {
+    content: " ";
+    display: table; }
+  .ctc-header:after {
+    clear: both; }
+  @media only screen and (min-width: 860px) {
+    .ctc-header {
+      display: block; } }
+  .ctc-header .menu-items {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .ctc-header li {
+    display: inline;
+    float: right;
+    height: 44px; }
+    .ctc-header li > a, .ctc-header li > span {
+      display: block;
+      line-height: 44px; }
+    .ctc-header li > a:hover {
+      background-color: #0db7ac; }
+    .ctc-header li > * {
+      height: 44px;
+      padding-left: 0.5em;
+      padding-left: 0.5rem;
+      padding-right: 0.5em;
+      padding-right: 0.5rem; }
+  .ctc-header a {
+    color: #fff; }
+    .ctc-header a:hover {
+      color: #fff; }
+  .ctc-header .has-form {
+    height: 44px;
+    background-color: transparent;
+    float: right;
+    margin: 0;
+    padding: 0 0.5em;
+    padding: 0 0.5rem; }
+  .ctc-header .ctc-message {
+    float: left;
+    padding: 0 26.6666666667px; }
+    .ctc-header .ctc-message span {
+      padding: 0;
+      margin: 0; }
+    .ctc-header .ctc-message a {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+      .ctc-header .ctc-message a:hover {
+        border-color: #fff; }
+  .ctc-header .search-form {
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    line-height: 44px; }
+    .ctc-header .search-form span {
+      line-height: 1; }
+  .ctc-header input, .ctc-header button {
+    height: 30px;
+    line-height: 28px;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: inline-block;
+    top: -1px;
+    position: relative; }
+  .ctc-header input[type="search"] {
+    border: 2px solid #0c9f96;
+    border-right-width: 0;
+    color: #fff;
+    box-shadow: none;
+    background-color: #0fcfc5;
+    color: #fff; }
+    .ctc-header input[type="search"]::-webkit-input-placeholder {
+      color: #fff; }
+    .ctc-header input[type="search"]:-moz-input-placeholder {
+      color: #fff; }
+    .ctc-header input[type="search"]::-webkit-input-placeholder {
+      color: #fff; }
+    .ctc-header input[type="search"]:-ms-input-placeholder {
+      color: #fff; }
+  .ctc-header button {
+    background-color: #0c9f96;
+    color: #fff; }
 
 .tribe-theme-uplifted .ctfw-breadcrumbs {
   max-width: 1000px; }

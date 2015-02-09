@@ -2,6 +2,9 @@
 
 	$(document).ready(function() {
 
+		if( $('.top-bar-container.fixed').length ){
+			$('body').addClass('fixie');
+		}
 
 		// Reponsify videos.
 		$('#content').fitVids();
