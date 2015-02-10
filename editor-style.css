@@ -712,4 +712,5 @@ img.alignright {
   margin: 0 auto 2em; }
 
 .mceContentBody {
-  padding: 20px; }
+  padding: 20px !important;
+  background-color: white !important; }

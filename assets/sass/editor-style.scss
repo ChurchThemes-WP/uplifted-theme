@@ -9,5 +9,6 @@
 @import "partials/wordpress";
 
 .mceContentBody{
-	padding: 20px;
+	padding: 20px !important;
+	background-color: white !important;
 }
