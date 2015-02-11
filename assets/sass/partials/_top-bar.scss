@@ -366,6 +366,14 @@ $topbar-sticky-class: ".sticky" !default;
     // Add some extra padding for list items contains buttons
     .has-form { padding: $topbar-height / 3; }
 
+    .search-form{
+      padding-top: $topbar-height / 5.5;
+
+      button{
+        color: contrast-color($primary-color,#fff,#000,30%);
+      }
+    }
+
     // Styling for list items that have a dropdown within them.
     .has-dropdown {
       position: relative;

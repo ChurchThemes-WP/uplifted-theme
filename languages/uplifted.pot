@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uplifted 1.0.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-10 17:40-0600\n"
+"POT-Creation-Date: 2015-02-11 15:32-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -267,7 +267,7 @@ msgid "License Key"
 msgstr ""
 
 #: framework/includes/admin/edd-license.php:421
-#: includes/UpThemes_Theme_Updater.php:59
+#: includes/CT_Theme_Updater.php:56
 msgid "License Key"
 msgstr ""
 
@@ -304,13 +304,12 @@ msgid "License Expiration"
 msgstr ""
 
 #: framework/includes/admin/edd-license.php:500
-#: includes/UpThemes_Theme_Updater.php:76
+#: includes/CT_Theme_Updater.php:72
 msgid "Deactivate License"
 msgstr ""
 
 #: framework/includes/admin/edd-license.php:504
-#: includes/UpThemes_Theme_Updater.php:69
-#: includes/UpThemes_Theme_Updater.php:82
+#: includes/CT_Theme_Updater.php:66 includes/CT_Theme_Updater.php:75
 msgid "Activate License"
 msgstr ""
 
@@ -1293,45 +1292,18 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: includes/UpThemes_Theme_Updater.php:63
+#: includes/CT_Theme_Updater.php:60
 msgid "Enter your license key"
 msgstr ""
 
-#: includes/UpThemes_Theme_Updater.php:74
+#: includes/CT_Theme_Updater.php:70
 msgid "active"
 msgstr ""
 
-#: includes/UpThemes_Theme_Updater.php:93
-msgid "Custom Typekit ID"
-msgstr ""
-
-#: includes/UpThemes_Theme_Updater.php:423
+#: includes/CT_Theme_Updater.php:371
 msgid ""
 "Updating this theme will lose any customizations you have made. 'Cancel' to "
 "stop, 'OK' to update."
-msgstr ""
-
-#: includes/UpThemes_Theme_Updater.php:598
-msgid "Activate Theme License"
-msgstr ""
-
-#: includes/UpThemes_Theme_Updater.php:598
-#, php-format
-msgid ""
-"Thanks for installing the %s. Please <a href=\"%s\">activate your theme "
-"license</a> to enable special features and customer support."
-msgstr ""
-
-#: includes/UpThemes_Theme_Updater.php:614
-msgid "Enter Your Theme License"
-msgstr ""
-
-#: includes/UpThemes_Theme_Updater.php:614
-#, php-format
-msgid ""
-"Add your theme license key here to activate features and support for %s. You "
-"can find your license key in your email receipt or <a href=\"%s\">purchase "
-"one here</a>."
 msgstr ""
 
 #: includes/plugin-activation.php:70

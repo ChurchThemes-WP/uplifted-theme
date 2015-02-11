@@ -6,7 +6,7 @@ $footer-meta-text: contrast-color($footer-meta-bg, mix(#000,$body-bg,55%), mix(#
 
 #footer {
 	margin: 0 auto;
-	padding: ($panel-padding * 1.5) 0 0;
+	padding: ($panel-padding * 1.5) 0 ($panel-padding * 1.2);
 	background-color: $footer-bg;
 	color: $footer-text;
 
