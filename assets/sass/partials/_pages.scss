@@ -1,5 +1,17 @@
 /* Pages */
 
+.single,
+.page{
+  #container {
+    padding-top: 3em;
+  }
+
+  .ctfw-breadcrumbs + #container{
+    padding-top: 0;
+  }
+}
+
+
 // some page titles have a sub-header
 .uplifted-main-title > span {
   font-size: .6em;
