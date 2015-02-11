@@ -19,7 +19,6 @@ body {
   font-weight: normal;
   font-style: normal;
   line-height: 1;
-  position: relative;
   cursor: "default"; }
 
 a:hover {
@@ -421,8 +420,7 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
 a {
   color: #e8665a;
   text-decoration: none;
-  line-height: inherit;
-  transition: all 0.2s linear; }
+  line-height: inherit; }
   a:hover, a:focus {
     color: #0fcfc5; }
   a img {
@@ -714,4 +712,5 @@ img.alignright {
   margin: 0 auto 2em; }
 
 .mceContentBody {
-  padding: 20px; }
+  padding: 20px !important;
+  background-color: white !important; }

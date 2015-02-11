@@ -38,9 +38,12 @@ $up_options = upfw_get_options();
 
 	<header id="masthead">
 
-		<?php do_action('uplifted_before_topbar'); ?>
+		<?php do_action('uplifted_before_topbar_container'); ?>
 
 		<div class="top-bar-container<?php uplifted_sticky_navbar(); ?>">
+
+				<?php do_action('uplifted_before_topbar'); ?>
+
 				<nav class="top-bar">
 
 					<?php do_action('uplifted_before_site_title'); ?>
@@ -64,7 +67,7 @@ $up_options = upfw_get_options();
 
 					<?php do_action('uplifted_after_site_title'); ?>
 
-					<section class="top-bar-section">
+					<section class="top-bar-section uplifted-nav-menu">
 						<?php do_action('uplifted_before_topleft_menu'); ?>
 						<?php get_template_part('menu','topleft'); ?>
 						<?php do_action('uplifted_after_topleft_menu'); ?>
@@ -74,9 +77,12 @@ $up_options = upfw_get_options();
 						<?php do_action('uplifted_afte_topright_menu'); ?>
 					</section>
 				</nav>
+
+				<?php do_action('uplifted_after_topbar'); ?>
+
 		</div>
 
-		<?php do_action('uplifted_after_topbar'); ?>
+		<?php do_action('uplifted_after_topbar_container'); ?>
 
 	</header>
 

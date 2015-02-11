@@ -15,9 +15,9 @@
 }
 
 
-/* 
+/*
   *
-  * Single Sermon Page 
+  * Single Sermon Page
   *
   */
 
@@ -171,7 +171,7 @@
 .single-ctc_sermon #comments {
   @extend .large-8;
   @extend .column;
-  @extend .clearfix;
+  @include clearfix;
   padding-left: 0;
 
   // part of the page hack, need to kill the right padding on mobile
