@@ -37,9 +37,6 @@ function upthemes_sl_license_page() {
 	$license = get_option( UPTHEMES_LICENSE_KEY );
 	$status  = get_option( UPTHEMES_LICENSE_KEY . '_status' );
 
-	echo $license;
-	echo $status;
-
 	?>
 	<div class="wrap">
 		<h2>UpThemes Activation &amp; Support</h2>
