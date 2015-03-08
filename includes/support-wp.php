@@ -22,6 +22,9 @@ function uplifted_add_theme_support_wp() {
 
 	add_theme_support( 'nav-menus' );
 
+	// Add automatic title tag
+	add_theme_support( 'title-tag' );
+
 	load_theme_textdomain( 'uplifted', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to <head>.
@@ -38,3 +41,18 @@ function uplifted_add_theme_support_wp() {
 }
 
 add_action( 'after_setup_theme', 'uplifted_add_theme_support_wp' );
+
+
+/**
+ * Add fallback support for old WordPress without automatic title tag support.
+ */
+if( ! function_exists( '_wp_render_title_tag' ) ) {
+
+function uplifted_render_title() { ?>
+	<title><?php wp_title( '|', true, 'right' ); ?></title>
+<?php
+}
+
+add_action( 'wp_head', 'uplifted_render_title' );
+
+}

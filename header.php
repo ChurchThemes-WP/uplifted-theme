@@ -17,8 +17,6 @@ $up_options = upfw_get_options();
 <head>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 
 <?php if( isset( $up_options->favicon ) && $up_options->favicon ): ?>
