@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uplifted 1.0.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 15:32-0600\n"
+"POT-Creation-Date: 2015-03-08 15:21-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -267,7 +267,7 @@ msgid "License Key"
 msgstr ""
 
 #: framework/includes/admin/edd-license.php:421
-#: includes/CT_Theme_Updater.php:56
+#: includes/UpThemes_Theme_Updater.php:59
 msgid "License Key"
 msgstr ""
 
@@ -304,12 +304,13 @@ msgid "License Expiration"
 msgstr ""
 
 #: framework/includes/admin/edd-license.php:500
-#: includes/CT_Theme_Updater.php:72
+#: includes/UpThemes_Theme_Updater.php:76
 msgid "Deactivate License"
 msgstr ""
 
 #: framework/includes/admin/edd-license.php:504
-#: includes/CT_Theme_Updater.php:66 includes/CT_Theme_Updater.php:75
+#: includes/UpThemes_Theme_Updater.php:69
+#: includes/UpThemes_Theme_Updater.php:82
 msgid "Activate License"
 msgstr ""
 
@@ -1248,17 +1249,6 @@ msgstr ""
 msgid "%s &ndash; %s"
 msgstr ""
 
-#: framework/includes/head.php:49
-#, php-format
-msgctxt "head title"
-msgid " (Page %d)"
-msgstr ""
-
-#: framework/includes/head.php:70
-msgctxt "head title"
-msgid " - "
-msgstr ""
-
 #: framework/includes/helpers.php:256 framework/includes/helpers.php:277
 msgctxt "shortened text"
 msgid "&hellip;"
@@ -1288,22 +1278,49 @@ msgstr ""
 msgid "Yesterday"
 msgstr ""
 
-#: header.php:65
+#: header.php:63
 msgid "Menu"
 msgstr ""
 
-#: includes/CT_Theme_Updater.php:60
+#: includes/UpThemes_Theme_Updater.php:63
 msgid "Enter your license key"
 msgstr ""
 
-#: includes/CT_Theme_Updater.php:70
+#: includes/UpThemes_Theme_Updater.php:74
 msgid "active"
 msgstr ""
 
-#: includes/CT_Theme_Updater.php:371
+#: includes/UpThemes_Theme_Updater.php:93
+msgid "Custom Typekit ID"
+msgstr ""
+
+#: includes/UpThemes_Theme_Updater.php:423
 msgid ""
 "Updating this theme will lose any customizations you have made. 'Cancel' to "
 "stop, 'OK' to update."
+msgstr ""
+
+#: includes/UpThemes_Theme_Updater.php:598
+msgid "Activate Theme License"
+msgstr ""
+
+#: includes/UpThemes_Theme_Updater.php:598
+#, php-format
+msgid ""
+"Thanks for installing the %s. Please <a href=\"%s\">activate your theme "
+"license</a> to enable special features and customer support."
+msgstr ""
+
+#: includes/UpThemes_Theme_Updater.php:614
+msgid "Enter Your Theme License"
+msgstr ""
+
+#: includes/UpThemes_Theme_Updater.php:614
+#, php-format
+msgid ""
+"Add your theme license key here to activate features and support for %s. You "
+"can find your license key in your email receipt or <a href=\"%s\">purchase "
+"one here</a>."
 msgstr ""
 
 #: includes/plugin-activation.php:70
@@ -1449,7 +1466,7 @@ msgstr ""
 
 #: includes/plugin-activation.php:87
 #: includes/plugin-activation/class-tgm-plugin-activation.php:177
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1945
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1939
 #: includes/plugin-activation/example.php:106
 msgid "Plugin activated successfully."
 msgstr ""
@@ -1490,7 +1507,7 @@ msgid "Return to the dashboard"
 msgstr ""
 
 #: includes/plugin-activation/class-tgm-plugin-activation.php:178
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1636
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1630
 msgid "The following plugin was activated successfully:"
 msgid_plural "The following plugins were activated successfully:"
 msgstr[0] ""
@@ -1505,157 +1522,157 @@ msgstr ""
 msgid "Dismiss this notice"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:534
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2162
+#: includes/plugin-activation/class-tgm-plugin-activation.php:531
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2156
 msgid "Return to the Dashboard"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1169
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1166
 msgid "Private Repository"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1172
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1169
 msgid "Pre-Packaged"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1177
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1174
 msgid "WordPress Repository"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1180
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1177
 msgid "Required"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1180
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1177
 msgid "Recommended"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1183
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1180
 msgid "Not Installed"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1185
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1182
 msgid "Installed But Not Activated"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1290
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1398
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1287
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1395
 msgid "Install"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1312
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1399
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1309
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1396
 msgid "Activate"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1361
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1358
 #, php-format
 msgid ""
 "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
 "Dashboard\">Return to the Dashboard</a>"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1377
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1374
 msgid "Plugin"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1378
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1375
 msgid "Source"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1379
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1376
 msgid "Type"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1380
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1377
 msgid "Status"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1928
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1922
 msgid "Install package not available."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1929
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1923
 #, php-format
 msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1930
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1924
 msgid "Unpacking the package&#8230;"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1931
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1925
 msgid "Installing the plugin&#8230;"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1932
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1926
 msgid "Plugin install failed."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1933
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1927
 msgid "Plugin installed successfully."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1944
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1938
 msgid "Plugin activation failed."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2058
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2052
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2059
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2053
 #, php-format
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2059
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2068
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2053
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2062
 msgid "Show Details"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2059
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2068
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2053
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2062
 msgid "Hide Details"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2060
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2054
 msgid "All installations and activations have been completed."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2061
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2055
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2065
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2059
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2066
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2060
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2067
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2061
 #, php-format
 msgid "The installation of %1$s failed."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2068
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2062
 #, php-format
 msgid "%1$s installed successfully."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2069
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2063
 msgid "All installations have been completed."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2070
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2064
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
@@ -1788,23 +1805,23 @@ msgstr ""
 msgid "These widgets show on the side of search results."
 msgstr ""
 
-#: includes/style-generator.php:108
+#: includes/style-generator.php:145
 msgid ""
 "Your custom theme styles were saved and a new CSS file was generated "
 "successfully."
 msgstr ""
 
-#: includes/style-generator.php:125
+#: includes/style-generator.php:162
 msgid ""
 "Your custom theme styles were not saved. Please check your settings and try "
 "again."
 msgstr ""
 
-#: includes/style-generator.php:177
+#: includes/style-generator.php:215
 msgid "The option could not be saved."
 msgstr ""
 
-#: includes/style-generator.php:302 options/library/options-types.php:117
+#: includes/style-generator.php:341 options/library/options-types.php:117
 #: options/library/options-types.php:152 options/library/options-types.php:181
 msgid ""
 "This option has no valid options. Please create valid options as an array "
