@@ -584,11 +584,6 @@
 
 	a {
 		@include button;
-		color: #fff !important;
-
-		&:hover {
-			background-color: $secondary-color;
-		}
 	}
 }
 

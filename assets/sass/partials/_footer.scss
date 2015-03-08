@@ -3,6 +3,7 @@ $footer-bg: contrast-color($body-bg, darken($body-bg, 5%), lighten($body-bg, 10%
 $footer-text: contrast-color($footer-bg, mix(#000,$body-bg,55%), mix(#fff,$body-bg,55%), 50%);
 $footer-meta-bg: contrast-color($body-bg, darken($body-bg, 10%), lighten($body-bg, 30%), 50%);
 $footer-meta-text: contrast-color($footer-meta-bg, mix(#000,$body-bg,55%), mix(#fff,$body-bg,55%), 50%);
+$footer-link-color: contrast-color($body-bg, lighten($body-font-color, 20%), lighten($body-bg, 50%), 50%);
 
 #footer {
 	margin: 0 auto;
@@ -10,15 +11,12 @@ $footer-meta-text: contrast-color($footer-meta-bg, mix(#000,$body-bg,55%), mix(#
 	background-color: $footer-bg;
 	color: $footer-text;
 
-	.columns {
+	a {
+		transition: .2s all linear;
+		color: $footer-link-color;
 
-		a {
-			transition: .2s all linear;
-			color: contrast-color($body-bg, lighten($body-font-color, 20%), lighten($body-bg, 50%), 50%);
-
-			&:hover {
-				opacity: .7;
-			}
+		&:hover {
+			opacity: .7;
 		}
 	}
 
