@@ -28,8 +28,6 @@ function uplifted_custom_header_setup() {
 		'height'                 => 100,
 		'flex-width'             => true,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'uplifted_header_style',
-		'admin-head-callback'    => 'uplifted_admin_header_style',
 		'admin-preview-callback' => 'uplifted_admin_header_image',
 	);
 
@@ -60,23 +58,6 @@ if ( ! function_exists( 'get_custom_header' ) ) {
 		);
 	}
 }
-
-if ( ! function_exists( 'uplifted_header_style' ) ) :
-/**
- * Styles the header image and text displayed on the blog
- *
- * @see uplifted_custom_header_setup().
- */
-function uplifted_header_style() {
-
-	$header_textcolor = get_header_textcolor();
-
-	if( $header_textcolor != 'blank' || ! empty( $header_textcolor ) ){
-	  echo "<style type='text/css' id='custom-header-textcolor'>.title-area #title a{ color: #$header_textcolor; } </style>";
-	}
-
-}
-endif; // uplifted_header_style
 
 if ( ! function_exists( 'uplifted_admin_header_style' ) ) :
 /**
