@@ -15,6 +15,29 @@
 // No direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+function uplifted_enqueue_color_schemes(){
+	wp_enqueue_style(
+		'uplifted-color-schemes',
+		get_template_directory_uri() . '/assets/css/color-schemes.css'
+	);
+
+	wp_enqueue_script(
+		'uplifted-customize-theme',
+		get_template_directory_uri() . '/assets/js/customize-theme.js'
+	);
+}
+
+
+if( is_admin() && isset( $_GET['page'] ) && $_GET['page'] === 'upfw-settings' ){
+	add_action( 'wp_enqueue_scripts', 'uplifted_enqueue_color_schemes' );
+}
+
+function uplifted_remove_header_textcolor($wp_customize) {
+	$wp_customize->remove_control( 'header_textcolor' );
+}
+
+add_action( 'customize_register', 'uplifted_remove_header_textcolor' );
+
 /**
  * Add CSS mime type to allowed upload mime types.
  *
@@ -46,23 +69,37 @@ function uplifted_update_custom_color_vars($variables){
 
 		$valid_options = $upfw_option_parameters['color_schemes']['valid_options'];
 
-		$colors = $valid_options[$color_scheme]['colors'];
-
 		if( is_array($valid_options) ){
 
-			$variables .= '$primary-color:' . $colors['primary'] . ';';
-			$variables .= '$secondary-color:' . $colors['secondary'] . ';';
-			$variables .= '$panel-bg:' . $colors['panel'] . ';';
-			$variables .= '$body-bg:' . $colors['background'] . ';';
+			$colors = $valid_options[$color_scheme]['colors'];
+
+			if( $colors['primary'] )
+				$variables .= '$primary-color:' . $colors['primary'] . ';';
+
+			if( $colors['secondary'] )
+				$variables .= '$secondary-color:' . $colors['secondary'] . ';';
+
+			if( $colors['panel'] )
+				$variables .= '$panel-bg:' . $colors['panel'] . ';';
+
+			if( $colors['background'] )
+				$variables .= '$body-bg:' . $colors['background'] . ';';
 
 		}
 
 	} else if( $up_options->enable_custom_styles == 'yes' && $up_options->color_scheme_toggle == 'hex' ){
 
-		$variables .= '$primary-color:' . $up_options->primary_color . ';';
-		$variables .= '$secondary-color:' . $up_options->secondary_color . ';';
-		$variables .= '$panel-bg:' . $up_options->panel_color . ';';
-		$variables .= '$body-bg:' . $up_options->background_color . ';';
+		if( $up_options->primary_color )
+			$variables .= '$primary-color:' . $up_options->primary_color . ';';
+
+		if( $up_options->secondary_color )
+			$variables .= '$secondary-color:' . $up_options->secondary_color . ';';
+
+		if( $up_options->panel_color )
+			$variables .= '$panel-bg:' . $up_options->panel_color . ';';
+
+		if( $up_options->background_color )
+			$variables .= '$body-bg:' . $up_options->background_color . ';';
 
 	}
 
@@ -147,7 +184,8 @@ function uplifted_css_regenerate( $format = 'file' ){
 		$scss->setFormatter("scss_formatter");
 
 		$style_overrides = apply_filters('uplifted_style_variables','');
-		$style_scss_imports = apply_filters('uplifted_style_scss_imports',"@import 'style.scss';");
+
+		$style_scss_imports = apply_filters('uplifted_style_scss_imports',"@import 'colors.scss';");
 
 		$style_content = $scss->compile("
 			$style_overrides
@@ -164,7 +202,7 @@ function uplifted_css_regenerate( $format = 'file' ){
 
 			}
 
-			if( $style_scss = wp_upload_bits('style.css',null,$style_content) ){
+			if( $style_scss = wp_upload_bits('colors.css',null,$style_content) ){
 
 				$style_scss['date'] = date('Y-m-d');
 
@@ -233,8 +271,7 @@ function uplifted_override_default_styles(){
 	$custom_style = get_option( 'uplifted-style-override' );
 
 	if( $up_options->enable_custom_styles == 'yes' ){
-		wp_dequeue_style('uplifted-style');
-		wp_enqueue_style('uplifted-style-override',$custom_style['url'],false,$custom_style['date']);
+		wp_enqueue_style('uplifted-colors', $custom_style['url'], false, $custom_style['date'] );
 	}
 }
 
@@ -254,7 +291,7 @@ function uplifted_add_custom_theme_options(){
 	}
 }
 
-add_action('admin_init','uplifted_add_custom_theme_options',1);
+add_action('admin_init','uplifted_add_custom_theme_options',999);
 
 /**
  * Sanitize our color scheme input.
@@ -264,10 +301,12 @@ add_action('admin_init','uplifted_add_custom_theme_options',1);
  * @since 1.0.0
  */
 function upfw_sanitize_color_scheme( $input ) {
-	return $input;
+
+	return sanitize_text_field($input);
+
 }
 
-add_filter( 'upfw_sanitize_colors', 'upfw_sanitize_color_scheme' );
+add_filter( 'upfw_sanitize_colors', 'upfw_sanitize_color_scheme', 2, 2 );
 
 /**
  * Custom color scheme option for UpThemes Framework.
@@ -339,7 +378,8 @@ function upfw_customize_color_register($wp_customize) {
 		$wp_customize->add_setting( $optiondb, array(
 			'default'		=> $option['default'],
 			'type'			=> 'option',
-			'capabilities'	=> 'edit_theme_options'
+			'capabilities'	=> 'edit_theme_options',
+			'sanitize_callback' => 'upfw_sanitize_color_scheme'
 		) );
 
 		$wp_customize->add_control(
