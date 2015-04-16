@@ -86,7 +86,7 @@ input[type="tel"],
 input[type="time"],
 input[type="url"]{
 	background-color: $input-bg-color;
-	color: $input-text-color;
+	color: #222;
 }
 
 $info-bar-bg-color: $primary-color;
