@@ -56,8 +56,8 @@ function ct_sl_license_page() {
 							<?php _e('License Key','uplifted'); ?>
 						</th>
 						<td>
-							<input id="<?php echo CT_LICENSE_KEY; ?>" name="<?php echo CT_LICENSE_KEY; ?>" type="text" class="regular-text" value="<?php esc_attr_e( $license ); ?>" />
-							<label class="description" for="<?php echo CT_LICENSE_KEY; ?>"><?php _e('Enter your license key','uplifted'); ?></label>
+							<input id="<?php echo esc_attr( CT_LICENSE_KEY ); ?>" name="<?php echo esc_attr( CT_LICENSE_KEY ); ?>" type="text" class="regular-text" value="<?php esc_attr_e( $license ); ?>" />
+							<label class="description" for="<?php echo esc_attr( CT_LICENSE_KEY ); ?>"><?php _e('Enter your license key','uplifted'); ?></label>
 						</td>
 					</tr>
 					<?php if( $license != '' ) { ?>
@@ -69,10 +69,10 @@ function ct_sl_license_page() {
 								<?php if( $status == 'valid' ) { ?>
 									<span style="color:green;"><?php _e('active','uplifted'); ?></span>
 									<?php wp_nonce_field( 'ct_sl_nonce', 'ct_sl_nonce' ); ?>
-									<input type="submit" class="button-secondary" name="ct_sl_license_deactivate" value="<?php _e('Deactivate License','uplifted'); ?>"/>
+									<input type="submit" class="button-secondary" name="ct_sl_license_deactivate" value="<?php _esc_attr_e('Deactivate License','uplifted'); ?>"/>
 								<?php } else {
 									wp_nonce_field( 'ct_sl_nonce', 'ct_sl_nonce' ); ?>
-									<input type="submit" class="button-secondary" name="ct_sl_license_activate" value="<?php _e('Activate License','uplifted'); ?>"/>
+									<input type="submit" class="button-secondary" name="ct_sl_license_activate" value="<?php _esc_attr_e('Activate License','uplifted'); ?>"/>
 								<?php } ?>
 							</td>
 						</tr>

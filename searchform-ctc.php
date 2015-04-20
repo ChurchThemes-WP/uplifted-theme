@@ -14,7 +14,7 @@
     		</div>
 
 			<div class="large-3 small-3 columns">
-				<button type="submit" class="button expand"><span class="genericon genericon-search"></span><span class="screen-reader-text">Search</span></button>
+				<button type="submit" class="button expand"><span class="genericon genericon-search"></span><span class="screen-reader-text"><?php _e( 'Search', 'uplifted' ); ?></span></button>
 			</div>
 		</div>
 	</form>

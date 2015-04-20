@@ -14,7 +14,7 @@
 <form method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<div class="row collapse">
 		<div class="small-9 columns">
-		  <input type="search" name="s" class="s" placeholder="<?php esc_attr_e("Search",'uplifted'); ?>" value="<?php the_search_query(); ?>"/>
+		  <input type="search" name="s" class="s" placeholder="<?php esc_attr_e("Search",'uplifted'); ?>" value="<?php echo esc_html( get_search_query( false ) ); ?>"/>
 		</div>
 		<div class="small-3 columns">
 			<button type="submit" class="prefix submit-image"><span class="genericon genericon-search"></span></button>

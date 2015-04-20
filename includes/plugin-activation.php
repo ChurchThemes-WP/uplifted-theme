@@ -36,6 +36,13 @@ function uplifted_register_required_plugins() {
 	$plugins = array(
 
 		array(
+			'name'    		   => 'Church Theme Content',
+			'slug'    		   => 'church-theme-content',
+			'required'  	   => true,
+			'force_activation' => true
+		),
+
+		array(
 			'name'    		=> 'MP Stacks',
 			'slug'    		=> 'mp-stacks',
 			'source' 		=> 'http://moveplugins.com/repo/mp-stacks/?downloadfile=true',
