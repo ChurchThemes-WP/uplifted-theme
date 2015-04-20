@@ -10,8 +10,6 @@
 
 $up_options = upfw_get_options();
 
-//get_current_template(true);
-
 ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head>
@@ -20,7 +18,7 @@ $up_options = upfw_get_options();
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 
 <?php if( isset( $up_options->favicon ) && $up_options->favicon ): ?>
-<link rel="icon" type="image/png" href="<?php echo $up_options->favicon; ?>">
+<link rel="icon" type="image/png" href="<?php echo esc_url( $up_options->favicon ); ?>">
 <?php endif; ?>
 
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>

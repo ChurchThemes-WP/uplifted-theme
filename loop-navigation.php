@@ -96,8 +96,8 @@ else :
 				'current' 	=> max( 1, ctfw_page_num() ), // ctfw_page_num() returns/corrects $paged so pagination works on static front page
 				'total' 	=> $query->max_num_pages,
 				'type' 		=> 'list',
-				'prev_text'	=> sprintf( _x( '&larr; %s Previous', 'pagination', 'uplifted' ), $icon_left ),
-				'next_text'	=> sprintf( _x( 'Next %s &rarr;', 'pagination', 'uplifted' ), $icon_right ),
+				'prev_text'	=> _x( '&larr; Previous', 'pagination', 'uplifted' ),
+				'next_text'	=> _x( 'Next &rarr;', 'pagination', 'uplifted' ),
 			) );
 			?>
 
