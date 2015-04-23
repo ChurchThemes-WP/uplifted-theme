@@ -58,7 +58,7 @@ $up_options = upfw_get_options();
 								</a>
 							</h1>
 						</li>
-						<li class="toggle-topbar menu-icon"><a href="#"><span><?php _esc_html_e('Menu','uplifted'); ?></span></a></li>
+						<li class="toggle-topbar menu-icon"><a href="#"><span><?php esc_html_e('Menu','uplifted'); ?></span></a></li>
 					</ul>
 
 					<?php do_action('uplifted_after_site_title'); ?>
