@@ -47,10 +47,10 @@ $up_options = upfw_get_options();
 					<ul class="title-area">
 						<li class="name">
 							<h1 id="title">
-								<a class="title" href="<?php echo esc_attr( home_url('/') ); ?>">
+								<a class="title" href="<?php esc_attr_e( home_url('/') ); ?>">
 								<?php $header_image = get_header_image();
 								if ( ! empty( $header_image ) ) : ?>
-									<img src="<?php echo esc_attr( $header_image ); ?>" alt="" class="<?php if ( '1' != get_theme_mod( 'header_image_mobile', true ) ) { echo "hide-on-mobile"; } ?>" />
+									<img src="<?php esc_attr_e( $header_image ); ?>" alt="" class="<?php if ( '1' != get_theme_mod( 'header_image_mobile', true ) ) { echo "hide-on-mobile"; } ?>" />
 								<?php endif; ?>
 								<?php if( display_header_text() ): ?>
 									<span class="<?php if ( '1' != get_theme_mod( 'header_text_mobile' ) ) { echo "hide-on-mobile"; } ?>"><?php bloginfo('name'); ?></span>
@@ -58,7 +58,7 @@ $up_options = upfw_get_options();
 								</a>
 							</h1>
 						</li>
-						<li class="toggle-topbar menu-icon"><a href="#"><span><?php _e('Menu','uplifted'); ?></span></a></li>
+						<li class="toggle-topbar menu-icon"><a href="#"><span><?php _esc_html_e('Menu','uplifted'); ?></span></a></li>
 					</ul>
 
 					<?php do_action('uplifted_after_site_title'); ?>
