@@ -42,7 +42,9 @@
 </div><!-- /#wrapper -->
 
 <script>
-jQuery(document).foundation();
+(function ($) {
+	$(document).foundation();
+})(jQuery);
 </script>
 
 <?php wp_footer(); ?>
