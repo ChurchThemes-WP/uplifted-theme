@@ -41,12 +41,6 @@
 
 </div><!-- /#wrapper -->
 
-<script>
-(function ($) {
-	$(document).foundation();
-})(jQuery);
-</script>
-
 <?php wp_footer(); ?>
 
 </body>

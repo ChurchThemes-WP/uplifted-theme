@@ -351,3 +351,14 @@ function uplifted_comment( $comment, $args, $depth ) {
 	endswitch;
 }
 endif; // ends check for uplifted_comment()
+
+function uplifted_add_foundation_init(){ ?>
+<script>
+(function ($) {
+	$(document).foundation();
+})(jQuery);
+</script>
+<?php
+}
+
+add_action( 'wp_footer', 'uplifted_add_foundation_init', 9999 );
