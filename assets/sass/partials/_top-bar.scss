@@ -63,6 +63,10 @@ $topbar-divider-border-top: solid 1px darken($topbar-bg, 10%) !default;
 // Sticky Class
 $topbar-sticky-class: ".sticky" !default;
 
+.fixie #wrapper{
+  padding-top: 25px;
+}
+
 @media screen and (max-width:600px){
   .admin-bar.fixie {
     #wpadminbar{

@@ -1920,7 +1920,8 @@ fieldset {
 
 /* Layout */
 #masthead {
-  *zoom: 1; }
+  *zoom: 1;
+  margin-bottom: 25px; }
   #masthead:before, #masthead:after {
     content: " ";
     display: table; }
@@ -2169,6 +2170,9 @@ p.comment-form-comment label.error {
   font-style: italic; }
 
 /* Top Bar */
+.fixie #wrapper {
+  padding-top: 25px; }
+
 @media screen and (max-width: 600px) {
   .admin-bar.fixie #wpadminbar {
     position: fixed !important; }
