@@ -25,5 +25,5 @@ require_once 'includes/template-tags.php';                          // Template 
 require_once 'options/options.php';                                 // UpThemes Framework
 require_once 'includes/style-generator.php';                        // Style regeneration
 require_once 'includes/theme-options.php';                          // Load theme options specific to this theme
-require_once 'includes/theme-init.php';								// Initialize theme
-require_once 'includes/ctc-header.php';								// Add header above top nav
+require_once 'includes/theme-init.php';                             // Initialize theme
+require_once 'includes/ctc-header.php';                             // Add header above top nav
