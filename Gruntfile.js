@@ -85,7 +85,7 @@ module.exports = function(grunt) {
 				]
 			},
 			options: {
-				//proxy: "local.demos.upthemes.com",
+				// proxy: "local.wordpress.dev",
 				watchTask: true
 			}
 				}
@@ -134,7 +134,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-pot');
-	grunt.registerTask('default',['browserSync', 'watch']);
+	grunt.registerTask('default',['watch']);
 	grunt.registerTask('lint',['jshint']);
 	grunt.registerTask('translate',['pot']);
 
