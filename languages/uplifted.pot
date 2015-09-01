@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: uplifted 1.0.5\n"
+"Project-Id-Version: uplifted 1.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-08 15:21-0500\n"
+"POT-Creation-Date: 2015-09-01 11:56-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -218,6 +218,8 @@ msgstr ""
 msgid "Sorry, this widget is not made for use in this area. Please delete."
 msgstr ""
 
+#. /activaton
+#. optional message to show on options page
 #: framework/includes/admin/edd-license.php:74
 msgid "<strong>License key could not be activated.</strong>"
 msgstr ""
@@ -267,7 +269,7 @@ msgid "License Key"
 msgstr ""
 
 #: framework/includes/admin/edd-license.php:421
-#: includes/UpThemes_Theme_Updater.php:59
+#: includes/CT_Theme_Updater.php:56
 msgid "License Key"
 msgstr ""
 
@@ -304,13 +306,12 @@ msgid "License Expiration"
 msgstr ""
 
 #: framework/includes/admin/edd-license.php:500
-#: includes/UpThemes_Theme_Updater.php:76
+#: includes/CT_Theme_Updater.php:72
 msgid "Deactivate License"
 msgstr ""
 
 #: framework/includes/admin/edd-license.php:504
-#: includes/UpThemes_Theme_Updater.php:69
-#: includes/UpThemes_Theme_Updater.php:82
+#: includes/CT_Theme_Updater.php:66 includes/CT_Theme_Updater.php:75
 msgid "Activate License"
 msgstr ""
 
@@ -325,6 +326,15 @@ msgid ""
 "Please consider using a child theme for modifications."
 msgstr ""
 
+#. /strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>update now</a>.',
+#. $theme->get( 'Name' ),
+#. $api_response->new_version,
+#. '#TB_inline?width=640&amp;inlineId=' . $this->theme_slug . '_changelog',
+#. $theme->get( 'Name' ),
+#. $update_url,
+#. $update_onclick
+#. );
+#.
 #: framework/includes/classes/CTFW_EDD_SL_Theme_Updater.php:90
 #, php-format
 msgid ""
@@ -391,6 +401,7 @@ msgctxt "archives widget"
 msgid "Title"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-archives.php:92
 msgctxt "archives widget title default"
 msgid "Archives"
@@ -441,6 +452,7 @@ msgctxt "categories widget"
 msgid "Title"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-categories.php:95
 msgctxt "categories widget title default"
 msgid "Categories"
@@ -456,6 +468,7 @@ msgctxt "categories widget"
 msgid "Order By"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-categories.php:143
 msgctxt "categories widget order by"
 msgid "Title"
@@ -471,6 +484,7 @@ msgctxt "categories widget order by"
 msgid "Post Count"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-categories.php:171
 msgctxt "categories widget order"
 msgid "Low to High"
@@ -531,11 +545,13 @@ msgctxt "events widget"
 msgid "Title"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-events.php:90
 msgctxt "events widget title default"
 msgid "Events"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-events.php:114
 msgctxt "events widget order"
 msgid "Upcoming"
@@ -586,6 +602,7 @@ msgctxt "galleries widget"
 msgid "Title"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-galleries.php:92
 msgctxt "galleries widget title default"
 msgid "Galleries"
@@ -596,6 +613,7 @@ msgctxt "galleries widget"
 msgid "Order By"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-galleries.php:116
 msgctxt "galleries widget order by"
 msgid "Date Added"
@@ -606,6 +624,7 @@ msgctxt "galleries widget order by"
 msgid "Title"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-galleries.php:143
 msgctxt "galleries widget order"
 msgid "Low to High"
@@ -645,6 +664,7 @@ msgctxt "gallery widget"
 msgid "Title"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-gallery.php:101
 msgctxt "gallery widget title default"
 msgid "Gallery"
@@ -665,6 +685,7 @@ msgctxt "gallery widget"
 msgid "Order By"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-gallery.php:173
 msgctxt "gallery widget order by"
 msgid "Upload Date"
@@ -680,6 +701,7 @@ msgctxt "gallery widget order by"
 msgid "Comment Count"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-gallery.php:201
 msgctxt "gallery widget order"
 msgid "Low to High"
@@ -700,6 +722,7 @@ msgctxt "gallery widget"
 msgid "Thumbnail Size"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-gallery.php:252
 msgctxt "gallery widget"
 msgid "Small"
@@ -729,6 +752,7 @@ msgctxt "giving widget"
 msgid "Title"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-giving.php:90
 msgctxt "giving widget default title"
 msgid "Giving"
@@ -739,6 +763,7 @@ msgctxt "giving widget"
 msgid "Message"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-giving.php:114
 msgid "You may give online by clicking below."
 msgstr ""
@@ -748,6 +773,7 @@ msgctxt "giving widget"
 msgid "Button Text"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-giving.php:138
 msgctxt "giving widget"
 msgid "Give Now"
@@ -806,6 +832,7 @@ msgctxt "locations widget"
 msgid "Title"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-locations.php:90
 msgctxt "locations widget title default"
 msgid "Locations"
@@ -816,6 +843,7 @@ msgctxt "locations widget"
 msgid "Order By"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-locations.php:114
 msgctxt "locations widget order by"
 msgid "Custom Order"
@@ -826,6 +854,7 @@ msgctxt "locations widget order by"
 msgid "Name"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-locations.php:141
 msgctxt "locations widget order"
 msgid "Low to High"
@@ -875,6 +904,7 @@ msgctxt "people widget"
 msgid "Title"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-people.php:90
 msgctxt "people widget title default"
 msgid "People"
@@ -885,6 +915,7 @@ msgctxt "people widget"
 msgid "Group"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-people.php:114
 msgctxt "people widget"
 msgid "All Groups"
@@ -895,6 +926,7 @@ msgctxt "people widget"
 msgid "Order By"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-people.php:140
 msgctxt "people widget order by"
 msgid "Custom Order"
@@ -905,6 +937,7 @@ msgctxt "people widget order by"
 msgid "Name"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-people.php:167
 msgctxt "people widget order"
 msgid "Low to High"
@@ -965,6 +998,7 @@ msgctxt "posts widget"
 msgid "Title"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-posts.php:92
 msgctxt "posts widget title default"
 msgid "Posts"
@@ -975,6 +1009,7 @@ msgctxt "posts widget"
 msgid "Category"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-posts.php:116
 msgctxt "posts widget"
 msgid "All Categories"
@@ -985,6 +1020,7 @@ msgctxt "posts widget"
 msgid "Order By"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-posts.php:142
 msgctxt "posts widget order by"
 msgid "Title"
@@ -1000,6 +1036,7 @@ msgctxt "posts widget order by"
 msgid "Comment Count"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-posts.php:170
 msgctxt "posts widget order"
 msgid "Low to High"
@@ -1044,6 +1081,7 @@ msgctxt "sermons widget"
 msgid "Title"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:90
 msgctxt "sermons widget title default"
 msgid "Sermons"
@@ -1054,6 +1092,7 @@ msgctxt "sermons widget"
 msgid "Topic"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:114
 msgctxt "sermons widget"
 msgid "All Topics"
@@ -1064,6 +1103,7 @@ msgctxt "sermons widget"
 msgid "Book"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:140
 msgctxt "sermons widget"
 msgid "All Books"
@@ -1074,6 +1114,7 @@ msgctxt "sermons widget"
 msgid "Series"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:166
 msgctxt "sermons widget"
 msgid "All Series"
@@ -1084,6 +1125,7 @@ msgctxt "sermons widget"
 msgid "Speaker"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:192
 msgctxt "sermons widget"
 msgid "All Speakers"
@@ -1094,6 +1136,7 @@ msgctxt "sermons widget"
 msgid "Order By"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:218
 msgctxt "sermons widget order by"
 msgid "Title"
@@ -1109,6 +1152,7 @@ msgctxt "sermons widget order by"
 msgid "Comment Count"
 msgstr ""
 
+#. /values for radio or select
 #: framework/includes/classes/widget-sermons.php:246
 msgctxt "sermons widget order"
 msgid "Low to High"
@@ -1224,21 +1268,7 @@ msgstr ""
 msgid "Go back."
 msgstr ""
 
-#: framework/includes/compatibility.php:215
-#, php-format
-msgid ""
-"<b>Plugin Required:</b> Please install and activate the <a href=\"%s\" class="
-"\"thickbox\">Church Theme Content</a> plugin to use with the current theme."
-msgstr ""
-
-#: framework/includes/compatibility.php:225
-#, php-format
-msgid ""
-"Please <a href=\"%s\">activate</a> the <b>Church Theme Content</b> plugin "
-"required by the current theme."
-msgstr ""
-
-#: framework/includes/compatibility.php:293
+#: framework/includes/compatibility.php:241
 msgid ""
 "You are using an outdated version of Internet Explorer. Please upgrade your "
 "browser to use this site."
@@ -1278,99 +1308,68 @@ msgstr ""
 msgid "Yesterday"
 msgstr ""
 
-#: header.php:63
+#: header.php:61
 msgid "Menu"
 msgstr ""
 
-#: includes/UpThemes_Theme_Updater.php:63
+#: includes/CT_Theme_Updater.php:60
 msgid "Enter your license key"
 msgstr ""
 
-#: includes/UpThemes_Theme_Updater.php:74
+#: includes/CT_Theme_Updater.php:70
 msgid "active"
 msgstr ""
 
-#: includes/UpThemes_Theme_Updater.php:93
-msgid "Custom Typekit ID"
-msgstr ""
-
-#: includes/UpThemes_Theme_Updater.php:423
+#: includes/CT_Theme_Updater.php:371
 msgid ""
 "Updating this theme will lose any customizations you have made. 'Cancel' to "
 "stop, 'OK' to update."
 msgstr ""
 
-#: includes/UpThemes_Theme_Updater.php:598
-msgid "Activate Theme License"
-msgstr ""
-
-#: includes/UpThemes_Theme_Updater.php:598
-#, php-format
-msgid ""
-"Thanks for installing the %s. Please <a href=\"%s\">activate your theme "
-"license</a> to enable special features and customer support."
-msgstr ""
-
-#: includes/UpThemes_Theme_Updater.php:614
-msgid "Enter Your Theme License"
-msgstr ""
-
-#: includes/UpThemes_Theme_Updater.php:614
-#, php-format
-msgid ""
-"Add your theme license key here to activate features and support for %s. You "
-"can find your license key in your email receipt or <a href=\"%s\">purchase "
-"one here</a>."
-msgstr ""
-
-#: includes/plugin-activation.php:70
+#: includes/plugin-activation.php:77
 msgid ""
 "We recommend installing the following plugins that work with this theme to "
 "enhance your WordPress website."
 msgstr ""
 
-#: includes/plugin-activation.php:72
-#: includes/plugin-activation/class-tgm-plugin-activation.php:161
-#: includes/plugin-activation/example.php:91
+#: includes/plugin-activation.php:79
+#: includes/plugin-activation/class-tgm-plugin-activation.php:333
 msgid "Install Required Plugins"
 msgstr ""
 
-#: includes/plugin-activation.php:73
-#: includes/plugin-activation/class-tgm-plugin-activation.php:162
-#: includes/plugin-activation/example.php:92
+#: includes/plugin-activation.php:80
+#: includes/plugin-activation/class-tgm-plugin-activation.php:334
 msgid "Install Plugins"
 msgstr ""
 
-#: includes/plugin-activation.php:74
-#: includes/plugin-activation/class-tgm-plugin-activation.php:163
-#: includes/plugin-activation/example.php:93
+#: includes/plugin-activation.php:81
+#: includes/plugin-activation/class-tgm-plugin-activation.php:335
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: includes/plugin-activation.php:75 includes/plugin-activation/example.php:94
+#: includes/plugin-activation.php:82
+#: includes/plugin-activation/class-tgm-plugin-activation.php:336
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: includes/plugin-activation.php:76
-#: includes/plugin-activation/class-tgm-plugin-activation.php:165
-#: includes/plugin-activation/example.php:95
+#: includes/plugin-activation.php:83
+#: includes/plugin-activation/class-tgm-plugin-activation.php:338
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugin-activation.php:77
-#: includes/plugin-activation/class-tgm-plugin-activation.php:166
-#: includes/plugin-activation/example.php:96
+#: includes/plugin-activation.php:84
+#: includes/plugin-activation/class-tgm-plugin-activation.php:343
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugin-activation.php:78
+#: includes/plugin-activation.php:85
 #, php-format
 msgid ""
 "This theme works well with the %s plugin, however, you do not have the "
@@ -1383,27 +1382,23 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugin-activation.php:79
-#: includes/plugin-activation/class-tgm-plugin-activation.php:168
-#: includes/plugin-activation/example.php:98
+#: includes/plugin-activation.php:86
+#: includes/plugin-activation/class-tgm-plugin-activation.php:368
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugin-activation.php:80
-#: includes/plugin-activation/class-tgm-plugin-activation.php:169
-#: includes/plugin-activation/example.php:99
+#: includes/plugin-activation.php:87
+#: includes/plugin-activation/class-tgm-plugin-activation.php:373
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugin-activation.php:81
-#: includes/plugin-activation/class-tgm-plugin-activation.php:170
-#: includes/plugin-activation/example.php:100
+#: includes/plugin-activation.php:88
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s "
@@ -1416,9 +1411,8 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugin-activation.php:82
-#: includes/plugin-activation/class-tgm-plugin-activation.php:171
-#: includes/plugin-activation/example.php:101
+#: includes/plugin-activation.php:89
+#: includes/plugin-activation/class-tgm-plugin-activation.php:353
 #, php-format
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
@@ -1429,9 +1423,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugin-activation.php:83
-#: includes/plugin-activation/class-tgm-plugin-activation.php:172
-#: includes/plugin-activation/example.php:102
+#: includes/plugin-activation.php:90
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
@@ -1444,235 +1436,416 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugin-activation.php:84
-#: includes/plugin-activation/class-tgm-plugin-activation.php:173
-#: includes/plugin-activation/example.php:103
+#: includes/plugin-activation.php:91
+#: includes/plugin-activation/class-tgm-plugin-activation.php:383
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugin-activation.php:85
+#: includes/plugin-activation.php:92
 msgid "Activate installed plugin"
 msgid_plural "Activate installed plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugin-activation.php:86
-#: includes/plugin-activation/class-tgm-plugin-activation.php:175
-#: includes/plugin-activation/example.php:105
+#: includes/plugin-activation.php:93
+#: includes/plugin-activation/class-tgm-plugin-activation.php:397
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: includes/plugin-activation.php:87
-#: includes/plugin-activation/class-tgm-plugin-activation.php:177
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1939
-#: includes/plugin-activation/example.php:106
+#: includes/plugin-activation.php:94
+#: includes/plugin-activation/class-tgm-plugin-activation.php:399
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3034
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: includes/plugin-activation.php:88
-#: includes/plugin-activation/example.php:107
+#: includes/plugin-activation.php:95
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:164
-msgid "Something went wrong."
-msgstr ""
-
-#: includes/plugin-activation/class-tgm-plugin-activation.php:167
-#: includes/plugin-activation/example.php:97
+#: includes/plugin-activation/class-tgm-plugin-activation.php:348
 #, php-format
 msgid ""
-"Sorry, but you do not have the correct permissions to install the %s plugin. "
-"Contact the administrator of this site for help on getting the plugin "
-"installed."
+"Sorry, but you do not have the correct permissions to install the %1$s "
+"plugin."
 msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins installed."
+"Sorry, but you do not have the correct permissions to install the %1$s "
+"plugins."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:174
-#: includes/plugin-activation/example.php:104
+#: includes/plugin-activation/class-tgm-plugin-activation.php:358
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:363
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %1$s plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %1$s "
+"plugins."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:378
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %1$s "
+"plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %1$s "
+"plugins."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:388
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:393
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:176
+#: includes/plugin-activation/class-tgm-plugin-activation.php:398
 msgid "Return to the dashboard"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:178
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1630
+#: includes/plugin-activation/class-tgm-plugin-activation.php:400
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2837
 msgid "The following plugin was activated successfully:"
 msgid_plural "The following plugins were activated successfully:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:179
+#: includes/plugin-activation/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:403
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:180
+#: includes/plugin-activation/class-tgm-plugin-activation.php:404
 msgid "Dismiss this notice"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:531
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2156
+#: includes/plugin-activation/class-tgm-plugin-activation.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:524
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:525
+msgid "Update Required"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:639
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:833
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3443
 msgid "Return to the Dashboard"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1166
-msgid "Private Repository"
+#: includes/plugin-activation/class-tgm-plugin-activation.php:940
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1169
-msgid "Pre-Packaged"
+#: includes/plugin-activation/class-tgm-plugin-activation.php:940
+#: includes/plugin-activation/class-tgm-plugin-activation.php:943
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1174
-msgid "WordPress Repository"
+#: includes/plugin-activation/class-tgm-plugin-activation.php:943
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1177
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1121
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2833
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:1886
+#, php-format
+msgctxt "%s = version number"
+msgid "TGMPA v%s"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2172
 msgid "Required"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1177
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2175
 msgid "Recommended"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1180
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2191
+msgid "WordPress Repository"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2194
+msgid "External Source"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2197
+msgid "Pre-Packaged"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2214
 msgid "Not Installed"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1182
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2218
 msgid "Installed But Not Activated"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1287
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1395
-msgid "Install"
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2220
+msgid "Active"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1309
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1396
-msgid "Activate"
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2226
+msgid "Required Update not Available"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1358
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2229
+msgid "Requires Update"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2232
+msgid "Update recommended"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2240
+#, php-format
+msgctxt "%1$s = install status, %2$s = update status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2285
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2288
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2291
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2294
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2376
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2384
+msgid "Installed version:"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2392
+msgid "Minimum required version:"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2404
+msgid "Available version:"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2427
 #, php-format
 msgid ""
-"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
-"Dashboard\">Return to the Dashboard</a>"
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1374
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2441
 msgid "Plugin"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1375
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2442
 msgid "Source"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1376
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2443
 msgid "Type"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1377
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2447
+msgid "Version"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2448
 msgid "Status"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1922
-msgid "Install package not available."
-msgstr ""
-
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1923
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2496
 #, php-format
-msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Install %2$s"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1924
-msgid "Unpacking the package&#8230;"
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2500
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Update %2$s"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1925
-msgid "Installing the plugin&#8230;"
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2505
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Activate %2$s"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1926
-msgid "Plugin install failed."
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2575
+msgid "Upgrade message from the plugin author:"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1927
-msgid "Plugin installed successfully."
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2608
+msgid "Install"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:1938
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2614
+msgid "Update"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2617
+msgid "Activate"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2648
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2650
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2686
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2688
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2793
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:2819
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3033
 msgid "Plugin activation failed."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2052
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3367
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3369
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3370
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3374
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2053
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3375
 #, php-format
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2053
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2062
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3375
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3381
 msgid "Show Details"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2053
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2062
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3375
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3381
 msgid "Hide Details"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2054
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3376
 msgid "All installations and activations have been completed."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2055
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3377
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2059
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3380
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2060
-#, php-format
-msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr ""
-
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2061
-#, php-format
-msgid "The installation of %1$s failed."
-msgstr ""
-
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2062
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3381
 #, php-format
 msgid "%1$s installed successfully."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2063
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3382
 msgid "All installations have been completed."
 msgstr ""
 
-#: includes/plugin-activation/class-tgm-plugin-activation.php:2064
+#: includes/plugin-activation/class-tgm-plugin-activation.php:3383
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
@@ -1733,6 +1906,7 @@ msgstr ""
 msgid "These show at the bottom of the homepage."
 msgstr ""
 
+#. /content.php
 #: includes/sidebars.php:96
 msgid "Page Sidebar"
 msgstr ""
@@ -1741,6 +1915,7 @@ msgstr ""
 msgid "These widgets show on the side of pages using the default template."
 msgstr ""
 
+#. /content.php
 #: includes/sidebars.php:110
 msgid "Sermons Sidebar"
 msgstr ""
@@ -1749,6 +1924,7 @@ msgstr ""
 msgid "These widgets show on the side of sermon pages."
 msgstr ""
 
+#. /content.php
 #: includes/sidebars.php:121
 msgid "Events Sidebar"
 msgstr ""
@@ -1757,6 +1933,7 @@ msgstr ""
 msgid "These widgets show on the side of event pages."
 msgstr ""
 
+#. /content.php
 #: includes/sidebars.php:132
 msgid "People Sidebar"
 msgstr ""
@@ -1765,6 +1942,7 @@ msgstr ""
 msgid "These widgets show on the side of people pages."
 msgstr ""
 
+#. /content.php
 #: includes/sidebars.php:143
 msgid "Locations Sidebar"
 msgstr ""
@@ -1773,6 +1951,7 @@ msgstr ""
 msgid "These widgets show on the side of locations content."
 msgstr ""
 
+#. /content.php
 #: includes/sidebars.php:154
 msgid "Gallery Sidebar"
 msgstr ""
@@ -1781,6 +1960,7 @@ msgstr ""
 msgid "These widgets show on the side of gallery pages."
 msgstr ""
 
+#. /content.php
 #: includes/sidebars.php:165
 msgid "Blog Sidebar"
 msgstr ""
@@ -1789,6 +1969,7 @@ msgstr ""
 msgid "These widgets show on the side of blog content."
 msgstr ""
 
+#. /content.php
 #: includes/sidebars.php:176
 msgid "Contact Sidebar"
 msgstr ""
@@ -1797,6 +1978,7 @@ msgstr ""
 msgid "These widgets show on the side of the contact page."
 msgstr ""
 
+#. /content.php
 #: includes/sidebars.php:187
 msgid "Search Sidebar"
 msgstr ""
@@ -2106,6 +2288,7 @@ msgstr ""
 msgid "Display Header Image on Mobile"
 msgstr ""
 
+#. /Retina
 #: loop-author.php:29
 #, php-format
 msgid "About %s"
@@ -2210,15 +2393,13 @@ msgid "%1$s &rarr;"
 msgstr ""
 
 #: loop-navigation.php:99
-#, php-format
 msgctxt "pagination"
-msgid "&larr; %s Previous"
+msgid "&larr; Previous"
 msgstr ""
 
 #: loop-navigation.php:100
-#, php-format
 msgctxt "pagination"
-msgid "Next %s &rarr;"
+msgid "Next &rarr;"
 msgstr ""
 
 #: node_modules/grunt-pot/test/fixtures/some-file.php:3
@@ -2276,7 +2457,7 @@ msgid_plural "%d Photos"
 msgstr[0] ""
 msgstr[1] ""
 
-#: searchform-ctc.php:13 searchform.php:17
+#: searchform-ctc.php:13 searchform-ctc.php:17 searchform.php:17
 msgid "Search"
 msgstr ""
 
@@ -2284,6 +2465,32 @@ msgstr ""
 msgctxt "categories widget"
 msgid "Select One"
 msgstr ""
+
+#. // HTML Before
+echo $args['before_widget'];
+
+// Title
+$title = apply_filters( 'widget_title', $instance['title'] );
+if ( ! empty( $title ) ) {
+	echo $args['before_title'] . $title . $args['after_title'];
+}
+
+// Get posts
+$posts = ctfw_get_events( $instance ); // get events based on options - upcoming/past, limit, etc.
+
+// Loop posts
+$i = 0;
+foreach ( $posts as $post ) : setup_postdata( $post ); $i++;
+
+	// Get event meta data
+	// $date (localized range), $start_date, $end_date, $time, $venue, $address, $show_directions_link, $directions_url, $map_lat, $map_lng, $map_type, $map_zoom
+	extract( ctfw_event_data() );
+
+#. End Loop
+endforeach;
+
+// No items found
+if ( empty( $posts ) ) {
 
 #: widget-templates/widget-events.php:1
 msgctxt "events widget"
@@ -2295,6 +2502,42 @@ msgctxt "galleries widget"
 msgid "There are no galleries to show."
 msgstr ""
 
+#. // HTML Before
+echo $args['before_widget'];
+
+// Title
+$title = apply_filters( 'widget_title', $instance['title'] );
+if ( ! empty( $title ) ) {
+	echo $args['before_title'] . $title . $args['after_title'];
+}
+
+// Get posts
+$posts = $this->ctfw_get_posts(); // widget's default query according to field values
+
+// Determine columns based on thumb size
+$thumb_sizes = array(
+	'small'		=> 3,
+	'medium'	=> 2,
+	'large'		=> 1,
+);
+$columns = $thumb_sizes[$instance['thumb_size']];
+
+// Get ID's into list
+$ids_array = array();
+foreach ( $posts as $post ) {
+	$ids_array[] = $post->ID;
+}
+$ids = implode( ',', $ids_array );
+
+#. Show gallery
+if ( ! empty( $posts ) ) :
+#. Use gallery shortcode
+	echo gallery_shortcode( array(
+		'columns'	=> $columns,
+		'ids'		=> $ids
+	) );
+#. Link to gallery page
+	if ( $instance['show_link'] && $instance['post_id'] != 'all' ) :
 #: widget-templates/widget-gallery.php:1
 msgctxt "gallery widget"
 msgid "View Gallery"
@@ -2305,10 +2548,65 @@ msgctxt "gallery widget"
 msgid "There are no images to show."
 msgstr ""
 
+#. // HTML Before
+echo $args['before_widget'];
+
+// Title
+$title = apply_filters( 'widget_title', $instance['title'] );
+if ( ! empty( $title ) ) {
+	echo $args['before_title'] . $title . $args['after_title'];
+}
+
+// Get posts
+$posts = $this->ctfw_get_posts(); // widget's default query according to field values
+
+// Loop Posts
+$i = 0;
+foreach ( $posts as $post ) : setup_postdata( $post ); $i++;
+
+	// Get location meta data
+	// $address, $show_directions_link, $directions_url, $phone, $times, $map_lat, $map_lng, $map_type, $map_zoom
+	extract( ctfw_location_data() );
+
+#. End Loop
+endforeach;
+
+// No items found
+if ( empty( $posts ) ) {
+
 #: widget-templates/widget-locations.php:1
 msgctxt "locations widget"
 msgid "There are no locations to show."
 msgstr ""
+
+#. // HTML Before
+echo $args['before_widget'];
+
+// Title
+$title = apply_filters( 'widget_title', $instance['title'] );
+if ( ! empty( $title ) ) {
+	echo $args['before_title'] . $title . $args['after_title'];
+}
+
+// Get posts
+$posts = $this->ctfw_get_posts(); // widget's default query according to field values
+
+// Loop Posts
+$i = 0;
+foreach ( $posts as $post ) : setup_postdata( $post ); $i++;
+
+	// Get people meta data
+	$ctfw_person_data = ctfw_person_data();
+
+	$position = $ctfw_person_data['position'];
+	$phone    = $ctfw_person_data['phone'];
+	$email    = $ctfw_person_data['email'];
+
+#. End Loop
+endforeach;
+
+// No items found
+if ( empty( $posts ) ) {
 
 #: widget-templates/widget-people.php:1
 msgctxt "people widget"

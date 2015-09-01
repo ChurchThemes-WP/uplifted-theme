@@ -1920,7 +1920,8 @@ fieldset {
 
 /* Layout */
 #masthead {
-  *zoom: 1; }
+  *zoom: 1;
+  margin-bottom: 25px; }
   #masthead:before, #masthead:after {
     content: " ";
     display: table; }
