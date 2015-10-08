@@ -55,7 +55,7 @@ $up_options = upfw_get_options();
 									<img src="<?php echo esc_attr( $header_image ); ?>" alt="" class="<?php if ( '1' != get_theme_mod( 'header_image_mobile', true ) ) { echo "hide-on-mobile"; } ?>" />
 								<?php endif; ?>
 								<?php if( display_header_text() ): ?>
-									<span class="<?php if ( '1' != get_theme_mod( 'header_text_mobile' ) ) { echo "hide-on-mobile"; } ?>"><?php bloginfo('name'); ?></span>
+									<span class="<?php if ( ! get_theme_mod( 'header_text_mobile' ) ) { echo "hide-on-mobile"; } ?>"><?php bloginfo('name');?></span>
 								<?php endif; ?>
 								</a>
 							</h1>
