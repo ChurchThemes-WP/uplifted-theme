@@ -309,7 +309,7 @@ $footer-meta-text: contrast-color($footer-meta-bg, mix(#000,$body-bg,55%), mix(#
 	color: $footer-text;
 
 	a {
-		color: contrast-color($body-bg, rgba(255,255,255,.6), rgba(0,0,0,.6));
+		color: contrast-color($body-bg, lighten($body-font-color, 20%), lighten($body-bg, 50%), 50%);
 	}
 
 }
