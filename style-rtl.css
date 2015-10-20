@@ -1922,8 +1922,7 @@ fieldset {
 
 /* Layout */
 #masthead {
-  *zoom: 1;
-  margin-bottom: 25px; }
+  *zoom: 1; }
   #masthead:before, #masthead:after {
     content: " ";
     display: table; }
