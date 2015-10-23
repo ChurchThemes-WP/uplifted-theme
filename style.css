@@ -4,7 +4,7 @@ Theme URI: https://upthemes.com/themes/uplifted/
 Description: Uplifted Theme is a theme for churches and ministries.
 Author: UpThemes
 Author URI: https://upthemes.com/
-Version: 1.3.42
+Version: 1.3.43
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, responsive-layout, fluid-layout
@@ -3233,9 +3233,9 @@ html[xmlns] .slides {
     display: block; }
 
 /* Pages */
-.single #container, .page #container, .blog #container, .archive #container {
+.single #container, .page #container, .blog #container, .archive #container, .search #container {
   padding-top: 3em; }
-.single .ctfw-breadcrumbs + #container, .page .ctfw-breadcrumbs + #container, .blog .ctfw-breadcrumbs + #container, .archive .ctfw-breadcrumbs + #container {
+.single .ctfw-breadcrumbs + #container, .page .ctfw-breadcrumbs + #container, .blog .ctfw-breadcrumbs + #container, .archive .ctfw-breadcrumbs + #container, .search .ctfw-breadcrumbs + #container {
   padding-top: 0; }
 
 .uplifted-main-title > span {
