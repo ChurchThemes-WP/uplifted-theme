@@ -3233,9 +3233,9 @@ html[xmlns] .slides {
     display: block; }
 
 /* Pages */
-.single #container, .page #container {
+.single #container, .page #container, .blog #container, .archive #container {
   padding-top: 3em; }
-.single .ctfw-breadcrumbs + #container, .page .ctfw-breadcrumbs + #container {
+.single .ctfw-breadcrumbs + #container, .page .ctfw-breadcrumbs + #container, .blog .ctfw-breadcrumbs + #container, .archive .ctfw-breadcrumbs + #container {
   padding-top: 0; }
 
 .uplifted-main-title > span {
