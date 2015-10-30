@@ -64,7 +64,7 @@ function uplifted_image_sizes() {
 
 }
 
-add_action( 'after_setup_theme', 'uplifted_image_sizes', 9 ); // before uplifted_add_theme_support_framework() so it can use ctfw_image_size_dimensions()
+add_action( 'after_setup_theme', 'uplifted_image_sizes', 8 ); // before uplifted_add_theme_support_framework() so it can use ctfw_image_size_dimensions()
 
 /**
  * Set content width
