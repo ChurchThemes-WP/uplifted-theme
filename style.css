@@ -2196,7 +2196,7 @@ p.comment-form-comment label.error {
   left: 0;
   position: fixed;
   top: 0;
-  z-index: 99; }
+  z-index: 999; }
 
 .top-bar {
   overflow: hidden;
@@ -2386,7 +2386,7 @@ p.comment-form-comment label.error {
     left: 100%;
     top: 0;
     visibility: hidden;
-    z-index: 99; }
+    z-index: 9999; }
     .top-bar-section .dropdown li {
       width: 100%;
       height: auto; }

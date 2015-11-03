@@ -99,7 +99,7 @@ $topbar-sticky-class: ".sticky" !default;
     #{$default-float}: 0;
     position: fixed;
     top: 0;
-    z-index: 99;
+    z-index: 999;
   }
 
   .top-bar {
@@ -402,7 +402,7 @@ $topbar-sticky-class: ".sticky" !default;
       #{$default-float}: 100%;
       top: 0;
       visibility: hidden;
-      z-index: 99;
+      z-index: 9999;
 
       li {
         width: 100%;
