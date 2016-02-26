@@ -25,7 +25,7 @@
 
 			$slide.height(slideHeight);
 
-			$(this).parent().sliderVids({slideHeight: slideHeight}).find('.oembed-container').parents('li').addClass('visible');
+			$(this).parent().sliderVids({slideHeight: slideHeight}).find('.oembedall-container').parents('li').addClass('visible');
 			$('.flexslider').flexslider('pause');
 		});
 	});
