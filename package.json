@@ -25,6 +25,6 @@
     "grunt-cssjanus": "~0.2.2",
     "grunt-dev-update": "~0.7.0",
     "grunt-pot": "~0.1.2",
-    "grunt-sass": "^0.14.0"
+    "grunt-sass": "^1.1.0"
   }
 }

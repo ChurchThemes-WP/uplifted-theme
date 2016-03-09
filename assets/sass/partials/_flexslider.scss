@@ -301,9 +301,26 @@ html[xmlns] .slides {display: block;}
 .uplifted-slide-video {
 	background-color: #000;
 
-	.oembed-container {
-		display: none;
-	}
+  .oembedall-closehide {
+    display: none;
+  }
+
+  a.oembed + br {
+    display: none;
+  }
+
+  iframe {
+    display: none;
+  }
+
+  .fluid-width-video-wrapper {
+    position: absolute;
+    top: 0;
+  }
+
+  .fluid-width-video-wrapper iframe {
+    display: block;
+  }
 
 	&.visible {
 		.flex-image-container {
@@ -315,10 +332,6 @@ html[xmlns] .slides {display: block;}
 				position: absolute;
 				top: 0;
 			}
-		}
-
-		.oembed-container {
-			display: block;
 		}
 	}
 }
